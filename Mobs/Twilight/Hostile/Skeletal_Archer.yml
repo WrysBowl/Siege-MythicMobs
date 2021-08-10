@@ -1,0 +1,24 @@
+Skeletal_Archer:
+  Type: Skeleton
+  Display: '&2Skeletal Archer'
+  Health: 150
+  Damage: 25
+  Faction: Undead
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 28
+    MovementSpeed: 0.29
+  Equipment:
+    - Chainmail_Helmet:4
+    - Chainmail_Chestplate:3
+    - Chainmail_Leggings:2
+    - Chainmail_Boots:1
+    - RecurveBow:HAND
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 OtherFaction
+  - 3 attacker

@@ -1,0 +1,20 @@
+RockRat:
+  Type: Silverfish
+  Display: '&2Rock Rat'
+  Health: 10
+  Damage: 2
+  Faction: Silverfish
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Options:
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    PreventBlockInfection: false
+    FollowRange: 16
+    MovementSpeed: 0.25
+  Skills:
+  - skill{s=RockRatSpitAttack} ~onDamaged 0.4

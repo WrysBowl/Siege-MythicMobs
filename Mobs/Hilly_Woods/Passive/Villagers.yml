@@ -1,0 +1,89 @@
+NormalGuard:
+  Type: Iron_Golem
+  Display: '&6Guard'
+  Health: 240
+  Faction: Ambient
+  Options:
+    MovementSpeed: 0.33
+  Equipment:
+  - Iron_Sword:Hand
+  Disguise:
+    Type: Player
+    Skin: 20hamsters
+
+Pong:
+  Type: Villager
+  Display: '&6Pong'
+  Health: 60
+  Faction: Ambient
+  Options:
+    Silent: true
+  Disguise:  
+    Type: Player
+    Skin: feinnn
+
+Allison:
+  Type: Villager
+  Display: '&6Allison'
+  Health: 60
+  Faction: Ambient
+  Options:
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: 0neinaMelon
+
+Henry:
+  Type: Villager
+  Display: '&6Henry'
+  Health: 60
+  Faction: Ambient
+  Options:
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: alexandracortez
+
+Jack:
+  Type: Villager
+  Display: '&6Jack'
+  Health: 60
+  Faction: Ambient
+  Options:
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: acester753
+
+Lucas:
+  Type: Villager
+  Display: '&6Lucas'
+  Health: 60
+  Faction: Ambient
+  Options:
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: 1blade2002
+
+Amber:
+  Type: Villager
+  Display: '&6Amber'
+  Health: 60
+  Faction: Ambient
+  Options:
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: Amberjs
+
+Emily:
+  Type: Villager
+  Display: '&6Emily'
+  Health: 60
+  Faction: Ambient
+  Options:
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: Allenb60

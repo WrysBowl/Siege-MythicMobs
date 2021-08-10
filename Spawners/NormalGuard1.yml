@@ -1,0 +1,25 @@
+NormalGuard1:
+  MobName: NormalGuard
+  World: Hilly_Woods
+  X: 217
+  Y: 87
+  Z: 136
+  Radius: 3
+  UseTimer: true
+  MaxMobs: '2'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 10
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 50
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 2

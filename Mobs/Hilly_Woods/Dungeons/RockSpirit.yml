@@ -1,0 +1,38 @@
+RockSpirit:
+  Type: Zombie
+  Display: '&4Rock Spirit'
+  Health: 200
+  Damage: 10
+  Faction: Boss
+  Disguise:
+    Type: BLOCK
+    Block: Stone
+    BlockData: 0
+    DropsItem: false
+  BossBar:
+    Enabled: true
+    Title: '&4Rock Spirit'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Options:
+    Persistent: true
+    Despawn: false
+    Silent: true
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 50
+    MovementSpeed: 0.36
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Skills:
+  - skill{s=RockSpiritStoneThrowAttack} ~onDamaged 0.2
+  - effect:blockmask{m=stone;r=1;d=200} @self ~onTimer:5
+  - skill{s=SpawnRockRat} @self ~onDamaged
+  - skill{s=StoneBreak} ~onDamaged
+  - skill{s=AnvilLand} ~onDeath
+  - skill{s=StoneHit} ~onAttack

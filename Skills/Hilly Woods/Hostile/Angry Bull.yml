@@ -1,0 +1,23 @@
+Charge:
+  Skills:
+  - effect:particles{particle=angry_villager;amount=5;hS=0.5;vS=0.5;speed=0.25} @self
+  - delay 15
+  - effect:particles{particle=angry_villager;amount=5;hS=0.5;vS=0.5;speed=0.25} @self
+  - delay 15
+  - lunge{velocity=1.5;velocityY=0.3}
+GroundSlam:
+  Skills:
+  - jump{velocity=0.5}
+  - skill{s=Charge}
+
+AngryBullHitSound:
+  Skills:
+  - sound{s=entity.cow.hurt} @self
+
+AngryBullDeathSound:
+  Skills:
+  - sound{s=entity.cow.death} @self
+
+AngryBullAttackSound:
+  Skills:
+  - sound{s=entity.player.attack.weak} @self

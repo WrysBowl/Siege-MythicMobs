@@ -1,0 +1,47 @@
+Goblin_Head:
+  Id: 397
+  Data: 3
+  Options:
+    Player: GoblinSlayer
+Goblin_Chestplate:
+  Id: Leather_Chestplate
+  Data: 0
+  Options:
+    Color: 57,126,73
+    Unbreakable: true
+Goblin_Leggings:
+  Id: Leather_Leggings
+  Data: 0
+  Options:
+    Color: 57,126,73
+    Unbreakable: true
+Goblin_Boots:
+  Id: Leather_Boots
+  Data: 0
+  Options:
+    Color: 57,126,73
+    Unbreakable: true
+
+Golden_Goblin_Head:
+  Id: 397
+  Data: 3
+  Options:
+    Player: gzlwong
+Golden_Goblin_Chestplate:
+  Id: Leather_Chestplate
+  Data: 0
+  Options:
+    Color: 252,215,3
+    Unbreakable: true
+Golden_Goblin_Leggings:
+  Id: Leather_Leggings
+  Data: 0
+  Options:
+    Color: 252,215,3
+    Unbreakable: true
+Golden_Goblin_Boots:
+  Id: Leather_Boots
+  Data: 0
+  Options:
+    Color: 252,215,3
+    Unbreakable: true

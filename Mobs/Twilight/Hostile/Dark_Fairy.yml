@@ -1,0 +1,25 @@
+Dark_Fairy:
+  Type: vex
+  Display: '&2Dark Fairy'
+  Health: 80
+  Damage: 15
+  Faction: DarkSpirit
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 30
+    MovementSpeed: 0.3
+    AlwaysShowName: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 OtherFaction
+  - 2 attacker
+  Equipment:
+  - Dark_Fairy_Head:4
+  - SplinteredBone:0
+  Skills:
+  - mountme ~onAttack 0.4
+  - shootpotion{type=CONFUSION;duration=200;level=3;velocity=4} @NearestPlayer ~onSignal:ATTACK
+  - signal{s=ATTACK} @EIR{r=30} ~onAttack

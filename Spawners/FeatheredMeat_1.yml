@@ -1,0 +1,25 @@
+FeatheredMeat_1:
+  MobName: FeatheredMeat
+  World: Hilly_Woods
+  X: -210
+  Y: 55
+  Z: -135
+  Radius: 6
+  UseTimer: true
+  MaxMobs: '4'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 4
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 20
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 4

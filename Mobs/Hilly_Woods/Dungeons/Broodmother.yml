@@ -1,0 +1,34 @@
+Broodmother:
+  Type: Spider
+  Display: '&2Broodmother'
+  Health: 1500
+  Damage: 30
+  Faction: Boss
+  BossBar:
+    Enabled: true
+    Title: '&4Broodmother'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  DamageModifiers:
+  - PROJECTILE 1.5
+  Modules:
+    ThreatTable: true
+  Options:
+    Persistent: true
+    Despawn: false
+    Silent: true
+    FollowRange: 80
+    MovementSpeed: 0.3
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Skills:
+  - heal{a=2} @self ~onTimer:40
+  - skill{s=BroodmotherNest} ~onDamaged 0.2
+  - skill{s=BroodmotherWebBolt} ~onTimer:180
+  - skill{s=BroodmotherWebArea} ~onTimer:100 0.5
+  - skill{s=BroodmotherPoisonBolt} ~onTimer:140
+  - potion{type=SLOW;duration=100;lvl=1} @target ~onAttack
+  - summon{type=ForestSpider;itt=true;a=2;r=3} @self ~onDamaged 0.25

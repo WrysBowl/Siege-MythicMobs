@@ -1,0 +1,103 @@
+Davy_Jones_Head:
+
+  Id: Gold_Helmet
+
+  Enchantments:
+  
+  - OXYGEN:5
+  
+  - WATER_WORKER:5
+  
+  Options:
+
+    Unbreakable: true
+
+Davy_Jones_Axe:
+
+  Id: Diamond_Axe
+
+  Enchantments:
+    
+  - KNOCKBACK:3
+  
+  - LOOT_BONUS_MOBS:3
+
+
+Davy_Jones_Weapon:
+
+  Id: Trident
+
+  Enchantments:
+    
+  - RIPTIDE:5
+  
+  - IMPALING:6
+
+  - DAMAGE_ALL:6
+
+Davy_Jones_Weapon1:
+
+  Id: Trident
+
+  Enchantments:
+    
+  - RIPTIDE:5
+  
+Davy_Jones_Weapon2:
+
+  Id: Trident
+
+  Enchantments:
+      
+  - IMPALING:6
+
+Davy_Jones_Weapon3:
+
+  Id: Trident
+
+  Enchantments:
+      
+  - DAMAGE_ALL:6
+
+
+Davy_Jones_Chestplate:
+
+  Id: Leather_Chestplate
+
+  Data: 0
+
+  Options:
+
+    Color: 104,133,85
+
+    Unbreakable: true
+
+Davy_Jones_Leggings:
+
+  Id: Leather_Leggings
+
+  Data: 0
+
+  Options:
+
+    Color: 104,133,85
+
+    Unbreakable: true
+
+Davy_Jones_Boots:
+
+  Id: Leather_Boots
+
+  Enchantments:
+
+  - DEPTH_STRIDER:5
+  
+  Options:
+
+    Color: 104,133,85
+
+    Unbreakable: true
+
+Drowned_Egg:
+
+  Id: DROWNED_SPAWN_EGG

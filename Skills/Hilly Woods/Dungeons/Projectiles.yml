@@ -1,0 +1,11 @@
+WaterBolt:
+  Skills:
+  - projectile{onTick=WaterBolt-Tick;onHit=WaterBolt-Hit;v=7;i=1;hR=1;vR=1;mr=24;hnp=false}
+WaterBolt-Tick:
+  Skills:
+  - effect:itemspray{item=lapis_lazuli;amount=1} @origin
+WaterBolt-Hit:
+  Skills:
+  - damage{a=1}
+  - potion{type=SLOW;duration=60;lvl=3}
+  - effect:particles{particle=reddust;amount=20;hS=1;vS=1;speed=1}

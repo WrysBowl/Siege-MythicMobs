@@ -1,0 +1,30 @@
+Orc:
+  Type: Zombie
+  Display: '&2Orc'
+  Health: 50
+  Damage: 10
+  Faction: Orc
+  Disguise:
+    Type: Player
+    Skin: 'Ganaderia'
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Options:
+    AlwaysShowName: true
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 24
+    MovementSpeed: 0.25
+    Silent: true
+  Equipment:
+  - Orc_Chestplate:3
+  - Orc_Leggings:2
+  - Orc_Boots:1
+  - GiantClub:HAND
+  Skills:
+  - skill{s=OrcAmbientSound} ~onTimer:120 0.5
+  - skill{s=OrcAttackSound} ~onAttack 1

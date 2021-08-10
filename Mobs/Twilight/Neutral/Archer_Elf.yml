@@ -1,0 +1,30 @@
+Archer_Elf:
+  Type: Skeleton
+  Display: '&2Archer Elf'
+  Health: 200
+  Damage: 50
+  Faction: Ambient
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 24
+    MovementSpeed: 0.35
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: 'Cqrbon'
+  Equipment:
+  - Leather_Helmet:4
+  - IronBow:HAND
+  AITargetSelectors:
+  - 0 clear
+  - 1 monsters
+  - 2 attacker
+  Skills:
+  - sound{s=entity.villager.death} @self ~onDeath
+  - sound{s=entity.villager.hurt} @self ~onDamaged
+  - sound{s=entity.villager.no} @self ~onAttack
+  - shoot{type=ARROW;velocity=2;damage=50} ~onShoot
+  - setname{name='&2Archer Elf &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

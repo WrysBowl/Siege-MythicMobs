@@ -1,0 +1,13 @@
+Digger:
+  Type: Villager
+  Display: '&2Digger'
+  Health: 200
+  Faction: Digger
+  Disguise:
+    Type: Player
+    Skin: 'digger'
+  Options:
+    FollowRange: 24
+    MovementSpeed: 0.35
+  Skills:
+  - setname{name='&2Digger &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

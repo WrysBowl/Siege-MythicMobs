@@ -1,0 +1,38 @@
+Ogre:
+  Type: Wither_Skeleton
+  Display: '&2Ogre'
+  Health: 500
+  Damage: 25
+  Faction: Ogre
+  Options:
+    AlwaysShowName: true
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    KnockbackResistance: 0.5
+    FollowRange: 20
+    MovementSpeed: 0.2
+    Silent: true
+  DamageModifiers:
+  - ENTITY_ATTACK 0.5
+  - PROJECTILE 0.75
+  - FALL 2
+  - MAGIC 2
+  Equipment:
+  - Ogre_Head:4
+  - Ogre_Chestplate:3
+  - Ogre_Leggings:2
+  - Ogre_Boots:1
+  - DoubleBladedAxe:0
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Skills:
+  - skill{s=OgreHeal} ~onDamaged 0.05
+  - skill{s=OgreAttack} ~onAttack 1
+  - skill{s=OgreLifeStealAttack} ~onAttack 0.1
+  - skill{s=OgreSuckAttack} ~onTimer:120 0.5
+  - skill{s=Charge} ~onTimer:80 0.5
+  - skill{s=OgreAmbientSound} ~onTimer:80 0.5
+  - skill{s=OgreAttackSound} ~onAttack 1

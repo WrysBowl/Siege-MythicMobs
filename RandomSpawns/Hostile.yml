@@ -1,0 +1,83 @@
+RandomInfectedDigger:
+  MobType: InfectedDigger
+  Worlds: Hilly_Woods
+  Chance: 0.01
+  Priority: 1
+  Action: ADD
+  PointType: LAND
+  Conditions:
+  - night{} true
+  - outside{} true
+  - height{h=50to90} true
+  - distancefromspawn{d=>200} true
+  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,GRASS_PATH} true
+
+RandomZombifiedDigger:
+  MobType: ZombifiedDigger
+  Worlds: Hilly_Woods
+  Chance: 0.03
+  Priority: 1
+  Action: ADD
+  PointType: LAND
+  Conditions:
+  - night{} true
+  - outside{} true
+  - height{h=50to70} true
+  - distancefromspawn{d=>150} true
+  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,GRASS_PATH} true
+  
+RandomOrc:
+  MobType: Orc
+  Worlds: Hilly_Woods
+  Chance: 0.02
+  Priority: 1
+  Action: ADD
+  PointType: LAND
+  Conditions:
+  - night{} true
+  - outside{} true
+  - height{h=60to80} true
+  - distancefromspawn{d=>200} true
+  - onBlock{b=GRASS_BLOCK,GREEN_CONCRETE,GREEN_TERRACOTTA} true
+  
+RandomOgre:
+  MobType: Ogre
+  Worlds: Hilly_Woods
+  Chance: 0.001
+  Priority: 1
+  Action: ADD
+  PointType: LAND
+  Conditions:
+  - night{} true
+  - outside{} true
+  - height{h=60to100} true
+  - distancefromspawn{d=>300} true
+  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,GRASS_PATH} true
+  
+RandomGoblin:
+  MobType: Goblin
+  Worlds: Hilly_Woods
+  Chance: 0.05
+  Priority: 1
+  Action: ADD
+  PointType: LAND
+  Conditions:
+  - night{} true
+  - outside{} true
+  - height{h=40to70} true
+  - distancefromspawn{d=>150} true
+  - onBlock{b=GRASS_BLOCK,GREEN_TERRACOTTA,GREEN_CONCRETE} true
+
+RandomGoldenGoblin:
+  MobType: GoldenGoblin
+  Worlds: Hilly_Woods
+  Chance: 0.01
+  Priority: 1
+  Action: ADD
+  PointType: LAND
+  Conditions:
+  - night{} true
+  - outside{} true
+  - height{h=40to70} true
+  - distancefromspawn{d=>150} true
+  - onBlock{b=GRASS_BLOCK,GREEN_TERRACOTTA,GREEN_CONCRETE} true

@@ -1,0 +1,26 @@
+WildFox:
+  Type: Wolf
+  Display: '&2Wild Fox'
+  Health: 50
+  Damage: 12
+  Faction: Wolf
+  Disguise:
+    Type: Fox
+  Modules:
+    ThreatTable: true
+  Options:
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    FollowRange: 24
+    MovementSpeed: 0.32
+  Skills:
+  - skill{s=FoxAggroSound} @self ~onEnterCombat
+  - skill{s=FoxAmbientSound} @self ~onTimer:40 0.5
+  - skill{s=FoxBiteSound} @self ~onAttack
+  - skill{s=FoxDeathSound} @self ~onDeath
+  - skill{s=FoxScreechSound} @self ~onDeath
+  - skill{s=FoxHurtSound} @self ~onDamaged
+  - skill{s=Steal} ~onAttack 0.3
+  - skill{s=FoxHorde} ~onDamaged

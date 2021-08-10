@@ -1,0 +1,34 @@
+Necromancer:
+  Type: Wither_Skeleton
+  Display: '&2Necromancer'
+  Health: 1100
+  Damage: 50
+  Faction: Boss
+  BossBar:
+    Enabled: true
+    Title: '&4Necromancer'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  DamageModifiers:
+  - MAGIC 0
+  Modules:
+    ThreatTable: true
+  Options:
+    Persistent: true
+    Despawn: false
+    Silent: true
+    FollowRange: 40
+    MovementSpeed: 0.27
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Skills:
+  - skill{s=NecromancerSummonUndead} @self ~onDamaged 0.1
+  - skill{s=NecromancerWitherSkullShoot} @self ~onTimer:150
+  - skill{s=NecromancerPlague} @self ~onTimer:200
+  - skill{s=NecromancerLifeSteal} @self ~onTimer:40
+  - potion{type=WITHER;duration=60;lvl=1} @target ~onAttack
+  - skill{s=NecromancerTotemOfUndying} @self ~onTimer:300
+  - setname{name='&4Necromancer &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

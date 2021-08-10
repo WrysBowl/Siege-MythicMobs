@@ -1,0 +1,51 @@
+Steal:
+  Skills:
+  - currencytake{amount=20} @target
+  - equip{item=sunflower:0}
+  - sound{s=entity.experience_orb.pickup} @self
+  - delay 10
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=fleeplayers}
+  - runaigoalselector{goal=randomstroll}
+  - potion{type=SPEED;duration=99999;lvl=1} @Self
+  - sound{s=entity.experience_orb.pickup} @self
+  - delay 5
+  - sound{s=entity.experience_orb.pickup} @self
+
+FoxHorde:
+  Skills:
+  - threat{amount=10000} @NearestPlayer
+
+FoxAggroSound:
+  Skills:
+  - sound{s=entity.fox.aggro} @self
+FoxAmbientSound:
+  Skills:
+  - sound{s=entity.fox.ambient} @self
+FoxBiteSound:
+  Skills:
+  - sound{s=entity.fox.bite} @self
+FoxDeathSound:
+  Skills:
+  - sound{s=entity.fox.death} @self
+FoxEatSound:
+  Skills:
+  - sound{s=entity.fox.eat} @self
+FoxHurtSound:
+  Skills:
+  - sound{s=entity.fox.hurt} @self
+FoxScreechSound:
+  Skills:
+  - sound{s=entity.fox.screech} @self
+FoxSleepSound:
+  Skills:
+  - sound{s=entity.fox.sleep} @self
+FoxSniffSound:
+  Skills:
+  - sound{s=entity.fox.sniff} @self
+FoxSpitSound:
+  Skills:
+  - sound{s=entity.fox.spit} @self
+FoxTeleportSound:
+  Skills:
+  - sound{s=entity.fox.teleport} @self

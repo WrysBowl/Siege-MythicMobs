@@ -1,0 +1,42 @@
+FoxSpirit:
+  Type: FOX
+  Display: '&4Fox Spirit'
+  Health: 575
+  Damage: 20
+  Faction: Boss
+  BossBar:
+    Enabled: true
+    Title: '&4Fox Spirit'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  DamageModifiers:
+  - PROJECTILE 0.5
+  - FALL 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Options:
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    FollowRange: 50
+    MovementSpeed: 0.38
+  Skills:
+  - skill{s=FoxAggroSound} @self ~onEnterCombat
+  - skill{s=FoxAmbientSound} @self ~onTimer:40 0.5
+  - skill{s=FoxBiteSound} @self ~onAttack
+  - skill{s=FoxDeathSound} @self ~onDeath
+  - skill{s=FoxScreechSound} @self ~onDeath
+  - skill{s=FoxHurtSound} @self ~onDamaged
+  - heal{a=10} @self ~onAttack
+  - skill{s=FoxSpiritEscape} @self ~onDamaged 0.25
+  - skill{s=FoxSpiritStealSpeed} @self ~onAttack 0.5
+  - skill{s=FoxSpiritStealStrength} @self ~onDamaged
+  - skill{s=FoxSpiritDamageMulti} @self ~onAttack

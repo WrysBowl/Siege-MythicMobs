@@ -1,0 +1,7 @@
+OrcAmbientSound:
+  Skills:
+  - sound{s=entity.drowned.ambient_water} @self
+  - sound{s=entity.drowned.ambient} @self
+OrcAttackSound:
+  Skills:
+  - sound{s=entity.player.attack.strong} @self

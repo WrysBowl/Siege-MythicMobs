@@ -1,0 +1,49 @@
+BlackEyes:
+ Skills:
+  - sound{s=entity.enderman.teleport;p=0.86} @self
+  - potion{type=INVISIBILITY;duration=60;level=1} @Self
+  - potion{type=BLINDNESS;duration=100;level=1} @target
+  - potion{type=WITHER;duration=100;level=0} @target
+
+NecroSummoning:
+ Skills:
+  - sound{s=entity.evoker.prepare_summon;p=0.14} @self
+  - effect:particles{particle=squid_ink;amount=60;hS=2;vS=2} @self
+  - delay 60
+  - effect:particles{particle=large_smoke;amount=40;hS=2;vS=2} @target
+  - sound{s=entity.evoker.cast_spell;p=0.6} @self
+
+SussyTeleport:
+ Skills:
+  - sound{s=entity.enderman.teleport;p=0.83} @self
+  - teleport{sh=7}
+
+SoulEating:
+ Skills:
+  - sound{s=entity.witch.drink;p=0.84;v=3} @Self
+  - heal{amount=20} @Self
+DarkRise:
+ Skills:
+  - effect:particlesphere{particle=dragon_breath;amount=300;radius=7} @self
+  - effect:bloodyScreen{d=160} @PIR{r=5}
+  - sound{s=entity.elder_guardian.curse;p=0.0;v=5} @self
+  - delay 60
+  - effect:particles{p=squid_ink;amount=300;speed=1;hS=4;vS=4} @self
+  - effect:explosion @self 
+  - damage{a=7} @PIR{r=7}
+SoulShot:
+ Skills:
+  - sound{s=entity.elder_guardian.curse;p=0.82;v=5} @self
+  - effect:particles{particle=squid_ink;amount=60;hS=3;vS=3} @self
+  - delay 80
+  - sound{s=entity.ender_eye.death;p=0.15} @self
+  - projectile{onTick=SoulShot-Tick;onHit=SoulShot-Hit;v=10;hR=3;vR=3}
+SoulShot-Tick:
+ Skills:
+  - effect:particles{p=dragon_breath;amount=100;speed=0;hS=2;vS=2} @origin
+  - effect:particles{p=enchantment_table;amount=100;speed=0;hS=2;vS=2} @origin
+SoulShot-Hit:
+ Skills:
+  - damage{a=5}
+  - sound{s=block.shroomlight.break;p=0.13}
+  - effect:particles{p=squid_ink;amount=20;speed=0;hS=0.2;vS=0.2}

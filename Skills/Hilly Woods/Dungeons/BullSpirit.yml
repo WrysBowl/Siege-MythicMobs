@@ -1,0 +1,29 @@
+AngerSlam:
+ Skills:
+  - sound{s=entity.iron_golem.damage} @self
+  - delay 10
+  - jump{velocity=1} @self
+  - delay 10
+  - effect:explosion @Self
+  - damage{amount=15} @PlayersInRadius{r=5}
+
+BullCharge:
+ Skills:
+  - sound{s=entity.cow.hurt;p=0.87} @self
+  - potion{t=SPEED;d=40;lvl=1} @Self
+  - delay 30
+  - throw{velocity=15;velocityY=10} @PIR{r=4}
+  - damage{a=10} @PIR{r=2}
+
+BullSlam:
+ Skills:
+  - sound{s=entity.cow.hurt;p=0.40} @self
+  - aura{i=4;d=280;oT=BullAngry} @Self
+  - delay 10
+  - effect:explosion @Self
+  - damage{amount=7} @PlayersInRadius{r=10}
+  - throw{velocity=20;velocityY=15} @PlayersInRadius{r=10}
+  - effect:blockmask{m=dirt;r=10;d=200;na=true;s=sphere} @Self
+BullAngry:
+ Skills:
+  - particles{p=villager_angry;a=10;hs=1;vs=1}

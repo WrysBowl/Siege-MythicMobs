@@ -1,0 +1,36 @@
+Lich:
+ Display: '&4Lich'
+ Health: 1200
+ Damage: 40
+ Type: Zombie
+ Faction: Boss
+ BossBar:
+  Enabled: true
+  Title: '&4Lich'
+  Range: 20
+  Color: RED
+  Style: SOLID
+ AITargetSelectors:
+ - 0 clear
+ - 1 players
+ - 2 attacker
+ Disguise:
+  Type: player
+  Skin: 'lich'
+ Options:
+  Persistent: true
+  Despawn: false
+  MovementSpeed: 0.3
+  PreventSunburn: true
+ DamageModifiers:
+  - FIRE 0.0
+  - FALL 0.0
+  - WITHER 0.0
+ Skills:
+  - skill{s=SoulEating} @Self ~onAttack
+  - skill{s=DarkRise} @Self ~onTimer:200
+  - throw{velocity=16;velocityY=8} @Target ~onAttack
+  - skill{s=SoulShot} @Target ~onTimer:150
+  - skill{s=SussyTeleport} @target ~onDamaged 0.35
+  - potion{t=INVISIBILITY;d=40} @Self ~onDamaged 0.5
+  - setname{name='&2Lich &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

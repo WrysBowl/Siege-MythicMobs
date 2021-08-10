@@ -1,0 +1,30 @@
+Warrior_Elf:
+  Type: Zombie
+  Display: '&2Warrior Elf'
+  Health: 200
+  Damage: 30
+  Faction: Ambient
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 24
+    MovementSpeed: 0.35
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: 'Cqrbon'
+  Equipment:
+  - Leather_Helmet:4
+  - Leather_Chestplate:3
+  - RefinedDagger:HAND
+  AITargetSelectors:
+  - 0 clear
+  - 1 monsters
+  - 2 attacker
+  Skills:
+  - sound{s=entity.villager.death} @self ~onDeath
+  - sound{s=entity.villager.hurt} @self ~onDamaged
+  - sound{s=entity.villager.no} @self ~onAttack
+  - setname{name='&2Warrior Elf &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

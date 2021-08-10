@@ -1,0 +1,11 @@
+Crow:
+  Type: BAT
+  Display: '&2Crow'
+  Health: 25
+  Faction: Ambient
+  Disguise:
+    Type: PARROT
+    Color: GRAY
+  Options:
+    FollowRange: 20
+    MovementSpeed: 0.25

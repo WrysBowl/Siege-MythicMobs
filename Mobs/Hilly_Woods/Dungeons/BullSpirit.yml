@@ -1,0 +1,28 @@
+BullSpirit:
+ Display: '&4Bull Spirit'
+ Health: 700
+ Damage: 40
+ Type: Zombie
+ Disguise: 
+  Type: Cow
+ BossBar:
+  Enabled: true
+  Title: '&4Bull Spirit'
+  Range: 20
+  Color: RED
+  Style: SOLID
+ AITargetSelectors:
+ - 0 clear
+ - 1 players
+ - 2 attacker
+ Options:
+  MovementSpeed: 0.35
+  PreventSunburn: true
+  Persistent: true
+  Despawn: false
+  FollowRange: 50
+ Skills:
+  - throw{velocity=10;velocityY=8} @Target ~onAttack
+  - skill{s=BullCharge} @Self ~onTimer:120
+  - skill{s=BullSlam} @Self ~onTimer:160
+  - skill{s=AngerSlam} @Self ~onTimer:200

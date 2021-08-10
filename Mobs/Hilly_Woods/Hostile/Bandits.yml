@@ -1,0 +1,34 @@
+Bandit:
+  Type: Zombie
+  Display: '&2Bandit'
+  Health: 130
+  Damage: 25
+  Faction: Bandit
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 24
+    MovementSpeed: 0.35
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: '0xBACE'
+  Equipment:
+  - Leather_Helmet:4
+  - Leather_Chestplate:3
+  - Leather_Leggings:2
+  - Leather_Boots:1
+  - Dagger:HAND
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 OtherFaction
+  - 3 attacker
+  Skills:
+  - skill{s=BanditCloakingAttack} ~onDamaged 0.1 @target
+  - skill{s=BanditSwordThrowAttack} ~onDamaged 0.1 @target
+  - skill{s=BanditAmbientSound} ~onTimer:80 0.5
+  - skill{s=BanditAttackSound} ~onAttack 1
+  - setname{name='&2Bandit &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

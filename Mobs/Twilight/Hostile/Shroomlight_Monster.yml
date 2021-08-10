@@ -1,0 +1,14 @@
+Shroomlight_Monster:
+  Type: BABY_ZOMBIE
+  Health: 100
+  Damage: 20
+  Faction: BlockMonster
+  Disguise:
+    Type: BLOCK
+    Block: SHROOMLIGHT
+    BlockData: 0
+    DropsItem: false
+  Options:
+    MovementSpeed: 0.25
+  Skills:
+  - effect:particles{particle=happy_villager;amount=10;hS=0.35;vS=0.35;yOffset=0.5;speed=0.04} @self ~onDamaged

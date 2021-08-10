@@ -1,0 +1,5 @@
+HubGlowing:
+  Conditions:
+  - world{w=SiegeHub} true
+  Skills:
+  - potion{type=GLOWING;duration=99999;p=false} @Self

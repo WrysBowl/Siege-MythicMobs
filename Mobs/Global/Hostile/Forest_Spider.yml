@@ -1,0 +1,19 @@
+ForestSpider:
+  Type: Spider
+  Display: '&2Forest Spider'
+  Health: 30
+  Damage: 10
+  Faction: Spiders
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Options:
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    FollowRange: 20
+    MovementSpeed: 0.30
+  Skills:
+  - skill{s=ForestSpiderFlee} ~onDamaged 0.5

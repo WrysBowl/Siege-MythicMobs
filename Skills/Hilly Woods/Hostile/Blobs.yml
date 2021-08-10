@@ -1,0 +1,3 @@
+LungeAttack:
+  Skills:
+  - lunge{velocity=0.4;velocityY=0.8}

@@ -1,0 +1,25 @@
+Sushi3:
+  MobName: Sushi
+  World: Hilly_Woods
+  X: 11
+  Y: 50
+  Z: 115
+  Radius: 10
+  UseTimer: true
+  MaxMobs: '30'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 50
+  ScalingRange: 25.0
+  LeashRange: 0
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

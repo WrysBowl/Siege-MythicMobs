@@ -1,0 +1,58 @@
+WerewolfShiftHeal:
+  Conditions:
+  - health{h=<250} true
+  Skills:
+  - effect:particles{particle=happy_villager;amount=5;hS=0.5;vS=0.5;speed=0.25}
+  - delay 10
+  - effect:particles{particle=happy_villager;amount=5;hS=0.5;vS=0.5;speed=0.25}
+  - delay 10
+  - effect:particles{particle=happy_villager;amount=5;hS=0.5;vS=0.5;speed=0.25}
+  - delay 10
+  - undisguise
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=fleeplayers}
+  - runaigoalselector{goal=randomstroll}
+  - delay 100
+  - sound{s=block.respawn_anchor.set_spawn}
+  - heal{a=75}
+  - disguise{d="Player FrosTqq_ SetNameVisible setName &2Werewolf"} @self
+  - delay 10
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=meleeattack}
+  - runaigoalselector{goal=randomstroll}
+
+WerewolfBiteAttack:
+  Skills:
+  - potion{type=SLOW;duration=40;lvl=1}
+  - effect:particles{particle=sneeze;amount=10;speed=0.1}
+
+WerewolfAmbient:
+  Skills:
+  - sound{s=entity.wolf.ambient} @self
+WerewolfDeath:
+  Skills:
+  - sound{s=entity.wolf.death} @self
+WerewolfGrowl:
+  Skills:
+  - sound{s=entity.wolf.growl} @self
+WerewolfHowl:
+  Skills:
+  - sound{s=entity.wolf.death} @self
+WerewolfHurt:
+  Skills:
+  - sound{s=entity.wolf.hurt} @self
+WerewolfPant:
+  Skills:
+  - sound{s=entity.wolf.pant} @self
+WerewolfShake:
+  Skills:
+  - sound{s=entity.wolf.shake} @self
+WerewolfStep:
+  Skills:
+  - sound{s=entity.wolf.step} @self
+WerewolfWhine:
+  Skills:
+  - sound{s=entity.wolf.whine} @self
+WerewolfBite:
+  Skills:
+  - sound{s=entity.phantom.bite} @self

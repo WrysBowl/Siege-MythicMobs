@@ -1,0 +1,15 @@
+GiantHornet:
+  Type: Bee
+  Display: '&2Giant Hornet'
+  Health: 10
+  Damage: 6
+  Faction: Bees
+  Modules:
+    ThreatTable: true
+  Options:
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    FollowRange: 36
+    MovementSpeed: 0.32

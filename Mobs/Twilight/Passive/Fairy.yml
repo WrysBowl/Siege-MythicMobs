@@ -1,0 +1,16 @@
+Fairy:
+  Type: chicken
+  Display: '&2Fairy'
+  Health: 30
+  Damage: 5
+  Faction: Fairy
+  Disguise:
+    Type: Vex
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 30
+    MovementSpeed: 0.1
+    AlwaysShowName: true

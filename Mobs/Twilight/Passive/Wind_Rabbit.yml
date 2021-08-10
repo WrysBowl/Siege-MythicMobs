@@ -1,0 +1,11 @@
+Wind_Rabbit:
+  Type: RABBIT
+  Display: '&2Wind Rabbit'
+  Health: 40
+  Faction: Ambient
+  Options:
+    FollowRange: 30
+    MovementSpeed: 0.1
+    AlwaysShowName: true
+  Skills:
+  - skill{s=LungeAttack} @self ~onTimer:10

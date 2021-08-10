@@ -1,0 +1,99 @@
+Smoky:
+  Type: Villager
+  Display: '&6Smoky'
+  Health: 100
+  Faction: Ambient
+  Options:
+    Despawn: false
+    MovementSpeed: 0.4
+  Disguise:  
+    Type: Player
+    Skin: AceAnvil
+
+Mera:
+  Type: Villager
+  Display: '&6Mera'
+  Health: 100
+  Faction: Ambient
+  Options:
+    Despawn: false
+    MovementSpeed: 0.4
+  Disguise:  
+    Type: Player
+    Skin: Aisy_100
+    
+Clemont:
+  Type: Villager
+  Display: '&6Clemont'
+  Health: 100
+  Faction: Ambient
+  Equipment:
+  - iron_helmet:4
+  Options:
+    Despawn: false
+    MovementSpeed: 0.4
+  Disguise:  
+    Type: Player
+    Skin: AbduLLachWML
+
+Symone:
+  Type: Villager
+  Display: '&6Symone'
+  Health: 100
+  Faction: Ambient
+  Options:
+    Despawn: false
+    MovementSpeed: 0.4
+  Disguise:  
+    Type: Player
+    Skin: aaiycaro
+    
+Boom:
+  Type: Iron_Golem
+  Display: '&6Boom'
+  Health: 100
+  Faction: Ambient
+  AITargetSelectors:
+  - 0 clear
+  Equipment:
+  - stone_sword:0
+  - leather_helmet:4
+  - iron_chestplate:3
+  - leather_leggings:2
+  - iron_boots:1
+  Options:
+    Despawn: false
+    MovementSpeed: 0.4
+  Disguise:  
+    Type: Player
+    Skin: Admist
+
+Recruit:
+  Type: Zombie
+  Display: '&aRecruit'
+  Health: 35
+  Damage: 0
+  Faction: Ambient
+  AITargetSelectors:
+  - 0 clear
+  - 1 monsters
+  Equipment:
+  - wooden_sword:0
+  - leather_helmet:4
+  - leather_chestplate:3
+  - leather_leggings:2
+  - leather_boots:1
+  Options:
+    MovementSpeed: 0.25
+    Silent: true
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+  Disguise:  
+    Type: Player
+    Skin: Aszrael
+  Skills:
+  - sound{s=entity.villager.death} @self ~onDeath
+  - sound{s=entity.villager.hurt} @self ~onDamaged
+  - sound{s=entity.villager.no} @self ~onAttack

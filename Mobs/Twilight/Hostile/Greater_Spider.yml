@@ -1,0 +1,21 @@
+Greater_Spider:
+  Type: Cave_Spider
+  Display: '&2Greater Spider'
+  Health: 30
+  Damage: 10
+  Faction: Spiders
+  Disguise:
+    Type: Spider
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Options:
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    FollowRange: 20
+    MovementSpeed: 0.30
+  Skills:
+  - skill{s=ForestSpiderFlee} ~onDamaged

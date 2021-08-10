@@ -1,0 +1,16 @@
+Crystal_Rat:
+  Type: Endermite
+  Display: '&2Crystal Rat'
+  Health: 50
+  Damage: 10
+  Faction: Silverfish
+  AIGoalSelectors:
+  - 0 clear
+  - 1 fleeplayers
+  - 2 randomstroll
+  Options:
+    AlwaysShowName: true
+    FollowRange: 24
+    MovementSpeed: 0.35
+  Skills:
+  - effect:particles{particle=dragon_breath;amount=2;hS=0;vS=0;yOffset=0.25;speed=0.01} @self ~onTimer:10

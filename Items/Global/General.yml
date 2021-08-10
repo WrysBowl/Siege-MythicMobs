@@ -1,0 +1,96 @@
+Wooden_Sword:
+  Id: Stone_Axe
+  Data: 0
+
+End_Rod:
+  Id: End_Rod
+  Data: 0
+
+Bone_Block:
+  Id: Bone_Block
+  Data: 0
+
+Fire_Charge:
+  Id: Fire_Charge
+  Data: 0
+
+Stone_Axe:
+  Id: Stone_Axe
+  Data: 0
+
+Stone_Sword:
+  Id: Stone_Sword
+  Data: 0
+
+Twig:
+  Id: Wooden_Sword
+  Model: 110001
+  Options:
+    Unbreakable: true
+Shank:
+  Id: Wooden_Sword
+  Model: 110005
+  Options:
+    Unbreakable: true
+Dagger:
+  Id: Wooden_Sword
+  Model: 110006
+  Options:
+    Unbreakable: true
+SplinteredBone:
+  Id: Wooden_Sword
+  Model: 110009
+  Options:
+    Unbreakable: true
+RefinedDagger:
+  Id: Wooden_Sword
+  Model: 110010
+  Options:
+    Unbreakable: true
+
+RecurveBow:
+  Id: Bow
+  Model: 120007
+  Options:
+    Unbreakable: true
+IronBow:
+  Id: Bow
+  Model: 120008
+  Options:
+    Unbreakable: true
+
+Club:
+  Id: Wooden_Axe
+  Model: 130001
+  Options:
+    Unbreakable: true
+GiantClub:
+  Id: Wooden_Axe
+  Model: 130002
+  Options:
+    Unbreakable: true
+DoubleBladedAxe:
+  Id: Wooden_Axe
+  Model: 130005
+  Options:
+    Unbreakable: true
+GreatSword:
+  Id: Wooden_Axe
+  Model: 130006
+  Options:
+    Unbreakable: true
+WarHammer:
+  Id: Wooden_Axe
+  Model: 130007
+  Options:
+    Unbreakable: true
+Clobber:
+  Id: Wooden_Axe
+  Model: 130009
+  Options:
+    Unbreakable: true
+EarthernHammer:
+  Id: Wooden_Axe
+  Model: 130010
+  Options:
+    Unbreakable: true

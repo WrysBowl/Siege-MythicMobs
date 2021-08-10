@@ -1,0 +1,28 @@
+Unicorn:
+  Type: Horse
+  Display: '&2Unicorn'
+  Health: 100
+  Faction: Ambient
+  Options:
+    HorseColor: WHITE
+    HorseStyle: WHITE
+    Tamed: true
+    Saddle: true
+    FollowRange: 20
+    MovementSpeed: 0.25
+  Skills:
+  - skill{s=UnicornForceField} @self ~onTimer:100
+Horn:
+  Type: ARMOR_STAND
+  Options:
+    Small: true
+    HasArms: true
+    HasBasePlate: true
+    Invisible: true
+    Marker: false
+    ItemHead: Bone_Block
+  Pose:
+    Head: 45,0,0
+  Skills:
+  - mount{type=Unicorn} ~onSpawn
+  - posearmorstand{head=0,0to360,0} @self ~onTimer:10  

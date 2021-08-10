@@ -1,0 +1,21 @@
+Blob:
+  Type: Slime
+  Display: '&2Blob'
+  Health: 20
+  Damage: 3
+  Faction: Slime
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Options:
+    Size: 2
+    PreventSlimeSplit: true
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 20
+    MovementSpeed: 0.3
+  Skills:
+  - skill{s=LungeAttack} @self ~onTimer:20

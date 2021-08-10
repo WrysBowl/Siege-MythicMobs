@@ -1,0 +1,28 @@
+Skeletal_General:
+  Type: Skeleton
+  Display: '&2Skeletal General'
+  Health: 400
+  Damage: 75
+  Faction: Undead
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 24
+    MovementSpeed: 0.32
+  Equipment:
+  - Iron_Helmet:4
+  - Iron_Chestplate:3
+  - Iron_Leggings:2
+  - Iron_Boots:1
+  - GreatSword:HAND
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 OtherFaction
+  - 3 attacker
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll

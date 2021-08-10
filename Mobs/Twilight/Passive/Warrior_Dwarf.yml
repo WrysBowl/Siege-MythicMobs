@@ -1,0 +1,26 @@
+Warrior_Dwarf:
+  Type: Zombie
+  Display: '&2Warrior Dwarf'
+  Health: 200
+  Damage: 30
+  Faction: Ambient
+  Disguise:
+    Type: Player
+    Skin: 'Nilie321'
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 24
+    MovementSpeed: 0.35
+  Equipment:
+  - Leather_Helmet:4
+  - Leather_Chestplate:3
+  - EarthernHammer:HAND
+  AITargetSelectors:
+  - 0 clear
+  - 1 monsters
+  - 2 attacker
+  Skills:
+  - setname{name='&2Warrior Dwarf &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

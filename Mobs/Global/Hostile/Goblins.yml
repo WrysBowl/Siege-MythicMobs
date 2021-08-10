@@ -1,0 +1,61 @@
+Goblin:
+  Type: Baby_Zombie
+  Display: '&2Goblin'
+  Health: 25
+  Damage: 5
+  Faction: Goblin
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Options:
+    AlwaysShowName: true
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    FollowRange: 16
+    MovementSpeed: 0.21
+    Silent: true
+  Equipment:
+  - Goblin_Head:4
+  - Goblin_Chestplate:3
+  - Goblin_Leggings:2
+  - Goblin_Boots:1
+  - Twig:0
+  Skills:
+  - skill{s=GoblinFlee} ~onDamaged 0.25
+  - skill{s=Steal} ~onAttack 0.25
+  - skill{s=GoblinAmbientSound} ~onTimer:120
+  - skill{s=GoblinAttackSound} ~onAttack 1
+
+GoldenGoblin:
+  Type: Baby_Zombie
+  Display: '&2Golden Goblin'
+  Health: 50
+  Damage: 10
+  Faction: Goblin
+  Options:
+    AlwaysShowName: true
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    FollowRange: 24
+    MovementSpeed: 0.21
+    Silent: true
+  Equipment:
+  - Golden_Goblin_Head:4
+  - Golden_Goblin_Chestplate:3
+  - Golden_Goblin_Leggings:2
+  - Golden_Goblin_Boots:1
+  - Twig:0
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=GoblinFlee} ~onDamaged 0.25
+  - skill{s=Steal} ~onAttack 0.25
+  - skill{s=GoblinAmbientSound} ~onTimer:120
+  - skill{s=GoblinAttackSound} ~onAttack 1
+  - effect:particles{particle=totem_of_undying;amount=10;hS=0.25;vS=0.25;yOffset=1;speed=0.1} @self ~onTimer:10
+  - effect:particles{particle=totem_of_undying;amount=100;hS=1;vS=1;yOffset=1;speed=1} @self ~onDeath
+  - message{m="&e&lGolden Goblin &r&7has spawned within 100 blocks of you."} @PIR{r=100} ~onSpawn

@@ -1,0 +1,44 @@
+Werewolf:
+  Type: Wolf
+  Display: '&4Werewolf'
+  Health: 500
+  Damage: 20
+  Faction: Boss
+  BossBar:
+    Enabled: true
+    Title: '&4Werewolf'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  DamageModifiers:
+  - ENTITY_ATTACK 1.5
+  Modules:
+    ThreatTable: true
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    Persistent: true
+    Despawn: false
+    Silent: true
+    FollowRange: 40
+    MovementSpeed: 0.37
+  Skills:
+  - heal{a=1} @self ~onTimer:40
+  - skill{s=WerewolfShiftHeal} @self ~onDamaged 0.1
+  - summon{type=Twilight_Wolf;itt=true} @self ~onDamaged 0.25
+  - skill{s=WerewolfBiteAttack} ~onAttack
+  - skill{s=WerewolfBite} ~onAttack
+  - skill{s=WerewolfWhine} ~onDeath
+  - skill{s=WerewolfHowl} ~onDeath
+  - skill{s=WerewolfHurt} ~onDamaged
+  - skill{s=WerewolfHowl} ~onTimer:100 0.5
+  - skill{s=WerewolfAmbient} ~onTimer:100 0.5

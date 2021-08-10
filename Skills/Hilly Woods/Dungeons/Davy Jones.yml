@@ -1,0 +1,92 @@
+CloakingAttack:
+
+  Skills:
+
+  - effect:particleorbital{p=reddust;color=#585a4d;a=10;points=64;an=1;hs=0;vs=0;s=0;y=2;ticks=40;in=1;rx=0;ry=0;r=1;yOffset=0.7} @self
+
+  - delay 10
+
+  - teleport @target
+
+  - damage{a=1} @self
+
+
+
+WaterBoltAttack:
+
+  Skills:
+
+  - runaigoalselector{goal=clear}
+
+  - runaigoalselector{goal=fleeplayers}
+
+  - runaigoalselector{goal=fleegolems}
+
+  - runaigoalselector{goal=randomstroll}
+
+  - delay 30
+
+  - equip{item=air:0}
+
+  - skill{s=WaterBolt} @target
+
+  - delay 10
+
+  - runaigoalselector{goal=clear}
+
+  - runaigoalselector{goal=arrowattack}
+
+  - runaigoalselector{goal=randomstroll}
+
+  - equip{item=Davy_Jones_Weapon:0}
+
+
+WaterSpoutAttack:
+  Skills:
+  - pull{v=12} @PlayersInRadius{r=12}
+  - delay 10
+
+
+Davy_Jones_MeleeAttack:
+
+  TargetConditions:
+
+  - distance{d=<5}
+
+  Skills:
+
+  - equip{item=air:0}
+
+  - runaigoalselector{goal=clear}
+
+  - runaigoalselector{goal=meleeattack}
+
+  - runaigoalselector{goal=randomstroll}
+
+  - equip{item=Davy_Jones_Axe:0}
+
+
+
+
+
+Davy_Jones_RangedAttack:
+
+  TargetConditions:
+
+  - distance{d>5}
+
+  Skills:
+
+  - equip{item=air:0}
+
+  - runaigoalselector{goal=clear}
+
+  - runaigoalselector{goal=arrowattack}
+
+  - runaigoalselector{goal=randomstroll}
+
+  - equip{item=Davy_Jones_Weapon:0}
+
+
+
+ 

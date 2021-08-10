@@ -1,0 +1,18 @@
+Twilight_Cat:
+  Type: FOX
+  Display: '&2Cat'
+  Health: 30
+  Damage: 5
+  Faction: Cat
+  Disguise:
+    Type: CAT
+  Options:
+    FollowRange: 20
+    MovementSpeed: 0.25
+  Skills:
+  - skill{s=CatAggroSound} @self ~onEnterCombat
+  - skill{s=CatAmbientSound} @self ~onTimer:40 0.5
+  - skill{s=CatBiteSound} @self ~onAttack
+  - skill{s=CatDeathSound} @self ~onDeath
+  - skill{s=CatHurtSound} @self ~onDamaged
+  - skill{s=Steal} ~onAttack 0.3

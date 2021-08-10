@@ -1,0 +1,26 @@
+Flamethrower:
+ Skills:
+  - sound{s=entity.blaze.shoot;p=0.5} @Self
+  - aura{i=1;d=120;oT=FlamethrowerProjectile} @Self
+FlamethrowerProjectile:
+ Skills:
+  - projectile{i=1;oT=Flamethrower-Tick;oH=Flamethrower-Hit;mr=6;sE=false;hR=3.0} @Target
+Flamethrower-Tick:
+ Skills:
+  - effect:particles{p=flame;a=5;s=0.05;hs=0.5;vs=0.1} @origin
+Flamethrower-Hit:
+ Skills:
+  - damage{a=5;pkb=true}
+  - ignite{t=140}
+FireRing:
+ Skills:
+   - sound{s=entity.magma_cube.squish;p=0.0;v=3} @Self
+   - sound{s=entity.blaze.shoot;p=0.0;v=3} @Self
+   - projectile{onTick=FireRing-Tick;onHit=FireRing-Hit;v=5;hR=1.5;vR=2;d=200;sE=false;sB=false;mr=20;i=1} @Ring{radius=5;points=30}
+FireRing-Tick:
+ Skills:
+   - effect:particles{p=flame;amount=5;speed=0;hS=0.4;vS=0.8} @origin
+FireRing-Hit:
+ Skills:
+  - damage{a=5}
+  - ignite{t=300}

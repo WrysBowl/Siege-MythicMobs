@@ -1,0 +1,26 @@
+AngryBull:
+  Type: Zombie
+  Display: '&2Angry Bull'
+  Health: 140
+  Damage: 18
+  Faction: Animal
+  Disguise:
+    Type: Cow
+  Options:
+    Silent: true
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 30
+    MovementSpeed: 0.3
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Skills:
+  - skill{s=Charge} ~onDamaged 0.4
+  - skill{s=GroundSlam} ~onDamaged 0.4
+  - skill{s=AngryBullHitSound} ~onDamaged
+  - skill{s=AngryBullDeathSound} ~onDeath
+  - skill{s=AngryBullAttackSound} ~onAttack

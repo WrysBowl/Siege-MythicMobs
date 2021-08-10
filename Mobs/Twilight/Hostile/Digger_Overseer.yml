@@ -1,0 +1,12 @@
+Digger_Overseer:
+  Type: Iron_Golem
+  Display: '&2Digger Overseer'
+  Health: 200
+  Damage: 45
+  Faction: EvilSpirit
+  Disguise:
+    Type: Player
+    Skin: 'IgnRogue'
+  Options:
+    FollowRange: 32
+    MovementSpeed: 0.30

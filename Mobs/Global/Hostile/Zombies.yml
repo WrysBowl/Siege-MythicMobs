@@ -1,0 +1,42 @@
+InfectedDigger:
+  Type: ZOMBIE_VILLAGER
+  Display: '&2Infected Digger'
+  Health: 40
+  Damage: 12.5
+  Faction: Undead
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Options:
+    AlwaysShowName: true
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    FollowRange: 20
+    MovementSpeed: 0.3
+    Silent: false
+  Skills:
+  - skill{s=InfectedDiggerWeaknessAttack} ~onDamaged 0.25
+  - skill{s=InfectedDiggerHeal} ~onDamaged 0.25
+
+ZombifiedDigger:
+  Type: ZOMBIE
+  Display: '&2Zombified Digger'
+  Health: 50
+  Damage: 9
+  Faction: Undead
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Options:
+    AlwaysShowName: true
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    FollowRange: 20
+    MovementSpeed: 0.3
+    Silent: false
+  Skills:
+  - skill{s=ZombifiedDiggerInfectionAttack} ~onAttack 0.1

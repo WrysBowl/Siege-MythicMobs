@@ -1,0 +1,17 @@
+Polar_Bear:
+  Type: Polar_Bear
+  Display: '&2Polar Bear'
+  Health: 200
+  Damage: 10
+  Faction: Ambient
+  AIGoalSelectors:
+  - 0 clear
+  - 1 fleeplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 OtherFaction
+  Options:
+    AlwaysShowName: true
+    FollowRange: 24
+    MovementSpeed: 0.35

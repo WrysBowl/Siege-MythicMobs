@@ -1,0 +1,20 @@
+BloodSucker:
+  Type: Cave_Spider
+  Display: '&2Blood Sucker'
+  Health: 25
+  Damage: 15
+  Faction: Spiders
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Options:
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    FollowRange: 18
+    MovementSpeed: 0.25
+  Skills:
+  - skill{s=BloodSuckerDrainAttack} ~onAttack 1
+  - skill{s=BloodSuckerLungeAttack} ~onTimer:120

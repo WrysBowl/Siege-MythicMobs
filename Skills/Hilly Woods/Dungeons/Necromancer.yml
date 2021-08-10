@@ -1,0 +1,64 @@
+NecromancerSummonUndead:
+  Skills:
+  - sound{s=entity.evoker.cast_spell} @self
+  - effect:particles{particle=soul;amount=4;hS=1;vS=1;speed=3} @self
+  - delay 10
+  - sound{s=entity.evoker.cast_spell} @self
+  - effect:particles{particle=soul;amount=4;hS=1;vS=1;speed=3} @self
+  - delay 10
+  - sound{s=entity.evoker.cast_spell} @self
+  - effect:particles{particle=soul;amount=4;hS=1;vS=1;speed=3} @self
+  - delay 10
+  - damage{a=100} @self
+  - summon{type=ZombifiedDigger;itt=true;a=3} @self
+NecromancerWitherSkullShoot:
+  Skills:
+  - shootskull{y=5;v=6;ps=true} @target
+  - delay 15
+  - shootskull{y=5;v=6;ps=true} @target
+  - delay 15
+  - shootskull{y=5;v=6;ps=true} @target
+  - delay 15
+  - shootskull{y=5;v=6;ps=true} @target
+  - delay 15
+  - shootskull{y=5;v=6;ps=true} @target
+NecromancerPlague:
+  Skills:
+  - effect:particles{particle=reddust;color=#455241;amount=20;hS=3;vS=3;speed=0.4} @origin
+  - delay 5
+  - effect:particles{particle=reddust;color=#455241;amount=20;hS=3;vS=3;speed=0.4} @origin
+  - delay 5
+  - effect:particles{particle=reddust;color=#455241;amount=20;hS=3;vS=3;speed=0.4} @origin
+  - delay 5
+  - projectile{onTick=NecromancerPlague-Tick;onHit=NecromancerPlague-Hit;v=10;i=1;hR=3;vR=3;mr=24}
+NecromancerPlague-Tick:
+  Skills:
+  - effect:particles{particle=reddust;color=#455241;amount=20;hS=3;vS=3;speed=0.2} @origin
+NecromancerPlague-Hit:
+  Skills:
+  - damage{a=3}
+  - potion{type=WITHER;duration=80;lvl=3} @target
+  - potion{type=BLINDNESS;duration=40;lvl=1} @target
+  - sound{s=entity.drowned.death_water} @target
+NecromancerLifeSteal:
+  Skills:
+  - effect:particles{particle=reddust;color=#455241;amount=10;hS=3;vS=3;speed=1} @self
+  - consume{d=4;h=4} @EIR{r=5}
+  - effect:particlering{particle=soul;radius=5;points=32;amount=2;hS=0.5;vS=0.5} @self
+NecromancerTotemOfUndying:
+  Skills:
+  - effect:particles{p=soul;a=15;s=0.05;hs=0.5;vs=0.1} @origin
+  - delay 15
+  - effect:particles{p=soul;a=15;s=0.05;hs=0.5;vs=0.1} @origin
+  - delay 15
+  - effect:particles{p=soul;a=15;s=0.05;hs=0.5;vs=0.1} @origin
+  - delay 15
+  - sound{s=entity.evoker_fangs.attack} @self
+  - totem{onTick=NecromancerTotemOfUndying-Tick;onHit=NecromancerTotemOfUndying-Hit;i=5;hR=2;vR=2;md=300;hnp=true;hp=true} @self
+NecromancerTotemOfUndying-Tick:
+  Skills:
+  - effect:particles{p=soul;a=15;s=0.05;hs=0.5;vs=0.1} @origin
+  - effect:particlering{particle=reddust;color=#455241;radius=5;points=24;amount=2;hS=0;vS=0} @origin
+NecromancerTotemOfUndying-Hit:
+  Skills:
+  - damage{a=6} @EIR{r=5;ignore=self,monsters}

@@ -1,0 +1,25 @@
+InfectedDiggerWeaknessAttack:
+  Skills:
+  - shootpotion{type=SLOW;duration=100;level=2;velocity=5}
+InfectedDiggerHeal:
+  Skills:
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=fleeplayers}
+  - runaigoalselector{goal=randomstroll}
+  - delay 15
+  - equip{item=golden_apple:0}
+  - effect:particles{p=reddust;color=#FFD700;amount=20;speed=1;hS=0.2;vS=0.2} @self
+  - delay 20
+  - effect:particles{p=reddust;color=#FFD700;amount=20;speed=1;hS=0.2;vS=0.2} @self
+  - delay 20
+  - equip{item=air:0}
+  - heal{amount=10} @self
+  - sound{s=block.respawn_anchor.set_spawn} @self
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=meleeattack}
+  - runaigoalselector{goal=randomstroll}
+
+ZombifiedDiggerInfectionAttack:
+  Skills:
+  - delay 20
+  - summon{type=ZombifiedDigger}

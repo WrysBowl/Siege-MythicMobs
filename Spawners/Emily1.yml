@@ -1,0 +1,25 @@
+Emily1:
+  MobName: Emily
+  World: Hilly_Woods
+  X: 179
+  Y: 87
+  Z: 222
+  Radius: 10
+  UseTimer: true
+  MaxMobs: '1'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 10
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 50
+  ScalingRange: 25.0
+  LeashRange: 40
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 1

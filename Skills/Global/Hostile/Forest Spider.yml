@@ -1,0 +1,34 @@
+ForestSpiderWebAttack:
+  Skills:
+  - stun{d=20;f=true} @self
+  - sound{s=entity.spider.ambient} @self
+  - delay 10
+  - sound{s=entity.spider.ambient} @self
+  - delay 10
+  - skill{s=WebThrow}
+
+ForestSpiderFlee:
+  Conditions:
+  - playerwithin{d=8}
+  Skills:
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=fleeplayers}
+  - runaigoalselector{goal=randomstroll}
+  - delay 50
+  - skill{s=ForestSpiderWebAttack}
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=spiderattack}
+  - runaigoalselector{goal=randomstroll}
+
+WebThrow:
+  Skills:
+  - projectile{onTick=Web-Tick;onHit=Web-Hit;v=20;i=1;mr=24;hnp=true}
+Web-Tick:
+  Skills:
+  - effect:itemspray{item=cobweb;amount=1} @origin
+Web-Hit:
+  Skills:
+  - damage{a=6}
+  - potion{type=SLOW;duration=80;lvl=4}
+  - potion{type=BLINDNESS;duration=60}
+  - effect:particles{particle=sneeze;amount=30;speed=1}

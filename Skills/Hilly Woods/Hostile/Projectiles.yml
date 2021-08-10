@@ -1,0 +1,20 @@
+StoneSwordThrow:
+  Skills:
+  - projectile{onTick=StoneSword-Tick;onHit=StoneSword-Hit;v=10;i=1;hR=1;vR=1;mr=24;hnp=true}
+StoneSword-Tick:
+  Skills:
+  - effect:itemspray{item=Stone_Sword;amount=1} @origin
+StoneSword-Hit:
+  Skills:
+  - damage{a=5}
+  - potion{type=SLOW;duration=100;lvl=2}
+  - effect:particles{particle=reddust;amount=20;hS=1;vS=1;speed=1}
+
+ArrowShoot:
+  Skills:
+  - shoot{type=ARROW;velocity=1.2;damage=1;i=1;oh=ArrowShoot-Hit}
+ArrowShoot-Hit:
+  Skills:
+  - potion{type=SLOW;duration=30;lvl=4}
+  - stun{d=20;f=true}
+  - effect:particles{p=reddust;color=#eeda1b;amount=50;hS=1;vS=1;speed=0}

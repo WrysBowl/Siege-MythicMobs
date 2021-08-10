@@ -1,0 +1,7 @@
+RockRatSpitAttack:
+  Conditions:
+  - playernotwithin{d=7}
+  Skills:
+  - effect:particles{particle=spit;amount=2;hS=0.1;vS=0.1;speed=0.25} @self
+  - delay 30
+  - shoot{type=snowball;velocity=1.2;damage=2}

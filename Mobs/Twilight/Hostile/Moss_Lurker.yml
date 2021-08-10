@@ -1,0 +1,17 @@
+Moss_Lurker:
+  Type: Creeper
+  Display: '&2Moss Lurker'
+  Health: 30
+  Damage: 10
+  Faction: Explosives
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Options:
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    ExplosionRadius: 5
+    FuseTicks: 20
+    FollowRange: 40
+    MovementSpeed: 0.20

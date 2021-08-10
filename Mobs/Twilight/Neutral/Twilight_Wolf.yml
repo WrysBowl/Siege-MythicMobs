@@ -1,0 +1,9 @@
+Twilight_Wolf:
+  Type: WOLF
+  Display: '&2Wolf'
+  Health: 50
+  Damage: 10
+  Faction: Wolf
+  Options:
+    FollowRange: 20
+    MovementSpeed: 0.3

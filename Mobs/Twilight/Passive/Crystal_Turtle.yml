@@ -1,0 +1,11 @@
+Crystal_Turtle:
+  Type: Turtle
+  Display: '&2Crystal Turtle'
+  Health: 100
+  Faction: Turtle
+  Options:
+    AlwaysShowName: true
+    FollowRange: 24
+    MovementSpeed: 0.30
+  Skills:
+  - effect:particles{particle=dragon_breath;amount=2;hS=0;vS=0;yOffset=0.25;speed=0.01} @self ~onTimer:10

@@ -1,0 +1,29 @@
+OgreHeal:
+  Skills:
+  - effect:particleorbital{p=reddust;color=#a4eb34;a=10;points=64;an=1;hs=0;vs=0;s=0;y=2;ticks=40;in=1;rx=0;ry=0;r=1;yOffset=0.7} @self
+  - heal{amount=40} @self
+  - sound{s=block.respawn_anchor.set_spawn} @self
+OgreAttack:
+  Skills:
+  - damage{amount=30} @LivingEntitiesInRadius{r=1}
+  - throw{velocity=8;velocityY=6} @LivingEntitiesInRadius{r=1}
+OgreLifeStealAttack:
+  Skills:
+  - stun{d=20;f=true} @LivingEntitiesInRadius{r=10}
+  - consume{d=20;h=30} @LivingEntitiesInRadius{r=10}
+  - setname{name='&2Ogre &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
+  - effect:particleline{p=reddust;color=#a4eb34;amount=1;fromOrigin=true} @LivingEntitiesInRadius{r=6}
+  - effect:particleorbital{p=reddust;color=#a4eb34;a=10;points=64;an=1;hs=0;vs=0;s=0;y=2;ticks=40;in=1;rx=0;ry=0;r=1;yOffset=0.7} @self
+  - sound{s=block.respawn_anchor.set_spawn} @self
+OgreSuckAttack:
+  Skills:
+  - pull{v=8;to=true} @LivingEntitiesInRadius{r=10}
+  - delay 20
+OgreAmbientSound:
+  Skills:
+  - sound{s=entity.ravager.attack} @self
+  - sound{s=entity.ravager.stunned} @self
+OgreAttackSound:
+  Skills:
+  - sound{s=entity.player.attack.sweep} @self
+  - sound{s=entity.player.attack.crit} @self

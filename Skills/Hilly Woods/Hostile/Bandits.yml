@@ -1,0 +1,49 @@
+BanditCloakingAttack:
+  Skills:
+  - effect:particleorbital{p=reddust;color=#585a4d;a=10;points=64;an=1;hs=0;vs=0;s=0;y=2;ticks=40;in=1;rx=0;ry=0;r=1;yOffset=0.7} @self
+  - delay 10
+  - teleport{spreadh=1;spreadv=0}
+BanditSwordThrowAttack:
+  Skills:
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=fleeplayers}
+  - runaigoalselector{goal=randomstroll}
+  - delay 30
+  - equip{item=air:0}
+  - skill{s=StoneSwordThrow} @target
+  - delay 10
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=meleeattack}
+  - runaigoalselector{goal=randomstroll}
+  - equip{item=stone_sword:0}
+BanditAmbientSound:
+  Skills:
+  - sound{s=entity.wandering_trader.no} @self
+BanditAttackSound:
+  Skills:
+  - sound{s=entity.player.attack.strong} @self
+  - sound{s=entity.player.attack.weak} @self
+BanditArcherVolleyAttack:
+  Skills:
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=fleeplayers}
+  - runaigoalselector{goal=randomstroll}
+  - delay 30
+  - shoot{type=ARROW;velocity=1.5;damage=3}
+  - delay 20
+  - shoot{type=ARROW;velocity=1.5;damage=3}
+  - delay 20
+  - shoot{type=ARROW;velocity=1.5;damage=3}
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=skeletonbowattack}
+  - runaigoalselector{goal=randomstroll}
+BanditArcherStunningArrow:
+  Skills:
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=fleeplayers}
+  - runaigoalselector{goal=randomstroll}
+  - delay 30
+  - skill{s=ArrowShoot} @target
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=skeletonbowattack}
+  - runaigoalselector{goal=randomstroll}

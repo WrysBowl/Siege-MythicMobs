@@ -1,0 +1,18 @@
+CatAggroSound:
+  Skills:
+    - sound{s=entity.cat.hiss} @self
+CatAmbientSound:
+  Skills:
+    - sound{s=entity.cat.ambient} @self
+CatBiteSound:
+  Skills:
+    - sound{s=entity.cat.hiss} @self
+CatDeathSound:
+  Skills:
+    - sound{s=entity.cat.death} @self
+CatEatSound:
+  Skills:
+    - sound{s=entity.cat.eat} @self
+CatHurtSound:
+  Skills:
+    - sound{s=entity.cat.hurt} @self

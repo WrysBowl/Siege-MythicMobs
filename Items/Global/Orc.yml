@@ -1,0 +1,24 @@
+Orc_Head:
+  Id: 397
+  Data: 3
+  Options:
+    Player: Ganaderia
+
+Orc_Chestplate:
+  Id: Leather_Chestplate
+  Data: 0
+  Options:
+    Color: 104,133,85
+    Unbreakable: true
+Orc_Leggings:
+  Id: Leather_Leggings
+  Data: 0
+  Options:
+    Color: 104,133,85
+    Unbreakable: true
+Orc_Boots:
+  Id: Leather_Boots
+  Data: 0
+  Options:
+    Color: 104,133,85
+    Unbreakable: true

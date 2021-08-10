@@ -1,0 +1,17 @@
+BloodSuckerLungeAttack:
+  Conditions:
+  - playernotwithin{d=6}
+  - playerwithin{d=10}
+  Skills:
+  - effect:particles{particle=poof;amount=4;hS=0.1;vS=0.1;speed=0.25} @self
+  - delay 20
+  - lunge{velocity=2;velocityY=0.1}
+
+BloodSuckerDrainAttack:
+  Conditions:
+  - playerwithin{d=3}
+  Skills:
+  - sound{s=entity.generic.drink} @self
+  - delay 10
+  - consume{d=10;h=5}
+  - delay 1

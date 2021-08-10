@@ -1,0 +1,16 @@
+GoblinFlee:
+  Skills:
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=fleeplayers}
+  - runaigoalselector{goal=randomstroll}
+  - delay 200
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=meleeattack}
+  - runaigoalselector{goal=randomstroll}
+GoblinAmbientSound:
+  Skills:
+  - sound{s=entity.drowned.ambient_water} @self
+  - sound{s=entity.drowned.ambient} @self
+GoblinAttackSound:
+  Skills:
+  - sound{s=entity.player.attack.strong} @self

@@ -1,0 +1,33 @@
+MagmaSpirit:
+ Type: MAGMA_CUBE
+ Display: '&4Magma Spirit'
+ Health: 450
+ Damage: 20
+ Faction: Boss
+ BossBar:
+  Enabled: true
+  Title: '&4Magma Spirit'
+  Range: 20
+  Color: RED
+  Style: SOLID
+ AITargetSelectors:
+ - 0 clear
+ - 1 players
+ - 2 attacker
+ Options:
+  Persistent: true
+  Despawn: false
+  PreventSunburn: true
+  PreventOtherDrops: true
+  PreventItemPickup: true
+  MovementSpeed: 0.4
+  KnockbackResistance: 1.0
+  FollowRange: 50
+  Size: 3
+ Skills:
+  - skill{s=Flamethrower} @Self ~onTimer:200
+  - skill{s=FireRing} @Self ~onTimer:400
+  - skill{s=LungeAttack} @self ~onTimer:20
+  - sound{s=entity.magma_cube.hurt} @Self ~onDamaged
+  - sound{s=entity.magma_cube.death} @Self ~onDeath
+  - effect:blockmask{m=magma_block;r=2;d=200} @self ~onTimer:5

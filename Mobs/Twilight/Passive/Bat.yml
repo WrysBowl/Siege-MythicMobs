@@ -1,0 +1,8 @@
+Bat:
+  Type: BAT
+  Display: '&2Bat'
+  Health: 25
+  Faction: Ambient
+  Options:
+    FollowRange: 20
+    MovementSpeed: 0.25

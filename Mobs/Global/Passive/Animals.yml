@@ -1,0 +1,59 @@
+FeatheredMeat:
+  Type: Chicken
+  Display: '&2Feathered Meat'
+  Health: 8
+  Faction: Ambient
+  Options:
+    PreventOtherDrops: true
+    Despawn: true
+    MovementSpeed: 0.17
+  Skills:
+  - skill{s=HubGlowing} @self ~onSpawn 1
+
+Porky:
+  Type: Pig
+  Display: '&2Porky'
+  Health: 40
+  Faction: Ambient
+  Options:
+    PreventOtherDrops: true
+    Despawn: true
+
+Wooly:
+  Type: Sheep
+  Display: '&2Wooly'
+  Health: 60
+  Faction: Ambient
+  Options:
+    PreventOtherDrops: true
+    Despawn: true
+
+MooMoo:
+  Type: Cow
+  Display: '&2Moo Moo'
+  Health: 80
+  Faction: Ambient
+  Options:
+    PreventOtherDrops: true
+    Despawn: true
+
+Pigeon:
+  Type: Parrot
+  Display: '&2Pigeon'
+  Health: 10
+  Damage: 1
+  Faction: Ambient
+  Options:
+    FollowRange: 30
+    PreventOtherDrops: true
+    Despawn: true
+
+Sushi:
+  Type: TROPICAL_FISH
+  Display: '&2Sushi'
+  Health: 20
+  Damage: 1
+  Faction: Ambient
+  Options:
+    PreventOtherDrops: true
+    Despawn: true

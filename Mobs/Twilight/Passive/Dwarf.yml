@@ -1,0 +1,16 @@
+Dwarf:
+  Type: Villager
+  Display: '&2Dwarf'
+  Health: 200
+  Faction: Ambient
+  Disguise:
+    Type: Player
+    Skin: 'XxDarkLinkxX'
+  Options:
+    FollowRange: 24
+    MovementSpeed: 0.35
+  Equipment:
+  - Leather_Helmet:4
+  - Leather_Chestplate:3
+  Skills:
+  - setname{name='&2Bandit &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

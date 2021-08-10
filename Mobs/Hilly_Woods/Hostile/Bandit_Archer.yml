@@ -1,0 +1,32 @@
+BanditArcher:
+  Type: Skeleton
+  Display: '&2Bandit Archer'
+  Health: 100
+  Damage: 40
+  Faction: Bandit
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 24
+    MovementSpeed: 0.35
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: '0xBACE'
+  Equipment:
+  - Leather_Helmet:4
+  - Leather_Chestplate:3
+  - Leather_Leggings:2
+  - Leather_Boots:1
+  - Bandit_Bow:HAND
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 OtherFaction
+  - 3 attacker
+  Skills:
+  - skill{s=BanditArcherVolleyAttack} ~onAttack 0.5
+  - skill{s=BanditAmbientSound} ~onTimer:80 0.5
+  - setname{name='&2Bandit Archer &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

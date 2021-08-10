@@ -1,0 +1,4 @@
+Suicide:
+  Skills:
+  - delay 18000
+  - suicide @self

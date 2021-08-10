@@ -1,0 +1,27 @@
+LumberjackJoeAxeThrowAttack:
+  Conditions:
+  - playerwithin{d=8}
+  Skills:
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=fleeplayers}
+  - runaigoalselector{goal=randomstroll}
+  - delay 50
+  - effect:particles{particle=angry_villager;amount=5;hS=0.5;vS=0.5;speed=0.25} @self
+  - stun{d=15;f=true} @self
+  - equip{item=air:0}
+  - skill{s=AxeThrow}
+  - runaigoalselector{goal=clear}
+  - runaigoalselector{goal=meleeattack}
+  - runaigoalselector{goal=randomstroll}
+  - equip{item=wooden_axe:0}
+
+AxeThrow:
+  Skills:
+  - projectile{onTick=Axe-Tick;onHit=Axe-Hit;v=20;i=1;mr=24;hnp=true}
+Axe-Tick:
+  Skills:
+  - effect:itemspray{item=wooden_axe;amount=1} @origin
+Axe-Hit:
+  Skills:
+  - damage{a=35}
+  - effect:particles{particle=sneeze;amount=30;speed=1}

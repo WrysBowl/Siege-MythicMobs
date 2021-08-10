@@ -1,0 +1,24 @@
+LumberjackJoe:
+  Type: Zombie
+  Display: '&2Lumberjack Joe'
+  Health: 100
+  Damage: 10
+  Faction: Bosses
+  Disguise:
+    Type: Player
+    Skin: 'BufkinTheBrave'
+  Modules:
+    ThreatTable: true
+  Options:
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    FollowRange: 48
+    MovementSpeed: 0.28
+  Equipment:
+  - wooden_axe:0
+  - leather_leggings:2
+  - leather_boots:1
+  Skills:
+  - skill{s=LumberjackJoeAxeThrowAttack} ~onDamaged 0.25

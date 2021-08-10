@@ -1,0 +1,25 @@
+Wooly_5:
+  MobName: Wooly
+  World: Hilly_Woods
+  X: -209
+  Y: 71
+  Z: 160
+  Radius: 5
+  UseTimer: true
+  MaxMobs: '5'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 4
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

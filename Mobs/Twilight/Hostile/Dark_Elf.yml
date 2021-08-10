@@ -1,0 +1,25 @@
+Dark_Elf:
+  Type: ZOMBIE_VILLAGER
+  Display: '&2Dark Elf'
+  Health: 200
+  Damage: 30
+  Faction: DarkSpirit
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 24
+    MovementSpeed: 0.35
+  Disguise:
+    Type: Player
+    Skin: 'Arsaide'
+  Equipment:
+  - Leather_Chestplate:3
+  - Leather_Leggings:3
+  - Leather_Boots:3
+  - RefinedDagger:HAND
+  AITargetSelectors:
+  - 0 clear
+  - 1 OtherFaction
+  - 2 attacker

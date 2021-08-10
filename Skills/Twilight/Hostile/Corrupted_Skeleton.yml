@@ -1,0 +1,30 @@
+Corrupted_Skeleton_Skeleton_Consume:
+  Conditions:
+  - mobsInRadius{type=Skeletal_Warrior,Skeletal_Archer,Skeletal_General;r=6}
+  Skills:
+  - sound{s=block.respawn_anchor.ambient} @self
+  - delay 60
+  - projectile{onTick=Corrupted_Skeleton_ForceField-Tick;onHit=Corrupted_Skeleton_ForceField-Hit;v=8;hR=0.5;vR=0.5;d=400;sE=false;sB=true;mr=15;i=1} @Ring{radius=8;points=20}
+  - skill{s=Corrupted_Skeleton_Skeleton_Consume} @self
+Corrupted_Skeleton_ForceField-Tick:
+  Skills:
+  - effect:particles{p=damage_indicator;amount=1;speed=0.1;hS=0.2;vS=0.2} @origin
+Corrupted_Skeleton_ForceField-Hit:
+  Skills:
+  - consume{d=20;h=20} @MobsInRadius{type=Skeletal_Warrior,Skeletal_Archer,Skeletal_General;r=3}
+  - sound{s=block.respawn_anchor.deplete} @origin
+
+Corrupted_Skeleton_Summon_Allies:
+  Conditions:
+  - playernotwithin{d=4} true
+  Skills:
+  - effect:particles{p=damage_indicator;amount=1;speed=0.1;hS=0.2;vS=0.2} @origin
+  - sound{s=block.respawn_anchor.deplete} @origin
+  - summon{type=Skeletal_Warrior,Skeletal_Archer;itt=true;a=2} @origin
+
+Corrupted_Skeleton_Wither_Shot:
+  Conditions:
+  - playernotwithin{d=8} true
+  Skills:
+  - pull{velocity=3} @target
+  - shootskull{y=10;v=7;ps=true} @target

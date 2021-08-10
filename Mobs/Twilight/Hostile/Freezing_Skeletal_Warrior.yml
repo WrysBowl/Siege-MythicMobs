@@ -1,0 +1,28 @@
+Freezing_Skeletal_Warrior:
+  Type: Stray
+  Display: '&2Freezing Skeletal Warrior'
+  Health: 200
+  Damage: 50
+  Faction: Undead
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 24
+    MovementSpeed: 0.32
+  Equipment:
+    - Chainmail_Helmet:4
+    - Chainmail_Chestplate:3
+    - Chainmail_Leggings:2
+    - Chainmail_Boots:1
+    - GreatSword:HAND
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+    - 2 OtherFaction
+    - 3 attacker
+  AIGoalSelectors:
+    - 0 clear
+    - 1 meleeattack
+    - 2 randomstroll

@@ -1,0 +1,22 @@
+Corrupted_Skeleton:
+  Type: Wither_Skeleton
+  Display: '&2Corrupted Skeleton'
+  Health: 350
+  Damage: 50
+  Faction: Undead
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 36
+    MovementSpeed: 0.3
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 OtherFaction
+  - 3 attacker
+  Skills:
+  - skill{s=Corrupted_Skeleton_Skeleton_Consume} ~onDamaged 0.5 @self
+  - skill{s=Corrupted_Skeleton_Summon_Allies} ~onDamaged 0.25 @self
+  - skill{s=Corrupted_Skeleton_Wither_Shot} ~onDamaged 0.4

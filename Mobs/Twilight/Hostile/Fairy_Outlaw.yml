@@ -1,0 +1,19 @@
+Fairy_Outlaw:
+  Type: vex
+  Display: '&2Fairy Outlaw'
+  Health: 40
+  Damage: 10
+  Faction: Fairy
+  Options:
+    FollowRange: 30
+    MovementSpeed: 0.3
+    AlwaysShowName: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 player
+  - 2 attacker
+  Equipment:
+  - leather_helmet:4
+  - Shank:0
+  Skills:
+  - skill{s=BanditCloakingAttack} ~onAttack 0.5 @target
