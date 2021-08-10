@@ -20,7 +20,7 @@ Corrupted_Skeleton_Summon_Allies:
   Skills:
   - effect:particles{p=damage_indicator;amount=1;speed=0.1;hS=0.2;vS=0.2} @origin
   - sound{s=block.respawn_anchor.deplete} @origin
-  - summon{type=Skeletal_Warrior,Skeletal_Archer;itt=true;a=2} @origin
+  - summon{type=Skeletal_Warrior;itt=true;a=2} @origin
 
 Corrupted_Skeleton_Wither_Shot:
   Conditions:

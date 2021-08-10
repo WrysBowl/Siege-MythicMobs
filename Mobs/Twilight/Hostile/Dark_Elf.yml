@@ -18,10 +18,11 @@ Dark_Elf:
   - Leather_Chestplate:3
   - Leather_Leggings:3
   - Leather_Boots:3
+  - BOW:HAND
   AITargetSelectors:
   - 0 clear
   - 1 OtherFaction
   - 2 attacker
   Skills:
-  - skill{s=Dark_Elf_LifeSteal_Orb} ~onDamaged 0.5
-  - skill{s=Dark_Elf_Flaming_Arrow} ~onShoot 0.5
+  - skill{s=Dark_Elf_LifeSteal_Orb} ~onDamaged 0.5 @target
+  - skill{s=Dark_Elf_Flaming_Arrow} ~onShoot 0.5 @target
