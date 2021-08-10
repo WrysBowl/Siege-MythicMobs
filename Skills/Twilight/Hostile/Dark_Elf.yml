@@ -1,0 +1,26 @@
+Dark_Elf_LifeSteal_Orb:
+  Conditions:
+  - playernotwithin{d=7} true
+  Skills:
+  - sound{s=entity.witch.throw} @self
+  - delay 30
+  - projectile{onTick=Dark_Elf_LifeSteal_Orb-Tick;onHit=Dark_Elf_LifeSteal_Orb-Hit;v=8;hR=3;vR=3;d=400;sE=false;sB=true;mr=15;i=1}
+Dark_Elf_LifeSteal_Orb-Tick:
+  Skills:
+  - effect:particlesphere{p=damage_indicator;amount=50;radius=3;speed=0.1;hS=0.2;vS=0.2} @origin
+Dark_Elf_LifeSteal_Orb-Hit:
+  Skills:
+  - consume{d=20;h=20} @PIR{r=3}
+  - sound{s=block.respawn_anchor.deplete} @origin
+
+Dark_Elf_Flaming_Arrow:
+  Skills:
+  - sound{s=entity.blaze.shoot;p=0.5} @self
+  - projectile{onTick=Dark_Elf_Flaming_Arrow-Tick;onHit=Dark_Elf_Flaming_Arrow-Hit;v=8;hR=3;vR=3;d=400;sE=false;sB=true;mr=24;i=1}
+Dark_Elf_Flaming_Arrow-Tick:
+  Skills:
+  - effect:particleorbital{p=reddust;color=#cc8a27;a=10;points=64;an=1;hs=0;vs=0;s=0;y=2;ticks=40;in=1;rx=0;ry=0;r=1;yOffset=0.7} @origin
+  - effect:blockmask{m=fire;r=2;d=50;oa=true} @origin
+Dark_Elf_Flaming_Arrow-Hit:
+  Skills:
+  - skill{s=FireRing} @origin

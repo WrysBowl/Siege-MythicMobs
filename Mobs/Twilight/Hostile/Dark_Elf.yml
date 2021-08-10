@@ -1,5 +1,5 @@
 Dark_Elf:
-  Type: ZOMBIE_VILLAGER
+  Type: Skeleton
   Display: '&2Dark Elf'
   Health: 200
   Damage: 30
@@ -9,8 +9,8 @@ Dark_Elf:
     PreventItemPickup: true
     PreventOtherDrops: true
     PreventSunburn: true
-    FollowRange: 24
-    MovementSpeed: 0.35
+    FollowRange: 32
+    MovementSpeed: 0.28
   Disguise:
     Type: Player
     Skin: 'Arsaide'
@@ -18,8 +18,10 @@ Dark_Elf:
   - Leather_Chestplate:3
   - Leather_Leggings:3
   - Leather_Boots:3
-  - RefinedDagger:HAND
   AITargetSelectors:
   - 0 clear
   - 1 OtherFaction
   - 2 attacker
+  Skills:
+  - skill{s=Dark_Elf_LifeSteal_Orb} ~onDamaged 0.5
+  - skill{s=Dark_Elf_Flaming_Arrow} ~onShoot 0.5
