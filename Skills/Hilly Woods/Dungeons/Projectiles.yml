@@ -1,6 +1,6 @@
 WaterBolt:
   Skills:
-  - projectile{onTick=WaterBolt-Tick;onHit=WaterBolt-Hit;v=7;i=1;hR=1;vR=1;mr=24;hnp=false}
+  - projectile{onTick=WaterBolt-Tick;onHit=WaterBolt-Hit;v=10;i=1;hR=1;vR=1;mr=24;hnp=false}
 WaterBolt-Tick:
   Skills:
   - effect:itemspray{item=lapis_lazuli;amount=1} @origin
