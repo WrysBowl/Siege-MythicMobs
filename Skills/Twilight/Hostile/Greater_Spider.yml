@@ -1,0 +1,10 @@
+Greater_Spider_Mount:
+  Conditions:
+  - mounted false
+  Skills:
+  - mounttarget
+Greater_Spider_Unmount:
+  Conditions:
+  - mounted true
+  Skills:
+  - pull{velocity=-5} @target

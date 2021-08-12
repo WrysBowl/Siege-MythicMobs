@@ -1,8 +1,8 @@
 Greater_Spider:
   Type: Cave_Spider
   Display: '&2Greater Spider'
-  Health: 30
-  Damage: 10
+  Health: 300
+  Damage: 30
   Faction: Spiders
   Disguise:
     Type: Spider
@@ -18,4 +18,6 @@ Greater_Spider:
     FollowRange: 20
     MovementSpeed: 0.30
   Skills:
-  - skill{s=ForestSpiderFlee} ~onDamaged
+  - skill{s=ForestSpiderFlee} ~onDamaged 0.25
+  - skill{s=Greater_Spider_Unmount} @self ~onDamaged
+  - skill{s=Greater_Spider_Mount} @self ~onAttack 0.5
