@@ -1,8 +1,8 @@
 Dark_Fairy:
   Type: vex
   Display: '&2Dark Fairy'
-  Health: 80
-  Damage: 15
+  Health: 150
+  Damage: 20
   Faction: DarkSpirit
   Options:
     PreventRandomEquipment: true

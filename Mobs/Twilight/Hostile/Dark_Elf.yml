@@ -1,7 +1,7 @@
 Dark_Elf:
   Type: Skeleton
   Display: '&2Dark Elf'
-  Health: 200
+  Health: 400
   Damage: 30
   Faction: DarkSpirit
   Options:

@@ -1,7 +1,7 @@
 Digger_Overseer:
   Type: Iron_Golem
   Display: '&2Digger Overseer'
-  Health: 200
+  Health: 600
   Damage: 45
   Faction: EvilSpirit
   Disguise:
@@ -10,3 +10,10 @@ Digger_Overseer:
   Options:
     FollowRange: 32
     MovementSpeed: 0.30
+    Silent: true
+  Skills:
+  - skill{s=VindicatorAmbientSound} ~onTimer:100 0.5
+  - skill{s=VindicatorCelebrateSound} ~onKillPlayer
+  - skill{s=VindicatorDeathSound} ~onDeath
+  - skill{s=VindicatorHurtSound} ~onDamaged
+  - sound{s=entity.iron_golem.attack} @self ~onAttack

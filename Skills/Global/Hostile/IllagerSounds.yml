@@ -1,0 +1,51 @@
+PillagerAmbientSound:
+  Skills:
+  - sound{s=entity.pillager.ambient} @self
+PillagerCelebrateSound:
+  Skills:
+  - sound{s=entity.pillager.celebrate} @self
+PillagerDeathSound:
+  Skills:
+  - sound{s=entity.pillager.death} @self
+PillagerHurtSound:
+  Skills:
+  - sound{s=entity.pillager.hurt} @self
+VindicatorAmbientSound:
+  Skills:
+  - sound{s=entity.vindicator.ambient} @self
+VindicatorCelebrateSound:
+  Skills:
+  - sound{s=entity.vindicator.celebrate} @self
+VindicatorDeathSound:
+  Skills:
+  - sound{s=entity.vindicator.death} @self
+VindicatorHurtSound:
+  Skills:
+  - sound{s=entity.vindicator.hurt} @self
+EvokerAmbientSound:
+  Skills:
+  - sound{s=entity.evoker.ambient} @self
+EvokerCastSpellSound:
+  Skills:
+  - sound{s=entity.evoker.cast_spell} @self
+EvokerCelebrateSound:
+  Skills:
+  - sound{s=entity.evoker.celebrate} @self
+EvokerDeathSound:
+  Skills:
+  - sound{s=entity.evoker.death} @self
+EvokerHurtSound:
+  Skills:
+  - sound{s=entity.evoker.hurt} @self
+EvokerPrepareAttackSound:
+  Skills:
+  - sound{s=entity.evoker.prepare_attack} @self
+EvokerPrepareSummonSound:
+  Skills:
+  - sound{s=entity.evoker.prepare_summon} @self
+EvokerPrepareWololoSound:
+  Skills:
+  - sound{s=entity.evoker.prepare_wololo} @self
+EvokerFangsAttackSound:
+  Skills:
+    - sound{s=entity.evoker_fangs.attack} @self
