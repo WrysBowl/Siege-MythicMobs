@@ -1,7 +1,7 @@
 Freezing_Skeletal_Warrior:
   Type: Stray
   Display: '&2Freezing Skeletal Warrior'
-  Health: 200
+  Health: 600
   Damage: 50
   Faction: Undead
   Options:
@@ -10,7 +10,7 @@ Freezing_Skeletal_Warrior:
     PreventOtherDrops: true
     PreventSunburn: true
     FollowRange: 24
-    MovementSpeed: 0.32
+    MovementSpeed: 0.3
   Equipment:
     - Chainmail_Helmet:4
     - Chainmail_Chestplate:3
@@ -26,3 +26,6 @@ Freezing_Skeletal_Warrior:
     - 0 clear
     - 1 meleeattack
     - 2 randomstroll
+  Skills:
+  - skill{s=IceBolt} ~onDamaged 0.3
+  - potion{type=SLOW;duration=80;level=2}

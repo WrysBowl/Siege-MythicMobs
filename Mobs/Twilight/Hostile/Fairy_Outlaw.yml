@@ -1,8 +1,8 @@
 Fairy_Outlaw:
   Type: vex
   Display: '&2Fairy Outlaw'
-  Health: 40
-  Damage: 10
+  Health: 100
+  Damage: 15
   Faction: Fairy
   Options:
     FollowRange: 30

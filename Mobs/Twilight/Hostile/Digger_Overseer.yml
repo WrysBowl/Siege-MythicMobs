@@ -1,8 +1,8 @@
 Digger_Overseer:
   Type: Iron_Golem
   Display: '&2Digger Overseer'
-  Health: 600
-  Damage: 45
+  Health: 900
+  Damage: 60
   Faction: EvilSpirit
   Disguise:
     Type: Player

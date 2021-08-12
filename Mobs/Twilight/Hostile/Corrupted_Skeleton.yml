@@ -1,8 +1,8 @@
 Corrupted_Skeleton:
   Type: Wither_Skeleton
   Display: '&2Corrupted Skeleton'
-  Health: 1050
-  Damage: 60
+  Health: 1500
+  Damage: 70
   Faction: Undead
   Options:
     PreventRandomEquipment: true
