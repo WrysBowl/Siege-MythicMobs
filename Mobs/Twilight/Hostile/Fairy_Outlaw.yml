@@ -10,7 +10,7 @@ Fairy_Outlaw:
     AlwaysShowName: true
   AITargetSelectors:
   - 0 clear
-  - 1 player
+  - 1 players
   - 2 attacker
   Equipment:
   - leather_helmet:4

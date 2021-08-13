@@ -1,17 +1,5 @@
-IceBolt:
-  Skills:
-    - projectile{bulletType=BLOCK;material=ICE;onTick=IceBolt-Tick;onHit=IceBolt-Hit;v=10;d=200;i=1;hR=1;vR=1;sB=true}
-IceBolt-Tick:
-  Skills:
-    - effect:particles{p=snowballpoof;amount=20;speed=0;hS=0.2;vS=0.2} @origin
-IceBolt-Hit:
-  Skills:
-    - potion{type=SLOW;duration=100;lvl=4}
-    - prison{material=ICE;duration=100;breakable=false}
-    - effect:particles{p=snowballpoof;amount=30;speed=0.5;hS=1.0;vS=1.0}
-
 Moss_Lurker_Invisibility:
   Conditions:
-  - playernotwithin{d=7} true
+  - playernotwithin{d=4} true
   Skills:
-  - potion{type=INVISIBLITY;duration=38;lvl=1}
+  - potion{type=INVISIBILITY;duration=58;lvl=1} @self

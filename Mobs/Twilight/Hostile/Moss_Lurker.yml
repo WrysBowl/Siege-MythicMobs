@@ -12,9 +12,9 @@ Moss_Lurker:
     PreventMobKillDrops: true
     PreventOtherDrops: true
     ExplosionRadius: 5
-    FuseTicks: 80
+    FuseTicks: 50
     FollowRange: 40
     MovementSpeed: 0.30
   Skills:
   - skill{s=Moss_Lurker_Invisibility} ~onSpawn
-  - skill{s=Moss_Lurker_Invisibility} ~onTimer:40
+  - skill{s=Moss_Lurker_Invisibility} ~onTimer:60

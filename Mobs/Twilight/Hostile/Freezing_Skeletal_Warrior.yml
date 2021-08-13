@@ -28,4 +28,4 @@ Freezing_Skeletal_Warrior:
     - 2 randomstroll
   Skills:
   - skill{s=IceBolt} ~onDamaged 0.3
-  - potion{type=SLOW;duration=80;level=2}
+  - potion{type=SLOW;duration=80;level=2} @target ~onAttack

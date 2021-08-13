@@ -19,5 +19,4 @@ Greater_Spider:
     MovementSpeed: 0.30
   Skills:
   - skill{s=ForestSpiderFlee} ~onDamaged 0.25
-  - skill{s=Greater_Spider_Unmount} @self ~onDamaged
-  - skill{s=Greater_Spider_Mount} @self ~onAttack 0.5
+  - skill{s=Greater_Spider_Mount} ~onAttack 0.25
