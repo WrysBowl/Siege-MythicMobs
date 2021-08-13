@@ -1,15 +1,19 @@
 Nightmare:
   Type: Phantom
   Display: '&2Nightmare'
-  Health: 100
-  Damage: 20
+  Health: 250
+  Damage: 40
   Faction: Undead
   Options:
     PreventSunburn: true
     FollowRange: 64
     MovementSpeed: 0.32
+    Size: 6
   AITargetSelectors:
   - 0 clear
   - 1 players
   - 2 OtherFaction
   - 3 attacker
+  Skills:
+  - skill{s=Nightmare_Shoot} ~onTimer:100 0.5
+  - skill{s=Nightmare_Shoot} ~onDamaged 0.25

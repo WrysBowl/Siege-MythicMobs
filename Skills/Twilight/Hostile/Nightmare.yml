@@ -1,0 +1,12 @@
+Nightmare_Shoot:
+  Skills:
+  - sound{s=entity.wither.shoot;p=0.5} @Self
+  - delay 60
+  - projectile{onTick=Nightmare_Shoot-Tick;onHit=Nightmare_Shoot-Hit;v=15;hR=1;vR=1;d=800;sE=false;mr=64;i=1}
+Nightmare_Shoot-Tick:
+  Skills:
+  - effect:particlesphere{p=smoke_normal;amount=20;radius=0.5;speed=0.1;hS=0.2;vS=0.2} @origin
+Nightmare_Shoot-Hit:
+  Skills:
+  - damage{a=3;pkb=true}
+  - potion{type=WITHER;duration=100;lvl=3}
