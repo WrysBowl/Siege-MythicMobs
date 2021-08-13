@@ -1,8 +1,8 @@
 Moss_Lurker:
   Type: Creeper
   Display: '&2Moss Lurker'
-  Health: 30
-  Damage: 10
+  Health: 300
+  Damage: 200
   Faction: Explosives
   AITargetSelectors:
   - 0 clear
@@ -12,6 +12,9 @@ Moss_Lurker:
     PreventMobKillDrops: true
     PreventOtherDrops: true
     ExplosionRadius: 5
-    FuseTicks: 20
+    FuseTicks: 80
     FollowRange: 40
-    MovementSpeed: 0.20
+    MovementSpeed: 0.30
+  Skills:
+  - skill{s=Moss_Lurker_Invisibility} ~onSpawn
+  - skill{s=Moss_Lurker_Invisibility} ~onTimer:40
