@@ -17,4 +17,4 @@ RockRat:
     FollowRange: 16
     MovementSpeed: 0.25
   Skills:
-  - skill{s=RockRatSpitAttack} ~onDamaged 0.4
+  - skill{s=RockRatSpitAttack} @self ~onDamaged 0.4
