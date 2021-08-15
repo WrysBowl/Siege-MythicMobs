@@ -1,8 +1,8 @@
 Necromancer:
   Type: Wither_Skeleton
   Display: '&2Necromancer'
-  Health: 1100
-  Damage: 50
+  Health: 1450
+  Damage: 60
   Faction: Boss
   BossBar:
     Enabled: true
