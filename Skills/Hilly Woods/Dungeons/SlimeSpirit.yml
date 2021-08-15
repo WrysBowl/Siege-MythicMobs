@@ -1,6 +1,6 @@
 SlimeConsuming:
- Skills: 
-  - forcepull{spread=0}
+ Skills:
+  - pull{velocity=10} @target
   - sound{s=block.slime_block.break;p=0.0} @Self
   - damage{amount=5} @target
   - heal{amount=10} @Self
