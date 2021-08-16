@@ -7,7 +7,7 @@ BroodmotherPoisonBolt:
   - delay 15
   - effect:particles{p=happy_villager;a=15;s=0.05;hs=0.5;vs=0.1} @self
   - delay 15
-  - projectile{onTick=BroodmotherPoisonBolt-Tick;onHit=BroodmotherPoisonBolt-Hit;v=12;i=1;hR=2;vR=2;mr=40} @target
+  - projectile{onTick=BroodmotherPoisonBolt-Tick;onHit=BroodmotherPoisonBolt-Hit;v=13;i=1;hR=2;vR=2;mr=60} @target
 BroodmotherPoisonBolt-Tick:
   Skills:
   - effect:particles{p=happy_villager;a=15;s=0.25;hs=0.4;vs=0.4} @origin
@@ -23,7 +23,7 @@ BroodmotherWebArea:
   - delay 10
   - sound{s=entity.spider.hurt} @Self
   - delay 10
-  - projectile{onTick=BroodmotherWebArea-Tick;onHit=BroodmotherWebArea-Hit;v=5;hR=2;vR=2;d=200;sE=false;sB=false;mr=20;i=1} @Ring{radius=3;points=40}
+  - projectile{onTick=BroodmotherWebArea-Tick;onHit=BroodmotherWebArea-Hit;v=7;hR=2;vR=2;d=200;sE=false;sB=false;mr=25;i=1} @Ring{radius=3;points=40}
 BroodmotherWebArea-Tick:
   Skills:
   - effect:particles{particle=sneeze;amount=1;hS=0.5;vS=0.5;speed=0.25} @self
@@ -41,7 +41,7 @@ BroodmotherWebBolt:
   - delay 15
   - effect:particles{p=sneeze;a=15;s=0.05;hs=0.5;vs=0.1} @origin
   - delay 15
-  - projectile{onTick=BroodmotherWebBolt-Tick;onHit=BroodmotherWebBolt-Hit;v=10;i=1;hR=1;vR=1;mr=28} @target
+  - projectile{onTick=BroodmotherWebBolt-Tick;onHit=BroodmotherWebBolt-Hit;v=10;i=1;hR=1;vR=1;mr=48} @target
 BroodmotherWebBolt-Tick:
   Skills:
   - effect:particles{p=sneeze;a=15;s=0.05;hs=0.5;vs=0.1} @origin
