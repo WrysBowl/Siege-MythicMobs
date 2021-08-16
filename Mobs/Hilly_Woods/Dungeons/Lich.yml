@@ -29,8 +29,7 @@ Lich:
  Skills:
   - skill{s=SoulEating} @Self ~onAttack
   - skill{s=DarkRise} @Self ~onTimer:200
-  - throw{velocity=16;velocityY=8} @Target ~onAttack
+  - throw{velocity=12;velocityY=5} @Target ~onAttack
   - skill{s=SoulShot} @Target ~onTimer:150
-  - skill{s=SussyTeleport} @target ~onDamaged 0.35
   - potion{t=INVISIBILITY;d=40} @Self ~onDamaged 0.5
   - setname{name='&2Lich &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
