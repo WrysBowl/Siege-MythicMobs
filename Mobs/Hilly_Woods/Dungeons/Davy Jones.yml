@@ -34,7 +34,7 @@ Davy_Jones:
   - 1 players
   - 2 attacker
   Skills:
-  - summon{type=Sea_Warrior;amount=1;radius=4} @self ~onDamaged 0.3
+  - summon{type=Sea_Warrior;amount=1;radius=4} @self ~onDamaged 0.1
   - skill{s=WaterBoltAttack} @self ~onTimer:150 0.6
   - skill{s=Davy_Jones_RangedAttack} ~onDamaged 1
   - skill{s=Davy_Jones_MeleeAttack} ~onDamaged 1
