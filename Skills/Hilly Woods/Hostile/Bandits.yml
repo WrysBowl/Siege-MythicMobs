@@ -28,15 +28,16 @@ BanditArcherVolleyAttack:
   - runaigoalselector{goal=clear}
   - runaigoalselector{goal=fleeplayers}
   - runaigoalselector{goal=randomstroll}
-  - delay 30
-  - shoot{type=ARROW;velocity=1.5;damage=3}
-  - delay 20
-  - shoot{type=ARROW;velocity=1.5;damage=3}
-  - delay 20
-  - shoot{type=ARROW;velocity=1.5;damage=3}
+  - delay 80
   - runaigoalselector{goal=clear}
   - runaigoalselector{goal=skeletonbowattack}
   - runaigoalselector{goal=randomstroll}
+  - delay 20
+  - shoot{type=ARROW;velocity=1.5;damage=3}
+  - delay 20
+  - shoot{type=ARROW;velocity=1.5;damage=3}
+  - delay 20
+  - shoot{type=ARROW;velocity=1.5;damage=3}
 BanditArcherStunningArrow:
   Skills:
   - runaigoalselector{goal=clear}
