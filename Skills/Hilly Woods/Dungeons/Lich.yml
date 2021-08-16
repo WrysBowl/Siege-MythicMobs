@@ -26,14 +26,14 @@ DarkRise:
  Skills:
   - effect:particlesphere{particle=dragon_breath;amount=300;radius=7} @self
   - effect:bloodyScreen{d=160} @PIR{r=5}
-  - sound{s=entity.elder_guardian.curse;p=0.0;v=5} @self
+  - sound{s=entity.elder_guardian.curse;p=0.0;v=1} @self
   - delay 60
   - effect:particles{p=squid_ink;amount=300;speed=1;hS=4;vS=4} @self
   - effect:explosion @self 
   - damage{a=7} @PIR{r=7}
 SoulShot:
  Skills:
-  - sound{s=entity.elder_guardian.curse;p=0.82;v=5} @self
+  - sound{s=entity.elder_guardian.curse;p=0.82;v=1} @self
   - effect:particles{particle=squid_ink;amount=60;hS=3;vS=3} @self
   - delay 80
   - sound{s=entity.ender_eye.death;p=0.15} @self
