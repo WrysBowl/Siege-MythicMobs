@@ -28,3 +28,4 @@ Orc:
   Skills:
   - skill{s=OrcAmbientSound} ~onTimer:120 0.5
   - skill{s=OrcAttackSound} ~onAttack 1
+  - setname{name='&2Orc &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
