@@ -13,5 +13,5 @@ BloodSuckerDrainAttack:
   Skills:
   - sound{s=entity.generic.drink} @self
   - delay 10
-  - consume{d=10;h=5}
+  - consume{d=5;h=5}
   - delay 1
