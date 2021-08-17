@@ -32,3 +32,4 @@ Necromancer:
   - potion{type=WITHER;duration=60;lvl=1} @target ~onAttack
   - skill{s=NecromancerTotemOfUndying} @self ~onTimer:300
   - setname{name='&4Necromancer &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
+  - potion{type=WATER_BREATHING;duration=999999;hasParticles=false} @self ~onSpawn

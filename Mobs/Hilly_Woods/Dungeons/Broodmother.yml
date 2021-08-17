@@ -32,3 +32,4 @@ Broodmother:
   - skill{s=BroodmotherPoisonBolt} ~onTimer:140
   - potion{type=SLOW;duration=100;lvl=1} @target ~onAttack
   - summon{type=ForestSpider;itt=true;a=2;r=3} @self ~onDamaged 0.25
+  - potion{type=WATER_BREATHING;duration=999999;hasParticles=false} @self ~onSpawn

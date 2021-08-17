@@ -42,3 +42,5 @@ Werewolf:
   - skill{s=WerewolfHurt} ~onDamaged
   - skill{s=WerewolfHowl} ~onTimer:100 0.5
   - skill{s=WerewolfAmbient} ~onTimer:100 0.5
+  - potion{type=WATER_BREATHING;duration=999999} @self ~onSpawn
+  - potion{type=WATER_BREATHING;duration=999999;hasParticles=false} @self ~onSpawn

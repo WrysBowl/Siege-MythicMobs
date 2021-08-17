@@ -7,7 +7,6 @@ GiantHornet:
   Options:
     PreventMobKillDrops: true
     PreventOtherDrops: true
-    PreventRandomEquipment: true
-    PreventSunburn: true
     FollowRange: 36
-    MovementSpeed: 0.32
+  Skills:
+  - skill{s=RockRatSpitAttack} @self ~onDamaged 0.4

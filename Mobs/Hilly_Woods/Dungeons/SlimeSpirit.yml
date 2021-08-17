@@ -31,6 +31,7 @@ SlimeSpirit:
   - skill{s=LungeAttack} @self ~onTimer:20
   - sound{s=entity.slime.hurt} @Self ~onDamaged
   - sound{s=entity.slime.death} @Self ~onDeath
+  - potion{type=WATER_BREATHING;duration=999999;hasParticles=false} @self ~onSpawn
 
 #1. Leaves a trail of slime blocks that disappear after 10 seconds
 #2. On attack, has a 5% chance to teleport the player to the slime and consumes them for 10 hp and deals 5 damage

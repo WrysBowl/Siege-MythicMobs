@@ -33,3 +33,4 @@ Lich:
   - skill{s=SoulShot} @Target ~onTimer:150
   - potion{t=INVISIBILITY;d=40} @Self ~onDamaged 0.5
   - setname{name='&2Lich &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
+  - potion{type=WATER_BREATHING;duration=999999;hasParticles=false} @self ~onSpawn
