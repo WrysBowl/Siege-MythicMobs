@@ -1,8 +1,8 @@
 FoxSpirit:
   Type: FOX
   Display: '&4Fox Spirit'
-  Health: 700
-  Damage: 40
+  Health: 850
+  Damage: 45
   Faction: Boss
   BossBar:
     Enabled: true

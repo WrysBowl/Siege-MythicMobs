@@ -1,8 +1,8 @@
 Werewolf:
   Type: Wolf
   Display: '&4Werewolf'
-  Health: 850
-  Damage: 45
+  Health: 700
+  Damage: 40
   Faction: Boss
   BossBar:
     Enabled: true
