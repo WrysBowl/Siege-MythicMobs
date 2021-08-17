@@ -4,8 +4,6 @@ GiantHornet:
   Health: 10
   Damage: 6
   Faction: Bees
-  Modules:
-    ThreatTable: true
   Options:
     PreventMobKillDrops: true
     PreventOtherDrops: true
