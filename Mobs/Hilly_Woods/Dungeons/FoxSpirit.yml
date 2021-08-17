@@ -21,6 +21,8 @@ FoxSpirit:
   - 0 clear
   - 1 players
   - 2 attacker
+  Equipment:
+  - FoxSpirit_Boots:1
   Options:
     PreventMobKillDrops: true
     PreventOtherDrops: true
