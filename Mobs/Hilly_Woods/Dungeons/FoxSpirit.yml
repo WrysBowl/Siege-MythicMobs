@@ -28,8 +28,9 @@ FoxSpirit:
     PreventOtherDrops: true
     PreventRandomEquipment: true
     PreventSunburn: true
-    FollowRange: 50
+    FollowRange: 70
     MovementSpeed: 0.38
+    KnockbackResistance: 0.75
   Skills:
   - skill{s=FoxAggroSound} @self ~onEnterCombat
   - skill{s=FoxAmbientSound} @self ~onTimer:40 0.5

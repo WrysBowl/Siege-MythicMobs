@@ -19,7 +19,9 @@ Broodmother:
     Despawn: false
     Silent: true
     FollowRange: 80
-    MovementSpeed: 0.3
+    MovementSpeed: 0.35
+    KnockbackResistance: 1.0
+
   AITargetSelectors:
   - 0 clear
   - 1 players

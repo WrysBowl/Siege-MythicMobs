@@ -17,9 +17,10 @@ Davy_Jones:
     PreventOtherDrops: true
     Persistent: true
     Despawn: false
-    KnockbackResistance: 0.5
-    FollowRange: 30
-    MovementSpeed: 0.30
+    KnockbackResistance: 0.75
+    FollowRange: 60
+    MovementSpeed: 0.35
+
   DamageModifiers:
   - PROJECTILE 0.25
   - MAGIC 4

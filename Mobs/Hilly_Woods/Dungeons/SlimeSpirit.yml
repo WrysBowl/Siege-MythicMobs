@@ -1,9 +1,11 @@
 SlimeSpirit:
- Type: SLIME
+ Type: ZOMBIE
  Display: '&4Slime Spirit'
  Health: 350
  Damage: 30
  Faction: Boss
+ Disguise:
+  Type: SLIME
  BossBar:
   Enabled: true
   Title: '&4Slime Spirit'
@@ -24,6 +26,9 @@ SlimeSpirit:
   FollowRange: 50
   Size: 4
   ModifyBoundingBox: true
+  Silent: true
+  KnockbackResistance: 1.0
+
  Skills:
   - effect:blockmask{m=slime_block;r=2;d=200} @self ~onTimer:5
   - skill{s=SlimeConsuming} ~onDamaged 0.25

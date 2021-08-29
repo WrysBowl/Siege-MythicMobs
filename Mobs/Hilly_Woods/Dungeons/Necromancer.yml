@@ -12,14 +12,13 @@ Necromancer:
     Style: SOLID
   DamageModifiers:
   - MAGIC 0
-  Modules:
-    ThreatTable: true
   Options:
     Persistent: true
     Despawn: false
     Silent: true
     FollowRange: 40
-    MovementSpeed: 0.27
+    MovementSpeed: 0.33
+    KnockbackResistance: 0.5
   AITargetSelectors:
   - 0 clear
   - 1 players

@@ -21,7 +21,7 @@ SussyTeleport:
 SoulEating:
  Skills:
   - sound{s=entity.witch.drink;p=0.84;v=3} @Self
-  - heal{amount=20} @Self
+  - heal{amount=50} @Self
 DarkRise:
  Skills:
   - effect:particlesphere{particle=dragon_breath;amount=300;radius=7} @self
@@ -47,3 +47,4 @@ SoulShot-Hit:
   - damage{a=8}
   - sound{s=block.shroomlight.break;p=0.13}
   - effect:particles{p=squid_ink;amount=20;speed=0;hS=0.2;vS=0.2}
+  - skill{s=BlackEyes}

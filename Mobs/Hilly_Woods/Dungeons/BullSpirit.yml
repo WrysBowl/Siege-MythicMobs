@@ -20,7 +20,9 @@ BullSpirit:
   PreventSunburn: true
   Persistent: true
   Despawn: false
-  FollowRange: 50
+  FollowRange: 80
+  KnockbackResistance: 1.0
+
  Skills:
   - throw{velocity=10;velocityY=8} @Target ~onAttack
   - skill{s=BullCharge} @Self ~onTimer:120
