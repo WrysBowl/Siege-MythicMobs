@@ -3,6 +3,8 @@ SpawnRockRat:
   - summon{type=RockRat;ctt=true}
 
 RockSpiritStoneThrowAttack:
+  Conditions:
+  - playernotwithin{d=6}
   Skills:
   - jump{velocity=1.1} @self
   - delay 30

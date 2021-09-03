@@ -13,6 +13,8 @@ CloakingAttack:
 
 
 WaterBoltAttack:
+  Conditions:
+  - playernotwithin{d=6}
 
   Skills:
 
@@ -42,6 +44,8 @@ WaterBoltAttack:
 
 
 WaterSpoutAttack:
+  Conditions:
+  - playernotwithin{d=6}
   Skills:
   - pull{v=12} @PlayersInRadius{r=12}
   - delay 10

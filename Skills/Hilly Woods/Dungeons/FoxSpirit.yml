@@ -28,6 +28,8 @@ FoxSpiritDamageMulti:
   Skills:
   - damage{a=30;pkb=true} @target
 FoxSpiritFireball:
+  Conditions:
+  - playernotwithin{d=6}
   Skills:
   - equip{item=Fire_Charge:1} @self
   - stun{d=40} @self

@@ -2,17 +2,19 @@ AngerSlam:
  Skills:
   - sound{s=entity.iron_golem.damage} @self
   - delay 10
-  - jump{velocity=1} @self
+  - jump{velocity=0.8} @self
   - delay 10
   - effect:explosion @Self
   - damage{amount=15} @PlayersInRadius{r=5}
 
 BullCharge:
+ Conditions:
+ - playernotwithin{d=6}
  Skills:
   - sound{s=entity.cow.hurt;p=0.87} @self
   - potion{t=SPEED;d=40;lvl=1} @Self
   - delay 30
-  - throw{velocity=15;velocityY=10} @PIR{r=4}
+  - throw{velocity=15;velocityY=6} @PIR{r=4}
   - damage{a=10} @PIR{r=2}
 
 BullSlam:
@@ -22,7 +24,7 @@ BullSlam:
   - delay 10
   - effect:explosion @Self
   - damage{amount=7} @PlayersInRadius{r=10}
-  - throw{velocity=20;velocityY=15} @PlayersInRadius{r=10}
+  - throw{velocity=20;velocityY=7} @PlayersInRadius{r=10}
   - effect:blockmask{m=dirt;r=10;d=200;na=true;s=sphere} @Self
 BullAngry:
  Skills:

@@ -1,4 +1,6 @@
 BlackEyes:
+ Conditions:
+ - playernotwithin{d=8}
  Skills:
   - sound{s=entity.enderman.teleport;p=0.86} @self
   - potion{type=INVISIBILITY;duration=60;level=1} @Self
@@ -32,6 +34,8 @@ DarkRise:
   - effect:explosion @self 
   - damage{a=10} @PIR{r=7}
 SoulShot:
+ Conditions:
+ - playernotwithin{d=6}
  Skills:
   - sound{s=entity.elder_guardian.curse;p=0.82;v=1} @self
   - effect:particles{particle=squid_ink;amount=60;hS=3;vS=3} @self

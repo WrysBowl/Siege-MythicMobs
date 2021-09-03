@@ -1,10 +1,14 @@
 SlimeConsuming:
+ Conditions:
+ - playernotwithin{d=6}
  Skills:
   - pull{velocity=10} @target
   - sound{s=block.slime_block.break;p=0.0} @Self
   - damage{amount=5} @target
   - heal{amount=10} @Self
 AcidSpit:
+ Conditions:
+ - playernotwithin{d=6}
  Skills:
   - sound{s=block.slime_block.fall;p=0.15} @self
   - effect:particles{particle=sneeze;amount=60;hS=2;vS=2} @self
