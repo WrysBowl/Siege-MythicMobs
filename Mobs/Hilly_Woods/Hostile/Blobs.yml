@@ -15,7 +15,7 @@ Blob:
     PreventItemPickup: true
     PreventOtherDrops: true
     PreventSunburn: true
-    FollowRange: 20
+    FollowRange: 14
     MovementSpeed: 0.3
   Skills:
   - skill{s=LungeAttack} @self ~onTimer:30
