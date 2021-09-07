@@ -2,7 +2,7 @@ ScorchingBlob:
   Type: MAGMA_CUBE
   Display: '&2Scorching Blob'
   Health: 60
-  Damage: 15
+  Damage: 10
   Faction: Slime
   AITargetSelectors:
   - 0 clear

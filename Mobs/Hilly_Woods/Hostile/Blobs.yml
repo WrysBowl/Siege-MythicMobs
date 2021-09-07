@@ -18,4 +18,4 @@ Blob:
     FollowRange: 20
     MovementSpeed: 0.3
   Skills:
-  - skill{s=LungeAttack} @self ~onTimer:20
+  - skill{s=LungeAttack} @self ~onTimer:30
