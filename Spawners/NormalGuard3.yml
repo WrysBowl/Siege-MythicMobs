@@ -4,6 +4,8 @@ NormalGuard3:
   X: 161
   Y: 65
   Z: 141
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '2'
@@ -22,4 +24,4 @@ NormalGuard3:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 2
+  ActiveMobs: 0

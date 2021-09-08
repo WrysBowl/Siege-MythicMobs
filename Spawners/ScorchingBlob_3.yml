@@ -4,12 +4,14 @@ ScorchingBlob_3:
   X: 101
   Y: 60
   Z: 5
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '4'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 5
+  Cooldown: 3
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
@@ -22,4 +24,4 @@ ScorchingBlob_3:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 1
+  ActiveMobs: 0

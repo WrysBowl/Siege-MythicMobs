@@ -4,12 +4,14 @@ AngryBull_1:
   X: 185
   Y: 60
   Z: -12
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 6
   UseTimer: true
-  MaxMobs: '3'
+  MaxMobs: '6'
   MobLevel: '1'
-  MobsPerSpawn: 1
-  Cooldown: 5
+  MobsPerSpawn: 2
+  Cooldown: 3
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
@@ -22,4 +24,4 @@ AngryBull_1:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 2
+  ActiveMobs: 0

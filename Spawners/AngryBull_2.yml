@@ -4,6 +4,8 @@ AngryBull_2:
   X: -95
   Y: 76
   Z: 114
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 6
   UseTimer: true
   MaxMobs: '3'
@@ -22,4 +24,4 @@ AngryBull_2:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 1
+  ActiveMobs: 0

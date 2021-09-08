@@ -4,6 +4,8 @@ Sushi2:
   X: -27
   Y: 52
   Z: 148
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 10
   UseTimer: true
   MaxMobs: '30'

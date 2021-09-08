@@ -4,12 +4,14 @@ Blob_7:
   X: -76
   Y: 62
   Z: 177
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
-  MaxMobs: '4'
+  MaxMobs: '5'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 5
+  Cooldown: 3
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0

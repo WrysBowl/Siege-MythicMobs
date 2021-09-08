@@ -1,25 +1,27 @@
-Clemont:
-  MobName: Clemont
+ChestMimic4_1:
+  MobName: ChestMimic4
   World: Hilly_Woods
-  X: -247
-  Y: 58
-  Z: -68
-  Radius: 0
+  X: -29
+  Y: 141
+  Z: 85
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 150
   UseTimer: true
   MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 0
-  CooldownTimer: 0
+  Cooldown: 3600
+  CooldownTimer: 2886
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
-  ActivationRange: 40
+  ActivationRange: 300
   ScalingRange: 25.0
-  LeashRange: 20
+  LeashRange: 0
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 1
+  ActiveMobs: 0

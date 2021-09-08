@@ -4,6 +4,8 @@ Pong1:
   X: 224
   Y: 86
   Z: 174
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 10
   UseTimer: true
   MaxMobs: '1'
@@ -22,4 +24,4 @@ Pong1:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 1
+  ActiveMobs: 0

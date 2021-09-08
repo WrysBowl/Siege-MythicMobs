@@ -4,6 +4,8 @@ Blob_8:
   X: 67
   Y: 56
   Z: -90
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '4'

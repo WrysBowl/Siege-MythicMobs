@@ -4,6 +4,8 @@ RockRat_3:
   X: -115
   Y: 60
   Z: -58
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '4'
@@ -22,4 +24,4 @@ RockRat_3:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 3
+  ActiveMobs: 0

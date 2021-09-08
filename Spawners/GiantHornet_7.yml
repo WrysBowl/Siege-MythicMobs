@@ -4,6 +4,8 @@ GiantHornet_7:
   X: 89
   Y: 79
   Z: 165
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '6'

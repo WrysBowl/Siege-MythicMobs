@@ -4,6 +4,8 @@ Porky_1:
   X: 193
   Y: 86
   Z: 117
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 0
   UseTimer: true
   MaxMobs: '1'

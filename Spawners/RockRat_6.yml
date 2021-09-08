@@ -1,24 +1,24 @@
-Bandit_2:
-  MobName: Bandit
+RockRat_6:
+  MobName: RockRat
   World: Hilly_Woods
-  X: -22
-  Y: 129
-  Z: 92
+  X: -200
+  Y: 61
+  Z: -103
   Yaw: 0.0
   Pitch: 0.0
-  Radius: 6
+  Radius: 5
   UseTimer: true
-  MaxMobs: '3'
+  MaxMobs: '4'
   MobLevel: '1'
-  MobsPerSpawn: 1
-  Cooldown: 10
+  MobsPerSpawn: 6
+  Cooldown: 5
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 30
   ScalingRange: 25.0
-  LeashRange: 32
+  LeashRange: 30
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

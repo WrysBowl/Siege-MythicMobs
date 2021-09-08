@@ -1,9 +1,11 @@
 Blob_6:
   MobName: Blob
   World: Hilly_Woods
-  X: 113
-  Y: 62
-  Z: 95
+  X: 143
+  Y: 61
+  Z: 91
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '4'
@@ -16,7 +18,7 @@ Blob_6:
   CheckForPlayers: true
   ActivationRange: 30
   ScalingRange: 25.0
-  LeashRange: 32
+  LeashRange: 20
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

@@ -4,6 +4,8 @@ Sushi3:
   X: 11
   Y: 50
   Z: 115
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 10
   UseTimer: true
   MaxMobs: '30'

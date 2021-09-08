@@ -4,6 +4,8 @@ RockRat_4:
   X: -109
   Y: 60
   Z: -101
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '4'

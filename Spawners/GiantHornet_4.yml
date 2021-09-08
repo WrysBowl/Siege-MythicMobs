@@ -4,6 +4,8 @@ GiantHornet_4:
   X: 201
   Y: 98
   Z: 188
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '6'
@@ -22,4 +24,4 @@ GiantHornet_4:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 6
+  ActiveMobs: 0

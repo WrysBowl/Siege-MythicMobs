@@ -1,14 +1,14 @@
-Bandit_2:
-  MobName: Bandit
+BanditArcher_4:
+  MobName: BanditArcher
   World: Hilly_Woods
-  X: -22
-  Y: 129
-  Z: 92
+  X: 67
+  Y: 61
+  Z: 45
   Yaw: 0.0
   Pitch: 0.0
-  Radius: 6
+  Radius: 5
   UseTimer: true
-  MaxMobs: '3'
+  MaxMobs: '2'
   MobLevel: '1'
   MobsPerSpawn: 1
   Cooldown: 10
@@ -16,9 +16,9 @@ Bandit_2:
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
-  ActivationRange: 30
+  ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 32
+  LeashRange: 30
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

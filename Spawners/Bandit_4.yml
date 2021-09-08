@@ -1,9 +1,11 @@
 Bandit_4:
   MobName: Bandit
   World: Hilly_Woods
-  X: 145
-  Y: 66
-  Z: 138
+  X: 161
+  Y: 65
+  Z: 143
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 6
   UseTimer: true
   MaxMobs: '3'

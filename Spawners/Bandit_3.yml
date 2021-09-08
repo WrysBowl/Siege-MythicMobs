@@ -4,6 +4,8 @@ Bandit_3:
   X: -17
   Y: 103
   Z: -130
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 6
   UseTimer: true
   MaxMobs: '3'

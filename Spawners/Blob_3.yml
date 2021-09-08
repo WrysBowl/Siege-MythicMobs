@@ -4,6 +4,8 @@ Blob_3:
   X: 80
   Y: 62
   Z: 188
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '4'
@@ -16,7 +18,7 @@ Blob_3:
   CheckForPlayers: true
   ActivationRange: 30
   ScalingRange: 25.0
-  LeashRange: 32
+  LeashRange: 20
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

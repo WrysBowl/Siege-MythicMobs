@@ -1,22 +1,24 @@
-DavyJones:
-  MobName: Davy_Jones
-  World: Hilly_Woods
-  X: -6
-  Y: 52
-  Z: 143
-  Radius: 10
+GiantHornet_8:
+  MobName: GiantHornet
+  World: Twilight
+  X: 335
+  Y: 76
+  Z: -276
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 5
   UseTimer: true
-  MaxMobs: '1'
+  MaxMobs: '4'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 2400
+  Cooldown: 5
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 100
+  LeashRange: 30
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

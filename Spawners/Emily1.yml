@@ -4,6 +4,8 @@ Emily1:
   X: 179
   Y: 87
   Z: 222
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 10
   UseTimer: true
   MaxMobs: '1'
@@ -22,4 +24,4 @@ Emily1:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 1
+  ActiveMobs: 0

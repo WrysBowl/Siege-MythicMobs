@@ -4,6 +4,8 @@ FeatheredMeat_3:
   X: 100
   Y: 61
   Z: 149
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 6
   UseTimer: true
   MaxMobs: '5'

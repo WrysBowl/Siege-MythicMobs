@@ -4,6 +4,8 @@ WildFox_1:
   X: 147
   Y: 70
   Z: 217
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '4'
@@ -22,4 +24,4 @@ WildFox_1:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 1
+  ActiveMobs: 0

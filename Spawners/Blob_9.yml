@@ -1,12 +1,14 @@
 Blob_9:
   MobName: Blob
   World: Hilly_Woods
-  X: -196
+  X: -174
   Y: 61
   Z: -103
-  Radius: 0
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 5
   UseTimer: true
-  MaxMobs: '4'
+  MaxMobs: '5'
   MobLevel: '1'
   MobsPerSpawn: 1
   Cooldown: 5
@@ -22,4 +24,4 @@ Blob_9:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 3
+  ActiveMobs: 0

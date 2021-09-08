@@ -4,6 +4,8 @@ ScorchingBlob_2:
   X: -164
   Y: 60
   Z: -33
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '3'
@@ -22,4 +24,4 @@ ScorchingBlob_2:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 3
+  ActiveMobs: 0

@@ -4,6 +4,8 @@ FeatheredMeat_4:
   X: 8
   Y: 58
   Z: 5
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '3'
@@ -22,4 +24,4 @@ FeatheredMeat_4:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 3
+  ActiveMobs: 0

@@ -4,6 +4,8 @@ Wooly_4:
   X: 156
   Y: 59
   Z: -128
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 7
   UseTimer: true
   MaxMobs: '5'

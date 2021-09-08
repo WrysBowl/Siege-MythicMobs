@@ -4,6 +4,8 @@ Blob_5:
   X: 100
   Y: 64
   Z: -188
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '4'
@@ -22,4 +24,4 @@ Blob_5:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 2
+  ActiveMobs: 0

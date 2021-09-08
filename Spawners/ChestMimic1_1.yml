@@ -4,17 +4,19 @@ ChestMimic1_1:
   X: -27
   Y: 141
   Z: 91
-  Radius: 150
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 100
   UseTimer: true
-  MaxMobs: '6'
+  MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 60
-  CooldownTimer: 0
+  Cooldown: 3600
+  CooldownTimer: 2886
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
-  ActivationRange: 250
+  ActivationRange: 300
   ScalingRange: 25.0
   LeashRange: 0
   HealOnLeash: false
@@ -22,4 +24,4 @@ ChestMimic1_1:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 3
+  ActiveMobs: 0

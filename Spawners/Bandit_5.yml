@@ -4,12 +4,14 @@ Bandit_5:
   X: 67
   Y: 61
   Z: 49
-  Radius: 0
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 8
   UseTimer: true
-  MaxMobs: '3'
+  MaxMobs: '4'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 10
+  Cooldown: 5
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0

@@ -1,24 +1,24 @@
-Bandit_2:
-  MobName: Bandit
+ChestMimic2_1:
+  MobName: ChestMimic2
   World: Hilly_Woods
-  X: -22
-  Y: 129
-  Z: 92
+  X: -29
+  Y: 141
+  Z: 84
   Yaw: 0.0
   Pitch: 0.0
-  Radius: 6
+  Radius: 100
   UseTimer: true
-  MaxMobs: '3'
+  MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 10
-  CooldownTimer: 0
+  Cooldown: 3600
+  CooldownTimer: 2888
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
-  ActivationRange: 30
+  ActivationRange: 300
   ScalingRange: 25.0
-  LeashRange: 32
+  LeashRange: 0
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

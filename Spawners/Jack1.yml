@@ -4,6 +4,8 @@ Jack1:
   X: 217
   Y: 91
   Z: 202
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 10
   UseTimer: true
   MaxMobs: '1'
@@ -22,4 +24,4 @@ Jack1:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 1
+  ActiveMobs: 0

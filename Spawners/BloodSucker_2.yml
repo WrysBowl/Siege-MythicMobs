@@ -4,6 +4,8 @@ BloodSucker_2:
   X: -72
   Y: 31
   Z: 53
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '6'

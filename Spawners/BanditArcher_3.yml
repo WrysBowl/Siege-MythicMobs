@@ -4,6 +4,8 @@ BanditArcher_3:
   X: -35
   Y: 128
   Z: 70
+  Yaw: 0.0
+  Pitch: 0.0
   Radius: 5
   UseTimer: true
   MaxMobs: '3'
@@ -22,4 +24,4 @@ BanditArcher_3:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 1
+  ActiveMobs: 0
