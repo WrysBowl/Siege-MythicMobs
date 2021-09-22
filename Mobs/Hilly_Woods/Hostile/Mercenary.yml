@@ -1,0 +1,33 @@
+Mercenary:
+  Type: Zombie
+  Display: '&2Mercenary'
+  Health: 200
+  Damage: 40
+  Faction: Bandit
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 26
+    MovementSpeed: 0.33
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: '0xBACE'
+  Equipment:
+  - Leather_Helmet:4
+  - Chain_Chestplate:3
+  - Chain_Leggings:2
+  - Leather_Boots:1
+  - RefinedDagger:HAND
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Skills:
+  - skill{s=BanditCloakingAttack} ~onDamaged 0.2 @target
+  - skill{s=BanditSwordThrowAttack} ~onDamaged 0.2 @target
+  - skill{s=BanditAmbientSound} ~onTimer:80 0.5
+  - skill{s=BanditAttackSound} ~onAttack 1
+  - setname{name='&2Mercenary &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

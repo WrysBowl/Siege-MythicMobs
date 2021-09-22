@@ -1,4 +1,6 @@
 Charge:
+  Conditions:
+  - playernotwithin{d=6}
   Skills:
   - effect:particles{particle=angry_villager;amount=5;hS=0.5;vS=0.5;speed=0.25} @self
   - delay 15

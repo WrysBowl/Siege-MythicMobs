@@ -1,8 +1,8 @@
-RockRat:
+Crystal_Rat:
   Type: Silverfish
-  Display: '&2Rock Rat'
-  Health: 10
-  Damage: 2
+  Display: '&2Crystal Rat'
+  Health: 50
+  Damage: 10
   Faction: Silverfish
   AITargetSelectors:
   - 0 clear
@@ -15,6 +15,4 @@ RockRat:
     PreventSunburn: true
     PreventBlockInfection: false
     FollowRange: 16
-    MovementSpeed: 0.25
-  Skills:
-  - skill{s=RockRatSpitAttack} @self ~onTimer:200 0.4
+    MovementSpeed: 0.30

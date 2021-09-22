@@ -1,0 +1,30 @@
+Thief:
+  Type: Zombie
+  Display: '&2Thief'
+  Health: 100
+  Damage: 20
+  Faction: Bandit
+  Options:
+    PreventRandomEquipment: true
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    FollowRange: 20
+    MovementSpeed: 0.32
+    Silent: true
+  Disguise:
+    Type: Player
+    Skin: '0xBACE'
+  Equipment:
+  - Leather_Chestplate:3
+  - Leather_Boots:1
+  - Shank:HAND
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 OtherFaction
+  - 3 attacker
+  Skills:
+  - skill{s=BanditAmbientSound} ~onTimer:80 0.5
+  - skill{s=BanditAttackSound} ~onAttack 1
+  - setname{name='&2Thief &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

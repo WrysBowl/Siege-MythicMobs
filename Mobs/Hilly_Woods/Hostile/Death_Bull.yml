@@ -1,8 +1,8 @@
-AngryBull:
+Death_Bull:
   Type: Zombie
-  Display: '&2Angry Bull'
-  Health: 140
-  Damage: 18
+  Display: '&2Death Bull'
+  Health: 200
+  Damage: 30
   Faction: Animal
   Disguise:
     Type: Cow
@@ -13,13 +13,15 @@ AngryBull:
     PreventOtherDrops: true
     PreventSunburn: true
     FollowRange: 30
-    MovementSpeed: 0.28
+    MovementSpeed: 0.26
+    KnockbackResistance: 0.5
   AITargetSelectors:
   - 0 clear
   - 1 players
   - 2 attacker
   Skills:
-  - skill{s=Charge} ~onTimer:200
+  - effect:particles{particle=soul;amount=5;hS=0;vS=0;yOffset=0.75;speed=0.02} @self ~onTimer:10
+  - skill{s=GroundSlam} ~onTimer:160
   - skill{s=AngryBullHitSound} ~onDamaged
   - skill{s=AngryBullDeathSound} ~onDeath
   - skill{s=AngryBullAttackSound} ~onAttack
