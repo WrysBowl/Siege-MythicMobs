@@ -1,6 +1,6 @@
-Flaming_Goo:
+FlamingGoo:
   Type: MAGMA_CUBE
-  Display: '&2Flaming_Goo'
+  Display: '&2Flaming Goo'
   Health: 20
   Damage: 5
   Faction: Slime
