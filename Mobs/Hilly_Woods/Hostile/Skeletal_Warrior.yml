@@ -2,7 +2,7 @@ Skeletal_Warrior:
   Type: Skeleton
   Display: '&2Skeletal Warrior'
   Health: 200
-  Damage: 50
+  Damage: 40
   Faction: Undead
   Options:
     PreventRandomEquipment: true

@@ -1,7 +1,7 @@
 SlimeSpirit:
  Type: ZOMBIE
  Display: '&4Slime Spirit'
- Health: 350
+ Health: 750
  Damage: 30
  Faction: Boss
  Disguise:

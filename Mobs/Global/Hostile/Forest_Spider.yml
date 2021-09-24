@@ -1,7 +1,7 @@
 ForestSpider:
   Type: Spider
   Display: '&2Forest Spider'
-  Health: 30
+  Health: 75
   Damage: 10
   Faction: Spiders
   AITargetSelectors:

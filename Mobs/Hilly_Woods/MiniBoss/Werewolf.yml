@@ -1,8 +1,8 @@
 Werewolf:
   Type: Wolf
   Display: '&4Werewolf'
-  Health: 700
-  Damage: 40
+  Health: 500
+  Damage: 50
   Faction: Boss
   BossBar:
     Enabled: true
@@ -42,5 +42,4 @@ Werewolf:
   - skill{s=WerewolfHurt} ~onDamaged
   - skill{s=WerewolfHowl} ~onTimer:100 0.5
   - skill{s=WerewolfAmbient} ~onTimer:100 0.5
-  - potion{type=WATER_BREATHING;duration=999999} @self ~onSpawn
   - potion{type=WATER_BREATHING;duration=999999;hasParticles=false} @self ~onSpawn

@@ -1,8 +1,8 @@
 Davy_Jones:
   Type: Drowned
   Display: '&4Davy Jones'
-  Health: 1300
-  Damage: 55
+  Health: 3500
+  Damage: 65
   Faction: Boss
   BossBar:
     Enabled: true

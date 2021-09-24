@@ -1,7 +1,7 @@
 MagmaSpirit:
  Type: Zombie
  Display: '&4Magma Spirit'
- Health: 550
+ Health: 1550
  Damage: 35
  Faction: Boss
  Disguise:

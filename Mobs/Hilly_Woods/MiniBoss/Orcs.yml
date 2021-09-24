@@ -1,8 +1,8 @@
 Orc:
   Type: Zombie
   Display: '&2Orc'
-  Health: 50
-  Damage: 10
+  Health: 400
+  Damage: 50
   Faction: Orc
   Disguise:
     Type: Player

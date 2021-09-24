@@ -2,7 +2,7 @@ Ogre:
   Type: Wither_Skeleton
   Display: '&2Ogre'
   Health: 500
-  Damage: 25
+  Damage: 60
   Faction: Ogre
   Options:
     AlwaysShowName: true

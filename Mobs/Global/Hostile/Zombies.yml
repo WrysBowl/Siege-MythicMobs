@@ -1,8 +1,8 @@
 InfectedDigger:
   Type: ZOMBIE_VILLAGER
   Display: '&2Infected Digger'
-  Health: 40
-  Damage: 12.5
+  Health: 100
+  Damage: 30
   Faction: Undead
   AITargetSelectors:
   - 0 clear
@@ -23,8 +23,8 @@ InfectedDigger:
 ZombifiedDigger:
   Type: ZOMBIE
   Display: '&2Zombified Digger'
-  Health: 50
-  Damage: 9
+  Health: 120
+  Damage: 20
   Faction: Undead
   AITargetSelectors:
   - 0 clear
