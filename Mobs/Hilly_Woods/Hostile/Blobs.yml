@@ -1,15 +1,15 @@
 Blob:
   Type: Slime
   Display: '&2Blob'
-  Health: 20
-  Damage: 3
+  Health: 40
+  Damage: 5
   Faction: Slime
   AITargetSelectors:
   - 0 clear
   - 1 players
   - 2 attacker
   Options:
-    Size: 2
+    Size: 3
     PreventSlimeSplit: true
     PreventRandomEquipment: true
     PreventItemPickup: true

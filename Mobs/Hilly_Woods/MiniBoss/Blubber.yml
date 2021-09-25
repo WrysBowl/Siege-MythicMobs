@@ -10,7 +10,7 @@ Blubber:
   - 2 OtherFaction
   - 3 attacker
   Options:
-    Size: 3
+    Size: 4
     PreventSlimeSplit: true
     PreventRandomEquipment: true
     PreventItemPickup: true
