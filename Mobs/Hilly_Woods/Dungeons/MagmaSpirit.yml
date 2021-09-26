@@ -1,11 +1,9 @@
 MagmaSpirit:
- Type: Zombie
+ Type: MAGMA_CUBE
  Display: '&4Magma Spirit'
  Health: 1550
  Damage: 35
  Faction: Boss
- Disguise:
-  Type: MAGMA_CUBE
  BossBar:
   Enabled: true
   Title: '&4Magma Spirit'
@@ -26,7 +24,7 @@ MagmaSpirit:
   KnockbackResistance: 1.0
   FollowRange: 50
   Silent: true
-  Size: 3
+  Size: 4
  Skills:
   - skill{s=Flamethrower} @Self ~onTimer:200
   - skill{s=FireRing} @Self ~onTimer:400
