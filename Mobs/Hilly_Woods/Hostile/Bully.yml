@@ -5,7 +5,7 @@ Bully:
   Damage: 10
   Faction: Animal
   Disguise:
-    Type: Cow
+    Type: BABY_COW
   Options:
     Silent: true
     PreventRandomEquipment: true

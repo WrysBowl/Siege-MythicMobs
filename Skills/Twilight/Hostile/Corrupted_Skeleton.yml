@@ -1,6 +1,6 @@
 Corrupted_Skeleton_Skeleton_Consume:
   Conditions:
-  - mobsInRadius{type=Skeletal_Warrior,Skeletal_Archer,Skeletal_General;r=6}
+  - mobsInRadius{type=Skeletal_Warrior,Skeletal_Archer,SkeletalGeneral;r=6}
   Skills:
   - sound{s=block.respawn_anchor.ambient} @self
   - delay 60
@@ -11,7 +11,7 @@ Corrupted_Skeleton_ForceField-Tick:
   - effect:particles{p=damage_indicator;amount=1;speed=0.1;hS=0.2;vS=0.2} @origin
 Corrupted_Skeleton_ForceField-Hit:
   Skills:
-  - consume{d=20;h=20} @MobsInRadius{type=Skeletal_Warrior,Skeletal_Archer,Skeletal_General;r=3}
+  - consume{d=20;h=20} @MobsInRadius{type=Skeletal_Warrior,Skeletal_Archer,SkeletalGeneral;r=3}
   - sound{s=block.respawn_anchor.deplete} @origin
 
 Corrupted_Skeleton_Summon_Allies:

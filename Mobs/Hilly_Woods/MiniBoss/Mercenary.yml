@@ -17,8 +17,8 @@ Mercenary:
     Skin: '0xBACE'
   Equipment:
   - Leather_Helmet:4
-  - Chain_Chestplate:3
-  - Chain_Leggings:2
+  - Chainmail_Chestplate:3
+  - Chainmail_Leggings:2
   - Leather_Boots:1
   - RefinedDagger:HAND
   AITargetSelectors:
