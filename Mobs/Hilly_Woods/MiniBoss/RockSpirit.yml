@@ -1,6 +1,6 @@
 RockSpirit:
   Type: Zombie
-  Display: '&4Rock Spirit'
+  Display: '&2Rock Spirit'
   Health: 500
   Damage: 10
   Faction: Boss
@@ -9,23 +9,16 @@ RockSpirit:
     Block: Stone
     BlockData: 0
     DropsItem: false
-  BossBar:
-    Enabled: true
-    Title: '&4Rock Spirit'
-    Range: 20
-    Color: RED
-    Style: SOLID
   Options:
     Persistent: true
-    Despawn: false
     Silent: true
     PreventRandomEquipment: true
     PreventItemPickup: true
     PreventOtherDrops: true
     PreventSunburn: true
-    FollowRange: 50
-    MovementSpeed: 0.37
-    KnockbackResistance: 0.25
+    FollowRange: 20
+    MovementSpeed: 0.32
+    KnockbackResistance: 0.50
   AITargetSelectors:
   - 0 clear
   - 1 players
