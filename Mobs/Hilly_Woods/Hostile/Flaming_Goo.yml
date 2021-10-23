@@ -9,7 +9,7 @@ FlamingGoo:
   - 1 players
   - 2 attacker
   Options:
-    Size: 1
+    Size: 2
     PreventSlimeSplit: true
     PreventRandomEquipment: true
     PreventItemPickup: true

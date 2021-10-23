@@ -9,7 +9,7 @@ ScorchingBlob:
   - 1 players
   - 2 attacker
   Options:
-    Size: 2
+    Size: 3
     PreventSlimeSplit: true
     PreventRandomEquipment: true
     PreventItemPickup: true
