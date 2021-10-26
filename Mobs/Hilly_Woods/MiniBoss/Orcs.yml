@@ -3,7 +3,7 @@ Orc:
   Display: '&2Orc'
   Health: 400
   Damage: 50
-  Faction: Orc
+  Faction: Miniboss
   Disguise:
     Type: Player
     Skin: 'Ganaderia'

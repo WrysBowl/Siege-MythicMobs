@@ -3,7 +3,7 @@ Ogre:
   Display: '&2Ogre'
   Health: 500
   Damage: 60
-  Faction: Ogre
+  Faction: Miniboss
   Options:
     AlwaysShowName: true
     PreventRandomEquipment: true

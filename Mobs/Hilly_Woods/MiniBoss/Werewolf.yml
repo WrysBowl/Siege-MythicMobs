@@ -3,13 +3,7 @@ Werewolf:
   Display: '&4Werewolf'
   Health: 500
   Damage: 50
-  Faction: Boss
-  BossBar:
-    Enabled: true
-    Title: '&4Werewolf'
-    Range: 20
-    Color: RED
-    Style: SOLID
+  Faction: Miniboss
   AIGoalSelectors:
   - 0 clear
   - 1 meleeattack

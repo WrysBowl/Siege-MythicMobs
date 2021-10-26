@@ -3,7 +3,7 @@ Molter:
   Display: '&2Molter'
   Health: 150
   Damage: 20
-  Faction: Slime
+  Faction: Miniboss
   AITargetSelectors:
   - 0 clear
   - 1 players
