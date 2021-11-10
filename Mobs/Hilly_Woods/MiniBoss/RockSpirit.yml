@@ -1,7 +1,7 @@
 RockSpirit:
   Type: Zombie
   Display: '&2Rock Spirit'
-  Health: 400
+  Health: 200
   Damage: 10
   Faction: Miniboss
   Disguise:
@@ -17,16 +17,16 @@ RockSpirit:
     PreventOtherDrops: true
     PreventSunburn: true
     FollowRange: 20
-    MovementSpeed: 0.32
+    MovementSpeed: 0.34
     KnockbackResistance: 0.50
   AITargetSelectors:
   - 0 clear
   - 1 players
   - 2 attacker
   Skills:
-  - skill{s=RockSpiritStoneThrowAttack} ~onDamaged 0.2
+  - skill{s=RockSpiritStoneThrowAttack} ~onDamaged 0.5
   - effect:blockmask{m=stone;r=1;d=200} @self ~onTimer:5
-  - skill{s=SpawnRockRat} @self ~onDamaged
+  - skill{s=SpawnRockRat} @self ~onDamaged 0.5
   - skill{s=StoneBreak} ~onDamaged
   - skill{s=AnvilLand} ~onDeath
   - skill{s=StoneHit} ~onAttack
