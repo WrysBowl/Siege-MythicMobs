@@ -1,0 +1,21 @@
+batdeath:
+  Skills:
+  - delay 17
+  - sound{s=entity.bat.takeoff;p=0.8} @self
+  - effect:particles{particle=poof;amount=25;hS=1;vS=1;speed=0.5,uel=true} @Forward{f=-1}
+  
+bathurt:
+  Skills:
+  - sound{s=entity.phantom.hurt;p=0.9} @self
+  - state{s=hurt} @self
+
+batattack:
+  Cooldown: 2.5
+  Skills:
+  - CancelEvent
+  - state{s=attack} @self
+  - sound{s=entity.ender_dragon.flap;p=1.15} @self
+  - delay 5
+  - damage{amount=2.5} @PlayersNearOrigin{r=2}
+  - delay 10
+  - effect:particles{particle=ash;amount=25;hS=0.75;vS=0.75;speed=0,uel=true} @Forward{f=-1}

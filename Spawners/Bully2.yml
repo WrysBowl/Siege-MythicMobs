@@ -1,0 +1,27 @@
+Bully2:
+  MobName: Bully
+  World: Hilly_Woods
+  X: 120
+  Y: 59
+  Z: -145
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 8
+  UseTimer: true
+  MaxMobs: '6'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 25
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 5

@@ -1,0 +1,10 @@
+goopdeath:
+  Skills:
+  - delay 18
+  - sound{s=entity.wandering_trader.drink_potion;p=2.25} @self
+  - effect:particles{particle=poof;amount=25;hS=1;vS=1;speed=0.5,uel=true} @Forward{f=-1}
+  
+goophurt:
+  Skills:
+  - sound{s=block.slime_block.place;p=1.5} @self
+  - state{s=hurt} @self

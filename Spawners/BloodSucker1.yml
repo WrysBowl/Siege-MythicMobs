@@ -1,0 +1,27 @@
+BloodSucker1:
+  MobName: BloodSucker
+  World: Hilly_Woods
+  X: 35
+  Y: 61
+  Z: 239
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 4
+  UseTimer: true
+  MaxMobs: '4'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 20
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

@@ -6,8 +6,6 @@ WildFox:
   Faction: Wolf
   Disguise:
     Type: Fox
-  Modules:
-    ThreatTable: true
   Options:
     PreventMobKillDrops: true
     PreventOtherDrops: true

@@ -1,0 +1,24 @@
+ goop:
+  Type: SLIME
+  Display: 'goop'
+  Health: 10
+  Damage: 1
+  Faction: GOOP
+  Options:
+    Size: 2
+    PreventOtherDrops: true
+    MovementSpeed: 0.3
+    Silent: false
+    PreventSlimeSplit: true
+    NoDamageTicks: 5
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  Skills:
+  - model{mid=goop;n=false} @self ~onSpawn
+  - skill{s=goopdeath;sync=true} @self ~onDeath
+  - skill{s=goophurt;sync=true} @self ~onDamaged

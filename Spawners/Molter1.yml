@@ -1,0 +1,27 @@
+Molter1:
+  MobName: Molter
+  World: Hilly_Woods
+  X: 98
+  Y: 60
+  Z: -31
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 5
+  UseTimer: true
+  MaxMobs: '5'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 10
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 30
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 3

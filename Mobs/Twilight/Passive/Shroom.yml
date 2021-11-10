@@ -1,0 +1,26 @@
+ shroom:
+  Type: PIG
+  Display: 'a shroom'
+  Health: 12.5
+  Damage: 0
+  Faction: SHROOM
+  Options:
+    PreventOtherDrops: true
+    MovementSpeed: 0.15
+    Silent: true
+    NoDamageTicks: 10
+  Drops:
+  - red_mushroom 1 75%
+  - brown_mushroom 1 75%
+  - red_mushroom 1 25%
+  - brown_mushroom 1 25%
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  - 2 randomstroll
+  Skills:
+  - model{mid=shroom;n=false} @self ~onSpawn
+  - skill{s=cancelattack;sync=true} @self ~onAttack
+  - skill{s=shroomdeath;sync=true} @self ~onDeath
+  - skill{s=shroomhurt;sync=true} @self ~onDamaged

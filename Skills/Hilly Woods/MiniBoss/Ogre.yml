@@ -27,3 +27,43 @@ OgreAttackSound:
   Skills:
   - sound{s=entity.player.attack.sweep} @self
   - sound{s=entity.player.attack.crit} @self
+ogredeath:
+  Skills:
+  - delay 7
+  - sound{s=entity.piglin.converted_to_zombified;p=1.25} @self
+  - delay 20
+  - effect:particles{particle=poof;amount=35;hS=1;vS=1;speed=0.5,uel=true} @Forward{f=-1}
+  
+ogreattack:
+  Cooldown: 1.25
+  Conditions:
+  - targetwithin 4
+  Skills:
+  - CancelEvent
+  - sound{s=entity.ender_dragon.flap;p=1.75} @self
+  - state{s=attack} @self
+  - delay 25
+  - sound{s=entity.dragon_fireball.explode;p=1.85} @self
+  - effect:particles{particle=block_crack;m=coarse_dirt;amount=225;hS=0.75;vS=0.5} @Forward{f=1}
+  - delay 4
+  - damage{amount=15} @PlayersNearOrigin{r=3.5}
+  
+ogreattack2:
+  Cooldown: 1.25
+  Conditions:
+  - targetwithin 4
+  Skills:
+  - CancelEvent
+  - state{s=attack2} @self
+  - delay 15
+  - sound{s=entity.ender_dragon.flap;p=1.75} @self
+  - delay 5
+  - damage{amount=19.5} @PlayersNearOrigin{r=5}
+
+ogrehurt:
+  Skills:
+  - sound{s=entity.piglin.hurt;p=0.925} @self
+
+cancelattack:
+  Skills:
+  - CancelEvent

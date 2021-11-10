@@ -53,7 +53,7 @@ GoldenGoblin:
   - 1 players
   Skills:
   - skill{s=GoblinFlee} ~onDamaged 0.25
-  - skill{s=Steal} ~onAttack 0.25
+  - currencytake{amount=20} ~onAttack
   - skill{s=GoblinAmbientSound} ~onTimer:120
   - skill{s=GoblinAttackSound} ~onAttack 1
   - effect:particles{particle=totem_of_undying;amount=10;hS=0.25;vS=0.25;yOffset=1;speed=0.1} @self ~onTimer:10

@@ -1,0 +1,28 @@
+ZombifiedDigger7:
+  MobName: ZombifiedDigger
+  World: Hilly_Woods
+  X: -120
+  Y: 113
+  Z: 41
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 6
+  UseTimer: true
+  MaxMobs: '6'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 3
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions:
+  - night true
+  ActiveMobs: 3

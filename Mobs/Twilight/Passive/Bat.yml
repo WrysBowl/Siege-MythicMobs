@@ -1,8 +1,23 @@
-Bat:
-  Type: BAT
+Twilight_Bat:
+  Type: BEE
   Display: '&2Bat'
-  Health: 25
-  Faction: Ambient
+  Health: 20
+  Damage: 3
+  Faction: KILLERBAT
   Options:
-    FollowRange: 20
-    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    Silent: true
+    NoDamageTicks: 5
+    LockPitch: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  Skills:
+  - model{mid=killerbat;n=false} @self ~onSpawn
+  - skill{s=batdeath;sync=true} @self ~onDeath
+  - skill{s=bathurt;sync=true} @self ~onDamaged
+  - skill{s=batattack;sync=true} @self ~onAttack

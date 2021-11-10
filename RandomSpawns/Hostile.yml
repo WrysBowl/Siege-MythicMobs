@@ -29,7 +29,7 @@ RandomZombifiedDigger:
 RandomOrc:
   MobType: Orc
   Worlds: Hilly_Woods
-  Chance: 0.02
+  Chance: 0.01
   Priority: 1
   Action: ADD
   PointType: LAND

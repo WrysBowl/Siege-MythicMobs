@@ -1,0 +1,10 @@
+shroomhurt:
+  Skills:
+  - sound{s=item.armor.equip_turtle;p=1.5} @self
+  - state{s=damage} @self
+
+shroomdeath:
+  Skills:
+  - delay 25
+  - sound{s=entity.item_frame.remove_item;p=0.8} @self
+  - effect:particles{particle=poof;amount=25;hS=1;vS=1;speed=0.5,uel=true} @Forward{f=-1}

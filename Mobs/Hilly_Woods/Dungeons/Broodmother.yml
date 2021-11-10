@@ -12,8 +12,6 @@ Broodmother:
     Style: SOLID
   DamageModifiers:
   - PROJECTILE 1.5
-  Modules:
-    ThreatTable: true
   Options:
     Persistent: true
     Despawn: false

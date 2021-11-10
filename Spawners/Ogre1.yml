@@ -1,0 +1,27 @@
+Ogre1:
+  MobName: Ogre
+  World: Hilly_Woods
+  X: -204
+  Y: 67
+  Z: 254
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 3
+  UseTimer: true
+  MaxMobs: '1'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

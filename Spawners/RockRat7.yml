@@ -1,0 +1,27 @@
+RockRat7:
+  MobName: RockRat
+  World: Hilly_Woods
+  X: 57
+  Y: 59
+  Z: -56
+  Yaw: 0.0
+  Pitch: 0.0
+  Radius: 2
+  UseTimer: true
+  MaxMobs: '5'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 0
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 20
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 4

@@ -7,8 +7,6 @@ LumberjackJoe:
   Disguise:
     Type: Player
     Skin: 'BufkinTheBrave'
-  Modules:
-    ThreatTable: true
   Options:
     PreventMobKillDrops: true
     PreventOtherDrops: true

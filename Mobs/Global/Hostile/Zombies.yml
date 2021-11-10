@@ -13,6 +13,7 @@ InfectedDigger:
     PreventRandomEquipment: true
     PreventItemPickup: true
     PreventOtherDrops: true
+    PreventSunburn: true
     FollowRange: 20
     MovementSpeed: 0.3
     Silent: false
@@ -35,6 +36,7 @@ ZombifiedDigger:
     PreventRandomEquipment: true
     PreventItemPickup: true
     PreventOtherDrops: true
+    PreventSunburn: true
     FollowRange: 20
     MovementSpeed: 0.3
     Silent: false
