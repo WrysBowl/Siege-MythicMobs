@@ -1,41 +1,24 @@
 Sea_Warrior:
-
   Type: Drowned
-
   Display: '&2Sea Warrior'
-
-  Health: 100
-
-  Damage: 20
-
+  Health: 120
+  Damage: 30
   Faction: Undead
-
   Options:
-
     AlwaysShowName: true
-
     PreventRandomEquipment: true
-
     PreventItemPickup: true
-
     PreventOtherDrops: true
-
     FollowRange: 30
-
-    MovementSpeed: 0.26
-
+    MovementSpeed: 0.33
   Equipment:
-
   - Gold_Helmet:4
-
   - Davy_Jones_Boots:1
-
   - Trident:0
-
   AITargetSelectors:
-
   - 0 clear
-
   - 1 hurtbytarget
-
   - 2 players
+  Skills:
+  - skill{s=Davy_Jones_RangedAttack} ~onDamaged 1
+  - skill{s=Davy_Jones_MeleeAttack} ~onDamaged 1
