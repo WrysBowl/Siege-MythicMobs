@@ -1,7 +1,7 @@
 Thief:
   Type: Zombie
   Display: '&2Thief'
-  Health: 100
+  Health: 150
   Damage: 20
   Faction: Bandit
   Options:

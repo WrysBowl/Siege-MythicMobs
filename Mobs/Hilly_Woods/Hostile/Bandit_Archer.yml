@@ -1,7 +1,7 @@
 BanditArcher:
   Type: Skeleton
   Display: '&2Bandit Archer'
-  Health: 100
+  Health: 200
   Damage: 40
   Faction: Bandit
   Options:

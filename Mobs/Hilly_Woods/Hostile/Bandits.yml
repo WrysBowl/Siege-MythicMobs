@@ -1,8 +1,8 @@
 Bandit:
   Type: Zombie
   Display: '&2Bandit'
-  Health: 130
-  Damage: 25
+  Health: 250
+  Damage: 35
   Faction: Bandit
   Options:
     PreventRandomEquipment: true
