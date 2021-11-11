@@ -39,14 +39,14 @@ NecromancerPlague-Tick:
   - effect:particles{particle=reddust;color=#455241;amount=20;hS=3;vS=3;speed=0.2} @origin
 NecromancerPlague-Hit:
   Skills:
-  - damage{a=3}
+  - damage{a=1}
   - potion{type=WITHER;duration=80;lvl=3} @target
   - potion{type=BLINDNESS;duration=40;lvl=1} @target
   - sound{s=entity.drowned.death_water} @target
 NecromancerLifeSteal:
   Skills:
   - effect:particles{particle=reddust;color=#455241;amount=10;hS=3;vS=3;speed=1} @self
-  - consume{d=4;h=4} @EIR{r=5}
+  - consume{d=3;h=3} @EIR{r=5}
   - effect:particlering{particle=soul;radius=5;points=32;amount=2;hS=0.5;vS=0.5} @self
 NecromancerTotemOfUndying:
   Skills:
@@ -64,4 +64,4 @@ NecromancerTotemOfUndying-Tick:
   - effect:particlering{particle=reddust;color=#455241;radius=5;points=24;amount=2;hS=0;vS=0} @origin
 NecromancerTotemOfUndying-Hit:
   Skills:
-  - damage{a=6} @EIR{r=5;ignore=self,monsters}
+  - damage{a=1} @EIR{r=5;ignore=self,monsters}
