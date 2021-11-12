@@ -26,6 +26,3 @@ Skeletal_Warrior:
   - 0 clear
   - 1 meleeattack
   - 2 randomstroll
-  Skills:
-  - skill{s=CancelEventSkill;sync=true} ~onShoot
-  - shoot{type=ARROW;velocity=3;damage=40} ~onAttack

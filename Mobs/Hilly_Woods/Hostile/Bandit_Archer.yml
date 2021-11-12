@@ -31,4 +31,4 @@ BanditArcher:
   - skill{s=BanditAmbientSound} ~onTimer:80 0.5
   - setname{name='&2Bandit Archer &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
   - skill{s=CancelEventSkill;sync=true} ~onShoot
-  - shoot{type=ARROW;velocity=3;damage=40} ~onAttack
+  - shoot{type=ARROW;velocity=3;damage=10} ~onAttack
