@@ -34,6 +34,8 @@ Davy_Jones_Weapon:
   - IMPALING:6
 
   - DAMAGE_ALL:6
+  Options:
+    Damage: 30
 
 Davy_Jones_Weapon1:
 

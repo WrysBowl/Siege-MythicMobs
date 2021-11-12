@@ -1,4 +1,4 @@
 Bandit_Bow:
   Id: BOW
-  Enchantments:
-  - ARROW_DAMAGE:3
+  Options:
+    Damage: 40
