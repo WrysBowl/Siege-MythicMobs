@@ -6,7 +6,7 @@ Flamethrower:
   - aura{i=1;d=120;oT=FlamethrowerProjectile} @Self
 FlamethrowerProjectile:
  Skills:
-  - projectile{i=1;oT=Flamethrower-Tick;oH=Flamethrower-Hit;mr=6;sE=false;hR=3.0} @Target
+  - projectile{i=1;oT=Flamethrower-Tick;oH=Flamethrower-Hit;mr=24;sE=false;hR=3.0} @Target
 Flamethrower-Tick:
  Skills:
   - effect:particles{p=flame;a=5;s=0.05;hs=0.5;vs=0.1} @origin
