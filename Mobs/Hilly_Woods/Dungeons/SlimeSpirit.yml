@@ -17,11 +17,9 @@ SlimeSpirit:
  Options:
   Persistent: true
   Despawn: false
-  PreventSunburn: true
-  PreventOtherDrops: true
   PreventItemPickup: true
   MovementSpeed: 0.4
-  FollowRange: 50
+  FollowRange: 80
   Size: 4
   ModifyBoundingBox: true
   Silent: true
@@ -32,12 +30,12 @@ SlimeSpirit:
   - skill{s=SlimeConsuming} ~onDamaged 0.25
   - skill{s=AcidSpit} @target ~onTimer:100
   - skill{s=LungeAttack} @self ~onTimer:20
+  - skill{s=SlimeSpiritBullDoze} @self ~onDamaged 0.3
   - sound{s=entity.slime.hurt} @Self ~onDamaged
   - sound{s=entity.slime.death} @Self ~onDeath
-  - potion{type=WATER_BREATHING;duration=999999;hasParticles=false} @self ~onSpawn
 
 #1. Leaves a trail of slime blocks that disappear after 10 seconds
-#2. On attack, has a 5% chance to teleport the player to the slime and consumes them for 10 hp and deals 5 damage
-#3. Has 25% chance every 5 seconds to lunge 10 blocks in front of it
-#4. Jump boost III permanently when it spawns
-#5. Shoots particles of slime (acid spit)
+#2. Leaps forward every second
+#3. Shoots particles of slime (acid spit)
+#4. Slides across the floor in a straight line
+#5. Slit ball shoots slime block at players far away

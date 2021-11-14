@@ -1,18 +1,40 @@
 SlimeConsuming:
  Conditions:
- - playernotwithin{d=6}
+ - playernotwithin{d=8}
  Skills:
-  - pull{velocity=10} @target
+  - pull{velocity=20;to=true} @target
+  - delay 10
   - sound{s=block.slime_block.break;p=0.0} @Self
-  - damage{amount=5} @target
-  - heal{amount=10} @Self
+  - throw{velocity=15;velocityY=6} @PIR{r=4}
+
+SlimeSpiritBullDoze:
+ Conditions:
+  - playernotwithin{d=7}
+ Skills:
+  - effect:particles{p=slime;amount=3;speed=0;hS=0.3;vS=0.3} @origin
+  - delay 10
+  - effect:particles{p=slime;amount=3;speed=0;hS=0.3;vS=0.3} @origin
+  - delay 10
+  - effect:particles{p=slime;amount=3;speed=0;hS=0.3;vS=0.3} @origin
+  - delay 10
+  - lunge{velocity=1;velocityY=0.1} @Self
+  - throw{velocity=10;velocityY=4} @PIR{r=4}
+  - delay 10
+  - sound{s=block.slime_block.break;p=0.0} @Self
+  - lunge{velocity=1;velocityY=0.1} @Self
+  - throw{velocity=10;velocityY=4} @PIR{r=4}
+  - delay 10
+  - sound{s=block.slime_block.break;p=0.0} @Self
+  - lunge{velocity=1;velocityY=0.1} @Self
+  - throw{velocity=10;velocityY=4} @PIR{r=4}
+
 AcidSpit:
  Conditions:
  - playernotwithin{d=6}
  Skills:
   - sound{s=block.slime_block.fall;p=0.15} @self
   - effect:particles{particle=sneeze;amount=60;hS=2;vS=2} @self
-  - projectile{onTick=AcidSpit-Tick;onHit=AcidSpit-Hit;v=12;hR=1;vR=1}
+  - projectile{onTick=AcidSpit-Tick;onHit=AcidSpit-Hit;v=12;hR=1;vR=1} @target
 AcidSpit-Tick:
  Skills:
   - effect:particles{p=slime;amount=3;speed=0;hS=0.3;vS=0.3} @origin

@@ -1,0 +1,19 @@
+SpitBall:
+  Type: Slime
+  Display: '&2'
+  Health: 1
+  Damage: 10
+  Faction: Slime
+  Disguise:
+    Type: BLOCK
+    Block: Slime
+    BlockData: 0
+    DropsItem: false
+  Options:
+    Persistent: true
+    Silent: true
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    FollowRange: 20
+    MovementSpeed: 0.0
+    KnockbackResistance: 1.0
