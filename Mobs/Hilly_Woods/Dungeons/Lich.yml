@@ -33,7 +33,7 @@ Lich:
   - skill{s=SoulEating} @Self ~onAttack
   - skill{s=DarkRise} @Self ~onTimer:220
   - throw{velocity=12;velocityY=5} @Target ~onAttack
-  - skill{s=SoulShot} @Target ~onTimer:180
+  - skill{s=SoulShot} @Target ~onDamaged 0.5
+  - skill{s=LichFloat} @Target ~onDamaged 0.25
+  - skill{s=SoulSucker} @Target ~onDamaged 0.4
   - potion{t=INVISIBILITY;d=40} @Self ~onDamaged 0.5
-  - setname{name='&2Lich &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
-  - potion{type=WATER_BREATHING;duration=999999;hasParticles=false} @self ~onSpawn

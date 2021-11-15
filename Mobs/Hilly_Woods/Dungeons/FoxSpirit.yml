@@ -43,4 +43,3 @@ FoxSpirit:
   - skill{s=FoxSpiritStealSpeed} @self ~onAttack 0.5
   - skill{s=FoxSpiritStealStrength} @self ~onDamaged
   - skill{s=FoxSpiritDamageMulti} @self ~onAttack
-  - potion{type=WATER_BREATHING;duration=999999;hasParticles=false} @self ~onSpawn

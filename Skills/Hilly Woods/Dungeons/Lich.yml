@@ -4,8 +4,18 @@ BlackEyes:
  Skills:
   - sound{s=entity.enderman.teleport;p=0.86} @self
   - potion{type=INVISIBILITY;duration=60;level=1} @Self
-  - potion{type=BLINDNESS;duration=100;level=1} @target
-  - potion{type=WITHER;duration=100;level=0} @target
+  - potion{type=BLINDNESS;duration=60;level=1} @target
+  - potion{type=WITHER;duration=60;level=0} @target
+
+LichFloat:
+ Conditions:
+  - targetinlineofsight{} false
+  - playernotwithin{d=6}
+ Skills:
+  - potion{type=LEVITATION;duration=100;level=1} @self
+  - delay 60
+  - potion{type=SLOW;duration=80;level=9} @target
+  - sound{s=entity.evoker.cast_spell;p=0.6} @self
 
 NecroSummoning:
  Skills:
@@ -15,16 +25,14 @@ NecroSummoning:
   - effect:particles{particle=large_smoke;amount=40;hS=2;vS=2} @target
   - sound{s=entity.evoker.cast_spell;p=0.6} @self
 
-SussyTeleport:
- Skills:
-  - sound{s=entity.enderman.teleport;p=0.83} @self
-  - teleport{sh=7}
-
 SoulEating:
  Skills:
   - sound{s=entity.witch.drink;p=0.84;v=3} @Self
   - heal{amount=50} @Self
+
 DarkRise:
+ Conditions:
+  - playernotwithin{d=6}
  Skills:
   - effect:particlesphere{particle=dragon_breath;amount=300;radius=7} @self
   - effect:bloodyScreen{d=160} @PIR{r=5}
@@ -33,12 +41,13 @@ DarkRise:
   - effect:particles{p=squid_ink;amount=100;speed=1;hS=4;vS=4} @self
   - effect:explosion @self 
   - damage{a=10} @PIR{r=7}
+
 SoulShot:
  Conditions:
  - playernotwithin{d=6}
  Skills:
   - sound{s=entity.elder_guardian.curse;p=0.82;v=1} @self
-  - effect:particles{particle=squid_ink;amount=60;hS=3;vS=3} @self
+  - effect:particles{particle=squid_ink;amount=60;hS=2;vS=2} @self
   - delay 80
   - sound{s=entity.ender_eye.death;p=0.15} @self
   - projectile{onTick=SoulShot-Tick;onHit=SoulShot-Hit;v=12;hR=2;vR=3}
@@ -52,3 +61,38 @@ SoulShot-Hit:
   - sound{s=block.shroomlight.break;p=0.13}
   - effect:particles{p=squid_ink;amount=20;speed=0;hS=0.2;vS=0.2}
   - skill{s=BlackEyes}
+
+SoulSucker:
+ Conditions:
+  - playernotwithin{d=6}
+ Skills:
+  - effect:particles{particle=squid_ink;amount=60;hS=3;vS=3} @self
+  - delay 80
+  - sound{s=entity.ender_eye.death;p=0.15} @self
+  - projectile{onTick=SoulSucker-Tick;onHit=SoulSucker-Hit;v=8;hR=2;vR=2;sB=false} @target
+SoulSucker-Tick:
+ Skills:
+  - effect:particles{p=reddust;color=#708E8D} @oriign
+SoulSucker-Hit:
+ Skills:
+  - damage{a=8}
+  - sound{s=entity.pillager.celebrate;p=0.13}
+  - delay 10
+  - effect:glow{color=BLACK;duration=100}
+  - sound{s=entity.wandering_trader.drink_potion;p=0.13}
+  - delay 20
+  - sound{s=entity.wandering_trader.drink_potion;p=0.13}
+  - consume{d=20;h=10}
+  - pull{v=5;to=true} @LivingEntitiesInRadius{r=20}
+  - delay 20
+  - sound{s=entity.wandering_trader.drink_potion;p=0.13}
+  - consume{d=20;h=10}
+  - pull{v=5;to=true} @LivingEntitiesInRadius{r=20}
+  - delay 20
+  - sound{s=entity.wandering_trader.drink_potion;p=0.13}
+  - consume{d=20;h=10}
+  - pull{v=5;to=true} @LivingEntitiesInRadius{r=20}
+  - delay 20
+  - sound{s=entity.wandering_trader.drink_potion;p=0.13}
+  - consume{d=20;h=10}
+  - pull{v=5;to=true} @LivingEntitiesInRadius{r=20}
