@@ -18,15 +18,15 @@ SlimeSpiritBullDoze:
   - effect:particles{p=slime;amount=3;speed=0;hS=0.3;vS=0.3} @origin
   - delay 10
   - lunge{velocity=1;velocityY=0.1} @Self
-  - throw{velocity=10;velocityY=4} @PIR{r=4}
+  - throw{velocity=13;velocityY=4} @EIR{r=6}
   - delay 10
   - sound{s=block.slime_block.break;p=0.0} @Self
   - lunge{velocity=1;velocityY=0.1} @Self
-  - throw{velocity=10;velocityY=4} @PIR{r=4}
+  - throw{velocity=13;velocityY=4} @EIR{r=6}
   - delay 10
   - sound{s=block.slime_block.break;p=0.0} @Self
   - lunge{velocity=1;velocityY=0.1} @Self
-  - throw{velocity=10;velocityY=4} @PIR{r=4}
+  - throw{velocity=13;velocityY=4} @EIR{r=6}
 
 AcidSpit:
  Conditions:
