@@ -1,7 +1,7 @@
 Davy_Jones:
   Type: Drowned
   Display: '&4Davy Jones'
-  Health: 2500
+  Health: 4000
   Damage: 65
   Faction: Boss
   BossBar:
@@ -35,6 +35,7 @@ Davy_Jones:
   - 1 players
   - 2 attacker
   Skills:
+  - heal{a=2} @self ~onTimer:40
   - summon{type=Sea_Warrior;amount=1;radius=4} @self ~onDamaged 0.1
   - skill{s=WaterBoltAttack} @self ~onTimer:150 0.6
   - skill{s=Davy_Jones_RangedAttack} ~onDamaged 1

@@ -1,7 +1,7 @@
 SlimeSpirit:
  Type: SLIME
  Display: '&4Slime Spirit'
- Health: 750
+ Health: 800
  Damage: 30
  Faction: Boss
  BossBar:
@@ -24,7 +24,6 @@ SlimeSpirit:
   ModifyBoundingBox: true
   Silent: true
   KnockbackResistance: 1.0
-
  Skills:
   - effect:blockmask{m=slime_block;r=2;d=200} @self ~onTimer:5
   - skill{s=SlimeConsuming} ~onDamaged 0.25

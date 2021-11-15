@@ -1,7 +1,7 @@
 Necromancer:
   Type: Wither_Skeleton
   Display: '&2Necromancer'
-  Health: 3000
+  Health: 4500
   Damage: 60
   Faction: Boss
   BossBar:
@@ -24,6 +24,7 @@ Necromancer:
   - 1 players
   - 2 attacker
   Skills:
+  - heal{a=2} @self ~onTimer:40
   - skill{s=NecromancerSummonUndead} @self ~onDamaged 0.1
   - skill{s=NecromancerWitherSkullShoot} @self ~onTimer:150
   - skill{s=NecromancerPlague} @self ~onTimer:200

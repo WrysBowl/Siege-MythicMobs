@@ -72,7 +72,7 @@ SoulSucker:
   - projectile{onTick=SoulSucker-Tick;onHit=SoulSucker-Hit;v=8;hR=2;vR=2;sB=false} @target
 SoulSucker-Tick:
  Skills:
-  - effect:particles{p=reddust;color=#708E8D} @oriign
+  - effect:particles{p=reddust;color=#708E8D} @origin
 SoulSucker-Hit:
  Skills:
   - damage{a=8}

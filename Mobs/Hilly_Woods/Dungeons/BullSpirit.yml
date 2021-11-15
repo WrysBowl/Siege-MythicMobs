@@ -1,6 +1,6 @@
 BullSpirit:
  Display: '&4Bull Spirit'
- Health: 1500
+ Health: 2500
  Damage: 50
  Type: Zombie
  Disguise: 
@@ -24,6 +24,7 @@ BullSpirit:
   KnockbackResistance: 1.0
 
  Skills:
+  - heal{a=2} @self ~onTimer:40
   - throw{velocity=10;velocityY=8} @Target ~onAttack
   - skill{s=BullCharge} @Self ~onTimer:120
   - skill{s=BullSlam} @Self ~onTimer:160

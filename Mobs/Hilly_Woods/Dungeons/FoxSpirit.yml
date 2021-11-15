@@ -1,7 +1,7 @@
 FoxSpirit:
   Type: FOX
   Display: '&4Fox Spirit'
-  Health: 850
+  Health: 5500
   Damage: 45
   Faction: Boss
   BossBar:
@@ -32,6 +32,7 @@ FoxSpirit:
     MovementSpeed: 0.38
     KnockbackResistance: 0.75
   Skills:
+  - heal{a=2} @self ~onTimer:40
   - skill{s=FoxAggroSound} @self ~onEnterCombat
   - skill{s=FoxAmbientSound} @self ~onTimer:40 0.5
   - skill{s=FoxBiteSound} @self ~onAttack
