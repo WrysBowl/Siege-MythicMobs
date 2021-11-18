@@ -1,46 +1,80 @@
 CloakingAttack:
-
   Skills:
-
   - effect:particleorbital{p=reddust;color=#585a4d;a=10;points=64;an=1;hs=0;vs=0;s=0;y=2;ticks=40;in=1;rx=0;ry=0;r=1;yOffset=0.7} @self
-
   - delay 10
-
   - teleport @target
-
   - damage{a=1} @self
 
-
+WaterShellDefense:
+  Conditions:
+  - playernotwithin{d=8}
+  Skills:
+  - effect:blockmask{m=WATER;r=5;d=22;oa=true} @self
+  - delay 20
+  - skill{s=WaterShellDefense} @self
 
 WaterBoltAttack:
   Conditions:
   - playernotwithin{d=6}
-
   Skills:
-
   - runaigoalselector{goal=clear}
-
   - runaigoalselector{goal=fleeplayers}
-
   - runaigoalselector{goal=fleegolems}
-
   - runaigoalselector{goal=randomstroll}
-
   - delay 30
-
   - equip{item=air:0}
-
   - skill{s=WaterBolt} @target
-
   - delay 10
-
   - runaigoalselector{goal=clear}
-
   - runaigoalselector{goal=arrowattack}
-
   - runaigoalselector{goal=randomstroll}
-
   - equip{item=Davy_Jones_Weapon:0}
+
+WaterBolt:
+  Skills:
+    - projectile{onTick=WaterBolt-Tick;onHit=WaterBolt-Hit;v=10;i=1;hR=1;vR=1;mr=24;hnp=false}
+WaterBolt-Tick:
+  Skills:
+    - effect:itemspray{item=lapis_lazuli;amount=1} @origin
+WaterBolt-Hit:
+  Skills:
+    - damage{a=1}
+    - potion{type=SLOW;duration=60;lvl=3}
+    - effect:particles{particle=reddust;amount=20;hS=1;vS=1;speed=1}
+
+TridentLightningAttack:
+  Conditions:
+    - playernotwithin{d=6}
+  Skills:
+    - runaigoalselector{goal=clear}
+    - runaigoalselector{goal=fleeplayers}
+    - runaigoalselector{goal=randomstroll}
+    - effect:itemspray{item=lapis_lazuli;amount=10} @origin
+    - delay 20
+    - effect:itemspray{item=lapis_lazuli;amount=10} @origin
+    - delay 20
+    - effect:itemspray{item=lapis_lazuli;amount=10} @origin
+    - delay 20
+    - skill{s=TridentLightning} @self
+    - delay 60
+    - runaigoalselector{goal=clear}
+    - runaigoalselector{goal=randomstroll}
+TridentLightning:
+  Skills:
+    - projectile{onTick=TridentLightning-Tick;onHit=TridentLightning-Hit;v=10;hR=0.5;vR=0.5;d=400;sE=false;sB=false;mr=15;i=1} @Ring{radius=10;points=4}
+TridentLightning-Tick:
+  Skills:
+    - lightning{d=20} @origin
+TridentLightning-Hit:
+  Skills:
+    - stun{d=100;cotd=true;g=true}
+
+DavyJonesLockerAttack:
+  Condition:
+  - targetnotwithin{d=10} true
+  - inblock{b=WATER} true
+  Skills:
+  - prison{material=IRON_BARS;duration=200} @target
 
 
 WaterSpoutAttack:
@@ -50,45 +84,24 @@ WaterSpoutAttack:
   - pull{v=12} @PlayersInRadius{r=12}
   - delay 10
 
-
 Davy_Jones_MeleeAttack:
-
   TargetConditions:
-
-  - distance{d=<5}
-
+  - distance{d=<4}
   Skills:
-
   - equip{item=air:0}
-
   - runaigoalselector{goal=clear}
-
   - runaigoalselector{goal=meleeattack}
-
   - runaigoalselector{goal=randomstroll}
-
   - equip{item=Davy_Jones_Axe:0}
 
-
-
-
-
 Davy_Jones_RangedAttack:
-
   TargetConditions:
-
-  - distance{d>5}
-
+  - distance{d>4}
   Skills:
-
   - equip{item=air:0}
-
   - runaigoalselector{goal=clear}
-
   - runaigoalselector{goal=arrowattack}
-
   - runaigoalselector{goal=randomstroll}
-
   - equip{item=Davy_Jones_Weapon:0}
 
 

@@ -38,8 +38,10 @@ Davy_Jones:
   - heal{a=2} @self ~onTimer:40
   - summon{type=Sea_Warrior;amount=1;radius=4} @self ~onDamaged 0.1
   - skill{s=WaterBoltAttack} @self ~onTimer:150 0.6
+  - skill{s=WaterShellDefense} @self ~onDamaged 1
+  - skill{s=DavyJonesLockerAttack} ~onDamaged 0.3
+  - skill{s=TridentLightningAttack} ~onTimer:400 0.5
   - skill{s=Davy_Jones_RangedAttack} ~onDamaged 1
   - skill{s=Davy_Jones_MeleeAttack} ~onDamaged 1
   - skill{s=CancelEventSkill;sync=true} ~onShoot
-  - shoot{type=ARROW;velocity=3;damage=10} ~onShoot
   - skill{s=WaterSpoutAttack} @self ~onTimer:300 0.5
