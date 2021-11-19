@@ -11,7 +11,7 @@ Broodmother:
     Color: RED
     Style: SOLID
   DamageModifiers:
-  - PROJECTILE 1.5
+  - PROJECTILE 0.5
   Options:
     Persistent: true
     Despawn: false
@@ -19,7 +19,6 @@ Broodmother:
     FollowRange: 80
     MovementSpeed: 0.35
     KnockbackResistance: 1.0
-
   AITargetSelectors:
   - 0 clear
   - 1 players
@@ -30,5 +29,4 @@ Broodmother:
   - skill{s=BroodmotherWebBolt} ~onTimer:180
   - skill{s=BroodmotherWebArea} ~onTimer:100 0.5
   - skill{s=BroodmotherPoisonBolt} ~onTimer:140
-  - potion{type=SLOW;duration=100;lvl=1} @target ~onAttack
   - summon{type=ForestSpider;itt=true;a=2;r=3} @self ~onDamaged 0.25

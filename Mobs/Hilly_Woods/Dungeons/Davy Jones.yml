@@ -43,5 +43,4 @@ Davy_Jones:
   - skill{s=TridentLightningAttack} ~onTimer:400 0.5
   - skill{s=Davy_Jones_RangedAttack} ~onDamaged 1
   - skill{s=Davy_Jones_MeleeAttack} ~onDamaged 1
-  - skill{s=CancelEventSkill;sync=true} ~onShoot
   - skill{s=WaterSpoutAttack} @self ~onTimer:300 0.5
