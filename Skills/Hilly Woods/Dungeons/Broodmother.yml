@@ -71,12 +71,65 @@ BroodmotherNest-Start:
 BroodmotherNest-End:
   Skills:
   - effect:itemspray{item=COBWEB;amount=10} @origin
-  - summon{type=ForestSpider;itt=true;a=1} @origin
 BroodmotherNest-Tick:
   Skills:
-  - summon{type=ForestSpider;itt=true;a=1} @origin
+  - summon{type=ForestSpider;itt=false;a=1} @origin
   - effect:particles{p=sneeze;a=15;s=0.05;hs=0.5;vs=0.1} @origin
 BroodmotherNest-Hit:
   Skills:
   - damage{a=30} @target
   - throw{velocity=10;velocityY=8} @target
+
+BroodmotherPoisonGas:
+  Skills:
+    - projectile{oT=BroodmotherPoisonGas-Tick;v=5;i=2;hR=2;vR=1;mr=10;hs=true;sB=true;sE=false} @target
+BroodmotherPoisonGas-Tick:
+  Skills:
+    - totem{oT=BroodmotherPoisonGas-Totem-Tick;oH=BroodmotherPoisonGas-Totem-Hit;vR=3;hR=3;yO=0;md=600} @origin
+BroodmotherPoisonGas-Totem-Tick:
+  Skills:
+    - effect:particles{p=happy_villager;a=15;hs=2;vs=0.1} @origin
+BroodmotherPoisonGas-Totem-Hit:
+  Skills:
+    - potion{type=CONFUSION;duration=200;lvl=1}
+    - delay 100
+    - potion{type=BLINDNESS;duration=200;lvl=1}
+    - delay 100
+    - potion{type=POISON;duration=200;lvl=1}
+
+#   - aura{auraName=Poison;oT=BroodmotherPoisonGas-Totem-Hit-Aura-Tick;i=10;bartimer=true;duration=100;ma=true}
+# BroodmotherPoisonGas-Totem-Hit-Aura-Tick:
+#   Skills:
+#   - damagepercent{m=0.01;pkb=true}
+
+BroodmotherEncase:
+  Skills:
+    - setAI{ai=false}
+    - message{m="&cThe Broodmother is about to summon Minions."} @PIR{r=30}
+    - effect:particlesphere{p=reddust;color=#FFF700;a=100;radius=3;repeat=3;repeatInterval=10} @self
+    - delay 40
+    - blockmask{m=shroomlight;d=50;radius=5;oa=true} @self
+    - delay 50
+    - summon{type=ForestSpider;itt=false;a=3;radius=2} @self
+    - blockwave{duration=100;material=shroomlight;radius=5;radiusY=5;velocity=10;shape=sphere;hsb=false} @selflocation
+    - setAI{ai=true} @self
+
+BroodmotherBeam:
+  Skills:
+    - projectile{oT=BroodmotherBeam-Tick;oH=BroodmotherBeam-Hit;v=30;i=1;mr=75;sB=true;sE=true} @PIR{r=75}
+BroodmotherBeam-Tick:
+  Skills:
+    - effect:particles{p=happy_villager;a=10} @origin
+BroodmotherBeam-Hit:
+  Skills:
+    - damage{a=5}
+
+BroodmotherExplosionProjectiles:
+  Skills:
+    - projectile{oT=BroodmotherExplosionProjectiles-Tick;oH=BroodmotherExplosionProjectiles-Hit;v=20;i=4;mr=100;sB=true;sE=true} @Ring{radius=5;points=8}
+BroodmotherExplosionProjectiles-Tick:
+  Skills:
+    - effect:particles{p=explosion_large;a=10} @origin
+BroodmotherExplosionProjectiles-Hit:
+  Skills:
+    - throw{velocity=10}

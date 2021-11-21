@@ -2,7 +2,7 @@ Broodmother:
   Type: Spider
   Display: '&2Broodmother'
   Health: 7500
-  Damage: 80
+  Damage: 40
   Faction: Boss
   BossBar:
     Enabled: true
@@ -28,5 +28,8 @@ Broodmother:
   - skill{s=BroodmotherNest} ~onDamaged 0.2
   - skill{s=BroodmotherWebBolt} ~onTimer:180
   - skill{s=BroodmotherWebArea} ~onTimer:100 0.5
+  - skill{s=BroodmotherPoisonGas} ~onTimer:120 0.6
   - skill{s=BroodmotherPoisonBolt} ~onTimer:140
-  - summon{type=ForestSpider;itt=true;a=2;r=3} @self ~onDamaged 0.25
+  - skill{s=BroodmotherEncase} ~onAttack 0.3
+  - skill{s=BroodmotherBeam;repeat=2;repeatInterval=10} ~onTimer:300
+  - skill{s=BroodmotherExplosionProjectiles} ~onTimer:600 0.5

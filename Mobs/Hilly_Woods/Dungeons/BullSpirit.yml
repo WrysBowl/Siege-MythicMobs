@@ -1,7 +1,7 @@
 BullSpirit:
  Display: '&4Bull Spirit'
  Health: 2500
- Damage: 50
+ Damage: 25
  Type: Zombie
  Disguise: 
   Type: Cow
