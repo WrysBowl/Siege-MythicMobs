@@ -1,17 +1,17 @@
-BanditArcher1:
-  MobName: BanditArcher
+Werewolf3:
+  MobName: Werewolf
   World: Hilly_Woods
-  X: -10
-  Y: 99
-  Z: -177
+  X: -442
+  Y: 58
+  Z: -32
   Yaw: 0.0
   Pitch: 0.0
-  Radius: 4
+  Radius: 5
   UseTimer: true
-  MaxMobs: '3'
+  MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 0
+  Cooldown: 10
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
@@ -24,4 +24,4 @@ BanditArcher1:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 3
+  ActiveMobs: 0

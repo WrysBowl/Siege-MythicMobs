@@ -25,4 +25,4 @@ InfectedDigger3:
   Breakable: false
   Conditions:
   - night true
-  ActiveMobs: 6
+  ActiveMobs: 0

@@ -1,27 +1,27 @@
-SkeletalArcher6:
-  MobName: Skeletal_Archer
+Pong1:
+  MobName: Pong
   World: Hilly_Woods
-  X: -164
-  Y: 109
-  Z: 10
+  X: 224
+  Y: 86
+  Z: 174
   Yaw: 0.0
   Pitch: 0.0
-  Radius: 3
+  Radius: 10
   UseTimer: true
-  MaxMobs: '4'
+  MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 8
+  Cooldown: 10
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
-  ActivationRange: 40
+  ActivationRange: 50
   ScalingRange: 25.0
-  LeashRange: 30
+  LeashRange: 40
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 4
+  ActiveMobs: 0

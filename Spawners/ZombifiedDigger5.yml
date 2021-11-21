@@ -25,4 +25,4 @@ ZombifiedDigger5:
   Breakable: false
   Conditions:
   - night true
-  ActiveMobs: 4
+  ActiveMobs: 0

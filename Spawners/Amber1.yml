@@ -1,27 +1,27 @@
-SkeletalArcher4:
-  MobName: Skeletal_Archer
+Amber1:
+  MobName: Amber
   World: Hilly_Woods
-  X: -196
-  Y: 107
-  Z: -3
+  X: 189
+  Y: 88
+  Z: 218
   Yaw: 0.0
   Pitch: 0.0
-  Radius: 3
+  Radius: 10
   UseTimer: true
-  MaxMobs: '4'
+  MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 8
+  Cooldown: 10
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
-  ActivationRange: 40
+  ActivationRange: 50
   ScalingRange: 25.0
-  LeashRange: 30
+  LeashRange: 40
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 2
+  ActiveMobs: 0
