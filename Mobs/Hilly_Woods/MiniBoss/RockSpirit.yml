@@ -17,7 +17,7 @@ RockSpirit:
     PreventOtherDrops: true
     PreventSunburn: true
     FollowRange: 20
-    MovementSpeed: 0.34
+    MovementSpeed: 0.25
     KnockbackResistance: 0.50
   AITargetSelectors:
   - 0 clear

@@ -12,7 +12,7 @@ ChestMimic4_1:
   MobLevel: '1'
   MobsPerSpawn: 1
   Cooldown: 3600
-  CooldownTimer: 0
+  CooldownTimer: 1986
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true

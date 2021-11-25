@@ -1,27 +1,27 @@
-Sushi3:
-  MobName: Sushi
+SkeletalArcher3:
+  MobName: Skeletal_Archer
   World: Hilly_Woods
-  X: 11
-  Y: 50
-  Z: 115
+  X: -101
+  Y: 97
+  Z: 105
   Yaw: 0.0
   Pitch: 0.0
-  Radius: 10
+  Radius: 3
   UseTimer: true
-  MaxMobs: '30'
+  MaxMobs: '4'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 0
+  Cooldown: 8
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
-  ActivationRange: 50
+  ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 0
+  LeashRange: 30
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 16
+  ActiveMobs: 0
