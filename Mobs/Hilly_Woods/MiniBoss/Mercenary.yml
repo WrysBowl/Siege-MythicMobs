@@ -1,8 +1,8 @@
 Mercenary:
   Type: Zombie
   Display: '&2Mercenary'
-  Health: 400
-  Damage: 60
+  Health: 500
+  Damage: 70
   Faction: Miniboss
   Options:
     PreventRandomEquipment: true
