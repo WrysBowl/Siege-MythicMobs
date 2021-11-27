@@ -93,8 +93,6 @@ BroodmotherPoisonGas-Totem-Hit:
   Skills:
     - potion{type=CONFUSION;duration=200;lvl=1}
     - delay 100
-    - potion{type=BLINDNESS;duration=200;lvl=1}
-    - delay 100
     - potion{type=POISON;duration=200;lvl=1}
 
 #   - aura{auraName=Poison;oT=BroodmotherPoisonGas-Totem-Hit-Aura-Tick;i=10;bartimer=true;duration=100;ma=true}
