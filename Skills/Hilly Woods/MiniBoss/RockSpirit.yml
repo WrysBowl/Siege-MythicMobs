@@ -1,6 +1,6 @@
 SpawnRockRat:
   Skills:
-  - summon{type=RockRat;ctt=true}
+  - summon{type=RockRat}
 
 RockSpiritStoneThrowAttack:
   Conditions:

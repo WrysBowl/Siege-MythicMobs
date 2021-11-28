@@ -18,7 +18,7 @@ Orc:
     PreventOtherDrops: true
     PreventSunburn: true
     FollowRange: 24
-    MovementSpeed: 0.25
+    MovementSpeed: 0.28
     Silent: true
   Equipment:
   - Orc_Chestplate:3
@@ -28,4 +28,5 @@ Orc:
   Skills:
   - skill{s=OrcAmbientSound} ~onTimer:120 0.5
   - skill{s=OrcAttackSound} ~onAttack 1
+  - summon{type=Ogre} @self ~onDeath 0.1
   - setname{name='&2Orc &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
