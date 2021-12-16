@@ -39,8 +39,51 @@ FoxSpirit:
   - skill{s=FoxDeathSound} @self ~onDeath
   - skill{s=FoxScreechSound} @self ~onDeath
   - skill{s=FoxHurtSound} @self ~onDamaged
-  - heal{a=10} @self ~onAttack
-  - skill{s=FoxSpiritEscape} @self ~onDamaged 0.25
-  - skill{s=FoxSpiritStealSpeed} @self ~onAttack 0.5
-  - skill{s=FoxSpiritStealStrength} @self ~onDamaged
-  - skill{s=FoxSpiritDamageMulti} @self ~onAttack
+  - skill{s=FoxSpiritClone} @self ~onTimer:600
+  - skill{s=FoxTrap} @self ~onTimer:500
+  - skill{s=FoxLightning} @self ~onDamaged ?damagecause{cause=LIGHTNING}
+  - summon{t=FoxSpiritHealingOrb;itt=false;amount=2;cooldown=20;radius=4} ~onDamaged
+  - heal{a=<skill.var.damage-amount>/4} @self ~onAttack
+FoxSpiritClone:
+  Type: Zombie
+  Display: '&4Fox Spirit'
+  Health: 1
+  Damage: 1
+  Disguise: FOX
+  DamageModifiers:
+    - PROJECTILE 0.5
+  Options:
+    Persistent: true
+    Despawn: false
+    Silent: true
+    FollowRange: 80
+    MovementSpeed: 0.35
+    KnockbackResistance: 1.0
+    PreventSunburn: true
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+    - 2 attacker
+  AIGoalSelectors:
+    - 0 clear
+    - 1 fleeplayers
+    - 2 meleeattack
+FoxSpiritHealingOrb:
+  Type: ZOMBIE
+  Display: '&cHealing Orb &6Hit me!'
+  Health: 20
+  Damage: 0
+  Options:
+    ApplyInvisibility: true
+    MovementSpeed: 0.2
+    Silent: true
+    AlwaysShowName: true
+  AITargetSelectors:
+    - clear
+  AIGoalSelectors:
+    - clear
+    - gotoparent
+  Equipment:
+    - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODU0ODRmNGI2MzY3Yjk1YmIxNjI4ODM5OGYxYzhkZDZjNjFkZTk4OGYzYTgzNTZkNGMzYWU3M2VhMzhhNDIifX19==} HEAD
+  Skills:
+    - skill:FoxOrbHeal @parent ~onTimer:20

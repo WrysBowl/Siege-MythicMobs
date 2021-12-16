@@ -1,55 +1,43 @@
-FoxSpiritEscape:
+FoxSpiritClone:
   Skills:
-  - effect:particles{particle=reddust;color=#eb9e34;amount=20;hS=1;vS=1;speed=1}
-  - delay 10
-  - effect:particles{particle=reddust;color=#eb9e34;amount=20;hS=1;vS=1;speed=1}
-  - delay 10
-  - potion{type=INVISIBILITY;duration=100;lvl=1}
-  - potion{type=SPEED;duration=100;lvl=2}
-  - runaigoalselector{goal=clear}
-  - runaigoalselector{goal=fleeplayers}
-  - runaigoalselector{goal=randomstroll}
-  - delay 100
-  - effect:particles{particle=sneeze;amount=20;hS=0.5;vS=0.5;speed=0.4} @self
-  - runaigoalselector{goal=clear}
-  - runaigoalselector{goal=meleeattack}
-  - runaigoalselector{goal=randomstroll}
-FoxSpiritStealSpeed:
-  Skills:
-  - potion{type=SPEED;duration=60;lvl=2} @self
-  - potion{type=SLOW;duration=40;lvl=1} @target
-FoxSpiritStealStrength:
-  Skills:
-  - potion{type=INCREASE_DAMAGE;duration=60;lvl=1} @self
-  - potion{type=SLOW;duration=60;lvl=1} @target
-FoxSpiritDamageMulti:
+    - summon{type=FoxSpiritClone;a=2;radius=2} @self
+
+FoxTrap:
   Conditions:
-  - health{h<500}
+    - onground orElseCast OnGround
   Skills:
-  - damage{a=30;pkb=true} @target
-FoxSpiritFireball:
-  Conditions:
-  - playernotwithin{d=6}
+    - projectile{c=1;oS=FoxTrapStart;oT=FoxTrapTick;oH=FoxTrapHit;d=600;syo=0;v=0;sE=true;sB=false;hR=0.3;vR=0.3} @SelfLocation
+  # c - Amount of times it can hit things
+  # d - Seconds * 20
+FoxTrapStart:
   Skills:
-  - equip{item=Fire_Charge:1} @self
-  - stun{d=40} @self
-  - sound{s=entity.dragon_fireball.explode} @self
-  - effect:particles{particle=reddust;color=#eb9e34;amount=20;hS=1;vS=1;speed=1}
-  - delay 10
-  - sound{s=entity.dragon_fireball.explode} @self
-  - effect:particles{particle=reddust;color=#eb9e34;amount=20;hS=1;vS=1;speed=1}
-  - delay 10
-  - sound{s=entity.dragon_fireball.explode} @self
-  - effect:particles{particle=reddust;color=#eb9e34;amount=20;hS=1;vS=1;speed=1}
-  - delay 10
-  - shootfireball{y=2;v=3;ps=true;sml=true} @target
-  - delay 20
-  - shootfireball{y=2;v=3;ps=true;sml=true} @target
-  - delay 20
-  - shootfireball{y=2;v=3;ps=true;sml=true} @target
-  - delay 20
-  - shootfireball{y=2;v=3;ps=true;sml=true} @target
-  - delay 20
-  - shootfireball{y=2;v=3;ps=true;sml=true} @target
-  - delay 20
-  - shootfireball{y=2;v=3;ps=true;sml=true} @target
+    - effect:particles{p=cloud;a=10;hS=0.5;vS=0.5} @origin
+FoxTrapTick:
+  Skills:
+    - effect:particles{p=smoke;a=10} @origin
+FoxTrapHit:
+  Skills:
+    - damage{a=2} # Adjust damage
+    - stun{d=200} # Stun duration
+    - sound{s=entity.iron_golem.repair;p=0.3;v=1}
+    - sound{s=entity.zombie.attack_iron_door;p=0.3;v=0.3}
+    - prison{material=GLASS;duration=200;breakable=false}
+    - delay 200
+    - sound{s=item.shield.break}
+
+FoxLightning:
+  Skills:
+    - effect:lightning @self
+    - projectile{oT=FoxLightningTick;oH=FoxLightningHit;i=5;v=14;hugsurface=true;mr=40} @Ring{points=4}
+FoxLightningTick:
+  Skills:
+    - effect:lightning @origin
+FoxLightningHit:
+  Skills:
+    - damage{a=10}
+FoxOrbHeal:
+  Skills:
+    - effect:particleline{particle=villager_happy;amount=5;syo=1.5;tyo=1.5} @parent
+    - heal{a=1} @parent
+    - effect:particles{p=villager_happy;a=20;hS=1;vS=1.5} @parent
+    - effect:sound{s=entity.player.levelup;pitch=2} @parent
