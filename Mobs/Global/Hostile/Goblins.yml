@@ -27,6 +27,10 @@ Goblin:
   - skill{s=Steal} ~onAttack 0.25
   - skill{s=GoblinAmbientSound} ~onTimer:120
   - skill{s=GoblinAttackSound} ~onAttack 1
+  - model{mid=goblin;n=false} @self ~onSpawn
+  - skill{s=goblinattack;sync=true} @self ~onAttack
+  - skill{s=goblindeath;sync=true} @self ~onDeath
+  - skill{s=goblinhurt;sync=true} @self ~onDamaged
 
 GoldenGoblin:
   Type: Baby_Zombie
@@ -59,3 +63,6 @@ GoldenGoblin:
   - effect:particles{particle=totem_of_undying;amount=10;hS=0.25;vS=0.25;yOffset=1;speed=0.1} @self ~onTimer:10
   - effect:particles{particle=totem_of_undying;amount=100;hS=1;vS=1;yOffset=1;speed=1} @self ~onDeath
   - message{m="&e&lGolden Goblin &r&7has spawned within 100 blocks of you."} @PIR{r=100} ~onSpawn
+  - skill{s=goblinattack;sync=true} @self ~onAttack
+  - skill{s=goblindeath;sync=true} @self ~onDeath
+  - skill{s=goblinhurt;sync=true} @self ~onDamaged
