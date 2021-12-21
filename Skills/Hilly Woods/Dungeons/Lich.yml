@@ -78,7 +78,6 @@ SoulSucker-Hit:
   - damage{a=8}
   - sound{s=entity.pillager.celebrate;p=0.13}
   - delay 10
-  - effect:glow{color=BLACK;duration=100}
   - sound{s=entity.wandering_trader.drink_potion;p=0.13}
   - delay 20
   - sound{s=entity.wandering_trader.drink_potion;p=0.13}

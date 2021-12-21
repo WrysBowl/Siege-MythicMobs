@@ -10,7 +10,7 @@ RandomInfectedDigger:
   - outside{} true
   - height{h=50to90} true
   - distancefromspawn{d=>200} true
-  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,GRASS_PATH} true
+  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,BROWN_CONCRETE_POWDER} true
 
 RandomZombifiedDigger:
   MobType: ZombifiedDigger
@@ -24,7 +24,7 @@ RandomZombifiedDigger:
   - outside{} true
   - height{h=50to70} true
   - distancefromspawn{d=>150} true
-  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,GRASS_PATH} true
+  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,BROWN_CONCRETE_POWDER} true
   
 RandomOrc:
   MobType: Orc
@@ -52,7 +52,7 @@ RandomOgre:
   - outside{} true
   - height{h=60to100} true
   - distancefromspawn{d=>300} true
-  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,GRASS_PATH} true
+  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,BROWN_CONCRETE_POWDER} true
   
 RandomGoblin:
   MobType: Goblin
