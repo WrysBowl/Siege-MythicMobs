@@ -1,0 +1,33 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+LRGhastlingPET:
+  Cooldown: 6
+  Skills:
+  - state{s=pet} @self
+  - delay 20
+  - sound{s=entity.ghast.warn;p=2} @self
+  
+LRGhastlingSPAWN:
+  Skills:
+  - summon{t=LRGhastlingRift} @self
+  - state{s=spawn} @self
+  
+pet_ghastling_portal_remove:
+  Skills:
+  - effect:particles{particle=flash;amount=1} @self
+  - delay 20
+  - effect:particles{particle=flash;amount=1} @self
+  - remove @self
+  
+LRGhastlingDESPAWN:
+  Skills:
+  - setAI{ai=false}
+  - velocity{m=set;x=0;y=0;z=0;repeat=20;repeatInterval=1} @self
+  - summon{t=LRGhastlingRift} @selflocation{y=0}
+  - state{s=despawn} @self
+  - delay 20
+  - remove @self

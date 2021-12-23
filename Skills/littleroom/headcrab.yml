@@ -1,0 +1,86 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+HEADCRABnoattack:
+  Conditions:
+  - stance{s=leap} false
+  Skills:
+  - CancelEvent
+  
+HEADCRABattack:
+  Conditions:
+  - stance{s=leap} true
+  Skills:
+  - sound{s=littleroom_headcrab:littleroom.headcrab.bite;v=1;sc=HOSTILE} @self
+
+HEADCRABspawn:
+  Skills:
+  - setstance{s=land} @self
+
+
+HEADCRABfidget:
+  Conditions:
+  - offgcd true
+  Skills:
+  - setAI{AI=false}
+  - state{s=fidget} @self
+  - delay 40
+  - setAI{AI=true}
+
+HEADCRABleap:
+  TargetConditions:
+  - targetwithin{d=6} true
+  #- incombat true
+  - lineofsight{} true
+  Skills:
+  - gcd{ticks=30} @self
+  - setAI{AI=false}
+  - state{s=leap} @self
+  - delay 5
+  - sound{s=littleroom_headcrab:littleroom.headcrab.leap;v=1;sc=HOSTILE} @self
+  - delay 15
+  - lunge{velocity=2;velocityY=.25} @target
+  - state{s=inair} @self
+  - setstance{stance=leap} @self
+  - lunge{velocity=2;velocityY=.25} @target
+  
+  
+HEADCRABland:
+  Conditions:
+  - stance{s=leap} true
+  - onground
+  Skills:
+  #- setAI{AI=false}
+  - state{s=inair;r=true} @self
+  - state{s=land} @self
+  - setstance{stance=land} @self
+  - delay 20
+  - setAI{AI=true}
+  
+HEADCRABdeath:
+  Skills:
+  - randomskill{skills=HEADCRABdeathsound1,HEADCRABdeathsound2} @self
+  - delay 20
+  - summon{t=headcrabDEAD} @self
+  - model{m=headcrab;r=true} @self
+  
+HEADCRABdeathsound1:
+  Skills:
+  - sound{s=littleroom_headcrab:littleroom.headcrab.die1;v=1;sc=HOSTILE} @self
+  
+HEADCRABdeathsound2:
+  Skills:
+  - sound{s=littleroom_headcrab:littleroom.headcrab.die2;v=1;sc=HOSTILE} @self
+  
+HEADCRABgib:
+  Skills:
+  - model{m=headcrab;r=true} @self
+  - effect:itemspray{item=xengib1;amount=2;velocity=0.5;d=20} @self
+  - effect:itemspray{item=xengib2;amount=2;velocity=0.5;d=20} @self
+  - effect:particles{p=reddust;color=#DDEE66;hs=.25;vs=.25;amount=25;size=4} @self
+  - sound{s=littleroom_headcrab:littleroom.headcrab.gib;v=1;sc=HOSTILE} @self
+  
+  
+  

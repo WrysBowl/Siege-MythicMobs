@@ -1,0 +1,81 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+emeraldgolem:
+  Type: IRON_GOLEM
+  Display: 'emerald golem'
+  Damage: 0
+  Health: 750
+  Faction: GOLEM
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Options:
+    FollowRange: 24
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=emeraldgolemSPAWN} @self ~onSpawn
+  - skill{s=emeraldGOLEMdeath} @self ~onDeath
+  - skill{s=emeraldGOLEMfootpound} @self ~onTimer: 120 .5
+  - randomskill{skills=emeraldGOLEMfootpound,emeraldGOLEMarmslam;sync=true} @self ~onAttack
+  - skill{s=emeraldGOLEMshardtoss1} @self ~onTimer:240 .75
+  - skill{s=emeraldGOLEMshardtoss2} @self ~onTimer:240 .75
+  - skill{s=emeraldGOLEMshardtoss3} @self ~onTimer:240 .75
+  - skill{s=emeraldGOLEMshardtoss4} @self ~onTimer:240 .75
+  - skill{s=emeraldGOLEMshardtoss5} @self ~onTimer:240 .75
+  - model{mid=emeraldgolem;n=false} @self ~onSpawn
+  
+emeraldpupa:
+  Type: ARMOR_STAND
+  Options:
+    Invincible: true
+  Skills:
+  - skill{s=emeraldpupaLAND} @self ~onTimer:5
+  - skill{s=emeraldpupaLIFESPAN} @self ~onSpawn
+  - model{mid=emeraldpupa;n=false;d=false} @self ~onSpawn
+  
+
+
+emeraldshard:
+  Type: HUSK
+  Display: 'emerald shard'
+  Health: 50
+  Damage: 0
+  Faction: GOLEM
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 32
+    PreventOtherDrops: true
+    Silent: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=emeraldshardDEATH} @self ~onDeath
+  - skill{s=emeraldshardATTACK;sync=true} @self ~onAttack
+  - model{mid=emeraldshard;n=false} @self ~onSpawn
+  - state{s=spawn} @self ~onSpawn
+  
+emeraldspikes:
+  Type: ARMOR_STAND
+  Display: 'emerald shard'
+  Faction: GOLEM
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Options:
+    NoAI: true
+    Marker: true
+    ApplyInvisibility: true
+    Invisible: true
+  Skills:
+  - randomskill{skills=emeraldspikespawn1,emeraldspikespawn2,emeraldspikespawn3} @self ~onSpawn
+  - model{mid=emeraldspikes;n=false;d=false} @self ~onSpawn
+  
+  
+  

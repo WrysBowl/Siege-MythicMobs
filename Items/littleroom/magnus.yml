@@ -1,0 +1,29 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+magnus_sword:
+  Id: netherite_sword
+  Display: '&fMagnus Sword'
+  Model: 1
+
+magnus_shield:
+  Id: shield
+  Display: '&fMagnus Shield'
+  Model: 1
+  
+magnus_helmet:
+  Id: paper
+  Display: '&fMagnus Helmet'
+  Model: 1
+  
+magnus_shard:
+  Id: paper
+  Display: '&fMagnus Shard'
+  Model: 2
+  
+marshmallow_on_a_stick:
+  Id: stick
+  Display: '&fMarshmallow on a Stick'
+  Model: 1

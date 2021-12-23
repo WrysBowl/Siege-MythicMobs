@@ -1,0 +1,69 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+mortos:
+  Type: RAVAGER
+  Display: 'Mortos'
+  Damage: 0
+  Health: 1000
+  BossBar:
+    Enabled: true
+    Title: 'Mortos <caster.hp> <&fs> <caster.mhp>'
+    Range: 32
+    Color: PURPLE
+    Style: SOLID
+  Modules:
+    ThreatTable: true
+  Options:
+    MovementSpeed: .15
+    Marker: false
+    FollowRange: 32
+    PreventOtherDrops: true
+  Skills:
+  - effect:particles{p=sneeze;amount=15;hS=.25;vS=.25;speed=.01;size=5} @ModelPart{m=mortos;p=jaw} ~onTimer:5
+  - skill{s=mortosTAKEFLIGHT} @self ~onSpawn
+  - model{mid=mortos;n=false} @self ~onSpawn
+  - skill{s=mortosTAKEFLIGHT} @self ~onTimer:480
+  - skill{s=LOWALTdragon} @forward{f=0y=-10} ~onTimer:20
+  - skill{s=FLAPdragon} @self ~onTimer:20
+  - skill{s=FLYINGpathcheck} @self ~onTimer:2
+  - skill{s=GLIDEdragon} @self ~onTimer:40
+  - skill{s=FLYMODEdragon} @self ~onTimer:30
+  - skill{s=FLYINGturnaround} @self ~onTimer:20
+  - skill{s=LANDdragon} @self ~onTimer:240
+  - skill{s=BREATHdragon} @self ~onTimer:240
+  - skill{s=mortosDEATH_AIR} @self ~onDeath
+  - skill{s=mortosDEATH} @self ~onDeath
+  - skill{s=mortosBREATH} @PlayersInRadius{r=32} ~onTimer:120
+  - randomskill{skills=mortosBITEsync,mortosWHIPsync;sync=true} @self ~onAttack
+
+fallingmortos:
+  Type: ARMOR_STAND
+  Skills:
+  - model{mid=fallingmortos;n=false} @self ~onSpawn
+  - skill{s=fallingmortosLAND} @self ~onTimer:1
+  - skill{s=fallingmortosSPAWN} @self ~onSpawn
+  
+  
+rotter:
+  Type: RAVAGER
+  Display: 'Rotter'
+  Damage: 0
+  Health: 25
+  Modules:
+    ThreatTable: true
+  Options:
+    MovementSpeed: .07
+    Marker: false
+    FollowRange: 32
+    PreventOtherDrops: true
+  Skills:
+  - randomskill{skills=rotterATTACK1,rotterATTACK2;sync=true} @self ~onAttack
+  - skill{s=rotterLEAP} @self ~onTimer:20
+  - skill{s=rotterLAND} @self ~onTimer:1
+  - skill{s=rotterSPAWN} @self ~onSpawn
+  - skill{s=rotterDEATH} @self ~onDeath
+  - model{mid=rotter;n=false} @self ~onSpawn

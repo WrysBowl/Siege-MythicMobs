@@ -1,0 +1,12 @@
+gigas_claw:
+  Id: GOLDEN_SWORD
+  Display: '&r&fGigas Claw'
+  Model: 1
+  Attributes:
+    Mainhand:
+      Damage: 15
+      
+crab_meat:
+  Id: POTATO
+  Display: '&r&fCrab Meat'
+  Model: 1

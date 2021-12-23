@@ -1,0 +1,30 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+IRON_GOLEM:
+  Skills:
+  - summon{t=baby_iron_golem} @self ~onSpawn
+
+baby_iron_golem:
+  Type: IRON_GOLEM
+  Name: 'Baby Iron Golem'
+  Health: 25
+  AIGoalSelectors:
+  - meleeattack
+  - gotoparent
+  AITargetSelectors:
+  - monsters
+  Options:
+    Silent: true
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Interactable: false
+  Skills:
+  - skill{s=babyirongolemDEATH} @self ~onDeath
+  - skill{s=babyirongolemIDLE} @self ~onTimer:250 .25
+  - skill{s=babyirongolemATTACKsync;sync=true} @self ~onAttack
+  - skill{s=babyirongolemDAMAGED;sync=true} @self ~onDamaged
+  - model{mid=baby_iron_golem;n=false} @self ~onSpawn

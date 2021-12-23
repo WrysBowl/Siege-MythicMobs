@@ -1,0 +1,159 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+magnus:
+  Type: IRON_GOLEM
+  Health: 1250
+  Modules:
+    ThreatTable: true
+  Display: 'Magnus'  
+  AITargetSelectors:
+  - players
+  Options:
+    FollowRange: 64
+    Silent: true
+    PreventOtherDrops: true
+  BossBar:
+    Enabled: true
+    Title: 'Magnus'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Skills:
+  - skill{s=magnusSPAWN} @self ~onSpawn
+  - skill{s=magnusSPIN} @self ~onTimer:20
+  - skill{s=magnusLEAP} @self ~onTimer:240
+  - skill{s=magnusLAND} @self ~onTimer:2
+  - skill{s=magnusSPAWNLANDING} @self ~onTimer:2
+  - skill{s=magnusFLINCHHIT} @self ~onDamaged
+  - skill{s=magnusFLINCH75;sync=true} @self ~onDamaged <75%
+  - skill{s=magnusFLINCH50;sync=true} @self ~onDamaged <50%
+  - skill{s=magnusFLINCH25;sync=true} @self ~onDamaged <25%
+  - skill{s=magnusSHIELDUP;sync=true} @self ~onDamaged .25
+  - skill{s=magnusSHIELDBASH_SYNC;sync=true} @self ~onAttack
+  - randomskill{skills=magnusSWEEP_SYNC,magnusKICK_SYNC,magnusTOMBSTONE_SYNC;sync=true} @self ~onAttack
+  - skill{s=magnusDEATH} @self ~onDeath
+  - model{mid=magnus;n=false} @self ~onSpawn
+  
+
+magnus_sword:
+  Type: SILVERFISH
+  Health: 20
+  Display: 'Magnus Sword'
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Options:
+    PreventBlockInfection: true
+    Silent: true
+    Collidable: false
+    KnockbackResistance: 1
+    Invincible: true
+  Skills:
+  - skill{s=magnusswordSPAWN} @self ~onSpawn
+  - skill{s=magnusswordLAND} @self ~onTimer:1
+  - model{mid=magnus_sword;n=false;d=false} @self ~onSpawn
+  - dropitem{i=magnus_sword} @self ~onDeath
+  - effect:particles{particle=firework;amount=1;hS=0.5;vS=3;speed=0} @self ~onTimer:5
+
+
+magnusConcussion:
+  Type: SILVERFISH
+  Options:
+    NoAI: true
+    Silent: true
+  Display: 'Concussion'
+  Skills:
+  - model{mid=concussion;n=false;d=false} @self ~onSpawn
+  - skill{s=concussionREMOVE} @self ~onSpawn
+  
+playerConcussion:
+  Type: SILVERFISH
+  Options:
+    NoAI: true
+    Silent: true
+  Display: 'Concussion'
+  Skills:
+  - model{mid=concussion;n=false;d=false} @self ~onSpawn
+  - skill{s=concussionPLAYER} @self ~onSpawn
+  
+magnusBONFIRE:
+  Type: SILVERFISH
+  Options:
+    NoAI: true
+    Silent: true
+    Invicible: true
+  Display: 'Left-Click with Torch'
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;level=4;p=false} @self ~onTimer:180
+  - skill{s=magnusbonfireSPAWN} @self ~onSpawn
+  - model{mid=bonfire;d=false;i=false} @self ~onSpawn
+  - skill{s=magnusLIGHTTBONFIRE} @self ~onDamaged
+  - skill{s=magnusLIGHTTBONFIREFX} @self ~onTimer:5
+  - skill{s=magnusBONFIREREMOVE} @self ~onSignal:remove
+  
+  
+bonfireexplodeFX:
+  Type: SILVERFISH
+  Display: 'SMOKEFX'
+  Equipment:
+  - torch:0
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Options:
+    ApplyInvisibility: true
+    PreventBlockInfection: true
+    Invincible: true
+    Silent: true
+  Skills:
+  - ignite{ticks=40} @PIR{r=2} ~onTimer:5
+  - effect:particles{particle=flame;amount=10;hS=.1;vS=.1;speed=0.02} @self ~onTimer:2
+  - effect:particles{particle=large_smoke;amount=10;hS=.2;vS=.2;speed=0;size=2} @self ~onTimer:2
+  - skill{s=bonfireexplodeFXspawn} @self ~onSpawn
+  
+  
+##### DECORATIVE #####
+
+decor_bonfire:
+  Type: CAT
+  Options:
+    NoAI: true
+    Silent: true
+    Invicible: true
+    Persistent: true
+    Despawn: false
+  Display: 'Bonfire'
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;level=4;p=false} @self ~onTimer:180
+  - skill{s=magnusbonfireSPAWN} @self ~onSpawn
+  - model{mid=bonfire;n=false;d=false;i=false} @self ~onSpawn
+  - skill{s=normalLIGHTTBONFIRE} @self ~onDamaged
+  - skill{s=normalEXTBONFIRE} @self ~onInteract
+  - skill{s=magnusLIGHTTBONFIREFX} @self ~onTimer:5
+  - ignite{ticks=40} @EIR{r=1} ~onTimer:1
+  
+decor_magnussword:
+  Type: ARMOR_STAND
+  Health: 20
+  Display: 'Magnus Sword'
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Options:
+    Marker: true
+    Persistent: true
+    Despawn: false
+  Skills:
+  - skill{s=magnusswordSPAWN} @self ~onSpawn
+  - skill{s=magnusswordLANDdeco} @self ~onTimer:1
+  - model{mid=magnus_sword;n=false;d=false} @self ~onSpawn
+  - dropitem{i=magnus_sword} @self ~onDeath
+  - effect:particles{particle=firework;amount=1;hS=0.5;vS=3;speed=0} @self ~onTimer:5
+  

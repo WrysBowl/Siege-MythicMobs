@@ -1,0 +1,347 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+### GOLEM ###
+
+amethystgolemSPAWN:
+  Skills:
+  - delay 5
+  - setstance{s=golemshard0} @self
+  
+
+### PUPA ###
+
+
+amethystpupaLAND:
+  Conditions:
+  - onground true
+  Skills:
+  - state{s=idle;r=true} @self
+  - state{s=land} @self
+
+amethystpupaLIFESPAN:
+  Skills:
+  - delay 2
+  - lunge{velocity=1;velocityY=0} @Forward{f=5}
+  - state{s=idle} @self
+  - delay 60
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.25;sc=HOSTILE;p=1} @self
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=200;hS=.5;vS=.25} @self
+  - summon{t=amethystshard} @self
+  - remove @self
+
+### SPIKES ###
+
+amethystspikespawn1:
+  Skills:
+  - effect:spin{duration=5;velocity=20} @self
+  - delay 10
+  - effect:particles{particle=block_crack;m=stone;amount=100;hS=.5;vS=.15} @self
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.1;sc=HOSTILE;p=.12} @self
+  - throw{v=5;vy=5} @PIR{r=3}
+  - damage{amount=3} @PIR{r=3}
+  - delay 60
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=100;hS=.25;vS=.5} @self
+  - explosion{yield=1} @self
+  - delay 1
+  - remove @self
+  
+amethystspikespawn2:
+  Skills:
+  - effect:spin{duration=5;velocity=40} @self
+  - delay 10
+  - effect:particles{particle=block_crack;m=stone;amount=100;hS=.5;vS=.15} @self
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.1;sc=HOSTILE;p=.8} @self
+  - throw{v=5;vy=5} @PIR{r=3}
+  - damage{amount=3} @PIR{r=3}
+  - delay 60
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=100;hS=.25;vS=.5} @self
+  - explosion{yield=1} @self
+  - delay 1
+  - remove @self
+  
+  
+amethystspikespawn3:
+  Skills:
+  - effect:spin{duration=5;velocity=80} @self
+  - delay 10
+  - effect:particles{particle=block_crack;m=stone;amount=100;hS=.5;vS=.15} @self
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.1;sc=HOSTILE} @self
+  - throw{v=5;vy=5} @PIR{r=3}
+  - damage{amount=3} @PIR{r=3}
+  - delay 60
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=100;hS=.25;vS=.5} @self
+  - explosion{yield=1} @self
+  - delay 1
+  - remove @self
+
+### ARM SLAM ###
+
+AMETHYSTGOLEMarmslam:
+  Skills:
+  - CancelEvent
+  - skill{s=AMETHYSTGOLEMarmslamATTACK} @self
+  
+AMETHYSTGOLEMarmslamATTACK:
+  Conditions:
+  - offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.armslam;v=1;sc=HOSTILE} @self
+  - gcd{ticks=20}
+  - state{s=armslam;li=3;lo=2} @self
+  - delay 30
+  - sound{s=minecraft:entity.player.attack.nodamage;sc=HOSTILE} @self
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=200;hS=1;vS=1} @ModelPart{m=amethystgolem;p=lefthand}
+  - totem{ch=3;onStart=AMETHYSTGOLEMarmslamDAMAGE;int=1;hR=3;md=1;repeat=8;repeatInterval=1} @ModelPart{m=amethystgolem;p=lefthand}
+  
+
+AMETHYSTGOLEMarmslamDAMAGE:
+  Skills:
+  - throw{v=8;vy=4} @EIR{r=6}
+  - damage{amount=8} @PIR{r=6}
+  - effect:particles{particle=block_crack;m=amethyst_block;amount=25;hS=.5;vS=.5} @ModelPart{m=amethystgolem;p=lefthand}
+  
+  
+### FOOT POUND ###
+
+AMETHYSTGOLEMfootpound:
+  Conditions:
+  - incombat true
+  Skills:
+  - CancelEvent
+  - skill{s=AMETHYSTGOLEMfootpoundATTACK} @self
+  
+AMETHYSTGOLEMfootpoundATTACK:
+  Conditions:
+  - offgcd true
+  Skills:
+  - gcd{ticks=20}
+  - setAI{ai=false} @self
+  - state{s=footpound;li=3;lo=2} @self
+  - delay 15
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.stomp;v=1;sc=HOSTILE} @self
+  - delay 15
+  - sound{s=minecraft:entity.player.attack.nodamage;sc=HOSTILE} @self
+  - totem{ch=3;onStart=AMETHYSTGOLEMfootpoundDAMAGE;int=1;hR=3;md=1} @ModelPart{m=amethystgolem;p=leftfoot}
+  - setAI{ai=true} @self
+  
+
+AMETHYSTGOLEMfootpoundDAMAGE:
+  Skills:
+  - projectile{onTick=AMETHYSTGOLEMfootpoundSPIKES;v=12;i=4;hR=1;vR=1;syo=0;hs=true;hfs=-0;hp=false} @Target
+  - throw{v=5;vy=10} @PIR{r=6}
+  - damage{amount=5} @PIR{r=6}
+  - effect:particles{particle=block_crack;m=amethyst_block;amount=25;hS=.5;vS=.5} @ModelPart{m=amethystgolem;p=lefthand}
+  
+AMETHYSTGOLEMfootpoundSPIKES:
+  Skills:
+  - summon{t=amethystspikes} @origin
+  
+### SHARD TOSS ###
+
+AMETHYSTGOLEMshardtoss1:
+  Conditions:
+  - incombat true
+  - stance{s=NOSHARDS} false
+  - stance{s=golemshard1} false
+  - stance{s=golemshard2} false
+  - stance{s=golemshard3} false
+  - stance{s=golemshard4} false
+  #- offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardgrab;v=1;sc=HOSTILE} @self
+  - CancelEvent
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - state{s=shardgrab;li=3;lo=2} @self
+  - delay 30
+  - ChangePart{model=amethystgolem;part=handshard;newmodel=amethystpupa;newpart=pupa} @self
+  - effect:particles{particle=block_crack;m=stone;amount=25;hS=.5;vS=.5;repeat=5;repeatInterval=2} @ModelPart{m=amethystgolem;p=righthand}
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=150;hS=.5;vS=.5} @ModelPart{m=amethystgolem;p=spike}
+  - submodel{modelid=amethystgolem;partid=spike;subpartid=spike;remove=true} @self
+  - delay 20
+  - totem{ch=3;onStart=AMETHYSTGOLEMshardthrow;int=1;hR=3;md=1;repeat=5;repeatInterval=2} @ModelPart{m=amethystgolem;p=righthand}
+  #- delay 1
+  - ChangePart{model=amethystgolem;part=handshard;newmodel=amethystgolem;newpart=handshard} @self
+  - summon{t=amethystpupa} @ModelPart{m=amethystgolem;p=righthand}
+  - setAI{ai=true} @self
+  - setstance{s=golemshard1} @self
+  
+AMETHYSTGOLEMshardtoss2:
+  Conditions:
+  - incombat true
+  - stance{s=NOSHARDS} false
+  - stance{s=golemshard0} false
+  - stance{s=golemshard2} false
+  - stance{s=golemshard3} false
+  - stance{s=golemshard4} false
+  #- offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardgrab;v=1;sc=HOSTILE} @self
+  - CancelEvent
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - state{s=shardgrab;li=3;lo=2} @self
+  - delay 30
+  - ChangePart{model=amethystgolem;part=handshard;newmodel=amethystpupa;newpart=pupa} @self
+  - effect:particles{particle=block_crack;m=stone;amount=25;hS=.5;vS=.5;repeat=5;repeatInterval=2} @ModelPart{m=amethystgolem;p=righthand}
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=150;hS=.5;vS=.5} @ModelPart{m=amethystgolem;p=spike2}
+  - submodel{modelid=amethystgolem;partid=spike;subpartid=spike2;remove=true} @self
+  - delay 20
+  - totem{ch=3;onStart=AMETHYSTGOLEMshardthrow;int=1;hR=3;md=1;repeat=5;repeatInterval=2} @ModelPart{m=amethystgolem;p=righthand}
+  #- delay 1
+  - ChangePart{model=amethystgolem;part=handshard;newmodel=amethystgolem;newpart=handshard} @self
+  - summon{t=amethystpupa} @ModelPart{m=amethystgolem;p=righthand}
+  - setAI{ai=true} @self
+  - setstance{s=golemshard2} @self
+  
+AMETHYSTGOLEMshardtoss3:
+  Conditions:
+  - incombat true
+  - stance{s=NOSHARDS} false
+  - stance{s=golemshard0} false
+  - stance{s=golemshard1} false
+  - stance{s=golemshard3} false
+  - stance{s=golemshard4} false
+  #- offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardgrab;v=1;sc=HOSTILE} @self
+  - CancelEvent
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - state{s=shardgrab;li=3;lo=2} @self
+  - delay 30
+  - ChangePart{model=amethystgolem;part=handshard;newmodel=amethystpupa;newpart=pupa} @self
+  - effect:particles{particle=block_crack;m=stone;amount=25;hS=.5;vS=.5;repeat=5;repeatInterval=2} @ModelPart{m=amethystgolem;p=righthand}
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=150;hS=.5;vS=.5} @ModelPart{m=amethystgolem;p=spike3}
+  - submodel{modelid=amethystgolem;partid=spike;subpartid=spike3;remove=true} @self
+  - delay 20
+  - totem{ch=3;onStart=AMETHYSTGOLEMshardthrow;int=1;hR=3;md=1;repeat=5;repeatInterval=2} @ModelPart{m=amethystgolem;p=righthand}
+  #- delay 1
+  - ChangePart{model=amethystgolem;part=handshard;newmodel=amethystgolem;newpart=handshard} @self
+  - summon{t=amethystpupa} @ModelPart{m=amethystgolem;p=righthand}
+  - setAI{ai=true} @self
+  - setstance{s=golemshard3} @self
+  
+AMETHYSTGOLEMshardtoss4:
+  Conditions:
+  - incombat true
+  - stance{s=NOSHARDS} false
+  - stance{s=golemshard0} false
+  - stance{s=golemshard1} false
+  - stance{s=golemshard2} false
+  - stance{s=golemshard4} false
+  #- offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardgrab;v=1;sc=HOSTILE} @self
+  - CancelEvent
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - state{s=shardgrab;li=3;lo=2} @self
+  - delay 30
+  - ChangePart{model=amethystgolem;part=handshard;newmodel=amethystpupa;newpart=pupa} @self
+  - effect:particles{particle=block_crack;m=stone;amount=25;hS=.5;vS=.5;repeat=5;repeatInterval=2} @ModelPart{m=amethystgolem;p=righthand}
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=150;hS=.5;vS=.5} @ModelPart{m=amethystgolem;p=spike4}
+  - submodel{modelid=amethystgolem;partid=spike;subpartid=spike4;remove=true} @self
+  - delay 20
+  - totem{ch=3;onStart=AMETHYSTGOLEMshardthrow;int=1;hR=3;md=1;repeat=5;repeatInterval=2} @ModelPart{m=amethystgolem;p=righthand}
+  #- delay 1
+  - ChangePart{model=amethystgolem;part=handshard;newmodel=amethystgolem;newpart=handshard} @self
+  - summon{t=amethystpupa} @ModelPart{m=amethystgolem;p=righthand}
+  - setAI{ai=true} @self
+  - setstance{s=golemshard4} @self
+  
+AMETHYSTGOLEMshardtoss5:
+  Conditions:
+  - incombat true
+  - stance{s=NOSHARDS} false
+  - stance{s=golemshard0} false
+  - stance{s=golemshard1} false
+  - stance{s=golemshard2} false
+  - stance{s=golemshard3} false
+  - offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardgrab;v=1;sc=HOSTILE} @self
+  - CancelEvent
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - state{s=shardgrab;li=3;lo=2} @self
+  - delay 30
+  - ChangePart{model=amethystgolem;part=handshard;newmodel=amethystpupa;newpart=pupa} @self
+  - effect:particles{particle=block_crack;m=stone;amount=25;hS=.5;vS=.5;repeat=5;repeatInterval=2} @ModelPart{m=amethystgolem;p=righthand}
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=150;hS=.5;vS=.5} @ModelPart{m=amethystgolem;p=spike5}
+  - submodel{modelid=amethystgolem;partid=spike;subpartid=spike5;remove=true} @self
+  - delay 20
+  - totem{ch=3;onStart=AMETHYSTGOLEMshardthrow;int=1;hR=3;md=1;repeat=5;repeatInterval=2} @ModelPart{m=amethystgolem;p=righthand}
+  #- delay 1
+  - ChangePart{model=amethystgolem;part=handshard;newmodel=amethystgolem;newpart=handshard} @self
+  - summon{t=amethystpupa} @ModelPart{m=amethystgolem;p=righthand}
+  - setAI{ai=true} @self
+  - setstance{s=NOSHARDS} @self
+  
+  
+AMETHYSTGOLEMshardthrow:
+  Skills:
+  - throw{v=10;vy=0} @EIR{r=3;types=amethystpupa}
+  
+### DEATH ###
+
+AMETHYSTGOLEMdeath:
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.death;v=1;sc=HOSTILE} @self
+  - effect:particles{p=reddust;color=#24f070;amount=15;hs=.25;vs=.25;repeat=15;repeatInterval=2} @ModelPart{m=amethystgolem;p=head}
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=amethystgolem;p=jawright}
+  - submodel{modelid=amethystgolem;partid=anything;subpartid=jawright;remove=true} @self
+  - delay 15
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=150;hs=.5;vs=.5} @ModelPart{m=amethystgolem;p=lefthand}
+  - submodel{modelid=amethystgolem;partid=anything;subpartid=lefthand;remove=true} @self
+  - delay 15
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=amethystgolem;p=righthand}
+  - submodel{modelid=amethystgolem;partid=anything;subpartid=righthand;remove=true} @self
+  - delay 2
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=amethystgolem;p=rightelbow}
+  - submodel{modelid=amethystgolem;partid=anything;subpartid=rightelbow;remove=true} @self
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=150;hs=.5;vs=.5} @ModelPart{m=amethystgolem;p=leftelbow}
+  - submodel{modelid=amethystgolem;partid=anything;subpartid=leftelbow;remove=true} @self
+  - delay 2
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=amethystgolem;p=rightfoot}
+  - submodel{modelid=amethystgolem;partid=anything;subpartid=rightfoot;remove=true} @self
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=amethystgolem;p=head}
+  - submodel{modelid=amethystgolem;partid=anything;subpartid=head;remove=true} @self
+  - throw{v=10;vy=2} @PIR{r=6}
+  - delay 2
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=amethystgolem;p=leftfoot}
+  - submodel{modelid=amethystgolem;partid=anything;subpartid=leftfoot;remove=true} @self
+  - effect:particles{p=campfire_cosy_smoke;amount=150;hs=2;vs=.25} @self
+  - delay 8
+  - effect:particles{particle=large_smoke;amount=500;hs=1;vs=.5} @ModelPart{m=amethystgolem;p=quartzgolem}
+  - remove @self
+  
+#### SHARDS ####
+
+amethystshardATTACK:
+  Skills:
+  - CancelEvent
+  - skill{s=amethystshardATTACKskill} @self
+  
+amethystshardATTACKskill:
+  Cooldown: 2
+  Skills:
+  - state{s=attack} @self
+  - delay 20
+  - sound{s=minecraft:entity.player.attack.nodamage;sc=HOSTILE} @self
+  - totem{ch=3;onStart=amethystshardATTACKDAMAGE;int=1;hR=3;md=1} @Forward{f=1.0}
+  
+
+amethystshardATTACKDAMAGE:
+  Skills:
+  - damage{amount=1} @PIR{r=2}
+  
+  
+amethystshardDEATH:
+  Skills:
+  - delay 15
+  - effect:particles{particle=block_crack;m=magenta_wool;amount=25} @ModelPart{m=shard;p=head}
+  - submodel{modelid=shard;partid=anything;subpartid=head;remove=true} @self

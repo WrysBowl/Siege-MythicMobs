@@ -1,0 +1,132 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+#### ZOMBIES ####
+
+#### CLIMBING ####
+
+zombieGROUND:
+  Conditions:
+  - onground true
+  Skills:
+  - setstance{stance=default} @self
+  - state{s=climb;r=true} @self
+
+zombieCLIMB:
+  Conditions:
+  - targetwithin{d=3} false
+  TargetConditions:
+  - blocktype{type=air,grass} false
+  - yDiff{diff=<0} false
+  Skills:
+  - setstance{stance=climbing} @self
+  - lunge{velocity=.25;velocityY=.5} @Target
+  - skill{s=zombieCLIMBSTATE} @self
+   
+zombieCLIMBSTATE:
+  Cooldown: 2
+  Skills:
+  - state{s=climb} @self
+   
+   
+#### ZOMBIE ####
+
+zombieSHAMBLER:
+  Skills:
+  - delay 1
+  - DefaultState{mid=zombie;t=WALK;s=shamble} @self
+  - setspeed{speed=0.75;type=walking}
+  
+zombieGAP:
+  Cooldown: 2
+  Conditions:
+  - stance{s=climbing} false
+  - onground true
+  - targetwithin{d=3} false
+  - yDiff{diff=>2} true
+  TargetConditions:
+  - blocktype{type=air} true
+  Skills:
+  - state{s=jump} @self
+  - delay 5
+  - lunge{velocity=.75;velocityY=.35} @Forward
+
+
+#### COMBAT ####
+
+zombieATTACKdamage:
+  Conditions:
+  - targetwithin{d=2} true
+  Skills:
+  - damage{a=<caster.level>}
+
+zombieATTACK1sync:
+  Skills:
+  - CancelEvent
+  - skill{s=zombieATTACK1} @self
+  
+zombieATTACK1:
+  Conditions:
+  - stance{s=climbing} false
+  - offgcd
+  Cooldown: 3
+  Skills:
+  - gcd{ticks=20}
+  - state{s=attack} @self
+  - delay 20
+  - skill{s=zombieATTACKdamage} @target
+  
+zombieATTACK2sync:
+  Skills:
+  - CancelEvent
+  - skill{s=zombieATTACK2} @self
+  
+zombieATTACK2:
+  Conditions:
+  - stance{s=climbing} false
+  - offgcd
+  Cooldown: 3
+  Skills:
+  - gcd{ticks=20}
+  - state{s=attack2} @self
+  - delay 20
+  - skill{s=zombieATTACKdamage} @target
+  
+zombiegroundATTACKsync:
+  Skills:
+  - CancelEvent
+  - skill{s=zombiegroundATTACK} @self
+  
+#### GROUNDED ####
+  
+zombieFALLING:
+  Conditions:
+  - onground false
+  - altitude{a=4} true
+  Skills:
+  - setstance{s=fall} @self
+  
+zombieGROUNDED:
+  Conditions:
+  - stance{s=fall} true
+  - onground true
+  Skills:
+  - summon{t=ZOMBIEgrounded} @self
+  - model{mid=zombie;r=true} @self
+  
+
+zombiegroundATTACK:
+  Conditions:
+  - offgcd
+  Cooldown: 3
+  Skills:
+  - gcd{ticks=20}
+  - state{s=attack} @self
+  - delay 15
+  - totem{md=2;c=1;oH=zombieATTACKdamage;hnp=false;hp=true;hR=1;vR=1;i=1} @Forward{f=1}
+  
+  
+  
+  

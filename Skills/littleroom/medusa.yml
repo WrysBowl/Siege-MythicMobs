@@ -1,0 +1,234 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+medusaBOWsingle:
+  Cooldown: 2
+  Conditions:
+  - incombat true
+  - offgcd true
+  Skills:
+  - sound{s=littleroom_medusa:littleroom.medusa.shoot;v=1;sc=HOSTILE} @self
+  - gcd{ticks=30}
+  - velocity{m=set;x=0;y=0;z=0;repeat=35;repeatInterval=1} @self
+  - state{s=bow_attack} @self
+  - delay 15
+  - ChangePart{mid=medusa;pid=bow;nmid=medusa_bits;npid=bow} @self
+  - delay 10
+  - ChangePart{mid=medusa;pid=bow;nmid=medusa;npid=bow} @self
+  - skill{s=medusaARROWMIDDLE} @target
+  - skill{s=medusaARROWMIDDLE} @Forward{f=5;y=2.0;sideOffset=1.0}
+  - skill{s=medusaARROWMIDDLE} @Forward{f=5;y=2.0;sideOffset=-1.0}
+  
+medusaARROWMIDDLE:
+  Skills:
+  - projectile{bulletType=ARROW;onTick=medusaBOWTICK;onHit=medusaBOWHIT;v=50;i=1;hR=.5;vR=.5;syo=2;sfo=1}
+  
+medusaBOWTICK:
+  Skills:
+  - effect:particles{p=dragon_breath;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+
+medusaBOWHIT:
+  TargetConditions:
+  - blocking false
+  Skills:
+  - potion{type=POISON;duration=40;level=1}
+  - effect:particles{particle=block;m=redstone_block;amount=50;hS=.25;vS=.25;y=1}
+  
+medusaGAZE:
+  Cooldown: 15
+  Conditions:
+  - incombat true
+  - offgcd true
+  Skills:
+  - sound{s=littleroom_medusa:littleroom.medusa.glare;v=1;sc=HOSTILE} @self
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - state{s=gaze} @self
+  - delay 20
+  - ChangePart{mid=medusa;pid=head;nmid=medusa_bits;npid=head} @self
+  - skill{s=medusaGAZEeffects} @LivingInCone{a=45.0;r=16.0;rot=0.0}
+  - effect:particles{p=crit;amount=1;speed=0} @Cone{angle=45;points=256;range=4;rotation=0;yoffset=2}
+  - effect:particles{p=dragon_breath;amount=1;speed=0} @Cone{angle=45;points=256;range=4;rotation=0;yoffset=2}
+  - delay 20
+  - ChangePart{mid=medusa;pid=head;nmid=medusa;npid=head} @self
+  - delay 20
+  - setAI{ai=true} @self
+  
+medusaGAZEeffects:
+  TargetConditions:
+  - isblocking false
+  - lineofsight true
+  Skills:
+  - command{c="meg disguise stone_player true";at=true;op=true}
+  - command{c="disguiseplayer <target.name> egg";at=true;op=true}
+  - potion{type=BLINDNESS;duration=80;level=4;p=false;i=false}
+  - potion{type=SLOW;duration=120;level=4;p=false;i=false}
+  - effect:particles{p=poof;amount=100;speed=0;hs=.25;ys=1}
+  - stun{d=80;f=false}  
+  - potion{type=INVISIBILITY;duration=80;level=4;p=false;i=false}
+  - delay 80
+  - command{c="meg undisguise";at=true;op=true}
+  - command{c="undisguiseplayer <target.name>";at=true;op=true}
+  - effect:particles{particle=block;m=stone;amount=200;hS=.25;vS=1}
+  
+  
+stone_playerLIFESPAN:
+  Skills:
+  - delay 80
+  - effect:particles{particle=block;m=stone;amount=200;hS=.25;vS=1} @self
+  - remove @self
+  
+medusaSMACKsync:
+  Skills:
+  - CancelEvent
+  - skill{s=medusaSMACK} @self
+  
+medusaSMACK:
+  Conditions:
+  - incombat true
+  - offgcd true
+  Skills:
+  - sound{s=littleroom_medusa:littleroom.medusa.swipe;v=1;sc=HOSTILE} @self
+  - gcd{ticks=25}
+  - state{s=smack;li=3;lo=2} @self
+  - delay 10
+  - lunge{velocity=0.5;velocityY=0} @forward
+  - ChangePart{mid=medusa;pid=righthand;nmid=medusa_bits;npid=righthand} @self
+  - effect:particles{p=dragon_breath;amount=2;speed=0;hs=.1;vs=.1;repeat=10;repeatInterval=1} @ModelPart{m=medusa;p=righthand;offset=LOCAL;y=-1}
+  - delay 5
+  - totem{md=2;c=1;oH=medusaSMACKDAMAGE;hnp=false;hp=true;hR=1;vR=1;i=1} @forward{f=2}
+  - delay 5
+  - ChangePart{mid=medusa;pid=righthand;nmid=medusa;npid=righthand} @self
+  
+medusaSMACKDAMAGE:
+  TargetConditions:
+  - isblocking false
+  Skills:
+  - damage{a=10}
+  - effect:particles{particle=block;m=redstone_block;amount=25;hS=.25;vS=.25;y=0.25}
+
+medusaTWINBITE:
+  Cooldown: 6
+  Conditions:
+  - targetwithin{d=6} false
+  - offgcd true
+  - incombat true
+  Skills:
+  - sound{s=littleroom_medusa:littleroom.medusa.twinsnakes;v=1;sc=HOSTILE} @self
+  - gcd{ticks=50}
+  - delay 30
+  - state{s=twinsnakes} @self
+  - setAI{ai=false} @self
+  - delay 15
+  - summon{t=medusa_snakebite;ctt=true;if=true} @Forward{f=0;y=1;sideOffset=-3}
+  - delay 5
+  - summon{t=medusa_snakebite;ctt=true;if=true} @Forward{f=0;y=1;sideOffset=3}
+  - setAI{ai=true} @self
+  
+  
+snakebiteSLITHER:
+  Skills:
+  - lunge{velocity=1.25;velocityY=0} @forward
+  
+snakebiteBITE:
+  Skills:
+  - damage{a=5} @PIR{r=3}
+  - potion{type=POISON;duration=20;level=1;p=false;i=false} @PIR{r=3}
+  - potion{type=SLOW;duration=60;level=1;p=false;i=false} @PIR{r=3}
+  
+snakebiteLIFESPAN:
+  Skills:
+  - delay 40
+  - remove @self
+
+medusaSPINsync:
+  Skills:
+  - CancelEvent
+  - skill{s=medusaSPIN} @self
+  
+medusaSPIN:
+  Cooldown: 6
+  Conditions:
+  - offgcd true
+  Skills:
+  - sound{s=littleroom_medusa:littleroom.medusa.spin;v=1;sc=HOSTILE} @self
+  - gcd{ticks=30} @self
+  - state{s=spinsmack} @self
+  - delay 12
+  - totem{md=2;c=1;oH=medusaSPINDAMAGE;hnp=false;hp=true;hR=1;vR=1;i=1;repeat=15;repeatInterval=1} @ModelPart{m=medusa;p=tail5}
+  
+medusaSPINDAMAGE:
+  Skills:
+  - threat{m=divide;amount=2}
+  - damage{a=6}  
+  - throw{velocity=10;velocityY=1}
+  - effect:particles{particle=block;m=redstone_block;amount=25;hS=.25;vS=.25;y=0.25}
+  
+  
+medusaDEATH:
+  Skills:
+  - sound{s=littleroom_medusa:littleroom.medusa.death;v=1;sc=HOSTILE} @self
+  - effect:itemspray{item=medusa_head;amount=1;velocity=1;yv=1;d=500;ap=true} @ModelPart{m=medusa;p=head;offset=LOCAL;y=-1}
+  - effect:particles{particle=block;m=redstone_block;amount=25;hS=.25;vS=.25} @ModelPart{m=medusa;p=head}
+  - effect:particles{particle=block;m=redstone_block;amount=3;hS=.25;vS=.25;repeat=20;repeatInterval=1;y=1.25} @ModelPart{m=medusa;p=body}
+  - submodel{modelid=medusa;partid=head;subpartid=head;remove=true} @self
+  - delay 10
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail10}
+  - ChangePart{mid=medusa;pid=tail10;nmid=medusa_stone;npid=tail10} @self
+  - delay 1
+  - ChangePart{mid=medusa;pid=tail9;nmid=medusa_stone;npid=tail9} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail9}
+  - delay 1
+  - ChangePart{mid=medusa;pid=tail8;nmid=medusa_stone;npid=tail8} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail8}
+  - delay 1
+  - ChangePart{mid=medusa;pid=tail7;nmid=medusa_stone;npid=tail7} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail7}
+  - delay 1
+  - ChangePart{mid=medusa;pid=tail6;nmid=medusa_stone;npid=tail6} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail6}
+  - delay 1
+  - ChangePart{mid=medusa;pid=tail5;nmid=medusa_stone;npid=tail5} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail5}
+  - delay 1
+  - ChangePart{mid=medusa;pid=lefthand;nmid=medusa_stone;npid=lefthand} @self
+  - ChangePart{mid=medusa;pid=righthand;nmid=medusa_stone;npid=righthand} @self
+  - ChangePart{mid=medusa;pid=tail4;nmid=medusa_stone;npid=tail4} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail4}
+  - delay 1
+  - ChangePart{mid=medusa;pid=leftforearm;nmid=medusa_stone;npid=leftforearm} @self
+  - ChangePart{mid=medusa;pid=rightforearm;nmid=medusa_stone;npid=rightforearm} @self
+  - ChangePart{mid=medusa;pid=tail3;nmid=medusa_stone;npid=tail3} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail3}
+  - delay 1
+  - ChangePart{mid=medusa;pid=leftarm;nmid=medusa_stone;npid=leftarm} @self
+  - ChangePart{mid=medusa;pid=rightarm;nmid=medusa_stone;npid=rightarm} @self
+  - ChangePart{mid=medusa;pid=tail2;nmid=medusa_stone;npid=tail2} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail2}
+  - delay 1
+  - ChangePart{mid=medusa;pid=tail1;nmid=medusa_stone;npid=tail1} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail1}
+  - delay 1
+  - ChangePart{mid=medusa;pid=body;nmid=medusa_stone;npid=body} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail1}
+  - delay 40
+  - sound{s=littleroom_medusa:littleroom.medusa.rockbreak1;v=1;sc=HOSTILE} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=leftforearm}
+  - submodel{modelid=medusa;partid=leftforearm;subpartid=leftforearm;remove=true} @self
+  - submodel{modelid=medusa;partid=lefthand;subpartid=lefthand;remove=true} @self
+  - delay 20
+  - sound{s=littleroom_medusa:littleroom.medusa.rockbreak2;v=1;sc=HOSTILE} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=righthand}
+  - submodel{modelid=medusa;partid=righthand;subpartid=righthand;remove=true} @self
+  - delay 10
+  - sound{s=littleroom_medusa:littleroom.medusa.rockbreak3;v=1;sc=HOSTILE} @self
+  - effect:particles{particle=block;m=stone;amount=25;hS=.25;vS=.25;y=0.25} @ModelPart{m=medusa;p=tail9}
+  - submodel{modelid=medusa;partid=tail9;subpartid=tail9;remove=true} @self
+  - submodel{modelid=medusa;partid=tail10;subpartid=tail10;remove=true} @self
+  - delay 35
+  - sound{s=littleroom_medusa:littleroom.medusa.deathfall;v=1;sc=HOSTILE} @self
+  - effect:particles{particle=block;m=stone;amount=200;hS=1;vS=.5} @ModelPart{m=medusa;p=body}
+  - model{mid=medusa;r=true} @self
+  

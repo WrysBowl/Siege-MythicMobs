@@ -1,0 +1,81 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+amethystgolem:
+  Type: IRON_GOLEM
+  Display: 'amethyst golem'
+  Damage: 0
+  Health: 750
+  Faction: GOLEM
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Options:
+    FollowRange: 24
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=amethystgolemSPAWN} @self ~onSpawn
+  - skill{s=AMETHYSTGOLEMdeath} @self ~onDeath
+  - skill{s=AMETHYSTGOLEMfootpound} @self ~onTimer: 120 .5
+  - randomskill{skills=AMETHYSTGOLEMfootpound,AMETHYSTGOLEMarmslam;sync=true} @self ~onAttack
+  - skill{s=AMETHYSTGOLEMshardtoss1} @self ~onTimer:240 .75
+  - skill{s=AMETHYSTGOLEMshardtoss2} @self ~onTimer:240 .75
+  - skill{s=AMETHYSTGOLEMshardtoss3} @self ~onTimer:240 .75
+  - skill{s=AMETHYSTGOLEMshardtoss4} @self ~onTimer:240 .75
+  - skill{s=AMETHYSTGOLEMshardtoss5} @self ~onTimer:240 .75
+  - model{mid=amethystgolem;n=false} @self ~onSpawn
+  
+amethystpupa:
+  Type: ARMOR_STAND
+  Options:
+    Invincible: true
+  Skills:
+  - skill{s=amethystpupaLAND} @self ~onTimer:5
+  - skill{s=amethystpupaLIFESPAN} @self ~onSpawn
+  - model{mid=amethystpupa;n=false;d=false} @self ~onSpawn
+  
+
+
+amethystshard:
+  Type: HUSK
+  Display: 'amethyst shard'
+  Health: 50
+  Damage: 0
+  Faction: GOLEM
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 32
+    PreventOtherDrops: true
+    Silent: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=amethystshardDEATH} @self ~onDeath
+  - skill{s=amethystshardATTACK;sync=true} @self ~onAttack
+  - model{mid=shard;n=false} @self ~onSpawn
+  - state{s=spawn} @self ~onSpawn
+  
+amethystspikes:
+  Type: ARMOR_STAND
+  Display: 'amethyst shard'
+  Faction: GOLEM
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Options:
+    NoAI: true
+    Marker: true
+    ApplyInvisibility: true
+    Invisible: true
+  Skills:
+  - randomskill{skills=amethystspikespawn1,amethystspikespawn2,amethystspikespawn3} @self ~onSpawn
+  - model{mid=amethystspikes;n=false;d=false} @self ~onSpawn
+  
+  
+  

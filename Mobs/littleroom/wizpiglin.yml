@@ -1,0 +1,132 @@
+ wizpiglin:
+  Display: 'Wizpiglin'
+  Type: PILLAGER
+  Damage: 0
+  Health: 250
+  Faction: piglin
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - FIRE -1
+  - FIRE_TICK -1
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=wizpiglinfidget} @self ~onTimer:120 .25
+  - state{s=hurt} @self ~onDamaged
+  - model{mid=wizpiglin;n=false} @self ~onSpawn
+  - skill{s=rift} @self ~onTimer:80 .75
+  - skill{s=NetherShot} @MIR{r=16;t=portalrift;limit=1;sort=NEAREST} ~onSignal:shootme
+  - skill{s=PlayerShot} @target ~onTimer:60 .5
+  - skill{s=wizpigkick;sync=true} @self ~onAttack
+  - skill{s=riftjump} @self ~onDamaged .2
+  - skill{s=riftjump} @self ~onTimer:120 .1
+  - skill{s=riftjumptoplayer} @self ~onTimer:240
+  Options:
+    MovementSpeed: .3
+    KnockbackResistance: 1
+    Silent: true
+    
+ pigshot:
+  Display: 'Rift Orb'
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Health: 0
+  Skills:
+  - model{mid=pigshot;n=false;d=false} @self ~onSpawn
+  Options:
+    HasGravity: false
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Invincible: true
+
+ portalspawndummy:
+  Type: ARMOR_STAND
+  Health: 1
+  Damage: 0
+  Skills:
+  - summon{type=portalrift} @Origin{yoffset=7} ~onSpawn
+  - remove @self ~onTimer:20
+  Options:
+    AlwaysShowName: false
+    MaxCombatDistance: 32
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Invisible: true
+    
+  
+ portalrift:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Health: 0
+  Skills:
+  - effect:particles{p=flash;amount=2;speed=1;hS=0.2;vS=0.2} @self ~onSpawn
+  - model{mid=portalrift;n=false;d=false} @self ~onSpawn
+  - effect:particles{particle=portal;amount=50;speed=1} @self ~onTimer:20
+  - skill{s=NetherShot-Tele1} @self ~onSignal:TELE1
+  - skill{s=NetherShot-Tele2} @PlayersInRadius{r=24;limit=1;sort=NEAREST} ~onSignal:TELE2
+  - skill{s=riftshootme} @EntitiesNearOrigin{r=24} ~onTimer:40
+  - skill{s=riftdespawn} @self ~onSpawn
+  - summon{type=ghastling} @self ~onTimer:60 .15
+  - summon{type=piglin} @self ~onTimer:200 .01
+  - sound{s=entity.ender_dragon.hurt;p=.2;v=3} @self ~onSpawn
+  - sound{s=block.portal.ambient;v=.5} @self ~onTimer:50
+  - sound{s=entity.lightning_bolt.thunder} @self ~onTimer:60 .5
+  Options:
+    HasGravity: false
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Invincible: true
+    
+ portalrift2:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Health: 0
+  Skills:
+  - effect:particles{p=flash;amount=2;speed=1;hS=0.2;vS=0.2} @self ~onSpawn
+  - model{mid=portalrift;n=false;d=false} @self ~onSpawn
+  - effect:particles{particle=portal;amount=50;speed=1} @self ~onTimer:20
+  - skill{s=riftdespawn2} @self ~onSpawn
+  - state{s=pigrift} @self ~onSpawn
+  - sound{s=entity.ender_dragon.hurt;p=.2;v=3} @self ~onSpawn
+  Options:
+    HasGravity: false
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Invincible: true
+    
+ ghastling:
+  Display: 'Ghastling'
+  Type: BEE
+  AIGoalSelectors:
+  - 1 Melee
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Health: 1
+  Skills:
+  - effect:particles{p=flash;amount=2;speed=1;hS=0.2;vS=0.2} @self ~onSpawn
+  - model{mid=ghastbaby;n=false;d=false} @self ~onSpawn
+  - effect:particles{particle=falling_obsidian_tear;amount=1;speed=1;hs=.25;vs=.25} @Origin{yoffset=.2} ~onTimer:20
+  - skill{s=ghastattack} @self ~onAttack
+  - skill{s=ghastexplode} @self ~onDamaged
+  - sound{s=entity.enderman.death;p=2;v=.5} @self ~onDeath
+  - sound{s=entity.ghast.death;p=2} @self ~onDeath
+  - sound{s=entity.ghast.ambient;p=2} @self ~onTimer:40 .5
+  Options:
+    MovementSpeed: .5
+    Silent: true

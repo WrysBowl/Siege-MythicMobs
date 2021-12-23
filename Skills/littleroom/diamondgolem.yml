@@ -1,0 +1,344 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+### GOLEM ###
+
+diamondgolemSPAWN:
+  Skills:
+  - delay 5
+  - setstance{s=golemshard0} @self
+
+### PUPA ###
+
+
+diamondpupaLAND:
+  Conditions:
+  - onground true
+  Skills:
+  - state{s=idle;r=true} @self
+  - state{s=land} @self
+
+diamondpupaLIFESPAN:
+  Skills:
+  - delay 2
+  - lunge{velocity=1;velocityY=0} @Forward{f=5}
+  - state{s=idle} @self
+  - delay 60
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.25;sc=HOSTILE;p=1} @self
+  - effect:particles{particle=block_crack;m=diamond_block;amount=200;hS=.5;vS=.25} @self
+  - delay 2
+  - summon{t=diamondshard} @self
+  - remove @self
+
+### SPIKES ###
+
+diamondspikespawn1:
+  Skills:
+  - effect:spin{duration=5;velocity=20} @self
+  - delay 10
+  - effect:particles{particle=block_crack;m=stone;amount=100;hS=.5;vS=.15} @self
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.1;sc=HOSTILE;p=.12} @self
+  - throw{v=5;vy=5} @PIR{r=3}
+  - damage{amount=3} @PIR{r=3}
+  - delay 60
+  - effect:particles{particle=block_crack;m=diamond_block;amount=100;hS=.25;vS=.5} @self
+  - explosion{yield=1} @self
+  - remove @self
+  
+diamondspikespawn2:
+  Skills:
+  - effect:spin{duration=5;velocity=40} @self
+  - delay 10
+  - effect:particles{particle=block_crack;m=stone;amount=100;hS=.5;vS=.15} @self
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.1;sc=HOSTILE;p=.8} @self
+  - throw{v=5;vy=5} @PIR{r=3}
+  - damage{amount=3} @PIR{r=3}
+  - delay 60
+  - effect:particles{particle=block_crack;m=diamond_block;amount=100;hS=.25;vS=.5} @self
+  - explosion{yield=1} @self
+  - remove @self
+  
+  
+diamondspikespawn3:
+  Skills:
+  - effect:spin{duration=5;velocity=80} @self
+  - delay 10
+  - effect:particles{particle=block_crack;m=stone;amount=100;hS=.5;vS=.15} @self
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.1;sc=HOSTILE} @self
+  - throw{v=5;vy=5} @PIR{r=3}
+  - damage{amount=3} @PIR{r=3}
+  - delay 60
+  - effect:particles{particle=block_crack;m=diamond_block;amount=100;hS=.25;vS=.5} @self
+  - explosion{yield=1} @self
+  - remove @self
+
+### ARM SLAM ###
+
+diamondGOLEMarmslam:
+  Skills:
+  - CancelEvent
+  - skill{s=diamondGOLEMarmslamATTACK} @self
+  
+diamondGOLEMarmslamATTACK:
+  Conditions:
+  - offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.armslam;v=1;sc=HOSTILE} @self
+  - gcd{ticks=20}
+  - state{s=armslam;li=3;lo=2} @self
+  - delay 30
+  - sound{s=minecraft:entity.player.attack.nodamage;sc=HOSTILE} @self
+  - effect:particles{particle=block_crack;m=diamond_block;amount=200;hS=1;vS=1} @ModelPart{m=diamondgolem;p=lefthand}
+  - totem{ch=3;onStart=diamondGOLEMarmslamDAMAGE;int=1;hR=3;md=1;repeat=8;repeatInterval=1} @ModelPart{m=diamondgolem;p=lefthand}
+  
+
+diamondGOLEMarmslamDAMAGE:
+  Skills:
+  - throw{v=8;vy=4} @EIR{r=6}
+  - damage{amount=8} @PIR{r=6}
+  - effect:particles{particle=block_crack;m=diamond_block;amount=25;hS=.5;vS=.5} @ModelPart{m=diamondgolem;p=lefthand}
+  
+  
+### FOOT POUND ###
+
+diamondGOLEMfootpound:
+  Conditions:
+  - incombat true
+  Skills:
+  - CancelEvent
+  - skill{s=diamondGOLEMfootpoundATTACK} @self
+  
+diamondGOLEMfootpoundATTACK:
+  Conditions:
+  - offgcd true
+  Skills:
+  - gcd{ticks=20}
+  - setAI{ai=false} @self
+  - state{s=footpound;li=3;lo=2} @self
+  - delay 15
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.stomp;v=1;sc=HOSTILE} @self
+  - delay 15
+  - sound{s=minecraft:entity.player.attack.nodamage;sc=HOSTILE} @self
+  - totem{ch=3;onStart=diamondGOLEMfootpoundDAMAGE;int=1;hR=3;md=1} @ModelPart{m=diamondgolem;p=leftfoot}
+  - setAI{ai=true} @self
+  
+
+diamondGOLEMfootpoundDAMAGE:
+  Skills:
+  - projectile{onTick=diamondGOLEMfootpoundSPIKES;v=12;i=4;hR=1;vR=1;syo=0;hs=true;hfs=-0;hp=false} @Target
+  - throw{v=5;vy=10} @PIR{r=6}
+  - damage{amount=5} @PIR{r=6}
+  - effect:particles{particle=block_crack;m=diamond_block;amount=25;hS=.5;vS=.5} @ModelPart{m=diamondgolem;p=lefthand}
+  
+diamondGOLEMfootpoundSPIKES:
+  Skills:
+  - summon{t=diamondspikes} @origin
+  
+### SHARD TOSS ###
+
+diamondGOLEMshardtoss1:
+  Conditions:
+  - incombat true
+  - stance{s=NOSHARDS} false
+  - stance{s=golemshard1} false
+  - stance{s=golemshard2} false
+  - stance{s=golemshard3} false
+  - stance{s=golemshard4} false
+  #- offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardgrab;v=1;sc=HOSTILE} @self
+  - CancelEvent
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - state{s=shardgrab;li=3;lo=2} @self
+  - delay 30
+  - ChangePart{model=diamondgolem;part=handshard;newmodel=diamondpupa;newpart=pupa} @self
+  - effect:particles{particle=block_crack;m=stone;amount=25;hS=.5;vS=.5;repeat=5;repeatInterval=2} @ModelPart{m=diamondgolem;p=righthand}
+  - effect:particles{particle=block_crack;m=diamond_block;amount=150;hS=.5;vS=.5} @ModelPart{m=diamondgolem;p=spike}
+  - submodel{modelid=diamondgolem;partid=spike;subpartid=spike;remove=true} @self
+  - delay 20
+  - totem{ch=3;onStart=diamondGOLEMshardthrow;int=1;hR=3;md=1;repeat=5;repeatInterval=2} @ModelPart{m=diamondgolem;p=righthand}
+  #- delay 1
+  - ChangePart{model=diamondgolem;part=handshard;newmodel=diamondgolem;newpart=handshard} @self
+  - summon{t=diamondpupa} @ModelPart{m=diamondgolem;p=righthand}
+  - setAI{ai=true} @self
+  - setstance{s=golemshard1} @self
+  
+diamondGOLEMshardtoss2:
+  Conditions:
+  - incombat true
+  - stance{s=NOSHARDS} false
+  - stance{s=golemshard0} false
+  - stance{s=golemshard2} false
+  - stance{s=golemshard3} false
+  - stance{s=golemshard4} false
+  #- offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardgrab;v=1;sc=HOSTILE} @self
+  - CancelEvent
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - state{s=shardgrab;li=3;lo=2} @self
+  - delay 30
+  - ChangePart{model=diamondgolem;part=handshard;newmodel=diamondpupa;newpart=pupa} @self
+  - effect:particles{particle=block_crack;m=stone;amount=25;hS=.5;vS=.5;repeat=5;repeatInterval=2} @ModelPart{m=diamondgolem;p=righthand}
+  - effect:particles{particle=block_crack;m=diamond_block;amount=150;hS=.5;vS=.5} @ModelPart{m=diamondgolem;p=spike2}
+  - submodel{modelid=diamondgolem;partid=spike;subpartid=spike2;remove=true} @self
+  - delay 20
+  - totem{ch=3;onStart=diamondGOLEMshardthrow;int=1;hR=3;md=1;repeat=5;repeatInterval=2} @ModelPart{m=diamondgolem;p=righthand}
+  #- delay 1
+  - ChangePart{model=diamondgolem;part=handshard;newmodel=diamondgolem;newpart=handshard} @self
+  - summon{t=diamondpupa} @ModelPart{m=diamondgolem;p=righthand}
+  - setAI{ai=true} @self
+  - setstance{s=golemshard2} @self
+  
+diamondGOLEMshardtoss3:
+  Conditions:
+  - incombat true
+  - stance{s=NOSHARDS} false
+  - stance{s=golemshard0} false
+  - stance{s=golemshard1} false
+  - stance{s=golemshard3} false
+  - stance{s=golemshard4} false
+  #- offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardgrab;v=1;sc=HOSTILE} @self
+  - CancelEvent
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - state{s=shardgrab;li=3;lo=2} @self
+  - delay 30
+  - ChangePart{model=diamondgolem;part=handshard;newmodel=diamondpupa;newpart=pupa} @self
+  - effect:particles{particle=block_crack;m=stone;amount=25;hS=.5;vS=.5;repeat=5;repeatInterval=2} @ModelPart{m=diamondgolem;p=righthand}
+  - effect:particles{particle=block_crack;m=diamond_block;amount=150;hS=.5;vS=.5} @ModelPart{m=diamondgolem;p=spike3}
+  - submodel{modelid=diamondgolem;partid=spike;subpartid=spike3;remove=true} @self
+  - delay 20
+  - totem{ch=3;onStart=diamondGOLEMshardthrow;int=1;hR=3;md=1;repeat=5;repeatInterval=2} @ModelPart{m=diamondgolem;p=righthand}
+  #- delay 1
+  - ChangePart{model=diamondgolem;part=handshard;newmodel=diamondgolem;newpart=handshard} @self
+  - summon{t=diamondpupa} @ModelPart{m=diamondgolem;p=righthand}
+  - setAI{ai=true} @self
+  - setstance{s=golemshard3} @self
+  
+diamondGOLEMshardtoss4:
+  Conditions:
+  - incombat true
+  - stance{s=NOSHARDS} false
+  - stance{s=golemshard0} false
+  - stance{s=golemshard1} false
+  - stance{s=golemshard2} false
+  - stance{s=golemshard4} false
+  #- offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardgrab;v=1;sc=HOSTILE} @self
+  - CancelEvent
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - state{s=shardgrab;li=3;lo=2} @self
+  - delay 30
+  - ChangePart{model=diamondgolem;part=handshard;newmodel=diamondpupa;newpart=pupa} @self
+  - effect:particles{particle=block_crack;m=stone;amount=25;hS=.5;vS=.5;repeat=5;repeatInterval=2} @ModelPart{m=diamondgolem;p=righthand}
+  - effect:particles{particle=block_crack;m=diamond_block;amount=150;hS=.5;vS=.5} @ModelPart{m=diamondgolem;p=spike4}
+  - submodel{modelid=diamondgolem;partid=spike;subpartid=spike4;remove=true} @self
+  - delay 20
+  - totem{ch=3;onStart=diamondGOLEMshardthrow;int=1;hR=3;md=1;repeat=5;repeatInterval=2} @ModelPart{m=diamondgolem;p=righthand}
+  #- delay 1
+  - ChangePart{model=diamondgolem;part=handshard;newmodel=diamondgolem;newpart=handshard} @self
+  - summon{t=diamondpupa} @ModelPart{m=diamondgolem;p=righthand}
+  - setAI{ai=true} @self
+  - setstance{s=golemshard4} @self
+  
+diamondGOLEMshardtoss5:
+  Conditions:
+  - incombat true
+  - stance{s=NOSHARDS} false
+  - stance{s=golemshard0} false
+  - stance{s=golemshard1} false
+  - stance{s=golemshard2} false
+  - stance{s=golemshard3} false
+  - offgcd true
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardgrab;v=1;sc=HOSTILE} @self
+  - CancelEvent
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - state{s=shardgrab;li=3;lo=2} @self
+  - delay 30
+  - ChangePart{model=diamondgolem;part=handshard;newmodel=diamondpupa;newpart=pupa} @self
+  - effect:particles{particle=block_crack;m=stone;amount=25;hS=.5;vS=.5;repeat=5;repeatInterval=2} @ModelPart{m=diamondgolem;p=righthand}
+  - effect:particles{particle=block_crack;m=diamond_block;amount=150;hS=.5;vS=.5} @ModelPart{m=diamondgolem;p=spike5}
+  - submodel{modelid=diamondgolem;partid=spike;subpartid=spike5;remove=true} @self
+  - delay 20
+  - totem{ch=3;onStart=diamondGOLEMshardthrow;int=1;hR=3;md=1;repeat=5;repeatInterval=2} @ModelPart{m=diamondgolem;p=righthand}
+  #- delay 1
+  - ChangePart{model=diamondgolem;part=handshard;newmodel=diamondgolem;newpart=handshard} @self
+  - summon{t=diamondpupa} @ModelPart{m=diamondgolem;p=righthand}
+  - setAI{ai=true} @self
+  - setstance{s=NOSHARDS} @self
+  
+  
+diamondGOLEMshardthrow:
+  Skills:
+  - throw{v=10;vy=0} @EIR{r=3;types=diamondpupa}
+  
+### DEATH ###
+
+diamondGOLEMdeath:
+  Skills:
+  - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.death;v=1;sc=HOSTILE} @self
+  - effect:particles{p=reddust;color=#24f070;amount=15;hs=.25;vs=.25;repeat=15;repeatInterval=2} @ModelPart{m=diamondgolem;p=head}
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=diamondgolem;p=jawright}
+  - submodel{modelid=diamondgolem;partid=anything;subpartid=jawright;remove=true} @self
+  - delay 15
+  - effect:particles{particle=block_crack;m=diamond_block;amount=150;hs=.5;vs=.5} @ModelPart{m=diamondgolem;p=lefthand}
+  - submodel{modelid=diamondgolem;partid=anything;subpartid=lefthand;remove=true} @self
+  - delay 15
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=diamondgolem;p=righthand}
+  - submodel{modelid=diamondgolem;partid=anything;subpartid=righthand;remove=true} @self
+  - delay 2
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=diamondgolem;p=rightelbow}
+  - submodel{modelid=diamondgolem;partid=anything;subpartid=rightelbow;remove=true} @self
+  - effect:particles{particle=block_crack;m=diamond_block;amount=150;hs=.5;vs=.5} @ModelPart{m=diamondgolem;p=leftelbow}
+  - submodel{modelid=diamondgolem;partid=anything;subpartid=leftelbow;remove=true} @self
+  - delay 2
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=diamondgolem;p=rightfoot}
+  - submodel{modelid=diamondgolem;partid=anything;subpartid=rightfoot;remove=true} @self
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=diamondgolem;p=head}
+  - submodel{modelid=diamondgolem;partid=anything;subpartid=head;remove=true} @self
+  - throw{v=10;vy=2} @PIR{r=6}
+  - delay 2
+  - effect:particles{particle=block_crack;m=stone;amount=150;hs=.5;vs=.5} @ModelPart{m=diamondgolem;p=leftfoot}
+  - submodel{modelid=diamondgolem;partid=anything;subpartid=leftfoot;remove=true} @self
+  - effect:particles{p=campfire_cosy_smoke;amount=150;hs=2;vs=.25} @self
+  - delay 8
+  - effect:particles{particle=large_smoke;amount=500;hs=1;vs=.5} @ModelPart{m=diamondgolem;p=quartzgolem}
+  - remove @self
+  
+#### SHARDS ####
+
+diamondshardATTACK:
+  Skills:
+  - CancelEvent
+  - skill{s=diamondshardATTACKskill} @self
+  
+diamondshardATTACKskill:
+  Cooldown: 2
+  Skills:
+  - state{s=attack} @self
+  - delay 20
+  - sound{s=minecraft:entity.player.attack.nodamage;sc=HOSTILE} @self
+  - totem{ch=3;onStart=diamondshardATTACKDAMAGE;int=1;hR=3;md=1} @Forward{f=1.0}
+  
+
+diamondshardATTACKDAMAGE:
+  Skills:
+  - damage{amount=1} @PIR{r=2}
+  
+  
+diamondshardDEATH:
+  Skills:
+  - delay 15
+  - effect:particles{particle=block_crack;m=diamond_block;amount=25} @ModelPart{m=shard;p=head}
+  - submodel{modelid=shard;partid=anything;subpartid=head;remove=true} @self

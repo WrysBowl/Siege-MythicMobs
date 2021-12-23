@@ -1,0 +1,14 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+gokart_helmet:
+  Id: PAPER
+  Model: 2
+  Display: '&f Go-Kart Helmet'
+  
+gokart_flag:
+  Id: PAPER
+  Model: 1
+  Display: '&f Go-Kart Checkered Flag'

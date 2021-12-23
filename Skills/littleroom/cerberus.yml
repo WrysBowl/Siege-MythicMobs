@@ -1,0 +1,538 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+cerberusSPAWN:
+  Skills:
+  - delay 1
+  - potion{type=INVISIBILITY;duration=200;level=1;p=false} @self
+
+cerberusRANDOMBARK:
+  Skills:
+  - randomskill{skills=cerberusbark1,cerberusbark2,cerberusbark3,cerberusbark4}
+  
+cerberusbark1:
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.bark1;v=1;sc=HOSTILE} @self
+  
+cerberusbark2:
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.bark2;v=1;sc=HOSTILE} @self
+  
+cerberusbark3:
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.bark3;v=1;sc=HOSTILE} @self
+  
+cerberusbark4:
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.bark4;v=1;sc=HOSTILE} @self
+  
+  
+  
+cerberusRANDOMGROWL:
+  Skills:
+  - randomskill{skills=cerberusgrowl1,cerberusgrowl2,cerberusgrowl3}
+  
+cerberusgrowl1:
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.growl1;v=1;sc=HOSTILE} @self
+  
+cerberusgrowl2:
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.growl2;v=1;sc=HOSTILE} @self
+  
+cerberusgrowl3:
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.growl3;v=1;sc=HOSTILE} @self
+  
+cerberusRANDOMchainmovement:
+  Conditions:
+  - ismoving true
+  Skills:
+  - randomskill{skills=cerberuschain1,cerberuschain2,cerberuschain3}
+  
+  
+cerberusRANDOMchain:
+  Skills:
+  - randomskill{skills=cerberuschain1,cerberuschain2,cerberuschain3}
+  
+cerberuschain1:
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.chain1;v=.5;sc=HOSTILE} @self
+  
+cerberuschain2:
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.chain2;v=.5;sc=HOSTILE} @self
+  
+cerberuschain3:
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.chain3;v=.5;sc=HOSTILE} @self
+  
+  
+
+
+cerberusLAVAMOUTH:
+  Skills:
+  - effect:particles{particle=falling_lava;amount=5;hS=.25;vS=.25;size=2} @ModelPart{m=cerberus;p=jaw2}
+  - delay 2
+  - effect:particles{particle=falling_lava;amount=5;hS=.25;vS=.25;size=2} @ModelPart{m=cerberus;p=jaw1}
+  - delay 2
+  - effect:particles{particle=falling_lava;amount=5;hS=.25;vS=.25;size=2} @ModelPart{m=cerberus;p=jaw3}
+  
+
+cerberus_bowl_fling:
+  Cooldown: 20
+  Conditions:
+  - targetwithin{d=2} true
+  Skills:
+  - state{s=hit} @self
+  - lunge{velocity=1;velocityY=1} @self
+  - delay 10
+  - sound{s=littleroom_cerberus:littleroom.cerberus.foodbowl;v=1;sc=HOSTILE} @self
+  - DefaultState{mid=cerberus_bowl;t=IDLE;s=hit} @self
+  - ChangePart{model=cerberus_bowl;part=bowl;newmodel=cerberus_bowl_empty;newpart=bowl} @self
+  - effect:particles{particle=block;m=dirt;amount=200;hS=.5;vS=.5} @self
+  - setstance{stance=inair} @self
+  
+cerberus_bowl_land:
+  Conditions:
+  - onground
+  - stance{s=inair}
+  Skills:
+  - effect:particles{particle=block;m=dirt;amount=100;hS=.5;vS=.5} @self
+  - setstance{stance=land} @self
+  - state{s=land} @self
+  - delay 10
+  - lunge{velocity=.25;velocityY=2} @self
+  - delay 10
+  - sound{s=littleroom_cerberus:littleroom.cerberus.impact_ground;v=1;sc=HOSTILE} @self
+  - DefaultState{mid=cerberus_bowl;t=IDLE;s=idle} @self
+  - delay 20
+  - effect:particles{particle=poof;amount=20;hS=.5;vS=.5} @self
+  - remove @self
+  
+cerberusSLEEP:
+  Conditions:
+  - playerwithin{d=24} false
+  - incombat false
+  Skills:
+  - delay 1
+  - DefaultState{mid=cerberus;t=IDLE;s=sleep} @self
+  - setstance{stance=sleep} @self
+  - setAI{ai=false} @self
+
+cerberusWAKE:
+  Conditions:
+  - playerwithin{d=24} true
+  - stance{s=sleep}
+  Skills:  
+  - gcd{ticks=60}
+  - state{s=wakeup} @self
+  - delay 5
+  - sound{s=littleroom_cerberus:littleroom.cerberus.wake;v=1;sc=MASTER} @PIR{r=32}
+  - setstance{stance=WALK} @self
+  - runaitargetselector{target=players}
+  - DefaultState{mid=cerberus;t=IDLE;s=idle} @self
+  - setstance{stance=wake} @self
+  - delay 55
+  - setAI{ai=true} @self
+  
+cerberusSPEED:
+  Skills:
+  - skill{s=cerberusRUN} @self
+  - skill{s=cerberusWALK} @self
+  
+  
+cerberusRUN:
+  Conditions:
+  - targetnotwithin{d=8} true
+  - stance{s=cerberusRUN} false
+  Skills:
+  - setstance{stance=RUN} @self
+  - DefaultState{m=cerberus;t=WALK;s=gallop} @self
+  - setspeed{speed=2;type=walking}
+  
+cerberusWALK:
+  Conditions:
+  - stance{s=cerberusWALK} false
+  - targetwithin{d=8} true
+  Skills:
+  - setstance{stance=WALK} @self
+  - DefaultState{m=cerberus;t=WALK;s=walk} @self
+  - setspeed{speed=2;type=walking}
+  
+cerberusBITEsync:
+  Skills:
+  - CancelEvent
+  - randomskill{skills=cerberusBITE1,cerberusBITE2,cerberusBITE3} @self
+
+cerberusBITE1:
+  Conditions:
+  #- targetwithin{d=8}
+  - offgcd{}
+  Skills:
+  - skill{s=cerberusRANDOMGROWL} @self
+  - look{headOnly=false;immediately=true;repeat=20;repeatInterval=1} @Target
+  - gcd{ticks=20}
+  - setspeed{speed=0;type=walking}
+  #- lunge{velocity=-1;velocityY=.2} @forward{f=-5}
+  - state{s=bite1} @self
+  - delay 6
+  - lunge{velocity=1;velocityY=.2} @target
+  - delay 6
+  - skill{s=cerberusRANDOMBARK} @self
+  - totem{oH=cerberusBITEDAMAGE;int=1;hR=3;md=2;hnp=false} @ModelPart{m=cerberus;p=jaw2}
+  - delay 9
+  - randomskill{skills=cerberusBITE2,cerberusBITE3} @self .5
+  - setspeed{speed=2;type=walking}
+  
+cerberusBITE2:
+  Conditions:
+  #- targetwithin{d=8}
+  - offgcd{}
+  Skills:
+  - skill{s=cerberusRANDOMGROWL} @self
+  - look{headOnly=false;immediately=true;repeat=20;repeatInterval=1} @Target
+  - gcd{ticks=20}
+  - setspeed{speed=0;type=walking}
+  #- lunge{velocity=-1;velocityY=.2} @forward{f=-5}
+  - state{s=bite2} @self
+  - delay 7
+  - lunge{velocity=1;velocityY=.2} @target
+  - delay 7
+  - skill{s=cerberusRANDOMBARK} @self
+  - totem{oH=cerberusBITEDAMAGE;int=1;hR=3;md=2;hnp=false} @ModelPart{m=cerberus;p=jaw}
+  - delay 6
+  - randomskill{skills=cerberusBITE1,cerberusBITE3} @self .5
+  - setspeed{speed=2;type=walking}
+  
+cerberusBITE3:
+  Conditions:
+  #- targetwithin{d=8}
+  - offgcd{}
+  Skills:
+  - skill{s=cerberusRANDOMGROWL} @self
+  - look{headOnly=false;immediately=true;repeat=20;repeatInterval=1} @Target
+  - gcd{ticks=20}
+  - setspeed{speed=0;type=walking}
+  #- lunge{velocity=-1;velocityY=.2} @forward{f=-5}
+  - state{s=bite3} @self
+  - delay 6
+  - lunge{velocity=1;velocityY=.2} @target
+  - delay 6
+  - skill{s=cerberusRANDOMBARK} @self
+  - totem{oH=cerberusBITEDAMAGE;int=1;hR=3;md=2;hnp=false} @ModelPart{m=cerberus;p=jaw3}
+  - delay 9
+  - randomskill{skills=cerberusBITE1,cerberusBITE2} @self .5
+  - setspeed{speed=2;type=walking}
+  
+cerberusBITEDAMAGE:
+  Skills:
+  - skill{s=cerberusBLOOD}
+  - ignite{ticks=40}
+  - damage{a=6}
+  
+cerberusBLOOD:
+  Conditions:
+  - isblocking false
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.damage;v=1;sc=HOSTILE} @self
+  - effect:particles{particle=block;m=redstone_block;amount=55;hS=.5;vS=.5}
+  
+cerberusSTOMP:
+  Cooldown: 10
+  Conditions:
+  - targetwithin{d=32}
+  - offgcd{}
+  Skills:
+  - skill{s=cerberusRANDOMGROWL} @self
+  - gcd{ticks=50}
+  - setspeed{speed=0;type=walking}
+  - state{s=stomp} @self
+  - delay 10
+  - skill{s=cerberusRANDOMchain} @self
+  - lunge{velocity=2;velocityY=1} @target
+  - delay 10
+  - lunge{velocity=2;velocityY=-1.5} @target
+  - delay 5
+  - throw{velocity=15;velocityY=2} @EIR{r=10}
+  - damage{a=2} @EIR{r=10}
+  - sound{s=littleroom_cerberus:littleroom.cerberus.impact_ground_big;v=1;sc=HOSTILE} @self
+  - effect:particles{particle=lava;amount=300;hS=3;vS=.5} @self
+  - effect:particlering{particle=squid_ink;radius=2;points=32;amount=8;hS=.25;vS=.25} @self
+  - delay 1
+  - effect:particlering{particle=squid_ink;radius=3;points=32;amount=7;hS=.25;vS=.25} @self
+  - delay 1
+  - effect:particlering{particle=squid_ink;radius=4;points=32;amount=6;hS=.25;vS=.25;size=2} @self
+  - delay 1
+  - effect:particlering{particle=squid_ink;radius=5;points=32;amount=5;hS=.25;vS=.25;size=3} @self
+  - delay 1
+  - effect:particlering{particle=squid_ink;radius=6;points=32;amount=3;hS=.25;vS=.25;size=4} @self
+  - delay 1
+  - delay 20
+  - setspeed{speed=2;type=walking}
+  
+cerberusSWINGsync:
+  Skills:
+  - CancelEvent
+  - skill{s=cerberusSWING} @self
+  
+cerberusSWING:
+  Conditions:
+  - offgcd{}
+  Skills:
+  - gcd{ticks=40}
+  - setAI{ai=false}
+  - state{s=tail1} @self
+  - delay 10
+  - sound{s=littleroom_cerberus:littleroom.cerberus.chainswing;v=1;sc=HOSTILE} @self
+  - lunge{velocity=2;velocityY=.2} @target
+  - totem{oT=cerberusSWINGMARKER;oH=cerberusSWINGDAMAGE;int=1;hR=2;md=2;hnp=false;repeat=20;repeatInterval=1} @ModelPart{m=cerberus;p=mace}
+  - delay 20
+  - setAI{ai=true}
+  - delay 1
+  - skill{s=cerberusSTOMP} @self
+  
+cerberusSWINGDAMAGE:
+  Skills:
+  - skill{s=cerberusBLOOD}
+  - ignite{ticks=100}
+  - throw{velocity=12;velocityY=3}
+  - damage{a=12}
+  
+cerberusSWINGMARKER:
+  Skills:
+  - effect:particles{particle=flame;amount=25;hs=.25;vs=.25}
+  - effect:particles{particle=large_smoke;amount=5;hs=.5;vs=.5}
+  - effect:particles{particle=campfire_cosy_smoke;amount=2;hs=.5;vs=.5}
+  
+cerberusSWIPEsync:
+  Skills:
+  - CancelEvent
+  - skill{s=cerberusSWIPE} @self
+  
+cerberusSWIPE:
+  Cooldown: 6
+  Skills:
+  - skill{s=cerberusRANDOMGROWL} @self
+  - gcd{ticks=20}
+  - setspeed{speed=0;type=walking}
+  - state{s=swipe} @self
+  - delay 5
+  - skill{s=cerberusRANDOMchainS} @self
+  - lunge{velocity=1;velocityY=.2} @target
+  - delay 7
+  - totem{oH=cerberusSWIPEDAMAGE;int=1;hR=3;md=2;hnp=false} @ModelPart{m=cerberus;p=rightfrontpaw}
+  - delay 10
+  - setspeed{speed=2;type=walking}
+  
+cerberusSWIPEDAMAGE:
+  Skills:
+  - skill{s=cerberusBLOOD}
+  - damage{a=7}
+  - throw{velocity=5;velocityY=3}
+  
+cerberusRIVEROFSTYX:
+  Cooldown: 40
+  Conditions:
+  - incombat true
+  - onground true
+  - targetwithin{d=8} false
+  Skills:
+  - gcd{ticks=30}
+  - setspeed{speed=0;type=walking} @self
+  - setAI{ai=false} @self
+  - state{s=riverofstyx} @self
+  - delay 20
+  - sound{s=littleroom_cerberus:littleroom.cerberus.impact_ground_large;v=1;sc=HOSTILE} @self
+  - throw{velocity=1;velocityY=10} @EIR{r=6}
+  - projectile{onTick=RiverofSTYX-Tick;oH=RiverofSTYX-Hit;v=15;i=5;hR=1;vR=1;hs=true;hfs=0;sE=false;sfo=5}
+  - sound{s=littleroom_cerberus:littleroom.cerberus.styx_rumble;v=1;sc=HOSTILE} @self
+  - delay 40
+  - setspeed{speed=2;type=walking} @self
+  - setAI{ai=true} @self
+  
+  
+RiverofSTYX-Tick:
+  Skills:
+  - effect:particles{particle=block;m=dirt;amount=15;hS=.5;vS=1;repeat=5;repeatInterval=2} @origin
+  - summon{t=cerberus_groundfx} @origin
+  
+
+cerberus_riverofstyxfxSPAWN:
+  Skills:
+  - delay 1
+  - effect:spin{duration=10;velocity=100} @self .5
+  - effect:spin{duration=10;velocity=100} @self .5
+  - delay 7
+  - effect:blockmask{m=BLACKSTONE;r=1;d=55}
+  - delay 1
+  - effect:blockmask{m=BLACKSTONE;r=2;d=55}
+  - delay 1
+  - effect:blockmask{m=BLACKSTONE;r=3;d=55}
+  - delay 1
+  #- skill{s=cerberusSTYXVOICES} @self
+  - summon{t=cerberus_hellhound} @Origin{xoffset=0;yoffset=2;zoffset=0} .15
+  - effect:particles{particle=block;m=dirt;amount=55;hS=.5;vS=1} @self
+  - effect:particles{p=soul;amount=10;speed=.25;hS=1;vS=1;d=true;dir=0,1,0;repeat=5;repeatInterval=10} @self
+  - throw{velocity=1;velocityY=10;repeat=10;repeatInterval=1} @EIR{r=2}
+  - damage{a=2;repeat=5;repeatInterval=10} @EIR{r=2}
+  - effect:blockmask{m=SOUL_FIRE;r=2;d=54}
+  - delay 60
+  - remove @self
+  
+cerberusSTYXVOICES:
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.styx_voices;v=1;sc=HOSTILE} @self
+  
+cerberusFLINCHHIT:
+  Conditions:
+  - stance{s=flinch} true
+  Skills:
+  - state{s=flinch_hit} @self
+  
+cerberusFLINCH75:
+  Conditions:  
+  - stance{s=flinch} false
+  - offgcd true
+  Cooldown: 9999
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.whimper;v=1;sc=HOSTILE} @self
+  - gcd{ticks=120}
+  - delay 1
+  - setstance{s=flinch} @self
+  - state{s=flinch} @self
+  - setAI{ai=false;repeat=40;repeatInterval=2} @self
+  - delay 100
+  - setstance{s=normal} @self
+  - setAI{ai=true} @self
+  
+cerberusFLINCH50:
+  Conditions:  
+  - stance{s=flinch} false
+  - offgcd true
+  Cooldown: 9999
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.whimper;v=1;sc=HOSTILE} @self
+  - gcd{ticks=120}
+  - CancelEvent
+  - delay 1
+  - CancelEvent
+  - setstance{s=flinch} @self
+  - CancelEvent
+  - state{s=flinch} @self
+  - setAI{ai=false;repeat=40;repeatInterval=2} @self
+  - delay 100
+  - setstance{s=normal} @self
+  - setAI{ai=true} @self
+  
+cerberusFLINCH25:
+  Conditions:  
+  - stance{s=flinch} false
+  - offgcd true
+  Cooldown: 9999
+  Skills:
+  - sound{s=littleroom_cerberus:littleroom.cerberus.whimper;v=1;sc=HOSTILE} @self
+  - gcd{ticks=120}
+  - CancelEvent
+  - delay 1
+  - CancelEvent
+  - setstance{s=flinch} @self
+  - CancelEvent
+  - state{s=flinch} @self
+  - setAI{ai=false;repeat=40;repeatInterval=2} @self
+  - delay 100
+  - setstance{s=normal} @self
+  - setAI{ai=true} @self
+  
+cerberus_sleepFX:
+  Skills:
+  - delay 1
+  - ChangePart{model=cerberus_sleep;part=z3;newmodel=cerberus_sleep;newpart=blank} @self
+  - delay 30
+  - ChangePart{model=cerberus_sleep;part=z2;newmodel=cerberus_sleep;newpart=z3} @self
+  - delay 30
+  - ChangePart{model=cerberus_sleep;part=z3;newmodel=cerberus_sleep;newpart=z1} @self
+  - ChangePart{model=cerberus_sleep;part=z2;newmodel=cerberus_sleep;newpart=blank} @self
+  - ChangePart{model=cerberus_sleep;part=z1;newmodel=cerberus_sleep;newpart=z2} @self
+  - delay 30
+  - ChangePart{model=cerberus_sleep;part=z1;newmodel=cerberus_sleep;newpart=z3} @self
+  - ChangePart{model=cerberus_sleep;part=z3;newmodel=cerberus_sleep;newpart=z2} @self
+  - delay 30
+  - ChangePart{model=cerberus_sleep;part=z1;newmodel=cerberus_sleep;newpart=blank} @self
+  - ChangePart{model=cerberus_sleep;part=z2;newmodel=cerberus_sleep;newpart=z1} @self
+  - delay 30
+  - ChangePart{model=cerberus_sleep;part=z3;newmodel=cerberus_sleep;newpart=z3} @self
+  - ChangePart{model=cerberus_sleep;part=z2;newmodel=cerberus_sleep;newpart=z2} @self
+  - delay 30
+  - ChangePart{model=cerberus_sleep;part=z1;newmodel=cerberus_sleep;newpart=z1} @self
+  
+cerberusCHAINS:
+  Cooldown: 20
+  Conditions:
+  - incombat true
+  - onground true
+  - offgcd true
+  Skills:
+  - gcd{ticks=60}
+  - setspeed{speed=0;type=walking} @self
+  - setAI{ai=false} @self
+  - state{s=riverofstyx} @self
+  - delay 20
+  - skill{s=cerberusCHAINTARGETTER} @PIR{r=32;limit=4}
+  - delay 20
+  - setspeed{speed=2;type=walking} @self
+  - setAI{ai=true} @self
+  
+cerberusCHAINTARGETTER:
+  TargetConditions:
+  - onground true
+  Skills:
+  - summon{t=cerberus_chains}
+  - stun{d=60}
+  
+cerberus_chainsSPAWN:
+  Skills:
+  - delay 1
+  - sound{s=littleroom_cerberus:littleroom.cerberus.chains;v=.5;sc=HOSTILE} @self
+  - delay 59
+  - remove @self
+  
+cerberus_hellhoundBITEsync:
+  Skills:
+  - CancelEvent
+  - skill{s=cerberus_hellhoundBITE} @self   
+  
+cerberus_hellhoundBITE:
+  Cooldown: 1
+  Skills:
+  - setspeed{speed=0;type=walking} @self
+  - state{s=bite} @self
+  - delay 5  
+  - lunge{velocity=1;velocityY=.2} @target
+  - skill{s=cerberusRANDOMBARK} @self
+  - delay 3  
+  - totem{oH=cerberus_hellhoundDAMAGE;int=1;hR=3;md=2;hnp=false} @ModelPart{m=hellhound;p=jaw}
+  - delay 12
+  - setspeed{speed=3;type=walking}
+  
+cerberus_hellhoundDAMAGE:
+  Skills:
+  - skill{s=cerberusBLOOD}
+  - damage{a=5}
+  
+cerberus_hellhoundSPAWN:
+  Skills:
+  - delay 1
+  - state{s=spawn} @self
+  - lunge{velocity=1;velocityY=2} @forward{f=4}
+  - delay 20
+  - lunge{velocity=1;velocityY=-1.25} @forward{f=0;y=-15}
+  
+cerberusDEATH:
+  Skills:
+  - damage{a=666} @MobsInRadius{r=128;types=cerberus_hellhound}
+  - delay 40
+  - effect:particles{particle=poof;amount=400;hS=1;vS=1}
+  - model{mid=cerberus;r=true} @self

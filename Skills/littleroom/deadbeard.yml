@@ -1,0 +1,286 @@
+
+deadbeardHURT:
+  Cooldown: 4
+  Skills:
+  - sound{s=littleroom_deadbeard:littleroom.deadbeard.hurt} @self
+  - state{s=hurt} @self
+
+deadbeardHOOK:
+  Skills:
+  - CancelEvent
+  - skill{s=deadbeardHOOKMelee} @self
+
+deadbeardHOOKMelee:
+  Conditions:
+  - offgcd
+  Cooldown: 4.0
+  Skills:
+  - gcd{ticks=40}
+  - sound{s=littleroom_deadbeard:littleroom.deadbeard.swing} @self
+  - delay 10
+  - state{s=hook} @self
+  - delay 8
+  - effect:particleorbital{p=instant_effect;a=4;points=32;an=1;hs=0;vs=0;s=0;y=2;ry=180;ticks=15;in=1;rx=0;ry=0;r=2;yOffset=1} @self
+  - delay 7
+  - totem{ch=1;onStart=deadbeardHOOKDamage;int=1;hR=3;md=1} @Forward{f=1.5}
+
+deadbeardHOOKDamage:
+  TargetConditions:
+  - blocking{} false
+  Skills:
+  - damage{amount=6} 
+  - effect:particles{particle=block_crack;m=redstone_block;amount=25;hS=.5;vS=.5} @PlayersNearOrigin{r=3}
+  - skill{s=deadbeardBLEED} @PlayersNearOrigin{r=3}
+
+deadbeardBLEED:
+  TargetConditions:
+  - blocking{} false
+  Skills:
+  - actionmessage{m="You are bleeding!"} 
+  - damage{amount=1} 
+  - effect:particles{particle=block_crack;m=redstone_block;amount=25;hS=.5;vS=.5} 
+  - delay 20
+  - damage{amount=1} 
+  - effect:particles{particle=block_crack;m=redstone_block;amount=25;hS=.5;vS=.5} 
+  - delay 20
+  - damage{amount=1} 
+  - effect:particles{particle=block_crack;m=redstone_block;amount=25;hS=.5;vS=.5} 
+  
+deadbeardKICK:
+  Skills:
+  - CancelEvent
+  - skill{s=deadbeardKICKMelee} @self
+
+deadbeardKICKMelee:
+  Cooldown: 4.0
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=40}
+  - state{s=kick} @self
+  - delay 20
+  - totem{ch=1;onStart=deadbeardKICKDamage;int=1;hR=3;md=1} @Forward{f=1}
+
+deadbeardKICKDamage:
+  Skills:
+  - throw{velocity=15;velocityY=2} @PlayersNearOrigin{r=2}
+  - damage{amount=4} @PlayersNearOrigin{r=2}
+
+deadbeardSHOOT:
+  Conditions:
+  - targetwithin{d=3} false
+  - offgcd
+  - incombat{} true
+  - targetinlineofsight{} true
+  Skills:
+  #- look{headOnly=false;immediately=false;repeat=20;repeatInterval=1} @target
+  - delay 20
+  - gcd{ticks=60}
+  - sound{s=littleroom_deadbeard:littleroom.deadbeard.shoot} @self
+  - setAI{ai=false} @self
+  - state{s=shoot} @self
+  - delay 10
+  - changepart{model=deadbeard;part=empty;newmodel=deadbeard;newpart=flintlock} @self
+  - delay 25
+  - skill{s=deadbeardGUNSMOKE} @self
+  - skill{s=deadbeardBULLET_HIT} @target
+  - skill{s=deadbeardBULLET_MISS} @target
+  - delay 15
+  - changepart{model=deadbeard;part=empty;newmodel=deadbeard;newpart=empty} @self
+  - setAI{ai=true} @self
+
+deadbeardGUNSMOKE:
+  Skills:
+  - projectile{onTick=deadbeardGUNSMOKE-Tick;d=2;syo=2.25;sfo=2;sso=-1;i=1}
+deadbeardGUNSMOKE-Tick:
+  Skills:
+  - effect:particles{p=squid_ink;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=large_smoke;amount=1} @origin
+
+deadbeardBULLET_HIT:
+  Conditions:
+  - blocking{} false
+  - targetinlineofsight{} true
+  Skills:
+  - potion{type=SLOW;duration=20;level=3} @target
+  - damage{amount=10} @target
+  - effect:particles{particle=block_crack;m=redstone_block;amount=50;hS=.5;vS=1} @target
+  - throw{velocity=2;velocityY=2} @target
+  - sound{s=littleroom_deadbeard:littleroom.deadbeard.laugh} @self .25
+  
+deadbeardBULLET_MISS:
+  Conditions:
+  - targetinlineofsight{} false
+  Skills:
+  - sound{s=littleroom_deadbeard:littleroom.deadbeard.ricochet} @target
+  
+  
+deadbeardTNT:
+  Conditions:
+  - targetwithin{d=5} false
+  - targetinlineofsight{} true
+  - incombat{} true
+  - offgcd
+  Skills:
+  - gcd{ticks=60}
+  - CancelEvent
+  - sound{s=littleroom_deadbeard:littleroom.deadbeard.barrel} @self
+  - look{headOnly=false;immediately=true} @Target
+  - setAI{ai=false} @self
+  - state{s=tnt} @self
+  - delay 12
+  - changepart{model=deadbeard;part=empty;newmodel=deadbeard;newpart=tnt} @self
+  - delay 15
+  - summon{type=tnt_barrel} @Forward{f=1.0;y=.5}
+  - changepart{model=deadbeard;part=empty;newmodel=deadbeard;newpart=empty} @self
+  - state{s=kick} @self
+  - delay 15
+  - signal{s=KICK} @Children
+  - setAI{ai=true} @self
+  
+tntLAUNCH:
+  Skills:
+  - state{s=flip} @self
+  - lunge{velocity=2;velocityY=.4} @Forward{f=16;y=0.0}
+  - delay 25
+  - skill{s=tntEXPLODE} @origin
+  
+tntEXPLODE:
+  Skills:
+  - effect:particleline{particle=large_smoke;amount=6;fromOrigin=false;speed=.001} @Forward{f=0;y=3.0}
+  - effect:particlering{particle=squid_ink;radius=2.5;points=16;amount=25;speed=.001} @Forward{f=0;y=0}
+  - effect:particlering{particle=large_smoke;radius=1;points=16;amount=12;speed=.001} @Forward{f=0;y=3.5}
+  - effect:particlering{particle=large_smoke;radius=1;points=16;amount=12;speed=.001} @Forward{f=0;y=2.5}
+  - effect:particlering{particle=large_smoke;radius=1;points=16;amount=12;speed=.001} @Forward{f=0;y=3.0}
+  - effect:particlering{particle=large_smoke;radius=2;points=16;amount=12;speed=.001} @Forward{f=0;y=3.0}
+  - effect:particles{particle=large_smoke;hS=1;vS=0;amount=25;speed=.01} @self
+  - throw{velocity=5;velocityY=5} @PIR{r=6}
+  - damage{amount=10} @PlayersInRadius{r=5}
+  - explosion{yield=1;bd=false;ft=false} @self
+
+  
+  
+deadbeardBIRDMAN:
+  Conditions:
+  - targetwithin{d=4} false
+  - targetinlineofsight{} true
+  - incombat{} true
+  - offgcd
+  Skills:
+  - setAI{ai=false} @self
+  - gcd{ticks=200}
+  - sound{s=littleroom_deadbeard:littleroom.deadbeard.birdman} @self
+  - state{s=birdman} @self
+  - delay 30
+  - missile{bulletType=MOB;mob=birdman;v=6;i=1;hR=1;vR=1;in=0.75;tyo=2;syo=2;hp=false;HitTargetOnly=true}
+  - setAI{ai=true} @self
+
+
+deadbeardALLHANDSONDECK:
+  Conditions:
+  - incombat{} true
+  - mobsInRadius{types=undead_crew;amount=>3;radius=32} false
+  Skills:
+  - summon{type=undead_crew;amount=1;radius=4} @self
+  
+deadbeardDEATH:
+  Skills:
+  - state{s=death} @self
+  - sound{s=littleroom_deadbeard:littleroom.deadbeard.death} @self
+  - delay 60
+  - effect:particles{particle=soul_fire_flame;amount=100;hS=.25;vS=.25;speed=0.01} @self
+  - effect:particles{particle=soul;amount=100;hS=1;vS=1;speed=0.01} @self
+  - effect:particles{particle=large_smoke;amount=200;hS=1;vS=1;speed=0.01} @self
+  
+  
+  
+#### BIRDMAN ####
+
+birdmanSWARM:
+  Cooldown: 60.0
+  Conditions:
+  - targetwithin{d=1} true
+  - blocking{} false
+  Skills:
+  - mounttarget
+  - potion{type=SLOW;duration=80;level=1} @PlayersInRadius{r=2}
+  - potion{type=BLINDNESS;duration=80;level=1} @PlayersInRadius{r=2}
+  - state{s=swarm} @self
+  - delay 20
+  - damage{amount=1;ignoreArmor=true} @PlayersInRadius{r=1}
+  - effect:particles{particle=block_crack;m=redstone_block;amount=50;hS=.5;vS=1} @PlayersInRadius{r=1}
+  - delay 20
+  - damage{amount=1;ignoreArmor=true} @PlayersInRadius{r=1}
+  - effect:particles{particle=block_crack;m=redstone_block;amount=50;hS=.5;vS=1} @PlayersInRadius{r=1}
+  - delay 20
+  - damage{amount=1;ignoreArmor=true} @PlayersInRadius{r=1}
+  - effect:particles{particle=block_crack;m=redstone_block;amount=50;hS=.5;vS=1} @PlayersInRadius{r=1}
+  - effect:particles{particle=soul;amount=25;hS=.25;vS=.25;speed=0.01} @self
+  - effect:particles{particle=sneeze;amount=50;hS=.5;vS=.5;speed=0.01} @self
+  - remove @self
+  
+  
+#### CREWMATE ####
+
+undeadcrewLEAPCHECK:
+  TargetConditions:
+  - blocktype AIR true
+  Skills:
+  - skill{s=undeadcrewLEAP} @self
+  
+undeadcrewLEAP:
+  Cooldown: 4
+  Skills:
+  - lunge{velocity=1;velocityY=.5} @Forward{f=3.0}
+  
+undeadcrewSPAWN:
+  Skills:
+  - delay 2
+  - state{s=spawn} @self
+  - effect:particles{particle=soul;amount=50;hS=.5;vS=.5;speed=0.01} @self
+  - effect:particles{particle=large_smoke;amount=50;hS=.5;vS=.5;speed=0.01} @self
+
+undeadcrewATTACK:
+  Skills:
+  - CancelEvent
+  - skill{s=undeadcrewATTACKmelee} @self
+
+undeadcrewATTACKmelee:
+  Cooldown: 4.0
+  Skills:
+  - gcd{ticks=60}
+  - state{s=attack} @self
+  - delay 20
+  - sound{s=entity.player.attack.sweep} @self
+  - totem{ch=1;onStart=undeadcrewHOOKDamage;int=1;hR=3;md=1} @Forward{f=1.0}
+
+undeadcrewATTACKjump:
+  Conditions:
+  - incombat{} true
+  - offgcd
+  - playerwithin{d=2} false
+  - playernotwithin{d=6} false
+  Cooldown: 4.0
+  Skills:
+  - gcd{ticks=40}
+  - state{s=attack} @self
+  - delay 5
+  - lunge{velocity=1;velocityY=.25} @target
+  - delay 5
+  - sound{s=entity.player.attack.sweep} @self
+  - delay 10
+  - totem{ch=1;onStart=undeadcrewHOOKDamage;int=1;hR=3;md=1} @Forward{f=1.0}
+
+undeadcrewHOOKDamage:
+  Skills:
+  - damage{amount=2} @PlayersNearOrigin{r=2}
+  - effect:particles{particle=block_crack;m=redstone_block;amount=25;hS=.5;vS=.5} @PlayersNearOrigin{r=2}
+
+undeadcrewDEATH:
+  Skills:
+  - state{s=death} @self
+  - delay 25
+  - effect:particles{particle=soul_fire_flame;amount=50;hS=.25;vS=.25;speed=0.01} @Forward{f=0.0;y=2.0}
+  - effect:particles{particle=soul;amount=50;hS=.5;vS=.5;speed=0.01} @Forward{f=0.0;y=2.0}
+  - effect:particles{particle=large_smoke;amount=100;hS=.5;vS=.5;speed=0.01} @Forward{f=0.0;y=2.0}
+  - remove @self

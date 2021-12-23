@@ -1,0 +1,81 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+redstonegolem:
+  Type: IRON_GOLEM
+  Display: 'redstone golem'
+  Damage: 0
+  Health: 750
+  Faction: GOLEM
+  Modules:
+    ThreatTable: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Options:
+    FollowRange: 24
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=redstonegolemSPAWN} @self ~onSpawn
+  - skill{s=redstoneGOLEMdeath} @self ~onDeath
+  - skill{s=redstoneGOLEMfootpound} @self ~onTimer: 120 .5
+  - randomskill{skills=redstoneGOLEMfootpound,redstoneGOLEMarmslam;sync=true} @self ~onAttack
+  - skill{s=redstoneGOLEMshardtoss1} @self ~onTimer:240 .75
+  - skill{s=redstoneGOLEMshardtoss2} @self ~onTimer:240 .75
+  - skill{s=redstoneGOLEMshardtoss3} @self ~onTimer:240 .75
+  - skill{s=redstoneGOLEMshardtoss4} @self ~onTimer:240 .75
+  - skill{s=redstoneGOLEMshardtoss5} @self ~onTimer:240 .75
+  - model{mid=redstonegolem;n=false} @self ~onSpawn
+  
+redstonepupa:
+  Type: ARMOR_STAND
+  Options:
+    Invincible: true
+  Skills:
+  - skill{s=redstonepupaLAND} @self ~onTimer:5
+  - skill{s=redstonepupaLIFESPAN} @self ~onSpawn
+  - model{mid=redstonepupa;n=false;d=false} @self ~onSpawn
+  
+
+
+redstoneshard:
+  Type: HUSK
+  Display: 'redstone shard'
+  Health: 50
+  Damage: 0
+  Faction: GOLEM
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 32
+    PreventOtherDrops: true
+    Silent: true
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Skills:
+  - skill{s=redstoneshardDEATH} @self ~onDeath
+  - skill{s=redstoneshardATTACK;sync=true} @self ~onAttack
+  - model{mid=redstoneshard;n=false} @self ~onSpawn
+  - state{s=spawn} @self ~onSpawn
+  
+redstonespikes:
+  Type: ARMOR_STAND
+  Display: 'redstone shard'
+  Faction: GOLEM
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Options:
+    NoAI: true
+    Marker: true
+    ApplyInvisibility: true
+    Invisible: true
+  Skills:
+  - randomskill{skills=redstonespikespawn1,redstonespikespawn2,redstonespikespawn3} @self ~onSpawn
+  - model{mid=redstonespikes;n=false;d=false} @self ~onSpawn
+  
+  
+  

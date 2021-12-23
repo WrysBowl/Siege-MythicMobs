@@ -1,0 +1,60 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+### MELEE ###
+
+JUNKBOTattack:
+  Skills:
+  - CancelEvent
+  - skill{s=JUNKBOTmelee} @self
+  
+JUNKBOTmelee:
+  TargetConditions:
+  - targetwithin{d=2} true
+  Cooldown: 2.0
+  Skills:
+  - state{s=attack;li=3;lo=2} @self
+  - delay 18
+  - sound{s=minecraft:entity.player.attack.nodamage;sc=HOSTILE} @self
+  - totem{ch=3;onStart=JUNKBOTmeleedamage;int=1;hR=3;md=1} @Forward{f=1.0;y=0.0}
+  - delay 15
+  - sound{s=minecraft:entity.player.attack.nodamage;sc=HOSTILE} @self
+  - totem{ch=3;onStart=JUNKBOTmeleedamage;int=1;hR=3;md=1} @Forward{f=1.0;y=0.0}
+  
+
+JUNKBOTmeleedamage:
+  Skills:
+  - damage{amount=1} @PIR{r=2}
+  - effect:particles{particle=block_crack;m=redstone_block;amount=45;hS=.25;vS=1;speed=.01} @PIR{r=2}
+  
+### MALFUNCTION ###
+
+JUNKBOTmalfunction:
+  Skills:
+  - CancelEvent
+  - sound{s=littleroom_junkbot:littleroom.junkbot.malfunction;sc=HOSTILE} @self
+  - message{m="<mob.name>&f<&co> SYSTEM MALFUNCTION!"} @PlayersInRadius{r=30}
+  - setAI{ai=false} @self
+  - state{s=walk;r=true} @self
+  - state{s=idle;r=true} @self
+  - state{s=glitch} @self
+  - delay 30
+  - message{m="<mob.name>&f<&co> REBOOTING..."} @PlayersInRadius{r=30}
+  - delay 30
+  - setAI{ai=true} @self
+  - state{s=walk} @self
+  
+### DEATH ###
+
+JUNKBOTdeath:
+  Skills:
+  - sound{s=minecraft:entity.generic.explode;sc=HOSTILE} @self
+  - effect:particles{particle=large_smoke;amount=15;hS=.1;vS=.1;speed=.01} @ModelPart{m=junkbot;p=head}
+  - effect:particles{particle=firework;amount=5;hS=.1;vS=.1;speed=.01} @ModelPart{m=junkbot;p=head}
+  - submodel{modelid=junkbot;partid=anything;subpartid=head;remove=true} @self
+  - delay 60
+  - effect:particles{particle=cloud;amount=100;hS=.5;vS=.25;speed=.01} @ModelPart{m=junkbot;p=junkbot}
+  - remove @self
+  

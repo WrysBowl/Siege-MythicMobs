@@ -1,0 +1,23 @@
+# LITTLEROOM
+# http://www.patreon.com/littleroomdev
+#  
+
+
+jellycreepDEATH:
+  Skills:
+  - effect:particles{particle=item_slime;amount=50;hS=.25;vS=.25} @self
+  - effect:particles{particle=item_slime;amount=50;hS=.2;vS=.35} @self
+  
+jellycreepFUSE:
+  Skills:
+  - CancelEvent
+  - sound{s=entity.creeper.primed;p=2} @self
+  - skill{s=jellycreepEXPLODE} @self
+  - delay 20
+  
+jellycreepEXPLODE:
+  Conditions:
+  - targetwithin{d=1} true
+  Skills:
+  - explosion{yield=1} @self
+  

@@ -1,0 +1,25 @@
+
+Randomaxolotl:
+  MobType: axolotl_colossal
+  Worlds: world
+  Chance: .1
+  Priority: 75
+  Action: REPLACE
+  Conditions:
+  - biome{b=WARM_OCEAN,BEACH} true
+
+Randomiceaxolotl:
+  MobType: axolotl_ice
+  Worlds: world
+  Chance: .1
+  Priority: 75
+  Action: REPLACE
+  Conditions:
+  - biome{b=FROZEN_OCEAN} true
+  
+Randomfireaxolotl:
+  MobType: axolotl_fire
+  Worlds: world_nether
+  Chance: .1
+  Priority: 75
+  Action: REPLACE

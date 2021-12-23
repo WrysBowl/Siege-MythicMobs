@@ -1,0 +1,54 @@
+# 
+# http://www.patreon.com/littleroomdev
+# 
+
+jackpot:
+  Type: ARMOR_STAND
+  Display: Jackpot
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  DamageModifiers:
+  - ENTITY_ATTACK 0.0
+  - DROWNING 0.0
+  - BLOCK_EXPLOSION 0.0
+  - VOID 0.0
+  - LIGHTNING 0.0
+  - SUICIDE 0.0
+  - STARVATION 0.0
+  - POISON 0.0
+  - MAGIC 0.0
+  - DRAGON_BREATH 0.0
+  - WITHER 0.0
+  - FALLING_BLOCK 0.0
+  - THORNS 0.0
+  - CUSTOM 0.0
+  - LAVA 0.0
+  - MELTING 0.0
+  - FIRE_TICK 0.0
+  - FIRE 0.0
+  - HOT_FLOOR 0.0
+  - FALL 0.0
+  - SUFFOCATION 0.0
+  - PROJECTILE 0.0
+  - ENTITY_ATTACK 0.0
+  - CONTACT 0.0
+  Options:
+    Invincible: false
+    AlwaysShowName: false
+    Silent: true
+    MovementSpeed: 0.0
+    MaxCombatDistance: 35
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Persistent: true
+    Despawn: false
+  Skills:
+  - skill{s=jackpot_remove} @self ~onDamaged
+  - skill{s=jackpot_rotate} @self ~onDamaged
+  - randomskill{skills=jackpot_spinnothing,jackpot_spincreeper,jackpot_spindiamond,jackpot_spinnothing,jackpot_spingold,jackpot_spinnothing} @self ~onInteract
+  - sound{s=littleroom_jackpot:littleroom.jackpot.music;v=.2;sc=neutral} @self ~onTimer:310
+  - model{mid=jackpot;n=false;d=false} @self ~onSpawn
+  - skill{s=jackpotbroke} @self ~onInteract
+  

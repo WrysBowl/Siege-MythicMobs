@@ -1,0 +1,32 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+giantzombieATTACKsync:
+  Skills:
+  - CancelEvent @self
+  - skill{s=giantzombieATTACK} @self
+  
+giantzombieATTACK:
+  Cooldown: 3
+  Skills:
+  - velocity{m=set;x=0;y=0;z=0;repeat=20;repeatInterval=1} @self
+  - state{s=attack} @self
+  - delay 20
+  - sound{s=entity.wither.break_block;v=1;sc=HOSTILE} @self
+  - effect:particles{particle=block;m=dirt;amount=20;hS=1;vS=0.25;speed=0} @forward{f=1}
+  - skill{s=giantzombieATTACKdamage} @target
+  
+giantzombieATTACKdamage:
+  Conditions:
+  - targetwithin{d=3} true
+  Skills:
+  - damage{a=10}
+  
+giantzombieDEATH:
+  Skills:
+  - delay 55
+  - sound{s=entity.zombie.death;v=1;sc=HOSTILE} @self
+  - effect:particles{particle=cloud;amount=200;hS=1;vS=1;speed=0} @self

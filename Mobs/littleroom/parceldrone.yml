@@ -1,0 +1,24 @@
+# LITTLEROOM
+# http://www.patreon.com/littleroomdev
+#  
+
+parceldrone:
+  Health: 15
+  Type: BEE
+  Display: DRONE
+  AIGoalSelectors:
+  - 0 clear
+  - 2 randomstroll
+  Options:
+    MovementSpeed: .4
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - state{s=hurt} @self ~onDamaged
+  - sound{s=entity.armor_stand.hit} @self ~onDamaged
+  - skill{s=PARCELDRONElift} @self ~onTimer:20
+  - effect:particles{particle=smoke;amount=15} @self ~onTimer:5 <50%
+  - skill{s=PARCELDRONEdeath} @self ~onDeath
+  - skill{s=PARCELDRONEcancelevent;sync=true} @self ~onAttack
+  - skill{s=PARCELDRONEdamaged} @self ~onDamaged
+  - model{mid=drone;n=false;d=false} @self ~onSpawn

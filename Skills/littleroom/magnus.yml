@@ -1,0 +1,490 @@
+
+#########################################################
+## Developed by Little Room, littleroom.dev ##
+#########################################################
+
+
+magnusSPAWN:
+  Skills:
+  - delay 1
+  - setstance{stance=spawn} @self
+  - jump{velocity=-10}
+  - state{s=flinch} @self
+  
+magnusSPAWNLANDING:
+  Conditions:
+  - stance{s=spawn} true
+  - onground
+  Skills:
+  - gcd{ticks=80}
+  - setAI{ai=false}
+  - signal{s=remove} @MobsInRadius{r=4;t=magnusBONFIRE}
+  - effect:particlering{particle=block;m=stone;radius=3;points=32;amount=4;hS=1;vS=0.25} @self
+  - effect:particlering{particle=block;m=stone;radius=5;points=32;amount=4;hS=1;vS=0.25} @self
+  - effect:particlering{particle=block;m=stone;radius=7;points=32;amount=4;hS=1;vS=0.25} @self
+  - effect:particlering{particle=block;m=stone;radius=8;points=32;amount=4;hS=1;vS=0.25} @self
+  - effect:particlering{particle=block;m=stone;radius=11;points=32;amount=4;hS=1;vS=0.25} @self
+  - effect:particlering{particle=cloud;radius=2;points=16;amount=5;hS=0;vS=0;speed=0.1} @self
+  - throw{velocity=15;velocityY=3} @PlayersInRadius{r=5}
+  - skill{s=magnusGROUNDSHAKE} @PlayersInRadius{r=12}
+  - totem{md=2;c=1;oH=magnusLANDDAMAGE;hnp=true;hp=true;hR=3;vR=2;i=1} @ModelPart{m=magnus;p=right_hand;local=OFFSET;z=2;x=1}
+  - setstance{stance=land} @self
+  - delay 80
+  - setAI{ai=true}
+
+magnusSHIELDUP:
+  Cooldown: 300
+  Conditions:
+  - stance{s=swordspin} false
+  - stance{s=shieldsup} false
+  - stance{s=flinch} false
+  - stance{s=swordspin} false
+  - offgcd true
+  Skills:
+  - gcd{ticks=300}
+  - sound{s=littleroom_magnus:littleroom.magnus.shield_up;v=1;sc=HOSTILE} @self
+  - setstance{s=shieldsup} @self
+  - DefaultState{mid=magnus;t=IDLE;s=shield_idle} @self
+  - DefaultState{mid=magnus;t=WALK;s=shield_walk} @self
+  - state{s=shield_up;li=3;lo=5} @self
+  - potion{type=SLOW;duration=240;level=2;p=false} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=240;level=10;p=false} @self
+  - delay 240
+  - setstance{s=shieldsdown} @self
+  - sound{s=littleroom_magnus:littleroom.magnus.shield_down;v=1;sc=HOSTILE} @self
+  - DefaultState{mid=magnus;t=IDLE;s=idle} @self
+  - DefaultState{mid=magnus;t=WALK;s=walk} @self
+  - state{s=shield_down;li=3;lo=5} @self
+
+magnusSHIELDBASH_SYNC:
+  Skills:
+  - CancelEvent
+  - skill{s=magnusSHIELDBASH} @self
+
+magnusSHIELDBASH:
+  Cooldown: 4
+  Conditions:
+  - stance{s=shieldsup} true
+  Skills:
+  - sound{s=littleroom_magnus:littleroom.magnus.shield_bash;v=1;sc=HOSTILE} @self
+  - state{s=shield_bash} @self
+  - delay 10
+  - lunge{velocity=0.75;velocityY=0} @target
+  - delay 5
+  - totem{md=2;c=1;oH=magnusSHIELDBASHDAMAGE;hnp=true;hp=true;hR=2;vR=1;i=1} @Forward{f=1.5}
+  
+magnusSHIELDBASHDAMAGE:
+  Skills:
+  - damage{a=5}
+  - throw{velocity=8;velocityY=5}
+  
+magnusFLINCHHIT:
+  Conditions:
+  - stance{s=flinch} true
+  Skills:
+  - state{s=flinch_hit} @self
+  - effect:particles{particle=falling_obsidian_tear;amount=15;hS=0.25;vS=0.25;speed=0} @ModelPart{m=magnus;p=head}
+  
+magnusFLINCH75:
+  Conditions:  
+  - stance{s=swordspin} false
+  - stance{s=flinch} false
+  - offgcd true
+  Cooldown: 9999
+  Skills:
+  - sound{s=littleroom_magnus:littleroom.magnus.dizzy;v=1;sc=HOSTILE} @self 
+  - gcd{ticks=100}
+  - delay 1
+  - CancelEvent
+  - setstance{s=flinch} @self
+  - CancelEvent
+  - state{s=flinch} @self
+  - setAI{ai=false;repeat=40;repeatInterval=2} @self
+  - delay 10
+  - summon{t=magnusConcussion} @selflocation{y=3}
+  - delay 70
+  - setstance{s=shield_down} @self
+  - delay 20
+  - setAI{ai=true} @self
+  
+magnusFLINCH50:
+  Conditions:  
+  - stance{s=swordspin} false
+  - stance{s=flinch} false
+  - offgcd true
+  Cooldown: 9999
+  Skills:
+  - sound{s=littleroom_magnus:littleroom.magnus.dizzy;v=1;sc=HOSTILE} @self 
+  - gcd{ticks=100}
+  - CancelEvent
+  - delay 1
+  - CancelEvent
+  - setstance{s=flinch} @self
+  - CancelEvent
+  - state{s=flinch} @self
+  - setAI{ai=false;repeat=40;repeatInterval=2} @self
+  - delay 10
+  - summon{t=magnusConcussion} @selflocation{y=3}
+  - delay 70
+  - setstance{s=shield_down} @self
+  - delay 20
+  - setAI{ai=true} @self
+  
+magnusFLINCH25:
+  Conditions:  
+  - stance{s=swordspin} false
+  - stance{s=flinch} false
+  - offgcd true
+  Cooldown: 9999
+  Skills:
+  - sound{s=littleroom_magnus:littleroom.magnus.dizzy;v=1;sc=HOSTILE} @self 
+  - gcd{ticks=100}
+  - CancelEvent
+  - delay 1
+  - CancelEvent
+  - setstance{s=flinch} @self
+  - CancelEvent
+  - state{s=flinch} @self
+  - setAI{ai=false;repeat=40;repeatInterval=2} @self
+  - delay 10
+  - summon{t=magnusConcussion} @selflocation{y=3}
+  - delay 70
+  - setstance{s=shield_down} @self
+  - delay 20
+  - setAI{ai=true} @self
+  
+magnusLEAP:
+  Conditions:  
+  - stance{s=swordspin} false
+  - offgcd true
+  - targetwithin{d=12} true  
+  - incombat true
+  - stance{s=shieldsup} false
+  - stance{s=flinch} false
+  Skills:
+  - gcd{ticks=40}
+  - state{s=jump} @self
+  - delay 10
+  - sound{s=littleroom_magnus:littleroom.magnus.jump;v=1;sc=HOSTILE} @self 
+  - lunge{velocity=1;velocityY=1} @target
+  #- jump{velocity=1.25}
+  - delay 2
+  - state{s=inair} @self
+  - setstance{stance=leap} @self
+  - delay 8
+  - state{s=swordslam} @self
+  - delay 15
+  - jump{velocity=-10}
+
+magnusLAND:
+  Conditions:
+  - stance{s=leap} true
+  - onground
+  Skills:
+  - sound{s=littleroom_magnus:littleroom.magnus.land;v=1;sc=HOSTILE} @self
+  - signal{s=remove} @MobsInRadius{r=4;t=magnusBONFIRE}
+  - effect:particlering{particle=block;m=stone;radius=3;points=32;amount=4;hS=1;vS=0.25} @self
+  - effect:particlering{particle=block;m=stone;radius=5;points=32;amount=4;hS=1;vS=0.25} @self
+  - effect:particlering{particle=block;m=stone;radius=7;points=32;amount=4;hS=1;vS=0.25} @self
+  - effect:particlering{particle=block;m=stone;radius=8;points=32;amount=4;hS=1;vS=0.25} @self
+  - effect:particlering{particle=block;m=stone;radius=11;points=32;amount=4;hS=1;vS=0.25} @self
+  - effect:particlering{particle=cloud;radius=2;points=16;amount=5;hS=0;vS=0;speed=0.1} @self
+  - throw{velocity=15;velocityY=3} @PlayersInRadius{r=5}
+  - skill{s=magnusGROUNDSHAKE} @PlayersInRadius{r=12}
+  - totem{md=2;c=1;oH=magnusLANDDAMAGE;hnp=true;hp=true;hR=3;vR=2;i=1} @ModelPart{m=magnus;p=right_hand;local=OFFSET;z=2;x=1}
+  - state{s=inair;r=true} @self
+  - state{s=land} @self
+  - setstance{stance=land} @self
+  - delay 10
+  
+magnusLANDDAMAGE:
+  Skills:
+  - damage{a=10}
+  
+magnusGROUNDSHAKE:
+  TargetConditions:
+  - onground true
+  Skills:
+  - throw{velocity=1;velocityY=10}
+ 
+magnusSWEEP_SYNC:
+  Skills:
+  - CancelEvent
+  - skill{s=magnusSWEEP} @self 
+  
+magnusSWEEP:
+  Cooldown: 6
+  Conditions:  
+  - stance{s=swordspin} false
+  - offgcd true
+  - targetwithin{d=6} true  
+  - incombat true
+  - stance{s=shieldsup} false
+  - stance{s=flinch} false
+  Skills:
+  - gcd{ticks=20}
+  - setAI{ai=false} @self
+  - state{s=swordsweep;sp=1.25} @self
+  - sound{s=littleroom_magnus:littleroom.magnus.sweep;v=1;sc=HOSTILE} @self
+  - delay 10
+  - skill{s=magnusSPINDAMAGE_TOTEM;repeat=10;repeatInterval=1} @self
+  - delay 10
+  - setAI{ai=true} @self 
+  
+magnusKICK_SYNC:
+  Skills:
+  - CancelEvent
+  - skill{s=magnusKICK} @self 
+  
+magnusKICK:
+  Cooldown: 6
+  Conditions:  
+  - stance{s=swordspin} false
+  - offgcd true
+  - targetwithin{d=3} true  
+  - incombat true
+  - stance{s=shieldsup} false
+  - stance{s=flinch} false
+  Skills:
+  - gcd{ticks=20}
+  - sound{s=littleroom_magnus:littleroom.magnus.shield_bash;v=1;sc=HOSTILE} @self
+  #- setAI{ai=false} @self
+  - state{s=kick;sp=1.25} @self
+  - delay 10
+  - lunge{velocity=0.75;velocityY=0} @target
+  - delay 5
+  - totem{md=2;c=1;oH=magnusMELEEDAMAGE;hnp=true;hp=true;hR=2;vR=1;i=1} @Forward{f=2}
+  - delay 10
+  #- setAI{ai=true} @self
+  
+magnusTOMBSTONE_SYNC:
+  Skills:
+  - CancelEvent
+  - skill{s=magnusTOMBSTONE} @self 
+  
+magnusTOMBSTONE:
+  Cooldown: 6
+  Conditions:  
+  - stance{s=swordspin} false
+  - offgcd true
+  - targetwithin{d=3} true  
+  - incombat true
+  - stance{s=shieldsup} false
+  - stance{s=flinch} false
+  Skills:
+  - sound{s=littleroom_magnus:littleroom.magnus.tombstone;v=1;sc=HOSTILE} @self
+  - gcd{ticks=20}
+  #- setAI{ai=false} @self
+  - state{s=shieldslam;sp=1.25} @self
+  - delay 10
+  - lunge{velocity=0.75;velocityY=0} @target
+  - delay 8
+  - totem{md=2;c=1;oH=magnusMELEEDAMAGE;hnp=true;hp=true;hR=2;vR=1;i=1} @Forward{f=2}
+  - delay 10
+  #- setAI{ai=true} @self
+  
+magnusMELEEDAMAGE:
+  Skills:
+  - damage{a=10}
+  - potion{type=SLOW;duration=60;level=2;p=false}
+  - potion{type=BLINDNESS;duration=10;level=2;p=false}
+  - summon{t=playerConcussion}
+
+magnusSPIN:
+  Cooldown: 480
+  Conditions:  
+  - offgcd true
+  - incombat true
+  - stance{s=shieldsup} false
+  - stance{s=flinch} false
+  Skills:
+  - sound{s=littleroom_magnus:littleroom.magnus.spin_start;v=1;sc=HOSTILE} @self
+  - gcd{ticks=160}
+  - setstance{stance=swordspin}
+  - delay 15
+  - state{s=swordspin} @self
+  - delay 15
+  - sound{s=littleroom_magnus:littleroom.magnus.spin_loop;v=1;sc=HOSTILE;repeat=6;repeatInterval=20} @self
+  - potion{type=SPEED;duration=120;level=1;p=false} @self
+  - skill{s=magnusSPINDAMAGE_TOTEM;repeat=120;repeatInterval=1} @self
+  - ChangePart{model=magnus;part=right_hand;newmodel=magnus_fx;newpart=right_hand} @self
+  - state{s=spin_loop;sp=1.25} @self
+  - delay 120
+  - skill{s=magnusSPINEND} @self
+  - setstance{stance=shield_down}
+  
+magnusSPINDAMAGE_TOTEM:
+  Conditions:
+  Skills:
+  - totem{md=2;c=1;oH=magnusSPINDAMAGE;oS=magnusSPINFX;hnp=true;hp=true;hR=2;vR=1;i=1} @ModelPart{m=magnus;p=right_hand;local=OFFSET;z=3;x=1}
+  
+magnusSPINFX:
+  Skills:
+  - effect:particles{particle=cloud;amount=5;hS=0.25;vS=0.25;speed=0} @origin{yoffset=-1}
+  
+magnusSPINDAMAGE:
+  Skills:
+  - damage{a=5}
+  
+magnusSPINEND:
+  Conditions:
+  - stance{s=swordspin} true
+  Skills:
+  - setAI{ai=false}
+  - setstance{stance=shieldsdown}
+  - ChangePart{model=magnus;part=right_hand;newmodel=magnus;newpart=right_hand} @self
+  - delay 5
+  - state{s=spin_loop;r=true} @self
+  - setAI{ai=true}
+  
+magnusDEATH:
+  Skills:
+  - sound{s=littleroom_magnus:littleroom.magnus.death;v=1;sc=HOSTILE} @self
+  - summon{type=magnus_sword;a=1} @self
+  - ChangePart{model=magnus;part=right_hand;newmodel=magnus_fx;newpart=right_hand_nosword} @self
+  - delay 10
+  - effect:particlering{particle=cloud;radius=2;points=16;amount=24;hS=0;vS=0;speed=0.1} @self
+  - effect:particles{particle=firework;amount=20;hS=0;vS=0;speed=0.1} @ModelPart{m=magnus;p=magnus}
+  - ChangePart{model=magnus;part=magnus;newmodel=magnus_fx;newpart=magnus} @self
+  - delay 5
+  - effect:itemspray{item=magnus_shard;amount=2;velocity=1;d=240;ap=true} @self
+  - effect:particles{particle=firework;amount=20;hS=0;vS=0;speed=0.1} @ModelPart{m=magnus;p=right_arm}
+  - ChangePart{model=magnus;part=right_arm;newmodel=magnus_fx;newpart=right_arm} @self
+  - effect:particles{particle=firework;amount=20;hS=0;vS=0;speed=0.1} @ModelPart{m=magnus;p=left_arm}
+  - ChangePart{model=magnus;part=left_arm;newmodel=magnus_fx;newpart=left_arm} @self
+  - ChangePart{model=magnus;part=left_leg;newmodel=magnus_fx;newpart=left_leg} @self
+  - ChangePart{model=magnus;part=right_leg;newmodel=magnus_fx;newpart=right_leg} @self
+  - delay 5
+  - effect:itemspray{item=magnus_shard;amount=2;velocity=1;d=240;ap=true} @self
+  - ChangePart{model=magnus;part=right_forearm;newmodel=magnus_fx;newpart=right_forearm} @self
+  - ChangePart{model=magnus;part=left_forearm;newmodel=magnus_fx;newpart=left_forearm} @self
+  - ChangePart{model=magnus;part=left_foot;newmodel=magnus_fx;newpart=left_foot} @self
+  - ChangePart{model=magnus;part=right_foot;newmodel=magnus_fx;newpart=right_foot} @self
+  - delay 5
+  - effect:itemspray{item=magnus_shard;amount=2;velocity=1;d=240;ap=true} @self
+  - ChangePart{model=magnus;part=head;newmodel=magnus_fx;newpart=head} @self
+  - delay 20
+  - effect:itemspray{item=magnus_shard;amount=2;velocity=1;d=240;ap=true} @self
+  - effect:particles{particle=flash;amount=1} @self
+  - effect:particlesphere{particle=firework;amount=100;radius=3;size=3;speed=0.5} @self
+  - effect:particlesphere{particle=large_smoke;amount=100;radius=3} @self
+  - effect:explode @self
+
+  
+magnusswordSPAWN:
+  Skills:
+  - delay 1
+  - state{s=idle} @self
+  - jump{velocity=2}
+  
+magnusswordLAND:
+  Cooldown: 99
+  Conditions:
+  - onground true
+  Skills:
+  - sound{s=littleroom_magnus:littleroom.magnus.death_stab;v=1;sc=HOSTILE} @self
+  - state{s=land} @self
+  - delay 60
+  - remove @self
+
+  
+concussionREMOVE:
+  Skills:
+  - delay 80
+  - remove @self
+
+concussionPLAYER:
+  Skills:
+  - delay 1
+  - sound{s=littleroom_magnus:littleroom.magnus.dizzy;v=1;sc=HOSTILE} @self 
+  - mounttarget @PIR{r=2}
+  - delay 60
+  - remove @self
+  
+magnusLIGHTTBONFIRE:
+  Conditions:
+  - stance{stance=lit} false
+  TriggerConditions:
+  - holding{m=TORCH} true
+  Skills:
+  - sound{s=littleroom_magnus:littleroom.magnus.spawn;v=1;sc=HOSTILE} @self
+  - sound{s=littleroom_magnus:littleroom.magnus.bonfire_lit;v=1;sc=HOSTILE} @self
+  - ChangePart{model=bonfire;part=bonfire;newmodel=bonfire_lit;newpart=bonfire} @self
+  - setstance{stance=lit} @self  
+  - equip{item=torch:0}
+  - effect:particles{particle=flame;amount=50;speed=0.25;d=true;dir=0,1,0} @self
+  - effect:particleorbital{r=1;points=32;t=20;i=1;vy=20;particle=flame;rX=45;rY=45;d=true;dir=0,1,0} @self
+  - effect:particleorbital{r=1;points=32;t=20;i=1;vy=20;particle=flame;rX=-45;rY=-45;d=true;dir=0,1,0} @self
+  - sendtitle{fi=20;fo=20;title="&6BONFIRE LIT";subtitle="";d=100} @PlayersInRadius{r=10}
+  - delay 120
+  - summon{t=magnus} @selflocation{y=24}
+  
+
+  
+magnusLIGHTTBONFIREFX:
+  Conditions:
+  - stance{s=lit} true
+  Skills:
+  - effect:particles{particle=flame;amount=4;speed=0.01;hs=0.25;vs=0.25;d=true;dir=0,1,0} @selflocation{y=1}
+  - effect:particles{particle=campfire_signal_smoke;amount=1;speed=0.03;d=true;dir=0,1,0} @selflocation{y=0}
+  
+magnusbonfireSPAWN:
+  Skills:
+  - delay 1
+  - potion{type=INVISIBILITY;duration=200;level=4;p=false}
+  
+magnusBONFIREREMOVE:
+  Skills:
+  - summon{t=bonfireexplodeFX;a=3;r=3;yr=4} @self
+  - delay 1
+  - throw{velocity=15;velocityY=3} @Children
+  - remove @self
+  
+bonfireexplodeFXspawn:
+  Skills:
+  - delay 240
+  - remove @self
+  
+  
+  
+  
+  
+  
+#### DECORATIVE ####
+
+
+
+normalLIGHTTBONFIRE:
+  Conditions:
+  - stance{s=lit} false
+  TriggerConditions:
+  - holding{m=TORCH} true
+  Skills:
+  - sound{s=littleroom_magnus:littleroom.magnus.bonfire_lit;v=1;sc=HOSTILE} @self
+  - ChangePart{model=bonfire;part=bonfire;newmodel=bonfire_lit;newpart=bonfire} @self
+  - setstance{stance=lit} @self  
+  - equip{item=torch:0}
+  - effect:particles{particle=flame;amount=50;speed=0.25;d=true;dir=0,1,0} @self
+  - effect:particleorbital{r=1;points=32;t=20;i=1;vy=20;particle=flame;rX=45;rY=45;d=true;dir=0,1,0} @self
+  - effect:particleorbital{r=1;points=32;t=20;i=1;vy=20;particle=flame;rX=-45;rY=-45;d=true;dir=0,1,0} @self
+ 
+normalEXTBONFIRE:
+  Conditions:
+  - stance{s=lit} true
+  TriggerConditions:
+  - holding{m=WATER_BUCKET} true
+  Skills:
+  - sound{s=minecraft:block.fire.extinguish;v=1;sc=HOSTILE} @self
+  - ChangePart{model=bonfire;part=bonfire;newmodel=bonfire;newpart=bonfire} @self 
+  - equip{item=stick:0}
+  - effect:particles{particle=large_smoke;amount=100;speed=0.5;d=true;dir=0,1,0} @self
+  - delay 1
+  - setstance{stance=ext} @self
+ 
+  
+magnusswordLANDdeco:
+  Conditions:
+  - stance{s=land} false
+  Skills:
+  - setstance{stance=land} @self
+  - state{s=land} @self

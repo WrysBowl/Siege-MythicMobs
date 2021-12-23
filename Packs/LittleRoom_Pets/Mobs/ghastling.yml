@@ -1,0 +1,47 @@
+﻿
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+LRGhastling:
+  Type: BEE
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+   - sound{s=entity.ghast.ambient;p=2} @self ~onTimer:60 .5
+   - model{mid=pet_ghastling;n=false} @self ~onSpawn
+   - skill{s=LRGhastlingPET} @self ~onInteract
+   - skill{s=LRGhastlingSPAWN} @self ~onSpawn
+   - effect:particles{particle=falling_obsidian_tear;amount=1;hS=.25;vS=.25} @selflocation{y=.5} ~onTimer:15
+  Display: "§bGhastling"
+  Health: 100
+  Damage: 0
+  Options:
+    Collidable: false
+    Invincible: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    #MovementSpeed: 1
+    
+LRGhastlingRift:
+  Type: ARMOR_STAND
+  Display: 'nether portal rift'
+  Options:
+    Marker: true
+  Skills:
+   - effect:particles{particle=portal;amount=2;hS=1;vS=1;speed=5} @selflocation{y=1} ~onTimer:1
+   - model{mid=pet_ghastling_portal;n=false} @self ~onSpawn
+   - skill{s=pet_ghastling_portal_remove} @self ~onSpawn

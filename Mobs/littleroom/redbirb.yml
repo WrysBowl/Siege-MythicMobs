@@ -1,0 +1,12 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+redbirb:
+  Type: PARROT
+  Display: 'Red Birb'
+  Skills:
+  - skill{s=wuewue;sync=true} @self ~onInteract
+  - model{mid=redbirb;n=false} @self ~onSpawn
+  

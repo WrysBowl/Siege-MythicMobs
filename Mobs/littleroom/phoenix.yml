@@ -1,0 +1,172 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+phoenix:
+  Type: ZOGLIN
+  Display: 'Phoenix'
+  Faction: PHOENIX
+  #Disguise: RAVAGER setInvisible setBurningfalse
+  BossBar:
+    Enabled: true
+    Title: 'Phoenix'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Health: 1250
+  Damage: 1  
+  DamageModifiers:
+  - LAVA 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - FALL 0
+  Equipment:
+  - torch HAND
+  - torch OFFHAND
+  AITargetSelectors:
+  - players
+  Modules:
+    ThreatTable: true
+  Options:
+    #MovementSpeed: .3
+    Silent: true
+    MaxCombatDistance: 64
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    FollowRange: 64
+  Skills:
+  - skill{s=phoenixINVIS} @self ~onTimer:1
+  - skill{s=phoenixSCREAMR} @self ~onTimer:120 .3
+  - setstance{stance=land} @self ~onSpawn
+  - skill{s=phoenixCLAWATTACKsync;sync=true} @self ~onAttack
+  - throw{velocity=5;velocityY=0} @EIR{r=2} ~onTimer:1
+  - model{mid=phoenix;n=false;i=false} @self ~onSpawn
+  - skill{s=phoenixDEATHGROUND} @self ~onDeath
+  - skill{s=phoenixDEATHAIR} @self ~onDeath
+  - skill{s=phoenixTAKEOFF} @self ~onTimer:120
+  - skill{s=phoenixGROUNDFLAME} @self ~onTimer:20
+  - skill{s=phoenixLEAP} @self ~onTimer:20
+  - skill{s=phoenixFLAPforward} @self ~onTimer:25
+  - skill{s=phoenixFLAPinplace} @self ~onTimer:25
+  - skill{s=phoenixFLYINGATTACK} @self ~onTimer:40
+  - skill{s=phoenixLAND} @self ~onTimer:2
+  - skill{s=phoenixFLINCHHIT} @self ~onDamaged
+  - skill{s=phoenixFLINCH75;sync=true} @self ~onDamaged <75%
+  - skill{s=phoenixFLINCH50;sync=true} @self ~onDamaged <50%
+  - skill{s=phoenixFLINCH25;sync=true} @self ~onDamaged <25%
+  
+phoenixDEADFALLING:
+  Type: ARMOR_STAND
+  Display: 'Phoenix'
+  Options:
+    PreventOtherDrops: true
+    Invincible: true
+  Skills:
+  - state{s=death_air} @self ~onSpawn
+  - model{mid=phoenix;n=false;i=true;d=false} @self ~onSpawn
+  - defaultstate{mid=phoenix;t=IDLE;s=death_air_idle} @self ~onSpawn
+  - skill{s=phoenixDEATHGROUND} @self ~onTimer:1
+
+phoenix_egg:
+  Type: STRIDER
+  Display: 'Phoenix Egg'
+  #Disguise: SILVERFISH setInvisible
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Options:
+    PreventOtherDrops: true
+    Silent: true
+    Invincible: true
+    Collidable: false
+    Despawn: false
+    Persistent: true
+  Skills:
+  - skill{s=phoenixINVIS} @self ~onTimer:1
+  - potion{type=INVISIBILITY;duration=200;level=1;p=false} @self ~onTimer:20
+  - skill{s=phoenixeggSPAWN} @self ~onSpawn
+  - model{mid=phoenix_egg;n=false;i=false;d=false} @self ~onSpawn
+  - skill{s=incubate_increase} @selflocation{y=-.5} ~onTimer:1
+  - skill{s=incubate_decrease} @selflocation{y=-.5} ~onTimer:1
+  - skill{s=phoenixeggHATCH} @self ~onTimer:1
+  - skill{s=phoenixeggLEVEL0} @self ~onTimer:20
+  - skill{s=phoenixeggLEVEL1} @self ~onTimer:20
+  - skill{s=phoenixeggLEVEL2} @self ~onTimer:20
+  - skill{s=phoenixeggHARVEST} @trigger ~onInteract
+  - skill{s=phoenixeggREMOVE} @trigger ~onInteract
+  - skill{s=phoenixeggCREAM} @self ~onInteract
+  
+  
+phoenixConcussion:
+  Type: MARKER
+  Options:
+    NoAI: true
+    Silent: true
+  Display: 'Concussion'
+  Skills:
+  - model{mid=concussion;n=false;d=false} @self ~onSpawn
+  - skill{s=phoenixconcussionREMOVE} @self ~onSpawn
+  
+  
+phoenixFLAMETHROWERFX_small:
+  Display: 'Phoenix Flamethrower'
+  Type: ARMOR_STAND
+  Disguise: SILVERFISH setInvisible
+  Options:
+    Collidable: false
+    Invisible: true
+    Marker: true
+    #ApplyInvisibility: true
+  Skills:
+  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;noise=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
+  - damage{a=1} @PIR{r=4} ~onTimer:1
+  - ignite{ticks=60} @PIR{r=4} ~onTimer:1
+  - skill{s=phoenixFLAMETHROWERFXSPAWN_small} @self ~onSpawn
+  
+phoenixFLAMETHROWERFX_medium:
+  Display: 'Phoenix Flamethrower'
+  Type: ARMOR_STAND
+  Disguise: PIG setInvisible
+  Options:
+    Collidable: false
+    Invisible: true
+    Marker: true
+    #ApplyInvisibility: true
+  Skills:
+  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;noise=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
+  - damage{a=1} @PIR{r=4} ~onTimer:1
+  - ignite{ticks=60} @PIR{r=4} ~onTimer:1
+  - skill{s=phoenixFLAMETHROWERFXSPAWN_medium} @self ~onSpawn
+  
+phoenixFLAMETHROWERFX_large:
+  Display: 'Phoenix Flamethrower'
+  Type: ARMOR_STAND
+  Disguise: HORSE setInvisible
+  Options:
+    Collidable: false
+    Invisible: true
+    Marker: true
+  Skills:
+  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;noise=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
+  - damage{a=1} @PIR{r=4} ~onTimer:1
+  - ignite{ticks=60} @PIR{r=4} ~onTimer:1
+  - skill{s=phoenixFLAMETHROWERFXSPAWN_large} @self ~onSpawn
+  
+phoenixFLAMETHROWERFX_xlarge:
+  Display: 'Phoenix Flamethrower'
+  Type: ARMOR_STAND
+  Disguise: RAVAGER setInvisible
+  Health: 1000
+  Options:
+    Collidable: false
+    Invisible: true
+    Marker: true
+    #ApplyInvisibility: true
+  Skills:
+  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;noise=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
+  - damage{a=1} @PIR{r=4} ~onTimer:1
+  - ignite{ticks=60} @PIR{r=4} ~onTimer:1
+  - skill{s=phoenixFLAMETHROWERFXSPAWN_xlarge} @self ~onSpawn
+  

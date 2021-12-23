@@ -1,0 +1,20 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+JUNKBOT:
+  Type: HUSK
+  Display: 'JunkBot'
+  Options:
+    Silent: true
+    PreventOtherDrops: true
+    MovementSpeed: .3
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  Skills:
+  - model{mid=junkbot;n=false;d=false} @self ~onSpawn
+  - skill{s=JUNKBOTattack;sync=true} @self ~onAttack
+  - skill{s=JUNKBOTdeath} @self ~onDeath
+  - skill{s=JUNKBOTmalfunction;sync=true} @self ~onTimer:240 .25
+  

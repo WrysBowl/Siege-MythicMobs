@@ -1,0 +1,69 @@
+﻿
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+phoenixPET:
+  Type: BEE
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+   - effect:particles{particle=flame;amount=4;hS=.25;vS=.25} @petowner ~onTimer:5
+   - potion{type=FIRE_RESISTANCE;duration=60;level=4;p=false} @petowner ~onTimer:20
+   - model{mid=phoenix_pet;n=false} @self ~onSpawn
+   - skill{s=phoenixPETPET} @self ~onInteract
+   - skill{s=phoenixPETFEED} @self ~onInteract
+   - skill{s=phoenixPETSPAWN} @self ~onSpawn
+   - effect:particles{particle=flame;amount=1;hS=.25;vS=.25} @selflocation{y=1} ~onTimer:5
+   - skill{s=phoenixBURNENEMIES} @MobsInRadius{r=5;t=ZOMBIE,CREEPER,SKELETON,DROWNED,HUSK} ~onTimer:5
+  Display: "§bPhoenix"
+  Health: 100
+  Damage: 0
+  Options:
+    Collidable: false
+    Invincible: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    #MovementSpeed: .5
+    
+phoenixPETEGG:
+  Type: ARMOR_STAND
+  Display: 'phoenix pet egg'
+  Skills:
+   - model{mid=phoenix_egg;n=false} @self ~onSpawn
+   - skill{s=phoenix_egg_pet_lifespan} @self ~onSpawn
+   
+phoenixFLAMETHROWERFX_smallPET:
+  Type: ARMOR_STAND
+  Disguise: PUFFERFISH setInvisible
+  Options:
+    Collidable: false
+    Invisible: true
+    Marker: true
+  Skills:
+  - ignite{ticks=40} @MIR{r=3}
+  - skill{s=phoenixFLAMETHROWERFX_smallPET} @self ~onSpawn
+  
+phoenixFLAMETHROWERFX_mediumPET:
+  Type: ARMOR_STAND
+  Disguise: CAT setInvisible
+  Options:
+    Collidable: false
+    Invisible: true
+    Marker: true
+  Skills:
+  - ignite{ticks=40} @MIR{r=3}
+  - skill{s=phoenixFLAMETHROWERFX_mediumPET} @self ~onSpawn

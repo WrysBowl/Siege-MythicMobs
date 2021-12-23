@@ -1,0 +1,41 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+ZOMBIE:
+  Type: ZOMBIE
+  Skills:
+  - skill{s=zombieGAP} @forward{f=2;y=-1} ~onTimer:20
+  - skill{s=zombieGROUNDED} @self ~onTimer:2
+  - skill{s=zombieFALLING} @self ~onTimer:2
+  - velocity{m=set;x=0;y=0;z=0} @self ~onDeath
+  - state{s=flinch} @self ~onDamaged
+  - model{mid=zombie;n=false} @self ~onSpawn
+  - randomskill{skills=zombieATTACK1sync,zombieATTACK2sync;sync=true} @self ~onAttack
+  - skill{s=zombieSHAMBLER} @self ~onSpawn .25
+  
+ZOMBIEgrounded:
+  Type: ZOMBIE
+  Health: 5
+  Options:
+    MovementSpeed: .1
+    KnockbackResistance: 1
+  Skills:
+  - model{mid=zombie_ground;n=false} @self ~onSpawn
+  - skill{s=zombiegroundATTACKsync;sync=true} @self ~onAttack
+  
+ZOMBIEclimber:
+  Type: ZOMBIE
+  Skills:
+  - skill{s=zombieGAP} @forward{f=2;y=-1} ~onTimer:20
+  - skill{s=zombieGROUND} @self ~onTimer:5
+  - skill{s=zombieCLIMB} @ObstructingBlock ~onTimer:1
+  - skill{s=zombieGROUNDED} @self ~onTimer:2
+  - skill{s=zombieFALLING} @self ~onTimer:2
+  - velocity{m=set;x=0;y=0;z=0} @self ~onDeath
+  - state{s=flinch} @self ~onDamaged
+  - model{mid=zombie;n=false} @self ~onSpawn
+  - randomskill{skills=zombieATTACK1sync,zombieATTACK2sync;sync=true} @self ~onAttack
+  - skill{s=zombieSHAMBLER} @self ~onSpawn .25
+  

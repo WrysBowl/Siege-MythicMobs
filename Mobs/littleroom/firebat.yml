@@ -1,0 +1,34 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+firebat:
+  Type: BEE
+  Display: 'Firebat'
+  Health: 5
+  AIGoalSelectors:
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Equipment:
+  - torch:0
+  Modules:
+    ThreatTable: true
+  Options:
+    PreventBlockInfection: true
+    MovementSpeed: .1
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - potion{type=INVISIBILITY;duration=130;level=0;p=false} @self ~onTimer:120
+  - randomskill{skills=firebatFLAP1,firebatFLAP2} @self ~onTimer:13
+  - sound{s=entity.bat.hurt;p=-2} @self ~onDamaged
+  - effect:particles{particle=flame;amount=2;hS=.25;vS=.25;size=5} @ModelPart{m=firebat;p=firebat}  ~onTimer:5 .25
+  - effect:particles{particle=large_smoke;amount=2;hS=.25;vS=.25;size=5} @ModelPart{m=firebat;p=firebat}  ~onTimer:5 .75
+  - effect:particles{particle=falling_lava;amount=5;hS=.25;vS=.25;size=5} @ModelPart{m=firebat;p=firebat}  ~onTimer:5 .75
+  - skill{s=firebatSPAWN} @self ~onSpawn
+  - skill{s=firebatBITE;sync=true} @self ~onAttack
+  - skill{s=firebatDEATH} @self ~onDeath
+  - model{mid=firebat;n=true;i=false} @self ~onSpawn
+  

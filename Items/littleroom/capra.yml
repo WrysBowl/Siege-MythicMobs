@@ -1,0 +1,20 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+  
+capra_scythe:
+  Id: NETHERITE_SWORD
+  Model: 1
+  Amount: 1
+  Display: '&fCapra Scythe'
+  
+  
+capra_horns:
+  Id: PAPER
+  Model: 1
+  Amount: 1
+  Display: '&fCapra Horns'
+  

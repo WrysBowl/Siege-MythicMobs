@@ -1,0 +1,37 @@
+# LITTLEROOM
+# http://www.patreon.com/littleroomdev
+#  
+
+parceldroneDROPS:
+  TotalItems: 1
+  MinItems: 1
+  MaxItems: 1
+  Conditions:
+  - playerwithin 40
+  Drops:
+  - COMPASS 1
+  - STRING 1
+  - LAVA_BUCKET 1
+  - LEAD 1
+  - CROSSBOW 1
+  - GOLDEN_PICKAXE 1
+  - COOKED_SALMON 1
+  - TURTLE_HELMET 1
+  - NETHERITE_SCRAP 1
+  - EGG 1
+  - BUCKET 1
+  - TORCH 5
+  - ARROW 15
+  - FISHING_ROD 1
+  - KELP 1
+  - POTATO 1
+  - DRIED_KELP 5
+  - GLASS_BOTTLE 1
+  - GOLD_INGOT 1
+  - BREAD 1
+  - BOWL 1
+  - APPLE 1
+  - COOKED_CHICKEN 2
+  - TOTEM_OF_UNDYING 1 .2
+  - DIAMOND_HORSE_ARMOR 1 .2
+  - NAME_TAG 1

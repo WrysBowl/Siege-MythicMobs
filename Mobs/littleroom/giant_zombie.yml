@@ -1,0 +1,17 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+giant_zombie:
+  Type: ZOMBIE
+  Health: 100
+  Options:
+    KnockbackResistance: 1
+  AITargetSelectors: 
+  - players
+  Display: 'Giant Zombie'
+  Skills:
+  - model{mid=giantzombie;n=false} @self ~onSpawn
+  - skill{s=giantzombieATTACKsync;sync=true} @self ~onAttack
+  - skill{s=giantzombieDEATH} @self ~onDeath

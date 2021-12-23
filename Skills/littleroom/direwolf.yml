@@ -1,0 +1,204 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+#### FX ####
+
+direwolfremoveFX:
+  Skills:
+  - delay 20
+  - remove @self
+
+#### BITE ####
+
+direwolfBITE:
+  Skills:
+  - CancelEvent
+  - skill{s=direwolfBITEskill} @self
+
+direwolfBITEskill:
+  TargetConditions:
+  - targetwithin{d=3} true
+  Cooldown: 2.0
+  Conditions:
+  #- stance{s=shadowwalk} false
+  - offgcd
+  Skills:
+  #- sound{s=littleroom_gigas:littleroom.gigas.snip;v=.5} @self
+  - gcd{ticks=30}
+  - delay 10
+  #- setAI{ai=false} @self
+  - sound{s=littleroom_direwolf:littleroom.direwolf.bite;v=.5} @self
+  - state{s=bite;li=3;lo=2} @self
+  #- lunge{velocity=.3;velocityY=0.1} @target
+  - delay 5
+  - summon{type=direwolfBITE;amount=1} @Forward{f=2.0;y=0.0}
+  - delay 10
+  #- setAI{ai=true} @self
+  - totem{ch=3;onStart=direwolfBITEDamage;int=1;hR=3;md=1} @ModelPart{m=direwolf;p=head;offset=GLOBAL;y=-2.5}
+  - totem{ch=3;onStart=direwolfBITEDamage;int=1;hR=3;md=1} @ModelPart{m=direwolf_taiga;p=head;offset=GLOBAL;y=-2.5}
+  - totem{ch=3;onStart=direwolfBITEDamage;int=1;hR=3;md=1} @ModelPart{m=direwolf_desert;p=head;offset=GLOBAL;y=-2.5}
+  - totem{ch=3;onStart=direwolfBITEDamage;int=1;hR=3;md=1} @ModelPart{m=shadowwolf;p=head;offset=GLOBAL;y=-2.5}
+  
+
+direwolfBITEDamage:
+  Conditions:
+  - blocking{} false
+  Skills:
+  - damage{amount=3} @PlayersInRadius{r=3}
+  - effect:particles{particle=block_crack;m=redstone_block;amount=100;hS=.25;vS=1;speed=.01} @PlayersInRadius{r=2}
+  
+  
+  
+#### SLASH ####
+
+direwolfSLASH:
+  Skills:
+  - CancelEvent
+  - skill{s=direwolfSLASHskill} @self
+
+direwolfSLASHskill:
+  TargetConditions:
+  - targetwithin{d=3} true
+  Cooldown: 2.0
+  Conditions:
+  - offgcd
+  #- stance{s=shadowwalk} false
+  Skills:
+  #- sound{s=littleroom_gigas:littleroom.gigas.snip;v=.5} @self
+  #- lunge{velocity=.2;velocityY=.2} @target
+  - gcd{ticks=30}
+  - delay 10
+  - sound{s=littleroom_direwolf:littleroom.direwolf.slash;v=.5} @self
+  #- setAI{ai=false} @self
+  - state{s=swipe;li=3;lo=2} @self
+  #- lunge{velocity=.3;velocityY=0.1} @target
+  - delay 10
+  - summon{type=direwolfSLASH;amount=1} @Forward{f=2.0;y=0.0}
+  - delay 5
+  #- setAI{ai=true} @self
+  - totem{ch=3;onStart=direwolfSLASHDamage;int=1;hR=3;md=1} @ModelPart{m=direwolf;p=head;offset=GLOBAL;y=-2.5}
+  - totem{ch=3;onStart=direwolfSLASHDamage;int=1;hR=3;md=1} @ModelPart{m=direwolf_taiga;p=head;offset=GLOBAL;y=-2.5}
+  - totem{ch=3;onStart=direwolfSLASHDamage;int=1;hR=3;md=1} @ModelPart{m=direwolf_desert;p=head;offset=GLOBAL;y=-2.5}
+  - totem{ch=3;onStart=direwolfSLASHDamage;int=1;hR=3;md=1} @ModelPart{m=shadowwolf;p=head;offset=GLOBAL;y=-2.5}
+  
+
+direwolfSLASHDamage:
+  Conditions:
+  - blocking{} false
+  Skills:
+  - damage{amount=1} @PlayersInRadius{r=3}
+  - effect:particles{particle=block_crack;m=redstone_block;amount=100;hS=.25;vS=1;speed=.01} @PlayersInRadius{r=2} 
+  - skill{s=direwolfBLEED} @PlayersInRadius{r=3}
+  
+direwolfBLEED:
+  Skills:
+  - damage{a=.25;pk=true;repeat=2;repeatInterval=40}
+  - actionmessage{m="You're Bleeding!"}
+  
+  
+#### HOWL ####
+
+direwolfHOWL:
+  Conditions:
+  - playerwithin{d=24} true
+  Skills:
+  - CancelEvent
+  - gcd{ticks=60}
+  - setAI{ai=false} @self
+  - delay 10
+  - state{s=howl;li=3;lo=2} @self
+  - delay 10
+  - sound{s=littleroom_direwolf:littleroom.direwolf.howl;v=.5} @self .25
+  - delay 20
+  - skill{s=direwolfSUMMON} @self
+  - modifytargetscore{objective=fear;action=set;value=1} @EntitiesInRadius{r=16}
+  - potion{type=SLOW;duration=120;level=4} @PlayersInRadius{r=16}
+  - potion{type=BLINDNESS;duration=60} @PlayersInRadius{r=6}
+  - actionmessage{m="You're Frozen in Fear!"} @PlayersInRadius{r=16}
+  - delay 30
+  - setAI{ai=true} @self
+  
+direwolfSUMMON:
+  Conditions:
+  - children{a=>2} false
+  Skills:
+  - summon{type=angrywolf;amount=1;itt=true;if=true} @Ring{radius=30;points=6}
+  
+#### SHADOWWALK ####
+
+direwolfSHADOWWALK_DESERT:
+  Conditions:
+  - incombat{} true
+  Skills:
+  - setstance{stance=shadowwalk} @self
+  - effect:particles{particle=large_smoke;amount=200;hS=1;vS=1;speed=.1} @self
+  - swapmodel{m=direwolf;nid=shadowwolf;d=false} @self
+  - swapmodel{m=direwolf_taiga;nid=shadowwolf;d=false} @self
+  - swapmodel{m=direwolf_desert;nid=shadowwolf;d=false} @self
+  - potion{type=SPEED;duration=240;level=3} @self
+  - delay 10
+  - skill{s=shadowwalkFX} @self
+  - delay 240
+  - swapmodel{m=shadowwolf;nid=direwolf_desert} @self
+  - effect:particles{particle=large_smoke;amount=200;hS=1;vS=1;speed=.1} @self
+  - setstance{stance=normalwalk} @self
+  
+direwolfSHADOWWALK_TAIGA:
+  Conditions:
+  - incombat{} true
+  Skills:
+  - setstance{stance=shadowwalk} @self
+  - effect:particles{particle=large_smoke;amount=200;hS=1;vS=1;speed=.1} @self
+  - swapmodel{m=direwolf;nid=shadowwolf;d=false} @self
+  - swapmodel{m=direwolf_taiga;nid=shadowwolf;d=false} @self
+  - swapmodel{m=direwolf_desert;nid=shadowwolf;d=false} @self
+  - potion{type=SPEED;duration=240;level=3} @self
+  - delay 10
+  - skill{s=shadowwalkFX} @self
+  - delay 240
+  - swapmodel{m=shadowwolf;nid=direwolf_taiga} @self
+  - effect:particles{particle=large_smoke;amount=200;hS=1;vS=1;speed=.1} @self
+  - setstance{stance=normalwalk} @self
+
+direwolfSHADOWWALK:
+  Conditions:
+  - incombat{} true
+  Skills:
+  - setstance{stance=shadowwalk} @self
+  - effect:particles{particle=large_smoke;amount=200;hS=1;vS=1;speed=.1} @self
+  - swapmodel{m=direwolf;nid=shadowwolf;d=false} @self
+  - swapmodel{m=direwolf_taiga;nid=shadowwolf;d=false} @self
+  - swapmodel{m=direwolf_desert;nid=shadowwolf;d=false} @self
+  - potion{type=SPEED;duration=240;level=3} @self
+  - delay 10
+  - skill{s=shadowwalkFX} @self
+  - delay 240
+  - swapmodel{m=shadowwolf;nid=direwolf} @self
+  - effect:particles{particle=large_smoke;amount=200;hS=1;vS=1;speed=.1} @self
+  - setstance{stance=normalwalk} @self
+  
+shadowwalkFX:
+  Skills:
+  - effect:particles{particle=large_smoke;amount=2;hS=.1;vS=.1;speed=.01;repeat=80;repeatInterval=3} @ModelPart{m=shadowwolf;p=rbfoot;offset=GLOBAL;y=-2.5}
+  - effect:particles{particle=large_smoke;amount=2;hS=.1;vS=.1;speed=.01;repeat=80;repeatInterval=3} @ModelPart{m=shadowwolf;p=rbfoot2;offset=GLOBAL;y=-2.5}
+  - effect:particles{particle=large_smoke;amount=2;hS=.1;vS=.1;speed=.01;repeat=80;repeatInterval=3} @ModelPart{m=shadowwolf;p=rffoot;offset=GLOBAL;y=-2.5}
+  - effect:particles{particle=large_smoke;amount=2;hS=.1;vS=.1;speed=.01;repeat=80;repeatInterval=3} @ModelPart{m=shadowwolf;p=rffoot2;offset=GLOBAL;y=-2.5}
+  
+#### DEATH ####
+
+direwolfDIE:
+  Skills:
+  - swapmodel{m=shadowwolf;nid=direwolf} @self
+  - sound{s=littleroom_direwolf:littleroom.direwolf.death;v=.5} @self
+  - delay 50
+  - effect:particles{particle=squid_ink;amount=15;hS=.25;vS=.25;speed=.01;repeat=80;repeatInterval=3} @ModelPart{m=direwolf;p=rbfoot;offset=GLOBAL;y=-1.5}
+  - effect:particles{particle=squid_ink;amount=15;hS=.25;vS=.25;speed=.01;repeat=80;repeatInterval=3} @ModelPart{m=direwolf;p=rbfoot2;offset=GLOBAL;y=-1.5}
+  - effect:particles{particle=squid_ink;amount=15;hS=.25;vS=.25;speed=.01;repeat=80;repeatInterval=3} @ModelPart{m=direwolf;p=rffoot;offset=GLOBAL;y=-1.5}
+  - effect:particles{particle=squid_ink;amount=15;hS=.25;vS=.25;speed=.01;repeat=80;repeatInterval=3} @ModelPart{m=direwolf;p=rffoot2;offset=GLOBAL;y=-1.5}
+  - effect:particles{particle=squid_ink;amount=15;hS=.25;vS=.25;speed=.01;repeat=80;repeatInterval=3} @ModelPart{m=direwolf;p=back;offset=GLOBAL;y=-1.5}
+  - effect:particles{particle=squid_ink;amount=15;hS=.25;vS=.25;speed=.01;repeat=80;repeatInterval=3} @ModelPart{m=direwolf;p=head;offset=GLOBAL;y=-1.5}
+  - effect:particles{particle=squid_ink;amount=15;hS=.25;vS=.25;speed=.01;repeat=80;repeatInterval=3} @ModelPart{m=direwolf;p=shoulders;offset=GLOBAL;y=-1.5}
+  - delay 2
+  - model{mid=direwolf;r=true} @self

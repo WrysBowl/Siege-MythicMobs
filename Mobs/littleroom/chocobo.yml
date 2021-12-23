@@ -1,0 +1,18 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+chocobo:
+  Type: LLAMA
+  Display: 'Chocobo'
+  Health: 50
+  Options:
+    PreventOtherDrops: true
+    MovementSpeed: .6
+    Silent: true
+  Skills:
+  - sound{s=littleroom_chocobo:littleroom.chocobo.chocobo1;v=1;sc=HOSTILE} @self ~onInteract
+  - model{mid=chocobo;n=false;d=false;mount=true;drive=true} @self ~onSpawn
+  - BodyClamp{mid=chocobo;c=20} @self ~onSpawn
+  - mountmodel @trigger ~onInteract

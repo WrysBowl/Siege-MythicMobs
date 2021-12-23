@@ -1,0 +1,82 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+phoenixPETPET:
+  Cooldown: 6
+  TriggerConditions:
+  - holding{m=NETHER_WART} false
+  Skills:
+  - setAI{ai=false}
+  - state{s=pet} @self
+  - delay 20
+  - sound{s=littleroom_phoenix:littleroom.phoenix.petfire;v=1;sc=HOSTILE} @self 
+  - projectile{bulletType=MOB;mob=phoenixFLAMETHROWERFX_smallPET;v=8;i=1;hR=1;vR=1;mr=4;syo=2;ac=.98;hp=false;tyo=2;sfo=-1;repeat=20;repeatInterval=1}
+  - projectile{bulletType=MOB;mob=phoenixFLAMETHROWERFX_mediumPET;v=6;i=1;hR=1;vR=1;mr=4;syo=2;ac=.98;hp=false;tyo=2;sfo=-1;repeat=20;repeatInterval=1}
+  - delay 40
+  - setAI{ai=true}
+  
+phoenixFLAMETHROWERFX_smallPET:
+  Skills:
+  - delay 1
+  - ignite{ticks=16} @self
+  
+phoenixFLAMETHROWERFX_mediumPET:
+  Skills:
+  - delay 10
+  - ignite{ticks=16} @self
+  
+phoenixPETSPAWN:
+  Skills:
+  - setAI{ai=false}
+  - summon{t=phoenixPETEGG} @self
+  - delay 40
+  - sound{s=littleroom_phoenix:littleroom.phoenix.scream1;v=.25;sc=HOSTILE;p=1.5} @self 
+  - jump{v=.5} @self
+  - state{s=spawn} @self
+  - defaultstate{m=phoenix_pet;t=IDLE;s=idle_hatch} @self
+  - setAI{ai=true}
+  
+  
+phoenixPETDESPAWN:
+  Skills:
+  - summon{t=phoenixPETEGG} @selflocation{y=0}
+  - remove @self
+  
+phoenix_egg_pet_lifespan:
+  Skills:
+  - delay 40
+  - effect:particles{particle=lava;amount=15;hS=.25;vS=.25} @self
+  - effect:particles{particle=flame;amount=50;hS=.25;vS=.25;speed=.1} @self
+  - delay 1
+  - remove @self
+  
+  
+phoenixPETFEED:
+  Cooldown: 6
+  TriggerConditions:
+  - holding{m=NETHER_WART} true
+  - targetwithin{d=2} true
+  Skills:
+  - setAI{ai=false}
+  - state{s=eat_wart} @self
+  - look{headOnly=true;immediately=true;repeat=30;repeatInterval=1} @Trigger
+  - sound{s=littleroom_phoenix:littleroom.phoenix.meep;v=1;sc=HOSTILE} @self 
+  - delay 10
+  - command{c="clear <trigger.name> NETHER_WART 1"} @trigger
+  - ChangePart{mid=phoenix_pet;pid=head;nmid=phoenix_pet_parts;npid=head} @self
+  - effect:particles{particle=block;m=nether_wart;amount=5;speed=.1;repeat=5;repeatInterval=4} @ModelPart{m=deadbeard_pet;p=head;offset=LOCAL;z=-.25}
+  - delay 5
+  - sound{s=entity.generic.eat;repeat=5;repeatInterval=4} @self
+  - delay 15
+  - ChangePart{mid=phoenix_pet;pid=head;nmid=phoenix_pet;npid=head} @self
+  - effect:particles{particle=heart;amount=1} @selflocation{y=1.5}
+  - sound{s=entity.player.burp} @self
+  - delay 10
+  - setAI{ai=true}
+  
+phoenixBURNENEMIES:
+  Skills:
+  - ignite{ticks=40}

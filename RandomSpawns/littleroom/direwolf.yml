@@ -1,0 +1,43 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+RandomDirewolf:
+  MobType: direwolf_forest
+  Worlds: world
+  Chance: 0.008
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - lunarphase{p=0} true
+  - night{} true
+  - biome FOREST,DARK_FOREST,MODIFIED_JUNGLE,DARK_FOREST_HILLS true
+  - outside true
+  - onblock{b=GRASS_BLOCK,DIRT,STONE}
+  
+RandomDirewolftaiga:
+  MobType: direwolf_taiga
+  Worlds: world
+  Chance: 0.008
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - lunarphase{p=0} true
+  - night{} true
+  - biome SNOWY_TUNDRA,SNOWY_MOUNTAINS,SNOWY_BEACH,SNOWY_TAIGA,SNOWY_TAIGA_HILLS,SNOWY_TAIGA_MOUNTAINS,SNOWY_TUNDRA,SNOWY_MOUNTAINS true
+  - outside true
+  - onblock{b=GRASS_BLOCK,DIRT,STONE,SNOW}
+  
+RandomDirewolfdesert:
+  MobType: direwolf_desert
+  Worlds: world
+  Chance: 0.008
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - lunarphase{p=0} true
+  - night{} true
+  - biome DESERT,DESERT_HILLS,DESERT_LAKES,BADLANDS,BADLANDS_PLATEAU,MODIFIED_BADLANDS_PLATEAU,ERODED_BADLANDS true
+  - outside true
+  - onblock{b=GRASS_BLOCK,DIRT,STONE}

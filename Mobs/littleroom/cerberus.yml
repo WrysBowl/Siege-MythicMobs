@@ -1,0 +1,130 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+cerberus:
+  Type: IRON_GOLEM
+  Display: 'Cerberus'
+  Faction: CERBERUS
+  BossBar:
+    Enabled: true
+    Title: 'Cerberus'
+    Range: 20
+    Color: RED
+    Style: SOLID
+  Health: 1000
+  Damage: 1  
+  DamageModifiers:
+  - LAVA 0
+  - FIRE 0
+  - FIRE_TICK 0
+  Equipment:
+  - torch HAND
+  - torch OFFHAND
+  AITargetSelectors:
+  - 0 players
+  Modules:
+    ThreatTable: true
+  Options:
+    Collidable: false
+    #MovementSpeed: .3
+    Silent: true
+    MaxCombatDistance: 32
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    FollowRange: 32
+  Skills:
+  - skill{s=cerberusDEATH} @self ~onDeath
+  - potion{type=INVISIBILITY;duration=200;level=1;p=false} @self ~onTimer:20
+  - skill{s=cerberusSPAWN} @self ~onSpawn
+  - randomskill{skills=cerberusRANDOMBARK,cerberusRANDOMGROWL} @self ~onTimer:60 .6
+  - skill{s=cerberusCHAINS} @self ~onTimer:50
+  - skill{s=cerberusLAVAMOUTH} @self ~onTimer:6
+  - skill{s=cerberusFLINCHHIT} @self ~onDamaged
+  - skill{s=cerberusFLINCH75;sync=true} @self ~onDamaged <75%
+  - skill{s=cerberusFLINCH50;sync=true} @self ~onDamaged <50%
+  - skill{s=cerberusFLINCH25;sync=true} @self ~onDamaged <25%
+  - throw{velocity=5;velocityY=0} @EIR{r=3} ~onTimer:1
+  - randomskill{s=cerberusSWINGsync,cerberusBITEsync,cerberusSWIPEsync;sync=true} @self ~onAttack
+  - skill{s=cerberusSTOMP} @self ~onTimer:45
+  - skill{s=cerberusSLEEP} @self ~onSpawn
+  - skill{s=cerberusWAKE} @self ~onTimer:5
+  - signal{s=BOWLFLIP} @EntitiesInRadius{r=6} ~onTimer:2
+  - summon{t=cerberus_bowl;a=3;os=true;r=4} @Forward{f=12;y=3.0;sideOffset=0.0} ~onSpawn
+  - model{mid=cerberus;n=false;i=false} @self ~onSpawn
+  - skill{s=cerberusRIVEROFSTYX} @target ~onTimer:20
+  - DefaultState{m=cerberus;t=WALK;s=gallop} @self ~onEnterCombat
+  - DefaultState{m=cerberus;t=WALK;s=walk} @self ~onDropCombat
+  
+cerberus_hellhound:
+  Type: IRON_GOLEM
+  Display: 'Hell Hound'
+  Faction: CERBERUS
+  Health: 25
+  Damage: 1
+  AITargetSelectors:
+  - 0 players
+  Modules:
+    ThreatTable: true
+  Options:
+    Collidable: false
+    MovementSpeed: .5
+    Silent: true
+    MaxCombatDistance: 32
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    FollowRange: 32
+  Skills:
+  - effect:particles{particle=squid_ink;amount=5;hS=.5;vS=.5} @self ~onTimer:1
+  - skill{s=cerberus_hellhoundSPAWN} @self ~onSpawn
+  - skill{s=cerberus_hellhoundBITEsync;sync=true} @self ~onAttack
+  - model{mid=hellhound;n=false} @self ~onSpawn
+  
+cerberus_bowl:
+  Type: ARMOR_STAND
+  Options:
+    Silent: true
+    MovementSpeed: 0
+    Invincible: true
+    PreventOtherDrops: true
+  Display: 'Cerberus Bowl'
+  Health: 100
+  Damage: 0
+  Skills:
+  - model{mid=cerberus_bowl;n=false} @self ~onSpawn
+  - skill{s=cerberus_bowl_fling} @parent ~onSignal:BOWLFLIP
+  - skill{s=cerberus_bowl_land} @self ~onTimer:2
+  
+cerberus_groundfx:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+  Display: 'River of Styx'
+  Health: 100
+  Damage: 0
+  Skills:
+  - skill{s=cerberus_riverofstyxfxSPAWN} @self ~onSpawn
+  - model{mid=cerberus_groundfx;n=false} @self ~onSpawn
+  
+cerberus_sleep:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+  Display: 'cerberus sleep'
+  Health: 100
+  Damage: 0
+  Skills:
+  - skill{s=cerberus_sleepFX} @self ~onSpawn
+  - model{mid=cerberus_sleep;n=false} @self ~onSpawn
+  
+cerberus_chains:
+  Type: ARMOR_STAND
+  Options:
+    HasGravity: false
+  Display: 'cerberus chains'
+  Health: 100
+  Damage: 0
+  Skills:
+  - skill{s=cerberus_chainsSPAWN} @self ~onSpawn
+  - model{mid=cerberus_chains;n=false} @self ~onSpawn

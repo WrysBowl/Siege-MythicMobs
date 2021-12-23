@@ -1,0 +1,27 @@
+deadbeardsCorsair:
+  Id: carved_pumpkin
+  Display: '&fDead-Beards Corsair'
+  Model: 1
+  Lore:
+  - '&8&oIt glows with ectoplasm!'
+  
+crewmatesBandana:
+  Id: carved_pumpkin
+  Display: '&fCrew-mates Bandana'
+  Model: 2
+  Lore:
+  - '&8&oIt glows with ectoplasm!'
+  
+deadbeardsHook:
+  Id: diamond_sword
+  Display: '&fDead-Beards Hook'
+  Model: 1
+  Lore:
+  - '&8&oIt glows with ectoplasm!'
+  
+deadbeardsFlintlock:
+  Id: stick
+  Display: '&fDead-Beards Flintlock'
+  Model: 1
+  Lore:
+  - '&8&oIt glows with ectoplasm!'

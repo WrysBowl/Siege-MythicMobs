@@ -1,0 +1,35 @@
+﻿
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+robolumberjackPET:
+  Type: CAT
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+   - model{mid=pet_robolumberjack;n=false} @self ~onSpawn
+   - skill{s=robolumberjackPETPET} @self ~onInteract
+   - skill{s=robolumberjackPETSPAWN} @self ~onSpawn
+   - effect:particles{particle=large_smoke;amount=1;hS=.25;vS=.25;d=true;dir=0,1,0} @forward{y=1;f=-.5} ~onTimer:15
+  Display: "§bRobot Lumberjack"
+  Health: 100
+  Damage: 0
+  Options:
+    Collidable: false
+    Invincible: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    PreventItemPickup: true
+    PreventRandomEquipment: true

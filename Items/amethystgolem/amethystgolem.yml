@@ -1,0 +1,25 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+amethyst_sword:
+  Id: NETHERITE_SWORD
+  Model: 1
+  Display: '&fAmethyst Sword'
+  
+amethyst_axe:
+  Id: NETHERITE_AXE
+  Model: 1
+  Display: '&fAmethyst Axe'
+  
+amethyst_shield:
+  Id: SHIELD
+  Model: 1
+  Display: '&fAmethyst Shield'
+  
+amethyst_shard:
+  Id: PAPER
+  Model: 1
+  Display: '&fAmethyst Shard'
+  

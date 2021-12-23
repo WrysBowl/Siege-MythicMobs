@@ -1,0 +1,9 @@
+medusa_head:
+  Id: PAPER
+  Display: '&r&fMedusa Head'
+  Model: 1
+  
+medusa_bow:
+  Id: BOW
+  Display: '&r&fMedusa Bow'
+  Model: 1

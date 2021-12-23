@@ -1,0 +1,14 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+RandomMythril:
+  MobType: MYTHRIL
+  Worlds: world
+  Chance: .01
+  Priority: 1
+  Action: REPLACE
+  Conditions:
+  - blocktype{type=water} false
+  - outside false
+  - heightbelow{h=50} true

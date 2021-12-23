@@ -1,0 +1,39 @@
+
+#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+
+robolumberjackPETPET:
+  Cooldown: 6
+  Skills:
+  - state{s=pet} @self
+  - delay 12
+  - skill{s=robolumberjackCUTGRASS} @forward{f=1}
+  - delay 12
+  - skill{s=robolumberjackCUTGRASS} @forward{f=1}
+  
+robolumberjackCUTGRASS:
+  TargetConditions:
+  - blocktype{t=grass} true
+  Skills:
+  - breakblock{forcesync=true;doEffect=true;doDrops=true;useTool=false} @forward{f=.5}
+  - effect:particles{particle=block;m=grass;amount=10;hS=.5;vS=.5} @forward{f=.5}
+  
+robolumberjackPETSPAWN:
+  Skills:
+  - delay 1
+  - effect:particles{particle=cloud;amount=50;hS=.5;vS=.5} @ModelPart{m=pet_robolumberjack;p=body}
+  - state{s=spawn} @self
+  - delay 10
+  - sound{s=minecraft:block.piston.contract;v=.5} @self
+  
+robolumberjackPETDESPAWN:
+  Skills:
+  - setAI{ai=false}
+  - velocity{m=set;x=0;y=0;z=0;repeat=20;repeatInterval=1} @self
+  - state{s=despawn} @self
+  - sound{s=minecraft:block.piston.extend;v=.5} @self
+  - delay 18
+  - effect:particles{particle=cloud;amount=50;hS=.5;vS=.5} @ModelPart{m=pet_robolumberjack;p=body}
+  - remove @self
