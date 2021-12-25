@@ -1,7 +1,7 @@
 MagmaSpirit:
  Type: MAGMA_CUBE
  Display: '&4Magma Spirit'
- Health: 1750
+ Health: 1200
  Damage: 20
  Faction: Boss
  BossBar:
