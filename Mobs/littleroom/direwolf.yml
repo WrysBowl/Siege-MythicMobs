@@ -24,8 +24,6 @@ direwolf_desert:
     KnockbackResistance: 1
     PreventBlockInfection: true
     FollowRange: 25
-  Drops:
-  - DirewolfHeadDesert 1 1
   Skills:
   - sound{s=littleroom_direwolf:littleroom.direwolf.idle;v=.5} @self ~onTimer:60 .25
   - model{mid=direwolf_desert;n=false} @self ~onSpawn
@@ -54,8 +52,6 @@ direwolf_taiga:
     KnockbackResistance: 1
     PreventBlockInfection: true
     FollowRange: 25
-  Drops:
-  - DirewolfHeadTaiga 1 1
   Skills:
   - sound{s=littleroom_direwolf:littleroom.direwolf.idle;v=.5} @self ~onTimer:60 .25
   - model{mid=direwolf_taiga;n=false} @self ~onSpawn
@@ -84,8 +80,6 @@ direwolf_forest:
     KnockbackResistance: 1
     PreventBlockInfection: true
     FollowRange: 25
-  Drops:
-  - DirewolfHeadForest 1 1
   Skills:
   - sound{s=littleroom_direwolf:littleroom.direwolf.idle;v=.5} @self ~onTimer:60 .25
   - model{mid=direwolf;n=false} @self ~onSpawn

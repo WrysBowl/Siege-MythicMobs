@@ -7,9 +7,6 @@ jellycreep:
   Health: 5
   Type: SLIME
   Display: Jelly Creeper
-  Drops:
-  - SLIME_BALL 2 1
-  - GUNPOWDER 1 1
   Options:
     PreventSlimeSplit: true
     Size: 2
