@@ -5,9 +5,9 @@
 
 amethystgolem:
   Type: IRON_GOLEM
-  Display: 'amethyst golem'
+  Display: '&5Amethyst Golem'
   Damage: 0
-  Health: 750
+  Health: 5000
   Faction: GOLEM
   Modules:
     ThreatTable: true
@@ -17,6 +17,12 @@ amethystgolem:
   Options:
     FollowRange: 24
     PreventOtherDrops: true
+  BossBar:
+    Enabled: true
+    Title: '&5Amethyst Golem'
+    Range: 40
+    Color: RED
+    Style: SOLID
   Skills:
   - skill{s=amethystgolemSPAWN} @self ~onSpawn
   - skill{s=AMETHYSTGOLEMdeath} @self ~onDeath
