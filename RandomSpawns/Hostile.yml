@@ -26,34 +26,6 @@ RandomZombifiedDigger:
   - distancefromspawn{d=>150} true
   - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,BROWN_CONCRETE_POWDER} true
   
-RandomOrc:
-  MobType: Orc
-  Worlds: Hilly_Woods
-  Chance: 0.01
-  Priority: 1
-  Action: ADD
-  PointType: LAND
-  Conditions:
-  - night{} true
-  - outside{} true
-  - height{h=60to80} true
-  - distancefromspawn{d=>200} true
-  - onBlock{b=GRASS_BLOCK,GREEN_CONCRETE,GREEN_TERRACOTTA} true
-  
-RandomOgre:
-  MobType: Ogre
-  Worlds: Hilly_Woods
-  Chance: 0.001
-  Priority: 1
-  Action: ADD
-  PointType: LAND
-  Conditions:
-  - night{} true
-  - outside{} true
-  - height{h=60to100} true
-  - distancefromspawn{d=>300} true
-  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,BROWN_CONCRETE_POWDER} true
-  
 RandomGoblin:
   MobType: Goblin
   Worlds: Hilly_Woods
