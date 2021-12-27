@@ -1,6 +1,6 @@
 BlackEyes:
  Conditions:
- - playernotwithin{d=8}
+ - playernotwithin{d=3}
  Skills:
   - sound{s=entity.enderman.teleport;p=0.86} @self
   - potion{type=INVISIBILITY;duration=60;level=1} @Self
@@ -9,8 +9,7 @@ BlackEyes:
 
 LichFloat:
  Conditions:
-  - targetinlineofsight{} false
-  - playernotwithin{d=6}
+  - playernotwithin{d=3}
  Skills:
   - potion{type=LEVITATION;duration=100;level=1} @self
   - delay 60
@@ -32,7 +31,7 @@ SoulEating:
 
 DarkRise:
  Conditions:
-  - playernotwithin{d=6}
+  - playernotwithin{d=3}
  Skills:
   - effect:particlesphere{particle=dragon_breath;amount=300;radius=7} @self
   - effect:bloodyScreen{d=160} @PIR{r=5}
@@ -44,7 +43,7 @@ DarkRise:
 
 SoulShot:
  Conditions:
- - playernotwithin{d=6}
+ - playernotwithin{d=3}
  Skills:
   - sound{s=entity.elder_guardian.curse;p=0.82;v=1} @self
   - effect:particles{particle=squid_ink;amount=60;hS=2;vS=2} @self
@@ -64,7 +63,7 @@ SoulShot-Hit:
 
 SoulSucker:
  Conditions:
-  - playernotwithin{d=6}
+  - playernotwithin{d=3}
  Skills:
   - effect:particles{particle=squid_ink;amount=60;hS=3;vS=3} @self
   - delay 80

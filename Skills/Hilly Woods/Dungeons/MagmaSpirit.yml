@@ -1,6 +1,6 @@
 Flamethrower:
  Conditions:
- - playernotwithin{d=6}
+ - playernotwithin{d=3}
  Skills:
   - sound{s=entity.blaze.shoot;p=0.5} @Self
   - aura{i=1;d=120;oT=FlamethrowerProjectile} @Self

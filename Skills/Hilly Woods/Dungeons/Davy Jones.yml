@@ -15,7 +15,7 @@ WaterShellDefense:
 
 WaterBoltAttack:
   Conditions:
-  - playernotwithin{d=6}
+  - playernotwithin{d=3}
   Skills:
   - runaigoalselector{goal=clear}
   - runaigoalselector{goal=fleeplayers}
@@ -44,7 +44,7 @@ WaterBolt-Hit:
 
 TridentLightningAttack:
   Conditions:
-    - playernotwithin{d=6}
+    - playernotwithin{d=3}
   Skills:
     - runaigoalselector{goal=clear}
     - runaigoalselector{goal=fleeplayers}
@@ -79,7 +79,7 @@ DavyJonesLockerAttack:
 
 WaterSpoutAttack:
   Conditions:
-  - playernotwithin{d=6}
+  - playernotwithin{d=3}
   Skills:
   - pull{v=12} @PlayersInRadius{r=12}
   - delay 10

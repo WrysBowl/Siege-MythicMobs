@@ -25,7 +25,7 @@ NecromancerWitherSkullShoot:
   - shootskull{y=5;v=6;ps=true} @target
 NecromancerPlague:
   Conditions:
-  - playernotwithin{d=6}
+  - playernotwithin{d=3}
   Skills:
   - effect:particles{particle=reddust;color=#455241;amount=20;hS=3;vS=3;speed=0.4} @origin
   - delay 5

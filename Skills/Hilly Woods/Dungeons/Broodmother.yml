@@ -1,6 +1,6 @@
 BroodmotherPoisonBolt:
   Conditions:
-  - playernotwithin{d=6}
+  - playernotwithin{d=3}
   Skills:
   - stun{d=45} @self
   - effect:particles{p=happy_villager;a=15;s=0.05;hs=0.5;vs=0.1} @self
@@ -21,7 +21,7 @@ BroodmotherPoisonBolt-Hit:
 
 BroodmotherWebArea:
   Conditions:
-  - playernotwithin{d=6}
+  - playernotwithin{d=3}
   Skills:
   - sound{s=entity.spider.hurt} @Self
   - delay 10
@@ -39,7 +39,7 @@ BroodmotherWebArea-Hit:
 
 BroodmotherWebBolt:
   Conditions:
-  - playernotwithin{d=6}
+  - playernotwithin{d=3}
   Skills:
   - effect:particles{p=sneeze;a=15;s=0.05;hs=0.5;vs=0.1} @origin
   - delay 15

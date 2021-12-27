@@ -1,6 +1,6 @@
 SlimeConsuming:
  Conditions:
- - playernotwithin{d=8}
+ - playernotwithin{d=5}
  Skills:
   - pull{velocity=20;to=true} @target
   - delay 10
@@ -9,7 +9,7 @@ SlimeConsuming:
 
 SlimeSpiritBullDoze:
  Conditions:
-  - playernotwithin{d=7}
+  - playernotwithin{d=6}
  Skills:
   - effect:particles{p=slime;amount=3;speed=0;hS=0.3;vS=0.3} @origin
   - delay 10
