@@ -30,6 +30,6 @@ Broodmother:
   - skill{s=BroodmotherWebArea} ~onTimer:100 0.5
   - skill{s=BroodmotherPoisonGas} ~onTimer:120 0.6
   - skill{s=BroodmotherPoisonBolt} ~onTimer:140
-  - skill{s=BroodmotherEncase} ~onAttack 0.3
+  - skill{s=BroodmotherEncase} ~onAttack 0.1
   - skill{s=BroodmotherBeam;repeat=2;repeatInterval=10} ~onTimer:300
   - skill{s=BroodmotherExplosionProjectiles} ~onTimer:600 0.5
