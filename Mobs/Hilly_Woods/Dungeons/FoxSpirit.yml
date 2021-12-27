@@ -39,8 +39,8 @@ FoxSpirit:
   - skill{s=FoxDeathSound} @self ~onDeath
   - skill{s=FoxScreechSound} @self ~onDeath
   - skill{s=FoxHurtSound} @self ~onDamaged
-  - skill{s=FoxSpiritClone} @self ~onTimer:600
-  - skill{s=FoxTrap} @target ~onTimer:500
+  - skill{s=FoxSpiritClone} @self ~onTimer:400
+  - skill{s=FoxTrap} @target ~onTimer:200
   - skill{s=FoxLightning} @self ~onDamaged 0.1
   - summon{t=FoxSpiritHealingOrb;itt=false;amount=2;cooldown=20;radius=4} ~onDamaged
   - heal{a=<skill.var.damage-amount>/4} @self ~onAttack

@@ -17,7 +17,7 @@ FoxTrapTick:
     - effect:particles{p=smoke;a=10} @origin
 FoxTrapHit:
   Skills:
-    - damage{a=2} # Adjust damage
+    - damage{a=20} # Adjust damage
     - stun{d=200} # Stun duration
     - sound{s=entity.iron_golem.repair;p=0.3;v=1}
     - sound{s=entity.zombie.attack_iron_door;p=0.3;v=0.3}
@@ -38,6 +38,6 @@ FoxLightningHit:
 FoxOrbHeal:
   Skills:
     - effect:particleline{particle=villager_happy;amount=5;syo=1.5;tyo=1.5} @parent
-    - heal{a=1} @parent
+    - heal{a=5} @parent
     - effect:particles{p=villager_happy;a=20;hS=1;vS=1.5} @parent
     - effect:sound{s=entity.player.levelup;pitch=2} @parent
