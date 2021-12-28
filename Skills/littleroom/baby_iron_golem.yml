@@ -46,7 +46,7 @@ babyirongolemATTACK:
   - setspeed{speed=0;type=walking}
   - state{s=attack} @self
   - delay 8    
-  - damage{a=1} @target
+  - damage{a=5} @target
   - throw{velocity=1;velocityY=5} @target
   - sound{s=entity.iron_golem.attack;p=3} @self
   - delay 6

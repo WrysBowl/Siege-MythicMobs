@@ -10,7 +10,7 @@ IRON_GOLEM:
 baby_iron_golem:
   Type: IRON_GOLEM
   Name: 'Baby Iron Golem'
-  Health: 25
+  Health: 100
   AIGoalSelectors:
   - meleeattack
   - gotoparent
