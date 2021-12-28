@@ -28,6 +28,7 @@ FoxSpirit:
     PreventOtherDrops: true
     PreventRandomEquipment: true
     PreventSunburn: true
+    Despawn: false
     FollowRange: 70
     MovementSpeed: 0.38
     KnockbackResistance: 0.75

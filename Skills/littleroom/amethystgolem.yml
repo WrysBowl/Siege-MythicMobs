@@ -41,7 +41,7 @@ amethystspikespawn1:
   - effect:particles{particle=block_crack;m=stone;amount=100;hS=.5;vS=.15} @self
   - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.1;sc=HOSTILE;p=.12} @self
   - throw{v=5;vy=5} @PIR{r=3}
-  - damage{amount=3} @PIR{r=3}
+  - damage{amount=50} @PIR{r=3}
   - delay 60
   - effect:particles{particle=block_crack;m=magenta_wool;amount=100;hS=.25;vS=.5} @self
   - explosion{yield=1} @self
@@ -55,7 +55,7 @@ amethystspikespawn2:
   - effect:particles{particle=block_crack;m=stone;amount=100;hS=.5;vS=.15} @self
   - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.1;sc=HOSTILE;p=.8} @self
   - throw{v=5;vy=5} @PIR{r=3}
-  - damage{amount=3} @PIR{r=3}
+  - damage{amount=50} @PIR{r=3}
   - delay 60
   - effect:particles{particle=block_crack;m=magenta_wool;amount=100;hS=.25;vS=.5} @self
   - explosion{yield=1} @self
@@ -70,7 +70,7 @@ amethystspikespawn3:
   - effect:particles{particle=block_crack;m=stone;amount=100;hS=.5;vS=.15} @self
   - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.1;sc=HOSTILE} @self
   - throw{v=5;vy=5} @PIR{r=3}
-  - damage{amount=3} @PIR{r=3}
+  - damage{amount=50} @PIR{r=3}
   - delay 60
   - effect:particles{particle=block_crack;m=magenta_wool;amount=100;hS=.25;vS=.5} @self
   - explosion{yield=1} @self
@@ -100,7 +100,7 @@ AMETHYSTGOLEMarmslamATTACK:
 AMETHYSTGOLEMarmslamDAMAGE:
   Skills:
   - throw{v=8;vy=4} @EIR{r=6}
-  - damage{amount=8} @PIR{r=6}
+  - damage{amount=60} @PIR{r=6}
   - effect:particles{particle=block_crack;m=amethyst_block;amount=25;hS=.5;vS=.5} @ModelPart{m=amethystgolem;p=lefthand}
   
   
@@ -132,7 +132,7 @@ AMETHYSTGOLEMfootpoundDAMAGE:
   Skills:
   - projectile{onTick=AMETHYSTGOLEMfootpoundSPIKES;v=12;i=4;hR=1;vR=1;syo=0;hs=true;hfs=-0;hp=false} @Target
   - throw{v=5;vy=10} @PIR{r=6}
-  - damage{amount=5} @PIR{r=6}
+  - damage{amount=50} @PIR{r=6}
   - effect:particles{particle=block_crack;m=amethyst_block;amount=25;hS=.5;vS=.5} @ModelPart{m=amethystgolem;p=lefthand}
   
 AMETHYSTGOLEMfootpoundSPIKES:
@@ -337,7 +337,7 @@ amethystshardATTACKskill:
 
 amethystshardATTACKDAMAGE:
   Skills:
-  - damage{amount=1} @PIR{r=2}
+  - damage{amount=15} @PIR{r=2}
   
   
 amethystshardDEATH:

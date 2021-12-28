@@ -23,7 +23,7 @@ axolotlSTOMPskill:
   - delay 20
   - lunge{velocity=1;velocityY=0} @NearestPlayer{r=5}
   - delay 5
-  - damage{a=4} @PIR{r=2}
+  - damage{a=20} @PIR{r=2}
   
 axolotlVOMITspawn:
   Skills:

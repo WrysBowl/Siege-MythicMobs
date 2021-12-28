@@ -3,11 +3,11 @@
 ## Developed by Little Room, patreon.com/littleroomdev ##
 #########################################################
 
-amethystgolem:
+Amethyst_Golem:
   Type: IRON_GOLEM
   Display: '&5Amethyst Golem'
   Damage: 0
-  Health: 5000
+  Health: 15000
   Faction: GOLEM
   Modules:
     ThreatTable: true
@@ -19,14 +19,14 @@ amethystgolem:
     PreventOtherDrops: true
   BossBar:
     Enabled: true
-    Title: '&5Amethyst Golem'
-    Range: 40
-    Color: RED
+    Title: '&dAmethyst Golem'
+    Range: 50
+    Color: PURPLE
     Style: SOLID
   Skills:
   - skill{s=amethystgolemSPAWN} @self ~onSpawn
   - skill{s=AMETHYSTGOLEMdeath} @self ~onDeath
-  - skill{s=AMETHYSTGOLEMfootpound} @self ~onTimer: 120 .5
+  - skill{s=AMETHYSTGOLEMfootpound} @self ~onTimer: 80 .5
   - randomskill{skills=AMETHYSTGOLEMfootpound,AMETHYSTGOLEMarmslam;sync=true} @self ~onAttack
   - skill{s=AMETHYSTGOLEMshardtoss1} @self ~onTimer:240 .75
   - skill{s=AMETHYSTGOLEMshardtoss2} @self ~onTimer:240 .75
@@ -46,10 +46,10 @@ amethystpupa:
   
 
 
-amethystshard:
+Amethyst_Shard:
   Type: HUSK
-  Display: 'amethyst shard'
-  Health: 50
+  Display: '&2Amethyst Shard'
+  Health: 100
   Damage: 0
   Faction: GOLEM
   Options:
@@ -57,6 +57,12 @@ amethystshard:
     FollowRange: 32
     PreventOtherDrops: true
     Silent: true
+  BossBar:
+    Enabled: true
+    Title: '&2Amethyst Shard'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   AITargetSelectors:
   - 0 clear
   - 1 players
