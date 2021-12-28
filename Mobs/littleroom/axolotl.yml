@@ -3,13 +3,19 @@
 ## Developed by Little Room, patreon.com/littleroomdev ##
 #########################################################
 
-axolotl_fire:
+Axolotl_Fire:
   Type: STRIDER
-  Health: 15
+  Health: 200
   Display: 'Fire Axolotl'
   AIGoalSelectors:
   - clear
   - randomstroll
+  BossBar:
+    Enabled: true
+    Title: '&2Fire Axolotl'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Options:
     Silent: false
     KnockbackResistance: 1
@@ -48,12 +54,18 @@ fireaxolotlVOMIT:
   
   
   
-axolotl_colossal:
+Axolotl_Colossal:
   Type: TURTLE
-  Health: 15
+  Health: 250
   Display: 'Colossal Axolotl'
   AIGoalSelectors:
   - randomstroll
+  BossBar:
+    Enabled: true
+    Title: '&2Colossal Axolotl'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Options:
     Silent: true
     KnockbackResistance: 1
@@ -90,12 +102,18 @@ wateraxolotlVOMIT:
   
   
   
-axolotl_ice:
+Axolotl_Ice:
   Type: TURTLE
-  Health: 15
-  Display: 'Colossal Axolotl'
+  Health: 150
+  Display: 'Ice Axolotl'
   AIGoalSelectors:
   - randomstroll
+  BossBar:
+    Enabled: true
+    Title: '&2Ice Axolotl'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Options:
     Silent: true
     KnockbackResistance: 1
