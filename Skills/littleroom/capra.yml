@@ -109,7 +109,7 @@ capraATTACKskill:
 
 capraATTACKDamage:
   Skills:
-  - damage{amount=10} @target
+  - damage{amount=70} @target
   - effect:particles{particle=block_crack;m=redstone_block;amount=45;hS=.25;vS=1;speed=.01} @target
   - effect:particles{particle=flame;amount=15;hS=.25;vS=.25;speed=.01} @origin
   - ignite{ticks=20} @target
@@ -146,7 +146,7 @@ capraGLIDE:
   
 capraGLIDEDamage:
   Skills:
-  - damage{a=8} @PIR{r=3}
+  - damage{a=75} @PIR{r=3}
   - throw{velocity=4;velocityY=8} @PIR{r=3}
   
   
@@ -240,7 +240,7 @@ meteorimpact:
   Skills:
   - effect:explosion @self
   - throw{velocity=8;velocityY=6} @PIR{r=12}
-  - damage{a=10} @PIR{r=12}
+  - damage{a=120} @PIR{r=12}
   - ignite{ticks=100} @PIR{r=4}
   - effect:blockmask{m=fire;r=1;d=60;oa=true} @origin
   - effect:particles{p=flash;amount=5;speed=1} @origin
@@ -290,7 +290,7 @@ capraDESPAIRreturn:
 capraDESPAIRdamage:
   Skills:
   - throw{velocity=2;velocityY=3}
-  - damage{a=8}
+  - damage{a=60}
   - ignite{ticks=20}
   - effect:particles{p=flame;amount=25;speed=0;hS=.25;vS=.25} @origin
   
@@ -382,7 +382,7 @@ capraDEATH:
   - delay 10
   - ChangePart{model=capra;part=scythe;newmodel=capra;newpart=scythe} @self
   - delay 15
-  - damage{amount=20} @children
+  - damage{amount=100} @children
   - delay 30
   - effect:particlesphere{particle=large_smoke;amount=20;radius=1.5;repeat=17;repeatInterval=5;size=1} @Forward{f=0;y=0.0}
   - effect:particlering{particle=campfire_cosy_smoke;radius=1.5;points=32;amount=1;hS=0.15;vS=0.15;repeat=4;repeatInterval=5} @Forward{f=0;y=0.0}
@@ -442,7 +442,7 @@ capraimpDEATH:
   - effect:particles{p=flame;amount=5;speed=0;hS=.15;vS=.15;repeat=14;repeatInterval=2} @ModelPart{m=imp;p=lefthand}
   - effect:particles{p=flame;amount=5;speed=0;hS=.15;vS=.15;repeat=14;repeatInterval=2} @ModelPart{m=imp;p=righthand}
   - delay 25
-  - damage{a=3} @PIR{r=6}
+  - damage{a=60} @PIR{r=6}
   - throw{velocity=3;velocityY=6} @PIR{r=6}
   - effect:particles{p=flash} @ModelPart{m=imp;p=imp}
   - effect:blockmask{m=fire;r=1;d=20;oa=true} @ModelPart{m=imp;p=imp}

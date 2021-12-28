@@ -5,15 +5,15 @@
 capra:
   Type: IRON_GOLEM
   Display: Capra
-  Health: 1000
-  Damage: 1
+  Health: 6000
+  Damage: 60
   Modules:
     ThreatTable: true
   BossBar:
     Enabled: true
-    Title: 'Capra the Goat Demon'
-    Range: 20
-    Color: RED
+    Title: '&dCapra'
+    Range: 50
+    Color: PURPLE
     Style: SOLID
     PlayMusic: true
     DarkenSky: true
@@ -58,8 +58,8 @@ capra:
 capra_imp:
   Type: VEX
   Display: Imp
-  Health: 2
-  Damage: 1
+  Health: 80
+  Damage: 5
   AIGoalSelectors:
   - 1 movetowardstarget
   Equipment:
