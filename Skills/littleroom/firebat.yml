@@ -15,7 +15,7 @@ firebatBITE:
   - state{s=bite} @self
   - delay 10
   - sound{s=entity.ravager.attack;p=2} @self
-  - damage{a=1} @PIR{r=2}
+  - damage{a=10} @PIR{r=2}
   - ignite{ticks=40} @PIR{r=2}
   
 firebatFLAP1:
@@ -31,7 +31,7 @@ firebatDEATH:
   Skills:
   - sound{s=entity.hoglin.death;p=2} @self
   - delay 20
-  - damage{a=5} @PIR{r=3}
+  - damage{a=15} @PIR{r=3}
   - ignite{ticks=60} @PIR{r=3}
   - sound{s=entity.firework_rocket.blast} @self
   - sound{s=entity.magma_cube.death;v=10} @self

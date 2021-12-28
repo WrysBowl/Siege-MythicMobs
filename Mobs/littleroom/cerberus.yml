@@ -9,12 +9,12 @@ cerberus:
   Faction: CERBERUS
   BossBar:
     Enabled: true
-    Title: 'Cerberus'
-    Range: 20
-    Color: RED
+    Title: '&dCerberus'
+    Range: 50
+    Color: PURPLE
     Style: SOLID
-  Health: 1000
-  Damage: 1  
+  Health: 10000
+  Damage: 20
   DamageModifiers:
   - LAVA 0
   - FIRE 0
@@ -61,10 +61,16 @@ cerberus_hellhound:
   Type: IRON_GOLEM
   Display: 'Hell Hound'
   Faction: CERBERUS
-  Health: 25
-  Damage: 1
+  Health: 150
+  Damage: 10
   AITargetSelectors:
   - 0 players
+  BossBar:
+    Enabled: true
+    Title: '&2Hell Hound'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Modules:
     ThreatTable: true
   Options:

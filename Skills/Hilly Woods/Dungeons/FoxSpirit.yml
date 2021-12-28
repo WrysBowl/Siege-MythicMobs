@@ -18,11 +18,10 @@ FoxTrapTick:
 FoxTrapHit:
   Skills:
     - damage{a=20} # Adjust damage
-    - stun{d=200} # Stun duration
     - sound{s=entity.iron_golem.repair;p=0.3;v=1}
     - sound{s=entity.zombie.attack_iron_door;p=0.3;v=0.3}
-    - prison{material=GLASS;duration=200;breakable=false}
-    - delay 200
+    - prison{material=GLASS;duration=60;breakable=false}
+    - delay 60
     - sound{s=item.shield.break}
 
 FoxLightning:

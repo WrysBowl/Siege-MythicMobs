@@ -6,7 +6,14 @@
 firebat:
   Type: BEE
   Display: 'Firebat'
-  Health: 5
+  Health: 50
+  Damage: 5
+  BossBar:
+    Enabled: true
+    Title: '&2Fire Bat'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   AIGoalSelectors:
   - meleeattack
   AITargetSelectors:
@@ -20,6 +27,7 @@ firebat:
     MovementSpeed: .1
     Silent: true
     PreventOtherDrops: true
+    AlwaysShowName: false
   Skills:
   - potion{type=INVISIBILITY;duration=130;level=0;p=false} @self ~onTimer:120
   - randomskill{skills=firebatFLAP1,firebatFLAP2} @self ~onTimer:13

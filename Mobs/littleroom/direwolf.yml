@@ -7,13 +7,19 @@
 direwolf_desert:
   Type: IRON_GOLEM
   Display: 'Dire Wolf'
-  Health: 100
-  Damage: 0
+  Health: 200
+  Damage: 10
   Faction: DIREWOLF
   AITargetSelectors:
   - 1 players
   Modules:
     ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '&2Dire Wolf'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Options:
     PreventSunburn: true
     AlwaysShowName: false
@@ -35,13 +41,19 @@ direwolf_desert:
 direwolf_taiga:
   Type: IRON_GOLEM
   Display: 'Dire Wolf'
-  Health: 100
-  Damage: 0
+  Health: 200
+  Damage: 10
   Faction: DIREWOLF
   AITargetSelectors:
   - 1 players
   Modules:
     ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '&2Dire Wolf'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Options:
     PreventSunburn: true
     AlwaysShowName: false
@@ -63,13 +75,19 @@ direwolf_taiga:
 direwolf_forest:
   Type: IRON_GOLEM
   Display: 'Dire Wolf'
-  Health: 100
-  Damage: 0
+  Health: 200
+  Damage: 10
   Faction: DIREWOLF
   AITargetSelectors:
   - 1 players
   Modules:
     ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '&2Dire Wolf'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Options:
     PreventSunburn: true
     AlwaysShowName: false

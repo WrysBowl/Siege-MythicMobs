@@ -28,7 +28,7 @@ deadbeardHOOKDamage:
   TargetConditions:
   - blocking{} false
   Skills:
-  - damage{amount=6} 
+  - damage{amount=60}
   - effect:particles{particle=block_crack;m=redstone_block;amount=25;hS=.5;vS=.5} @PlayersNearOrigin{r=3}
   - skill{s=deadbeardBLEED} @PlayersNearOrigin{r=3}
 
@@ -37,13 +37,13 @@ deadbeardBLEED:
   - blocking{} false
   Skills:
   - actionmessage{m="You are bleeding!"} 
-  - damage{amount=1} 
+  - damage{amount=20}
   - effect:particles{particle=block_crack;m=redstone_block;amount=25;hS=.5;vS=.5} 
   - delay 20
-  - damage{amount=1} 
+  - damage{amount=20}
   - effect:particles{particle=block_crack;m=redstone_block;amount=25;hS=.5;vS=.5} 
   - delay 20
-  - damage{amount=1} 
+  - damage{amount=20}
   - effect:particles{particle=block_crack;m=redstone_block;amount=25;hS=.5;vS=.5} 
   
 deadbeardKICK:
@@ -64,7 +64,7 @@ deadbeardKICKMelee:
 deadbeardKICKDamage:
   Skills:
   - throw{velocity=15;velocityY=2} @PlayersNearOrigin{r=2}
-  - damage{amount=4} @PlayersNearOrigin{r=2}
+  - damage{amount=40} @PlayersNearOrigin{r=2}
 
 deadbeardSHOOT:
   Conditions:
@@ -103,7 +103,7 @@ deadbeardBULLET_HIT:
   - targetinlineofsight{} true
   Skills:
   - potion{type=SLOW;duration=20;level=3} @target
-  - damage{amount=10} @target
+  - damage{amount=100} @target
   - effect:particles{particle=block_crack;m=redstone_block;amount=50;hS=.5;vS=1} @target
   - throw{velocity=2;velocityY=2} @target
   - sound{s=littleroom_deadbeard:littleroom.deadbeard.laugh} @self .25
@@ -131,7 +131,7 @@ deadbeardTNT:
   - delay 12
   - changepart{model=deadbeard;part=empty;newmodel=deadbeard;newpart=tnt} @self
   - delay 15
-  - summon{type=tnt_barrel} @Forward{f=1.0;y=.5}
+  - summon{type=tnt_barrel} @Forward{f=1.0;y=.1}
   - changepart{model=deadbeard;part=empty;newmodel=deadbeard;newpart=empty} @self
   - state{s=kick} @self
   - delay 15
@@ -155,7 +155,7 @@ tntEXPLODE:
   - effect:particlering{particle=large_smoke;radius=2;points=16;amount=12;speed=.001} @Forward{f=0;y=3.0}
   - effect:particles{particle=large_smoke;hS=1;vS=0;amount=25;speed=.01} @self
   - throw{velocity=5;velocityY=5} @PIR{r=6}
-  - damage{amount=10} @PlayersInRadius{r=5}
+  - damage{amount=200} @PlayersInRadius{r=5}
   - explosion{yield=1;bd=false;ft=false} @self
 
   
@@ -207,13 +207,13 @@ birdmanSWARM:
   - potion{type=BLINDNESS;duration=80;level=1} @PlayersInRadius{r=2}
   - state{s=swarm} @self
   - delay 20
-  - damage{amount=1;ignoreArmor=true} @PlayersInRadius{r=1}
+  - damage{amount=5;ignoreArmor=true} @PlayersInRadius{r=1}
   - effect:particles{particle=block_crack;m=redstone_block;amount=50;hS=.5;vS=1} @PlayersInRadius{r=1}
   - delay 20
-  - damage{amount=1;ignoreArmor=true} @PlayersInRadius{r=1}
+  - damage{amount=5;ignoreArmor=true} @PlayersInRadius{r=1}
   - effect:particles{particle=block_crack;m=redstone_block;amount=50;hS=.5;vS=1} @PlayersInRadius{r=1}
   - delay 20
-  - damage{amount=1;ignoreArmor=true} @PlayersInRadius{r=1}
+  - damage{amount=5;ignoreArmor=true} @PlayersInRadius{r=1}
   - effect:particles{particle=block_crack;m=redstone_block;amount=50;hS=.5;vS=1} @PlayersInRadius{r=1}
   - effect:particles{particle=soul;amount=25;hS=.25;vS=.25;speed=0.01} @self
   - effect:particles{particle=sneeze;amount=50;hS=.5;vS=.5;speed=0.01} @self
@@ -273,7 +273,7 @@ undeadcrewATTACKjump:
 
 undeadcrewHOOKDamage:
   Skills:
-  - damage{amount=2} @PlayersNearOrigin{r=2}
+  - damage{amount=20} @PlayersNearOrigin{r=2}
   - effect:particles{particle=block_crack;m=redstone_block;amount=25;hS=.5;vS=.5} @PlayersNearOrigin{r=2}
 
 undeadcrewDEATH:

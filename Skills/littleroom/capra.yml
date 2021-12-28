@@ -388,10 +388,7 @@ capraDEATH:
   - effect:particlering{particle=campfire_cosy_smoke;radius=1.5;points=32;amount=1;hS=0.15;vS=0.15;repeat=4;repeatInterval=5} @Forward{f=0;y=0.0}
   - effect:particlering{particle=flame;size=2;radius=1.5;points=32;amount=5;hS=0.25;vS=0.25;repeat=17;repeatInterval=5} @Forward{f=0;y=0.0}
   - effect:blockmask{m=fire;r=2;d=120;oa=true} @Forward{f=0;y=-1.0}
-  - delay 100
-  - effect:itemspray{item=capra_horns;amount=1;velocity=0;yv=3;d=400;ap=true} @self
-  
-  
+
 ##### IMP #####
 
 capraimpPREVENTCLIP:

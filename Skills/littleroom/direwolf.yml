@@ -46,7 +46,7 @@ direwolfBITEDamage:
   Conditions:
   - blocking{} false
   Skills:
-  - damage{amount=3} @PlayersInRadius{r=3}
+  - damage{amount=30} @PlayersInRadius{r=3}
   - effect:particles{particle=block_crack;m=redstone_block;amount=100;hS=.25;vS=1;speed=.01} @PlayersInRadius{r=2}
   
   
@@ -88,13 +88,13 @@ direwolfSLASHDamage:
   Conditions:
   - blocking{} false
   Skills:
-  - damage{amount=1} @PlayersInRadius{r=3}
+  - damage{amount=20} @PlayersInRadius{r=3}
   - effect:particles{particle=block_crack;m=redstone_block;amount=100;hS=.25;vS=1;speed=.01} @PlayersInRadius{r=2} 
   - skill{s=direwolfBLEED} @PlayersInRadius{r=3}
   
 direwolfBLEED:
   Skills:
-  - damage{a=.25;pk=true;repeat=2;repeatInterval=40}
+  - damage{a=5;pk=true;repeat=2;repeatInterval=40}
   - actionmessage{m="You're Bleeding!"}
   
   

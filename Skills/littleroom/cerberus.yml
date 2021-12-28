@@ -231,7 +231,7 @@ cerberusBITEDAMAGE:
   Skills:
   - skill{s=cerberusBLOOD}
   - ignite{ticks=40}
-  - damage{a=6}
+  - damage{a=70}
   
 cerberusBLOOD:
   Conditions:
@@ -257,7 +257,7 @@ cerberusSTOMP:
   - lunge{velocity=2;velocityY=-1.5} @target
   - delay 5
   - throw{velocity=15;velocityY=2} @EIR{r=10}
-  - damage{a=2} @EIR{r=10}
+  - damage{a=50} @EIR{r=10}
   - sound{s=littleroom_cerberus:littleroom.cerberus.impact_ground_big;v=1;sc=HOSTILE} @self
   - effect:particles{particle=lava;amount=300;hS=3;vS=.5} @self
   - effect:particlering{particle=squid_ink;radius=2;points=32;amount=8;hS=.25;vS=.25} @self
@@ -299,7 +299,7 @@ cerberusSWINGDAMAGE:
   - skill{s=cerberusBLOOD}
   - ignite{ticks=100}
   - throw{velocity=12;velocityY=3}
-  - damage{a=12}
+  - damage{a=40}
   
 cerberusSWINGMARKER:
   Skills:
@@ -330,7 +330,7 @@ cerberusSWIPE:
 cerberusSWIPEDAMAGE:
   Skills:
   - skill{s=cerberusBLOOD}
-  - damage{a=7}
+  - damage{a=30}
   - throw{velocity=5;velocityY=3}
   
 cerberusRIVEROFSTYX:
@@ -377,7 +377,7 @@ cerberus_riverofstyxfxSPAWN:
   - effect:particles{particle=block;m=dirt;amount=55;hS=.5;vS=1} @self
   - effect:particles{p=soul;amount=10;speed=.25;hS=1;vS=1;d=true;dir=0,1,0;repeat=5;repeatInterval=10} @self
   - throw{velocity=1;velocityY=10;repeat=10;repeatInterval=1} @EIR{r=2}
-  - damage{a=2;repeat=5;repeatInterval=10} @EIR{r=2}
+  - damage{a=30;repeat=5;repeatInterval=10} @EIR{r=2}
   - effect:blockmask{m=SOUL_FIRE;r=2;d=54}
   - delay 60
   - remove @self
@@ -520,7 +520,7 @@ cerberus_hellhoundBITE:
 cerberus_hellhoundDAMAGE:
   Skills:
   - skill{s=cerberusBLOOD}
-  - damage{a=5}
+  - damage{a=20}
   
 cerberus_hellhoundSPAWN:
   Skills:

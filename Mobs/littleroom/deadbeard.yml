@@ -12,6 +12,12 @@ deadbeard:
   Damage: 0.0
   AITargetSelectors:
   - 1 players
+  BossBar:
+    Enabled: true
+    Title: '&dCaptain Dead-Beard'
+    Range: 50
+    Color: PURPLE
+    Style: SOLID
   Options:
     PreventBlockInfection: true
     Invincible: false
@@ -57,12 +63,18 @@ tnt_barrel:
   
 undead_crew:
   Type: ZOMBIE
-  Display: "Undead Crew Mate"
+  Display: "&2Undead Crew Mate"
   Faction: deadbeard
   Modules:
     ThreatTable: true
-  Health: 50
-  Damage: 0.0
+  BossBar:
+    Enabled: true
+    Title: '&2Undead Crew Mate'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
+  Health: 100
+  Damage: 10.0
   AITargetSelectors:
   - 1 players
   Options:
