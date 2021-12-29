@@ -1,0 +1,81 @@
+############################################
+#      Otter skills management version     #
+############################################
+
+#---------------------  
+# Otter spawns/despawns
+#---------------------
+
+Nocsy_Otter_Spawn:
+  Skills:
+   - effect:particles{particle=fishing;amount=50;hS=.45;vS=.25} @self
+   - effect:particles{particle=splash;amount=50;hS=.45;vS=.35} @self
+   - delay 20
+   - effect:particles{particle=fishing;amount=50;hS=.45;vS=.25} @self
+   - effect:particles{particle=splash;amount=50;hS=.45;vS=.35} @self
+Nocsy_Otter_Despawn:
+  Skills:
+   - sound{s=entity.fox.screech;p=1;v=0.8} @self
+   - defaultstate{m=nocsy_otter;t=death;s=despawn} @self
+   - effect:blockmask{m=WATER;r=1;s=sphere;n=1;d=50} @origin
+   - effect:particles{particle=splash;amount=50;hS=.45;vS=.35;repeatInterval=1;repeat=5} @self
+   - state{mid=nocsy_otter;s=despawn;li=0;lo=0} @self
+   - remove @self # Note the presence of this remove here which is essential if you use a custom despawn mechanic
+
+#---------------------  
+# Animations
+#---------------------
+
+Nocsy_Otter_Animation:
+  Skills:
+  - Aura{auraName=Nocsy_Otter_Animation-Aura;onTick=Nocsy_Otter_Animation-Tick;interval=2;d=916000000} @self
+  - Aura{auraName=Nocsy_Otter_Animation-Effect-Aura;onTick=Nocsy_Otter_Animation-Effect-Tick;interval=180;d=916000000} @self
+  
+Nocsy_Otter_Animation-Tick:
+  Conditions:
+  - blocktype WATER castinstead Nocsy_Otter_Animation_Swim-Tick
+  - hastag{t=ground} false
+  - hastag{t=swim} true
+  Skills:
+  - addtag{t=ground} @self
+  - removetag{t=swim} @self
+  - defaultstate{m=nocsy_otter;t=walk;s=walk} @self
+
+Nocsy_Otter_Animation_Swim-Tick:
+  Conditions:
+  - hastag{t=swim} false
+  Skills:
+  - removetag{t=ground} @self
+  - addtag{t=swim} @self
+  - defaultstate{m=nocsy_otter;t=walk;s=swim} @self
+  
+Nocsy_Otter_Animation-Effect-Tick:
+  Skills:
+  - effect:particles{particle=splash;amount=50;hS=.25;vS=.35} @self
+#---------------------  
+# Pet the otter
+#---------------------
+
+Nocsy_Otter_Pet:
+  Cooldown: 6
+  Skills:
+  - randomskill{skills=Nocsy_Otter_Pet_State1,Nocsy_Otter_Pet_State2}
+  
+Nocsy_Otter_Pet_State1:
+  Skills:
+  - setAI{ai=false} @self
+  - state{s=pet1} @self
+  - delay 10
+  - sound{s=entity.fox.sleep}
+  - delay 20
+  - setAI{ai=true} @self
+Nocsy_Otter_Pet_State2:
+  Skills:
+  - state{s=pet2} @self
+  - setAI{ai=false} @self
+  - state{s=pet2} @self
+  - sound{s=entity.fox.sleep}
+  - delay 45
+  - sound{s=entity.fox.sleep}
+  - delay 45
+  - setAI{ai=true} @self

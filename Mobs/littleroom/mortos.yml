@@ -6,13 +6,13 @@
 
 mortos:
   Type: RAVAGER
-  Display: 'Mortos'
-  Damage: 0
-  Health: 1000
+  Display: '&dMortos'
+  Damage: 40
+  Health: 10000
   BossBar:
     Enabled: true
-    Title: 'Mortos <caster.hp> <&fs> <caster.mhp>'
-    Range: 32
+    Title: '&dMortos'
+    Range: 70
     Color: PURPLE
     Style: SOLID
   Modules:
@@ -51,8 +51,8 @@ fallingmortos:
 rotter:
   Type: RAVAGER
   Display: 'Rotter'
-  Damage: 0
-  Health: 25
+  Damage: 10
+  Health: 150
   Modules:
     ThreatTable: true
   Options:

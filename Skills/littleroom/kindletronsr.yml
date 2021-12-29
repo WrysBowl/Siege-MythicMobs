@@ -17,7 +17,7 @@ kindletronSRMelee:
 
 kindletronSRMeleeDamage:
   Skills:
-  - damage{amount=4} @EntitiesNearOrigin{r=2}
+  - damage{amount=40} @EntitiesNearOrigin{r=2}
   - effect:particles{particle=block_crack;m=redstone_block;amount=45;hS=.25;vS=1;speed=.01} @EntitiesNearOrigin{r=2}
   
 die_kindletronSR:

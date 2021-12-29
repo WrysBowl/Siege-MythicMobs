@@ -6,6 +6,12 @@
 JUNKBOT:
   Type: HUSK
   Display: 'JunkBot'
+  BossBar:
+    Enabled: true
+    Title: '&2Junk Bot'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Options:
     Silent: true
     PreventOtherDrops: true

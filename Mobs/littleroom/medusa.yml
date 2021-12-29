@@ -5,16 +5,16 @@
 
 medusa:
   Type: IRON_GOLEM
-  Display: 'Medusa'
+  Display: '&dMedusa'
   Faction: MEDUSA
   BossBar:
     Enabled: true
-    Title: 'Medusa'
-    Range: 20
+    Title: '&dMedusa'
+    Range: 50
     Color: PURPLE
     Style: SOLID
-  Health: 1
-  Damage: 0
+  Health: 7500
+  Damage: 20
   AITargetSelectors:
   - 0 players
   Modules:

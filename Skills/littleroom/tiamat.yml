@@ -139,7 +139,7 @@ tiamatSWIPEleft:
   
 tiamatSWIPEDMG:
   Skills:
-  - damage{a=6}
+  - damage{a=60}
   
 tiamatSWIPEFX:
   Skills:
@@ -193,7 +193,7 @@ tiamatLEAP:
   - setspeed{speed=1;type=walking} @self
   - delay 2  
   - sound{s=littleroom_tiamat:littleroom.tiamat.leap;v=1;sc=HOSTILE} @self
-  - damage{a=5;repeat=4;repeatInterval=1} @PIR{r=5}
+  - damage{a=50;repeat=4;repeatInterval=1} @PIR{r=5}
   - throw{velocity=1;velocityY=8;repeat=4;repeatInterval=4} @PIR{r=5}
   
   
@@ -280,7 +280,7 @@ tiamatSWARM:
   
 tiamatSWARM-Hit:
   Skills:
-  - damage{a=1}
+  - damage{a=30}
   - potion{type=SLOW;duration=100;lvl=2}
   
 tiamatSWARMBATFX:

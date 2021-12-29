@@ -7,6 +7,12 @@ jellycreep:
   Health: 5
   Type: SLIME
   Display: Jelly Creeper
+  BossBar:
+    Enabled: true
+    Title: '&2Jelly Creeper'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Options:
     PreventSlimeSplit: true
     Size: 2

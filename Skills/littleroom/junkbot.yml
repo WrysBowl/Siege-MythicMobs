@@ -26,7 +26,7 @@ JUNKBOTmelee:
 
 JUNKBOTmeleedamage:
   Skills:
-  - damage{amount=1} @PIR{r=2}
+  - damage{amount=10} @PIR{r=2}
   - effect:particles{particle=block_crack;m=redstone_block;amount=45;hS=.25;vS=1;speed=.01} @PIR{r=2}
   
 ### MALFUNCTION ###

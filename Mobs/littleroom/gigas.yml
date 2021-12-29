@@ -6,9 +6,15 @@
 gigas:
   Type: IRON_GOLEM
   Name: 'Gigas The Giant Enemy Crab'
-  Health: 200
-  Damage: 0
+  Health: 7500
+  Damage: 30
   Faction: GIGAS
+  BossBar:
+    Enabled: true
+    Title: '&dGigas'
+    Range: 50
+    Color: PURPLE
+    Style: SOLID
   AITargetSelectors:
   - 1 players
   Modules:
@@ -39,6 +45,12 @@ gigasbabyred:
   Faction: GIGAS
   Modules:
     ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '&2Gigas Baby'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Options:
     PreventSunburn: true
     AlwaysShowName: false
@@ -63,6 +75,12 @@ gigasbabyblue:
   Faction: GIGAS
   Modules:
     ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '&2Gigas Baby'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Options:
     PreventSunburn: true
     AlwaysShowName: false

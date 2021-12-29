@@ -226,7 +226,7 @@ phoenixLEAPLAND-Tick:
   
 phoenixLEAPLAND-Hit:
   Skills:
-  - damage{a=5}
+  - damage{a=80}
   - ignite{d=20}
   
 phoenixLEAPAOE:
@@ -260,7 +260,7 @@ phoenixCLAWATTACK:
 phoenixCLAWATTACKDAMAGE:
   Skills:
   #- ignite{ticks=40}
-  - damage{a=4}
+  - damage{a=100}
   
 phoenixINVIS:
   Cooldown: 5
@@ -648,8 +648,7 @@ phoenixDEATHGROUND:
   - effect:particles{particle=ash;amount=500;hS=1;vS=1} @ModelPart{m=phoenix;p=left_shin}
   - effect:particles{particle=ash;amount=500;hS=1;vS=1} @ModelPart{m=phoenix;p=pelvis}
   - effect:particles{particle=ash;amount=500;hS=1;vS=1} @ModelPart{m=phoenix;p=head}
-  - summon{t=phoenix_egg;a=<skill.targets>} @self
-  - sound{s=littleroom_phoenix:littleroom.phoenix.poof;v=1;sc=HOSTILE} @self 
+  - sound{s=littleroom_phoenix:littleroom.phoenix.poof;v=1;sc=HOSTILE} @self
   - model{mid=phoenix;r=true} @self
   
   

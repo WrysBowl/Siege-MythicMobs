@@ -6,11 +6,17 @@
 quartzgolem:
   Type: IRON_GOLEM
   Display: 'quartz golem'
-  Damage: 0
-  Health: 750
+  Damage: 50
+  Health: 7500
   Faction: GOLEM
   Modules:
     ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '&dQuartz Golem'
+    Range: 50
+    Color: PURPLE
+    Style: SOLID
   AITargetSelectors:
   - 0 clear
   - 1 players
@@ -44,8 +50,14 @@ quartzshard:
   Type: HUSK
   Display: 'quartz shard'
   Health: 50
-  Damage: 0
+  Damage: 10
   Faction: GOLEM
+  BossBar:
+    Enabled: true
+    Title: '&2Quartz Shard'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Options:
     MovementSpeed: 0.3
     FollowRange: 32

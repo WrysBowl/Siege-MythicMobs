@@ -5,12 +5,19 @@
 
 giant_zombie:
   Type: ZOMBIE
-  Health: 100
+  Health: 2000
+  Damage: 50
   Options:
     KnockbackResistance: 1
   AITargetSelectors: 
   - players
-  Display: 'Giant Zombie'
+  Display: '&2Giant Zombie'
+  BossBar:
+    Enabled: true
+    Title: '&2Giant Zombie'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Skills:
   - model{mid=giantzombie;n=false} @self ~onSpawn
   - skill{s=giantzombieATTACKsync;sync=true} @self ~onAttack

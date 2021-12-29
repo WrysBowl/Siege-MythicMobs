@@ -31,7 +31,7 @@ gigasSNIPskill:
 
 gigasSNIPDamage:
   Skills:
-  - damage{amount=7} @EntitiesNearOrigin{r=2}
+  - damage{amount=70} @EntitiesNearOrigin{r=2}
   - effect:particles{particle=block_crack;m=redstone_block;amount=45;hS=.25;vS=1;speed=.01} @EntitiesNearOrigin{r=2}
   - effect:particles{particle=sweep_attack;amount=1;hS=.25;vS=.25;speed=.01} @origin
   - breakblock{forcesync=true} @origin
@@ -68,7 +68,7 @@ gigasSLAMskill:
 gigasSLAMDamage:
   Skills:
   - throw{velocity=4;velocityY=10} @EntitiesNearOrigin{r=3}
-  - damage{amount=4} @EntitiesNearOrigin{r=3}
+  - damage{amount=40} @EntitiesNearOrigin{r=3}
   - effect:particles{particle=block_crack;m=redstone_block;amount=45;hS=.25;vS=1;speed=.01} @EntitiesNearOrigin{r=3}  
   - skill{s=gigasparticleDIRT} @origin
   - skill{s=gigasparticleSAND} @origin
@@ -132,7 +132,7 @@ gigasGRABskill:
 
 gigasGRABstun:
   Skills:
-   - damage{amount=6} @EntitiesNearOrigin{r=4}
+   - damage{amount=60} @EntitiesNearOrigin{r=4}
    - stun{d=20} @EntitiesNearOrigin{r=4}
    - delay 8
    - throw{velocity=15;velocityY=15} @EntitiesNearOrigin{r=4}

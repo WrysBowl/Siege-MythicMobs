@@ -69,7 +69,7 @@ krakenWHIRLPOOL:
   - effect:particles{particle=bubble;amount=25;hS=0.25;vS=0.25;speed=0;repeat=35;repeatInterval=1} @ModelPart{m=kraken;p=tentacle40}
   - delay 5
   - totem{ch=15;oH=krakenWHIPdamage;int=1;hR=3;vR=3;md=2;repeat=30;repeatInterval=1;hp=true} @ModelPart{m=kraken;p=tentacle18}
-  - damage{amount=5} @PIR{r=12}
+  - damage{amount=50} @PIR{r=12}
   - effect:spin{duration=20;velocity=10} @PIR{r=12}
   
 krakenWHIP:
@@ -88,7 +88,7 @@ krakenWHIP:
   
 krakenWHIPdamage:
   Skills:
-  - damage{amount=5}
+  - damage{amount=50}
   - effect:particles{p=reddust;color=#CC0000;amount=15;hS=.25;vS=1;speed=.01;size=5}
   
   
@@ -112,7 +112,7 @@ krakenBITE:
   
 krakenBITEdamage:
   Skills:  
-  - damage{amount=5}
+  - damage{amount=50}
   - effect:particles{p=reddust;color=#CC0000;amount=15;hS=.25;vS=1;speed=.01;size=5}
   - sound{s=littleroom_kraken:littleroom.kraken.bite_hit;sc=HOSTILE}
   

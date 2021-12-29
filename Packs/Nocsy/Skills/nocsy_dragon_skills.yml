@@ -1,0 +1,699 @@
+############################################
+#              Mount version               #
+############################################
+
+#---------------------  
+# Mount the dragon
+#---------------------
+
+NocsyDragonMount:
+  Skills:
+  - mountmodel{mode=flying;f=true;d=true} @trigger
+
+############################################
+#               Boss version               #
+############################################
+
+#---------------------  
+# Animating management
+#---------------------
+
+##-- Fly Management --##
+
+NocsyDragonAnimating_Fly_Management:
+  Skills:
+  - Aura{auraName=NocsyDragonAnimating_Fly_Management-Aura;onTick=NocsyDragonAnimating_Fly_Management-Tick;interval=2;d=91600000} @self
+  - Aura{auraName=NocsyDragonAnimating_Fly_Sounds-Aura;onTick=NocsyDragonAnimating_Fly_Sounds-Tick;interval=20;d=91600000} @self
+  
+NocsyDragonAnimating_Fly_Management-Tick:
+  Skills:
+  - skill{s=NocsyDragonAnimating_init_fly}
+  - skill{s=NocsyDragonAnimating_land_fly}
+
+NocsyDragonAnimating_Fly_Sounds-Tick:
+  Conditions:
+  - hastag{t=fly}
+  Skills:
+  - sound{s=entity.ender_dragon.flap;v=2;p=0.2} @self
+
+NocsyDragonAnimating_init_fly:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=initfly} true
+  - hastag{t=fly} false
+  Skills:
+  - addtag{t=attacking} @self
+  - removetag{t=initfly} @self
+  - setgravity{g=false} @self
+  - lunge{velocity=-0.1;velocityY=0.35} @target
+  - defaultstate{t=idle;s=fly} @self
+  - defaultstate{t=walk;s=fly} @self
+  - delay 35
+  - sound{s=entity.ender_dragon.flap;v=2;p=0.2} @self
+  - lunge{velocity=-0.1;velocityY=1} @target
+  - delay 40
+  - lunge{velocity=-0.1;velocityY=1} @target
+  - delay 40
+  - lunge{velocity=-0.1;velocityY=1} @target
+  - delay 20
+  - removetag{t=attacking} @self
+  - addtag{t=moveflying} @self
+  
+NocsyDragonAnimating_land_fly:
+  Conditions:
+  - hastag{t=land} true
+  - hastag{t=attacking} false
+  - hastag{t=fly} true
+  Skills:
+  - removetag{t=moveflying} @self
+  - addtag{t=attacking} @self
+  - removetag{t=land} @self
+  - defaultstate{t=idle;s=fly} @self
+  - defaultstate{t=walk;s=fly} @self
+  - delay 35
+  - lunge{velocity=-0.1;velocityY=-2} @target
+  - delay 40
+  - lunge{velocity=-0.1;velocityY=-2} @target
+  - delay 40
+  - lunge{velocity=-0.1;velocityY=-2} @target
+  - removetag{t=attacking}
+  - setgravity{g=true} @self
+  - defaultstate{t=idle;s=idle} @self
+  
+NocsyDragonAnimating_move_while_flying:
+  Skills:
+  - Aura{auraName=NocsyDragonAnimating_move_while_flying-Aura;onTick=NocsyDragonAnimating_move_while_flying-Tick;interval=2;d=91600000} @self
+
+NocsyDragonAnimating_move_while_flying-Tick:
+  Conditions:
+  - hastag{t=moveflying} true
+  - hastag{t=grab} false
+  - playernotwithin{d=15} castinstead NocsyDragonAnimating_move_while_flying-Target
+  - altitude{a=0to8} castinstead NocsyDragonAnimating_move_while_flying-Altitude
+  - altitude{a=10to300} castinstead NocsyDragonAnimating_move_while_flying-AltitudeDown
+  Skills:
+  - skill{s=NocsyDragonAnimating_move_while_flying_randomMove}
+
+NocsyDragonAnimating_move_while_flying_randomMove:
+  Conditions:
+  - hastag{t=playertarget} false
+  Skills:
+  - skill{s=NocsyDragonAnimating_move_while_flying_randomMove_Tag}
+  - skill{s=NocsyDragonAnimating_move_while_flying_randomMove_Forward}
+  - skill{s=NocsyDragonAnimating_move_while_flying_randomMove_Right}
+  - skill{s=NocsyDragonAnimating_move_while_flying_randomMove_Left}
+  - skill{s=NocsyDragonAnimating_move_while_flying_randomMove_Backward}
+  
+NocsyDragonAnimating_move_while_flying_randomMove_Tag:
+  Conditions:
+  - hastag{t=randomtag} false
+  Skills:
+  - addtag{t=randomtag} @self
+  - randomskill{skills=NocsyDragonAnimating_move_while_flying_randomMove_Tag_Forward,NocsyDragonAnimating_move_while_flying_randomMove_Tag_Right,NocsyDragonAnimating_move_while_flying_randomMove_Tag_Left,NocsyDragonAnimating_move_while_flying_randomMove_Tag_Backward}
+  - delay 200
+  - removetag{t=randomtag} @self
+  - removetag{t=forward} @self
+  - removetag{t=backward} @self
+  - removetag{t=right} @self
+  - removetag{t=left} @self
+  
+NocsyDragonAnimating_move_while_flying_randomMove_Tag_Forward:
+  Skills:
+  - addtag{t=forward} @self
+NocsyDragonAnimating_move_while_flying_randomMove_Tag_Right:
+  Skills:
+  - addtag{t=right} @self
+NocsyDragonAnimating_move_while_flying_randomMove_Tag_Left:
+  Skills:
+  - addtag{t=left} @self
+NocsyDragonAnimating_move_while_flying_randomMove_Tag_Backward:
+  Skills:
+  - addtag{t=backward} @self
+
+NocsyDragonAnimating_move_while_flying_randomMove_Forward:
+  Conditions:
+  - hastag{t=forward} true
+  Skills:
+  - lunge{velocity=0.2;velocityY=0.01} @Forward{f=20;y=0.0;sideOffset=0.0}
+NocsyDragonAnimating_move_while_flying_randomMove_Right:
+  Conditions:
+  - hastag{t=right} true
+  Skills:
+  - lunge{velocity=0.2;velocityY=0.01} @Forward{f=20;y=0.0;sideOffset=20.0}
+NocsyDragonAnimating_move_while_flying_randomMove_Left:
+  Conditions:
+  - hastag{t=left} true
+  Skills:
+  - lunge{velocity=0.2;velocityY=0.01} @Forward{f=20;y=0.0;sideOffset=-20.0}
+NocsyDragonAnimating_move_while_flying_randomMove_Backward:
+  Conditions:
+  - hastag{t=backward} true
+  Skills:
+  - lunge{velocity=0.2;velocityY=0.01} @Forward{f=20;y=0.0;sideOffset=60.0}
+
+NocsyDragonAnimating_move_while_flying-Target:
+  Conditions:
+  - hastag{t=moveflying} true
+  - hastag{t=randomtag} false
+  - hastag{t=grab} false
+  Skills:
+  - lunge{velocity=0.1;velocityY=0.01} @target
+  - addtag{t=playertarget} @self
+  - delay 40
+  - removetag{t=playertarget} @self
+
+NocsyDragonAnimating_move_while_flying-Altitude:
+  Skills:
+  - lunge{velocity=0.1;velocityY=1} @target
+
+NocsyDragonAnimating_move_while_flying-AltitudeDown:
+  Skills:
+  - lunge{velocity=0.1;velocityY=-1.1} @target
+
+##-- Flying / Walking --##
+
+NocsyDragonAnimating_scheduler:
+  Skills:
+  - Aura{auraName=NocsyDragonAnimating-Aura;onTick=NocsyDragonAnimating;interval=2;d=91600000} @self
+  - skill{s=NocsyDragonAnimating_Fly_Management} @self
+
+NocsyDragonAnimating:
+  Skills:
+  - skill{s=NocsyDragonAnimating_Ground}
+  - skill{s=NocsyDragonAnimating_Fly}
+
+NocsyDragonAnimating_Ground:
+  Conditions:
+  - hastag{t=ground} false
+  - hastag{t=grab} false
+  - altitude{a=0to2} true
+  Skills:
+  - defaultstate{t=walk;s=walk} @self
+  - defaultstate{t=idle;s=idle} @self
+  - state{s=idle_once;li=0;lo=0} @self
+  - addtag{t=ground} @self
+  - removetag{t=fly} @self
+  
+NocsyDragonAnimating_Fly:
+  Conditions:
+  - hastag{t=fly} false
+  - hastag{t=grab} false
+  - altitude{a=3to300} true
+  Skills:
+  - defaultstate{t=walk;s=fly} @self
+  - defaultstate{t=idle;s=fly} @self
+  - removetag{t=ground} @self
+  - addtag{t=fly} @self
+
+##-- Death --##
+
+NocsyDragonAnimating_falling_death_scheduler:
+  Skills:
+  - Aura{auraName=NocsyDragonAnimating_LandingDeath-Aura;onTick=NocsyDragonAnimating_LandingDeath;onEnd=NocsyDragonAnimating_DeathFly;interval=2;d=200} @self
+
+NocsyDragonAnimating_Death:
+  Skills:
+  - skill{s=NocsyDragonAnimating_DeathFly_Summon} @self
+  - skill{s=NocsyDragonAnimating_DeathGround_Summon} @self
+
+NocsyDragonAnimating_DeathFly_Summon:
+  Conditions:
+  - hastag{t=fly} true
+  Skills:
+  - skill{s=NocsyDragonAnimating_DeathFly_Summon_classic}
+  - skill{s=NocsyDragonAnimating_DeathFly_Summon_saddled}
+  - remove @self
+NocsyDragonAnimating_DeathFly_Summon_classic:
+  Conditions:
+  - hastag{t=boss}
+  Skills:
+  - summon{type=Nocsy_Dragon_Boss_Falling;amount=1;radius=0;os=false;yRadiusUpOnly=true;yRadius=1;inheritFaction=true} @self
+NocsyDragonAnimating_DeathFly_Summon_saddled:
+  Conditions:
+  - hastag{t=mount}
+  Skills:
+  - summon{type=Nocsy_Dragon_Boss_Falling_saddled;amount=1;radius=0;os=false;yRadiusUpOnly=true;yRadius=1;inheritFaction=true} @self
+
+NocsyDragonAnimating_DeathGround_Summon:
+  Conditions:
+  - hastag{t=ground} true
+  Skills:
+  - skill{s=NocsyDragonAnimating_DeathGround_Summon_classic}
+  - skill{s=NocsyDragonAnimating_DeathGround_Summon_saddled}
+  - remove @self
+NocsyDragonAnimating_DeathGround_Summon_classic:
+  Conditions:
+  - hastag{t=boss}
+  Skills:
+  - summon{type=Nocsy_Dragon_Boss_Death_Ground;amount=1;radius=0;os=false;yRadiusUpOnly=true;yRadius=1;inheritFaction=true} @self ~onDeath
+NocsyDragonAnimating_DeathGround_Summon_saddled:
+  Conditions:
+  - hastag{t=mount}
+  Skills:
+  - summon{type=Nocsy_Dragon_Boss_Death_Ground_saddled;amount=1;radius=0;os=false;yRadiusUpOnly=true;yRadius=1;inheritFaction=true} @self ~onDeath
+  
+NocsyDragonAnimating_DeathFly:
+  Conditions:
+  - hastag{t=fly} true
+  - hastag{t=playing} false
+  Skills:
+  - addtag{t=playing} @self
+  - state{s=death_fall;li=0;lo=0} @self
+  - delay 60
+  - remove @self
+
+NocsyDragonAnimating_DeathGround:
+  Conditions:
+  - hastag{t=ground} true
+  - hastag{t=playing} false
+  Skills:
+  - CancelEvent
+  - addtag{t=playing} @self
+  - state{s=death_ground;li=0;lo=0} @self
+  - delay 120
+  - remove @self
+
+NocsyDragonAnimating_LandingDeath:
+  Conditions:
+  - hastag{t=fly} true
+  - altitude{a=1} true
+  Skills:
+  - skill{s=NocsyDragonAnimating_DeathFly}
+
+##-- Signal --##
+
+NocsyDragonAnimating_Start_Flying:
+  Skills:
+  - addtag{t=initfly} @self
+  - delay 1200
+  - skill{s=NocsyDragonAnimating_Stop_Flying}
+
+NocsyDragonAnimating_Stop_Flying:
+  Skills:
+  - addtag{t=land} @self
+
+#---------------------  
+# Attack management
+#---------------------
+
+NocsyDragonAttack:
+  Skills:
+  - Aura{auraName=NocsyDragonAttack_Projectile-Aura;onTick=NocsyDragonAttack_Projectile;interval=300;d=91600000} @self
+  - skill{s=NocsyDragonAttack_Try_Grab}
+
+NocsyDragonAttack_Projectile:
+  Skills:
+  - randomskill{skills=NocsyDragonAttack_Fireball,NocsyDragonAttack_Fireflame}
+
+NocsyDragonAttack_Melee:
+  Skills:
+  - skill{s=NocsyDragonAttack_Melee_ground}
+
+NocsyDragonAttack_Melee_ground:
+  Conditions:
+  - hastag{t=ground} true
+  - hastag{t=melee} false
+  Skills:
+  - randomskill{skills=NocsyDragonAttack_Bite,NocsyDragonAttack_WingSwing}
+  - addtag{t=melee} @self
+  - delay 80
+  - removetag{t=melee} @self
+
+
+#---------------------  
+# Bite
+#---------------------
+
+NocsyDragonAttack_Bite:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=bite;li=0;lo=0} @self
+  - setAI{ai=false} @self
+  - delay 19
+  - lunge{velocity=0.2;velocityY=0.1} @Forward{f=20;y=0.0;sideOffset=60.0}
+  - sound{s=entity.ravager.attack;v=1;p=1.5} @self
+  - delay 5
+  - damage{a=8;ia=true} @LivingInCone{a=30.0;r=6;rot=0.0;target=players}
+  - delay 16
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+
+#---------------------  
+# Fireball
+#---------------------
+
+NocsyDragonAttack_Fireball:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - skill{s=NocsyDragonAttack_Fireball_Ground}
+  - skill{s=NocsyDragonAttack_Fireball_Fly}
+  
+NocsyDragonAttack_Fireball_Ground:
+  Conditions:
+  - hastag{t=ground} true
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=fireball_ground;li=0;lo=0} @self
+  - setAI{ai=false} @self
+  - skill{s=NocsyDragon_Fireball_Effect}
+  - delay 30
+  - sudoskill{s=NocsyDragon_Fireball;cat=false} @ModelPart{m=nocsy_dragon;p=h_machoire;offset=GLOBAL;y=0.5}
+  - delay 40
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+
+NocsyDragonAttack_Fireball_Fly:
+  Conditions:
+  - hastag{t=fly} true
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=fireball_air;li=0;lo=0} @self
+  - setAI{ai=false} @self
+  - skill{s=NocsyDragon_Fireball_Effect}
+  - delay 32
+  - sudoskill{s=NocsyDragon_Fireball;cat=false} @ModelPart{m=nocsy_dragon;p=h_machoire;offset=GLOBAL;y=0.5}
+  - delay 40
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+
+# Fireball projectile
+NocsyDragon_Fireball:
+  Skills:
+  - projectile{onTick=NocsyDragon_Fireball-Tick;onEnd=NocsyDragon_Fireball-End;v=8;i=1;hR=1;vR=1;d=20;hp=true} @NearestPlayer{r=60}
+  - sound{s=block.fire.extinguish;v=2;p=0.1} @self
+NocsyDragon_Fireball-Tick:
+  Skills:
+  - effect:particles{p=smoke_large;amount=5;speed=0.1;hS=0.02;vS=0.05} @origin
+  - effect:particles{p=flame;amount=5;speed=0.1;hS=0.01;vS=0.01} @origin
+  - effect:particles{p=flame;amount=5;hS=0.3;vS=0.5} @origin
+  - effect:particlesphere{p=flame;amount=8;radius=1} @origin
+NocsyDragon_Fireball-End:
+  Skills:
+  - summon{type=Nocsy_Dragon_Boss_Fireball;amount=1;radius=0;os=false} @origin
+  - sound{s=entity.ender_dragon.shoot;v=2;p=0.2} @origin
+  - throw{velocity=3;velocityY=3} @PlayersNearOrigin{r=2}
+  - ignite{ticks=100} @PlayersNearOrigin{r=2}
+  - effect:particlesphere{p=lava;amount=10;radius=2} @origin
+  - effect:particlesphere{p=flame;amount=40;radius=3} @origin
+  - effect:particlesphere{p=flame;amount=50;radius=1} @origin
+  #- remove @self
+
+NocsyDragon_Fireball_Missile:
+  Skills:
+  - projectile{onTick=NocsyDragon_Fireball_Missile-Tick;onHit=NocsyDragon_Fireball_Missile-Hit;onEnd=NocsyDragon_Fireball_Missile-Hit;v=9.5;i=1;hR=1;vR=1;mr=30;syo=0;sfo=0} @Sphere{radius=1;points=4;yoffset=0}
+  - projectile{onTick=NocsyDragon_Fireball_Missile-Tick;onHit=NocsyDragon_Fireball_Missile-Hit;onEnd=NocsyDragon_Fireball_Missile-Hit;v=9.5;i=1;hR=1;vR=1;mr=30;syo=0;sfo=0} @NearestPlayer{r=80}
+NocsyDragon_Fireball_Missile-Tick:
+  Skills:
+  - effect:particlesphere{p=smoke_large;amount=9;radius=1} @origin
+  - effect:particlesphere{p=flame;amount=30;radius=1.2} @origin
+NocsyDragon_Fireball_Missile-Hit:
+  Skills:
+  - damage{a=14} @PlayersNearOrigin{r=2}
+  - ignite{ticks=100} @PlayersNearOrigin{r=2}
+  - throw{velocity=3;velocityY=3} @PlayersNearOrigin{r=2}
+  - delay 80
+  - remove @self
+  
+NocsyDragon_Fireball_Effect:
+  Skills:
+  - Aura{auraName=NocsyDragon_Fireball_Effect-Aura;onTick=NocsyDragon_Fireball_Effect-Tick;interval=1;d=50} @self
+  - sound{s=entity.ender_dragon.ambient;v=1;p=1.5} @self
+NocsyDragon_Fireball_Effect-Tick:
+  Skills:
+  - effect:particles{particle=flame;amount=2;hS=0.01;vS=0.01;speed=0.01} @ModelPart{m=nocsy_dragon;p=h_machoire;offset=local;y=0.5;x=0.1}
+  - effect:particles{particle=flame;amount=2;hS=0.01;vS=0.01;speed=0.01} @ModelPart{m=nocsy_dragon;p=h_machoire;offset=local;y=0.5;x=-0.1}
+
+#---------------------  
+# Fireflame
+#---------------------
+
+NocsyDragonAttack_Fireflame:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - skill{s=NocsyDragonAttack_Fireflame_Ground}
+  - skill{s=NocsyDragonAttack_Fireflame_Fly}
+  
+NocsyDragonAttack_Fireflame_Ground:
+  Conditions:
+  - hastag{t=ground} true
+  Skills:
+  - addtag{t=attacking} @self
+  - skill{s=NocsyDragon_Fireflame_Effect}
+  - state{s=fireflame_ground;li=0;lo=0} @self
+  - setAI{ai=false} @self
+  - delay 32
+  - sound{s=entity.ender_dragon.growl;v=1;p=0.2} @self
+  - skill{s=NocsyDragon_Fireflame_ground;cat=false} @Forward{f=30;y=0.0;sideOffset=0.0}
+  - skill{s=NocsyDragon_Fireflame_ground;cat=false} @Forward{f=30;y=0.0;sideOffset=1.0}
+  - skill{s=NocsyDragon_Fireflame_ground;cat=false} @Forward{f=30;y=0.0;sideOffset=-1.0}
+  - skill{s=NocsyDragon_Fireflame_ground;cat=false} @Forward{f=30;y=0.0;sideOffset=2.0}
+  - skill{s=NocsyDragon_Fireflame_ground;cat=false} @Forward{f=30;y=0.0;sideOffset=-2.0}
+  - delay 20
+  - skill{s=NocsyDragon_Fireflame_ground;cat=false} @Forward{f=30;y=0.0;sideOffset=0.0}
+  - skill{s=NocsyDragon_Fireflame_ground;cat=false} @Forward{f=30;y=0.0;sideOffset=1.0}
+  - skill{s=NocsyDragon_Fireflame_ground;cat=false} @Forward{f=30;y=0.0;sideOffset=-1.0}
+  - skill{s=NocsyDragon_Fireflame_ground;cat=false} @Forward{f=30;y=0.0;sideOffset=2.0}
+  - skill{s=NocsyDragon_Fireflame_ground;cat=false} @Forward{f=30;y=0.0;sideOffset=-2.0}
+  - delay 30
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+
+NocsyDragonAttack_Fireflame_Fly:
+  Conditions:
+  - hastag{t=fly} true
+  Skills:
+  - addtag{t=attacking} @self
+  - skill{s=NocsyDragon_Fireflame_Effect}
+  - defaultstate{t=walk;s=fireflame_air} @self
+  - defaultstate{t=idle;s=fireflame_air} @self
+  - setAI{ai=false} @self
+  - delay 32
+  - sound{s=entity.ender_dragon.growl;v=1;p=0.2} @self
+  - skill{s=NocsyDragon_Fireflame_fly;cat=false} @NearestPlayer{r=80}
+  - skill{s=NocsyDragon_Fireflame_fly;cat=false} @NearestPlayer{r=80}
+  - delay 5
+  - skill{s=NocsyDragon_Fireflame_fly;cat=false} @NearestPlayer{r=80}
+  - skill{s=NocsyDragon_Fireflame_fly;cat=false} @NearestPlayer{r=80}
+  - delay 5
+  - skill{s=NocsyDragon_Fireflame_fly;cat=false} @NearestPlayer{r=80}
+  - skill{s=NocsyDragon_Fireflame_fly;cat=false} @NearestPlayer{r=80}
+  - delay 10
+  - skill{s=NocsyDragon_Fireflame_fly;cat=false} @NearestPlayer{r=80}
+  - skill{s=NocsyDragon_Fireflame_fly;cat=false} @NearestPlayer{r=80}
+  - delay 10
+  - skill{s=NocsyDragon_Fireflame_fly;cat=false} @NearestPlayer{r=80}
+  - delay 10
+  - setAI{ai=true} @self
+  - defaultstate{t=walk;s=fly} @self
+  - defaultstate{t=idle;s=fly} @self
+  - removetag{t=attacking} @self
+
+# Fireflame projectile
+NocsyDragon_Fireflame_ground:
+  Skills:
+  - projectile{onTick=NocsyDragon_Fireflame-Tick;onEnd=NocsyDragon_Fireflame-End;v=5;i=1;hR=1;vR=1;d=200;hp=true;hs=true}
+NocsyDragon_Fireflame_fly:
+  Skills:
+  - projectile{onTick=NocsyDragon_Fireflame-Tick;onEnd=NocsyDragon_Fireflame-End;v=8;i=1;hR=1;vR=1;d=200;hp=true}
+  - sound{s=block.fire.ambient;v=2;p=1} @self
+  - sound{s=block.fire.extinguish;v=2;p=0.1} @self
+NocsyDragon_Fireflame-Tick:
+  Skills:
+  - effect:particles{p=smoke_large;amount=3;speed=0.1;hS=0.2;vS=0.5} @origin
+  - effect:particles{p=flame;amount=2;speed=0.1;hS=0.1;vS=0.1} @origin
+  - effect:particlesphere{p=flame;amount=5;radius=1.2} @origin
+  - effect:particlesphere{p=flame;amount=8;radius=0.2} @origin
+NocsyDragon_Fireflame-End:
+  Skills:
+  - damage{a=8} @PlayersNearOrigin{r=2}
+  - sound{s=entity.ravager.attack;v=1;p=1.5} @self
+  - ignite{ticks=100} @PlayersNearOrigin{r=2}
+  - effect:particlesphere{p=smoke_large;amount=30;radius=1.2} @origin
+  - effect:particlesphere{p=flame;amount=5;radius=1.2} @origin
+  - effect:particlesphere{p=flame;amount=50;radius=1} @origin
+  - sound{s=block.fire.extinguish;v=2;p=0.1} @origin
+  #- remove @self
+
+NocsyDragon_Fireflame_Effect:
+  Skills:
+  - Aura{auraName=NocsyDragon_Fireflame_Effect-Aura;onTick=NocsyDragon_Fireflame_Effect-Tick;interval=1;d=50} @self
+NocsyDragon_Fireflame_Effect-Tick:
+  Skills:
+  - effect:particles{particle=flame;amount=2;hS=0.01;vS=0.01;speed=0.01} @ModelPart{m=nocsy_dragon;p=h_machoire;offset=local;y=0.5;x=0.1}
+  - effect:particles{particle=flame;amount=2;hS=0.01;vS=0.01;speed=0.01} @ModelPart{m=nocsy_dragon;p=h_machoire;offset=local;y=0.5;x=-0.1}
+
+#---------------------  
+# Grab
+#---------------------
+
+NocsyDragonAttack_Try_Grab:
+  Skills:
+  - Aura{auraName=NocsyDragonAttack_Try_Grab-Aura;onTick=NocsyDragonAttack_Grab_launch;interval=200;d=91600000} @self
+
+NocsyDragonAttack_Grab_launch:
+  Conditions:
+  - hastag{t=attacking} false
+  - hastag{t=grabreset} false
+  - hastag{t=hasgrabbed} false
+  - hastag{t=fly} true
+  Skills:
+  - sound{s=entity.ender_dragon.ambient;v=1;p=0.1} @self
+  - addtag{t=attacking} @self
+  - addtag{t=grab} @self
+  - addtag{t=hasgrabbed} @self
+  - skill{s=NocsyDragonAttack_Grab_glide}
+  - delay 200
+  - skill{s=NocsyDragonAttack_Grab_reset}
+  - delay 1000
+  - removetag{t=hasgrabbed} @self
+
+NocsyDragonAttack_Grab_reset:
+  Conditions:
+  - hastag{t=grabreset} false
+  Skills:
+  - removetag{t=grab} @self
+  - removetag{t=attacking} @self
+
+NocsyDragonAttack_Grab:
+  Skills:
+  - state{s=grab;li=0;lo=0} @self
+  - sound{s=entity.ender_dragon.growl;v=1;p=1.5} @self
+  - delay 24
+  - mountmodel{driver=false;mode=force_walking;pbone=catch;dmg=true} @NearestPlayer{r=4}
+  - delay 10
+  - lunge{velocity=0.2;velocityY=1.2} @Forward{f=30;y=0.0;sideOffset=0.0}
+  - delay 20
+  - lunge{velocity=0.2;velocityY=1.2} @Forward{f=30;y=0.0;sideOffset=0.0}
+  - delay 20
+  - lunge{velocity=0.2;velocityY=1.2} @Forward{f=30;y=0.0;sideOffset=0.0}
+  - delay 20
+  - lunge{velocity=0.2;velocityY=1.2} @Forward{f=30;y=0.0;sideOffset=0.0}
+  - delay 20
+  - dismountall{p=catch} @self
+  - delay 20
+  - lunge{velocity=0.01;velocityY=-1.2} @Forward{f=30;y=0.0;sideOffset=0.0}
+  - delay 20
+  - lunge{velocity=0.01;velocityY=-1.2} @Forward{f=30;y=0.0;sideOffset=0.0}
+  - delay 20
+  - removetag{t=attacking} @self
+  - removetag{t=grab} @self
+  - removetag{t=grabbed} @self
+  - addtag{t=grabreset} @self
+  - delay 200
+  - removetag{t=grabreset}
+
+NocsyDragonAttack_Grab_glide:
+  Skills:
+  - Aura{auraName=NocsyDragonAttack_Grab_glide-Aura;onTick=NocsyDragonAttack_Grab_glide-Tick;interval=2;d=200} @self
+
+NocsyDragonAttack_Grab_glide-Tick:
+  Conditions:
+  - hastag{t=grab} true
+  Skills:
+  - skill{s=NocsyDragonAttack_Grab_glide_lunge_fromair}
+  - skill{s=NocsyDragonAttack_Grab_grab}
+
+NocsyDragonAttack_Grab_glide_lunge_fromair:
+  Conditions:
+  - hastag{t=grabbed} false
+  - altitude{a=0to2} castinstead NocsyDragonAttack_Grab_glide_lunge_fromground
+  Skills:
+  - lunge{velocity=0.35;velocityY=-0.2} @target
+NocsyDragonAttack_Grab_glide_lunge_fromground:
+  Conditions:
+  - hastag{t=grabbed} false
+  Skills:
+  - lunge{velocity=0.35;velocityY=0.5} @target
+  
+NocsyDragonAttack_Grab_grab:
+  Conditions:
+  - targetwithin{d=3} true
+  - hastag{t=grabbed} false
+  Skills:
+  - addtag{t=grabbed} @self
+  - skill{s=NocsyDragonAttack_Grab}
+  
+
+#---------------------  
+# Wing swing
+#---------------------
+
+NocsyDragonAttack_WingSwing:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - addtag{t=attacking} @self
+  - state{s=wing_swing;li=0;lo=0} @self
+  - setAI{ai=false} @self
+  - sound{s=entity.ender_dragon.ambient;v=1;p=1.5} @self
+  - delay 30
+  - sound{s=entity.ender_dragon.flap;v=2;p=0.2} @self
+  - damage{a=6;ia=true} @LivingInCone{a=40.0;r=8;rot=0.0;target=players}
+  - effect:particles{particle=sweep_attack;amount=2;hS=1;vS=1;speed=1} @Cone{angle=40;points=60;range=8;rotation=0;}
+  - throw{velocity=3;velocityY=2} @LivingInCone{a=40.0;r=7;rot=0.0;target=players}
+  - delay 20
+  - sound{s=entity.ender_dragon.flap;v=2;p=0.2} @self
+  - damage{a=6;ia=true} @LivingInCone{a=40.0;r=8;rot=0.0;target=players}
+  - effect:particles{particle=sweep_attack;amount=2;hS=1;vS=1;speed=1} @Cone{angle=40;points=60;range=8;rotation=0;}
+  - throw{velocity=3;velocityY=2} @LivingInCone{a=40.0;r=7;rot=0.0;target=players}
+  - delay 50
+  - setAI{ai=true} @self
+  - removetag{t=attacking} @self
+
+############################################
+#                 General                  #
+############################################
+
+NocsyDragonCancelMelee:
+  Skills:
+  - CancelEvent
+  
+NocsyDragonSounds:
+  Skills:
+  - Aura{auraName=NocsyDragonSounds-Aura;onTick=NocsyDragonSounds-Tick;interval=200;d=91600000} @self
+NocsyDragonSounds-Tick:
+  Conditions:
+  - hastag{t=attacking} false
+  Skills:
+  - sound{s=entity.ravager.ambient;v=1;p=0.1} @self
+
+NocsyDragonAnimating_Death_Tag:
+  Skills:
+  - skill{s=NocsyDragonAnimating_Ground_Tag}
+  - skill{s=NocsyDragonAnimating_Fly_Tag}
+
+NocsyDragonAnimating_Ground_Tag:
+  Conditions:
+  - altitude{a=1} true
+  Skills:
+  - addtag{t=ground} @self
+  - removetag{t=fly} @self
+
+NocsyDragonAnimating_Fly_Tag:
+  Conditions:
+  - hastag{t=fly} false
+  - altitude{a=1} false
+  Skills:
+  - removetag{t=ground} @self
+  - addtag{t=fly} @self
+
+NocsyDragonAnimating_Apply_Model:
+  Skills:
+  - skill{s=NocsyDragonAnimating_Apply_Model_Mount}
+  - skill{s=NocsyDragonAnimating_Apply_Model_Boss}
+
+NocsyDragonAnimating_Apply_Model_Mount:
+  Conditions:
+  - hastag{t=mount}
+  Skills:
+  - model{mid=nocsy_dragon_saddled_version;drive=true;n=false;tint=false} @self
+
+NocsyDragonAnimating_Apply_Model_Boss:
+  Conditions:
+  - hastag{t=boss}
+  Skills:
+  - model{mid=nocsy_dragon;ride=true;n=false;tint=false} @self

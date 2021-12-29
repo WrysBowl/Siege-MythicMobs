@@ -61,7 +61,7 @@ wizpigMelee:
 wizpigMeleeDamage:
   Skills:
   - throw{velocity=12;velocityY=2} @PlayersInRadius{r=3}
-  - damage{amount='8'} @EntitiesNearOrigin{r=3}
+  - damage{amount='50'} @EntitiesNearOrigin{r=3}
 
   
 
@@ -119,7 +119,7 @@ NetherShot-Tick:
   
 NetherShot-Hit:
   Skills:
-  - damage{a=8}
+  - damage{a=80}
   - signal{s=TELE1} @EntitiesNearOrigin{r=3}
   
   
@@ -135,7 +135,7 @@ NetherShot-Tele2:
 NetherShot-Hit2:
   Skills:
   - sound{s=entity.shulker_bullet.hit;p=.2;v=3} @self
-  - damage{a=8}
+  - damage{a=80}
   - effect:particles{p=largeexplode;amount=2;speed=1;hS=0.2;vS=0.2} @origin
   
 riftshootme:

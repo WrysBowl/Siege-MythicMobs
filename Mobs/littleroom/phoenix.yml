@@ -5,17 +5,17 @@
 
 phoenix:
   Type: ZOGLIN
-  Display: 'Phoenix'
+  Display: '&dPhoenix'
   Faction: PHOENIX
   #Disguise: RAVAGER setInvisible setBurningfalse
   BossBar:
     Enabled: true
-    Title: 'Phoenix'
-    Range: 20
-    Color: RED
+    Title: '&dPhoenix'
+    Range: 70
+    Color: PURPLE
     Style: SOLID
-  Health: 1250
-  Damage: 1  
+  Health: 5000
+  Damage: 100
   DamageModifiers:
   - LAVA 0
   - FIRE 0

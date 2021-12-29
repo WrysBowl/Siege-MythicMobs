@@ -5,8 +5,14 @@
 kindletronsr:
   Type: IRON_GOLEM
   Display: 'Kindletron SR'
-  Health: 100
-  Damage: 0
+  Health: 300
+  Damage: 10
+  BossBar:
+    Enabled: true
+    Title: '&2Kindletron'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   AIGoalSelectors:
   - 0 clear
   - 1 meleeattack

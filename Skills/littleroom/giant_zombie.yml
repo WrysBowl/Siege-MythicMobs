@@ -23,7 +23,7 @@ giantzombieATTACKdamage:
   Conditions:
   - targetwithin{d=3} true
   Skills:
-  - damage{a=10}
+  - damage{a=30}
   
 giantzombieDEATH:
   Skills:

@@ -5,13 +5,13 @@
 
 tiamat:
   Type: IRON_GOLEM
-  Display: 'Tiamat'
-  Health: 1250
-  Damage: 1    
+  Display: '&dTiamat'
+  Health: 7500
+  Damage: 20
   BossBar:
     Enabled: true
-    Title: 'Tiamat <caster.hp><&fs><caster.mhp>'
-    Range: 20
+    Title: '&dTiamat'
+    Range: 60
     Color: PURPLE
     Style: SOLID
   DamageModifiers:

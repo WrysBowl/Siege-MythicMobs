@@ -23,6 +23,14 @@ headcrabDEAD:
 headcrab:
   Type: SILVERFISH
   Display: 'Headcrab'
+  Health: 20
+  Damage: 5
+  BossBar:
+    Enabled: true
+    Title: '&2Head Crab'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   Modules:
     ThreatTable: true
   Options:

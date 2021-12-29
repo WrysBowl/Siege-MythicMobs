@@ -75,7 +75,7 @@ magnusSHIELDBASH:
   
 magnusSHIELDBASHDAMAGE:
   Skills:
-  - damage{a=5}
+  - damage{a=50}
   - throw{velocity=8;velocityY=5}
   
 magnusFLINCHHIT:
@@ -199,7 +199,7 @@ magnusLAND:
   
 magnusLANDDAMAGE:
   Skills:
-  - damage{a=10}
+  - damage{a=100}
   
 magnusGROUNDSHAKE:
   TargetConditions:
@@ -285,7 +285,7 @@ magnusTOMBSTONE:
   
 magnusMELEEDAMAGE:
   Skills:
-  - damage{a=10}
+  - damage{a=60}
   - potion{type=SLOW;duration=60;level=2;p=false}
   - potion{type=BLINDNESS;duration=10;level=2;p=false}
   - summon{t=playerConcussion}
@@ -324,7 +324,7 @@ magnusSPINFX:
   
 magnusSPINDAMAGE:
   Skills:
-  - damage{a=5}
+  - damage{a=50}
   
 magnusSPINEND:
   Conditions:

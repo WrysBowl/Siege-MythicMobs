@@ -17,9 +17,15 @@ shipwreck:
 kraken:
   Type: DOLPHIN 
   Display: 'Kraken'
-  Health: 500
+  Health: 5000
   Modules:
     ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '&dKraken'
+    Range: 50
+    Color: PURPLE
+    Style: SOLID
   AITargetSelectors:
   - players
   AIGoalSelectors:
@@ -31,7 +37,6 @@ kraken:
     Marker: true
     PreventOtherDrops: true
     FollowRange: 32
-    PreventOtherDrops: true
     Silent: true
   Skills:
   - sound{s=littleroom_kraken:littleroom.kraken.hurt;sc=HOSTILE} @self ~onDamaged .25

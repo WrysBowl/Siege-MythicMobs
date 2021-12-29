@@ -1,0 +1,265 @@
+############################################
+#            Entities to spawn             #
+############################################
+
+Nocsy_Dragon_Pet:
+  Type: RAVAGER
+  AIGoalSelectors:
+  - 0 clear
+  - 3 float
+  - 4 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - model{mid=nocsy_dragon_saddled_version;drive=true;n=false} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_scheduler} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_Death} @self ~onDeath
+  - skill{s=NocsyDragonSounds} @self ~onSpawn
+  - sound{s=entity.wither.death;v=0.3;p=0.2} @self ~onDeath
+  - addtag{t=mount} @self ~onSpawn
+  Display: "§cDrako"
+  Health: 10
+  Damage: 0
+  Options:
+    Despawn: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.28
+
+Nocsy_Dragon_Mount:
+  Type: RAVAGER
+  AIGoalSelectors:
+  - 0 clear
+  - 3 float
+  - 4 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  DamageModifiers:
+  - FALL 0.00
+  Skills:
+  - model{mid=nocsy_dragon_saddled_version;drive=true;n=false} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_scheduler} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_Death} @self ~onDeath
+  - skill{s=NocsyDragonMount} @trigger ~onInteract
+  - skill{s=NocsyDragonSounds} @self ~onSpawn
+  - sound{s=entity.wither.death;v=0.8;p=0.2} @self ~onDeath
+  - addtag{t=mount} @self ~onSpawn
+  Display: "§cDrako"
+  Health: 10
+  Damage: 0
+  Options:
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.28
+
+
+Nocsy_Dragon_Boss:
+  Type: HUSK
+  Drops: []
+  Equipment: []
+  DamageModifiers:
+  - FALL 0.00
+  Skills:
+  - model{mid=nocsy_dragon;ride=true;n=false} @self ~onSpawn
+  - skill{s=NocsyDragonSounds} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_scheduler} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_Death} @self ~onDeath
+  - skill{s=NocsyDragonAttack} ~onSpawn
+  - skill{s=NocsyDragonAttack_Melee} ~onAttack
+  - skill{s=NocsyDragonCancelMelee;sync=true} ~onAttack
+  - skill{s=NocsyDragonAnimating_Start_Flying;sync=true} ~onDamaged =80% 1
+  - skill{s=NocsyDragonAnimating_Start_Flying;sync=true} ~onDamaged =50% 1
+  - skill{s=NocsyDragonAnimating_Start_Flying;sync=true} ~onDamaged =10% 1
+  - skill{s=NocsyDragonAnimating_DeathGround} @self <=1% 1
+  - skill{s=NocsyDragonAnimating_move_while_flying} @self ~onSpawn
+  - sound{s=entity.wither.death;v=0.8;p=0.2} @self ~onDeath
+  - addtag{t=boss} @self ~onSpawn
+  Display: "§cDrako"
+  Health: 800
+  Damage: 0
+  Modules:
+    ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '§cDrako - The Fire Dragon'
+    Range: 40
+    Color: RED
+    Style: SOLID
+  Options:
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.22
+    
+############################################
+#              Skill entities              #
+############################################
+
+Nocsy_Dragon_Boss_Death_Ground_saddled:
+  Type: HUSK
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - addtag{t=mount} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_Apply_Model} @self ~onSpawn
+  - addtag{t=ground} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_DeathGround} @self ~onSpawn
+  Display: "§cDrako"
+  Health: 800
+  Damage: 0
+  Options:
+    Collideable: false
+    Invincible: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.28
+
+Nocsy_Dragon_Boss_Death_Ground:
+  Type: HUSK
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - addtag{t=boss} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_Apply_Model} @self ~onSpawn
+  - addtag{t=ground} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_DeathGround} @self ~onSpawn
+  Display: "§cDrako"
+  Health: 800
+  Damage: 0
+  Options:
+    Collideable: false
+    Invincible: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.28
+
+Nocsy_Dragon_Boss_Falling_saddled:
+  Type: HUSK
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - addtag{t=mount} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_Apply_Model} @self ~onSpawn
+  - defaultstate{t=idle;s=falling} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_falling_death_scheduler} @self ~onSpawn
+  - addtag{t=fly} @self ~onSpawn
+  Display: "§cDrako"
+  Health: 800
+  Damage: 0
+  Options:
+    Collideable: false
+    Invincible: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.28
+
+Nocsy_Dragon_Boss_Falling:
+  Type: HUSK
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - addtag{t=boss} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_Apply_Model} @self ~onSpawn
+  - defaultstate{t=idle;s=falling} @self ~onSpawn
+  - skill{s=NocsyDragonAnimating_falling_death_scheduler} @self ~onSpawn
+  - addtag{t=fly} @self ~onSpawn
+  Display: "§cDrako"
+  Health: 800
+  Damage: 0
+  Options:
+    Collideable: false
+    Invincible: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    KnockbackResistance: 1
+    FollowRange: 20
+    AttackSpeed: 1
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.28
+
+Nocsy_Dragon_Boss_Fireball:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Drops: []
+  Equipment: []
+  Skills:
+  - skill{s=NocsyDragon_Fireball_Missile} @self ~onSpawn
+  Display: "§cDrako"
+  Options:
+    Invisible: true
+    Gravity: false
+    Collideable: false
+    Invincible: true
+    Despawn: true
+    AlwaysShowName: false
+    PreventOtherDrops: true
+    Silent: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true

@@ -6,10 +6,10 @@
 
 magnus:
   Type: IRON_GOLEM
-  Health: 1250
+  Health: 7500
   Modules:
     ThreatTable: true
-  Display: 'Magnus'  
+  Display: '&dMagnus'
   AITargetSelectors:
   - players
   Options:
@@ -18,9 +18,9 @@ magnus:
     PreventOtherDrops: true
   BossBar:
     Enabled: true
-    Title: 'Magnus'
-    Range: 20
-    Color: RED
+    Title: '&dMagnus'
+    Range: 50
+    Color: PURPLE
     Style: SOLID
   Skills:
   - skill{s=magnusSPAWN} @self ~onSpawn

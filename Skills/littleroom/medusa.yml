@@ -33,7 +33,7 @@ medusaBOWHIT:
   TargetConditions:
   - blocking false
   Skills:
-  - potion{type=POISON;duration=40;level=1}
+  - potion{type=POISON;duration=40;level=4}
   - effect:particles{particle=block;m=redstone_block;amount=50;hS=.25;vS=.25;y=1}
   
 medusaGAZE:
@@ -106,7 +106,7 @@ medusaSMACKDAMAGE:
   TargetConditions:
   - isblocking false
   Skills:
-  - damage{a=10}
+  - damage{a=30}
   - effect:particles{particle=block;m=redstone_block;amount=25;hS=.25;vS=.25;y=0.25}
 
 medusaTWINBITE:
@@ -134,7 +134,7 @@ snakebiteSLITHER:
   
 snakebiteBITE:
   Skills:
-  - damage{a=5} @PIR{r=3}
+  - damage{a=50} @PIR{r=3}
   - potion{type=POISON;duration=20;level=1;p=false;i=false} @PIR{r=3}
   - potion{type=SLOW;duration=60;level=1;p=false;i=false} @PIR{r=3}
   
@@ -162,7 +162,7 @@ medusaSPIN:
 medusaSPINDAMAGE:
   Skills:
   - threat{m=divide;amount=2}
-  - damage{a=6}  
+  - damage{a=50}
   - throw{velocity=10;velocityY=1}
   - effect:particles{particle=block;m=redstone_block;amount=25;hS=.25;vS=.25;y=0.25}
   

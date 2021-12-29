@@ -15,7 +15,7 @@ BREATHdragon:
 BREATHdragonTICK:
   Skills:
   - effect:particles{p=soul_fire_flame;amount=20;speed=0.01;hS=0.2;vS=0.2} @origin
-  - damage{a=4}
+  - damage{a=15}
   - ignite{ticks=20}
   
 
@@ -175,7 +175,7 @@ mortosBREATH_HIT_GROUND:
   Skills:
   - effect:particles{p=soul;a=50;hS=1;vS=1}
   - effect:sound{s=entity.generic.explode;v=1;p=0}
-  - damage{a=3;i=false}
+  - damage{a=80;i=false}
   - effect:blockmask{m=soul_sand;r=2;d=60}
   - summon{t=rotter} @origin{yoffset=-2}
   
@@ -215,7 +215,7 @@ mortosBITE:
   
 mortosBITEdamage:
   Skills:
-  - damage{amount=1}
+  - damage{amount=60}
   - effect:particles{p=reddust;color=#CC0000;amount=2;hS=.25;vS=1;speed=.01;size=5}
   - effect:particles{particle=block;m=redstone_block;;amount=15;hS=.25;vS=1;speed=.01;size=5}
   - delay 5   
@@ -246,7 +246,7 @@ mortosWHIP:
   
 mortosWHIPdamage:
   Skills:
-  - damage{amount=1}
+  - damage{amount=40}
   - effect:particles{p=reddust;color=#CC0000;amount=2;hS=.25;vS=1;speed=.01;size=5}
   - effect:particles{particle=block;m=redstone_block;;amount=15;hS=.25;vS=1;speed=.01;size=5}
   - throw{velocity=5;velocityY=5}
@@ -345,7 +345,7 @@ rotterATTACKskill:
 
 rotterATTACK1damage:
   Skills:
-  - damage{amount=1}
+  - damage{amount=20}
   - randomskill{skills=rotterHIT1,rotterHIT2,rotterHIT3} @PIR{r=3}
   - skill{s=rotterSOULRETURN} @parent
   - effect:particles{p=reddust;color=#CC0000;amount=2;hS=.25;vS=1;speed=.01;size=5}
@@ -366,7 +366,7 @@ rotterATTACK2skill:
 
 rotterATTACK2damage:
   Skills:
-  - damage{amount=1}
+  - damage{amount=20}
   - randomskill{skills=rotterHIT1,rotterHIT2,rotterHIT3} @PIR{r=3}
   - skill{s=rotterSOULRETURN} @parent
   - effect:particles{p=reddust;color=#CC0000;amount=2;hS=.25;vS=1;speed=.01;size=5}

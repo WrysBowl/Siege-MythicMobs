@@ -1,11 +1,17 @@
  wizpiglin:
   Display: 'Wizpiglin'
   Type: PILLAGER
-  Damage: 0
-  Health: 250
+  Damage: 100
+  Health: 5000
   Faction: piglin
   Modules:
     ThreatTable: true
+  BossBar:
+    Enabled: true
+    Title: '&dWiz Piglin'
+    Range: 50
+    Color: PURPLE
+    Style: SOLID
   DamageModifiers:
   - FIRE -1
   - FIRE_TICK -1
@@ -112,6 +118,12 @@
  ghastling:
   Display: 'Ghastling'
   Type: BEE
+  BossBar:
+    Enabled: true
+    Title: '&2Ghastling'
+    Range: 5
+    Color: GREEN
+    Style: SOLID
   AIGoalSelectors:
   - 1 Melee
   AITargetSelectors:
