@@ -1,7 +1,7 @@
 LumberjackJoe:
   Type: Zombie
   Display: '&2Lumberjack Joe'
-  Health: 100
+  Health: 500
   Damage: 10
   Faction: Bosses
   Disguise:

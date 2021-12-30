@@ -1,7 +1,7 @@
 Bully:
   Type: Zombie
   Display: '&2Bully'
-  Health: 80
+  Health: 160
   Damage: 10
   Faction: Animal
   Disguise:

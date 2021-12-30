@@ -1,7 +1,7 @@
 Molter:
   Type: MAGMA_CUBE
   Display: '&2Molter'
-  Health: 150
+  Health: 300
   Damage: 20
   Faction: Miniboss
   AITargetSelectors:

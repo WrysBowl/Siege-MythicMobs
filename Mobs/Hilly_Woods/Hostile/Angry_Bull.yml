@@ -1,7 +1,7 @@
 AngryBull:
   Type: Zombie
   Display: '&2Angry Bull'
-  Health: 140
+  Health: 300
   Damage: 18
   Faction: Animal
   Disguise:

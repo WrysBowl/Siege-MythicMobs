@@ -1,7 +1,7 @@
 FlamingGoo:
   Type: MAGMA_CUBE
   Display: '&2Flaming Goo'
-  Health: 20
+  Health: 50
   Damage: 5
   Faction: Slime
   AITargetSelectors:

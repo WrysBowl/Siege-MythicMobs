@@ -1,7 +1,7 @@
 Blubber:
   Type: Slime
   Display: '&2Blubber'
-  Health: 80
+  Health: 160
   Damage: 10
   Faction: Miniboss
   AITargetSelectors:

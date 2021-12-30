@@ -1,7 +1,7 @@
 DeathBull:
   Type: Zombie
   Display: '&2Death Bull'
-  Health: 250
+  Health: 500
   Damage: 30
   Faction: Miniboss
   Disguise:

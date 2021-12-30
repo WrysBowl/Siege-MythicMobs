@@ -1,7 +1,7 @@
 Skeletal_Archer:
   Type: Skeleton
   Display: '&2Skeletal Archer'
-  Health: 150
+  Health: 350
   Damage: 25
   Faction: Undead
   Options:

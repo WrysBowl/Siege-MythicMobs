@@ -1,7 +1,7 @@
 ScrapRat:
   Type: Silverfish
   Display: '&2Scrap Rat'
-  Health: 100
+  Health: 500
   Damage: 3
   Faction: Silverfish
   AITargetSelectors:

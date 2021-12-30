@@ -1,7 +1,7 @@
 RockRat:
   Type: Silverfish
   Display: '&2Rock Rat'
-  Health: 10
+  Health: 20
   Damage: 2
   Faction: Silverfish
   AITargetSelectors:

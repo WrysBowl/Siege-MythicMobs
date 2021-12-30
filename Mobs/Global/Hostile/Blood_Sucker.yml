@@ -1,7 +1,7 @@
 BloodSucker:
   Type: Cave_Spider
   Display: '&2Blood Sucker'
-  Health: 50
+  Health: 150
   Damage: 10
   Faction: Spiders
   AITargetSelectors:

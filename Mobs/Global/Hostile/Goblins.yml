@@ -1,7 +1,7 @@
 Goblin:
   Type: Baby_Zombie
   Display: '&2Goblin'
-  Health: 25
+  Health: 75
   Damage: 5
   Faction: Goblin
   AITargetSelectors:

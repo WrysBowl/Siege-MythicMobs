@@ -1,7 +1,7 @@
 Goo:
   Type: Slime
   Display: '&2Goo'
-  Health: 10
+  Health: 20
   Damage: 1
   Faction: Slime
   AITargetSelectors:

@@ -1,7 +1,7 @@
 WildFox:
   Type: Wolf
   Display: '&2Wild Fox'
-  Health: 50
+  Health: 100
   Damage: 12
   Faction: Wolf
   Disguise:

@@ -1,7 +1,7 @@
 Blob:
   Type: Slime
   Display: '&2Blob'
-  Health: 40
+  Health: 80
   Damage: 5
   Faction: Slime
   AITargetSelectors:

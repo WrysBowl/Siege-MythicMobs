@@ -1,7 +1,7 @@
 Sea_Warrior:
   Type: Drowned
   Display: '&2Sea Warrior'
-  Health: 120
+  Health: 220
   Damage: 30
   Faction: Undead
   Options:

@@ -1,7 +1,7 @@
 FeatheredMeat:
   Type: Chicken
   Display: '&2Feathered Meat'
-  Health: 8
+  Health: 30
   Faction: Ambient
   Options:
     PreventOtherDrops: true
@@ -13,7 +13,7 @@ FeatheredMeat:
 Porky:
   Type: Pig
   Display: '&2Porky'
-  Health: 40
+  Health: 120
   Faction: Ambient
   Options:
     PreventOtherDrops: true
@@ -22,7 +22,7 @@ Porky:
 Wooly:
   Type: Sheep
   Display: '&2Wooly'
-  Health: 60
+  Health: 180
   Faction: Ambient
   Options:
     PreventOtherDrops: true
@@ -31,7 +31,7 @@ Wooly:
 MooMoo:
   Type: Cow
   Display: '&2Moo Moo'
-  Health: 80
+  Health: 240
   Faction: Ambient
   Options:
     PreventOtherDrops: true
@@ -40,7 +40,7 @@ MooMoo:
 Pigeon:
   Type: Parrot
   Display: '&2Pigeon'
-  Health: 10
+  Health: 30
   Damage: 1
   Faction: Ambient
   Options:
@@ -51,7 +51,7 @@ Pigeon:
 Sushi:
   Type: TROPICAL_FISH
   Display: '&2Sushi'
-  Health: 20
+  Health: 50
   Damage: 1
   Faction: Ambient
   Options:

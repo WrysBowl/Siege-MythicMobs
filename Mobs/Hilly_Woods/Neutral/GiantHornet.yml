@@ -1,7 +1,7 @@
 GiantHornet:
   Type: Bee
   Display: '&2Giant Hornet'
-  Health: 10
+  Health: 30
   Damage: 6
   Faction: Bees
   Options:
