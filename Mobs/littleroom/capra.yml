@@ -5,7 +5,7 @@
 capra:
   Type: IRON_GOLEM
   Display: Capra
-  Health: 6000
+  Health: 15000
   Damage: 60
   Modules:
     ThreatTable: true

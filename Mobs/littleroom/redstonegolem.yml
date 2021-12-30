@@ -7,7 +7,7 @@ redstonegolem:
   Type: IRON_GOLEM
   Display: 'redstone golem'
   Damage: 50
-  Health: 7500
+  Health: 75000
   Faction: GOLEM
   Modules:
     ThreatTable: true

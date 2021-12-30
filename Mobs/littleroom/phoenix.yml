@@ -14,7 +14,7 @@ phoenix:
     Range: 70
     Color: PURPLE
     Style: SOLID
-  Health: 5000
+  Health: 10000
   Damage: 100
   DamageModifiers:
   - LAVA 0

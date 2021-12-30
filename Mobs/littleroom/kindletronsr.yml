@@ -5,7 +5,7 @@
 kindletronsr:
   Type: IRON_GOLEM
   Display: 'Kindletron SR'
-  Health: 300
+  Health: 3000
   Damage: 10
   BossBar:
     Enabled: true

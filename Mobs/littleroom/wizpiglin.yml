@@ -2,7 +2,7 @@
   Display: 'Wizpiglin'
   Type: PILLAGER
   Damage: 100
-  Health: 5000
+  Health: 15000
   Faction: piglin
   Modules:
     ThreatTable: true

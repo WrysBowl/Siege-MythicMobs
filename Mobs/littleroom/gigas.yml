@@ -6,7 +6,7 @@
 gigas:
   Type: IRON_GOLEM
   Name: 'Gigas The Giant Enemy Crab'
-  Health: 7500
+  Health: 15000
   Damage: 30
   Faction: GIGAS
   BossBar:

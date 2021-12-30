@@ -8,7 +8,7 @@ mortos:
   Type: RAVAGER
   Display: '&dMortos'
   Damage: 40
-  Health: 10000
+  Health: 30000
   BossBar:
     Enabled: true
     Title: '&dMortos'

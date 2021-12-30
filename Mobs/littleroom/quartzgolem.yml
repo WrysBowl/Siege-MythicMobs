@@ -7,7 +7,7 @@ quartzgolem:
   Type: IRON_GOLEM
   Display: 'quartz golem'
   Damage: 50
-  Health: 7500
+  Health: 75000
   Faction: GOLEM
   Modules:
     ThreatTable: true

@@ -7,7 +7,7 @@ Amethyst_Golem:
   Type: IRON_GOLEM
   Display: '&5Amethyst Golem'
   Damage: 0
-  Health: 15000
+  Health: 40000
   Faction: GOLEM
   Modules:
     ThreatTable: true

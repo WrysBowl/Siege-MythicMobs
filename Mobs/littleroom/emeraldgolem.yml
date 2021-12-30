@@ -7,7 +7,7 @@ emeraldgolem:
   Type: IRON_GOLEM
   Display: 'emerald golem'
   Damage: 0
-  Health: 750
+  Health: 75000
   Faction: GOLEM
   Modules:
     ThreatTable: true

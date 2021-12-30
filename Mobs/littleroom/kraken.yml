@@ -17,7 +17,7 @@ shipwreck:
 kraken:
   Type: DOLPHIN 
   Display: 'Kraken'
-  Health: 5000
+  Health: 20000
   Modules:
     ThreatTable: true
   BossBar:

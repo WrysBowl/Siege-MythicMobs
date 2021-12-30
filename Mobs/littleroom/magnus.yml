@@ -6,7 +6,7 @@
 
 magnus:
   Type: IRON_GOLEM
-  Health: 7500
+  Health: 15000
   Modules:
     ThreatTable: true
   Display: '&dMagnus'

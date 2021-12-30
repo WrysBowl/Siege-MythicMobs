@@ -6,7 +6,7 @@
 tiamat:
   Type: IRON_GOLEM
   Display: '&dTiamat'
-  Health: 7500
+  Health: 10000
   Damage: 20
   BossBar:
     Enabled: true

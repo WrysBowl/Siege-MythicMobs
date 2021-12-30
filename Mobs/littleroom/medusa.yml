@@ -13,7 +13,7 @@ medusa:
     Range: 50
     Color: PURPLE
     Style: SOLID
-  Health: 7500
+  Health: 10000
   Damage: 20
   AITargetSelectors:
   - 0 players

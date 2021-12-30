@@ -13,7 +13,7 @@ cerberus:
     Range: 50
     Color: PURPLE
     Style: SOLID
-  Health: 10000
+  Health: 20000
   Damage: 20
   DamageModifiers:
   - LAVA 0

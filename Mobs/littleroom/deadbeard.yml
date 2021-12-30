@@ -8,7 +8,7 @@ deadbeard:
   Faction: deadbeard
   Modules:
     ThreatTable: true
-  Health: 400
+  Health: 15000
   Damage: 0.0
   AITargetSelectors:
   - 1 players
