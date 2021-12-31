@@ -320,7 +320,7 @@ cerberusSWIPE:
   - setspeed{speed=0;type=walking}
   - state{s=swipe} @self
   - delay 5
-  - skill{s=cerberusRANDOMchainS} @self
+  - skill{s=cerberusRANDOMchain} @self
   - lunge{velocity=1;velocityY=.2} @target
   - delay 7
   - totem{oH=cerberusSWIPEDAMAGE;int=1;hR=3;md=2;hnp=false} @ModelPart{m=cerberus;p=rightfrontpaw}

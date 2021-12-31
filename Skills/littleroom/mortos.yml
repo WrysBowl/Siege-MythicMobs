@@ -52,12 +52,12 @@ LANDdragon:
   - runaitargetselector{target=players}
   - skill{s=WATERCHECK;repeat=5;repeatInterval=30} @BlocksInRadius{radius=3;radiusy=32;noise=0;shape=cube;onlyair=false;noair=true}
   
-  
+.1
 WATERCHECK:
   Conditions:
   - onground false
   TargetConditions:
-  - blocktype{type=STATIONARY_WATER} false
+  - blocktype{type=WATER} false
   #- altitude{a=>4to24} true
   Skills:
   - potion{type=SLOW_FALLING;duration=40;level=4;p=false} @self

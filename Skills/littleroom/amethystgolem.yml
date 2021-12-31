@@ -29,7 +29,7 @@ amethystpupaLIFESPAN:
   - delay 60
   - sound{s=littleroom_amethystgolem:littleroom.amethystgolem.shardout;v=.25;sc=HOSTILE;p=1} @self
   - effect:particles{particle=block_crack;m=magenta_wool;amount=200;hS=.5;vS=.25} @self
-  - summon{t=amethystshard} @self
+  - summon{t=Amethyst_Shard} @self
   - remove @self
 
 ### SPIKES ###

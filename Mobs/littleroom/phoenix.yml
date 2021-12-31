@@ -47,7 +47,7 @@ phoenix:
   - skill{s=phoenixTAKEOFF} @self ~onTimer:120
   - skill{s=phoenixGROUNDFLAME} @self ~onTimer:20
   - skill{s=phoenixLEAP} @self ~onTimer:20
-  - skill{s=phoenixFLAPforward} @self ~onTimer:25
+  - skill{s=phoenixFLAPR} @self ~onTimer:25
   - skill{s=phoenixFLAPinplace} @self ~onTimer:25
   - skill{s=phoenixFLYINGATTACK} @self ~onTimer:40
   - skill{s=phoenixLAND} @self ~onTimer:2

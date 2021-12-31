@@ -13,5 +13,5 @@ duck:
   - sound{s=littleroom_duck:littleroom.duck.idle;v=.5} @self ~onTimer:60 .15
   - sound{s=littleroom_duck:littleroom.duck.hurt;v=.5} @self ~onDamaged
   - model{mid=duck;n=false} @self ~onSpawn
-  - skill{s=duckDEATH} @self ~onDeath
+  - skill{s=duckDIE} @self ~onDeath
   - skill{s=duckFIDGET} @self ~onTimer:60 .15
