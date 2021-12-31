@@ -58,7 +58,7 @@ ogreattack2:
   - delay 15
   - sound{s=entity.ender_dragon.flap;p=1.75} @self
   - delay 5
-  - damage{amount=19.5} @PlayersNearOrigin{r=5}
+  - damage{amount=20} @PlayersNearOrigin{r=5}
 
 ogrehurt:
   Skills:
