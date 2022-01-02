@@ -27,10 +27,6 @@ Goblin:
   - skill{s=Steal} ~onAttack 0.25
   - skill{s=GoblinAmbientSound} ~onTimer:120
   - skill{s=GoblinAttackSound} ~onAttack 1
-  - model{mid=goblin;n=false} @self ~onSpawn
-  - skill{s=goblinattack;sync=true} @self ~onAttack
-  - skill{s=goblindeath;sync=true} @self ~onDeath
-  - skill{s=goblinhurt;sync=true} @self ~onDamaged
 
 GoldenGoblin:
   Type: Baby_Zombie

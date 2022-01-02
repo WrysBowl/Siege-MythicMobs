@@ -36,9 +36,3 @@ Ogre:
   - skill{s=Charge} ~onTimer:80 0.5
   - skill{s=OgreAmbientSound} ~onTimer:80 0.5
   - skill{s=OgreAttackSound} ~onAttack 1
-  - model{mid=ogre;n=false} @self ~onSpawn
-  - skill{s=cancelattack;sync=true} @self ~onAttack
-  - skill{s=ogreattack;sync=true} @self ~onTimer:60
-  - skill{s=ogreattack2;sync=true} @self ~onTimer:180
-  - skill{s=ogredeath;sync=true} @self ~onDeath
-  - skill{s=ogrehurt;sync=true} @self ~onDamaged
