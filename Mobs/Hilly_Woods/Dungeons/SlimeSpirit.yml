@@ -20,7 +20,7 @@ SlimeSpirit:
   PreventItemPickup: true
   MovementSpeed: 0.4
   FollowRange: 80
-  Size: 4
+  Size: 6
   ModifyBoundingBox: true
   Silent: true
   KnockbackResistance: 1.0
