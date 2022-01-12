@@ -1,17 +1,3 @@
-RandomFeatheredMeat:
-  MobType: FeatheredMeat
-  Worlds: Hilly_Woods
-  Chance: 0.01
-  Priority: 1
-  Action: ADD
-  PointType: LAND
-  Conditions:
-  - outside{} true
-  - day{} true
-  - height{h=40to60} true
-  - onBlock{b=GRASS_BLOCK,DIRT,COARSE_DIRT,FARMLAND,GRASS_PATH} true
-
-
 RandomPorky:
   MobType: Porky
   Worlds: Hilly_Woods
@@ -24,19 +10,6 @@ RandomPorky:
   - day{} true
   - height{h=40to60} true
   - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,GRASS_PATH} true
-  
-RandomWooly:
-  MobType: Wooly
-  Worlds: Hilly_Woods
-  Chance: 0.008
-  Priority: 1
-  Action: ADD
-  PointType: LAND
-  Conditions:
-  - outside{} true
-  - day{} true
-  - height{h=75to150} true
-  - onBlock{b=STONE,ANDESITE,LIGHT_GRAY_CONCRETE} true
 
 RandomMooMoo:
   MobType: MooMoo
