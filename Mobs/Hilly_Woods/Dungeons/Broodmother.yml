@@ -1,8 +1,8 @@
 Broodmother:
   Type: Spider
   Display: '&2Broodmother'
-  Health: 5000
-  Damage: 40
+  Health: 7500
+  Damage: 60
   Faction: Boss
   BossBar:
     Enabled: true

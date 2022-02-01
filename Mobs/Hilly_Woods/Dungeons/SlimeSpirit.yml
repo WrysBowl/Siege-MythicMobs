@@ -1,7 +1,7 @@
 SlimeSpirit:
  Type: SLIME
  Display: '&4Slime Spirit'
- Health: 800
+ Health: 2400
  Damage: 15
  Faction: Boss
  BossBar:
