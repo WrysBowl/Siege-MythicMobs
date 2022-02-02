@@ -11,7 +11,7 @@ Bandit1:
   MaxMobs: '2'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 0
+  Cooldown: 10
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0

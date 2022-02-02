@@ -11,7 +11,7 @@ ZombifiedDigger2:
   MaxMobs: '8'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 3
+  Cooldown: 15
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
