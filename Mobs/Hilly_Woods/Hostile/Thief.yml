@@ -10,7 +10,7 @@ Thief:
     PreventOtherDrops: true
     PreventSunburn: true
     FollowRange: 20
-    MovementSpeed: 0.32
+    MovementSpeed: 0.28
     Silent: true
   Disguise:
     Type: Player

@@ -9,8 +9,8 @@ Skeletal_Warrior:
     PreventItemPickup: true
     PreventOtherDrops: true
     PreventSunburn: true
-    FollowRange: 24
-    MovementSpeed: 0.32
+    FollowRange: 16
+    MovementSpeed: 0.28
   Equipment:
   - Chainmail_Helmet:4
   - Chainmail_Chestplate:3

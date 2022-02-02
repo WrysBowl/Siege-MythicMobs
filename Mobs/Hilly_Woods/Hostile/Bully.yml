@@ -12,7 +12,7 @@ Bully:
     PreventItemPickup: true
     PreventOtherDrops: true
     PreventSunburn: true
-    FollowRange: 18
+    FollowRange: 12
     MovementSpeed: 0.23
   AITargetSelectors:
   - 0 clear

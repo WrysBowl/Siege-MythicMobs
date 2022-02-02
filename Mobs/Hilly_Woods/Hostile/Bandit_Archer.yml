@@ -10,7 +10,7 @@ BanditArcher:
     PreventOtherDrops: true
     PreventSunburn: true
     FollowRange: 24
-    MovementSpeed: 0.35
+    MovementSpeed: 0.28
     Silent: true
   Disguise:
     Type: Player

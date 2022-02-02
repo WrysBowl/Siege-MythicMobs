@@ -17,5 +17,3 @@ FlamingGoo:
     PreventSunburn: true
     FollowRange: 10
     MovementSpeed: 0.3
-  Skills:
-  - skill{s=LungeAttack} @self ~onTimer:20

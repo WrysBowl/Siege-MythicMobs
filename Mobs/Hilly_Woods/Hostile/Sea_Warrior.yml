@@ -9,8 +9,8 @@ Sea_Warrior:
     PreventRandomEquipment: true
     PreventItemPickup: true
     PreventOtherDrops: true
-    FollowRange: 30
-    MovementSpeed: 0.33
+    FollowRange: 14
+    MovementSpeed: 0.8
   Equipment:
   - Gold_Helmet:4
   - Davy_Jones_Boots:1

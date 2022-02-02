@@ -12,8 +12,8 @@ AngryBull:
     PreventItemPickup: true
     PreventOtherDrops: true
     PreventSunburn: true
-    FollowRange: 30
-    MovementSpeed: 0.28
+    FollowRange: 16
+    MovementSpeed: 0.24
   AITargetSelectors:
   - 0 clear
   - 1 players

@@ -17,5 +17,3 @@ Goo:
     PreventSunburn: true
     FollowRange: 8
     MovementSpeed: 0.35
-  Skills:
-  - skill{s=LungeAttack} @self ~onTimer:20
