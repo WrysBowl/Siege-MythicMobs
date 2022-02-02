@@ -8,20 +8,20 @@ Goo2:
   Pitch: 0.0
   Radius: 4
   UseTimer: true
-  MaxMobs: '6'
+  MaxMobs: '3'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 0
+  Cooldown: 10
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 20
+  LeashRange: -1
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 6
+  ActiveMobs: 1

@@ -1,9 +1,9 @@
 FeatheredMeat_1:
   MobName: FeatheredMeat
   World: Hilly_Woods
-  X: -210
-  Y: 55
-  Z: -135
+  X: -230
+  Y: 56
+  Z: -81
   Yaw: 0.0
   Pitch: 0.0
   Radius: 6
@@ -18,10 +18,10 @@ FeatheredMeat_1:
   CheckForPlayers: true
   ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 20
+  LeashRange: -1
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 0
+  ActiveMobs: 2

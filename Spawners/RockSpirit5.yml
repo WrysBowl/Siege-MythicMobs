@@ -1,24 +1,24 @@
-SeaWarrior1:
-  MobName: Sea_Warrior
+RockSpirit5:
+  MobName: RockSpirit
   World: Hilly_Woods
-  X: 13
+  X: -60
   Y: 60
-  Z: 262
+  Z: 4
   Yaw: 0.0
   Pitch: 0.0
-  Radius: 6
+  Radius: 4
   UseTimer: true
-  MaxMobs: '5'
+  MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 0
+  Cooldown: 200
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 25
+  LeashRange: -1
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

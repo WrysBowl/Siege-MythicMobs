@@ -8,10 +8,10 @@ RockRat1:
   Pitch: 0.0
   Radius: 2
   UseTimer: true
-  MaxMobs: '3'
+  MaxMobs: '1'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 8
+  Cooldown: 10
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
@@ -24,4 +24,4 @@ RockRat1:
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 0
+  ActiveMobs: 1

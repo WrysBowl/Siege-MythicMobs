@@ -8,7 +8,7 @@ Molter1:
   Pitch: 0.0
   Radius: 5
   UseTimer: true
-  MaxMobs: '5'
+  MaxMobs: '3'
   MobLevel: '1'
   MobsPerSpawn: 1
   Cooldown: 10
@@ -18,10 +18,10 @@ Molter1:
   CheckForPlayers: true
   ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 30
+  LeashRange: -1
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 0
+  ActiveMobs: 2

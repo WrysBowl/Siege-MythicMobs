@@ -1,27 +1,27 @@
-BloodSucker2:
-  MobName: BloodSucker
+RockRat12:
+  MobName: RockRat
   World: Hilly_Woods
-  X: 45
-  Y: 61
-  Z: 275
+  X: -41
+  Y: 66
+  Z: 6
   Yaw: 0.0
   Pitch: 0.0
-  Radius: 4
+  Radius: 5
   UseTimer: true
   MaxMobs: '4'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 0
+  Cooldown: 10
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 20
+  LeashRange: -1
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false
   Breakable: false
   Conditions: []
-  ActiveMobs: 2
+  ActiveMobs: 0

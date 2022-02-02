@@ -18,7 +18,7 @@ GiantHornet_1:
   CheckForPlayers: true
   ActivationRange: 50
   ScalingRange: 25.0
-  LeashRange: 40
+  LeashRange: -1
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false

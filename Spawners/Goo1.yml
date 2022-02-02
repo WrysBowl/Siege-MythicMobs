@@ -1,24 +1,24 @@
 Goo1:
   MobName: Goo
   World: Hilly_Woods
-  X: -185
-  Y: 60
-  Z: -48
+  X: -216
+  Y: 57
+  Z: -59
   Yaw: 0.0
   Pitch: 0.0
-  Radius: 5
+  Radius: 4
   UseTimer: true
-  MaxMobs: '6'
+  MaxMobs: '2'
   MobLevel: '1'
   MobsPerSpawn: 1
-  Cooldown: 0
+  Cooldown: 10
   CooldownTimer: 0
   Warmup: 0
   WarmupTimer: 0
   CheckForPlayers: true
   ActivationRange: 40
   ScalingRange: 25.0
-  LeashRange: 20
+  LeashRange: -1
   HealOnLeash: false
   ResetThreatOnLeash: false
   ShowFlames: false
