@@ -1,7 +1,7 @@
 Lich:
  Display: '&4Lich'
  Health: 6000
- Damage: 25
+ Damage: 35
  Type: Zombie
  Faction: Boss
  BossBar:

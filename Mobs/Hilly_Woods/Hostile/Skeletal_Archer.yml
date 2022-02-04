@@ -1,7 +1,7 @@
 Skeletal_Archer:
   Type: Skeleton
   Display: '&2Skeletal Archer'
-  Health: 350
+  Health: 750
   Damage: 25
   Faction: Undead
   Options:
@@ -10,7 +10,7 @@ Skeletal_Archer:
     PreventOtherDrops: true
     PreventSunburn: true
     FollowRange: 16
-    MovementSpeed: 0.28
+    MovementSpeed: 0.23
   Equipment:
     - Chainmail_Helmet:4
     - Chainmail_Chestplate:3

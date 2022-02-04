@@ -1,16 +1,16 @@
 Mercenary:
   Type: Zombie
   Display: '&2Mercenary'
-  Health: 1200
-  Damage: 70
+  Health: 3000
+  Damage: 50
   Faction: Miniboss
   Options:
     PreventRandomEquipment: true
     PreventItemPickup: true
     PreventOtherDrops: true
     PreventSunburn: true
-    FollowRange: 26
-    MovementSpeed: 0.33
+    FollowRange: 16
+    MovementSpeed: 0.25
     Silent: true
   Disguise:
     Type: Player
@@ -26,8 +26,7 @@ Mercenary:
   - 1 players
   - 2 attacker
   Skills:
-  - skill{s=BanditCloakingAttack} ~onDamaged 0.2 @target
-  - skill{s=BanditSwordThrowAttack} ~onDamaged 0.2 @target
+  - skill{s=BanditSwordThrowAttack} ~onDamaged 0.3 @target
   - skill{s=BanditAmbientSound} ~onTimer:80 0.5
   - skill{s=BanditAttackSound} ~onAttack 1
   - setname{name='&2Mercenary &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

@@ -1,16 +1,16 @@
 BanditArcher:
   Type: Skeleton
   Display: '&2Bandit Archer'
-  Health: 600
-  Damage: 40
+  Health: 1200
+  Damage: 35
   Faction: Bandit
   Options:
     PreventRandomEquipment: true
     PreventItemPickup: true
     PreventOtherDrops: true
     PreventSunburn: true
-    FollowRange: 24
-    MovementSpeed: 0.28
+    FollowRange: 14
+    MovementSpeed: 0.24
     Silent: true
   Disguise:
     Type: Player

@@ -1,8 +1,8 @@
 Ogre:
   Type: Wither_Skeleton
   Display: '&2Ogre'
-  Health: 600
-  Damage: 20
+  Health: 1500
+  Damage: 30
   Faction: Miniboss
   Options:
     AlwaysShowName: true

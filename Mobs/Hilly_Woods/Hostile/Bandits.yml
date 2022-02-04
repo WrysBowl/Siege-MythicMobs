@@ -1,16 +1,16 @@
 Bandit:
   Type: Zombie
   Display: '&2Bandit'
-  Health: 750
-  Damage: 35
+  Health: 1500
+  Damage: 30
   Faction: Bandit
   Options:
     PreventRandomEquipment: true
     PreventItemPickup: true
     PreventOtherDrops: true
     PreventSunburn: true
-    FollowRange: 24
-    MovementSpeed: 0.28
+    FollowRange: 14
+    MovementSpeed: 0.24
     Silent: true
   Disguise:
     Type: Player
@@ -27,8 +27,7 @@ Bandit:
   - 2 OtherFaction
   - 3 attacker
   Skills:
-  - skill{s=BanditCloakingAttack} ~onDamaged 0.1 @target
-  - skill{s=BanditSwordThrowAttack} ~onDamaged 0.1 @target
+  - skill{s=BanditSwordThrowAttack} ~onDamaged 0.25 @target
   - skill{s=BanditAmbientSound} ~onTimer:80 0.5
   - skill{s=BanditAttackSound} ~onAttack 1
   - setname{name='&2Bandit &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

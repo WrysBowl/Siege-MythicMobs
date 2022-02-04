@@ -1,7 +1,7 @@
 Thief:
   Type: Zombie
   Display: '&2Thief'
-  Health: 650
+  Health: 750
   Damage: 20
   Faction: Bandit
   Options:
@@ -9,8 +9,8 @@ Thief:
     PreventItemPickup: true
     PreventOtherDrops: true
     PreventSunburn: true
-    FollowRange: 20
-    MovementSpeed: 0.28
+    FollowRange: 12
+    MovementSpeed: 0.24
     Silent: true
   Disguise:
     Type: Player

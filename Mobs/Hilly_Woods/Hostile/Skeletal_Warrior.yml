@@ -1,7 +1,7 @@
 Skeletal_Warrior:
   Type: Skeleton
   Display: '&2Skeletal Warrior'
-  Health: 500
+  Health: 1000
   Damage: 40
   Faction: Undead
   Options:
@@ -10,7 +10,7 @@ Skeletal_Warrior:
     PreventOtherDrops: true
     PreventSunburn: true
     FollowRange: 16
-    MovementSpeed: 0.28
+    MovementSpeed: 0.23
   Equipment:
   - Chainmail_Helmet:4
   - Chainmail_Chestplate:3

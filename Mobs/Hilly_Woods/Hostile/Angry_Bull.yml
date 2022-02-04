@@ -1,7 +1,7 @@
 AngryBull:
   Type: Zombie
   Display: '&2Angry Bull'
-  Health: 300
+  Health: 600
   Damage: 18
   Faction: Animal
   Disguise:
@@ -12,8 +12,8 @@ AngryBull:
     PreventItemPickup: true
     PreventOtherDrops: true
     PreventSunburn: true
-    FollowRange: 16
-    MovementSpeed: 0.24
+    FollowRange: 12
+    MovementSpeed: 0.22
   AITargetSelectors:
   - 0 clear
   - 1 players
