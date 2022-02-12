@@ -1,0 +1,45 @@
+A7_Knockback:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=entity.generic.burn;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=1} @PIR{r=15}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=2} @PIR{r=25}
+  - effect:particlesphere{particle=largesmoke;amount=15;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=40;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=50;r=6} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=90;r=8} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=120;r=10} @self
+  - damage{a=3000} @PIR{r=5}
+  - damage{a=1500} @PIR{r=8}
+  - damage{a=750} @PIR{r=10}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=10}
+A7_LeapSlam: ### Leap Slam Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - jump{velocity=1} @Self
+  - effect:sound{s=entity.egg.throw;v=1;p=0} @PIR{r=25}
+  - delay 10
+  - jump{velocity=-1} @Self
+  - delay 10
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=1} @PIR{r=15}
+  - effect:particlesphere{particle=largesmoke;amount=30;r=5} @self
+  - damage{amount=2000;pk=true} @PIR{r=5}
+  - throw{velocity=10;velocityY=3} @PIR{r=5}
+A7_Phase_1: ### First Phase
+  Skills:
+  Cooldown: 10
+  Skills:
+  - skill{s=A7_Knockback} @Self
+  - delay 40
+  - skill{s=A7_LeapSlam} @Self
+  - delay 40
+  - skill{s=A7_LeapSlam} @Self
+  - delay 40
+  - skill{s=A7_LeapSlam} @Self

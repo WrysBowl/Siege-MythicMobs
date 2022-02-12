@@ -1,0 +1,142 @@
+### LAB BOSS 5 SKILLS
+LB5_Blast: ### Blood Burst
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=1;p=2}
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.skeleton.death;v=1;p=2}
+  - projectile{ot=LB5B_Tick;oh=LB5B_Hit;v=20;i=1;hR=1;vR=1}
+LB5B_Tick:
+  Skills:
+  - effect:particles{p=reddust;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+LB5B_Hit:
+  Skills:
+  - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
+  - effect:sound{s=entity.generic.hurt;v=1;p=1}
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 20
+  - damage{a=50;pk=true}
+LB5_Missile: ### Tracking Missile. Always hits for bleed damage.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=1;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=0}
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.skeleton.death;v=1;p=2}
+  - missile{ot=LB5M_Tick;oh=LB5M_Hit;v=10;i=1;hR=1;vR=1;syo=3;in=10}
+LB5M_Tick:
+  Skills:
+  - effect:particles{p=largesmoke;amount=8;speed=0;hS=1;vS=1} @origin
+  - effect:particles{p=reddust;amount=30;speed=0;hS=0.2;vS=0.2} @origin
+LB5M_Hit:
+  Skills:
+  - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
+  - effect:sound{s=entity.generic.hurt;v=1;p=1}
+  - skill{s=Bleed_30} @target
+### AREA SKILLS
+LB5_Drag: ### Massive DoT + Slowness
+  Skills:
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=0}
+  - randommessage
+      {
+      m=
+      "<mob.name> &fI shall bathe in your death!",
+      "<mob.name> &fDrown in your own sea of suffering!",
+      "<mob.name> &fGive me your face!",
+      } @PlayersInRadius{r=10}
+  - skill{s=LB5_Drag_P} @self
+  - skill{s=LB5_Drag_D} @PIR{r=10}
+  - delay 10
+  - skill{s=LB5_Drag_P} @self
+  - skill{s=LB5_Drag_D} @PIR{r=10}
+  - delay 10
+  - skill{s=LB5_Drag_P} @self
+  - skill{s=LB5_Drag_D} @PIR{r=10}
+  - delay 10
+  - skill{s=LB5_Drag_P} @self
+  - skill{s=LB5_Drag_D} @PIR{r=10}
+  - delay 10
+  - skill{s=LB5_Drag_P} @self
+  - skill{s=LB5_Drag_D} @PIR{r=10}
+  - delay 10
+  - skill{s=LB5_Drag_P} @self
+  - skill{s=LB5_Drag_D} @PIR{r=10}
+  - delay 10
+  - skill{s=LB5_Drag_P} @self
+  - skill{s=LB5_Drag_D} @PIR{r=10}
+  - delay 10
+  - skill{s=LB5_Drag_P} @self
+  - skill{s=LB5_Drag_D} @PIR{r=10}
+  - delay 10
+  - skill{s=LB5_Drag_P} @self
+  - skill{s=LB5_Drag_D} @PIR{r=10}
+  - delay 10
+  - skill{s=LB5_Drag_P} @self
+  - skill{s=LB5_Drag_D} @PIR{r=10}
+LB5_Drag_P: ### Particle effects for skill
+  Skills:
+  - effect:particlesphere{particle=largesmoke;amount=200;r=3} @self
+  - effect:particlesphere{particle=reddust;amount=200;r=3} @self
+LB5_Drag_D: ### Damage Values for skill
+  Skills:
+  - pull{velocity=1} @PIR{r=3}
+  - damage{a=50;pk=true} @PIR{r=3}
+  - delay 2
+  - pull{velocity=1} @PIR{r=3}
+  - damage{a=5;ia=true;pi=true;pk=true} @PIR{r=3}
+  - delay 2
+  - pull{velocity=1} @PIR{r=3}
+  - damage{a=50;pk=true} @PIR{r=3}
+  - delay 2
+  - pull{velocity=1} @PIR{r=3}
+  - damage{a=5;ia=true;pi=true;pk=true} @PIR{r=3}
+  - delay 2
+  - pull{velocity=1} @PIR{r=3}
+  - damage{a=50;pk=true} @PIR{r=3}
+LB5_Drag_S: ### Sounds for the skill
+  Skills:
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=0}
+LB5_Summon:
+  Skills:
+  - summon{mob=BloodPointer;amount=1;noise=5} @Self
+### PHASES
+LB5_Phase_1:
+  Skills:
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB5_Missile} @PIR{r=30}
+LB5_Phase_2:
+  Skills:
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB5_Blast} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB5_Missile} @PIR{r=30}
+  - delay 5
+  - skill{s=LB5_Missile} @PIR{r=30}

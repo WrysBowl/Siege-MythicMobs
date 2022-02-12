@@ -1,0 +1,237 @@
+### RARE ITEMS (CS ONLY) ---------------------------------------
+### RANGED ITEMS -----------------------------------------------
+Bow1:
+  Id: 261
+  Display: "&3Spirit Bow&7&7 «1»"
+  Lore:
+  - "&7Power XXV"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c75.0❤"
+  - "&7Cooldown: &f5 Seconds"
+  - "&0 "
+  - "&3★ &7Fully-drawn shots cast a"
+  - "&7  devastating ability!"
+  - "&0 "
+  - "&7“&3A powerful bow enchanted"
+  - "&3 by a magic long forgotten.&7”"
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:25
+  - ARROW_INFINITE:1
+  - DURABILITY:9999
+  - MENDING:10
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+Crossbow2:
+  Id: 274
+  Display: "&3The Trihard&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fCrossbow"
+  - "&7Ammo: &fArrow"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c20.0❤x3"
+  - "&0 "
+  - "&3★ &72x damage on headshot."
+  - "&0 "
+  - "&7“&3Ma! I did my best!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Rocket1:
+  Id: 355
+  Data: 9
+  Display: "&3Rocketeer&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fLauncher"
+  - "&7Ammo: &fFire Charge"
+  - "&7Radius: &f3 Blocks"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c0.0-200.0❤"
+  - "&0 "
+  - "&7“&3With you right here, I"
+  - "&3 might shed a tear.&7”"
+AutoRifle1:
+  Id: 417
+  Display: "&3Clockwork Assault Rifle&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fRifle (Auto)"
+  - "&7Ammo: &fCoal"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c10.0❤"
+  - "&0 "
+  - "&3★ &7Crouching reduces recoil"
+  - "&0 "
+  - "&7“&3A steam-powered automatic"
+  - "&3 rifle with a massive clip.&7”"
+  Hide:
+  - ATTRIBUTES
+Scattergun2:
+  Id: 419
+  Display: "&3Aquir Scattergun&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fScattergun"
+  - "&7Ammo: &fIron Ingot"
+  - "&7Speed: &fFast"
+  - "&7Damage: &c20.0❤x5"
+  - "&0 "
+  - "&3★ &7Crouching focuses shots."
+  - "&3★ &7Crouching reduces recoil."
+  - "&0 "
+  - "&7“&3A powerful short-range"
+  - "&3 weapon made by the Aquir.&7”"
+Shotgun2:
+  Id: 417
+  Display: "&3Mithril Shotgun&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fShotgun"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fAverage"
+  - "&7Damage: &c20.0❤x6"
+  - "&0 "
+  - "&3★ &7Crouching reduces recoil."
+  - "&0 "
+  - "&7“&3Forged from the hottest of"
+  - "&3 flames, this heavy shotgun"
+  - "&3 was built with honor.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+SMG1:
+  Id: 355
+  Data: 8
+  Display: "&3Pirson Smig&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fSMG"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c9.5❤"
+  - "&0 "
+  - "&3★ &7Slows targets for 0.5s"
+  - "&7  on hit."
+  - "&0 "
+  - "&7“&3A hovy n smol gon dat firez"
+  - "&3 lotsa boletz.&7”"
+Sniper1:
+  Id: 419
+  Display: "&3Hunting Rifle&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fSniper"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c10.0❤"
+  - "&0 "
+  - "&3★ &710x damage on headshot."
+  - "&0 "
+  - "&7“&3A classic, wood-stock hunting"
+  - "&3 rifle crafted with precision.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+### MAGIC ITEMS ------------------------------------------------
+Fire1:
+  Id: 38
+  Display: "&3Fire Flower&7&7"
+  Lore:
+  - "&7Left-click to cast"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c60.0❤"
+  - "&0 "
+  - "&7“&3Plonk!&7”"
+  Enchantments:
+  - ARROW_FIRE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Water1:
+  Id: 403
+  Display: "&3Water Bolt&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c50.0❤"
+  - "&0 "
+  - "&7“&3Mend by the tides!&7”"
+Air1:
+  Id: 287
+  Display: "&3Whispering Gust&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c45.0❤"
+  - "&0 "
+  - "&7“&3The wind is alive...&7”"
+Frost0:
+  Id: 403
+  Display: "&3Chilling Winds&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0"
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c10.0❤x3"
+  - "&0 "
+  - "&3★ &710% chance to &bFreeze &7enemies."
+  - "&0 "
+  - "&7“&3Only the strongest can withstand"
+  - "&3 the harshness of winter.&7”"
+  Skills:
+  - skill{s=InflictFreeze} @target ~onBowHit 0.1

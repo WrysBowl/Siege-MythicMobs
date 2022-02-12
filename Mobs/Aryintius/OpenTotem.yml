@@ -1,0 +1,74 @@
+OpenTotem: ### Literally a breach.
+  Type: GIANT
+  Display: '&0&l<&0« &4Idol of Corruption &0»&0&l>'
+  Health: 35000
+  Damage: 1
+  BossBar:
+    Enabled: true
+    Title: '&0&l<&0« &4Idol of Corruption &0»&0&l>'
+    Range: 32
+    Color: RED
+    Style: SEGMENTED_20
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - UHelm_0:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - BlockHead_2:0
+  - BlockHead_2:5
+  Drops:
+  - Food
+  - Money_Boss
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - Exalted
+  - Corrupted
+  - Mythic
+  - Iridescent
+  - CFrags_3
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.01
+    FollowRange: 120
+    MaxCombatDistance: 120
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+    NoAI: true
+  Skills:
+### SPAWN/INITIALIZATION
+  - randommessage
+      {
+      m=
+      "&cA sinister voice rings out from beyond...",
+      "&cSomething horrible has been unearthed nearby...",
+      "&cShockwaves resonate from a force close by...";
+      } @PlayersInRadius{r=32} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=999999;level=1} @Self ~onSpawn
+### PHASE 1
+  - Skill{s=OW_Summon_1} @Self ~onTimer:300 =70%-99%
+  - summon{mob=OpenS2;amount=1;noise=8} @Self =95%
+  - summon{mob=OpenZ2;amount=1;noise=8} @Self =85%
+  - summon{mob=OpenZ3;amount=1;noise=8} @Self =75%
+### PHASE 2
+  - Skill{s=OW_Summon_2} @Self ~onTimer:300 =30%-70%
+  - summon{mob=OpenZ3;amount=1;noise=12} @Self =65%
+  - summon{mob=OpenZ3;amount=3;noise=12} @Self =55%
+  - summon{mob=OpenSP2;amount=1;noise=12} @Self =45%
+  - summon{mob=OpenS3;amount=1;noise=12} @Self =35%
+### PHASE 3
+  - Skill{s=OW_Summon_3} @Self ~onTimer:300 <30%
+  - summon{mob=OpenSP2;amount=3;noise=12} @Self =25%
+  - summon{mob=OpenS3;amount=1;noise=12} @Self =20%
+  - summon{mob=OpenSP2;amount=5;noise=12} @Self =15%
+  - summon{mob=OpenS3;amount=2;noise=12} @Self =10%
+  - summon{mob=OpenS3;amount=2;noise=12} @Self =5%
+### DEATH
+  - message{cooldown=20;m="&b The monster lies slain, and a sense of relief crosses your mind."} @PlayersInRadius{r=32} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PlayersInRadius{r=30} ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @PlayersInRadius{r=30} ~onDeath

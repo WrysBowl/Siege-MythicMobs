@@ -1,0 +1,168 @@
+### OTIN'S MINIONS -----------------------------------------------------------
+T8_Melee:
+  Type: SKELETON
+  Display: "&6« &eWasteland Warrior &6»"
+  Health: 1000
+  Damage: 1000
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - IHelm:4
+  - CChest:3
+  - ILegs:2
+  - CBoots:1
+  - Arch_Sword:0
+  - Shield_Energy:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    Silent: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=0} @Self ~onSpawn
+  - healpercent{m=0.05} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=InflictFreeze} @target ~onAttack 0.2
+  - skill{s=Ignite_Title} @target ~onAttack 0.15
+  - skill{s=InflictShock} @target ~onAttack 0.1
+
+T8_Mage:
+  Type: HUSK
+  Display: "&4« &eChaotic Caster &4»"
+  Health: 800
+  Damage: 500
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_5:4
+  - GChest:3
+  - GLegs:2
+  - GBoots:1
+  - BLAZE_ROD:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=0} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=T8_MiniWave} @NearestPlayer{r=20} ~onTimer:10 0.3
+  - healpercent{m=0.05} @Self ~onTimer:10 >50%
+  - healpercent{m=0.1} @Self ~onTimer:10 <50%
+  ### EFFECTS
+  - effect:sound{s=entity.blaze.hurt;p=1.0;v=1} @self ~onDamaged
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.5} @self ~onDamaged
+
+T8_MiniBoss:
+  Type: HUSK
+  Display: "&4« &cAncient Abomination &4»"
+  Health: 9000
+  Damage: 2500
+  Disguise:
+    Type: WITHER
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Drops:
+  - Currency_Rifts_2
+  - Corrupted
+  - Mythic
+  - Iridescent
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=CancelLevitation} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Atlas_SmokeNova} @Self ~onTimer:20
+  - skill{s=InflictCurse} @PIR{r=4} ~onTimer:20
+  - skill{s=T8_WitherBolt} @NearestPlayer{r=50} ~onTimer:20 0.35
+  - potion{type=ABSORPTION;duration=999999;level=9} @Self ~onDamaged <50%
+  ### EFFECTS
+  - effect:sound{s=ambient.cave;p=2.0;v=0.75} @self ~onTimer:40
+  - effect:sound{s=entity.wither.ambient;p=1;v=0.5} @self ~onTimer:100
+  - effect:sound{s=entity.wither.hurt;p=1;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.ghast.death;p=1;v=1} @self ~onDeath
+  - effect:sound{s=entity.zombie_villager.converted;p=2;v=2} @self ~onDeath
+#
+### POINTER MOBS (For Skills Usage) ------------------------------------------
+#
+T8_ProjTotem: ### Totem that spams projectiles at nearby players.
+  Type: HUSK
+  Display: "&8« &7Idol of Corruption &8»"
+  Health: 1000
+  Damage: 0
+  Disguise:
+    Type: BLOCK
+    Block: OBSIDIAN
+    BlockData: 0
+    ShowName: false
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+### SKILLS
+  - remove{delay=200} @Self ~onSpawn
+  - skill{s=T8_SuicideBomb} @Self ~onSpawn
+  - skill{s=T8_Circle} @NearestPlayer{r=50} ~onTimer:10 0.35
+  - effect:particlering{particle=flame;radius=5;points=36;amount=1;hS=1;vS=0} @self ~onTimer:20
+  - effect:particlering{particle=flame;radius=3;points=16;amount=1;hS=1;vS=0} @self ~onTimer:20
+  - effect:particlering{particle=flame;radius=1;points=4;amount=1;hS=1;vS=0} @self ~onTimer:20
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true

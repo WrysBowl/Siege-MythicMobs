@@ -1,0 +1,156 @@
+### LAB BOSS 4 SKILLS
+LB4_Shot: ### Basic Magic Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=LB4S-Tick;onHit=LB4S-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+LB4S-Tick:
+  Skills:
+  - effect:particles{p=snowballpoof;amount=1} @origin
+  - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+LB4S-Hit:
+  Skills:
+  - damage{a=100;pk=true}
+LB4_Blast: ### Heavy Magic Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=LB4B-Tick;onHit=LB4B-Hit;v=5;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.wither.ambient;v=0.5;p=0}
+LB4B-Tick:
+  Skills:
+  - effect:particles{p=explode;amount=1;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=largeexplode;a=1} @Origin
+LB4B-Hit:
+  Skills:
+  - damage{a=400;pk=true}
+LB4_Death: ### Super Magic Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=LB4D-Tick;onHit=LB4D-Hit;v=10;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.wither.ambient;v=0.5;p=0}
+LB4D-Tick:
+  Skills:
+  - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=largeexplode;a=1} @Origin
+LB4D-Hit:
+  Skills:
+  - damage{a=800;pk=true}
+### AREA SKILLS
+LB4_Tornado: ### Insane tornado attack.
+  Skills:
+  - effect:particletornado{p=smoke;cp=largeexplode;mr=1.5;h=3;i=1;d=100;rs=0.5;sh=1;cs=1;ca=1;chs=0.5;cvs=0.5;cps=1;cyo=0} @origin
+LB4_TornadoX:
+  Skills:
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
+  - delay 2
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
+  - delay 2
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
+  - delay 2
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
+  - delay 2
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
+  - delay 2
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
+  - delay 2
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
+  - delay 2
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
+  - delay 2
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
+  - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
+LB4_Drag: ### Generic drag attack.
+  Skills:
+  - effect:particlesphere{particle=largesmoke;amount=80;r=5} @self
+  - effect:particlesphere{particle=explode;amount=80;r=5} @self
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - randommessage
+      {
+      m=
+      "<mob.name> &fThe eye of the storm embraces you, mortal!",
+      "<mob.name> &fYour soul shall be torn asunder by the winds!",
+      } @PlayersInRadius{r=10}
+  - forcepull{spread=0} @PIR{r=10}
+LB4_Summon: ### Summons Tornado Pointer Mobs.
+  Skills:
+  - message{m="<mob.name> &eEnough! Now you shall perish in the storm!"} @PlayersInRadius{r=25}
+  - delay 10
+  - summon{mob=TornadoPointer;amount=1;noise=5} @Self
+### COMPOSITE SKILLS
+LB4_Phase1: ### PHASE 1 COMPOSITE
+  Skills:
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 20
+  - skill{s=LB4_Blast} @NearestPlayer{r=50}
+LB4_Phase2: ### PHASE 2 COMPOSITE
+  Skills:
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB4_Shot} @NearestPlayer{r=50}
+  - delay 20
+  - skill{s=LB4_Death} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB4_Death} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB4_Death} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB4_Death} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB4_Death} @NearestPlayer{r=50}

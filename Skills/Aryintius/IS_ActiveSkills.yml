@@ -1,0 +1,486 @@
+### ACTIVE EFFECTS ---------------------------------------------
+RangerCrit:
+  Cooldown: 5
+  Skills:
+  - effect:sound{s=entity.zombie.break_door_wood;v=0.5;p=1} @Self
+  - effect:sound{s=entity.irongolem.death;v=1;p=2} @Self
+  - damage{a=1200;ia=true;pi=true;pk=true} @target
+  - actionmessage{m="&7SCOPE RECHARGE &f| &74.5"} @Self
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 10
+  - actionmessage{m="&7SCOPE RECHARGE &f| &74.0"} @Self
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 10
+  - actionmessage{m="&7SCOPE RECHARGE &f| &73.5"} @Self
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 10
+  - actionmessage{m="&7SCOPE RECHARGE &f| &73.0"} @Self
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 10
+  - actionmessage{m="&7SCOPE RECHARGE &f| &72.5"} @Self
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 10
+  - actionmessage{m="&7SCOPE RECHARGE &f| &72.0"} @Self
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 10
+  - actionmessage{m="&7SCOPE RECHARGE &f| &71.5"} @Self
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 10
+  - actionmessage{m="&7SCOPE RECHARGE &f| &71.0"} @Self
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 10
+  - actionmessage{m="&7SCOPE RECHARGE &f| &70.5"} @Self
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 10
+  - actionmessage{m="&7SCOPE RECHARGED"} @Self
+  - effect:sound{s=block.note.pling;v=1;p=2}
+MeleeCrit:
+  Cooldown: 2
+  Skills:
+  - effect:sound{s=entity.zombie.break_door_wood;v=0.5;p=1}
+  - effect:sound{s=entity.player.attack.crit;p=1;v=1}
+  - damage{a=100000;pi=true;pk=true} @target
+  - actionmessage{m="&c»&8»»»&l> &72.0s"} @Self
+  - delay 10
+  - actionmessage{m="&c»»&8»»&l> &71.5s"} @Self
+  - delay 10
+  - actionmessage{m="&c»»»&8»&l> &71.0s"} @Self
+  - delay 10
+  - actionmessage{m="&c»»»»&8&l> &70.5s"} @Self
+  - delay 10
+  - actionmessage{m="&c»»»»&4&l> &70.0s"} @Self
+MeleeCrit_Chaos:
+  Cooldown: 2
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=1500;ia=true;pi=true;pk=true}
+BeaconHeal: ### Super Healing Beacon
+  Skills:
+  - effect:particlesphere{particle=happyVillager;amount=400;r=8}
+  - effect:particlesphere{particle=happyVillager;amount=200;r=5}
+  - effect:particlesphere{particle=happyVillager;amount=100;r=2}
+  - heal{amount=2000} @PIR{r=8}
+  - effect:sound{s=entity.hostile.swim;v=0.3;p=2}
+  - effect:sound{s=entity.hostile.swim;v=0.3;p=1}
+  - effect:sound{s=entity.hostile.swim;v=0.3;p=0}
+BeaconSkill:
+  Skills:
+  - skill{s=BeaconHeal}
+  - delay 20
+  - skill{s=BeaconHeal}
+  - delay 20
+  - skill{s=BeaconHeal}
+  - delay 20
+  - skill{s=BeaconHeal}
+  - delay 20
+  - skill{s=BeaconHeal}
+BeaconSpawn:
+  Cooldown: 60
+  Skills:
+  - summon{mob=HealingPointer;a=1;noise=0} @Self
+BeaconSpawn_NoCD:
+  Skills:
+  - summon{mob=HealingPointer;a=1;noise=2} @Self
+Warcry_Strength_Util:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=199;overwrite=true}
+  - sendtitle{title="&6✦&e✷&6✦";subtitle="&7Maximum Strength";d=20}
+  - effect:sound{s=entity.enderdragon.growl;v=1;p=2}
+  - delay 200
+  - sendtitle{title="&c✦&4✷&c✦";subtitle="&7Strength Expired";d=20}
+  - effect:sound{s=entity.irongolem.death;v=1;p=0.5}
+Warcry_Strength:
+  Cooldown: 30
+  Skills:
+  - skill{s=Warcry_Strength_Util} @PIR{r=20}
+  - actionmessage{m="&7BUFF SPELL CAST"}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &729.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &728.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &727.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &726.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &725.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &724.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &723.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &722.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &721.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &720.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &719.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &718.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &717.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &716.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &715.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &714.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &713.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &712.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &711.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &710.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &79.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &78.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &77.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &76.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &75.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &74.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &73.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &72.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGE &f| &71.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7SPELL RECHARGED"}
+  - effect:sound{s=block.note.pling;v=1;p=2}
+BlockBuff:
+  Cooldown: 15
+  Skills:
+  - effect:sound{s=entity.irongolem.hurt;v=1;p=0.5}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=1}
+  - sendtitle{title="&f✦✷✦";subtitle="&7You are now immune!";d=20}
+  - actionmessage{m="&7BLOCK ENGAGED"}
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - delay 2
+  - actionmessage{m="&7BLOCK DELAY &f| &714.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - potion{type=DAMAGE_RESISTANCE;duration=80;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=80;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=80;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=80;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=80;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=80;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=80;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=80;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=80;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=80;lvl=4;overwrite=true}
+  - delay 2
+  - actionmessage{m="&7BLOCK DELAY &f| &713.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - potion{type=DAMAGE_RESISTANCE;duration=60;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=60;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=60;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=60;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=60;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=60;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=60;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=60;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=60;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=60;lvl=4;overwrite=true}
+  - delay 2
+  - actionmessage{m="&7BLOCK DELAY &f| &712.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true}
+  - delay 2
+  - actionmessage{m="&7BLOCK DELAY &f| &711.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - potion{type=DAMAGE_RESISTANCE;duration=20;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=20;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=20;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=20;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=20;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=20;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=20;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=20;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=20;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=20;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=20;lvl=4;overwrite=true}
+  - sendtitle{title="&c✦✷✦";subtitle="&7Immunity Expired";d=20}
+  - actionmessage{m="&7BLOCK DELAY &f| &710.0"}
+  - effect:sound{s=entity.irongolem.death;v=1;p=0.5}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &79.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &78.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &77.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &76.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &75.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &74.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &73.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &72.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &71.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK RECHARGED"}
+  - effect:sound{s=block.note.pling;v=1;p=2}
+IgnoreNonlethal:
+  Cooldown: 15
+  Skills:
+  - effect:sound{s=entity.zombie_villager.converted;v=2;p=2}
+  - effect:sound{s=block.portal.travel;v=0.5;p=2}
+  - actionmessage{m="&7BLOCK ENGAGED"}
+  - sendtitle{title="&e✦&6✷&e✦";subtitle="&7You are now immune!";d=20}
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - actionmessage{m="&7BLOCK DELAY &f| &714.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - actionmessage{m="&7BLOCK DELAY &f| &713.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - actionmessage{m="&7BLOCK DELAY &f| &712.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - actionmessage{m="&7BLOCK DELAY &f| &711.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - sendtitle{title="&c✦&4✷&c✦";subtitle="&7Immunity Expired";d=20}
+  - actionmessage{m="&7BLOCK DELAY &f| &710.0"}
+  - effect:sound{s=entity.irongolem.death;v=1;p=0.5}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &79.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &78.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &77.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &76.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &75.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &74.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &73.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &72.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK DELAY &f| &71.0"}
+  - effect:sound{s=block.note.hat;v=1;p=2}
+  - delay 20
+  - actionmessage{m="&7BLOCK RECHARGED"}
+  - effect:sound{s=block.note.pling;v=1;p=2}

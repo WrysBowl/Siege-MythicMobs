@@ -1,0 +1,156 @@
+PoisonDagger:
+  Id: 359
+  Display: "&6&oThief's Pact"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2✷"
+  - "&0 "
+  - "&6★ &a&o+100% &7&oattack speed."
+  - "&6★ &7&o50% chance to inflict &c&o150.0❤"
+  - "&2&o  Toxin &7&odamage over a period"
+  - "&7&o  of 3.0s."
+  - "&6★ &7&oRestore 25% of your maximum"
+  - "&7&o  health when you hit an enemy."
+  - "&0 "
+  - "&7“&6Who lies waiting in the darkness,"
+  - "&6 master of the infinite shadows?"
+  - "&6 Only death, my brothers.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.05
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Poison_150} @target ~onAttack 0.5
+  - healpercent{m=0.25} @Self ~onAttack
+PoisonBow:
+  Id: 261
+  Display: "&6&oNightfall&7&7"
+  Lore:
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2✷"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c350.0❤x5"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&6★ &7&oFully-draw shots to cast ability."
+  - "&6★ &7&o50% chance to inflict &c&o300.0❤ &2&oToxin"
+  - "&7&o  damage over a period of 1.5s."
+  - "&0 "
+  - "&7“&6Only the vilest of creatures wander"
+  - "&6 about in the dark, always waiting for"
+  - "&6 a moment to strike.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Poison_300X} @target ~onBowHit 0.5
+PoisonMagic:
+  Id: 111
+  Display: "&6&oMiasma&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0"
+  - "&7Tier: &6&oLegendary &2✷"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fInsanely Fast"
+  - "&7Damage: &c0.0❤x3"
+  - "&0 "
+  - "&6★ &7&o25% chance to inflict &c&o300.0❤"
+  - "&2&o  Toxin &7&odamage over a period"
+  - "&7&o  of 3.0s."
+  - "&6★ &8&o-50% &7&omovement speed if this is"
+  - "&7&o  held in your main hand."
+  - "&0 "
+  - "&7“&6A cloud of doom emanates from"
+  - "&6 this leaf, bathing your enemies"
+  - "&6 in the scent of death.&7”"
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    MainHand:
+      MovementSpeed: -0.5
+  Skills:
+  - skill{s=Poison_150X} @target ~onBowHit 0.25
+PoisonHelm:
+  Id: 298
+  Display: "&6&oSahuvar's Mind"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2✷"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&o20% chance for your attacks"
+  - "&7&o  to inflict &c&o150.0❤ &2&oToxin &7&odamage"
+  - "&7&o  over a period of 1.5s."
+  - "&0 "
+  - "&7“&6Blessed with a silver tongue, the"
+  - "&6 Titan Sahuvar could concoct the"
+  - "&6 deadliest of poisons--deceit.&7”"
+  Options:
+    Unbreakable: true
+    Color: 0,255,0
+  Attributes:
+    Head:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Poison_150X} @target ~onBowHit 0.2
+  - skill{s=Poison_150} @target ~onAttack 0.2
+PoisonLegs:
+  Id: 300
+  Display: "&6&oThe Rat King"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2✷"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oYour attacks do &c&o25.0❤ &7&oextra"
+  - "&7&o  damage as &2&oToxin &7&odamage."
+  - "&0 "
+  - "&7“&6Even the darkest fates remain"
+  - "&6 forever intertwined.&7”"
+  Options:
+    Unbreakable: true
+    Color: 0,255,0
+  Attributes:
+    Legs:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=PoisonPants} @target ~onBowHit
+  - skill{s=PoisonPants} @target ~onAttack

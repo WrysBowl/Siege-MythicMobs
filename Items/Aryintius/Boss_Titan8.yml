@@ -1,0 +1,154 @@
+### GRAVE WARDEN DROPS -----------------------------------------
+GraveSword:
+  Id: 267
+  Display: "&6&oWraithbane&7&7"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &8✷"
+  - "&0 "
+  - "&6★ &a&o+75% &7&oattack speed."
+  - "&6★ &7&o20% chance to chain attacks."
+  - "&6★ &7&o300% increased weapon range."
+  - "&6★ &7&oDeals &c&o15.0❤ &7&oextra &5&oChaos &7&odamage"
+  - "&7&o  for every 50 levels of &a&oStrength&7&o."
+  - "&7&o  (Up to 60.0❤ from 200 Strength.)"
+  - "&0 "
+  - "&7“&6Death is an art learned by many,"
+  - "&6 mastered by few, and appraised"
+  - "&6 by all.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Enchantments:
+  - DAMAGE_ALL:500
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+  Skills:
+  - skill{s=Chaos15Strength50} @target ~onAttack
+GraveShotgun:
+  Id: 417
+  Display: "&6&oLast Breath&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &8✷"
+  - " &0 "
+  - "&7Type: &fShotgun"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fAverage"
+  - "&7Damage: &c80.0❤x18"
+  - "&0 "
+  - "&6★ &7&oFired projectiles move at"
+  - "&7&o  extremely slow speeds."
+  - "&6★ &7&oShots deal 25% more damage"
+  - "&7&o  for every second in air."
+  - "&0 "
+  - "&7“&6The power of one's will often"
+  - "&6 outlives the grasp of death.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+GraveMagic:
+  Id: 403
+  Display: "&6&oDesecrate&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0"
+  - "&7Tier: &6&oLegendary &8✷"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fAverage"
+  - "&7Charge: &fVery Fast"
+  - "&7Damage: &c40.0❤"
+  - "&0 "
+  - "&6★ &7&oSummons exploding corpses when"
+  - "&7&o  you hit an enemy."
+  - "&6★ &7&oCorpses deal &c&o100.0-250.0❤ &5&oChaos"
+  - "&7&o  damage and cannot gain bonuses"
+  - "&7&o  from armor or accessories."
+  - "&6★ &7&oExplosions have a 5 block radius."
+  - "&6★ &7&oCorpses cannot spawn more than"
+  - "&7&o  10 blocks away from you."
+  - "&0 "
+  - "&7“&6The tomb is merely a workshop for"
+  - "&6 those with twisted intentions.&7”"
+  Skills:
+  - summon{type=CorpseExplosion;amount=1;radius=1;yu=true} @target ~onBowHit
+GraveMind:
+  Id: 306
+  Display: "&6&oGravemind"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &8✷"
+  - "&0 "
+  - "&6★ &a&o+40% &7&omovement speed."
+  - "&6★ &7&oAdds &c&o25.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all attacks for every &e&o20.0❤&7&o."
+  - "&7&o  (Up to 125.0❤ Chaos damage)."
+  - "&6★ &7&oYou and all players within 20"
+  - "&7&o  blocks gain &a&oHaste X &7&ofor 10.0s"
+  - "&7&o  when you hit an enemy."
+  - "&0 "
+  - "&7“&6Fate had us meet as foes, but"
+  - "&6 this Ring will make us brothers.&7”"
+  Attributes:
+    Head:
+      MovementSpeed: 0.4
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=ChaosFromES_2} @Self ~onAttack
+  - skill{s=ChaosFromES_2} @Self ~onBowHit
+  - potion{type=FAST_DIGGING;duration=200;level=9} @PIR{r=20} ~onAttack
+  - potion{type=FAST_DIGGING;duration=200;level=9} @PIR{r=20} ~onBowHit
+GraveChest:
+  Id: 307
+  Display: "&6&oInstrumentality"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &8✷"
+  - "&0 "
+  - "&6★ &c&o+20.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o40.0-80.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&6★ &7&oAdds &c&o15.0-30.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all ranged/magic attacks."
+  - "&6★ &7&oDamage from this item is tripled"
+  - "&7&o  while you have &a&oStrength&7&o."
+  - "&0 "
+  - "&7“&6We are all united in death--even"
+  - "&6 while separated in life.&7”"
+  Attributes:
+    Chest:
+      Health: 40.0
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=Chaos_40-80} @target ~onAttack
+  - skill{s=Chaos_15-30} @target ~onBowHit
+  - skill{s=Evangelion_Melee} @target ~onAttack
+  - skill{s=Evangelion_Ranged} @target ~onBowHit

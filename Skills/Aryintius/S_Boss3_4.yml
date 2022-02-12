@@ -1,0 +1,134 @@
+### RITH SKILLS ---------------------------------------------------------
+Boss3Knockback:
+  Skills:
+  - effect:sound{s=entity.generic.burn;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=0} @PIR{r=25}
+  - effect:particlesphere{particle=largesmoke;amount=10;r=1} @self
+  - effect:particlesphere{particle=flame;amount=10;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=20;r=2} @self
+  - effect:particlesphere{particle=flame;amount=20;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=40;r=3} @self
+  - effect:particlesphere{particle=flame;amount=40;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=60;r=4} @self
+  - effect:particlesphere{particle=flame;amount=60;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=80;r=5} @self
+  - effect:particlesphere{particle=flame;amount=80;r=5} @self
+  - damage{a=1000} @PIR{r=5}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
+Boss3Drag:
+  Skills:
+  - effect:particlesphere{particle=largesmoke;amount=80;r=5} @self
+  - effect:particlesphere{particle=flame;amount=80;r=5} @self
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - randommessage
+      {
+      m=
+      "<mob.name> &fDid you really believe it would be that easy?",
+      "<mob.name> &fDon't be shy! We are having a feast... and you're the main course!",
+      "<mob.name> &fEscaping, are we? No, no! There is no escape. Not while I still live.",
+      } @PlayersInRadius{r=10}
+  - forcepull{spread=0} @PIR{r=10}
+SummonKef:
+  Skills:
+  - delay 20
+  - message{m="<mob.name> &fAid me, brother!"} @PlayersInRadius{r=25}
+  - summon{mob=Boss4;amount=1;noise=0} @Self
+### KEF SKILLS ---------------------------------------------------------
+Boss4Fire: ### Basic shot attack, used in composite skills.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=Boss4F-Tick;onHit=Boss4F-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+Boss4F-Tick:
+  Skills:
+  - effect:particles{p=crit;amount=8;speed=0;hS=0.5;vS=0.5} @origin
+  - effect:particles{p=flame;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+Boss4F-Hit:
+  Skills: ### ~20.0 hearts with max damage reduction.
+  - damage{a=1000;pi=true}
+Boss4Shot: ### Skillshot that deals craptons of damage.
+  Skills:
+  - projectile{onTick=Boss4S-Tick;onHit=Boss4S-Hit;v=5;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+Boss4S-Tick:
+  Skills:
+  - effect:particles{p=crit;amount=8;speed=0;hS=0.5;vS=0.5} @origin
+  - effect:particles{p=lava;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=largesmoke;amount=8;speed=0;hS=0.5;vS=0.5} @origin
+Boss4S-Hit:
+  Skills: ### Basically a 1-shot attack
+  - damage{a=99999}
+### Phases
+Boss4_Phase_1:
+  Skills:
+  - skill{s=Boss4Fire} @target
+  - delay 10
+  - skill{s=Boss4Fire} @target
+  - delay 10
+  - skill{s=Boss4Fire} @target
+  - delay 10
+  - skill{s=Boss4Fire} @target
+  - delay 10
+  - skill{s=Boss4Fire} @target
+  - delay 20
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+Boss4_Phase_2:
+  Skills:
+  - skill{s=Boss4Shot} @PIR{r=30}
+  - delay 10
+  - skill{s=Boss4Shot} @PIR{r=30}
+  - delay 10
+  - skill{s=Boss4Shot} @PIR{r=30}
+  - delay 60
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target
+  - delay 5
+  - skill{s=Boss4Fire} @target

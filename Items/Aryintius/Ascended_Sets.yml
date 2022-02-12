@@ -1,0 +1,425 @@
+### ASCENDED ARMOUR SETS ---------------------------------------
+### EAGLE ARMOR SET --------------------------------------------
+Eagle_Helm:
+  Id: 314
+  Display: "&6&oEag&e&ole's G&6&oaze"
+  Lore:
+  - "&7Protection XX"
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&e★ &a&o+30% &7&omovement speed."
+  - "&6★ &c&o+10.0❤ &7&owhile equipped."
+  - "&e★ &7&o20% chance to inflict &d&oCurse &7&owith your"
+  - "&7&o  ranged/magic attacks."
+  - "&6★ &7&oSet Bonus: Fully restore your health"
+  - "&7&o  whenever you hit a monster/boss."
+  - "&0 "
+  - "&7“&6Soari&eng through the clouds--my e&6yes"
+  - "&6 spo&et my next prey, a ro&6dent, weak and"
+  - "&e trembli&6ng...&7”"
+  Enchantments: 
+  - PROTECTION_ENVIRONMENTAL:20
+  - PROTECTION_EXPLOSIONS:20
+  Attributes:
+    Head:
+      Health: 20.0
+      MovementSpeed: 0.3
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictCurse} @target ~onBowHit 0.2
+Eagle_Chest:
+  Id: 303
+  Display: "&6&oEag&e&ole's Hun&6&oger"
+  Lore:
+  - "&7Protection XX"
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&6★ &a&o+20% &7&omovement speed."
+  - "&e★ &c&o+20.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o15.0❤ &7&odamage to ranged/magic"
+  - "&7&o  attacks for every 10 &a&oStrength&7&o. (E.g."
+  - "&7&o  75.0 extra damage from Strength L)."
+  - "&e★ &7&oSet Bonus: Fully restore your health"
+  - "&7&o  whenever you hit a monster/boss."
+  - "&0 "
+  - "&7“&6I reli&esh its death--for fear bri&6ngs me"
+  - "&6 the tendere&est meats. The w&6ind screams"
+  - "&6 as m&ey wings swoop in for the k&6ill...&7”"
+  Enchantments: 
+  - PROTECTION_ENVIRONMENTAL:20
+  - PROTECTION_PROJECTILE:20
+  Attributes:
+    Chest:
+      Health: 40.0
+      MovementSpeed: 0.2
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=PhysFromStrength} @Self ~onBowHit
+Eagle_Legs:
+  Id: 316
+  Display: "&6&oEag&e&ole's Gr&6&oasp"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&e★ &a&o+20% &7&omovement speed."
+  - "&6★ &c&o+20.0❤ &7&owhile equipped."
+  - "&6★ &7&o35% chance to add &c&o50.0-80.0❤ &5&oChaos"
+  - "&7&o  damage to all attacks."
+  - "&e★ &7&oSet Bonus: Fully restore your health"
+  - "&7&o  whenever you hit a monster/boss."
+  - "&0 "
+  - "&7“&eEnsnar&6ed in my talons, the beast c&eries"
+  - "&e for its life-&6-one that will s&eoon end as"
+  - "&e I ri&6se back into the s&eky...&7”"
+  Enchantments: 
+  - PROTECTION_EXPLOSIONS:20
+  - PROTECTION_PROJECTILE:20
+  Attributes:
+    Legs:
+      Health: 40.0
+      MovementSpeed: 0.2
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Chaos_50-80} @target ~onAttack 0.4
+  - skill{s=Chaos_50-80} @target ~onBowHit 0.3
+Eagle_Boots:
+  Id: 305
+  Display: "&6&oEag&e&ole's Banq&6&ouet"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&6★ &a&o+30% &7&omovement speed."
+  - "&e★ &c&o+10.0❤ &7&owhile equipped."
+  - "&e★ &7&oYou have 15 &a&oStrength &7&ofor each level"
+  - "&7&o  of &a&oRegeneration&7&o. (E.g. Your Strength"
+  - "&7&o  is set to CL from Regeneration X)."
+  - "&6★ &7&oSet Bonus: Fully restore your health"
+  - "&7&o  whenever you hit a monster/boss."
+  - "&0 "
+  - "&7“&eIt crump&6les and lies still after grav&eity"
+  - "&e clai&6ms its soul--thus the h&eunt comes to"
+  - "&6 an end and m&ey feast begins.&7”"
+  Enchantments: 
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:100
+  Attributes:
+    Feet:
+      Health: 20.0
+      MovementSpeed: 0.3
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=StrengthFromRegen} @Self ~onTimer:20
+### IMMORTAL ARMOR SET -----------------------------------------
+Dreamer_Helm:
+  Id: 298
+  Display: "&6&oDre&e&oamer's M&6&oask"
+  Lore:
+  - "&7Protection XX"
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&6★ &c&o+10.0❤ &7&owhile equipped."
+  - "&e★ &7&oAdds &c&o2.0❤ &5&oChaos &7&odamage to all attacks"
+  - "&7&o  for every level of &a&oHaste&7&o."
+  - "&7&o  (E.g. 10.0 Chaos damage from Haste V)."
+  - "&6★ &7&oSet Bonus: You cannot be knocked back."
+  - "&7&o  Whenever you hit a monster/boss, set"
+  - "&7&o  your gold hearts to &e&o50.0❤&7&o for 20.0s."
+  - "&0 "
+  - "&7“&6Life is onl&ey defined by entropy--shift&6ing"
+  - "&6 endle&essly through a myri&6ad of existences"
+  - "&e as time pas&6ses by...&7”"
+  Enchantments: 
+  - PROTECTION_ENVIRONMENTAL:20
+  - PROTECTION_EXPLOSIONS:20
+  Attributes:
+    Head:
+      Health: 20.0
+      KnockbackResistance: 1.0
+  Options:
+    Unbreakable: true
+    Color: 0,100,0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=ChaosFromHaste} @Self ~onAttack
+  - skill{s=ChaosFromHaste} @Self ~onBowHit
+Dreamer_Chest:
+  Id: 299
+  Display: "&6&oDre&e&oamer's Man&6&otle"
+  Lore:
+  - "&7Protection XX"
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&e★ &c&o+10.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore &c&o20.0-50.0❤ &7&owhenever you hit"
+  - "&7&o  an enemy."
+  - "&e★ &7&oSet Bonus: You cannot be knocked back."
+  - "&7&o  Whenever you hit a monster/boss, set"
+  - "&7&o  your gold hearts to &e&o50.0❤&7&o for 20.0s."
+  - "&0 "
+  - "&7“&6Some cho&eose to explore th&6is boundless"
+  - "&6 won&eder--living far beyond the reac&6hes"
+  - "&6 of deat&eh and destr&6uction...&7”"
+  Enchantments: 
+  - PROTECTION_ENVIRONMENTAL:20
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 0,125,0
+  Attributes:
+    Chest:
+      Health: 20.0
+      KnockbackResistance: 1.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Heal_20-50} @Self ~onAttack 0.2
+  - skill{s=Heal_20-50} @Self ~onBowHit 0.2
+Dreamer_Legs:
+  Id: 300
+  Display: "&6&oDre&e&oamer's Ro&6&obes"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&e★ &c&o+10.0❤ &7&owhile equipped."
+  - "&e★ &7&oFully restore the health of all nearby"
+  - "&7&o  players twice per second for a period"
+  - "&7&o  of 5.0s. &c&oAbility has a cooldown of 15.0s."
+  - "&6★ &7&oSet Bonus: You cannot be knocked back."
+  - "&7&o  Whenever you hit a monster/boss, set"
+  - "&7&o  your gold hearts to &e&o50.0❤&7&o for 20.0s."
+  - "&0 "
+  - "&7“&eThes&6e beings, now eternal, continu&eed to"
+  - "&e build worl&6ds--forging the rif&ets with their"
+  - "&e wi&6ldest dreams...&7”"
+  Enchantments: 
+  - PROTECTION_EXPLOSIONS:20
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 0,150,0
+  Attributes:
+    Legs:
+      Health: 20.0
+      KnockbackResistance: 1.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=RestoreNearbySkill} @Self ~onTimer:300
+Dreamer_Boots:
+  Id: 301
+  Display: "&6&oDre&e&oamer's Tre&6&oads"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&6★ &a&o+80% &7&omovement speed."
+  - "&e★ &c&o+10.0❤ &7&owhile equipped."
+  - "&e★ &7&oYou have &a&oJump Boost III&7&o."
+  - "&6★ &7&oSet Bonus: You cannot be knocked back."
+  - "&7&o  Whenever you hit a monster/boss, set"
+  - "&7&o  your gold hearts to &e&o50.0❤&7&o for 20.0s."
+  - "&0 "
+  - "&7“&eWithin thes&6e realms, a pantheon was m&eade."
+  - "&e The pow&6ers that gathered wou&eld forever"
+  - "&e be k&6nown as the Tit&eans.&7”"
+  Enchantments: 
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Options:
+    Unbreakable: true
+    Color: 0,175,0
+  Attributes:
+    Feet:
+      Health: 20.0
+      MovementSpeed: 0.80
+      KnockbackResistance: 1.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=JumpBoost_3} @Self ~onTimer:20
+### DIVINE ARMOR SET -------------------------------------------
+Divine_Helm:
+  Id: 302
+  Display: "&6&oDiv&e&oine Basci&6&onet"
+  Lore:
+  - "&7Protection XX"
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&6★ &7&o10% chance for your attacks"
+  - "&7&o  to inflict &3&oShock &7&ofor 5.0s."
+  - "&e★ &7&o10% chance for your attacks"
+  - "&7&o  to inflict &b&oFreeze &7&ofor 5.0s."
+  - "&6★ &7&oSet Bonus: &a&oRegeneration X&7&o."
+  - "&0 "
+  - "&7“&6And t&ehus, your hand has f&6elled"
+  - "&6 all foes. E&even the V&6oid wields no"
+  - "&6 tri&eumph over your po&6wer...&7”"
+  Enchantments: 
+  - PROTECTION_ENVIRONMENTAL:20
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack 0.1
+  - skill{s=InflictShock} @target ~onAttack 0.1
+Divine_Chest:
+  Id: 307
+  Display: "&6&oDiv&e&oine Cuir&6&oass"
+  Lore:
+  - "&7Protection XX"
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&e★ &c&o+10.0❤ &7&owhile equipped."
+  - "&6★ &7&o35% chance to fully restore"
+  - "&7&o  your gold hearts after you"
+  - "&7&o  take damage."
+  - "&e★ &7&oSet Bonus: &a&oRegeneration X&7&o."
+  - "&0 "
+  - "&7“&6But at wh&eat cost was it wo&6rth?"
+  - "&6 Mill&eions lie silent, bu&6ried in the"
+  - "&e reddened soi&6l of Aryntius...&7”"
+  Enchantments: 
+  - PROTECTION_ENVIRONMENTAL:20
+  - PROTECTION_PROJECTILE:20
+  Attributes:
+    Chest:
+      Health: 20.0
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=RestoreEqualES} @Self ~onDamaged 0.35
+Divine_Legs:
+  Id: 304
+  Display: "&6&oDiv&e&oine Platel&6&oegs"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&6★ &7&oYou have 1 level of &a&oResist&7&o."
+  - "&7&o  for every &e&o20.0❤&7&o. (E.g. Resist."
+  - "&7&o  IV from 80.0❤)."
+  - "&e★ &7&o50% chance to refresh your"
+  - "&a&o  Resist&7&o. after you take damage."
+  - "&e★ &7&oSet Bonus: &a&oRegeneration X&7&o."
+  - "&0 "
+  - "&7“&eAnd n&6ow, the cycle of lif&ee ends,"
+  - "&e frozen i&6n your hands, aw&eaiting a"
+  - "&e cho&6ice from its mast&eer...&7”"
+  Enchantments: 
+  - PROTECTION_EXPLOSIONS:20
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=ResFromAbsorb} @Self ~onTimer:10
+  - skill{s=ResRefresh} @Self ~onDamaged 0.5
+Divine_Boots:
+  Id: 309
+  Display: "&6&oDiv&e&oine Sabat&6&oons"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&e★ &a&o+45% &7&omovement speed."
+  - "&e★ &7&oRestore &c&o1.0❤ &7&oevery second"
+  - "&7&o  for every 10 &a&oStrength&7&o. (E.g."
+  - "&7&o  5.0❤ from Strength L)."
+  - "&6★ &7&oSet Bonus: &a&oRegeneration X&7&o."
+  - "&0 "
+  - "&7“&eBlessed b&6y both creatio&en and"
+  - "&e destru&6ction--the f&eate of this"
+  - "&6 world is n&eow yours to behold.&7”"
+  Enchantments: 
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Attributes:
+    Feet:
+      MovementSpeed: 0.45
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=HealStrength} @Self ~onTimer:10

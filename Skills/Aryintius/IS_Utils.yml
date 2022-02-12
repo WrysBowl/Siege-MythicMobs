@@ -1,0 +1,157 @@
+### UTILITY EFFECTS ------------------------------------------------
+CancelDespawn: ### Stops bosses with large arenas from despawning.
+  Conditions:
+  - playernotwithin 150
+  Skills:
+  - remove @Self
+CancelDamage:
+  Skills:
+  - CancelEvent
+### CANCEL POTIONS -------------------------------------------------
+CancelAbsorption: ### No gold hearts
+  Conditions:
+  - haspotioneffect{t=ABSORPTION} true
+  Skills:
+  - potion{type=ABSORPTION;duration=1;lvl=0;overwrite=true}
+CancelSpeed: ### No speed
+  Conditions:
+  - haspotioneffect{t=SPEED} true
+  Skills:
+  - potion{type=SPEED;duration=1;lvl=0;overwrite=true}
+CancelHaste: ### No Haste
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=1;lvl=0;overwrite=true}
+CancelRegen: ### No Regen
+  Conditions:
+  - haspotioneffect{t=REGENERATION} true
+  Skills:
+  - potion{type=REGENERATION;duration=1;lvl=0;overwrite=true}
+CancelResist: ### No Resist
+  Conditions:
+  - haspotioneffect{t=DAMAGE_RESISTANCE} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=1;lvl=0;overwrite=true}
+CancelStrength: ### No Strength
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=1;lvl=0;overwrite=true}
+CancelSlowness: ### No Slowness/Freezing
+  Conditions:
+  - haspotioneffect{t=SLOW} true
+  Skills:
+  - potion{type=SLOW;duration=1;lvl=0;overwrite=true}
+CancelFatigue: ### No Fatigue
+  Conditions:
+  - haspotioneffect{t=SLOW_DIGGING} true
+  Skills:
+  - potion{type=SLOW_DIGGING;duration=1;lvl=0;overwrite=true}
+CancelBlindness: ### No Blindness
+  Conditions:
+  - haspotioneffect{t=BLINDNESS} true
+  Skills:
+  - potion{type=BLINDNESS;duration=1;lvl=0;overwrite=true}
+CancelNausea: ### No Nausea
+  Conditions:
+  - haspotioneffect{t=CONFUSION} true
+  Skills:
+  - potion{type=CONFUSION;duration=1;lvl=0;overwrite=true}
+CancelWeakness: ### No Weakness
+  Conditions:
+  - haspotioneffect{t=WEAKNESS} true
+  Skills:
+  - potion{type=WEAKNESS;duration=1;lvl=0;overwrite=true}
+CancelLevitation: ### No Levitation
+  Conditions:
+  - haspotioneffect{t=LEVITATION} true
+  Skills:
+  - potion{type=LEVITATION;duration=1;lvl=0;overwrite=true}
+CancelPoison: ### No Poison
+  Conditions:
+  - haspotioneffect{t=POISON} true
+  Skills:
+  - potion{type=POISON;duration=1;lvl=0;overwrite=true}
+CancelHunger: ### No Hunger
+  Conditions:
+  - haspotioneffect{t=HUNGER} true
+  Skills:
+  - potion{type=HUNGER;duration=1;lvl=0;overwrite=true}
+### STATUS IMMUNITY
+BleedImmunity:
+  Conditions:
+  - haspotioneffect{t=UNLUCK} true
+  Skills:
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+  - delay 2
+  - heal{a=1000} @Self
+### DEBUFFS --------------------------------------------------------
+RandomDebuff:
+  Skills:
+  - randomskill{s=InflictFreeze,InflictShock,Ignite_Title,InflictCurse}
+### RANDOM BUFFS ---------------------------------------------------
+RandomGoodStuff: ### Random positive effects
+  Skills:
+  - randomskill{s=RGS_Regen,RGS_GoldHearts,RGS_Speed,RGS_Strength,RGS_Haste,RGS_FireRes,RGS_Jump,RGS_WaterBreathing,RGS_Heal}
+RGS_Regen:
+  Skills:
+  - potion{type=REGENERATION;duration=100;lvl=9;overwrite=true}
+RGS_GoldHearts:
+  Skills:
+  - potion{type=ABSORPTION;duration=100;lvl=49;overwrite=true}
+RGS_Speed:
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=9;overwrite=true}
+RGS_Jump:
+  Skills:
+  - potion{type=JUMP;duration=100;lvl=3;overwrite=true}
+RGS_Heal:
+  Skills:
+  - heal{amount=2000}
+RGS_WaterBreathing:
+  Skills:
+  - potion{type=WATER_BREATHING;duration=100;lvl=0;overwrite=true}
+RGS_Strength:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=99;overwrite=true}
+RGS_Haste:
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=9;overwrite=true}
+RGS_FireRes:
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=100;lvl=0;overwrite=true}
+
+RandomBadStuff: ### Random negative effects
+  Skills:
+  - randomskill{s=RBS_Blind,RBS_Confusion,RBS_Hunger,RBS_Levitation,RBS_Slow,RBS_Fatigue,RBS_Weakness,RBS_Resist}
+RBS_Blind:
+  Skills:
+  - potion{type=BLINDNESS;duration=100;lvl=0;overwrite=true}
+RBS_Confusion:
+  Skills:
+  - potion{type=CONFUSION;duration=100;lvl=3;overwrite=true}
+RBS_Hunger:
+  Skills:
+  - potion{type=HUNGER;duration=100;lvl=9;overwrite=true}
+RBS_Levitation:
+  Skills:
+  - potion{type=LEVITATION;duration=60;lvl=1;overwrite=true}
+RBS_Slow:
+  Skills:
+  - potion{type=SLOW;duration=100;lvl=9;overwrite=true}
+RBS_Fatigue:
+  Skills:
+  - potion{type=SLOW_DIGGING;duration=100;lvl=9;overwrite=true}
+RBS_Weakness:
+  Skills:
+  - potion{type=WEAKNESS;duration=100;lvl=9;overwrite=true}
+RBS_Resist:
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=1;lvl=0;overwrite=true}

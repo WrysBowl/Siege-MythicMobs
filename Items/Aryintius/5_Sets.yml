@@ -1,0 +1,403 @@
+###---------------------------------------------------------###
+### HARD LEATHER ARMOR SET
+###---------------------------------------------------------###
+HL_Helm:
+  Id: 298
+  Display: "&2Hard Leather Cap"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+2.5❤&7 while equipped."
+  - "&2★ &7Set Bonus: &aResistance I&7."
+  - "&0 "
+  - "&7“&2A very rough hide cap.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 5.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+HL_Chest:
+  Id: 299
+  Display: "&2Hard Leather Tunic"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+2.5❤&7 while equipped."
+  - "&2★ &7Set Bonus: &aResistance I&7."
+  - "&0 "
+  - "&7“&2A very rough hide tunic.&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:5
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 5.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+HL_Legs:
+  Id: 300
+  Display: "&2Hard Leather Pants"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+2.5❤&7 while equipped."
+  - "&2★ &7Set Bonus: &aResistance I&7."
+  - "&0 "
+  - "&7“&2A pair of pants made of hide.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:5
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 5.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+HL_Boots:
+  Id: 301
+  Display: "&2Hard Leather Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+2.5❤&7 while equipped."
+  - "&2★ &7Set Bonus: &aResistance I&7."
+  - "&0 "
+  - "&7“&2Hefty boots made of hide.&7”"
+  Enchantments:
+  - PROTECTION_FALL:5
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 5.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### PLEATED ARMOR SET
+###---------------------------------------------------------###
+Pleated_Helm:
+  Id: 302
+  Display: "&2Pleated Helm"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+10% &7movement speed."
+  - "&2★ &7Set Bonus: &aStrength IV&7."
+  - "&0 "
+  - "&7“&2Forged with careful"
+  - "&2 precision.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.05
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Pleated_Chest:
+  Id: 303
+  Display: "&2Pleated Chestplate"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+10% &7movement speed."
+  - "&2★ &7Set Bonus: &aStrength IV&7."
+  - "&0 "
+  - "&7“&2Crafted with a good eye.&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:4
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      MovementSpeed: 0.05
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Pleated_Legs:
+  Id: 304
+  Display: "&2Pleated Greaves"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+10% &7movement speed."
+  - "&2★ &7Set Bonus: &aStrength IV&7."
+  - "&0 "
+  - "&7“&2Assembled with great care.&7”"
+  Enchantments:
+  - PROTECTION_FIRE:4
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      MovementSpeed: 0.05
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Pleated_Boots:
+  Id: 305
+  Display: "&2Pleated Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+10% &7movement speed."
+  - "&2★ &7Set Bonus: &aStrength IV&7."
+  - "&0 "
+  - "&7“&2Well carved and well built.&7”"
+  Enchantments:
+  - PROTECTION_FALL:5
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.05
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### RUSHWALKER ARMOR SET
+###---------------------------------------------------------###
+Rushwalker_Helm:
+  Id: 298
+  Display: "&2Rushwalker Helm"
+  Lore:
+  - "&7Protection IV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+25% &7knockback resist."
+  - "&2★ &7Set Bonus: &aSpeed III&7."
+  - "&0 "
+  - "&7“&2A brilliant, glistening helmet"
+  - "&2 made of multiple materials.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  Options:
+    Color: 255,188,0
+    Unbreakable: true
+  Attributes:
+    Head:
+      KnockbackResistance: 0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+Rushwalker_Chest:
+  Id: 299
+  Display: "&2Rushwalker Cuirass"
+  Lore:
+  - "&7Projectile Protection IV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+25% &7knockback resist."
+  - "&2★ &7Set Bonus: &aSpeed III&7."
+  - "&0 "
+  - "&7“&2A powerful, lightweight"
+  - "&2 piece of armor plating.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:4
+  Options:
+    Color: 233,170,0
+    Unbreakable: true
+  Attributes:
+    Chest:
+      KnockbackResistance: 0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+Rushwalker_Legs:
+  Id: 300
+  Display: "&2Rushwalker Greaves"
+  Lore:
+  - "&7Blast Protection IV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+25% &7knockback resist."
+  - "&2★ &7Set Bonus: &aSpeed III&7."
+  - "&0 "
+  - "&7“&2A surprisingly lightweight"
+  - "&2 pair of leg protectors.&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:4
+  Options:
+    Color: 210,160,0
+    Unbreakable: true
+  Attributes:
+    Legs:
+      KnockbackResistance: 0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+Rushwalker_Boots:
+  Id: 301
+  Display: "&2Rushwalker Boots"
+  Lore:
+  - "&7Depth Strider IV"
+  - "&7Feather Falling IV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+25% &7knockback resist."
+  - "&2★ &7Set Bonus: &aSpeed III&7."
+  - "&0 "
+  - "&7“&2A durable pair of boots"
+  - "&2 made to thrive in the eye"
+  - "&2 of danger.&7”"
+  Enchantments:
+  - PROTECTION_FALL:4
+  - DEPTH_STRIDER:4
+  Options:
+    Color: 195,145,0
+    Unbreakable: true
+  Attributes:
+    Feet:
+      KnockbackResistance: 0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### MONK ARMOR SET
+###---------------------------------------------------------###
+Monk_Helm:
+  Id: 298
+  Display: "&2Monk's Hood"
+  Lore:
+  - "&7Protection IV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+4.0❤&7 while equipped."
+  - "&2★ &7Set Bonus: &aRegeneration II&7."
+  - "&0 "
+  - "&7“&2The humble shroud of a man"
+  - "&2 who has chosen the path to"
+  - "&2 enlightenment.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  Options:
+    Color: 255,255,255
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 8.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+Monk_Chest:
+  Id: 303
+  Display: "&2Monk's Tunic"
+  Lore:
+  - "&7Projectile Protection IV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+6.0❤&7 while equipped."
+  - "&2★ &7Set Bonus: &aRegeneration II&7."
+  - "&0 "
+  - "&7“&2A bundle of lightweight padding"
+  - "&2 designed for long journeys.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:4
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 12.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+Monk_Legs:
+  Id: 300
+  Display: "&2Monk's Robes"
+  Lore:
+  - "&7Blast Protection IV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+6.0❤&7 while equipped."
+  - "&2★ &7Set Bonus: &aRegeneration II&7."
+  - "&0 "
+  - "&7“&2A freely flowing set of wraps"
+  - "&2 for some basic warmth.&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:4
+  Options:
+    Color: 255,255,255
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 12.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+Monk_Boots:
+  Id: 301
+  Display: "&2Monk's Galoshes"
+  Lore:
+  - "&7Depth Strider III"
+  - "&7Feather Falling III"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+4.0❤&7 while equipped."
+  - "&2★ &7Set Bonus: &aRegeneration II&7."
+  - "&0 "
+  - "&7“&2A comfortable pair of boots"
+  - "&2 for long voyages seeking out"
+  - "&2 true enlightenment.&7”"
+  Enchantments:
+  - PROTECTION_FALL:3
+  - DEPTH_STRIDER:3
+  Options:
+    Color: 255,255,255
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 8.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE

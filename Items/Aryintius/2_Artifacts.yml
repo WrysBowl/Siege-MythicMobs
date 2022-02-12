@@ -1,0 +1,605 @@
+### EXALTED ARTIFACTS ------------------------------------------
+T2_A1:
+  Id: 298
+  Display: "&d&oRanger's Cap"
+  Lore:
+  - "&7Projectile Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+25% &7&omovement speed."
+  - "&d★ &7&oAdds &c&o25.0-75.0❤ &7&odamage to"
+  - "&7&o  all ranged/magic attacks."
+  - "&0 "
+  - "&7“&dA well-placed arrow should"
+  - "&d do the trick... or two.&7”"
+  Options:
+    Unbreakable: true
+    Color: 155,155,0
+  Attributes:
+    Head:
+      MovementSpeed: 0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:15
+  Skills:
+  - skill{s=Phys_25-75} @target ~onBowHit
+T2_A2:
+  Id: 310
+  Display: "&d&oAquir Greathelm"
+  Lore:
+  - "&7Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &c&o+15.0❤ &7&owhile equipped."
+  - "&d★ &7&oAdds &c&o50.0-100.0❤ &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&0 "
+  - "&7“&dA heavy piece of headgear"
+  - "&d used by Aquir warriors in"
+  - "&d numerous battles.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:15
+  Skills:
+  - skill{s=Phys_50-100} @target ~onAttack
+T2_A3:
+  Id: 302
+  Display: "&d&oSpectre Hood"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+15% &7&omovement speed."
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oAdds &c&o25.0❤ &7&odamage to all"
+  - "&7&o  your attacks."
+  - "&0 "
+  - "&7“&dWhen a soul fades from this"
+  - "&d world, only agony remains.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.15
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  Skills:
+  - damage{a=50;pk=true} @target ~onAttack
+  - damage{a=50;pk=true} @target ~onBowHit
+T2_A4:
+  Id: 306
+  Display: "&d&oRage Unbound"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &7&oAdds &c&o5.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&d★ &7&oRestore &c&o5.0❤ &7&owhenever"
+  - "&7&o  you hit an enemy."
+  - "&0 "
+  - "&7“&dEngorge on your hatred."
+  - "&d Embrace your rage.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - heal{a=10} @Self ~onAttack
+  - heal{a=10} @Self ~onBowHit
+  - skill{s=Chaos_5} @target ~onAttack
+T2_A5:
+  Id: 314
+  Display: "&d&oCrown of Dusk"
+  Lore:
+  - "&7Protection V"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &8&o-40% &7&omovement speed."
+  - "&d★ &7&oAdds &c&o10.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all attacks."
+  - "&0 "
+  - "&7“&dWhen twilight covers the world"
+  - "&d in embers, the true nature of"
+  - "&d life will be revealed.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: -0.4
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Chaos_10} @target ~onAttack
+  - skill{s=Chaos_10} @target ~onBowHit
+T2_A6:
+  Id: 311
+  Display: "&d&oCrystal Breastplate"
+  Lore:
+  - "&7Protection XX"
+  - "&7Projectile Protection XX"
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &8&o-80% &7&omovement speed."
+  - "&d★ &7&oYou have &a&oResistance IV&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&0 "
+  - "&7“&dA massive tunic created by"
+  - "&d fusing countless shards of"
+  - "&d a giant crystal.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      MovementSpeed: -0.8
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  - PROTECTION_PROJECTILE:20
+  - PROTECTION_EXPLOSIONS:20
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=3;overwrite=true} @Self ~onTimer:100
+T2_A7:
+  Id: 315
+  Display: "&d&oThe Brazen Bull"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&o20% chance for your attacks"
+  - "&7&o  to &6&oIgnite &7&oenemies for 5.0s."
+  - "&0 "
+  - "&7“&dThe execution is always more"
+  - "&d entertaining than the trial.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  Skills:
+  - skill{s=Ignite_Title} @target ~onBowHit 0.2
+  - skill{s=Ignite_Title} @target ~onAttack 0.2
+T2_A8:
+  Id: 299
+  Display: "&d&oYeti's Pelt"
+  Lore:
+  - "&7Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&o20% chance for your attacks"
+  - "&7&o  to &b&oFreeze &7&oenemies for 5.0s."
+  - "&0 "
+  - "&7“&dThe snowy mountains are home"
+  - "&d to great beasts--hungry and"
+  - "&d vengeful.&7”"
+  Options:
+    Unbreakable: true
+    Color: 255,255,255
+  Attributes:
+    Chest:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:15
+  Skills:
+  - skill{s=InflictFreeze} @target ~onBowHit 0.2
+  - skill{s=InflictFreeze} @target ~onAttack 0.2
+T2_A9:
+  Id: 299
+  Display: "&d&oHeartbound Tunic"
+  Lore:
+  - "&7Projectile Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &8&o-10% &7&omovement speed."
+  - "&d★ &c&o+15.0❤ &7&owhile equipped."
+  - "&d★ &7&oRestore &c&o6.0❤ &7&oevery second."
+  - "&0 "
+  - "&7“&dLife is not given freely, only"
+  - "&d taken by those who desire it.&7”"
+  Options:
+    Unbreakable: true
+    Color: 150,30,80
+  Attributes:
+    Chest:
+      Health: 30.0
+      MovementSpeed: -0.1
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:15
+  Skills:
+  - heal{a=12} @Self ~onTimer:20
+T2_A10:
+  Id: 300
+  Display: "&d&oChanneler's Garb"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+20% &7&omovement speed."
+  - "&d★ &7&oSet your gold hearts to &e&o20.0❤&7&o."
+  - "&7&o  (Refreshes once every 9.0s)."
+  - "&0 "
+  - "&7“&dTrue enlightenment is obtained"
+  - "&d only through years of careful"
+  - "&d observation.&7”"
+  Options:
+    Unbreakable: true
+    Color: 30,30,150
+  Attributes:
+    Legs:
+      MovementSpeed: 0.2
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=9;overwrite=true} @Self ~onTimer:180
+T2_A11:
+  Id: 308
+  Display: "&d&oIridium Greaves"
+  Lore:
+  - "&7Blast Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oRestore &c&o5.0❤ &7&owhenever"
+  - "&7&o  you hit an enemy."
+  - "&d★ &7&oRestore &c&o5.0❤ &7&owhenever"
+  - "&7&o  you take damage."
+  - "&0 "
+  - "&7“&dA shining pair of leggings"
+  - "&d that can deflect even the"
+  - "&d deadliest blows.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:15
+  Skills:
+  - heal{a=10} @Self ~onDamaged
+  - heal{a=10} @Self ~onAttack
+  - heal{a=10} @Self ~onBowHit
+T2_A12:
+  Id: 304
+  Display: "&d&oSerpentscale Greaves"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oAdds &c&o15.0❤ &7&odamage to attacks"
+  - "&7&o  for every level of &a&oSpeed&7&o. (E.g"
+  - "&7&o  45.0 damage from Speed III.)"
+  - "&0 "
+  - "&7“&dThe faster we strike, the harder"
+  - "&d our enemies will fall.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_EXPLOSIONS:10
+  Skills:
+  - skill{s=PhysFromSpeed_Low} @Self ~onAttack
+  - skill{s=PhysFromSpeed_Low} @Self ~onBowHit
+T2_A13:
+  Id: 300
+  Display: "&d&oDestroyer Leggings"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oAdds &c&o5.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&d★ &7&oAdds &c&o25.0-75.0❤ &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&0 "
+  - "&7“&dWhen the world lies in ruin,"
+  - "&d the harvesting will begin.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  Skills:
+  - skill{s=Phys_25-75} @target ~onAttack
+  - skill{s=Chaos_5} @target ~onAttack
+T2_A14:
+  Id: 313
+  Display: "&d&oTombstalker"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+50% &7&omovement speed."
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oAdds &c&o5.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all ranged/magic attacks."
+  - "&0 "
+  - "&7“&dAmongst the buried, relics lie"
+  - "&d unused and forgotten--ripe"
+  - "&d for the taking.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.5
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Skills:
+  - skill{s=Chaos_5} @target ~onBowHit
+T2_A15:
+  Id: 301
+  Display: "&d&oPhasewalk Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+90% &7&omovement speed."
+  - "&d★ &7&oYou have &a&oResistance III&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&d★ &7&oRestore &c&o5.0❤ &7&oevery second."
+  - "&0 "
+  - "&7“&dBlessed with a technique used"
+  - "&d for journeys across the land,"
+  - "&d these boots prove their worth.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.9
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Skills:
+  - heal{a=10} @Self ~onTimer:20
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=2;overwrite=true} @Self ~onTimer:100
+T2_A16:
+  Id: 317
+  Display: "&d&oPhoenix's Rebirth"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+30% &7&omovement speed."
+  - "&d★ &c&o+15.0❤ &7&owhile equipped."
+  - "&d★ &7&oYou have &a&oFire Resistance&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&0 "
+  - "&7“&dThe cycle begins anew--an"
+  - "&d endless battle between fire"
+  - "&d and ash.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 30.0
+      MovementSpeed: 0.3
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=200;lvl=0;overwrite=true} @Self ~onTimer:100
+### WEAPON ARTIFACTS -------------------------------------------
+T2_W1:
+  Id: 293
+  Display: "&d&oEther Reaver"
+  Lore:
+  - "&7Smite XXV"
+  - "&7Sharpness C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+60% &7&oattack speed."
+  - "&d★ &7&oAdds &c&o50.0-100.0❤ &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&d★ &7&oYou have &a&oFire Resistance&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&0 "
+  - "&7“&dA blade that slices through"
+  - "&d the fabrics of time can only"
+  - "&d be forged within the abyss.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DAMAGE_ALL:100
+  - DAMAGE_UNDEAD:25
+  Skills:
+  - skill{s=Phys_50-100} @target ~onAttack
+  - potion{type=FIRE_RESISTANCE;duration=200;lvl=0;overwrite=true} @Self ~onTimer:100
+T2_W2:
+  Id: 272
+  Display: "&d&oFrostwraith Blade"
+  Lore:
+  - "&7Sharpness CD"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+75% &7&oattack speed."
+  - "&d★ &7&oAdds &c&o10.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&d★ &7&o30% chance for your melee"
+  - "&7&o  attacks to &b&oFreeze &7&oenemies"
+  - "&7&o  for up to 5.0s."
+  - "&0 "
+  - "&7“&dA lightweight blade imbued with"
+  - "&d the essence of winter.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DAMAGE_ALL:400
+  Skills:
+  - skill{s=Chaos_10} @target ~onAttack
+  - skill{s=InflictFreeze} @target ~onAttack 0.3
+T2_W3:
+  Id: 267
+  Display: "&d&oSlugbringer"
+  Lore:
+  - "&7Smite LX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &7&o10% status effect chance."
+  - "&d★ &7&oDeals &c&o30.0❤ &4&oBleed &7&odamage"
+  - "&7&o  over a period of 3.0s."
+  - "&d★ &7&oDeals &c&o60.0❤ &2&oToxin &7&odamage"
+  - "&7&o  over a period of 3.0s."
+  - "&0 "
+  - "&7“&dThis small dagger seethes with"
+  - "&d dozens of wonderful poisons.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DAMAGE_UNDEAD:60
+  Skills:
+  - skill{s=Bleed_30} @target ~onAttack 0.1
+  - skill{s=Poison_60} @target ~onAttack 0.1
+T2_W4:
+  Id: 258
+  Display: "&d&oGoresnarl"
+  Lore:
+  - "&7No Attack Damage"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &7&o50% status effect chance."
+  - "&d★ &7&oDeals &c&o15.0❤ &4&oBleed &7&odamage"
+  - "&7&o  over a period of 3.0s."
+  - "&d★ &7&oAdds &c&o250.0-400.0❤ &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&0 "
+  - "&7“&dA battle cares nothing for"
+  - "&d elegance or honour--only"
+  - "&d victory.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - skill{s=Bleed_15} @target ~onAttack 0.5
+  - skill{s=Phys_250-400} @target ~onAttack

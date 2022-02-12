@@ -1,0 +1,373 @@
+### ATLAS ENEMIES-----------------------------------------------
+A2_Mooshroom:
+  Type: HUSK
+  Display: "&6« &eShroomwalker &6»"
+  Health: 200
+  Damage: 500
+  Drops:
+  - Currency_Atlas_1
+  - Exalted
+  Disguise:
+    Type: MUSHROOM_COW
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=Atlas_PurpleNova} @Self ~onTimer:30 0.15
+  ### EFFECTS
+  - effect:sound{s=entity.cow.ambient;p=1;v=0.75} @self ~onTimer:30 0.15
+  - effect:sound{s=entity.cow.hurt;p=1;v=0.75} @self ~onDamaged
+  - effect:sound{s=entity.cow.death;p=1;v=1} @self ~onDeath
+A2_Silverfish:
+  Type: HUSK
+  Display: "&6« &eStonefester &6»"
+  Health: 100
+  Damage: 500
+  Drops:
+  - Currency_Atlas_1
+  - Exalted
+  Disguise:
+    Type: SILVERFISH
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=Poison_120} @target ~onAttack 0.2
+  ### EFFECTS
+  - effect:sound{s=entity.silverfish.ambient;p=1;v=0.75} @self ~onTimer:30 0.15
+  - effect:sound{s=entity.silverfish.hurt;p=1;v=0.75} @self ~onDamaged
+  - effect:sound{s=entity.silverfish.death;p=1;v=1} @self ~onDeath
+### Mavlaak's Spiderlings --------------------------------------
+A3_Spider:
+  Type: HUSK
+  Display: "&6« &eAcidmaw &6»"
+  Health: 150
+  Damage: 500
+  Drops:
+  - Currency_Atlas_1
+  - Exalted
+  Disguise:
+    Type: CAVE_SPIDER
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=Poison_120} @target ~onAttack 0.25
+  - skill{s=Atlas_Poison} @NearestPlayer{r=10} ~onTimer:30 0.15
+  ### EFFECTS
+  - effect:sound{s=entity.spider.ambient;p=1;v=0.75} @self ~onTimer:30 0.15
+  - effect:sound{s=entity.spider.hurt;p=1;v=0.75} @self ~onDamaged
+  - effect:sound{s=entity.spider.death;p=1;v=1} @self ~onDeath
+A3_BloodSpider:
+  Type: HUSK
+  Display: "&4« &eBloodfang &4»"
+  Health: 200
+  Damage: 500
+  Drops:
+  - Currency_Atlas_1
+  - Exalted
+  Disguise:
+    Type: SPIDER
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=Bleed_30} @target ~onAttack 0.25
+  ### EFFECTS
+  - effect:sound{s=entity.spider.ambient;p=1.25;v=0.75} @self ~onTimer:30 0.15
+  - effect:sound{s=entity.spider.hurt;p=1.25;v=0.75} @self ~onDamaged
+  - effect:sound{s=entity.spider.death;p=1.25;v=1} @self ~onDeath
+A3_BigSpider:
+  Type: HUSK
+  Display: "&4« &cBrood Mother &4»"
+  Health: 1500
+  Damage: 750
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  Disguise:
+    Type: SPIDER
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=CancelSlowness} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:10
+  ### EFFECTS
+  - effect:sound{s=entity.spider.ambient;p=0.75;v=0.75} @self ~onTimer:30 0.3
+  - effect:sound{s=entity.spider.hurt;p=0.75;v=0.75} @self ~onDamaged
+  - effect:sound{s=entity.spider.death;p=0.75;v=1} @self ~onDeath
+### GRAND ARCHIVES ENEMIES -------------------------------------
+A4_Mage:
+  Type: SKELETON
+  Display: "&4« &eArchivist &4»"
+  Health: 150
+  Damage: 250
+  Drops:
+  - Currency_Atlas_1
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - UHelm_6:4
+  - UChest_6:3
+  - ULegs_6:2
+  - UBoots_6:1
+  - BLAZE_ROD:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=A4_Bolt} @NearestPlayer{r=20} ~onTimer:5 0.2
+  ### EFFECTS
+  - effect:sound{s=entity.blaze.hurt;p=1.0;v=1} @self ~onDamaged
+  - effect:sound{s=block.fire.extinguish;p=1.5;v=0.5} @self ~onDamaged
+A4_Melee:
+  Type: HUSK
+  Display: "&6« &eArchives Guard &6»"
+  Health: 200
+  Damage: 500
+  Drops:
+  - Currency_Atlas_1
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - UHelm_1:4
+  - UChest_1:3
+  - ULegs_6:2
+  - UBoots_6:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=Ignite_Title} @target ~onAttack 0.2
+  ### EFFECTS
+  - effect:sound{s=entity.blaze.hurt;p=1.0;v=1} @self ~onDamaged
+  - effect:sound{s=block.fire.extinguish;p=1.5;v=0.5} @self ~onDamaged
+A4_MiniBoss:
+  Type: SKELETON
+  Display: "&4« &cAncient Magus &4»"
+  Health: 1500
+  Damage: 500
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - GHelm:4
+  - CChest:3
+  - GLegs:2
+  - CBoots:1
+  - BLAZE_ROD:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    KnockbackResistance: 1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=A4_TriBolt} @NearestPlayer{r=20} ~onTimer:5 0.2
+  ### EFFECTS
+  - effect:sound{s=entity.blaze.hurt;p=1.0;v=1} @self ~onDamaged
+  - effect:sound{s=block.fire.extinguish;p=1.5;v=0.5} @self ~onDamaged
+### ANCIENT DESERT ENEMIES -------------------------------------
+A5_Melee:
+  Type: SKELETON
+  Display: "&4« &eEntombed Skeleton &4»"
+  Health: 200
+  Damage: 500
+  Drops:
+  - Currency_Atlas_1
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - IHelm:4
+  - CChest:3
+  - ILegs:2
+  - CBoots:1
+  - Arch_Sword:0
+  - Shield_Immune:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    Silent: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=Ignite_Title} @target ~onAttack 0.2
+A5_MiniBoss:
+  Type: SKELETON
+  Display: "&4« &cTombwalker &4»"
+  Health: 1500
+  Damage: 750
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - IHelm:4
+  - CChest:3
+  - ILegs:2
+  - CBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=Ignite_Title} @target ~onAttack 0.25
+  ### EFFECTS
+  - effect:sound{s=entity.skeleton.ambient;p=0.75;v=0.75} @self ~onTimer:100
+  - effect:sound{s=entity.skeleton.hurt;p=0.75;v=0.75} @self ~onDamaged
+  - effect:sound{s=entity.skeleton.death;p=0.75;v=1} @self ~onDeath

@@ -1,0 +1,83 @@
+### LAB BOSS 2 SKILLS
+LB2Poison:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=LB2P-Tick;onHit=LB2P-Hit;v=2;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.irongolem.hurt;v=2;p=2}
+  - effect:sound{s=entity.irongolem.hurt;v=2;p=1}
+  - effect:sound{s=entity.irongolem.hurt;v=2;p=0}
+LB2P-Tick:
+  Skills:
+  - effect:particles{p=happyVillager;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=crit;amount=8;speed=0;hS=0.5;vS=0.5} @origin
+LB2P-Hit:
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=1;p=2}
+  - effect:sound{s=block.fire.extinguish;v=1;p=1}
+  - effect:sound{s=block.fire.extinguish;v=1;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4}
+  - potion{type=POISON;duration=200;lvl=10}
+  - sendtitle{title="&2&lToxic";subtitle="&fDamage over time/confusion";d=20} @target
+  - damage{a=50;pi=true;pk=true}
+  - delay 20
+  - damage{a=50;pi=true;pk=true}
+  - delay 20
+  - damage{a=50;pi=true;pk=true}
+LB2Fire:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=LB2F-Tick;onHit=LB2F-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=0}
+LB2F-Tick:
+  Skills:
+  - effect:particles{p=crit;amount=8;speed=0;hS=0.5;vS=0.5} @origin
+LB2F-Hit:
+  Skills:
+  - damage{a=20;pi=true}
+LB2Death:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=LB2D-Tick;onHit=LB2D-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+LB2D-Tick:
+  Skills:
+  - effect:particles{p=crit;amount=8;speed=0;hS=0.5;vS=0.5} @origin
+  - effect:particles{p=angryVillager;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+LB2D-Hit:
+  Skills:
+  - damage{a=40}
+LB2BurstFire:
+  Skills:
+  - skill{s=LB2Fire} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB2Fire} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB2Fire} @NearestPlayer{r=50}
+  - delay 40
+  - skill{s=LB2Fire} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB2Fire} @NearestPlayer{r=50}
+  - delay 2
+  - skill{s=LB2Fire} @NearestPlayer{r=50}
+  - delay 2
+LB2Spam:
+  Skills:
+  - skill{s=LB2Fire} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB2Fire} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB2Fire} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB2Fire} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB2Fire} @NearestPlayer{r=50}
+  - delay 5

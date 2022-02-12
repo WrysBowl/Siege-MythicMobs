@@ -1,0 +1,144 @@
+### STORM RULER SKILLS -----------------------------------------
+A10_1234: ### Rapid-fires 4 bolts from left-right
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=45;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=315;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+A10_4321: ### Rapid-fires 4 bolts from right-left
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=315;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=45;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+A10_1234_Fast: ### SUPER Rapid-fires 4 bolts from left-right
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=45;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=315;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+A10_4321_Fast: ### SUPER Rapid-fires 4 bolts from right-left
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=315;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=45;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+A10_4444: ### All four bolts at the same time
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=315;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A10A-Tick;onHit=A10A-Hit;hO=45;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=0.5;p=1}
+A10A-Tick:
+  Skills:
+  - effect:particles{p=sweepAttack;amount=3;speed=0;hS=0.1;vS=0.1} @origin
+  - effect:particles{p=endRod;amount=1;speed=0;hS=0.1;vS=0.1} @origin
+A10A-Hit:
+  Skills:
+  - damage{a=500;pi=true;pk=true}
+  - delay 5
+  - damage{a=500;pi=true;pk=true}
+  - delay 5
+  - damage{a=500;pi=true;pk=true}
+A10_Nova: ### Shock Nova Attack
+  Skills:
+  - effect:sound{s=item.totem.use;v=0.5;p=2} @PIR{r=25}
+  - effect:sound{s=item.totem.use;v=0.4;p=1} @PIR{r=25}
+  - effect:sound{s=item.totem.use;v=0.3;p=0} @PIR{r=25}
+  - effect:particlesphere{particle=magicCrit;amount=500;r=10} @self
+  - skill{s=InflictShock} @PIR{r=10}
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=400;r=8} @self
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=300;r=6} @self
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=200;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=100;r=2} @self
+  - delay 2
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
+### Phases
+A10_Phase_1:
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A10_Nova} @Self
+  - delay 20
+  - skill{s=A10_1234}
+  - delay 30
+  - skill{s=A10_4321}
+  - delay 30
+  - skill{s=A10_1234}
+  - delay 30
+  - skill{s=A10_4321}
+  - delay 30
+  - skill{s=A10_Nova} @Self
+A10_Phase_2:
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A10_Nova} @Self
+### YES, HE FLIES. IT'S ABSOLUTELY TERRIFYING.
+  - potion{type=LEVITATION;duration=60;lvl=0;overwrite=true} @Self
+  - delay 20
+  - skill{s=A10_1234_Fast}
+  - delay 10
+  - skill{s=A10_4321_Fast}
+  - delay 10
+  - skill{s=A10_1234_Fast}
+  - delay 10
+  - skill{s=A10_4321_Fast}
+  - delay 10
+  - skill{s=A10_1234_Fast}
+  - delay 20
+  - skill{s=A10_4444}
+  - delay 15
+  - skill{s=A10_4444}
+  - delay 15
+  - skill{s=A10_4444}
+  - delay 15
+  - skill{s=A10_4444}

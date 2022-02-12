@@ -1,0 +1,108 @@
+Boss5:
+  Type: ELDER_GUARDIAN
+  Display: '&3&l<&3« &bAncient Sentinel &3»&3&l>'
+  Health: 7500
+  Damage: 20
+  BossBar:
+    Enabled: true
+    Title: '&3&l<&3« &bAncient Sentinel &3»&3&l>'
+    Range: 50
+    Color: BLUE
+    Style: SOLID
+  Drops:
+  - Currency_Trials_Boss
+  - Boss5
+  - Boss5_Set
+  - LowerKey
+  - Mythic
+  - Corrupted
+  - Iridescent
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Equipment:
+  - Boss_Skull_3:4
+  - diamond_chestplate:3
+  - diamond_leggings:2
+  - DBoots:1
+  - T0_1:0
+  - T0_1:5
+  Skills:
+### SPAWN
+  - message{m="<mob.name> &fThreat detected. Executing defense protocol."} @PlayersInRadius{r=30} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &fDamage increased. Attuning evasive maneuvers.",
+      "<mob.name> &fTactical systems online. Beginning combat detection.",
+      "<mob.name> &fTarget detected. Firing weapon arrays in sequence 10320.";
+      } @PIR{r=30} ~onTimer:300
+### PHASE 1
+  - skill{s=TidalWave} @PIR{r=50} ~onTimer:200 >50%
+  - skill{s=Boss5_Phase_1} @target ~onTimer:160 >50%
+  - summon{mob=Boss5_Minion_1;amount=1;noise=5} @Self ~onTimer:100 >70%
+  - summon{mob=Boss5_Minion_1;amount=1;noise=5} @Self ~onTimer:60 =50%-65%
+### PHASE 2
+  - skill{s=Boss5_Phase_2} @target ~onTimer:160 <50%
+  - skill{s=TidalWave} @PIR{r=50} ~onTimer:120 <50%
+  - summon{mob=Boss5_Minion_2;amount=1;noise=5} @Self ~onTimer:40 <50%
+### DEATH
+  - message{m="<mob.name> &fCritical error. Shutting down..."} @PlayersInRadius{r=30} ~onDeath
+  - remove @MIR{r=50;t=Boss5_Minion_1} ~onDeath
+  - remove @MIR{r=50;t=Boss5_Minion_2} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+Boss5_Minion_1:
+  Type: HUSK
+  Display: '&3« &bLesser Sentinel &3»'
+  Health: 30
+  Damage: 1000
+  Modules:
+    ThreatTable: true
+  Disguise:
+    Type: GUARDIAN
+    Invisible: false
+    Burning: false
+    ShowName: false
+    ModifyBoundingBox: true
+  Equipment:
+  - UHelm_1:4
+  - UChest_1:3
+  - ULegs_1:2
+  - DBoots:1
+  - T0_1:0
+  - T0_1:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.45
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+Boss5_Minion_2:
+  Type: SKELETON
+  Display: "&3« &bAquir Sentry &3»"
+  Health: 20
+  Damage: 1600
+  Equipment:
+  - Boss_Skull_3:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - T0_1:0
+  - T0_1:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.45
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn

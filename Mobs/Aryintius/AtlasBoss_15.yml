@@ -1,0 +1,75 @@
+AtlasBoss_15:
+  Type: STRAY
+  Display: "&0&l<&8« &fThe Shadow &8»&0&l>"
+  Health: 60000
+  Damage: 1000
+  BossBar:
+    Enabled: true
+    Title: "&0&l<&8« &fThe Shadow of Maugri &8»&0&l>"
+    Range: 50
+    Color: WHITE
+    Style: SEGMENTED_10
+  Equipment:
+  - UHelm_0:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - BLAZE_ROD:0
+  - Shield_Reaper:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Shard_West
+  - AtlasBoss_15
+  - Currency_Atlas_Boss3
+  - Atlas_Fragments
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fWho are you, shadowy one... Have you finally come to kill me?"} @PlayersInRadius{r=30} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+  - randommessage
+      {
+      m=
+      "<mob.name> &7There is no life left in this place... and none left in our world...",
+      "<mob.name> &7I feel nothing... only the looming presence of death...",
+      "<mob.name> &7I see only darkness... a veiled figure... from the void...",
+      "<mob.name> &7The Aquir have fallen... I saw it with my own eyes! But now... what is even left to live for?",
+      "<mob.name> &7We explored this place to aid the empire... but it has destroyed them...";
+      } @PIR{r=30} ~onTimer:300
+  - effect:sound{s=entity.endermen.hurt;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=2;v=0.8} @self ~onDamaged
+  - skill{s=Bleed_100} @target ~onAttack 0.2
+### PHASE 1
+  - skill{s=A15_RandomSkill} @NearestPlayer{r=30} ~onTimer:10
+  - skill{s=A15_SummonRandomTotem} @Self ~onTimer:10
+### PHASE 2
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:100 =35%-70%
+  - potion{type=SPEED;duration=200;level=1;overwrite=true} @Self ~onTimer:10 =35%-70%
+  - skill{s=CancelSlowness} @Self ~onTimer:60 =35%-70%
+### PHASE 3
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
+  - potion{type=SPEED;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
+  - skill{s=CancelSlowness} @Self ~onTimer:5 <35%
+### DEATH STUFF
+  - message{m="<mob.name> &fI feel it now... this coldness... the clutch of death..."} @PlayersInRadius{r=30} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+  - remove @MIR{r=50;t=Totem_Chaos} ~onDeath
+  - remove @MIR{r=50;t=Totem_Bleed} ~onDeath
+  - remove @MIR{r=50;t=Totem_Freeze} ~onDeath
+  - remove @MIR{r=50;t=Totem_Curse} ~onDeath

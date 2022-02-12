@@ -1,0 +1,223 @@
+### NORYK'S SKILLS --------------------------------------------
+A4_Bolt: ### Normal Bolt Attack
+  Cooldown: 3
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+A4_TriBolt: ### Triple Bolt Attack
+  Cooldown: 3
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+A4B-Tick:
+  Skills:
+  - effect:particles{p=magicCrit;amount=5;speed=0;hS=0.1;vS=0.1} @origin
+A4B2-Tick:
+  Skills:
+  - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=largeexplode;a=1} @Origin
+A4B-Hit: ### 15.0 hearts of damage against a full loadout.
+  Skills:
+  - damage{a=750;pk=true}
+A4B2-Hit: ### Heavy hit.
+  Skills:
+  # Uncomment the lines below if you want people to suffer.
+  # - potion{type=DAMAGE_RESISTANCE;lvl=0;duration=1;overwrite=true}
+  # - delay 1
+  - damage{a=4000;pk=true}
+  - effect:sound{s=entity.generic.explode;v=1;p=2} @PIR{r=25}
+A4_Heavy: ### Backend skill
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=20;hO=0;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+A4_Knockback: ### Knockback attack.
+  Skills:
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2} @PIR{r=25}
+  - effect:particlesphere{particle=cloud;amount=10;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=20;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=40;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=60;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=80;r=5} @self
+  - damage{a=1500} @PIR{r=8}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
+A4_Phase_1: ### Phase 1 Attack
+  Cooldown: 10
+  Conditions:
+  - targetinlineofsight true
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A4_Knockback} @Self
+  - delay 20
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=20;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=10;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=350;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=340;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 10
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=30;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=330;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 10
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=60;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=30;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=330;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=300;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 10
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=90;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=45;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=315;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=270;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 10
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=144;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=72;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=288;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=216;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 20
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=15;hO=30;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - delay 10
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=15;hO=330;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - delay 10
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=15;hO=0;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - delay 10
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=15;hO=15;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - delay 10
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=15;hO=345;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+A4_Phase_2: ### Phase 2 Attack (RAPID TEMPO CHANGE)
+  Cooldown: 10
+  Conditions:
+  - targetinlineofsight true
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A4_Knockback} @Self
+  - delay 20
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=20;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=10;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=350;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=340;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=30;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=330;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=60;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=30;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=330;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=300;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=90;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=45;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=315;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=270;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=144;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=72;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=288;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A4B-Tick;onHit=A4B-Hit;hO=216;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 20
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=20;hO=0;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - delay 5
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=20;hO=30;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - delay 5
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=20;hO=60;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - delay 5
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=20;hO=330;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - delay 5
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=20;hO=300;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - delay 5
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=20;hO=0;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - delay 20
+  - projectile{onTick=A4B2-Tick;onHit=A4B2-Hit;v=20;hO=0;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}

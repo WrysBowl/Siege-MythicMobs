@@ -1,0 +1,165 @@
+###---------------------------------------------------------###
+### ITEM TIERS
+###---------------------------------------------------------###
+T_Worthless:
+  Id: 160
+  Data: 7
+  Display: "&8Tier 7"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&7Poor bonuses"
+  - "&0 "
+  - "&7“&8A lousy item that nobody"
+  - "&8 actually wants.&7”"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+T_Common:
+  Id: 160
+  Display: "&fTier 6"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7Small bonuses."
+  - "&0 "
+  - "&7“&fAn easily-found item of"
+  - "&f varying quality.&7”"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+T_Uncommon:
+  Id: 160
+  Data: 5
+  Display: "&2Tier 5"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7Moderate bonuses."
+  - "&0 "
+  - "&7“&2A less common but far"
+  - "&2 superior quality item.&7”"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+T_Rare:
+  Id: 160
+  Data: 9
+  Display: "&3Tier 4"
+  Lore:
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Moderate bonuses with"
+  - "&7occasional effects."
+  - "&0 "
+  - "&7“&3A significantly more"
+  - "&3 powerful item.&7”"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+T_Superior:
+  Id: 160
+  Data: 10
+  Display: "&5Tier 3"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5Superior"
+  - "&0 "
+  - "&7Strong bonuses and effects."
+  - "&0 "
+  - "&7“&5An extremely powerful item"
+  - "&5 with multiple enchantments.&7”"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+T_Ultimate:
+  Id: 160
+  Data: 2
+  Display: "&d&oTier 2"
+  Lore:
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Powerful bonuses and effects."
+  - "&0 "
+  - "&7“&dA powerful item with many"
+  - "&d enchantments and abilities.&7”"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+T_Iridescent:
+  Id: 160
+  Data: 3
+  Display: "&b&oTier 1E"
+  Lore:
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Niche/Gimmicky bonuses."
+  - "&0 "
+  - "&7“&bThese items are extremely"
+  - "&b powerful and can only be"
+  - "&b found by defeating bosses.&7”"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+T_Corrupted:
+  Id: 160
+  Data: 14
+  Display: "&4&oTier&c&o 1X"
+  Lore:
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&7Item's bonuses vary wildly."
+  - "&0 "
+  - "&7“&4An item that&c gives extremely"
+  - "&c powerful abili&4ties at the cost"
+  - "&4 of other sev&cere debuffs.&7”"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+T_Legendary:
+  Id: 160
+  Data: 1
+  Display: "&6&oTier 1"
+  Lore:
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Maximum item bonus/effect."
+  - "&0 "
+  - "&7“&6The highest rarity and the"
+  - "&6 maximum power level of any"
+  - "&6 item on the server!&7”"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+T_Quest:
+  Id: 256
+  Display: "&e&oItem Name"
+  Lore:
+  - "&0 "
+  - "&7Tier: &e&oQuest"
+  - "&0 "
+  - "&7“&eQuest items are essential"
+  - "&e to completing quests. Losing"
+  - "&e them will often be extremely"
+  - "&e detrimental!&7”"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS

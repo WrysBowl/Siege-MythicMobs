@@ -1,0 +1,114 @@
+###---------------------------------------------------------###
+### ITEM FORMATS
+###---------------------------------------------------------###
+T_Effect:
+  Id: 277
+  Display: "&e&oEffect Item"
+  Lore:
+  - "&0 "
+  - "&7Effect: &aPotion"
+  - "&0 "
+  - "&7“&eItems with effects will have"
+  - "&e infinitely refreshing potion"
+  - "&e effects as long as they're"
+  - "&e equipped in your hotbar!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T_SetBonus:
+  Id: 310
+  Display: "&e&oSet Item"
+  Lore:
+  - "&0 "
+  - "&7Set Bonus: &aPotion"
+  - "&0 "
+  - "&7“&eArmor with set bonuses yield"
+  - "&e an infinitely refreshing potion"
+  - "&e effect if you have the entire"
+  - "&e set equipped.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T_Accessory:
+  Id: 351
+  Data: 11
+  Display: "&e&oCharm of Examples"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&e★ &7&oExample effect description."
+  - "&e★ &7&oAnother example effect."
+  - "&0 "
+  - "&7“&eAccessory items gain special"
+  - "&e effects when equipped in your"
+  - "&e hotbar or off-hand.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T_Complex:
+  Id: 283
+  Display: "&e&oComplex Item"
+  Lore:
+  - "&0 "
+  - "&e★ &7&oExample effect description."
+  - "&e★ &7&oAnother effect example."
+  - "&0 "
+  - "&7“&eSome items will have far more"
+  - "&e complex conditions and effects."
+  - "&e These will be described in the"
+  - "&e bullet points shown above.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T_Weapon_Magic:
+  Id: 403
+  Display: "&e&oMagic Weapon"
+  Lore:
+  - "&0 "
+  - "&7Type: &9Magic Type"
+  - "&7Speed: &9Attack Speed"
+  - "&7Charge: &9Recharge Speed"
+  - "&7Damage: &cDamage in Hearts"
+  - "&0 "
+  - "&7“&eMagic weapons deal damage on"
+  - "&e cast, similar to ranged weapons"
+  - "&e but have no ammo and instead"
+  - "&e use recharge time.&7”"
+T_Weapon_Ranged:
+  Id: 417
+  Display: "&e&oRanged Weapon"
+  Lore:
+  - "&0 "
+  - "&7Type: &9Gun/Bow Type"
+  - "&7Ammo: &9Ammo Item Type"
+  - "&7Speed: &9Weapon Attack Speed"
+  - "&7Damage: &cDamage in Hearts"
+  - "&0 "
+  - "&7“&eAll non-vanilla ranged weapons"
+  - "&e use this format and consume"
+  - "&e ammo for each shot.&7”"
+T_Weapon_Melee:
+  Id: 276
+  Display: "&e&oSpecial Melee Weapon"
+  Lore:
+  - "&0 "
+  - "&7Type: &9Weapon Type"
+  - "&7Ability: &cDamage in Hearts"
+  - "&7Cooldown: &9Ability Recharge Time"
+  - "&0 "
+  - "&7“&eSpecial melee items may have"
+  - "&e casting abilities with multiple"
+  - "&e effects.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES

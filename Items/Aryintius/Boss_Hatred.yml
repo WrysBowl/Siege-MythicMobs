@@ -1,0 +1,139 @@
+### TRIAL OF HATRED --------------------------------------------
+Fang:
+  Id: 288
+  Display: "&6&oThe Serpent's Fang&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&7Left-click to melee"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4&o✶"
+  - "&0 "
+  - "&7Type: &fMelee/Magic"
+  - "&7Speed: &fVery Fast"
+  - "&7Charge: &fSlow"
+  - "&7Melee Damage: &c250.0❤"
+  - "&7Magic Damage: &c75.0❤x3"
+  - "&0 "
+  - "&6★ &7&o35% critical strike chance."
+  - "&6★ &7&o3.0x damage on critical hit."
+  - "&6★ &7&oMagic damage from this weapon"
+  - "&7&o  inflicts &e&oIgnite &7&ofor up to 5.0s."
+  - "&0 "
+  - "&7“&6The dragon becomes you!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Fire5:
+  Id: 361
+  Display: "&6&oSeeds of the Sun&7&7 «0»"
+  Lore:
+  - "&7Left-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4&o✶"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Charge: &fSlow"
+  - "&7Damage: &c120.0❤x7"
+  - "&0 "
+  - "&6★ &7&oIgnites enemies on hit."
+  - "&0 "
+  - "&7“&6Born from the flame, raised"
+  - "&6 by the ash. None shall soon"
+  - "&6 forget the power of fire.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Bow4:
+  Id: 261
+  Display: "&6&oInferno&7&7"
+  Lore:
+  - "&7Power C"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4&o✶"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c500.0❤x8"
+  - "&7Cooldown: &f10 Seconds"
+  - "&0 "
+  - "&6★ &7&oFully-drawn shots cast a"
+  - "&7&o  devastating ability!"
+  - "&6★ &7&o50% critical strike chance."
+  - "&6★ &7&o8.0x damage on critical hit."
+  - "&0 "
+  - "&7“&6Forged in the flames by the"
+  - "&6 ancients themselves, this bow"
+  - "&6 could obliterate even a Titan.&7”"
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:100
+  - ARROW_INFINITE:1
+  - DURABILITY:9999
+  - MENDING:10
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+Dragon_Heart:
+  Id: 376
+  Display: "&6&oDragon's Heart"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4&o✶"
+  - "&0 "
+  # - "&6★ &7&oIf equipped with Dragonscale set:"
+  # - "&7&o  Whenever you hit a monster/boss,"
+  # - "&7&o  fully restore your health."
+  - "&6★ &7&oGain &a&oRegen. X &7&oif this is equipped"
+  - "&7&o  with the Dragonscale armor set."
+  - "&6★ &7&oWhenever you hit a monster/boss,"
+  - "&7&o  gain &a&oSpeed IV &7&o+ &a&oHaste X&7&o."
+  - "&0 "
+  - "&7“&6The heart of an eternal can never"
+  - "&6 truly die, for it begets all life and"
+  - "&6 thus, all death.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+T1_Hatred:
+  Id: 302
+  Display: "&6&oAspect of Hatred"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4&o✶"
+  - "&0 "
+  - "&6★ &c&o+10.0❤ &7&owhile equipped."
+  - "&6★ &a&o+80% &7&oknockback resist."
+  - "&6★ &7&oAdds &c&o25.0❤ &7&odamage to attacks"
+  - "&7&o  for every level of &a&oHaste&7&o. (E.g"
+  - "&7&o  175.0 damage from Haste VII.)"
+  - "&0 "
+  - "&7“&6The last Giants remain loyal to"
+  - "&6 the Titans--hoping to free them"
+  - "&6 from the Heart of the World...&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 20.0
+      KnockbackResistance: 1.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=PhysFromHaste} @target ~onAttack
+  - skill{s=PhysFromHaste} @target ~onBowHit

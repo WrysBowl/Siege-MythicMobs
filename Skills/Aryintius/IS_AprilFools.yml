@@ -1,0 +1,116 @@
+AF_LootSplosion: ### Summons lootsplosion at self
+  Cooldown: 30
+  Skills:
+  - consumeHeldItem @Self
+  - sendtitle{title="&c&lLOOTSPLOSION!";subtitle="&7WOOHOO!!!";d=20} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=1} @Self
+  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - delay 5
+  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - delay 5
+  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - actionmessage{m="&7Cooldown &f| &729.0s"} @Self
+  - delay 5
+  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - delay 5
+  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - actionmessage{m="&7Cooldown &f| &728.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &727.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &726.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &725.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &724.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &723.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &722.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &721.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &720.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &719.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &718.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &717.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &716.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &715.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &714.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &713.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &712.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &711.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &710.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &79.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &78.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &77.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &76.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &75.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &74.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &73.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &72.0s"} @Self
+  - delay 20
+  - actionmessage{m="&7Cooldown &f| &71.0s"} @Self
+  - delay 20
+  - sendtitle{title="&c&lZOOT BORX";subtitle="&7Is now ready!";d=20} @Self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=1} @Self
+
+AF_TPSlam: ### What has science done?
+  Cooldown: 10
+  Skills:
+  - teleport{spreadh=0;spreadv=0}
+  - effect:particlesphere{particle=witchMagic;amount=20;r=1} @self
+  - effect:particlesphere{particle=portal;amount=40;r=1} @self
+  - effect:sound{s=entity.endermen.teleport;v=0.5;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=0.5;p=1} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=0.5;p=0} @PIR{r=25}
+  - actionmessage{m="&7•••••••••••••••"} @Self
+  - delay 15
+  - summon{mob=AF_SlamExplosion;amount=1;radius=0;yu=true} @Self
+  - actionmessage{m="&e•&7••••••••••••••"} @Self
+  - delay 10
+  - actionmessage{m="&e••&7•••••••••••••"} @Self
+  - delay 15
+  - actionmessage{m="&e•••&7••••••••••••"} @Self
+  - delay 10
+  - actionmessage{m="&e••••&7•••••••••••"} @Self
+  - delay 15
+  - actionmessage{m="&e•••••&7••••••••••"} @Self
+  - delay 10
+  - actionmessage{m="&e••••••&7•••••••••"} @Self
+  - delay 15
+  - actionmessage{m="&e•••••••&7••••••••"} @Self
+  - delay 10
+  - actionmessage{m="&e••••••••&7•••••••"} @Self
+  - delay 15
+  - actionmessage{m="&e•••••••••&7••••••"} @Self
+  - delay 10
+  - actionmessage{m="&e••••••••••&7•••••"} @Self
+  - delay 15
+  - actionmessage{m="&e•••••••••••&7••••"} @Self
+  - delay 10
+  - actionmessage{m="&e••••••••••••&7•••"} @Self
+  - delay 15
+  - actionmessage{m="&e•••••••••••••&7••"} @Self
+  - delay 10
+  - actionmessage{m="&e••••••••••••••&7•"} @Self
+  - delay 15
+  - actionmessage{m="&e•••••••••••••••"} @Self

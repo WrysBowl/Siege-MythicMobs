@@ -1,0 +1,119 @@
+### WITCH'S SKILLS --------------------------------------------
+A2_Blast: ### Basic tri-bolt attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A2B-Tick;onHit=A2B-Hit;hO=10;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A2B-Tick;onHit=A2B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A2B-Tick;onHit=A2B-Hit;hO=350;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+A2B-Tick:
+  Skills:
+  - effect:particles{p=witchMagic;amount=5;speed=0;hS=0.1;vS=0.1} @origin
+A2B-Hit: ### 20.0 hearts of damage against a full loadout.
+  Skills:
+  - damage{a=1000;pk=true}
+A2_Missile: ### Backend skill for missile spam
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A2M-Tick;onHit=A2M-Hit;hO=0;v=30;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
+A2M-Tick:
+  Skills:
+  - effect:particles{p=witchMagic;amount=2;speed=0;hS=0.1;vS=0.1} @origin
+A2M-Hit:
+  Skills:
+  - effect:sound{s=entity.generic.hurt;v=1;p=1}
+  - damage{a=500;pi=true;pk=true}
+A2_Spam:
+  Skills:
+  - skill{s=A2_Missile}
+  - delay 2
+  - skill{s=A2_Missile}
+  - delay 2
+  - skill{s=A2_Missile}
+  - delay 2
+  - skill{s=A2_Missile}
+  - delay 2
+  - skill{s=A2_Missile}
+  - delay 2
+A2_Knockback: ### Knockback attack.
+  Skills:
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1} @PIR{r=25}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2} @PIR{r=25}
+  - effect:particlesphere{particle=witchMagic;amount=20;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=40;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=60;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=80;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=100;r=5} @self
+  - damage{a=1000} @PIR{r=8}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
+A2_Phase_1: ### Phase 1 Attack
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A2_Knockback} @Self
+  - delay 20
+  - skill{s=A2_Blast}
+  - delay 10
+  - skill{s=A2_Blast}
+  - delay 10
+  - skill{s=A2_Blast}
+  - delay 10
+  - skill{s=A2_Blast}
+  - delay 10
+  - skill{s=A2_Blast}
+  - delay 10
+  - skill{s=A2_Blast}
+  - delay 10
+  - skill{s=A2_Blast}
+  - delay 10
+  - summon{mob=ShaperPointer2;amount=1;noise=12} @Self
+  - delay 10
+  - summon{mob=ShaperPointer2;amount=1;noise=12} @Self
+  - delay 10
+  - summon{mob=ShaperPointer2;amount=1;noise=12} @Self
+A2_Phase_2: ### Phase 2 Attack
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A2_Knockback} @Self
+  - delay 20
+  - skill{s=A2_Spam}
+  - delay 10
+  - skill{s=A2_Spam}
+  - delay 10
+  - skill{s=A2_Spam}
+  - delay 10
+  - skill{s=A2_Spam}
+  - delay 10
+  - skill{s=A2_Spam}
+  - delay 20
+  - skill{s=A2_Blast}
+  - delay 5
+  - skill{s=A2_Blast}
+  - delay 5
+  - skill{s=A2_Blast}
+  - delay 5
+  - skill{s=A2_Blast}
+  - delay 5
+  - skill{s=A2_Blast}
+  - delay 20
+  - summon{mob=ShaperPointer2;amount=2;noise=15} @Self
+  - delay 10
+  - summon{mob=ShaperPointer2;amount=2;noise=15} @Self
+  - delay 10
+  - summon{mob=ShaperPointer2;amount=2;noise=15} @Self

@@ -1,0 +1,185 @@
+### NEW ITEM TIER (2.3.1+) -------------------------------------
+Giantspike:
+  Id: 277
+  Display: "&5&oGiant's Pike"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Knockback XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &a&o+25% &7&oattack speed."
+  - "&5★ &a&o+25% &7&omovement speed."
+  - "&5★ &c&o+20.0❤ &7&owhile in main hand."
+  - "&0 "
+  - "&7“&5So this wasn't a giant spike"
+  - "&5 after all, then?&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:1000
+  - KNOCKBACK:15
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.65
+      MovementSpeed: 0.25
+      Health: 40.0
+  Hide:
+  - UNBREAKABLE
+  - ENCHANTS
+  - ATTRIBUTES
+Giantspike2:
+  Id: 277
+  Display: "&5&oGiant Spike"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Knockback XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &a&o+25% &7&oattack speed."
+  - "&5★ &a&o+25% &7&omovement speed."
+  - "&5★ &c&o+20.0❤ &7&owhile in main hand."
+  - "&0 "
+  - "&7“&5So this wasn't a giant's pike"
+  - "&5 after all, then?&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:1000
+  - KNOCKBACK:15
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.65
+      MovementSpeed: 0.25
+      Health: 40.0
+  Hide:
+  - UNBREAKABLE
+  - ENCHANTS
+  - ATTRIBUTES
+MoltenSword:
+  Id: 267
+  Display: "&5&oBlazing Fury"
+  Lore:
+  - "&7No Attack Damage"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &7&o100% status effect chance."
+  - "&5★ &7&oDeals &c&o2500.0❤ &e&oBurning &7&odamage"
+  - "&7&o  over a period of 2.5s."
+  - "&5★ &c&oStatus effects cannot stack."
+  - "&0 "
+  - "&7“&5A life consumed by anger shall"
+  - "&5 be wasted quickly, for revenge"
+  - "&5 destroys only its own wielder.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Burn_1} @target ~onAttack
+T1_W1:
+  Id: 279
+  Display: "&5&oSpinal Tap"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oExalted"
+  - "&0 "
+  - "&5★ &a&o+60% &7&oattack speed."
+  - "&5★ &7&oAdds &c&o200.0-350.0❤ &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&5★ &7&o30% chance to &e&oIgnite &7&oenemies"
+  - "&7&o  for up to 5.0s."
+  - "&5★ &7&o30% chance to &b&oFreeze &7&oenemies"
+  - "&7&o  for up to 5.0s."
+  - "&0 "
+  - "&7“&5Is that a burn or a chill being"
+  - "&5 sent down your back?&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DAMAGE_ALL:500
+  Skills:
+  - skill{s=Phys_200-350} @target ~onAttack
+  - skill{s=Ignite_Title} @target ~onAttack 0.3
+  - skill{s=InflictFreeze} @target ~onAttack 0.3
+T1_W2:
+  Id: 283
+  Display: "&5&oOccam's Razor"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oExalted"
+  - "&0 "
+  - "&5★ &a&o+75% &7&oattack speed."
+  - "&5★ &7&oAdds &c&o15.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&0 "
+  - "&7“&5Entia non sunt multiplicanda"
+  - "&5 praeter necessitatem&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DAMAGE_ALL:500
+  Skills:
+  - skill{s=Chaos_15} @target ~onAttack
+### ACCESSORY ITEMS --------------------------------------------
+Charm_Elements:
+  Id: 415
+  Display: "&5&oElemental Effigy"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5» &7&oWhile equipped in off hand:"
+  - "&5★ &7&oAdds &c&o50.0-100.0❤ &7&odamage to all"
+  - "&7&o  attacks against &3&oShocked &7&oenemies."
+  - "&5★ &7&oAdds &c&o50.0-100.0❤ &7&odamage to all"
+  - "&7&o  attacks against &b&oFrozen &7&oenemies."
+  - "&5★ &7&oAdds &c&o50.0-100.0❤ &7&odamage to all"
+  - "&7&o  attacks against &e&oIgnited &7&oenemies."
+  - "&0 "
+  - "&7“&5Nature can never be conquered,"
+  - "&5 only harnessed like wind in a sail.&7”"
+  Enchantments:
+  - DAMAGE_ALL:10
+  Attributes:
+    OffHand:
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Skills:
+  - skill{s=Shock_50-100} @target ~onAttack
+  - skill{s=Freeze_50-100} @target ~onAttack
+  - skill{s=Ignite_50-100} @target ~onAttack
+  - skill{s=Shock_50-100} @target ~onBowHit
+  - skill{s=Freeze_50-100} @target ~onBowHit
+  - skill{s=Ignite_50-100} @target ~onBowHit
+  - heal{a=10} @Self ~onTimer:10

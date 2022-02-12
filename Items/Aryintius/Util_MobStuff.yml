@@ -1,0 +1,584 @@
+Boss_Bow:
+  Id: 261
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:500
+  - ARROW_INFINITE:1
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+Boss_Bow2:
+  Id: 261
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:2000
+  - ARROW_INFINITE:1
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+Boss_Sword:
+  Id: 276
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:120
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+Boss_Axe:
+  Id: 279
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:120
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+Head_1:
+  Id: 44
+  Data: 6
+  Enchantments:
+  - DAMAGE_ALL:10
+Bow_Spectre:
+  Id: 261
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:1000
+  - ARROW_INFINITE:1
+Bow_Spectre2:
+  Id: 261
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:1250
+  - ARROW_INFINITE:1
+Bow_Spectre3:
+  Id: 261
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:1500
+  - ARROW_KNOCKBACK:10
+  - ARROW_INFINITE:1
+Bow_Spectre4:
+  Id: 261
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:75
+  - ARROW_INFINITE:1
+###
+### NORMAL DYED ARMORS ----------------------------------
+###
+Drowned_Helm:
+  Id: 298
+  Options:
+    Color: 0,150,150
+    Unbreakable: true
+Drowned_Chest:
+  Id: 299
+  Options:
+    Unbreakable: true
+    Color: 0,120,120
+Drowned_Legs:
+  Id: 300
+  Options:
+    Unbreakable: true
+    Color: 0,90,90
+Drowned_Boots:
+  Id: 301
+  Options:
+    Unbreakable: true
+###
+### DYED MAX-TIER ARMORS --------------------------------
+###
+UHelm_0: ### BLACK ARMOR
+  Id: 298
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+    Color: 0,0,0
+UChest_0:
+  Id: 299
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 0,0,0
+ULegs_0:
+  Id: 300
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 0,0,0
+UBoots_0:
+  Id: 301
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+    Color: 0,0,0
+### WHITE ARMOR
+UHelm_1:
+  Id: 298
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+    Color: 255,255,255
+UChest_1:
+  Id: 299
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 255,255,255
+ULegs_1:
+  Id: 300
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 255,255,255
+UBoots_1:
+  Id: 301
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+    Color: 255,255,255
+### GREY ARMOR
+UHelm_2:
+  Id: 298
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+    Color: 128,128,128
+UChest_2:
+  Id: 299
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 128,128,128
+ULegs_2:
+  Id: 300
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 128,128,128
+UBoots_2:
+  Id: 301
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+    Color: 128,128,128
+### FIRESONG COLOR ARMOR
+UHelm_3:
+  Id: 298
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+    Color: 255,100,0
+UChest_3:
+  Id: 299
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 255,80,0
+ULegs_3:
+  Id: 300
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 255,60,0
+UBoots_3:
+  Id: 301
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+    Color: 255,40,0
+### RED ARMOR
+UHelm_4:
+  Id: 298
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+    Color: 255,0,0
+UChest_4:
+  Id: 299
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 255,0,0
+ULegs_4:
+  Id: 300
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 255,0,0
+UBoots_4:
+  Id: 301
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+    Color: 255,0,0
+### DARK RED ARMOR
+UHelm_5:
+  Id: 298
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+    Color: 128,0,0
+UChest_5:
+  Id: 299
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 128,0,0
+ULegs_5:
+  Id: 300
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 128,0,0
+UBoots_5:
+  Id: 301
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+    Color: 128,0,0
+### AQUA ARMOR
+UHelm_6:
+  Id: 298
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+    Color: 0,255,255
+UChest_6:
+  Id: 299
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 0,255,255
+ULegs_6:
+  Id: 300
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 0,255,255
+UBoots_6:
+  Id: 301
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+    Color: 0,255,255
+### PURPLE ARMOR
+UHelm_7:
+  Id: 298
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+    Color: 255,0,255
+UChest_7:
+  Id: 299
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 255,0,255
+ULegs_7:
+  Id: 300
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 255,0,255
+UBoots_7:
+  Id: 301
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+    Color: 255,0,255
+### TAN(SAND) ARMOR
+UHelm_8:
+  Id: 298
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+    Color: 228,219,175
+UChest_8:
+  Id: 299
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 228,219,175
+ULegs_8:
+  Id: 300
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 228,219,175
+UBoots_8:
+  Id: 301
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+    Color: 228,219,175
+### PURPLE ARMOR
+UHelm_9:
+  Id: 298
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+    Color: 100,0,100
+UChest_9:
+  Id: 299
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+    Color: 100,0,100
+ULegs_9:
+  Id: 300
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 100,0,100
+UBoots_9:
+  Id: 301
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+    Color: 100,0,100
+###
+### VANILLA ARMORS (for color) -----------------------------
+###
+DHelm: ### DIAMOND ARMOR
+  Id: 310
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+DChest:
+  Id: 311
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+DLegs:
+  Id: 312
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+DBoots:
+  Id: 313
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+### GOLD ARMOR
+GHelm:
+  Id: 314
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+GChest:
+  Id: 315
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+GLegs:
+  Id: 316
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+GBoots:
+  Id: 317
+  Enchantments:
+  - DEPTH_STRIDER:20
+  - PROTECTION_FALL:20
+  Options:
+    Unbreakable: true
+### IRON ARMOR
+IHelm:
+  Id: 306
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+IChest:
+  Id: 307
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+ILegs:
+  Id: 308
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+IBoots:
+  Id: 309
+  Enchantments:
+  - DEPTH_STRIDER:20
+  - PROTECTION_FALL:20
+  Options:
+    Unbreakable: true
+### CHAINMAIL ARMOR
+CHelm:
+  Id: 302
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+CChest:
+  Id: 303
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+CLegs:
+  Id: 304
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+CBoots:
+  Id: 305
+  Enchantments:
+  - DEPTH_STRIDER:20
+  - PROTECTION_FALL:20
+  Options:
+    Unbreakable: true
+LHelm: ### LEATHER ARMOR
+  Id: 298
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+LChest:
+  Id: 299
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+LLegs:
+  Id: 300
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+LBoots:
+  Id: 301
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Options:
+    Unbreakable: true
+###
+### FUNCTIONAL ITEMS ---------------------------------------
+###
+ReflectHelm: ### THORNS ITEMS
+  Id: 310
+  Enchantments:
+  - THORNS:4000
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+ReflectChest:
+  Id: 311
+  Enchantments:
+  - THORNS:4000
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+ReflectLegs:
+  Id: 312
+  Enchantments:
+  - THORNS:4000
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+ReflectBoots:
+  Id: 313
+  Enchantments:
+  - THORNS:4000
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Options:
+    Unbreakable: true
+### SKULLS
+Boss_Skull_1:
+  Id: 397
+Boss_Skull_2:
+  Id: 173
+  Enchantments:
+  - ARROW_DAMAGE:10
+Boss_Skull_3:
+  Id: 397
+  Data: 3
+  Options:
+    Player: iballisticsquid
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+Boss_Skull_4:
+  Id: 397
+  Data: 3
+  Options:
+    Player: Cartographer
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20

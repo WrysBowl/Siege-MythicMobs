@@ -1,0 +1,53 @@
+TestBoss:
+  Type: ARMOR_STAND
+  Modules:
+    ThreatTable: true
+  Display: "&4&l<&c« &6Norvok &c»&4&l>"
+  BossBar:
+    Enabled: true
+    Title: "&4&l<&c« &6Norvok, the Duelist &c»&4&l>"
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_6
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Invincible: true
+### Armor Stand settings
+    HasArms: true
+    ItemHead: UHelm_5
+    ItemBody: CChest
+    ItemLegs: CLegs
+    ItemFeet: UBoots_5
+    ItemHand: Arch_Sword
+  Skills:
+### SPAWN/UTILS
+  - summon{mob=AIMob;amount=1;noise=0} @Self ~onSpawn
+  - asinit{anim=test.anim;plate=false;mobtype=AIMob} @Self ~onSpawn 1
+  - asanimate{anim=test.anim;r=20;d=0} @self ~onTimer:20 1
+  - aspause @self ~onSignal:MOVESTOPP
+  - asrun @self ~onSignal:MOVESTART
+  - FOLLOWSKILL @EntitiesInRadius{r=10;target=samefaction} ~onTimer:5
+  - remove @MIR{t=AIMob;r=10} ~onDeath
+### PHASE 1
+### PHASE 2
+### DEATH STUFF
+AIMob:
+  Type: ZOMBIE
+  Health: 2500
+  Damage: 20
+  Options:
+    Invincible: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Drops:
+  - Currency_Trials_Boss
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Faction: FollowMe
+  Skills:
+  - potion{t=INVISIBILITY;d=2147483647} @Self ~onSpawn
+  - remove @MIR{t=TestBoss;r=10} ~onDeath

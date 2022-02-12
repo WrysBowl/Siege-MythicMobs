@@ -1,0 +1,12 @@
+### AMMUNITION -------------------------------------------------
+Ammo_Light:
+  Id: 452
+  Display: "&fRifle Round"
+  Lore:
+  - "&7Heavy rounds for usage in"
+  - "&7a powerful ranged weapon."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES

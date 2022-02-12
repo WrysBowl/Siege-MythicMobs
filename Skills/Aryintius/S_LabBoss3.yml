@@ -1,0 +1,104 @@
+### LAB BOSS 3 SKILLS
+LB3_Summon:
+  Skills:
+  - message{m="<mob.name> &fYou may hide from me, but never my totems!"} @PlayersInRadius{r=25}
+  - delay 10
+  - summon{mob=LabBoss3_Minion_1;amount=1;noise=5} @Self
+LB3_Shot: ### Basic Magic Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=LB3S-Tick;onHit=LB3S-Hit;v=10;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+LB3S-Tick:
+  Skills:
+  - effect:particles{p=magicCrit;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+LB3S-Hit:
+  Skills:
+  - damage{a=20;pk=true}
+LB3_Blast: ### Heavy Magic Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=LB3B-Tick;onHit=LB3B-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+LB3B-Tick:
+  Skills:
+  - effect:particles{p=magicCrit;a=8} @origin
+  - effect:particles{p=bubble;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+LB3B-Hit:
+  Skills:
+  - damage{a=40;pk=true}
+### COMPOSITE SKILLS
+LB3_Burst:
+  Skills:
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 10
+LB3_Doom:
+  Skills:
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 20
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 20
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=LB3_Shot} @NearestPlayer{r=50}
+  - delay 20
+### AREA SKILLS
+LB3Drag:
+  Skills:
+  - effect:particlesphere{particle=largesmoke;amount=80;r=5} @self
+  - effect:particlesphere{particle=magicCrit;amount=80;r=5} @self
+  - effect:sound{s=entity.elder_guardian.curse;v=0.5;p=2}
+  - effect:sound{s=entity.elder_guardian.curse;v=0.5;p=1}
+  - randommessage
+      {
+      m=
+      "<mob.name> &fYou cannot run from your fate.",
+      "<mob.name> &fFace death with courage, not cowardice!",
+      "<mob.name> &fAccept your defeat.",
+      } @PlayersInRadius{r=10}
+  - forcepull{spread=0} @PIR{r=10}
+LB3Knockback:
+  Skills:
+  - effect:sound{s=entity.generic.burn;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2} @PIR{r=25}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0} @PIR{r=25}
+  - effect:sound{s=entity.elder_guardian.curse;v=0.5;p=0} @PIR{r=25}
+  - effect:particlesphere{particle=largesmoke;amount=10;r=1} @self
+  - effect:particlesphere{particle=magicCrit;amount=10;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=20;r=2} @self
+  - effect:particlesphere{particle=magicCrit;amount=20;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=40;r=3} @self
+  - effect:particlesphere{particle=magicCrit;amount=40;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=60;r=4} @self
+  - effect:particlesphere{particle=magicCrit;amount=60;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=80;r=5} @self
+  - effect:particlesphere{particle=magicCrit;amount=80;r=5} @self
+  - damage{a=50} @PIR{r=5}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}

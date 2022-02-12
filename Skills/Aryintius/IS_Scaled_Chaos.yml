@@ -1,0 +1,979 @@
+### CHAOS DAMAGE SCALING ---------------------------------------
+### THIS SECTION IS ONLY FOR CHAOS DAMAGE SCALING.
+### PHYSICAL DAMAGE WILL BE FOUND IN IS_Scaled_Phys.yml
+### ------------------------------------------------------------
+ChaosFromSpeed: ### 2.0 Chaos per 1 Speed -----------------------
+  Skills:
+  - skill{s=ChaosSpeed_1}
+  - skill{s=ChaosSpeed_2}
+  - skill{s=ChaosSpeed_3}
+  - skill{s=ChaosSpeed_4}
+  - skill{s=ChaosSpeed_5}
+  - skill{s=ChaosSpeed_6}
+  - skill{s=ChaosSpeed_7}
+  - skill{s=ChaosSpeed_8}
+  - skill{s=ChaosSpeed_9}
+  - skill{s=ChaosSpeed_10}
+ChaosSpeed_1:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=0} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=4;ia=true;pi=true;pk=true} @target
+ChaosSpeed_2:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=1} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=8;ia=true;pi=true;pk=true} @target
+ChaosSpeed_3:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=2} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=12;ia=true;pi=true;pk=true} @target
+ChaosSpeed_4:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=3} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=16;ia=true;pi=true;pk=true} @target
+ChaosSpeed_5:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=4} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=20;ia=true;pi=true;pk=true} @target
+ChaosSpeed_6:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=5} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=24;ia=true;pi=true;pk=true} @target
+ChaosSpeed_7:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=6} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=28;ia=true;pi=true;pk=true} @target
+ChaosSpeed_8:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=7} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=32;ia=true;pi=true;pk=true} @target
+ChaosSpeed_9:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=8} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=36;ia=true;pi=true;pk=true} @target
+ChaosSpeed_10:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=9} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=40;ia=true;pi=true;pk=true} @target
+ChaosFromSpeed_2: ### 5.0 Chaos per 1 Speed -----------------------
+  Skills:
+  - skill{s=ChaosSpeed_11}
+  - skill{s=ChaosSpeed_12}
+  - skill{s=ChaosSpeed_13}
+  - skill{s=ChaosSpeed_14}
+  - skill{s=ChaosSpeed_15}
+  - skill{s=ChaosSpeed_16}
+  - skill{s=ChaosSpeed_17}
+  - skill{s=ChaosSpeed_18}
+  - skill{s=ChaosSpeed_19}
+  - skill{s=ChaosSpeed_20}
+ChaosSpeed_11:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=0} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=10;ia=true;pi=true;pk=true} @target
+ChaosSpeed_12:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=1} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=20;ia=true;pi=true;pk=true} @target
+ChaosSpeed_13:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=2} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=30;ia=true;pi=true;pk=true} @target
+ChaosSpeed_14:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=3} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=40;ia=true;pi=true;pk=true} @target
+ChaosSpeed_15:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=4} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=50;ia=true;pi=true;pk=true} @target
+ChaosSpeed_16:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=5} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.11;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.11;p=2}
+  - damage{a=60;ia=true;pi=true;pk=true} @target
+ChaosSpeed_17:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=6} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=70;ia=true;pi=true;pk=true} @target
+ChaosSpeed_18:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=7} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.13;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.13;p=2}
+  - damage{a=80;ia=true;pi=true;pk=true} @target
+ChaosSpeed_19:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=8} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.14;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.14;p=2}
+  - damage{a=90;ia=true;pi=true;pk=true} @target
+ChaosSpeed_20:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=9} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=100;ia=true;pi=true;pk=true} @target
+
+ChaosFromHaste: ### 2.0 Chaos per 1 Haste -----------------------
+  Skills:
+  - skill{s=ChaosHaste_1}
+  - skill{s=ChaosHaste_2}
+  - skill{s=ChaosHaste_3}
+  - skill{s=ChaosHaste_4}
+  - skill{s=ChaosHaste_5}
+  - skill{s=ChaosHaste_6}
+  - skill{s=ChaosHaste_7}
+  - skill{s=ChaosHaste_8}
+  - skill{s=ChaosHaste_9}
+  - skill{s=ChaosHaste_10}
+ChaosHaste_1:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=0} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=4;ia=true;pi=true;pk=true} @target
+ChaosHaste_2:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=1} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=8;ia=true;pi=true;pk=true} @target
+ChaosHaste_3:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=2} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=12;ia=true;pi=true;pk=true} @target
+ChaosHaste_4:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=3} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=16;ia=true;pi=true;pk=true} @target
+ChaosHaste_5:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=4} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=20;ia=true;pi=true;pk=true} @target
+ChaosHaste_6:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=5} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=24;ia=true;pi=true;pk=true} @target
+ChaosHaste_7:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=6} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=28;ia=true;pi=true;pk=true} @target
+ChaosHaste_8:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=7} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=32;ia=true;pi=true;pk=true} @target
+ChaosHaste_9:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=8} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=36;ia=true;pi=true;pk=true} @target
+ChaosHaste_10:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=40;ia=true;pi=true;pk=true} @target
+
+ChaosRegen: ### 3.0 Chaos per level of Regen ---------------------
+  Skills:
+  - skill{s=ChaosGen_1}
+  - skill{s=ChaosGen_2}
+  - skill{s=ChaosGen_3}
+  - skill{s=ChaosGen_4}
+  - skill{s=ChaosGen_5}
+  - skill{s=ChaosGen_5+}
+ChaosGen_1:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=0} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.05;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.05;p=2}
+  - damage{a=6;ia=true;pi=true;pk=true} @target
+ChaosGen_2:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=1} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.05;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.05;p=2}
+  - damage{a=12;ia=true;pi=true;pk=true} @target
+ChaosGen_3:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=2} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.06;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.06;p=2}
+  - damage{a=18;ia=true;pi=true;pk=true} @target
+ChaosGen_4:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=3} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.06;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.06;p=2}
+  - damage{a=24;ia=true;pi=true;pk=true} @target
+ChaosGen_5:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=4} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.07;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.07;p=2}
+  - damage{a=30;ia=true;pi=true;pk=true} @target
+ChaosGen_5+:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=>5} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.07;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.07;p=2}
+  - damage{a=60;ia=true;pi=true;pk=true} @target
+
+ChaosFromES: ### 12.0 Chaos per 20.0 ES ------------------------
+  Skills:
+  - skill{s=ChaosES_1}
+  - skill{s=ChaosES_2}
+  - skill{s=ChaosES_3}
+  - skill{s=ChaosES_4}
+  - skill{s=ChaosES_5}
+ChaosES_1:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>8} true
+  - haspotioneffect{t=ABSORPTION;level=<18} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.05;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.05;p=2}
+  - damage{a=24;ia=true;pi=true;pk=true} @target
+ChaosES_2:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>18} true
+  - haspotioneffect{t=ABSORPTION;level=<28} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.06;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.06;p=2}
+  - damage{a=48;ia=true;pi=true;pk=true} @target
+ChaosES_3:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>28} true
+  - haspotioneffect{t=ABSORPTION;level=<38} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.07;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.07;p=2}
+  - damage{a=72;ia=true;pi=true;pk=true} @target
+ChaosES_4:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>38} true
+  - haspotioneffect{t=ABSORPTION;level=<48} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.08;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.08;p=2}
+  - damage{a=96;ia=true;pi=true;pk=true} @target
+ChaosES_5:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>48} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.09;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.09;p=2}
+  - damage{a=120;ia=true;pi=true;pk=true} @target
+ChaosFromES_2: ### 25.0 Chaos per 20.0 ES.
+  Skills:
+  - skill{s=ChaosES_6}
+  - skill{s=ChaosES_7}
+  - skill{s=ChaosES_8}
+  - skill{s=ChaosES_9}
+  - skill{s=ChaosES_10}
+ChaosES_6:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>8} true
+  - haspotioneffect{t=ABSORPTION;level=<18} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.05;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.05;p=2}
+  - damage{a=50;ia=true;pi=true;pk=true} @target
+ChaosES_7:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>18} true
+  - haspotioneffect{t=ABSORPTION;level=<28} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.06;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.06;p=2}
+  - damage{a=100;ia=true;pi=true;pk=true} @target
+ChaosES_8:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>28} true
+  - haspotioneffect{t=ABSORPTION;level=<38} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.07;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.07;p=2}
+  - damage{a=150;ia=true;pi=true;pk=true} @target
+ChaosES_9:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>38} true
+  - haspotioneffect{t=ABSORPTION;level=<48} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.08;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.08;p=2}
+  - damage{a=200;ia=true;pi=true;pk=true} @target
+ChaosES_10:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>48} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.09;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.09;p=2}
+  - damage{a=250;ia=true;pi=true;pk=true} @target
+
+Chaos15Strength50: ### 15.0 Chaos per 50 Strength -------------------
+  Skills:
+  - skill{s=C15S50_1}
+  - skill{s=C15S50_2}
+  - skill{s=C15S50_3}
+  - skill{s=C15S50_4}
+C15S50_1:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>48} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<98} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=30;ia=true;pi=true;pk=true} @target
+C15S50_2:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>98} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<148} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=60;ia=true;pi=true;pk=true} @target
+C15S50_3:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>148} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<198} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.11;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.11;p=2}
+  - damage{a=90;ia=true;pi=true;pk=true} @target
+C15S50_4:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=120;ia=true;pi=true;pk=true} @target
+
+ChaosFromStrength_Low: ### 1.0 Chaos per 10 Strength ----------------
+  Skills:
+  - skill{s=ChaosStrength_21}
+  - skill{s=ChaosStrength_22}
+  - skill{s=ChaosStrength_23}
+  - skill{s=ChaosStrength_24}
+  - skill{s=ChaosStrength_25}
+  - skill{s=ChaosStrength_26}
+  - skill{s=ChaosStrength_27}
+  - skill{s=ChaosStrength_28}
+  - skill{s=ChaosStrength_29}
+  - skill{s=ChaosStrength_30}
+  - skill{s=ChaosStrength_31}
+  - skill{s=ChaosStrength_32}
+  - skill{s=ChaosStrength_33}
+  - skill{s=ChaosStrength_34}
+  - skill{s=ChaosStrength_35}
+  - skill{s=ChaosStrength_36}
+  - skill{s=ChaosStrength_37}
+  - skill{s=ChaosStrength_38}
+  - skill{s=ChaosStrength_39}
+  - skill{s=ChaosStrength_40}
+ChaosStrength_21:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>8} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<18} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=2;ia=true;pi=true;pk=true} @target
+ChaosStrength_22:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>18} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<28} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=4;ia=true;pi=true;pk=true} @target
+ChaosStrength_23:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>28} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<38} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=6;ia=true;pi=true;pk=true} @target
+ChaosStrength_24:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>38} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<48} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=8;ia=true;pi=true;pk=true} @target
+ChaosStrength_25:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>48} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<58} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=10;ia=true;pi=true;pk=true} @target
+ChaosStrength_26:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>58} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<68} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=12;ia=true;pi=true;pk=true} @target
+ChaosStrength_27:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>68} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<78} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=14;ia=true;pi=true;pk=true} @target
+ChaosStrength_28:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>78} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<88} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=16;ia=true;pi=true;pk=true} @target
+ChaosStrength_29:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>88} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<98} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=18;ia=true;pi=true;pk=true} @target
+ChaosStrength_30:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>98} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<108} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=20;ia=true;pi=true;pk=true} @target
+ChaosStrength_31:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>108} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<118} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=22;ia=true;pi=true;pk=true} @target
+ChaosStrength_32:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>118} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<128} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=24;ia=true;pi=true;pk=true} @target
+ChaosStrength_33:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>128} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<138} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=26;ia=true;pi=true;pk=true} @target
+ChaosStrength_34:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>138} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<148} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=28;ia=true;pi=true;pk=true} @target
+ChaosStrength_35:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>148} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<158} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=30;ia=true;pi=true;pk=true} @target
+ChaosStrength_36:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>158} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<168} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=32;ia=true;pi=true;pk=true} @target
+ChaosStrength_37:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>168} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<178} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=34;ia=true;pi=true;pk=true} @target
+ChaosStrength_38:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>178} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<188} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=36;ia=true;pi=true;pk=true} @target
+ChaosStrength_39:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>188} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<198} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=38;ia=true;pi=true;pk=true} @target
+ChaosStrength_40:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=40;ia=true;pi=true;pk=true} @target
+
+ChaosFromStrength: ### 2.0 Chaos per 10 Strength ---------------
+  Skills:
+  - skill{s=ChaosStrength_1}
+  - skill{s=ChaosStrength_2}
+  - skill{s=ChaosStrength_3}
+  - skill{s=ChaosStrength_4}
+  - skill{s=ChaosStrength_5}
+  - skill{s=ChaosStrength_6}
+  - skill{s=ChaosStrength_7}
+  - skill{s=ChaosStrength_8}
+  - skill{s=ChaosStrength_9}
+  - skill{s=ChaosStrength_10}
+  - skill{s=ChaosStrength_11}
+  - skill{s=ChaosStrength_12}
+  - skill{s=ChaosStrength_13}
+  - skill{s=ChaosStrength_14}
+  - skill{s=ChaosStrength_15}
+  - skill{s=ChaosStrength_16}
+  - skill{s=ChaosStrength_17}
+  - skill{s=ChaosStrength_18}
+  - skill{s=ChaosStrength_19}
+  - skill{s=ChaosStrength_20}
+ChaosStrength_1:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>8} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<18} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=4;ia=true;pi=true;pk=true} @target
+ChaosStrength_2:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>18} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<28} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=8;ia=true;pi=true;pk=true} @target
+ChaosStrength_3:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>28} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<38} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=12;ia=true;pi=true;pk=true} @target
+ChaosStrength_4:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>38} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<48} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=16;ia=true;pi=true;pk=true} @target
+ChaosStrength_5:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>48} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<58} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=20;ia=true;pi=true;pk=true} @target
+ChaosStrength_6:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>58} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<68} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=24;ia=true;pi=true;pk=true} @target
+ChaosStrength_7:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>68} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<78} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=28;ia=true;pi=true;pk=true} @target
+ChaosStrength_8:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>78} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<88} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=32;ia=true;pi=true;pk=true} @target
+ChaosStrength_9:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>88} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<98} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=36;ia=true;pi=true;pk=true} @target
+ChaosStrength_10:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>98} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<108} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=40;ia=true;pi=true;pk=true} @target
+ChaosStrength_11:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>108} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<118} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=44;ia=true;pi=true;pk=true} @target
+ChaosStrength_12:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>118} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<128} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=48;ia=true;pi=true;pk=true} @target
+ChaosStrength_13:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>128} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<138} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=52;ia=true;pi=true;pk=true} @target
+ChaosStrength_14:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>138} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<148} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=56;ia=true;pi=true;pk=true} @target
+ChaosStrength_15:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>148} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<158} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=60;ia=true;pi=true;pk=true} @target
+ChaosStrength_16:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>158} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<168} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=64;ia=true;pi=true;pk=true} @target
+ChaosStrength_17:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>168} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<178} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=68;ia=true;pi=true;pk=true} @target
+ChaosStrength_18:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>178} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<188} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=72;ia=true;pi=true;pk=true} @target
+ChaosStrength_19:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>188} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<198} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=76;ia=true;pi=true;pk=true} @target
+ChaosStrength_20:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=80;ia=true;pi=true;pk=true} @target
+
+ChaosFromStrength_High: ### 3.0 Chaos per 10 Strength ---------------
+  Skills:
+  - skill{s=ChaosStrength_41}
+  - skill{s=ChaosStrength_42}
+  - skill{s=ChaosStrength_43}
+  - skill{s=ChaosStrength_44}
+  - skill{s=ChaosStrength_45}
+  - skill{s=ChaosStrength_46}
+  - skill{s=ChaosStrength_47}
+  - skill{s=ChaosStrength_48}
+  - skill{s=ChaosStrength_49}
+  - skill{s=ChaosStrength_50}
+  - skill{s=ChaosStrength_51}
+  - skill{s=ChaosStrength_52}
+  - skill{s=ChaosStrength_53}
+  - skill{s=ChaosStrength_54}
+  - skill{s=ChaosStrength_55}
+  - skill{s=ChaosStrength_56}
+  - skill{s=ChaosStrength_57}
+  - skill{s=ChaosStrength_58}
+  - skill{s=ChaosStrength_59}
+  - skill{s=ChaosStrength_60}
+ChaosStrength_41:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>8} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<18} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=6;ia=true;pi=true;pk=true} @target
+ChaosStrength_42:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>18} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<28} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=12;ia=true;pi=true;pk=true} @target
+ChaosStrength_43:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>28} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<38} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=18;ia=true;pi=true;pk=true} @target
+ChaosStrength_44:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>38} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<48} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=24;ia=true;pi=true;pk=true} @target
+ChaosStrength_45:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>48} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<58} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=30;ia=true;pi=true;pk=true} @target
+ChaosStrength_46:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>58} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<68} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=36;ia=true;pi=true;pk=true} @target
+ChaosStrength_47:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>68} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<78} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=42;ia=true;pi=true;pk=true} @target
+ChaosStrength_48:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>78} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<88} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=48;ia=true;pi=true;pk=true} @target
+ChaosStrength_49:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>88} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<98} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=54;ia=true;pi=true;pk=true} @target
+ChaosStrength_50:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>98} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<108} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=60;ia=true;pi=true;pk=true} @target
+ChaosStrength_51:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>108} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<118} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=66;ia=true;pi=true;pk=true} @target
+ChaosStrength_52:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>118} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<128} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=72;ia=true;pi=true;pk=true} @target
+ChaosStrength_53:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>128} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<138} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=78;ia=true;pi=true;pk=true} @target
+ChaosStrength_54:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>138} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<148} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=84;ia=true;pi=true;pk=true} @target
+ChaosStrength_55:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>148} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<158} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=90;ia=true;pi=true;pk=true} @target
+ChaosStrength_56:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>158} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<168} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=96;ia=true;pi=true;pk=true} @target
+ChaosStrength_57:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>168} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<178} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=102;ia=true;pi=true;pk=true} @target
+ChaosStrength_58:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>178} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<188} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=108;ia=true;pi=true;pk=true} @target
+ChaosStrength_59:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>188} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<198} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=114;ia=true;pi=true;pk=true} @target
+ChaosStrength_60:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=120;ia=true;pi=true;pk=true} @target

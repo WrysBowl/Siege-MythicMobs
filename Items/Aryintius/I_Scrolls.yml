@@ -1,0 +1,127 @@
+###---------------------------------------------------------###
+### SCROLLS
+###---------------------------------------------------------###
+Scroll1:
+  Id: 339
+  Display: "&fScroll of Fireball&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c50.0❤"
+  - "&7Cooldown: &f1 Second"
+Scroll2:
+  Id: 339
+  Display: "&2Scroll of Flood&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c20.0x3❤"
+  - "&7Cooldown: &f1 Second"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Scroll3:
+  Id: 339
+  Display: "&3Scroll of Earthquake&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c25.0x4❤"
+  - "&7Cooldown: &f3 Seconds"
+  - "&0 "
+  - "&3★ &7&oRestores &c&o4.0❤&7&o on hit."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Scroll4:
+  Id: 339
+  Display: "&9Scroll of Storms&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c120.0❤"
+  - "&7Cooldown: &f3 Seconds"
+  - "&0 "
+  - "&9★ &7&oInflicts &c&o15.0❤ &7&obleed damage."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Scroll5:
+  Id: 339
+  Display: "&4&oScroll of Immunity&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c0.0❤"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&4★ &7&oGain &a&oResist. V &7&ofor 12.0s."
+  - "&4★ &7&oSuffer &8slow/blind &7&ofor 20.0s."
+  - "&0 "
+  - "&7“&4It only costs your soul!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Scroll6:
+  Id: 339
+  Display: "&5&oScroll of Holy Smite&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c10000.0x3❤"
+  - "&7Cooldown: &f15 Seconds"
+  - "&0 "
+  - "&7“&5A powerful technique used"
+  - "&5 to destroy void demons.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Scroll7:
+  Id: 339
+  Display: "&5&oScroll of Lifeforce&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c0.0❤"
+  - "&7Cooldown: &f60 Seconds"
+  - "&0 "
+  - "&5★ &7&oGain &c&o10.0❤ &7&ofor 5 minutes."
+  - "&0 "
+  - "&7“&5An ancient power forged with"
+  - "&5 the true essence of the soul.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES

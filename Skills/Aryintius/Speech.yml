@@ -1,0 +1,56 @@
+## TITAN SPEECH
+TitanSpeech:
+  Cooldown: 20
+  Skills:
+  - randommessage
+      {
+      m=
+      "<mob.name> &fDarkness is not your ally, for it is mine alone to control.",
+      "<mob.name> &fYou exist because the Void allows it. You will cease to because the Void demands it.",
+      "<mob.name> &fLife is a the greatest gift from the Void. And it can just as easily be taken away. Do you value your life, usurper?",
+      "<mob.name> &fThe Void is no force of evil. It is a balance of creation and destruction alike--a divine power above all life. What madness would you have to suffer to rebel against its cause?",
+      "<mob.name> &fThe dragons were cowards--mere rebels that sealed the Void away from its chosen in fear of what power we, the Titans, could attain.",
+      "<mob.name> &fGaze... into the abyss... Is it not the most beautiful thing you have ever seen?",
+      "<mob.name> &fYou cannot usurp my master. Nothing can replace the Void!",
+      "<mob.name> &fHow can you reject the blessings of our master? How could you be so selfish?";
+      } @PlayersInRadius{r=50}
+TitanSpeech2:
+  Cooldown: 10
+  Skills:
+  - randommessage
+      {
+      m=
+      "<mob.name> &fAll must be consumed before it is reborn. Join me in ascension! Yield before the enlightenment of the Void!",
+      "<mob.name> &fThis world is an illusion, usurper. I shall not hide the truth, as my predecessors have before me. Your dream is a lie. Wake from your slumber!",
+      "<mob.name> &fTo exist is to suffer. The Void will free us all from this pain.",
+      "<mob.name> &fA new world will rise out of this one's ashes--crafted to perfection for all life to succeed.",
+      "<mob.name> &fGaze... into the abyss... Is it not the most beautiful thing you have ever seen?",
+      "<mob.name> &fDestruction is inevitable. There is no hope left for mortal life. You will be reborn. You must be reborn!";
+      } @PlayersInRadius{r=50}
+HeroSpeech:
+  Cooldown: 20
+  Skills:
+  - randommessage
+      {
+      m=
+      "<mob.name> &fI will not be forgotten... not again... never again...",
+      "<mob.name> &fDie, you leech!",
+      "<mob.name> &fYour soul shall suffer!",
+      "<mob.name> &fYou cannot destroy the Void!";
+      } @PlayersInRadius{r=50}
+LithaanSpeech:
+  Cooldown: 20
+  Skills:
+  - randommessage
+      {
+      m=
+      "<mob.name> &fLife's blossom has closed and withered. Soon, we shall all follow its path.",
+      "<mob.name> &fYou cannot stop the corruption, merely slow its spread. Thus, we all decay in the end.",
+      "<mob.name> &fHope is lost... Only despair remains...",
+      "<mob.name> &fI care not for your chivalry or merit. I only ask that you leave.",
+      "<mob.name> &fRegret is a pain we all must endure, for without it, we cannot learn...",
+      "<mob.name> &fWhen the Corruption completes its spread, there will be nowhere to hide from the Void...",
+      "<mob.name> &fThere is nothing left to save, mortal... Reality is collapsing in the wake of the Void...",
+      "<mob.name> &fAll things come to an end. We are not so different, mortal. For we must all court death after life.",
+      "<mob.name> &fYour tenacity is admirable, but your desire is futile... a pity...";
+      } @PlayersInRadius{r=30}

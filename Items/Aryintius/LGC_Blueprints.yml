@@ -1,0 +1,52 @@
+###---------------------------------------------------------###
+### GUN BLUEPRINTS
+###---------------------------------------------------------###
+BP_Shotgun:
+  Id: 339
+  Display: "&fShotgun Blueprint"
+  Lore:
+  - "&9Common Material"
+  Enchantments: 
+  - ARROW_FIRE:10
+BP_Handgun:
+  Id: 339
+  Display: "&2Handgun Blueprint"
+  Lore:
+  - "&9Uncommon Material"
+  Enchantments: 
+  - ARROW_INFINITE:10
+BP_Crossbow:
+  Id: 339
+  Display: "&2Crossbow Blueprint"
+  Lore:
+  - "&9Uncommon Material"
+  Enchantments: 
+  - ARROW_INFINITE:10
+BP_Rifle:
+  Id: 339
+  Display: "&3Assault Rifle Blueprint"
+  Lore:
+  - "&9Rare Material"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+BP_Sniper:
+  Id: 339
+  Display: "&5Sniper Blueprint"
+  Lore:
+  - "&9Superior Material"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+BP_Heavy:
+  Id: 339
+  Display: "&d&oHeavy Blueprint"
+  Lore:
+  - "&9Ultimate Material"
+  Enchantments: 
+  - ARROW_DAMAGE:10
+BP_SMG:
+  Id: 339
+  Display: "&3SMG Blueprint"
+  Lore:
+  - "&9Rare Material"
+  Enchantments: 
+  - DIG_SPEED:10

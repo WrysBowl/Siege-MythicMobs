@@ -1,0 +1,191 @@
+### PALEON MINES MOBS ------------------------------------------
+CaveDweller:
+  Type: SPIDER
+  Display: "&f« &7Cave Dweller &f»"
+  Health: 60
+  Damage: 10
+  Drops:
+  - Food
+  - Currency_Floor_3
+  - Rare
+  - Superior
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - GHelm:4
+  - GChest:3
+  - GLegs:2
+  - GBoots:1
+  - 0:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Skills:
+  - skill{s=Tut_Toxin} @NearestPlayer{r=20} ~onTimer:10
+UndeadMiner:
+  Type: ZOMBIE
+  Display: "&f« &7Undead Miner &f»"
+  Health: 100
+  Damage: 20
+  Drops:
+  - Food
+  - Currency_Floor_2
+  - Uncommon
+  - Rare
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - gold_helmet:4
+  - leather_chestplate:3
+  - chainmail_leggings:2
+  - leather_boots:1
+  - iron_pickaxe:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Skills:
+  - skill{s=Bleed_3} @target ~onAttack 0.25
+EvilMinecart:
+  Type: HUSK
+  Display: "&f« &7Possessed Cart &f»"
+  Health: 150
+  Damage: 20
+  Drops:
+  - Food
+  - Currency_Floor_2
+  - Uncommon
+  - Rare
+  Modules:
+    ThreatTable: true
+  Disguise:
+    Type: MINECART
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - gold_helmet:4
+  - leather_chestplate:3
+  - chainmail_leggings:2
+  - leather_boots:1
+  - diamond_sword:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Skills:
+  # - effect:sound{s=entity.minecart.riding;p=2.0;v=0.5} @Self ~onTimer:60 0.5
+  - effect:sound{s=entity.irongolem.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.irongolem.death;p=1.0;v=0.5} @self ~onDeath
+### CATACOMBS MOBS ---------------------------------------------
+UndeadCultist:
+  Type: SKELETON
+  Display: "&4« &eAncient Cultist &4»"
+  Health: 120
+  Damage: 20
+  Drops:
+  - Food
+  - Currency_Floor_3
+  - Rare
+  - Superior
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - leather_helmet:4
+  - gold_chestplate:3
+  - leather_leggings:2
+  - gold_boots:1
+  - blaze_rod:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Skills:
+  - skill{s=Tut_Blast} @NearestPlayer{r=10} ~onTimer:30 0.5
+UndeadBrute:
+  Type: HUSK
+  Display: "&6« &eBrutal Cultist &6»"
+  Health: 40
+  Damage: 20
+  Drops:
+  - Food
+  - Currency_Floor_3
+  - Rare
+  - Superior
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - leather_helmet:4
+  - gold_chestplate:3
+  - leather_leggings:2
+  - gold_boots:1
+  - iron_sword:0
+  - iron_sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10
+  - skill{s=Tut_Knockback} @Self ~onTimer:80 0.5
+### SELTHINE UNDEAD MOBS ---------------------------------------
+UndeadCitizen:
+  Type: ZOMBIE_VILLAGER
+  Display: "&f« &7Undead Villager &f»"
+  Health: 40
+  Damage: 5
+  Drops:
+  - Food
+  - Currency_Floor_1
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Profession: FARMER
+UndeadHeavy:
+  Type: ZOMBIE_VILLAGER
+  Display: "&f« &7Undead Worker &f»"
+  Health: 100
+  Damage: 10
+  Drops:
+  - Food
+  - Currency_Floor_1
+  - Common
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - 0:4
+  - 0:3
+  - 0:2
+  - 0:1
+  - iron_sword:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Profession: BLACKSMITH

@@ -1,0 +1,157 @@
+###---------------------------------------###
+### TRIAL OF SORROW
+###---------------------------------------###
+Wraith:
+  Type: ZOMBIE
+  Display: "&6« &eWraith &6»"
+  Health: 200
+  Damage: 500
+  Drops:
+  - Currency_Trials_1
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - chainmail_helmet:4
+  - iron_chestplate:3
+  - chainmail_leggings:2
+  - iron_boots:1
+  - iron_sword:0
+  - iron_sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+Spectre:
+  Type: SKELETON
+  Display: "&6« &eSpectre &6»"
+  Health: 150
+  Damage: 5
+  Drops:
+  - Currency_Trials_1
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - iron_helmet:4
+  - chainmail_chestplate:3
+  - leather_leggings:2
+  - leather_boots:1
+  - Bow_Spectre:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=2} @Self ~onSpawn
+Wraith2:
+  Type: ZOMBIE
+  Display: "&4« &eElder Wraith &4»"
+  Health: 300
+  Damage: 750
+  Drops:
+  - Currency_Trials_2
+  - Exalted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - gold_helmet:4
+  - iron_chestplate:3
+  - chainmail_leggings:2
+  - leather_boots:1
+  - gold_sword:0
+  - gold_sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+Spectre2:
+  Type: SKELETON
+  Display: "&4« &eElder Spectre &4»"
+  Health: 300
+  Damage: 5
+  Drops:
+  - Currency_Trials_2
+  - Exalted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - gold_helmet:4
+  - chainmail_chestplate:3
+  - gold_leggings:2
+  - chainmail_boots:1
+  - Bow_Spectre2:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+Wraith3:
+  Type: ZOMBIE
+  Display: "&4« &cAncient Wraith &4»"
+  Health: 2500
+  Damage: 1000
+  Drops:
+  - Currency_Trials_3
+  - Exalted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - diamond_helmet:4
+  - iron_chestplate:3
+  - chainmail_leggings:2
+  - leather_boots:1
+  - diamond_sword:0
+  - diamond_sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.5
+    FollowRange: 25
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+Spectre3:
+  Type: SKELETON
+  Display: "&4« &cAncient Spectre &4»"
+  Health: 2500
+  Damage: 5
+  Drops:
+  - Currency_Trials_3
+  - Exalted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - diamond_helmet:4
+  - chainmail_chestplate:3
+  - diamond_leggings:2
+  - chainmail_boots:1
+  - Bow_Spectre3:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    FollowRange: 25
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn

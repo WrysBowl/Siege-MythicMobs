@@ -1,0 +1,148 @@
+### HULAAK'S SKILLS --------------------------------------------
+A11_Shot: ### Tri-bolt attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=30;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=330;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+A11_12345: ### Rapid Bolt Attack (L-R)
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=40;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+  - delay 2
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=20;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+  - delay 2
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+  - delay 2
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=340;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+  - delay 2
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=320;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+A11_54321: ### Rapid Bolt Attack (R-L)
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=320;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+  - delay 2
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=340;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+  - delay 2
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+  - delay 2
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=20;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+  - delay 2
+  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=40;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+A11S-Tick:
+  Skills:
+  - effect:particles{p=snowballpoof;amount=8} @origin
+  - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+A11S-Hit:
+  Skills:
+  - damage{a=1000;pk=true}
+### AREA SKILLS ------------------------------------------------
+A11_FrostNova: ### Freezes enemies in radius
+  Skills:
+  - effect:sound{s=entity.wither.ambient;v=2;p=0}
+  - effect:particlesphere{particle=cloud;amount=500;r=10} @self
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=400;r=8} @self
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=300;r=6} @self
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=200;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=100;r=2} @self
+  - delay 2
+  - skill{s=InflictFreeze} @PIR{r=10}
+A11_Summon_1: ### Summons a shadow.
+  Cooldown: 20
+  Skills:
+  - message{m="<mob.name> &fMy shadow will cleanse you of this mortal coil!"} @PlayersInRadius{r=25}
+  - summon{type=A11_Clone;amount=1;radius=15;yu=true} @Self
+A11_Summon_2: ### Summons a shadow.
+  Cooldown: 20
+  Skills:
+  - message{m="<mob.name> &fThe darkness within shall consume your being!"} @PlayersInRadius{r=25}
+  - summon{type=A11_Clone;amount=2;radius=15;yu=true} @Self
+A11_Summon_3: ### Summons a shadow.
+  Cooldown: 20
+  Skills:
+  - message{m="<mob.name> &fDeath comes to reap even to those eternal..."} @PlayersInRadius{r=25}
+  - summon{type=A11_Clone;amount=3;radius=15;yu=true} @Self
+A11_RemoveShadow: ### Removes a shadow
+  Skills:
+  - delay 200
+  - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1}
+  - effect:particlesphere{particle=smoke;amount=200;radius=2} @Self
+  - delay 10
+  - remove{delay=0} @Self
+### PHASE SKILLS -----------------------------------------------
+A11_Phase_1:
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A11_FrostNova} @Self
+  - delay 30
+  - skill{s=A11_Shot}
+  - delay 20
+  - skill{s=A11_Shot}
+  - delay 20
+  - skill{s=A11_Shot}
+  - delay 20
+  - skill{s=A5_Burst_Left}
+  - delay 10
+  - skill{s=A5_Burst_Mid}
+  - delay 10
+  - skill{s=A5_Burst_Right}
+  - delay 10
+  - skill{s=A5_Burst_Fast}
+A11_Phase_2:
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A11_FrostNova} @Self
+  - delay 30
+  - skill{s=A11_12345}
+  - delay 15
+  - skill{s=A11_54321}
+  - delay 15
+  - skill{s=A11_12345}
+  - delay 15
+  - skill{s=A11_54321}
+  - delay 15
+  - skill{s=A5_Burst_Fast}
+  - delay 10
+  - skill{s=A5_Burst_Fast}
+  - delay 10
+  - skill{s=A5_Burst_Fast}
+  - delay 10
+  - skill{s=A5_Burst_Fast}
+  - delay 10
+  - skill{s=A5_Burst_Fast}

@@ -1,0 +1,128 @@
+### Tutorial Mob Skills
+Tut_Knockback:
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=1;p=0} @self
+  - effect:particlesphere{particle=largesmoke;amount=10;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=20;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=40;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=60;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=80;r=5} @self
+  - damage{a=30} @PIR{r=5}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
+Tut_Toxin: ### Arcing Toxin Attack
+  Cooldown: 5
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - randomskill{skills=Tut_Toxin_1,Tut_Toxin_2,Tut_Toxin_3,Tut_Toxin_4,Tut_Toxin_5}
+  - delay 10
+  - randomskill{skills=Tut_Toxin_1,Tut_Toxin_2,Tut_Toxin_3,Tut_Toxin_4,Tut_Toxin_5}
+  - delay 10
+  - randomskill{skills=Tut_Toxin_1,Tut_Toxin_2,Tut_Toxin_3,Tut_Toxin_4,Tut_Toxin_5}
+  - delay 10
+  - randomskill{skills=Tut_Toxin_1,Tut_Toxin_2,Tut_Toxin_3,Tut_Toxin_4,Tut_Toxin_5}
+Tut_Toxin_1:
+  Skills:
+  - projectile{onTick=TutT-Tick;onHit=TutT-Hit;v=15;i=1;hR=1;vR=1;vO=0.5;g=1}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.spider.hurt;v=0.5;p=2}
+Tut_Toxin_2:
+  Skills:
+  - projectile{onTick=TutT-Tick;onHit=TutT-Hit;v=15;i=1;hR=1;vR=1;vO=0.4;g=1}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.spider.hurt;v=0.5;p=2}
+Tut_Toxin_3:
+  Skills:
+  - projectile{onTick=TutT-Tick;onHit=TutT-Hit;v=15;i=1;hR=1;vR=1;vO=0.3;g=1}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.spider.hurt;v=0.5;p=2}
+Tut_Toxin_4:
+  Skills:
+  - projectile{onTick=TutT-Tick;onHit=TutT-Hit;v=15;i=1;hR=1;vR=1;vO=0.2;g=1}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.spider.hurt;v=0.5;p=2}
+Tut_Toxin_5:
+  Skills:
+  - projectile{onTick=TutT-Tick;onHit=TutT-Hit;v=15;i=1;hR=1;vR=1;vO=0.1;g=1}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.spider.hurt;v=0.5;p=2}
+TutT-Tick:
+  Skills:
+  - effect:particles{p=happyVillager;amount=1} @origin
+TutT-Hit:
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
+  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
+  - delay 10
+  - damage{a=20;pi=true;pk=true}
+  - delay 10
+  - damage{a=20;pi=true;pk=true}
+  - delay 10
+  - damage{a=20;pi=true;pk=true}
+Tut_Blast: ### Basic Missile Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=TutB-Tick;onHit=TutB-Hit;v=6;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+TutB-Tick:
+  Skills:
+  - effect:particles{p=magicCrit;amount=8;speed=0;hS=0.2;vS=0.2} @origin
+TutB-Hit:
+  Skills:
+  - damage{a=20;pi=true;pk=true}
+Tut_Strike: ### Heavy Missile Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=TutS-Tick;onHit=TutS-Hit;v=10;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+TutS-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=8;speed=0;hS=0.2;vS=0.2} @origin
+TutS-Hit:
+  Skills:
+  - damage{a=10;ia=true;pi=true;pk=true}
+Tut_Phase_1: ### Boss Phase 1
+  Cooldown: 8
+  Skills:
+  - skill{s=Tut_Knockback}
+  - delay 60
+  - skill{s=Tut_Blast} @NearestPlayer{r=20}
+  - delay 20
+  - skill{s=Tut_Blast} @NearestPlayer{r=20}
+  - delay 20
+  - skill{s=Tut_Blast} @NearestPlayer{r=20}
+Tut_Phase_2: ### Boss Phase 2
+  Cooldown: 8
+  Skills:
+  - skill{s=Tut_Knockback}
+  - delay 60
+  - skill{s=Tut_Blast} @NearestPlayer{r=20}
+  - delay 10
+  - skill{s=Tut_Blast} @NearestPlayer{r=20}
+  - delay 10
+  - skill{s=Tut_Blast} @NearestPlayer{r=20}
+  - delay 10
+  - skill{s=Tut_Strike} @NearestPlayer{r=20}
+  - delay 10
+  - skill{s=Tut_Strike} @NearestPlayer{r=20}
+  - delay 10
+  - skill{s=Tut_Strike} @NearestPlayer{r=20}
+### ITEM-ONLY SKILLS -------------------------------------------
+Megumin: ## Explosion effect.
+  Skills:
+  - effect:particlesphere{particle=flame;amount=200;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=150;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=100;r=1} @self

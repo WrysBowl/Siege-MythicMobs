@@ -1,0 +1,143 @@
+###---------------------------------------------------------###
+### ARCHITECT ITEMS
+###---------------------------------------------------------###
+Arch_Sniper:
+  Id: 418
+  Display: "&6&oArchi&e&otect's Nigh&6&otmare&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed &8✵"
+  - "&0 "
+  - "&7Type: &fSniper"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c500.0❤"
+  - "&0 "
+  - "&6★ &7&o50% critical strike chance."
+  - "&e★ &7&o100.0x damage on critical hit."
+  - "&e★ &7&o100.0x damage on headshot."
+  - "&6★ &7&oShots &e&oIgnite&7&o, &b&oFreeze &7&oand &3&oShock"
+  - "&7&o  enemies for up to 5.0s."
+  - "&0 "
+  - "&7“&6Only now h&eave I lost sight of my"
+  - "&e goal--for an unseen for&6ce has"
+  - "&6 torn away my so&eul.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Arch_Flask:
+  Id: 437
+  Display: "&6&oArchitect's Vision&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &8✵"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&6★ &7&oGain &a&oHaste X &7&ofor 10.0s."
+  - "&6★ &7&oGain &a&oSpeed X &7&ofor 10.0s."
+  - "&6★ &7&oGain &a&oNight Vision &7&ofor 30.0s."
+  - "&6★ &7&oInstantly restore &c&o100.0❤&7&o."
+  - "&6★ &7&oInstantly removes all negative"
+  - "&7&o  effects on usage."
+  - "&0 "
+  - "&7“&6The plan behind all existence is"
+  - "&6 only mine to behold, for prying"
+  - "&6 eyes would simply ruin it.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Arch_Sword:
+  Id: 276
+  Display: "&6&oArchitect's Wisdom&7&7"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &8✵"
+  - "&0 "
+  - "&7Right-click to use ability"
+  - "&7Ability Damage: &c20.0❤"
+  - "&7Ability Radius: &f4 blocks"
+  - "&7Ability Cooldown: &f2.5 Seconds"
+  - "&0 "
+  - "&6★ &a&o+75% &7&oattack speed."
+  - "&6★ &7&oAbility inflicts knockback III on"
+  - "&7&o  all targets inside radius."
+  - "&6★ &7&oAbility inflicts &8&oFrozen&7&o, &8&oBlindness&7&o,"
+  - "&7&o  and &8&oConfusion &7&ofor up to 5.0s on"
+  - "&7&o  all targets inside radius."
+  - "&0 "
+  - "&7“&6The pain of time brings madness to"
+  - "&6 some. But for those that think, this"
+  - "&6 becomes an ethereal gift.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+Arch_Rifle:
+  Id: 213
+  Display: "&6&oArchitect's Intuition&7&7 «0»"
+  Lore:
+  - "&7Left-click to fire"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &8✵"
+  - "&0 "
+  - "&7Type: &fRifle"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c500.0❤"
+  - "&0 "
+  - "&6★ &7&oBurst fire (3 shots)."
+  - "&6★ &7&oCrouching reduces spread."
+  - "&6★ &7&o50% critical strike chance."
+  - "&6★ &7&o5.0x damage on critical hit."
+  - "&0 "
+  - "&7“&6Even the smallest details could"
+  - "&6 become a pattern--and thus, a"
+  - "&6 crucial piece of the future.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Arch_Magic:
+  Id: 403
+  Display: "&6&oArchitect's Knowledge&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &8✵"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fInsanely Fast"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c300.0❤"
+  - "&0 "
+  - "&6★ &7&oRapidly fires a beam at enemies."
+  - "&6★ &8&o-50% &7&omovement speed while held"
+  - "&7&o  in your main hand."
+  - "&0 "
+  - "&7“&6Ignorance is a weakness all must"
+  - "&6 overcome--for without its asinine"
+  - "&6 preclusions, the mind unlocks an"
+  - "&6 infinite well of opportunity.&7”"
+  Attributes:
+    MainHand:
+      MovementSpeed: -0.5
+  Hide:
+  - ATTRIBUTES

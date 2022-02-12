@@ -1,0 +1,108 @@
+AtlasBoss_3:
+  Type: HUSK
+  Display: "&2&l<&a« &eMavlak &a»&2&l>"
+  Health: 15000
+  Damage: 1200
+  BossBar:
+    Enabled: true
+    Title: "&2&l<&a« &eWebmother Mavlak &a»&2&l>"
+    Range: 25
+    Color: GREEN
+    Style: SOLID
+  Disguise:
+    Type: SPIDER
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Currency_Atlas_Boss
+  - AtlasBoss_3
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fAh, a visitor! You shall make a fine feast for my children!"} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7Surrender now and your death will be quick!",
+      "<mob.name> &7I can already taste the essence of your soul!",
+      "<mob.name> &7Die already! My hunger fuels impatience.";
+      } @PIR{r=25} ~onTimer:300
+  - effect:sound{s=entity.spider.hurt;p=2.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.spider.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.spider.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;v=0.5;p=1}
+  - skill{s=CancelSlowness} @Self ~onTimer:5
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+### SUMMONS
+  - skill{s=A3_Summon} @Self ~onTimer:10
+### PHASE 1
+  - skill{s=Poison_60} @target ~onAttack 0.15 >60%
+  - skill{s=A3_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >60%
+### PHASE 2
+  - skill{s=Poison_60} @target ~onAttack 0.25 <60%
+  - skill{s=A3_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <60%
+### DEATH STUFF
+  - message{m="<mob.name> &fMy poor spiderlings... will starve..."} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+A3_Brood:
+  Type: HUSK
+  Display: "&2« &fMavlak's Brood &2»"
+  Health: 100
+  Damage: 800
+  Disguise:
+    Type: CAVE_SPIDER
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.4
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - effect:sound{s=entity.spider.hurt;p=2.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.spider.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.spider.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - skill{s=CancelSlowness} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:10

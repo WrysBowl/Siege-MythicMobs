@@ -1,0 +1,43 @@
+LabBoss1:
+  Type: HUSK
+  Display: '&4&l<&4« &eAncient Defender &4»&4&l>'
+  Health: 200
+  Damage: 10
+  BossBar:
+    Enabled: true
+    Title: '&4&l<&4« &eAncient Defender &4»&4&l>'
+    Range: 50
+    Color: RED
+    Style: SOLID
+  Equipment:
+  - leather_helmet:4
+  - leather_chestplate:3
+  - leather_leggings:2
+  - leather_boots:1
+  - TitanBlade:0
+  - TitanBlade:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Food
+  - Money_Mid
+  - Common
+  - Uncommon
+  - Rare
+  - MicroIridescent
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    FollowRange: 120
+    MaxCombatDistance: 120
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - message{m="<mob.name> &fYou never should have come here, mortal!"} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=LB1Knockback} @NearestPlayer{r=30} ~onTimer:200
+  - skill{s=LB1Fire} @NearestPlayer{r=30} ~onTimer:100
+  - message{m="&f&l<&f« &6The Architect &f»&f&l> &eInteresting... you survived the first guardian... No matter, the others shall destroy you."} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

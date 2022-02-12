@@ -1,0 +1,201 @@
+TitanX:
+  Type: STRAY
+  Display: "&4&l<&c« &eIzenryl &c»&4&l>"
+  Health: 250000
+  Damage: 3000
+  BossBar:
+    Enabled: true
+    Title: "&4&l<&c« &eIzenryl the Abyss Lord &c»&4&l>"
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_20
+  Equipment:
+  - UHelm_4:4
+  - UChest_4:3
+  - ULegs_4:2
+  - UBoots_4:1
+  - BLAZE_ROD:0
+  - ENCHANTED_BOOK:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Titan_Fragments
+  - Currency_Rifts_Boss
+  - TitanX
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 100
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Despawn: false
+    Silent: true
+  Skills:
+### INITIALIZATION/UTILS
+  - message{m="<mob.name> &fThank you for helping me with my plans. But you have long since outlived your purpose. Now... begone!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelSlowness} @Self ~onTimer:5
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+  - skill{s=CancelDespawn} @Self ~onTimer:20
+  - skill{s=TX_Melee} @target ~onAttack
+  - randommessage
+      {
+      m=
+      "<mob.name> &7When all souls converge into one, this world will be mine.",
+      "<mob.name> &7Your powers are meaningless against the combined might of the Titans!",
+      "<mob.name> &7Even the Void cannot save you, for it serves only me!",
+      "<mob.name> &7Not even the holiest of light can escape my grand Abyss.",
+      "<mob.name> &7My conquest of the multiverse begins with your death!";
+      } @PIR{r=50} ~onTimer:300
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.4} @self ~onDamaged
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=1} @self ~onDamaged
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=1} @self ~onDamaged
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=block.glass.break;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+### PHASE 1
+  - skill{s=T2_Vaporize} @NearestPlayer{r=50} ~onTimer:250
+  - skill{s=TX_Teleport} @RTT ~onTimer:200
+  - skill{s=TX_AtziriSpam} @Self ~onTimer:350
+  - skill{s=TX_NovaKill} @Self ~onTimer:200 >50%
+  - skill{s=TX_DeathTotem} @Self ~onTimer:600 >50%
+### PHASE 2
+  - skill{s=TX_TripleNova} @Self ~onTimer:200 <50%
+  - skill{s=TX_DeathTotem2} @Self ~onTimer:600 <50%
+### DEATH
+  - message{m="<mob.name> &fThis cannot be... My plans were... perfect..."} @PlayersInRadius{r=50} ~onDeath
+  - remove @MIR{r=100;t=TX_Explosion} ~onDeath
+  - remove @MIR{r=100;t=TX_Explosion2} ~onDeath
+  - remove @MIR{r=100;t=TX_Explosion3} ~onDeath
+  - effect:sound{s=entity.enderdragon.death;v=1;p=2} @Self ~onDeath
+  - effect:sound{s=entity.enderdragon.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=entity.enderdragon.death;v=1;p=0} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=2;p=2} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+  # - command{c="mm m spawn LootGolem 1 Dungeon,-1477,73,-1770"} ~onDeath
+  - summon{type=LootGolem;a=1} @Location{c=-1477,73,-1770} ~onDeath
+### SPAWNED MOBS (Pointers, clones, etc.) ----------------------
+TX_Explosion: ### Pointer mob for explosions.
+  Type: BAT
+  Display: ''
+  Health: 1000
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - potion{type=INVISIBILITY;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelSlowness} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:10
+### SKILLS
+  - skill{s=TX_DeathTotem_Nova} @Self ~onSpawn
+  - skill{s=TX_DeathTotem_Nova} @Self ~onTimer:20
+  - skill{s=TX_Blast} @NearestPlayer{r=50} ~onTimer:10 0.35
+  - remove{delay=400} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.5
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+TX_Explosion2: ### Pointer mob for SUPER explosions.
+  Type: BAT
+  Display: ''
+  Health: 1000
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - potion{type=INVISIBILITY;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelSlowness} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:10
+### SKILLS
+  - skill{s=TX_DeathTotem_Nova2} @Self ~onSpawn
+  - skill{s=TX_DeathTotem_Nova2} @Self ~onTimer:20
+  - skill{s=TX_Burst_1} @NearestPlayer{r=50} ~onTimer:10 0.25
+  - remove{delay=400} @Self ~onSpawn
+  Options:
+    MovementSpeed: 2.0
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+TX_Explosion3: ### Pointer mob for ground slams
+  Type: COW
+  Display: ''
+  Health: 1000
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - potion{type=INVISIBILITY;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelSlowness} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:10
+### SKILLS
+  - skill{s=TX_DeathRadius} @Self ~onSpawn
+  - remove{delay=100} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true

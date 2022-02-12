@@ -1,0 +1,181 @@
+### VRAAST'S MINIONS ----------------------------------------------------------
+T3_Melee:
+  Type: SKELETON
+  Display: "&6« &eFrost Knight &6»"
+  Health: 800
+  Damage: 750
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Equipment:
+  - UHelm_1:4
+  - DChest:3
+  - ULegs_1:2
+  - UBoots_1:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.05} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=InflictFreeze} @target ~onAttack 0.5
+  ### EFFECTS
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+T3_Mage:
+  Type: SKELETON
+  Display: "&4« &eIce Mage &4»"
+  Health: 650
+  Damage: 500
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Equipment:
+  - DHelm:4
+  - UChest_1:3
+  - DLegs:2
+  - UBoots_1:1
+  - snow:0
+  - snow:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.05} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=T3_Shot} @NearestPlayer{r=50} ~onTimer:5 0.3
+  ### EFFECTS
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+T3_MiniBoss:
+  Type: BABY_ZOMBIE
+  Display: "&4« &cGlacial Spirit &4»"
+  Health: 8000
+  Damage: 3500
+  Drops:
+  - Currency_Rifts_2
+  - Corrupted
+  - Mythic
+  - Iridescent
+  Equipment:
+  - BlockHead_3:4
+  - UChest_1:3
+  - ULegs_1:2
+  - UBoots_1:1
+  - FrostAxe:0
+  - FrostAxe:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=T3_Blast} @NearestPlayer{r=50} ~onTimer:40
+  ### EFFECTS
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.zombie_villager.converted;p=2;v=2} @self ~onDeath
+### DROPLESS BOSS PHASE ONLY --------------------------------------------------
+T3_Melee_NoDrop:
+  Type: SKELETON
+  Display: "&8« &7Frost Knight &8»"
+  Health: 1000000
+  Damage: 500
+  Equipment:
+  - UHelm_1:4
+  - DChest:3
+  - ULegs_1:2
+  - UBoots_1:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.5
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=InflictFreeze} @target ~onAttack 0.5
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+  - remove{delay=300} @Self ~onSpawn
+T3_Mage_NoDrop:
+  Type: SKELETON
+  Display: "&8« &7Ice Mage &8»"
+  Health: 1000000
+  Damage: 50
+  Equipment:
+  - DHelm:4
+  - UChest_1:3
+  - DLegs:2
+  - UBoots_1:1
+  - snow:0
+  - snow:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.1
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=T3_Shot} @NearestPlayer{r=50} ~onTimer:5 0.3
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+  - remove{delay=300} @Self ~onSpawn
+T3_MiniBoss_NoDrop:
+  Type: BABY_ZOMBIE
+  Display: "&8« &7Glacial Spirit &8»"
+  Health: 1000000
+  Damage: 1200
+  Equipment:
+  - BlockHead_3:4
+  - UChest_1:3
+  - ULegs_1:2
+  - UBoots_1:1
+  - FrostAxe:0
+  - FrostAxe:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=T3_Blast} @NearestPlayer{r=50} ~onTimer:40
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.zombie_villager.converted;p=2;v=2} @self ~onDeath
+  - remove{delay=600} @Self ~onSpawn

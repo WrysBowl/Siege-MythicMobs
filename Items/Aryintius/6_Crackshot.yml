@@ -1,0 +1,122 @@
+### COMMON ITEMS (CS ONLY) -------------------------------------
+### RANGED ITEMS -----------------------------------------------
+Scattergun1:
+  Id: 417
+  Display: "&fScattergun&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7Type: &8Scattergun"
+  - "&7Ammo: &8Iron Ingot"
+  - "&7Speed: &8Very Slow"
+  - "&7Damage: &c8.0❤x5"
+  - "&0 "
+  - "&f★ &7Crouching focuses shots."
+  - "&f★ &7Crouching reduces recoil."
+  - "&0 "
+  - "&7“&fAn experimental weapon that"
+  - "&f launches iron shrapnel.&7”"
+Sniper:
+  Id: 417
+  Display: "&fRancher's Rifle&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7Type: &8Sniper"
+  - "&7Ammo: &8Gold Nugget"
+  - "&7Speed: &8Very Slow"
+  - "&7Damage: &c5.0❤"
+  - "&0 "
+  - "&f★ &75.0x damage on headshot."
+  - "&0 "
+  - "&7“&fA heavy rifle equipped with"
+  - "&f a scope for long-range.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Shotgun:
+  Id: 417
+  Display: "&fShotgun&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - " &0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7Type: &8Shotgun"
+  - "&7Ammo: &8Gold Nugget"
+  - "&7Speed: &8Average"
+  - "&7Damage: &c1.5❤x12"
+  - "&0 "
+  - "&7“&fThe earliest inventors had"
+  - "&f quickly realized two bullets"
+  - "&f were better than one.&7”"
+  Hide:
+  - ATTRIBUTES
+SMG:
+  Id: 417
+  Display: "&fSubmachine Gun&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7Type: &8SMG"
+  - "&7Ammo: &8Iron Nugget"
+  - "&7Speed: &8Very Fast"
+  - "&7Damage: &c2.0❤"
+  - "&0 "
+  - "&f★ &7Crouching reduces recoil."
+  - "&f★ &7Crouching reduces spread."
+  - "&0 "
+  - "&7“&fThis small firearm can hold"
+  - "&f and release a torrent of"
+  - "&f bullets in an instant.&7”"
+Repeater:
+  Id: 417
+  Display: "&fRepeating Rifle&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Type: &8Rifle"
+  - "&7Ammo: &8Iron Nugget"
+  - "&7Speed: &8Very Fast"
+  - "&7Damage: &c5.0❤"
+  - "&0 "
+  - "&f★ &7Burst fire (3 shots)."
+  - "&f★ &7Crouching reduces recoil."
+  - "&f★ &7Crouching reduces spread."
+  - "&0 "
+  - "&7“&fThis hefty repeater has seen"
+  - "&f better days and times.&7”"
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+### MAGIC ITEMS ------------------------------------------------
+Fire0:
+  Id: 280
+  Display: "&fFireborn Staff&7&7"
+  Lore:
+  - "&7Left-click to cast"
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7Type: &8Magic"
+  - "&7Speed: &8Average"
+  - "&7Charge: &8Very Slow"
+  - "&7Damage: &c10.0❤"
+  - "&0 "
+  - "&7“&fThis enchanted staff"
+  - "&f can fling fireballs at"
+  - "&f your enemies.&7”"
+  Enchantments:
+  - ARROW_FIRE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES

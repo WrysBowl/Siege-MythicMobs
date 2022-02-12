@@ -1,0 +1,81 @@
+# 
+# These example files show you some of the basic attributes and
+# skills MythicMobs can use. Far more is possible!
+# StaticallyChargedSheep:
+  # Type: SHEEP
+  # Display: '&bStatically Charged Sheep'
+  # Health: 100
+  # Damage: 2
+  # Options:
+    # MovementSpeed: 0.3
+  # DamageModifiers:
+  # - LIGHTNING 0
+  # - FIRE 0.5
+  # Skills:
+  # - lightning @LivingInRadius{r=10} ~onTimer:100
+# AngrySludge:
+  # Type: SLIME
+  # Display: Angry Sludge
+  # Health: 100
+  # Damage: 2
+  # Options:
+    # Size: 20
+    # MovementSpeed: 0.1
+    # PreventSlimeSplit: true
+    # PreventOtherDrops: true
+    # MaxCombatDistance: 30
+    # KnockbackResistance: 1
+  # Skills:
+  # - skill{s=AngrySludgePoison} 0.2
+# SkeletonKing:
+  # Type: WITHER_SKELETON
+  # Display: '&6Skeleton King'
+  # Health: 500
+  # Damage: 10
+  # Skills:
+  # - message{cooldown=20;m="<mob.name><&co> None may challenge the Skeleton King!"} @PlayersInRadius{r=40} ~onCombat >0 0.2
+  # - message{m="<mob.name><&co> Ahahahahah! Die, <trigger.name>!"} @PlayersInRadius{r=40} ~onPlayerKill >0 1
+  # - skill{s=SummonSkeletons} @Self 0.1
+  # - skill{s=SmashAttack} @Target >0 0.2
+  # Equipment:
+  # - KingsCrown:4
+  # - SkeletonKingSword:0
+  # Drops:
+  # - SkeletonKingDrops
+  # Options:
+    # AlwaysShowName: true
+    # MovementSpeed: 0.2
+    # MaxCombatDistance: 25
+    # PreventOtherDrops: true
+# SkeletalMinion:
+  # Type: SKELETON
+  # Display: '&2Skeletal Minion'
+  # Health: 10
+  # Damage: 2
+  # Options:
+    # MovementSpeed: 0.1
+MeteorPointer:
+  Type: bat
+  Display: ''
+  Health: 1000
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+  - skill{s=MeteorPointerSpawn} @Self ~onSpawn
+  - skill{s=MeteorPointerFinish} @Self ~onTimer:5 0.07
+  Options:
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    Silent: true

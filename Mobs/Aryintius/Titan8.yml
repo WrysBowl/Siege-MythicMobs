@@ -1,0 +1,69 @@
+Titan8:
+  Type: HUSK
+  Display: "&8&l<&8« &dOtin &8»&l>"
+  Health: 120000
+  Damage: 2000
+  BossBar:
+    Enabled: true
+    Title: "&8&l<&8« &dOtin the Deathweaver &8»&l>"
+    Range: 50
+    Color: PURPLE
+    Style: SEGMENTED_12
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - IHelm:4
+  - CChest:3
+  - CLegs:2
+  - IBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Titan_Fragments
+  - Currency_Rifts_Boss
+  - Titan8
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fMy masterpiece remains unfinished, but your soul shall make for an excellent centerpiece!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=0;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7You cannot escape from the tapestry of fate!",
+      "<mob.name> &7The end has come for you, mortal! I savor your final moments!",
+      "<mob.name> &7Any last words before I end your pitiful life?",
+      "<mob.name> &7There is nowhere to hide from fate! Accept your inevitable demise!",
+      "<mob.name> &7Will you beg for mercy when I tear your soul from your body?";
+      } @PIR{r=50} ~onTimer:300
+  - effect:sound{s=entity.irongolem.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.skeleton.hurt;p=0.5;v=0.5} @self ~onDamaged
+### PHASE 1
+  - skill{s=T8_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >55%
+### PHASE 2
+  - skill{s=T8_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <55%
+### DEATH STUFF
+  - message{m="<mob.name> &fI see it now... beauty... perfection... death..."} @PlayersInRadius{r=30} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+  - remove @MIR{r=100;t=T8_ProjTotem} ~onDeath

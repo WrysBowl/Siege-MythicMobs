@@ -1,0 +1,65 @@
+AtlasBoss_9:
+  Type: HUSK
+  Display: "&3&l<&b« &fAzure Guardian &b»&3&l>"
+  Health: 25000
+  Damage: 1000
+  BossBar:
+    Enabled: true
+    Title: "&3&l<&b« &fAzure Guardian &b»&3&l>"
+    Range: 50
+    Color: BLUE
+    Style: SEGMENTED_6
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - AtlasBoss_9
+  - Currency_Atlas_Boss2
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fThis temple will not be ruined by your presence!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7You shall not defile this holy place!",
+      "<mob.name> &7Your soul shall be reused by the eye of the temple.",
+      "<mob.name> &7We will not mourn your blasphemous life.";
+      } @PIR{r=50} ~onTimer:300
+  - effect:sound{s=entity.endermen.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.endermen.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;v=0.5;p=1} @self ~onDamaged
+### PHASE 1
+  - skill{s=A9_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >55%
+### PHASE 2
+  - skill{s=A9_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <55%
+### DEATH STUFF
+  - message{m="<mob.name> &fMy duty... has been undone..."} @PlayersInRadius{r=50} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

@@ -1,0 +1,61 @@
+Titan1:
+  Type: STRAY
+  Display: "&5&l<&5« &dN'azhrak &5»&5&l>"
+  Health: 25000
+  Damage: 2500
+  BossBar:
+    Enabled: true
+    Title: "&5&l<&5« &dN'azhrak, Father of Magic &5»&5&l>"
+    Range: 50
+    Color: PINK
+    Style: SEGMENTED_12
+  Equipment:
+  - Void_Helm:4
+  - Void_Chest:3
+  - Void_Legs:2
+  - Void_Boots:1
+  - Chorus_Plant:0
+  - Chorus_Plant:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Money_Trials
+  - Titan1
+  # - Titan1_Set
+  - Corrupted
+  - Mythic
+  - Iridescent
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Despawn: false
+  Skills:
+### SPAWN
+  - message{m="<mob.name> &cThe Void calls upon me, and I must listen. With this corporeal form, I will eradicate your pitiful existence, for you have become a threat to all of creation!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=CancelDespawn} @Self ~onTimer:20
+### PHASE 1 - FULL HEALTH
+  - skill{s=TitanSpeech} @PIR{r=50} ~onTimer:200 >50%
+  - skill{s=FireStorm} @NearestPlayer{r=50} ~onTimer:20 >50% 0.3
+  - skill{s=IceBolt} @NearestPlayer{r=50} ~onTimer:20 >50% 0.3
+  - skill{s=TeleportSlam} @NearestPlayer{r=50} ~onTimer:300 =70%-100%
+### PHASE 2 - 50% HEALTH
+  - skill{s=TitanSpeech2} @PIR{r=50} ~onTimer:200 =5%-50%
+  - skill{s=EarthStrike} @NearestPlayer{r=50} ~onTimer:20 =5%-70% 0.3
+  - skill{s=TidalWave} @NearestPlayer{r=50} ~onTimer:20 =5%-70% 0.3
+  - skill{s=Smite} @NearestPlayer{r=50} ~onTimer:20 =5%-70% 0.25
+  - skill{s=TeleportSlam} @NearestPlayer{r=50} ~onTimer:200 =5%-70%
+### PHASE 3 - 5% HEALTH
+  - skill{s=TeleportSlam} @NearestPlayer{r=50} ~onTimer:100 <5%
+  - skill{s=VoidStorm} @NearestPlayer{r=50} ~onTimer:10 <5%
+### DEATH
+  - message{m="<mob.name> &cI may be defeated, but know now that my brethren awaken. There will be nowhere to hide from the wrath of the Void..."} @PlayersInRadius{r=50} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=2} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=0} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=1.5;p=1} @Self ~onDeath
+  - effect:particlesphere{particle=smoke;amount=200;radius=2} @self ~onDeath

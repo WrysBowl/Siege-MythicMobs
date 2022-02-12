@@ -1,0 +1,270 @@
+### THE ARCHITECT'S SKILLS
+LBX_Blast: ### Bolt of Doom
+  Skills:
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
+  - projectile{ot=LBXB_Tick;oh=LBXB_Hit;v=20;i=1;hR=1;vR=1}
+LBXB_Tick:
+  Skills:
+  - effect:particles{p=smoke;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=flame;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+LBXB_Hit:
+  Skills: ### Hits for 30 hearts against full loadout (res4 + prot. xx)
+  - effect:sound{s=entity.generic.hurt;v=1;p=1}
+  - damage{a=1500;pk=true}
+### Heavy Attack
+LBXO_Tick:
+  Skills:
+  - effect:particles{p=blockcrack_173;amount=5;speed=0;hS=0.3;vS=0.3} @origin
+  - effect:particles{p=flame;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+LBXO_Hit:
+  Skills: ### Deals massive physical damage.
+  - effect:particles{p=largesmoke;a=3;hS=1;vS=1}
+  - effect:sound{s=entity.generic.hurt;v=1;p=1}
+  - damage{a=10000;pk=true}
+### AREA SKILLS
+LBX_Explosion: ### Explosion attack.
+  Skills:
+  - effect:particlesphere{particle=witchMagic;amount=80;r=5} @self
+  - effect:particlesphere{particle=smoke;amount=40;r=5} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=40;r=5} @self
+  - effect:sound{s=entity.ghast.shoot;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.irongolem.death;v=0.5;p=2} @PIR{r=25}
+  - damage{amount=3000} @PIR{r=5}
+LBX_Teleport: ### Teleport Slam.
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @NearestPlayer{r=50}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
+  - randommessage
+      {
+      m=
+      "<mob.name> &cYou are a sin against creation and must be destroyed!",
+      "<mob.name> &cFool! You mess with forces beyond your understanding.",
+      "<mob.name> &cI see now... your strength becomes your weakness!";
+      } @PIR{r=30}
+  - delay 5
+  - effect:particlesphere{particle=witchMagic;amount=200;r=5} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=200;r=5} @self
+  - delay 5
+  - effect:particlesphere{particle=witchMagic;amount=100;r=3} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=100;r=3} @self
+  - delay 5
+  - effect:particlesphere{particle=witchMagic;amount=35;r=1} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=35;r=1} @self
+  - delay 10
+  - effect:particlering{particle=largesmoke;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=witchmagic;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=largesmoke;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=witchmagic;radius=3;points=16;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=largesmoke;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=witchmagic;radius=1;points=4;amount=1;hS=1;vS=0} @self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
+  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+LBX_Drag_P: ### Particle effects for skill
+  Skills:
+  - effect:particlesphere{particle=explode;amount=100;r=3} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=100;r=3} @self
+LBX_Drag_D: ### Damage Values for skill
+  Skills:
+  - damage{a=500;pk=true} @PIR{r=3}
+  - delay 2
+  - damage{a=500;pk=true} @PIR{r=3}
+  - delay 2
+  - damage{a=500;pk=true} @PIR{r=3}
+  - delay 2
+  - damage{a=500;pk=true} @PIR{r=3}
+  - delay 2
+  - damage{a=500;pk=true} @PIR{r=3}
+### SUMMON SKILLS
+LBX_Summon: ### Summons annoying baby zombies
+  Skills:
+  - summon{mob=ShaperMinion;amount=3;noise=5} @Self
+LBX_Summon2: ### Summons Shaper Orbs that clog up arena
+  Skills:
+  - summon{mob=ShaperPointer;amount=1;noise=8} @Self
+LBX_SummonDeath: ### Summons explosions EVERYWHERE.
+  Skills:
+  - summon{mob=ShaperPointer2;amount=3;noise=20} @Self
+  - delay 5
+  - summon{mob=ShaperPointer2;amount=3;noise=16} @Self
+  - delay 5
+  - summon{mob=ShaperPointer2;amount=3;noise=14} @Self
+  - delay 5
+  - summon{mob=ShaperPointer2;amount=3;noise=12} @Self
+  - delay 5
+  - summon{mob=ShaperPointer2;amount=3;noise=10} @Self
+  - delay 5
+  - summon{mob=ShaperPointer2;amount=3;noise=8} @Self
+  - delay 5
+  - summon{mob=ShaperPointer2;amount=3;noise=6} @Self
+  - delay 5
+  - summon{mob=ShaperPointer2;amount=3;noise=4} @Self
+  - delay 5
+  - summon{mob=ShaperPointer2;amount=3;noise=2} @Self
+  - delay 5
+  - summon{mob=ShaperPointer2;amount=3;noise=0} @Self
+LBX_SummonClone_1: ### Summons clones of himself
+  Skills:
+  - message{m="<mob.name> &cSurrender to your unmaking!"} @PlayersInRadius{r=50}
+  - summon{mob=ShaperCloneX;amount=1;noise=8} @Self
+LBX_SummonClone_2:
+  Skills:
+  - message{m="<mob.name> &cImperfection must be destroyed!"} @PlayersInRadius{r=50}
+  - summon{mob=ShaperCloneY;amount=1;noise=8} @Self
+### COMPOSITE SKILLS
+LBX_Beam: ### Super laser beam of doom
+  Skills:
+  - skill{s=LBX_Blast}
+  - delay 2
+  - skill{s=LBX_Blast}
+  - delay 2
+  - skill{s=LBX_Blast}
+  - delay 2
+  - skill{s=LBX_Blast}
+  - delay 2
+  - skill{s=LBX_Blast}
+  - delay 2
+LBX_Vaporize: ### 5 Seconds of SUPER BEAM LASER
+  Skills:
+  - effect:particlesphere{particle=flame;amount=200;r=5} @self
+  - effect:particlesphere{particle=smoke;amount=200;r=5} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=120;r=4} @self
+  - effect:particlesphere{particle=largesmoke;amount=10;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=80;r=3} @self
+  - effect:particlesphere{particle=smoke;amount=80;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=50;r=2} @self
+  - effect:particlesphere{particle=largesmoke;amount=5;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=20;r=1} @self
+  - effect:particlesphere{particle=smoke;amount=20;r=1} @self
+  - delay 2
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+LBX_Missiles: ### Fires a barrage of multiple one-shot missiles.
+  Skills:
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - projectile{ot=LBXO_Tick;oh=LBXO_Hit;hO=330;v=10;i=1;hR=1;vR=1}
+  - delay 10
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - projectile{ot=LBXO_Tick;oh=LBXO_Hit;hO=345;v=10;i=1;hR=1;vR=1}
+  - delay 10
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - projectile{ot=LBXO_Tick;oh=LBXO_Hit;hO=0;v=10;i=1;hR=1;vR=1}
+  - delay 10
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - projectile{ot=LBXO_Tick;oh=LBXO_Hit;hO=15;v=10;i=1;hR=1;vR=1}
+  - delay 10
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - projectile{ot=LBXO_Tick;oh=LBXO_Hit;hO=30;v=10;i=1;hR=1;vR=1}
+### ENTIRE BOSS PHASES
+LBX_Phase_1:
+  Cooldown: 20
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=400}
+  - effect:sound{s=block.enchantment_table.use;v=2.0;p=2}
+  - effect:sound{s=block.enchantment_table.use;v=2.0;p=1}
+  - effect:sound{s=block.enchantment_table.use;v=2.0;p=0}
+  - effect:particlesphere{particle=flame;amount=400;r=5} @self
+  - effect:particlesphere{particle=largesmoke;amount=400;r=5} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=350;r=4} @self
+  - effect:particlesphere{particle=largesmoke;amount=350;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=300;r=3} @self
+  - effect:particlesphere{particle=largesmoke;amount=300;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=200;r=2} @self
+  - effect:particlesphere{particle=largesmoke;amount=200;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=100;r=1} @self
+  - effect:particlesphere{particle=largesmoke;amount=100;r=1} @self
+  - delay 2
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=LBX_Beam} @NearestPlayer{r=50}
+  - delay 30
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - projectile{ot=LBXO_Tick;oh=LBXO_Hit;hO=330;v=10;i=1;hR=1;vR=1}
+  - delay 10
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - projectile{ot=LBXO_Tick;oh=LBXO_Hit;hO=345;v=10;i=1;hR=1;vR=1}
+  - delay 10
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - projectile{ot=LBXO_Tick;oh=LBXO_Hit;hO=0;v=10;i=1;hR=1;vR=1}
+  - delay 10
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - projectile{ot=LBXO_Tick;oh=LBXO_Hit;hO=15;v=10;i=1;hR=1;vR=1}
+  - delay 10
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - projectile{ot=LBXO_Tick;oh=LBXO_Hit;hO=30;v=10;i=1;hR=1;vR=1}
+  - delay 40
+  - skill{s=LBX_Teleport} @NearestPlayer{r=50}
+  - delay 60
+  - skill{s=LBX_SummonDeath} @Self

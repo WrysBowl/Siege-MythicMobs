@@ -1,0 +1,159 @@
+### MAGMOS' SKILLS --------------------------------------------
+T2S-Tick: ### Arc Utils
+  Skills:
+  - effect:particles{p=flame;amount=10} @origin
+T2S-Hit:
+  Skills:
+  - damage{a=1500;pk=true}
+T2_RandomFire:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - randomskill{skills=T2_Shot_High,T2_Shot_Mid,T2_Shot_Low,T2_Shot_VeryLow,T2_Shot_CloseRange}
+T2_Shot_High: ### Arcing Upward Firebolt Attack
+  Skills:
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;vO=0.5;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+T2_Shot_Mid: ### Arcing Firebolt Attack
+  Skills:
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;vO=0.4;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+T2_Shot_Low: ### Arcing Low Firebolt Attack
+  Skills:
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;vO=0.3;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+T2_Shot_VeryLow: ### Arcing Very Low Range Firebolt Attack
+  Skills:
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;vO=0.2;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+T2_Shot_CloseRange: ### Arcing Close Range Firebolt Attack
+  Skills:
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;vO=0.1;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+T2_Blast: ### Heavy Bolt Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=T2B-Tick;onHit=T2B-Hit;v=10;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
+T2B-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=20;speed=0;hS=0.5;vS=0.5} @origin
+  - effect:particles{p=largesmoke;a=3;hS=0.5;vS=0.5} @Origin
+T2B-Hit:
+  Skills:
+  - damage{a=2500;pk=true}
+  - skill{s=Ignite_Title}
+### AREA SKILLS ------------------------------------------------
+T2_MeteorShower:
+  Skills:
+  - summon{m=T2_MeteorPointer;a=15;r=30;yu=true;yr=10}
+  - delay 20
+  - summon{m=T2_MeteorPointer;a=15;r=30;yu=true;yr=10}
+  - delay 20
+  - summon{m=T2_MeteorPointer;a=15;r=30;yu=true;yr=10}
+T2_Meteor:
+  Skills:
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=0} @Self
+  - projectile{onTick=T2_MeteorTick;onEnd=T2_MeteorEnd;v=0;g=3;i=1;hR=2;vR=2;syo=30;sfo=20;mr=1000;d=500;sE=false} @Self
+T2_MeteorTick:
+  Skills:
+  - effect:particles{p=flame;a=5;vS=0.5;hS=0.5} @Origin
+  - effect:particles{p=largesmoke;a=3;vS=0.75;hS=0.75} @Origin
+T2_MeteorEnd:
+  Skills:
+  - summon{m=T2_MeteorPointer2;a=1;r=0} @Origin
+T2_MeteorExplosion:
+  Skills:
+  - effect:sound{s=entity.generic.explode;v=1;p=0} @self
+  - effect:sound{s=entity.generic.explode;v=1;p=1} @self
+  - effect:particlesphere{particle=largeexplosion;amount=1;r=0} @self
+  - damage{amount=3500;pk=true} @PIR{r=3}
+T2_FireNova: ### Burns EVERYTHING
+  Skills:
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=0}
+  - effect:particlesphere{particle=flame;amount=500;r=10} @self
+  - damage{amount=500;pk=true} @PIR{r=10}
+  - delay 10
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=0}
+  - effect:particlesphere{particle=flame;amount=400;r=8} @self
+  - damage{amount=800;pk=true} @PIR{r=8}
+  - delay 10
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=0}
+  - effect:particlesphere{particle=flame;amount=300;r=6} @self
+  - damage{amount=1200;pk=true} @PIR{r=6}
+  - delay 10
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=0}
+  - effect:particlesphere{particle=flame;amount=200;r=4} @self
+  - damage{amount=1800;pk=true} @PIR{r=4}
+  - delay 10
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=0}
+  - effect:particlesphere{particle=flame;amount=100;r=2} @self
+  - damage{amount=2500;pk=true} @PIR{r=2}
+  - delay 10
+  - skill{s=Ignite_Title} @PIR{r=10}
+T2_LavaPlains: ### Deals massive damage in radius
+  Skills:
+  - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - damage{amount=2500;pk=true} @PIR{r=15}
+  - effect:sound{s=entity.generic.explode;v=2;p=0}
+  - delay 20
+  - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - damage{amount=2500;pk=true} @PIR{r=15}
+  - effect:sound{s=entity.generic.explode;v=2;p=0}
+  - delay 20
+  - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - damage{amount=2500;pk=true} @PIR{r=15}
+  - effect:sound{s=entity.generic.explode;v=2;p=0}
+### COMPOSITE SKILLS -------------------------------------------
+T2_Eruption: ### FIRE EVERYWHERE
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - skill{s=T2_RandomFire}
+  - delay 2
+  - skill{s=T2_RandomFire}
+  - delay 2
+  - skill{s=T2_RandomFire}
+  - delay 2
+  - skill{s=T2_RandomFire}
+  - delay 2
+  - skill{s=T2_RandomFire}
+  - delay 2
+T2_Vaporize: ### 5 Seconds of eruptions
+  Skills:
+  - skill{s=T2_Eruption} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=T2_Eruption} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=T2_Eruption} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=T2_Eruption} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=T2_Eruption} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=T2_Eruption} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=T2_Eruption} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=T2_Eruption} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=T2_Eruption} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=T2_Eruption} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=T2_Eruption} @NearestPlayer{r=50}

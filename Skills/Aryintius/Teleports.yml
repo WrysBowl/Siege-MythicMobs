@@ -1,0 +1,43 @@
+### TELEPORT COMMANDS
+TeleportSlam:
+  Skills:
+  - teleport{spreadh=1;spreadv=0} @NearestPlayer{r=50}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
+  - randommessage
+      {
+      m=
+      "<mob.name> &cEmbrace your legacy. Become one with the Void!",
+      "<mob.name> &cThe eye of the Void sees all, mortal.",
+      "<mob.name> &cYou cannot hide from the power of the Void!",
+      "<mob.name> &cThere is no escape... only death...";
+      } @target
+  - delay 15
+  - effect:particlesphere{particle=witchMagic;amount=80;r=10} @self
+  - effect:sound{s=entity.enderdragon.growl;v=1;p=0} @PIR{r=25}
+  - damage{amount=500;pk=true} @PIR{r=11}
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=100;r=9} @self
+  - damage{amount=500;pk=true} @PIR{r=10}
+  - delay 3
+  - effect:particlesphere{particle=witchMagic;amount=150;r=8} @self
+  - damage{amount=500;pk=true} @PIR{r=9}
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=200;r=7} @self
+  - damage{amount=1000;pk=true} @PIR{r=8}
+  - delay 3
+  - effect:particlesphere{particle=witchMagic;amount=250;r=6} @self
+  - damage{amount=1000;pk=true} @PIR{r=7}
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=300;r=5} @self
+  - damage{amount=1000;pk=true} @PIR{r=6}
+  - delay 3
+  - effect:particlesphere{particle=witchMagic;amount=350;r=4} @self
+  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=300;r=3} @self
+  - delay 3
+  - effect:particlesphere{particle=witchMagic;amount=250;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=100;r=1} @self

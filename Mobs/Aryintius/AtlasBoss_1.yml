@@ -1,0 +1,65 @@
+AtlasBoss_1:
+  Type: STRAY
+  Display: "&2&l<&a« &dHakgon &a»&2&l>"
+  Health: 15000
+  Damage: 1000
+  BossBar:
+    Enabled: true
+    Title: "&2&l<&a« &dHakgon the Dreamer &a»&2&l>"
+    Range: 50
+    Color: GREEN
+    Style: SOLID
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - UHelm_7:4
+  - IChest:3
+  - CLegs:2
+  - UBoots_7:1
+  - Boss_Bow2:0
+  - 0:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - AtlasBoss_1
+  - Currency_Atlas_Boss
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fHow dare you intrude on my slumber!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7I will conquer every dream, and none shall stop me!",
+      "<mob.name> &7Embrace death or face the infinite nightmare!",
+      "<mob.name> &7Your soul shall be consumed by pain and suffering!";
+      } @PIR{r=50} ~onTimer:300
+  - effect:sound{s=entity.endermen.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.endermen.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;v=0.5;p=1}
+### PHASE 1
+  - skill{s=A1_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >60%
+### PHASE 2
+  - skill{s=A1_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <60%
+### DEATH STUFF
+  - message{m="<mob.name> &fI return to my masters... in the shattered dream..."} @PlayersInRadius{r=50} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

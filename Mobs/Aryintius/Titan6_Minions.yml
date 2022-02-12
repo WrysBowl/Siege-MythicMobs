@@ -1,0 +1,113 @@
+### TITAN'S REALM MINIONS -----------------------------------------------------
+T6_Melee:
+  Type: HUSK
+  Display: "&0« &dAbyssal Wraith &0»"
+  Health: 1500
+  Damage: 2000
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.05} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=T6_Melee} @target ~onAttack
+  ### EFFECTS
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.4} @self ~onDamaged
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+T6_Ranger:
+  Type: SKELETON
+  Display: "&0« &dAbyssal Spectre &0»"
+  Health: 1200
+  Damage: 1000
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - CHelm:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - Boss_Bow2:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.05} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=T6_Shot} @NearestPlayer{r=50} ~onTimer:10 0.3
+  ### EFFECTS
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.4} @self ~onDamaged
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+T6_Caster:
+  Type: HUSK
+  Display: "&0« &5Sh&dadewalk&5er &0»"
+  Health: 10000
+  Damage: 2500
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Drops:
+  - Currency_Rifts_2
+  - Corrupted
+  - Mythic
+  - Iridescent
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_12:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - STICK:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.01} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=T6_Melee_2} @target ~onAttack 0.5
+  - skill{s=T6_MiniBurst} @NearestPlayer{r=50} ~onTimer:60
+  - skill{s=T6_Blast} @NearestPlayer{r=50} ~onTimer:100
+  ### EFFECTS
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.4} @self ~onDamaged
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.zombie_villager.converted;p=2;v=2} @self ~onDeath

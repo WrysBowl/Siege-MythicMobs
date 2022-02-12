@@ -1,0 +1,131 @@
+AstralSpade:
+  Id: 277
+  Display: "&5&oAstral Spade"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Effect: &aHaste IV&7."
+  - "&0 "
+  - "&7“&5This shovel radiates with"
+  - "&5 celestial energies, feeling"
+  - "&5 weightless in your hands.&7”"
+  Enchantments:
+  - DURABILITY:10
+  - MENDING:10
+  Hide:
+  - ATTRIBUTES
+StampedeBoots:
+  Id: 313
+  Display: "&5&oStampede Boots"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &a&o+60% &7&omovement speed."
+  - "&5★ &c&o+20.0❤ &7&owhile equipped."
+  - "&5★ &a&o+50% &7&oknockback resist."
+  - "&0 "
+  - "&7“&5Roar like a lion, stomp"
+  - "&5 like a bull!&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 40.0
+      KnockbackResistance: 0.3
+      MovementSpeed: 0.8
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+### CHARMS/ACCESSORIES -----------------------------------------
+Charm_Slow:
+  Id: 289
+  Display: "&5&oFallen Ashes"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &7&oInflicts &8&oSlowness I &7&oon enemy"
+  - "&7&o  monsters/bosses you attack"
+  - "&7&o  for up to 10.0s."
+  - "&0 "
+  - "&7“&5Darkness shrouds the fate of"
+  - "&5 those we touch, for none shall"
+  - "&5 escape our infinite fury.&7”"
+  Enchantments:
+  - DAMAGE_ALL:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Charm_Regen:
+  Id: 436
+  Display: "&5&oLifegain Soup"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, gain &a&oRegen. V"
+  - "&7&o  for up to 10.0s."
+  - "&0 "
+  - "&7“&5The drained blood of an eternal"
+  - "&5 gives this strange elixir innate"
+  - "&5 healing powers.&7”"
+  Enchantments:
+  - DAMAGE_ALL:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+### SHIELDS ----------------------------------------------------
+Shield_Reaper:
+  Id: 442
+  Display: "&5&oReaper Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Effect: &aResistance IV&7."
+  - "&0 "
+  - "&7“&5An ancient shield that defies"
+  - "&5 even death itself.&7”"
+  Options:
+    Color: BLACK
+    Unbreakable: true
+  BannerLayers:
+  - GRAY TRIANGLES_BOTTOM
+  - GRAY TRIANGLES_TOP
+  - RED CROSS
+  - SILVER SKULL
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+Shield_Scholar:
+  Id: 442
+  Display: "&5&oScholar's Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Effect: &aHaste III&7, &aSpeed III"
+  - "&0 "
+  - "&7“&5When you achieve maximum"
+  - "&5 thought, all things quicken.&7”"
+  Options:
+    Color: WHITE
+    Unbreakable: true
+  BannerLayers:
+  - SILVER TRIANGLES_TOP
+  - GRAY CIRCLE_MIDDLE
+  - GREEN SQUARE_BOTTOM_LEFT
+  - GREEN SQUARE_BOTTOM_RIGHT
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE

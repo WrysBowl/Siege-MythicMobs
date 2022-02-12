@@ -1,0 +1,37 @@
+### LAB BOSS 1 SKILLS
+LB1Slam:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - leap{velocity=400;noise=0} @target
+  - delay 10
+  - jump{velocity=-100}
+  - effect:explosion @self
+  - damage{a=14;ia=true;pi=true} @PIR{r=5}
+LB1Knockback:
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=1;p=0} @PIR{r=25}
+  - effect:particlesphere{particle=largesmoke;amount=10;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=20;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=40;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=60;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=80;r=5} @self
+  - damage{a=14;ia=true;pi=true} @PIR{r=5}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
+LB1Fire:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=LB1F-Tick;onHit=LB1F-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+LB1F-Tick:
+  Skills:
+  - effect:particles{p=largesmoke;amount=8;speed=0;hS=0.2;vS=0.2} @origin
+LB1F-Hit:
+  Skills:
+  - damage{a=14;pk=true}

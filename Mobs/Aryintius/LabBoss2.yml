@@ -1,0 +1,58 @@
+LabBoss2:
+  Type: WITHER_SKELETON
+  Display: '&2&l<&2« &eOasis Guardian &2»&2&l>'
+  Health: 200
+  Damage: 10
+  BossBar:
+    Enabled: true
+    Title: '&2&l<&2« &eOasis Guardian &2»&2&l>'
+    Range: 50
+    Color: GREEN
+    Style: SEGMENTED_6
+  Equipment:
+  - BlockHead_4:4
+  - Bunny_Chest:3
+  - Bunny_Legs:2
+  - Bunny_Boots:1
+  - Bow4:0
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Food
+  - Money_High
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - MicroIridescent
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    FollowRange: 120
+    MaxCombatDistance: 120
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Despawn: false
+  Skills:
+### SPAWN
+  - message{m="<mob.name> &fHow dare you intrude on my domain!"} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &fDo not struggle for it will only prolong your demise!",
+      "<mob.name> &fThe Architect's eye sees the past, present, and future!",
+      "<mob.name> &fI will not be trifled with, worthless insect!";
+      } @PIR{r=50} ~onTimer:300
+  - skill{s=CancelDespawn} @Self ~onTimer:20
+### PHASE 1
+  - skill{s=LB2Poison} @NearestPlayer{r=50} ~onTimer:150
+  - skill{s=LB2BurstFire} @NearestPlayer{r=50} ~onTimer:200 >50%
+### PHASE 2
+  - skill{s=LB2Spam} @NearestPlayer{r=50} ~onTimer:160 <50%
+  - skill{s=LB2Death} @NearestPlayer{r=50} ~onTimer:60 <50%
+### DEATH
+  - message{m="&f&l<&f« &6The Architect &f»&f&l> &eSo, another one lies defeated at the hands of a mortal. How strange..."} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

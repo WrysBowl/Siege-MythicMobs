@@ -1,0 +1,70 @@
+AtlasBoss_6:
+  Type: STRAY
+  Display: "&4&l<&c« &6Brahmk &c»&4&l>"
+  Health: 15000
+  Damage: 1000
+  BossBar:
+    Enabled: true
+    Title: "&4&l<&c« &6Brahmk the Unhinged &c»&4&l>"
+    Range: 50
+    Color: RED
+    Style: SOLID
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - UHelm_5:4
+  - CChest:3
+  - CLegs:2
+  - UBoots_5:1
+  - Judgement:0
+  - Judgement:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Currency_Atlas_Boss
+  - AtlasBoss_6
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fIt's time to die!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7You will bleed dry in this barren land!",
+      "<mob.name> &7Only bones will remain when I am finished!",
+      "<mob.name> &7Death seeks your presence!";
+      } @PIR{r=50} ~onTimer:300
+  - effect:sound{s=entity.irongolem.hurt;p=2.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.endermen.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=2.0;v=0.5} @self ~onDamaged
+### PHASE 1
+  - skill{s=A6_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >60%
+### PHASE 2
+  - potion{type=SPEED;duration=40000;level=3;overwrite=true} @Self =50%
+  - skill{s=A6_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <60%
+  - skill{s=CancelSlowness} @Self ~onTimer:10 <60%
+### DEATH STUFF
+  - message{m="<mob.name> &fWhat have I... become..."} @PlayersInRadius{r=50} ~onDeath
+  - remove @MIR{r=100;t=TX_Explosion} ~onDeath
+  - remove @MIR{r=100;t=TX_Explosion2} ~onDeath
+  - remove @MIR{r=100;t=TX_Explosion3} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

@@ -1,0 +1,121 @@
+AtlasBoss_11:
+  Type: HUSK
+  Display: "&f&l<&7« &bHulaak &7»&f&l>"
+  Health: 30000
+  Damage: 1000
+  BossBar:
+    Enabled: true
+    Title: "&f&l<&7« &bHulaak the Mighty &7»&f&l>"
+    Range: 25
+    Color: WHITE
+    Style: SEGMENTED_6
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - DHelm:4
+  - UChest_1:3
+  - DLegs:2
+  - UBoots_1:1
+  - Arch_Sword:0
+  - Shield_Frost:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - AtlasBoss_11
+  - Currency_Atlas_Boss2
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fI shall free my master, and soon the world shall tremble!"} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7Feel the wrath of the Frost Legion!",
+      "<mob.name> &7My glacial winds shall consume you!",
+      "<mob.name> &7Resistance is futile!";
+      } @PIR{r=25} ~onTimer:300
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=block.glass.break;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+### SUMMONS
+  - skill{s=A11_Summon_1} @Self ~onTimer:10 >70%
+  - skill{s=A11_Summon_2} @Self ~onTimer:10 =35%-70%
+  - skill{s=A11_Summon_3} @Self ~onTimer:10 <35%
+### PHASE 1
+  - skill{s=A11_Phase_1} @NearestPlayer{r=25} ~onTimer:10 >55%
+### PHASE 2
+  - skill{s=A11_Phase_2} @NearestPlayer{r=25} ~onTimer:10 <55%
+### DEATH STUFF
+  - message{m="<mob.name> &fThe legion will destroy you..."} @PlayersInRadius{r=25} ~onDeath
+  - remove{delay=0} @MIR{r=50;t=A11_Clone} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+A11_Clone: ### Shadow clones summoned by Hulaak
+  Type: HUSK
+  Display: "&8&l<&8« &7Hulaak's Shadow &8»&8&l>"
+  Health: 20000
+  Damage: 1200
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - UHelm_0:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - Arch_Sword:0
+  - Shield_Reaper:5
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - heal{a=20000} @Self ~onTimer:10
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=SPEED;duration=200;level=2;overwrite=true} @Self ~onTimer:10
+  - skill{s=A11_RemoveShadow} @Self ~onSpawn
+  - effect:sound{s=entity.blaze.hurt;p=1;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.endermen.hurt;p=0.5;v=0.5} @self ~onDamaged

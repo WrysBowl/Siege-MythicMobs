@@ -1,0 +1,496 @@
+### STANDARDIZED POISON DAMAGE ---------------------------------------
+### 1 poison = 25 normal
+### As of 2.2.7, Poison is now physical damage over time.
+### Tickrate is usually 2 per second, except for higher values.
+Poison_60:
+  Cooldown: 2
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
+  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
+  - delay 10
+  - damage{a=500;pi=true;pk=true}
+  - delay 10
+  - damage{a=500;pi=true;pk=true}
+  - delay 10
+  - damage{a=500;pi=true;pk=true}
+Poison_90:
+  Cooldown: 2
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
+  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
+  - delay 10
+  - damage{a=750;pi=true;pk=true}
+  - delay 10
+  - damage{a=750;pi=true;pk=true}
+  - delay 10
+  - damage{a=750;pi=true;pk=true}
+Poison_120:
+  Cooldown: 2
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
+  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
+  - delay 10
+  - damage{a=1000;pi=true;pk=true}
+  - delay 10
+  - damage{a=1000;pi=true;pk=true}
+  - delay 10
+  - damage{a=1000;pi=true;pk=true}
+Poison_150:
+  Cooldown: 2
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
+  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
+  - delay 5
+  - damage{a=750;pi=true;pk=true}
+  - delay 5
+  - damage{a=750;pi=true;pk=true}
+  - delay 5
+  - damage{a=750;pi=true;pk=true}
+  - delay 5
+  - damage{a=750;pi=true;pk=true}
+  - delay 5
+  - damage{a=750;pi=true;pk=true}
+Poison_150X:
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
+  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
+  - delay 5
+  - damage{a=750;pi=true;pk=true}
+  - delay 5
+  - damage{a=750;pi=true;pk=true}
+  - delay 5
+  - damage{a=750;pi=true;pk=true}
+  - delay 5
+  - damage{a=750;pi=true;pk=true}
+  - delay 5
+  - damage{a=750;pi=true;pk=true}
+Poison_300X:
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
+  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
+  - delay 5
+  - damage{a=1500;pi=true;pk=true}
+  - delay 5
+  - damage{a=1500;pi=true;pk=true}
+  - delay 5
+  - damage{a=1500;pi=true;pk=true}
+  - delay 5
+  - damage{a=1500;pi=true;pk=true}
+  - delay 5
+  - damage{a=1500;pi=true;pk=true}
+PoisonRNG_1: ### RNG Poison
+  Cooldown: 3
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
+  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
+  - delay 10
+  - randomskill{skills=PoisonRNG_X1,PoisonRNG_X2,PoisonRNG_X3}
+PoisonRNG_X1: ### Poison backend (25)
+  Skills:
+  - damage{a=25;pi=true;pk=true}
+  - delay 5
+  - damage{a=25;pi=true;pk=true}
+  - delay 5
+  - damage{a=25;pi=true;pk=true}
+  - delay 5
+  - damage{a=25;pi=true;pk=true}
+  - delay 5
+  - damage{a=25;pi=true;pk=true}
+  - delay 5
+  - damage{a=25;pi=true;pk=true}
+PoisonRNG_X2: ### Poison backend (50)
+  Skills:
+  - damage{a=35;pi=true;pk=true}
+  - delay 5
+  - damage{a=40;pi=true;pk=true}
+  - delay 5
+  - damage{a=35;pi=true;pk=true}
+  - delay 5
+  - damage{a=40;pi=true;pk=true}
+  - delay 5
+  - damage{a=35;pi=true;pk=true}
+  - delay 5
+  - damage{a=40;pi=true;pk=true}
+PoisonRNG_X3: ### Poison backend (75)
+  Skills:
+  - damage{a=50;pi=true;pk=true}
+  - delay 5
+  - damage{a=50;pi=true;pk=true}
+  - delay 5
+  - damage{a=50;pi=true;pk=true}
+  - delay 5
+  - damage{a=50;pi=true;pk=true}
+  - delay 5
+  - damage{a=50;pi=true;pk=true}
+  - delay 5
+  - damage{a=50;pi=true;pk=true}
+PoisonPants:
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
+  - damage{a=1250;pi=true;pk=true}
+### BLEEDING DAMAGE --------------------------------------------------
+### 1 bleed = 1 chaos
+### As of 2.3.7, Bleed is now locked at a tickrate of 4 times
+### per second to prevent lag. (delay no less than 5). Each stack
+### cannot exceed 20.0 damage or players hit by it will instantly die.
+Bleed_3:
+  Cooldown: 2
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - delay 10
+  - damage{a=2;ia=true;pi=true;pk=true}
+  - delay 10
+  - damage{a=2;ia=true;pi=true;pk=true}
+  - delay 10
+  - damage{a=2;ia=true;pi=true;pk=true}
+Bleed_9:
+  Cooldown: 2
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - delay 10
+  - damage{a=6;ia=true;pi=true;pk=true}
+  - delay 10
+  - damage{a=6;ia=true;pi=true;pk=true}
+  - delay 10
+  - damage{a=6;ia=true;pi=true;pk=true}
+Bleed_15:
+  Cooldown: 2
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - delay 10
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 10
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 10
+  - damage{a=10;ia=true;pi=true;pk=true}
+Bleed_15X:
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - delay 10
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 10
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 10
+  - damage{a=10;ia=true;pi=true;pk=true}
+Bleed_30:
+  Cooldown: 2
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+Bleed_30X:
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=10;ia=true;pi=true;pk=true}
+Bleed_60:
+  Cooldown: 2
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+Bleed_60X:
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+Bleed_100:
+  Cooldown: 3
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=15;ia=true;pi=true;pk=true}
+Bleed_500:
+  Cooldown: 2
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - damage{a=125;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=125;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=125;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=125;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=125;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=125;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=125;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=125;ia=true;pi=true;pk=true}
+Bleed_500X:
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - damage{a=50;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=100;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=150;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=200;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=250;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=300;ia=true;pi=true;pk=true}
+### SUMMONED DAMAGE OVER TIME ----------------------------------
+BleedSummon_1:
+  Cooldown: 2
+  Skills:
+  - summon{type=BleedExplosion;amount=1;radius=1;yu=true}
+### UNIQUE ITEM STATS ------------------------------------------
+Venom_1:
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
+  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
+  - delay 10
+  - damage{a=1800;pi=true;pk=true}
+  - delay 10
+  - damage{a=1800;pi=true;pk=true}
+  - delay 10
+  - damage{a=1800;pi=true;pk=true}
+  - delay 10
+  - damage{a=1800;pi=true;pk=true}
+  - delay 10
+  - damage{a=1800;pi=true;pk=true}
+  - delay 10
+  - damage{a=1800;pi=true;pk=true}
+Venom_2:
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - delay 5
+  - damage{a=100;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=150;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=200;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=250;ia=true;pi=true;pk=true}
+SwampBow_Skill:
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20} @target
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
+  - delay 5
+  - damage{a=150;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=250;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=350;ia=true;pi=true;pk=true}
+  - delay 5
+  - damage{a=450;ia=true;pi=true;pk=true}
+### BURNING DAMAGE ---------------------------------------------------
+Burn_0: ### 500
+  Cooldown: 1
+  Skills:
+  - sendtitle{title="&6&lBurning";subtitle="&fIgnite + Damage over time";d=20}
+  - skill{s=InflictIgnite}
+  - delay 10
+  - skill{s=Phys_100}
+  - delay 10
+  - skill{s=Phys_100}
+  - delay 10
+  - skill{s=Phys_100}
+  - delay 10
+  - skill{s=Phys_100}
+  - delay 10
+  - skill{s=Phys_100}
+Burn_1: ### 2500
+  Cooldown: 1
+  Skills:
+  - sendtitle{title="&6&lBurning";subtitle="&fIgnite + Damage over time";d=20}
+  - skill{s=InflictIgnite}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+Burn_2: ### 5000 (Slow)
+  Cooldown: 2
+  Skills:
+  - sendtitle{title="&6&lBurning";subtitle="&fIgnite + Damage over time";d=20}
+  - skill{s=InflictIgnite}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+  - delay 10
+  - skill{s=Phys_500}
+Burn_2X: ### 5000 (Fast)
+  Cooldown: 1
+  Skills:
+  - sendtitle{title="&6&lBurning";subtitle="&fIgnite + Damage over time";d=20}
+  - skill{s=InflictIgnite}
+  - delay 10
+  - skill{s=Phys_1000}
+  - delay 10
+  - skill{s=Phys_1000}
+  - delay 10
+  - skill{s=Phys_1000}
+  - delay 10
+  - skill{s=Phys_1000}
+  - delay 10
+  - skill{s=Phys_1000}

@@ -1,0 +1,550 @@
+###---------------------------------------------------------###
+### CELESTIAL ARMOUR SET
+###---------------------------------------------------------###
+Celestial_Helm:
+  Id: 302
+  Display: "&d&oCelestial Veil"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &8&o-10% &7&omovement speed."
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oRestore &c&o6.0❤ &7&owhenever you hit"
+  - "&7&o  an enemy."
+  - "&d★ &7&oSet Bonus: &a&oResist. IV &7&o+ &a&oRegen. IV&7&o."
+  - "&0 "
+  - "&7“&dI have watched the stars for"
+  - "&d eons long past, close to the"
+  - "&d gods for peace at last...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_EXPLOSIONS:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 20.0
+      MovementSpeed: -0.1
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - heal{a=12} @Self ~onAttack
+  - heal{a=12} @Self ~onBowHit
+Celestial_Chest:
+  Id: 303
+  Display: "&d&oCelestial Chainbody"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &8&o-10% &7&omovement speed."
+  - "&d★ &c&o+15.0❤ &7&owhile equipped."
+  - "&d★ &7&oRestore &c&o4.0❤ &7&owhenever you take"
+  - "&7&o  damage."
+  - "&d★ &7&oSet Bonus: &a&oResist. IV &7&o+ &a&oRegen. IV&7&o."
+  - "&0 "
+  - "&7“&dBut alone, I have stood on these"
+  - "&d mountains, so high. I've learnt"
+  - "&d too soon that a war is nigh...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 30.0
+      MovementSpeed: -0.1
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - heal{a=8} @Self ~onDamaged
+Celestial_Legs:
+  Id: 304
+  Display: "&d&oCelestial Leggings"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &8&o-10% &7&omovement speed."
+  - "&d★ &c&o+15.0❤ &7&owhile equipped."
+  - "&d★ &7&oYou have &a&oFire Resistance&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&d★ &7&oSet Bonus: &a&oResist. IV &7&o+ &a&oRegen. IV&7&o."
+  - "&0 "
+  - "&7“&dThe men of this time have been"
+  - "&d doomed to fall, punished for their"
+  - "&d sins by the elders' call...&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:10
+  - PROTECTION_PROJECTILE:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 30.0
+      MovementSpeed: -0.1
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=200;lvl=0;overwrite=true} @Self ~onTimer:100
+Celestial_Boots:
+  Id: 305
+  Display: "&d&oCelestial Calceus"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &8&o-10% &7&omovement speed."
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&o10% chance to gain &a&oSpeed V &7&ofor"
+  - "&7&o  5.0s whenever you take damage."
+  - "&d★ &7&oSet Bonus: &a&oResist. IV &7&o+ &a&oRegen. IV&7&o."
+  - "&0 "
+  - "&7“&dA savior they need, but fight, I"
+  - "&d cannot. That one is you, repent"
+  - "&d for the lot!&7”"
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 20.0
+      MovementSpeed: -0.1
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=4;overwrite=true} @Self ~onDamaged 0.1
+###---------------------------------------------------------###
+### SHADEWALKER ARMOUR SET
+###---------------------------------------------------------###
+Shadewalker_Helm:
+  Id: 298
+  Display: "&d&oShadewalker Cap"
+  Lore:
+  - "&7Protection X"
+  - "&7Projectile Protection X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+20% &7&omovement speed."
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oAdds &c&o20.0❤ &7&odamage to all"
+  - "&7&o  your attacks."
+  - "&d★ &7&oSet Bonus: &a&oRegeneration V&7&o."
+  - "&0 "
+  - "&7“&dFor ages within, we have stayed"
+  - "&d complacent, watching carefully"
+  - "&d as the shadows grew latent...&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_ENVIRONMENTAL:10
+  Options:
+    Color: 120,120,120
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 20.0
+      MovementSpeed: 0.2
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=40;pk=true} @target ~onAttack
+  - damage{a=40;pk=true} @target ~onBowHit
+Shadewalker_Chest:
+  Id: 299
+  Display: "&d&oShadewalker Tunic"
+  Lore:
+  - "&7Protection X"
+  - "&7Blast Protection X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+20% &7&omovement speed."
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oRestore &c&o10.0❤ &7&owhenever"
+  - "&7&o  you hit an enemy."
+  - "&d★ &7&oSet Bonus: &a&oRegeneration V&7&o."
+  - "&0 "
+  - "&7“&dBut the darkness spread through"
+  - "&d every direction, showing no signs"
+  - "&d of stopping the infection...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_EXPLOSIONS:10
+  Options:
+    Color: 90,90,90
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 20.0
+      MovementSpeed: 0.2
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - heal{a=20} @Self ~onAttack
+  - heal{a=20} @Self ~onBowHit
+Shadewalker_Legs:
+  Id: 300
+  Display: "&d&oShadewalker Leggings"
+  Lore:
+  - "&7Blast Protection X"
+  - "&7Projectile Protection X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+20% &7&omovement speed."
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oYou have &a&oFire Resistance&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&d★ &7&oSet Bonus: &a&oRegeneration V&7&o."
+  - "&0 "
+  - "&7“&dEven the Titans, our masters, fell"
+  - "&d sick, afflicted. Nothing was sacred"
+  - "&d as the corruption inflicted...&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_EXPLOSIONS:10
+  Options:
+    Color: 60,60,60
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 20.0
+      MovementSpeed: 0.2
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=200;lvl=0;overwrite=true} @Self ~onTimer:100
+Shadewalker_Boots:
+  Id: 301
+  Display: "&d&oShadewalker Boots"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+20% &7&omovement speed."
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oAdds &c&o5.0-15.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&d★ &7&oSet Bonus: &a&oRegeneration V&7&o."
+  - "&0 "
+  - "&7“&dNow there is none, only the void"
+  - "&d once more. All was consumed by"
+  - "&d the eternal core.&7”"
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Options:
+    Color: 30,30,30
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 20.0
+      MovementSpeed: 0.2
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Chaos_5-15} @target ~onAttack
+###---------------------------------------------------------###
+### ARCHMAGE ARMOUR SET
+###---------------------------------------------------------###
+Archmage_Helm:
+  Id: 298
+  Display: "&d&oArchmage Cowl"
+  Lore:
+  - "&7Protection X"
+  - "&7Projectile Protection X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+25% &7&omovement speed"
+  - "&d★ &7&oAdds &c&o15.0-45.0❤ &7&odamage to all"
+  - "&7&o  ranged/magic attacks."
+  - "&d★ &7&oSet Bonus: &e&o40.0❤&7&o (Recharges"
+  - "&7&o  fully every 10.0 seconds.)"
+  - "&0 "
+  - "&7“&dIn the olden times, mages of the"
+  - "&d Aquir Empire would train harshly"
+  - "&d to obtain the title of archmage...&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_ENVIRONMENTAL:10
+  Options:
+    Color: 150,255,240
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Phys_15-45} @target ~onBowHit
+Archmage_Chest:
+  Id: 299
+  Display: "&d&oArchmage Cloak"
+  Lore:
+  - "&7Protection X"
+  - "&7Blast Protection X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+25% &7&omovement speed."
+  - "&d★ &7&oYou have &a&oFire Resistance&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&d★ &7&oSet Bonus: &e&o40.0❤&7&o (Recharges"
+  - "&7&o  fully every 10.0 seconds.)"
+  - "&0 "
+  - "&7“&dOften, training exercises would"
+  - "&d involve the use of dangerous"
+  - "&d objects that would surely be"
+  - "&d lethal to today's mages...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_EXPLOSIONS:10
+  Options:
+    Color: 130,255,220
+    Unbreakable: true
+  Attributes:
+    Chest:
+      MovementSpeed: 0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=200;lvl=0;overwrite=true} @Self ~onTimer:100
+Archmage_Legs:
+  Id: 300
+  Display: "&d&oArchmage Shroud"
+  Lore:
+  - "&7Projectile Protection X"
+  - "&7Blast Protection X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+25% &7&omovement speed."
+  - "&d★ &7&o10% chance to fully restore"
+  - "&7&o  your gold hearts after taking"
+  - "&7&o  damage."
+  - "&d★ &7&oSet Bonus: &e&o40.0❤&7&o (Recharges"
+  - "&7&o  fully every 10.0 seconds.)"
+  - "&0 "
+  - "&7“&dTo this day, much of the ancient"
+  - "&d magical techniques remain in use,"
+  - "&d but a few that were legendary in"
+  - "&d that era have been lost...&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_EXPLOSIONS:10
+  Options:
+    Color: 110,255,200
+    Unbreakable: true
+  Attributes:
+    Legs:
+      MovementSpeed: 0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=RestoreEqualES} @Self ~onDamaged 0.1
+Archmage_Boots:
+  Id: 301
+  Display: "&d&oArchmage Sandals"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+25% &7&omovement speed."
+  - "&d★ &7&oYou have &a&oJump Boost II&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&d★ &7&oSet Bonus: &e&o40.0❤&7&o (Recharges"
+  - "&7&o  fully every 10.0 seconds.)"
+  - "&0 "
+  - "&7“&dEven the archmages, however,"
+  - "&d could not defy the power of time."
+  - "&d But their efforts will always be"
+  - "&d remembered and honored.&7”"
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Options:
+    Color: 100,255,180
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - potion{type=JUMP;duration=200;lvl=1;overwrite=true} @Self ~onTimer:100
+###---------------------------------------------------------###
+### CLOCKWORK ARMOUR SET
+###---------------------------------------------------------###
+Clockwork_Helm:
+  Id: 314
+  Display: "&d&oClockwork Mask"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oAdds &c&o25.0-75.0❤ &7&odamage to all"
+  - "&7&o  melee attacks."
+  - "&d★ &7&oSet Bonus: You have &a&oStrength L&7&o."
+  - "&0 "
+  - "&7“&dIt's rather interesting, the power"
+  - "&d of steam. It billows about like smoke"
+  - "&d and fire, yet wettens its subjects"
+  - "&d like a monsoon's rain...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - WATER_WORKER:1
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Phys_25-75} @target ~onAttack
+Clockwork_Chest:
+  Id: 299
+  Display: "&d&oClockwork Boiler"
+  Lore:
+  - "&7Protection X"
+  - "&7Projectile Protection X"
+  - "&7Blast Protection X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oYou have &a&oFire Resistance&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&d★ &7&oSet Bonus: You have &a&oStrength L&7&o."
+  - "&0 "
+  - "&7“&dWe constructed a suit to hold the"
+  - "&d gas, esteemed. But too many times"
+  - "&d have our pilots been ired, causing"
+  - "&d endless pain...&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:10
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  Options:
+    Color: 255,240,0
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=200;lvl=0;overwrite=true} @Self ~onTimer:100
+Clockwork_Legs:
+  Id: 300
+  Display: "&d&oClockwork Belt"
+  Lore:
+  - "&7Blast Protection X"
+  - "&7Projectile Protection X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &c&o+10.0❤ &7&owhile equipped."
+  - "&d★ &7&oYou have &a&oHaste IV&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&d★ &7&oSet Bonus: You have &a&oStrength L&7&o."
+  - "&0 "
+  - "&7“&dFailure is but a step to success."
+  - "&d We improved upon its flaws in haste"
+  - "&d and duress. Nothing stopped our"
+  - "&d quickening progress...&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_EXPLOSIONS:10
+  Options:
+    Color: 255,240,0
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - potion{type=FAST_DIGGING;duration=200;lvl=3;overwrite=true} @Self ~onTimer:100
+Clockwork_Boots:
+  Id: 317
+  Display: "&d&oClockwork Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+80% &7&omovement speed."
+  - "&d★ &7&o25% chance for melee attacks to"
+  - "&7&o  deal &c&o30.0❤ &4&oBleed &7&odamage over a"
+  - "&7&o  period of 1.5s."
+  - "&d★ &7&oSet Bonus: You have &a&oStrength L&7&o."
+  - "&0 "
+  - "&7“&dNow steam courses through this"
+  - "&d suit's veins, and 'lo! Have we made"
+  - "&d riches untold. Steam is our pride,"
+  - "&d and the world shall now behold!&7”"
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.8
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Bleed_30} @target ~onAttack 0.25

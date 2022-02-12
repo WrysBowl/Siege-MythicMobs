@@ -1,0 +1,519 @@
+### DRAGONSCALE ARMOR ------------------------------------------
+Dragon_Helm:
+  Id: 298
+  Display: "&6&oDragonscale Helm"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4&o✶"
+  - "&0 "
+  - "&6★ &a&o+20% &7&omovement speed."
+  - "&6★ &c&o+10.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to all"
+  - "&7&o  melee attacks."
+  - "&6★ &7&oSet Bonus: You have 200 &a&oStrength&7&o."
+  - "&0 "
+  - "&7“&6The firstborn of this world are the"
+  - "&6 Dragons, rising from the flames of"
+  - "&6 life's first spark...&7”"
+  Options:
+    Color: 128,0,0
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 20.0
+      MovementSpeed: 0.2
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Phys_150-300} @target ~onAttack
+Dragon_Chest:
+  Id: 299
+  Display: "&6&oDragonscale Plate Mail"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4&o✶"
+  - "&0 "
+  - "&6★ &a&o+20% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oYou have &a&oResist. IV&7&o + &a&oFire Resist&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&6★ &7&oSet Bonus: You have 200 &a&oStrength&7&o."
+  - "&0 "
+  - "&7“&6Driven by infinite curiosity, Dragons"
+  - "&6 quickly assembled vast lands full of"
+  - "&6 minds, souls, and magics...&7”"
+  Options:
+    Color: 128,0,0
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 30.0
+      MovementSpeed: 0.2
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=200;lvl=0;overwrite=true} @Self ~onTimer:100
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=3;overwrite=true} @Self ~onTimer:100
+Dragon_Legs:
+  Id: 300
+  Display: "&6&oDragonscale Greaves"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4&o✶"
+  - "&0 "
+  - "&6★ &a&o+20% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore &c&o10.0-15.0❤ &7&owhenever you"
+  - "&7&o  hit an enemy."
+  - "&6★ &7&oSet Bonus: You have 200 &a&oStrength&7&o."
+  - "&0 "
+  - "&7“&6To rule each land, a Titan was made,"
+  - "&6 blessed with unimaginable power. But"
+  - "&6 they grew to envy their creators...&7”"
+  Options:
+    Color: 128,0,0
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 30.0
+      MovementSpeed: 0.2
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Skills:
+  - skill{s=Heal_10-15} @Self ~onAttack
+  - skill{s=Heal_10-15} @Self ~onBowHit
+Dragon_Boots:
+  Id: 301
+  Display: "&6&oDragonscale Boots"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4&o✶"
+  - "&0 "
+  - "&6★ &a&o+20% &7&omovement speed."
+  - "&6★ &c&o+10.0❤ &7&owhile equipped."
+  - "&6★ &7&oMelee attacks inflict &c&o30.0❤ &4&oBleed"
+  - "&7&o  damage over a period of 1.5s."
+  - "&6★ &7&oSet Bonus: You have 200 &a&oStrength&7&o."
+  - "&0 "
+  - "&7“&6And thus they fought--staining the"
+  - "&6 world with war until the Titans were"
+  - "&6 sealed forever in the Ether.&7”"
+  Options:
+    Color: 128,0,0
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      Health: 20.0
+      MovementSpeed: 0.2
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=Bleed_30} @target ~onAttack
+### TITAN ARMOR SET --------------------------------------------
+Titan_Helm:
+  Id: 314
+  Display: "&6&oTitan Wreath"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2&o✶"
+  - "&0 "
+  - "&6★ &c&o+20.0❤ &7&owhile equipped."
+  - "&6★ &7&oYou have &a&oResistance IV&7&o."
+  - "&7&o  (Refreshes every second)."
+  - "&6★ &7&oSet Bonus: &a&oRegeneration X&7&o."
+  - "&0 "
+  - "&7“&6For eons, we have slept deep"
+  - "&6 within the empty heart of this"
+  - "&6 wretched world...&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=3;overwrite=true} @Self ~onTimer:20
+Titan_Chest:
+  Id: 315
+  Display: "&6&oTitan Fleece"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2&o✶"
+  - "&0 "
+  - "&6★ &c&o+20.0❤ &7&owhile equipped."
+  - "&6★ &7&oFully restore your health"
+  - "&7&o  once every 5.0s."
+  - "&6★ &7&oSet Bonus: &a&oRegeneration X&7&o."
+  - "&0 "
+  - "&7“&6But every dream twisted into"
+  - "&6 morbid perversions of reality"
+  - "&6 spewed from the depths...&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 40.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - heal{a=2000} @Self ~onTimer:100
+Titan_Legs:
+  Id: 316
+  Display: "&6&oTitan Leggings"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2&o✶"
+  - "&0 "
+  - "&6★ &c&o+20.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore &c&o10.0❤ &7&owhenever"
+  - "&7&o  you take damage."
+  - "&6★ &7&oSet Bonus: &a&oRegeneration X&7&o."
+  - "&0 "
+  - "&7“&6One by one, we had fallen to"
+  - "&6 the vicious afflictions of our"
+  - "&6 uncanny prison...&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Skills:
+  - heal{a=20} @Self ~onDamaged
+Titan_Boots:
+  Id: 317
+  Display: "&6&oTitan Calceus"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2&o✶"
+  - "&0 "
+  - "&6★ &c&o+20.0❤ &7&owhile equipped."
+  - "&6★ &7&oYou have &a&oFire Resistance&7&o."
+  - "&7&o  (Refreshes every second)."
+  - "&6★ &7&oSet Bonus: &a&oRegeneration X&7&o."
+  - "&0 "
+  - "&7“&6The madness of the Void is upon"
+  - "&6 the world now. And its endless"
+  - "&6 shadow wreaks havoc unto all.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 40.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=200;lvl=0;overwrite=true} @Self ~onTimer:20
+### REDEEMER'S ARMOR SET ---------------------------------------
+Redeemer_Helm:
+  Id: 298
+  Display: "&6&oRedeemer's Cowl"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &b&o✶"
+  - "&0 "
+  - "&6★ &a&o+30% &7&omovement speed."
+  - "&6★ &7&oAdds &c&o15.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all ranged/magic attacks."
+  - "&6★ &7&oSet Bonus: &e&o60.0❤&7&o (Recharges"
+  - "&7&o  fully every 10.0 seconds.)"
+  - "&0 "
+  - "&7“&6The void has awoken, and its"
+  - "&6 entrails draw near. But we show"
+  - "&6 no cowardice in its hazy gaze...&7”"
+  Options:
+    Color: 128,128,128
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments: 
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Chaos_15} @target ~OnBowHit
+Redeemer_Chest:
+  Id: 303
+  Display: "&6&oRedeemer's Chainbody"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &b&o✶"
+  - "&0 "
+  - "&6★ &a&o+30% &7&omovement speed."
+  - "&6★ &7&oYou have &a&oResistance IV&7&o."
+  - "&7&o  (Refreshes every 4.0s)."
+  - "&6★ &7&oSet Bonus: &e&o60.0❤&7&o (Recharges"
+  - "&7&o  fully every 10.0 seconds.)"
+  - "&0 "
+  - "&7“&6We oppose its darkness with our"
+  - "&6 own piercing light, stand united"
+  - "&6 against its maddening blight...&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      MovementSpeed: 0.3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=3;overwrite=true} @Self ~onTimer:80
+Redeemer_Legs:
+  Id: 300
+  Display: "&6&oRedeemer's Robe"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &b&o✶"
+  - "&0 "
+  - "&6★ &a&o+30% &7&omovement speed."
+  - "&6★ &7&oYou have &a&oJump Boost III&7&o."
+  - "&7&o  (Refreshes every 2.0s)."
+  - "&6★ &7&oSet Bonus: &e&o60.0❤&7&o (Recharges"
+  - "&7&o  fully every 10.0 seconds.)"
+  - "&0 "
+  - "&7“&6Though our ranks are populated"
+  - "&6 by mortals, we shall not fall to"
+  - "&6 the embrace of the madness...&7”"
+  Options:
+    Color: 128,128,128
+    Unbreakable: true
+  Attributes:
+    Legs:
+      MovementSpeed: 0.3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Skills:
+  - potion{type=JUMP;duration=200;lvl=2;overwrite=true} @Self ~onTimer:40
+Redeemer_Boots:
+  Id: 305
+  Display: "&6&oRedeemer's Sandals"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &b&o✶"
+  - "&0 "
+  - "&6★ &a&o+30% &7&omovement speed."
+  - "&6★ &7&oAdds &c&o50.0-100.0❤ &7&odamage to"
+  - "&7&o  all ranged/magic attacks."
+  - "&6★ &7&oSet Bonus: &e&o60.0❤&7&o (Recharges"
+  - "&7&o  fully every 10.0 seconds.)"
+  - "&0 "
+  - "&7“&6Together, our strength will not"
+  - "&6 falter. Now and forever, hail"
+  - "&6 the call of the redeemers!&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.3
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments: 
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=Phys_50-100} @target ~onBowHit
+### VOID ARMOR SET ---------------------------------------------
+Void_Helm:
+  Id: 298
+  Display: "&6&oSorrow of the Void"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5&o✶"
+  - "&0 "
+  - "&6★ &c&o+20.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o10.0-25.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all attacks."
+  - "&6★ &7&oSet Bonus: &a&oResist. IV &7&oand &e&o40.0❤"
+  - "&7&o  (Hearts Recharge fully every"
+  - "&7&o  10.0 seconds.)"
+  - "&0 "
+  - "&7“&6I am the nightmare that haunts the"
+  - "&6 Titans. It brings me infinite joy to"
+  - "&6 watch their suffering...&7”"
+  Options:
+    Color: 60,0,64
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Chaos_10-25} @target ~onAttack
+Void_Chest:
+  Id: 299
+  Display: "&6&oHatred of the Void"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5&o✶"
+  - "&0 "
+  - "&6★ &7&oYou have 40 &a&oStrength &7&ofor every"
+  - "&7&o  level of &a&oResist&7&o. (E.g. 80 Strength"
+  - "&7&o  from Resist. II)."
+  - "&6★ &7&oSet Bonus: &a&oResist. IV &7&oand &e&o40.0❤&7&o."
+  - "&7&o  (Hearts Recharge fully every"
+  - "&7&o  10.0 seconds.)"
+  - "&0 "
+  - "&7“&6Their sanity remains lost, their will,"
+  - "&6 forever broken. It was my whispers"
+  - "&6 that turned them against their weak,"
+  - "&6 pitiful masters...&7”"
+  Options:
+    Color: 40,0,45
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=StrengthFromResist} @Self ~onTimer:20
+Void_Legs:
+  Id: 300
+  Display: "&6&oCunning of the Void"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5&o✶"
+  - "&0 "
+  - "&6★ &7&oAdds &c&o15.0❤ &7&odamage to all attacks"
+  - "&7&o  for every 10 &a&oStrength&7&o. (E.g. 75.0"
+  - "&7&o  extra damage from Strength L)."
+  - "&6★ &7&oSet Bonus: &a&oResist. IV &7&oand &e&o40.0❤&7&o."
+  - "&7&o  (Hearts Recharge fully every"
+  - "&7&o  10.0 seconds.)"
+  - "&0 "
+  - "&7“&6The dragons fell quickly, for they"
+  - "&6 could never destroy what they had"
+  - "&6 so foolishly created--a boundless,"
+  - "&6 naive army ripe for my harvesting...&7”"
+  Options:
+    Color: 20,0,30
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Skills:
+  - skill{s=PhysFromStrength} @Self ~onAttack
+  - skill{s=PhysFromStrength} @Self ~onBowHit
+Void_Boots:
+  Id: 301
+  Display: "&6&oWrath of the Void"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5&o✶"
+  - "&0 "
+  - "&6★ &a&o+80% &7&omovement speed."
+  - "&6★ &7&oAdds &c&o2.0❤ &5&oChaos &7&odamage to all"
+  - "&7&o  attacks for every 10 &a&oStrength&7&o."
+  - "&7&o  (E.g. 10.0 extra Chaos damage"
+  - "&7&o  from Strength L.)"
+  - "&6★ &7&oSet Bonus: &a&oResist. IV &7&oand &e&o40.0❤&7&o."
+  - "&7&o  (Hearts Recharge fully every"
+  - "&7&o  10.0 seconds.)"
+  - "&0 "
+  - "&7“&6Even now, the Titans grow restless."
+  - "&6 Soon they shall feed upon the world"
+  - "&6 once more, devouring all life until I,"
+  - "&6 the void, become whole once again.&7”"
+  Options:
+    Color: 0,0,0
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.8
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=ChaosFromStrength} @Self ~onAttack
+  - skill{s=ChaosFromStrength} @Self ~onBowHit

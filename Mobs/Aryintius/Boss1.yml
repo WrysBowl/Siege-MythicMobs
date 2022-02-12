@@ -1,0 +1,61 @@
+Boss1:
+  Type: STRAY
+  Display: "&4&l<&c« &fShadewalker &c»&4&l>"
+  Health: 1200
+  Damage: 20
+  BossBar:
+    Enabled: true
+    Title: "&4&l<&c« &fShadewalker &c»&4&l>"
+    Range: 25
+    Color: RED
+    Style: SOLID
+  Equipment:
+  - UHelm_0:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - iron_sword:0
+  - iron_sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Food
+  - Money_Max
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - Exalted
+  - MicroIridescent
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### INITIALIZATION/UTILS
+  - message{m="<mob.name> &7It is time for the mortals to pay!"} @PlayersInRadius{r=30} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7I shall make you suffer!",
+      "<mob.name> &7You shall pay for your insolence!",
+      "<mob.name> &7Death comes for you!";
+      } @PIR{r=30} ~onTimer:300
+  - effect:sound{s=entity.wither.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=1} @self ~onDamaged
+  - effect:sound{s=entity.zombie.hurt;p=0.5;v=0.5} @self ~onDamaged
+### PHASE 1
+  - skill{s=Tut_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >50%
+### PHASE 2
+  - skill{s=Tut_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <50%
+### DEATH
+  - message{m="<mob.name> &7How... can... this... be?"} @PlayersInRadius{r=30} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath

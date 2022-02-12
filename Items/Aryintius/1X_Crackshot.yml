@@ -1,0 +1,183 @@
+### CORRUPTED ITEMS (CS ONLY) ----------------------------------
+SilenceDagger:
+  Id: 283
+  Display: "&4&oLithaa&c&on's Remorse&7&7"
+  Lore:
+  - "&7No Attack Damage"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &7&oWhenever you attack,"
+  - "&7&o  remove &a&oResistance &7&oon"
+  - "&7&o  both you and enemies."
+  - "&0 "
+  - "&7“&4Regret is my so&cng, and"
+  - "&c patience is my virt&4ue.&7”"
+  Enchantments:
+  - DAMAGE_ALL:-1000
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+### RANGED ITEMS -----------------------------------------------
+Bow5:
+  Id: 261
+  Display: "&4&oLi&c&ofetak&4&oer&7&7 «1»"
+  Lore:
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c1250.0❤x6"
+  - "&7Cooldown: &f4 Seconds"
+  - "&0 "
+  - "&4★ &7&oFully-drawn shots cast a"
+  - "&7&o  devastating ability!"
+  - "&4★ &7&oTake &c&o400.0❤ &7&odamage every"
+  - "&7&o  time you cast the ability."
+  - "&0 "
+  - "&7“&4Thi&cs strange bow feed&4s off"
+  - "&4 of its b&cearer's lif&4eforce to"
+  - "&4 oblit&cerate its victims' s&4ouls.&7”"
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_INFINITE:1
+  - DURABILITY:9999
+  - MENDING:10
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+Sniper6:
+  Id: 417
+  Display: "&4&oFleur de la Mort&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&7Type: &fSniper"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c50.0❤"
+  - "&0 "
+  - "&4★ &7&o10x damage on headshot."
+  - "&4★ &c&oShots slow you for 5.5s."
+  - "&0 "
+  - "&7“&4What a beautiful death!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+### MAGIC ITEMS ------------------------------------------------
+BloodBowl:
+  Id: 436
+  Display: "&4&oBowl of Blood&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fAverage"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c12.0❤x3"
+  - "&0 "
+  - "&4★ &7&oHeals equal to the amount"
+  - "&7&o  of damage dealt."
+  - "&0 "
+  - "&7“&4Contains the morbid remains"
+  - "&4 of a wasted soul, sacrificed"
+  - "&4 to the void by cultists...&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Curse1:
+  Id: 415
+  Display: "&4&oPossessed Doll&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c19.0❤x3"
+  - "&0 "
+  - "&4★ &7&oTracks nearby enemies."
+  - "&0 "
+  - "&7“&4I think it can speak...&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+BloodMagic:
+  Id: 175
+  Data: 4
+  Display: "&4&oCr&c&oeeping Dea&4&oth&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Slow"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c125.0❤x8"
+  - "&0 "
+  - "&4★ &7&oInflicts &c&o15.0❤ &4&oBleed &7&odamage"
+  - "&7&o  over a period 1.5s."
+  - "&4★ &7&oYou cannot have &a&oRegeneration&7&o."
+  - "&0 "
+  - "&7“&4So l&cet it be written. So let i&4t be"
+  - "&4 done-&c-I'm sent her&4e by the"
+  - "&4 ch&cosen one.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=CancelRegen} @Self ~onTimer:5
+  - skill{s=Bleed_15X} @target ~onBowHit
+### MAGIC (AURAS) ----------------------------------------------
+Aura_Void:
+  Id: 385
+  Display: "&4&oOrb o&c&of Chaos&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&7Type: &fMagic (Aura)"
+  - "&7Radius: &f1.5 Blocks"
+  - "&7Damage: &c20.0❤"
+  - "&0 "
+  - "&4★ &7&oHits up to 5 times per second."
+  - "&c★ &7&oRemoves &a&oResistance &7&oon both"
+  - "&7&o  you and enemies."
+  - "&c★ &7&oGains damage/status bonuses"
+  - "&7&o  from melee items/accessories."
+  - "&4★ &7&oRanged/magic bonuses have"
+  - "&7&o  no effect on this weapon."
+  - "&0 "
+  - "&7“&4Brimming wit&ch arcane energies,"
+  - "&c this ancien&4t sphere contains"
+  - "&4 powe&crs beyond all reckoning.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES

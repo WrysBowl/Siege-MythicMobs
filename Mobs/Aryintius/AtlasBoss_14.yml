@@ -1,0 +1,69 @@
+AtlasBoss_14:
+  Type: STRAY
+  Display: "&0&l<&8« &dThe Warden &8»&0&l>"
+  Health: 60000
+  Damage: 1000
+  BossBar:
+    Enabled: true
+    Title: "&0&l<&8« &dThe Warden &8»&0&l>"
+    Range: 30
+    Color: PURPLE
+    Style: SEGMENTED_10
+  Equipment:
+  - CHelm:4
+  - IChest:3
+  - CLegs:2
+  - IBoots:1
+  - BLAZE_ROD:0
+  - ENCHANTED_BOOK:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Shard_North
+  - AtlasBoss_14
+  - Currency_Atlas_Boss3
+  - Atlas_Fragments
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fSo, have you come to beg for your freedom? Then you'll have to face me!"} @PlayersInRadius{r=30} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7None can escape the clutches of this ancient asylum!",
+      "<mob.name> &7Freedom is a lie, created by the forces that govern this world.",
+      "<mob.name> &7There is no life beyond these walls, for only death can save you.",
+      "<mob.name> &7This prison is infinite, and with us you shall live eternal!",
+      "<mob.name> &7You're trapped in here forever, just like the rest of us!";
+      } @PIR{r=30} ~onTimer:300
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+  - effect:sound{s=entity.irongolem.hurt;p=1;v=0.8} @self ~onDamaged
+  - effect:sound{s=block.anvil.land;p=2;v=0.5} @self ~onDamaged 0.5
+### PHASE 1
+  - skill{s=A14_RandomSkill} @NearestPlayer{r=30} ~onTimer:10 >70%
+### PHASE 2
+  - skill{s=A14_RandomSkill2} @NearestPlayer{r=30} ~onTimer:10 =35%-70%
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:100 =35%-70%
+  - potion{type=SPEED;duration=200;level=1;overwrite=true} @Self ~onTimer:10 =35%-70%
+### PHASE 3
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
+  - potion{type=SPEED;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
+  - skill{s=A14_RandomSkill3} @NearestPlayer{r=30} ~onTimer:10 <35%
+### DEATH STUFF
+  - message{m="<mob.name> &fWe are... free..."} @PlayersInRadius{r=30} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

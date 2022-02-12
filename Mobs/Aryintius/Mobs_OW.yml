@@ -1,0 +1,249 @@
+###---------------------------------------###
+### OPEN WORLD ENEMIES
+###---------------------------------------###
+OpenZ1:
+  Type: HUSK
+  Display: "&e« &4Ignis Mortus &e»"
+  Health: 50
+  Damage: 10
+  Drops:
+  - CFrags_1
+  - Common
+  - Uncommon
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - iron_helmet:4
+  - chainmail_chestplate:3
+  - iron_leggings:2
+  - chainmail_boots:1
+  - stone_axe:0
+  - stone_axe:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=OW_Fire1} @NearestPlayer{r=20} ~onTimer:50 0.5
+OpenS1:
+  Type: SKELETON
+  Display: "&e« &4Umbra Malum &e»"
+  Health: 80
+  Damage: 5
+  Drops:
+  - CFrags_1
+  - Common
+  - Uncommon
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - iron_helmet:4
+  - chainmail_chestplate:3
+  - chainmail_leggings:2
+  - iron_boots:1
+  - HH_Bow_Low:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=LB2Fire} @NearestPlayer{r=20} ~onTimer:40 0.5
+OpenSP1:
+  Type: SPIDER
+  Display: "&e« &4Araneid &e»"
+  Health: 500
+  Damage: 16
+  Drops:
+  - CFrags_1X
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=SpeedBuff} @Self =50% 0.5
+  - skill{s=5sInvincible} @Self =50% 0.5
+### TIER 2 MOBS
+OpenZ2:
+  Type: HUSK
+  Display: "&6« &4Ignis Inferni &6»"
+  Health: 250
+  Damage: 40
+  Drops:
+  - CFrags_2
+  - Rare
+  - Superior
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - UHelm_2:4
+  - CChest:3
+  - ULegs_2:2
+  - CBoots:1
+  - HH_Melee_Mid:0
+  - HH_Melee_Mid:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=OW_FireBurst} @NearestPlayer{r=30} ~onTimer:40 0.5
+OpenS2:
+  Type: SKELETON
+  Display: "&6« &4Umbra Mortis &6»"
+  Health: 250
+  Damage: 5
+  Drops:
+  - CFrags_2
+  - Rare
+  - Superior
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - UHelm_2:4
+  - CChest:3
+  - CLegs:2
+  - UBoots_2:1
+  - HH_Bow_Mid:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=LB2Death} @NearestPlayer{r=20} ~onTimer:40 0.5
+OpenZ2M:
+  Type: HUSK
+  Display: "&6« &4Hell Reaver &6»"
+  Health: 250
+  Damage: 500
+  Drops:
+  - CFrags_2X
+  - Rare
+  - Superior
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - GHelm:4
+  - GChest:3
+  - GLegs:2
+  - GBoots:1
+  - T0_3:0
+  - T0_3:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.5
+    PreventOtherDrops: true
+    PreventItemPickup: true
+### TIER 3 (MINI-BOSSES)
+OpenSP2:
+  Type: SPIDER
+  Display: "&4« &cAranea Tenebris &4»"
+  Health: 15000
+  Damage: 2000
+  Drops:
+  - Superior
+  - Exalted
+  - Corrupted
+  - Mythic
+  - CFrags_2X
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=OW_Poison} @NearestPlayer{r=10} ~onTimer:50 0.5
+  - skill{s=SpeedBuff} @Self =30%
+  - skill{s=5sInvincible} @Self =30%
+OpenZ3:
+  Type: HUSK
+  Display: "&4« &cIgnis Dominus &c»"
+  Health: 1250
+  Damage: 800
+  Drops:
+  - Superior
+  - Exalted
+  - CFrags_2X
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - UHelm_0:4
+  - UChest_4:3
+  - ULegs_4:2
+  - UBoots_0:1
+  - HH_Melee_Mid:0
+  - HH_Melee_Mid:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=OW_Fire2} @NearestPlayer{r=30} ~onTimer:30 0.5
+  - skill{s=OW_KB1} @PIR{r=8} ~onTimer:100
+OpenS3:
+  Type: WITHER_SKELETON
+  Display: "&4« &cUmbra Imperius &c»"
+  Health: 2500
+  Damage: 800
+  Drops:
+  - Superior
+  - Exalted
+  - CFrags_2X
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - UHelm_4:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_4:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=OW_FireSpam} @NearestPlayer{r=30} ~onTimer:100
+  - skill{s=OW_KB1} @PIR{r=8} ~onTimer:100
+OpenZ3M:
+  Type: HUSK
+  Display: "&4« &cReflective Wraith &4»"
+  Health: 450
+  Damage: 500
+  Drops:
+  - Superior
+  - Exalted
+  - CFrags_2X
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - ReflectHelm:4
+  - ReflectChest:3
+  - ReflectLegs:2
+  - ReflectBoots:1
+  - T0_3:0
+  - T0_3:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.5
+    PreventOtherDrops: true
+    PreventItemPickup: true

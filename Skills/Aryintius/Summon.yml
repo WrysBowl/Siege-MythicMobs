@@ -1,0 +1,15 @@
+### SUMMON SPELLS
+SummonRager:
+  Skills:
+  - message{m="<mob.name> &fIt's time to die!"} @PlayersInRadius{r=25}
+  - delay 10
+  - summon{mob=MagmaRager;amount=8;noise=5} @Self
+SummonMages:
+  Skills:
+  - message{m="<mob.name> &fThere is no survival this time!"} @PlayersInRadius{r=25}
+  - delay 5
+  - summon{mob=LabA3;amount=1;noise=5} @Self
+  - delay 5
+  - summon{mob=LabA3;amount=1;noise=5} @Self
+  - delay 5
+  - summon{mob=LabA3;amount=1;noise=5} @Self

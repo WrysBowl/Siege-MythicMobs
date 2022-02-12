@@ -1,0 +1,56 @@
+### MOVEMENT SKILL ITEMS ---------------------------------------
+LeapStaff:
+  Id: BLAZE_ROD
+  Display: "&b&oWhirlwind Staff"
+  Lore:
+  - "&7Left-click to dash"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oDash cooldown: 3.0s."
+  - "&b★ &7&oDash length: 10 blocks"
+  - "&0 "
+  - "&7“&bWork in progress.&7”"
+  Enchantments:
+  - DAMAGE_ALL:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.1
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=LeapSlam_11} @crosshairlocation{length=10} ~onSwing
+### TELEPORT ITEMS ---------------------------------------------
+TeleportSword:
+  Id: 283
+  Display: "&b&oRealmsplitter"
+  Lore:
+  - "&7Smite M"
+  - "&7Knockback II"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oRight-click to teleport in the"
+  - "&7&o  direction of your cursor."
+  - "&b★ &7&oAbility Radius: &f&o25 Blocks"
+  - "&b★ &7&oAbility Cooldown: &f&o5.0 Seconds"
+  - "&0 "
+  - "&7“&bTime or space? Life or death?"
+  - "&b Neither truly matters when you"
+  - "&b exist beyond their reach.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:1000
+  - KNOCKBACK:2
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=WarpSkill} @crosshairlocation{length=25} ~onUse

@@ -1,0 +1,149 @@
+### VRAAST'S SKILLS --------------------------------------------
+T3_Shot: ### Rapid Bolt Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=T3S-Tick;onHit=T3S-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+T3S-Tick:
+  Skills:
+  - effect:particles{p=snowballpoof;amount=10} @origin
+  - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+T3S-Hit:
+  Skills:
+  - damage{a=1250;pk=true}
+T3_Blast: ### Heavy Bolt Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=T3B-Tick;onHit=T3B-Hit;v=10;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.wither.ambient;v=0.5;p=0}
+T3B-Tick:
+  Skills:
+  - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=largeexplode;a=1} @Origin
+T3B-Hit:
+  Skills:
+  - damage{a=2500;pk=true}
+  - skill{s=InflictFreeze}
+## FROST TELEPORT
+T3_Teleport:
+  Skills:
+  - teleport{spreadh=1;spreadv=0} @target
+  - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
+  - randommessage
+      {
+      m=
+      "<mob.name> &cDid you really think you could get away so easily?",
+      "<mob.name> &cEscape is impossible, for I am eternal...",
+      "<mob.name> &cI shall consign your remains to the Void!",
+      "<mob.name> &cYou cannot hide from the frost legion!";
+      } @target
+  - potion{type=CONFUSION;duration=200;lvl=1;overwrite=true} @PIR{r=15}
+### AREA SKILLS ------------------------------------------------
+T3_Summon_1: ### Summons low-level enemies
+  Skills:
+  - message{m="<mob.name> &fArise, my minions! Take care of this... malcontent..."} @PlayersInRadius{r=50}
+  - delay 10
+  - summon{mob=T3_Melee_NoDrop;amount=1;noise=5} @Self
+  - delay 10
+  - summon{mob=T3_Mage_NoDrop;amount=1;noise=5} @Self
+T3_Summon_2: ### Summons High-level enemies
+  Skills:
+  - message{m="<mob.name> &fEnough trifling! Succumb to the wrath of the Frost Legion!"} @PlayersInRadius{r=50}
+  - delay 10
+  - summon{mob=T3_Melee_NoDrop;amount=2;noise=5} @Self
+  - delay 10
+  - summon{mob=T3_Mage_NoDrop;amount=2;noise=5} @Self
+  - delay 10
+  - summon{mob=T3_MiniBoss_NoDrop;amount=1;noise=5} @Self
+T3_FrostNova: ### Freezes enemies in radius
+  Skills:
+  - effect:sound{s=entity.wither.ambient;v=2;p=0}
+  - effect:particlesphere{particle=cloud;amount=500;r=10} @self
+  - damage{amount=50;pk=true} @PIR{r=10}
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=400;r=8} @self
+  - damage{amount=80;pk=true} @PIR{r=8}
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=300;r=6} @self
+  - damage{amount=120;pk=true} @PIR{r=6}
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=200;r=4} @self
+  - damage{amount=180;pk=true} @PIR{r=4}
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=100;r=2} @self
+  - damage{amount=250;pk=true} @PIR{r=2}
+  - delay 2
+  - skill{s=InflictFreeze} @PIR{r=10}
+T3_IcePlains: ### Deals massive damage in radius
+  Skills:
+  - effect:particles{p=snowballpoof;amount=2000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - damage{amount=250;pk=true} @PIR{r=15}
+  - effect:sound{s=block.glass.break;v=2;p=0}
+  - effect:sound{s=block.glass.break;v=2;p=1}
+  - effect:sound{s=block.glass.break;v=2;p=2}
+  - delay 10
+  - effect:particles{p=snowballpoof;amount=2000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - damage{amount=250;pk=true} @PIR{r=15}
+  - effect:sound{s=block.glass.break;v=2;p=0}
+  - effect:sound{s=block.glass.break;v=2;p=1}
+  - effect:sound{s=block.glass.break;v=2;p=2}
+  - delay 10
+  - effect:particles{p=snowballpoof;amount=2000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - damage{amount=250;pk=true} @PIR{r=15}
+  - effect:sound{s=block.glass.break;v=2;p=0}
+  - effect:sound{s=block.glass.break;v=2;p=1}
+  - effect:sound{s=block.glass.break;v=2;p=2}
+  - delay 10
+  - effect:particles{p=snowballpoof;amount=2000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - damage{amount=250;pk=true} @PIR{r=15}
+  - effect:sound{s=block.glass.break;v=2;p=0}
+  - effect:sound{s=block.glass.break;v=2;p=1}
+  - effect:sound{s=block.glass.break;v=2;p=2}
+  - delay 10
+  - effect:particles{p=snowballpoof;amount=2000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - damage{amount=250;pk=true} @PIR{r=15}
+  - effect:sound{s=block.glass.break;v=2;p=0}
+  - effect:sound{s=block.glass.break;v=2;p=1}
+  - effect:sound{s=block.glass.break;v=2;p=2}
+### COMPOSITE SKILLS -------------------------------------------
+T3_Burst_1:
+  Skills:
+  - skill{s=T3_Shot}
+  - delay 5
+  - skill{s=T3_Shot}
+  - delay 5
+  - skill{s=T3_Shot}
+  - delay 10
+  - skill{s=T3_Blast}
+  - delay 10
+  - skill{s=T3_Blast}
+  - delay 10
+  - skill{s=T3_Blast}
+T3_Burst_2:
+  Skills:
+  - skill{s=T3_Shot}
+  - delay 2
+  - skill{s=T3_Shot}
+  - delay 2
+  - skill{s=T3_Shot}
+  - delay 2
+  - skill{s=T3_Shot}
+  - delay 2
+  - skill{s=T3_Shot}
+  - delay 10
+  - skill{s=T3_Blast}
+  - delay 5
+  - skill{s=T3_Blast}
+  - delay 5
+  - skill{s=T3_Blast}
+  - delay 5
+  - skill{s=T3_Blast}
+  - delay 5
+  - skill{s=T3_Blast}

@@ -1,0 +1,74 @@
+Titan6:
+  Type: STRAY
+  Display: "&6&l<&6« &eRealm Guardian &6»&6&l>"
+  Health: 150000
+  Damage: 2000
+  BossBar:
+    Enabled: true
+    Title: "&6&l<&6« &eRealm Guardian &6»&6&l>"
+    Range: 30
+    Color: YELLOW
+    Style: SEGMENTED_12
+  Equipment:
+  - GHelm:4
+  - GChest:3
+  - GLegs:2
+  - GBoots:1
+  - Judgement:0
+  - Judgement:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Titan_Fragments
+  - Currency_Rifts_Boss
+  - Titan6
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### INITIALIZATION/UTILS
+  - message{m="<mob.name> &fGo back, return to your mortal lands! This realm is not yours to claim!"} @PlayersInRadius{r=30} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelSlowness} @Self ~onTimer:5
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+  - randommessage
+      {
+      m=
+      "<mob.name> &7I alone defend this holy bastion!",
+      "<mob.name> &7You trespass on holy ground!",
+      "<mob.name> &7I will not let you defile this place!",
+      "<mob.name> &7You are hereby banished from this realm!",
+      "<mob.name> &7Your sins will not go unpunished!";
+      } @PIR{r=30} ~onTimer:300
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.4} @self ~onDamaged
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=1} @self ~onDamaged
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=1} @self ~onDamaged
+  - skill{s=T6_Melee_2} @target ~onAttack 0.5
+  - skill{s=T6_Teleport} @NearestPlayer{r=50} ~onTimer:200
+### PHASE 1
+  - skill{s=T6_Burst_1} @NearestPlayer{r=50} ~onTimer:100 >50%
+  - skill{s=T6_HolyNova} @Self ~onTimer:220 >50%
+  - skill{s=T6_WolfForm} @Self ~onTimer:450 >50%
+### PHASE 2
+  - skill{s=T6_Burst_2} @NearestPlayer{r=50} ~onTimer:100 <50%
+  - skill{s=T6_HolyNova} @Self ~onTimer:150 <50%
+  - skill{s=T6_WolfForm} @Self ~onTimer:300 <50%
+  - healpercent{m=0.01} @Self ~onTimer:20 <50%
+### DEATH
+  - message{m="<mob.name> &fSo it is you... welcome home... my Titan..."} @PlayersInRadius{r=30} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=2} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=0} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=1.5;p=1} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

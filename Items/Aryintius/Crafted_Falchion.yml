@@ -1,0 +1,545 @@
+NG_Sword_0:
+  Id: 267
+  Display: "&fFalchion"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &fCommon (Crafted)"
+  - "&0 "
+  - "&f★ &a+75% &7attack speed."
+  - "&0 "
+  - "&7“&fA sharp, curved sword"
+  - "&f forged from metals that"
+  - "&f no longer exist.&7”"
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+### 1 PREFIX ---------------------------------------------------
+NG_Sword_P1:
+  Id: 267
+  Display: "&2Seething Falchion"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  - "&2★ &7Inflicts &c30.0❤ &4Bleed &7damage"
+  - "&7  over a period of 1.5s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Bleed_15} @target ~onAttack
+NG_Sword_P2:
+  Id: 267
+  Display: "&2Caustic Falchion"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  - "&2★ &7Inflicts &c60.0❤ &2Toxin &7damage"
+  - "&7  over a period of 1.5s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Poison_60} @target ~onAttack
+NG_Sword_P3:
+  Id: 267
+  Display: "&2Flaming Falchion"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  - "&2★ &7Inflicts &c500.0❤ &6Burning &7damage"
+  - "&7  over a period of 2.5s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Poison_60} @target ~onAttack
+NG_Sword_P4:
+  Id: 267
+  Display: "&2Heavy Falchion"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  - "&2★ &c+10.0❤ &7if held in main hand."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+NG_Sword_P5:
+  Id: 267
+  Display: "&2Divine Falchion"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+NG_Sword_P6:
+  Id: 267
+  Display: "&2Unholy Falchion"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  - "&2★ &7Adds &c10.0❤ &5Chaos &7damage to"
+  - "&7  all melee attacks."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Chaos_10} @target ~onAttack
+### 1 SUFFIX ---------------------------------------------------
+NG_Sword_S1:
+  Id: 267
+  Display: "&2Falchion of Freezing"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  - "&2★ &7Inflicts &bFreeze &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack
+NG_Sword_S2:
+  Id: 267
+  Display: "&2Falchion of Shocking"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  - "&2★ &7Inflicts &3Shock &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictShock} @target ~onAttack
+NG_Sword_S3:
+  Id: 267
+  Display: "&2Falchion of Ignition"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  - "&2★ &7Inflicts &6Ignite &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Ignite_Title} @target ~onAttack
+NG_Sword_S4:
+  Id: 267
+  Display: "&2Falchion of Swiftness"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  - "&2★ &a+30% &7movement speed."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+      MovementSpeed: 0.3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+NG_Sword_S5:
+  Id: 267
+  Display: "&2Falchion of Restoration"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  - "&2★ &7Restores &c2.0❤ &7every second."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - heal{amount=2} @Self ~onTimer:10
+### 1 PREFIX + 1 SUFFIX ----------------------------------------
+NG_Sword_P1S1:
+  Id: 267
+  Display: "&3Seething Falchion of Freezing"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &a+75% &7attack speed."
+  - "&3★ &7Inflicts &c30.0❤ &4Bleed &7damage"
+  - "&7  over a period of 1.5s."
+  - "&3★ &7Inflicts &bFreeze &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Bleed_15} @target ~onAttack
+  - skill{s=InflictFreeze} @target ~onAttack
+NG_Sword_P1S2:
+  Id: 267
+  Display: "&3Seething Falchion of Shocking"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &a+75% &7attack speed."
+  - "&3★ &7Inflicts &c30.0❤ &4Bleed &7damage"
+  - "&7  over a period of 1.5s."
+  - "&3★ &7Inflicts &3Shock &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Bleed_15} @target ~onAttack
+  - skill{s=InflictShock} @target ~onAttack
+NG_Sword_P1S3:
+  Id: 267
+  Display: "&3Seething Falchion of Ignition"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &a+75% &7attack speed."
+  - "&3★ &7Inflicts &c30.0❤ &4Bleed &7damage"
+  - "&7  over a period of 1.5s."
+  - "&3★ &7Inflicts &6Ignite &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Bleed_15} @target ~onAttack
+  - skill{s=Ignite_Title} @target ~onAttack
+NG_Sword_P2S1:
+  Id: 267
+  Display: "&3Caustic Falchion of Freezing"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &a+75% &7attack speed."
+  - "&3★ &7Inflicts &c60.0❤ &2Toxin &7damage"
+  - "&7  over a period of 1.5s."
+  - "&3★ &7Inflicts &bFreeze &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Poison_60} @target ~onAttack
+  - skill{s=InflictFreeze} @target ~onAttack
+NG_Sword_P2S2:
+  Id: 267
+  Display: "&3Caustic Falchion of Shocking"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &a+75% &7attack speed."
+  - "&3★ &7Inflicts &c60.0❤ &2Toxin &7damage"
+  - "&7  over a period of 1.5s."
+  - "&3★ &7Inflicts &3Shock &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Poison_60} @target ~onAttack
+  - skill{s=InflictShock} @target ~onAttack
+NG_Sword_P2S3:
+  Id: 267
+  Display: "&3Caustic Falchion of Ignition"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &a+75% &7attack speed."
+  - "&3★ &7Inflicts &c60.0❤ &2Toxin &7damage"
+  - "&7  over a period of 1.5s."
+  - "&3★ &7Inflicts &6Ignite &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Poison_60} @target ~onAttack
+  - skill{s=Ignite_Title} @target ~onAttack
+NG_Sword_P3S1:
+  Id: 267
+  Display: "&3Flaming Falchion of Freezing"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &a+75% &7attack speed."
+  - "&3★ &7Inflicts &c500.0❤ &6Burning &7damage"
+  - "&7  over a period of 1.5s."
+  - "&3★ &7Inflicts &bFreeze &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Burn_0} @target ~onAttack
+  - skill{s=InflictFreeze} @target ~onAttack
+NG_Sword_P3S2:
+  Id: 267
+  Display: "&3Flaming Falchion of Shocking"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &a+75% &7attack speed."
+  - "&3★ &7Inflicts &c500.0❤ &6Burning &7damage"
+  - "&7  over a period of 1.5s."
+  - "&3★ &7Inflicts &3Shock &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Burn_0} @target ~onAttack
+  - skill{s=InflictShock} @target ~onAttack
+NG_Sword_P3S3:
+  Id: 267
+  Display: "&3Flaming Falchion of Ignition"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &a+75% &7attack speed."
+  - "&3★ &7Inflicts &c500.0❤ &6Burning &7damage"
+  - "&7  over a period of 1.5s."
+  - "&3★ &7Inflicts &6Ignite &7on enemies"
+  - "&7  for up to 5.0s."
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Burn_0} @target ~onAttack
+  - skill{s=Ignite_Title} @target ~onAttack

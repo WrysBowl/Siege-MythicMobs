@@ -1,0 +1,209 @@
+### MAUGRI'S SKILLS --------------------------------------------
+A15_DeathCircle: ### Fires 8 projectiles in all directions
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A15C-Tick;onHit=A15C-Hit;hO=0;vO=0;v=10;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A15C-Tick;onHit=A15C-Hit;hO=45;vO=0;v=10;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A15C-Tick;onHit=A15C-Hit;hO=90;vO=0;v=10;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A15C-Tick;onHit=A15C-Hit;hO=135;vO=0;v=10;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A15C-Tick;onHit=A15C-Hit;hO=180;vO=0;v=10;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A15C-Tick;onHit=A15C-Hit;hO=225;vO=0;v=10;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A15C-Tick;onHit=A15C-Hit;hO=270;vO=0;v=10;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A15C-Tick;onHit=A15C-Hit;hO=315;vO=0;v=10;i=1;hR=1.0;vR=1.0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+A15C-Tick:
+  Skills:
+  - effect:particles{p=reddust;amount=1;speed=0;hS=0.1;vS=0.1} @origin
+A15C-Hit:
+  Skills:
+  - damage{amount=1000;pi=true;pk=true}
+  - skill{s=InflictCurse} 0.25
+A15_TripleShot:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=0;v=10;i=1;hR=2.0;vR=2.0}
+  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=30;v=10;i=1;hR=2.0;vR=2.0}
+  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=330;v=10;i=1;hR=2.0;vR=2.0}
+  - effect:sound{s=entity.wither.shoot;v=1;p=0.5}
+  - effect:sound{s=entity.wither.shoot;v=1;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+A15S-Tick:
+  Skills:
+  - effect:particles{p=smoke;amount=4;speed=0;hS=0.5;vS=0.5} @origin
+  - effect:particles{p=reddust;amount=8;speed=0;hS=0.2;vS=0.2} @origin
+A15S-Hit:
+  Skills:
+  - damage{amount=1500;pi=true;pk=true}
+  - skill{s=Bleed_30}
+A15_TPSlam: ### Yet another teleport slam
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @NearestPlayer{r=50}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
+  - delay 5
+  - effect:particlesphere{particle=reddust;amount=200;r=5} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=200;r=5} @self
+  - delay 5
+  - effect:particlesphere{particle=reddust;amount=100;r=3} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=100;r=3} @self
+  - delay 5
+  - effect:particlesphere{particle=reddust;amount=35;r=1} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=35;r=1} @self
+  - delay 10
+  - effect:particlering{particle=largesmoke;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=largesmoke;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=3;points=16;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=largesmoke;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=1;points=4;amount=1;hS=1;vS=0} @self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
+  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+A15_DeathNova:
+  Skills:
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
+  - effect:particlesphere{particle=smoke;amount=50;r=2} @self
+  - effect:particlesphere{particle=reddust;amount=50;r=2} @self
+  - effect:particlering{particle=reddust;radius=1;points=4;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=smoke;radius=1;points=4;amount=1;hS=1;vS=0} @self
+  - damage{amount=2500;pi=true;pk=true} @PIR{r=2}
+  - delay 5
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
+  - effect:particlesphere{particle=smoke;amount=100;r=4} @self
+  - effect:particlesphere{particle=reddust;amount=100;r=4} @self
+  - effect:particlering{particle=smoke;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - damage{amount=1800;pi=true;pk=true} @PIR{r=4}
+  - delay 5
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
+  - effect:particlesphere{particle=smoke;amount=200;r=6} @self
+  - effect:particlesphere{particle=reddust;amount=200;r=6} @self
+  - effect:particlering{particle=smoke;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - damage{amount=1200;pi=true;pk=true} @PIR{r=6}
+  - delay 5
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
+  - effect:particlesphere{particle=smoke;amount=300;r=8} @self
+  - effect:particlesphere{particle=reddust;amount=300;r=8} @self
+  - effect:particlering{particle=smoke;radius=8;points=81;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=8;points=81;amount=1;hS=1;vS=0} @self
+  - skill{s=Bleed_30X} @PIR{r=8}
+  - delay 5
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
+  - effect:particlesphere{particle=smoke;amount=400;r=10} @self
+  - effect:particlesphere{particle=reddust;amount=400;r=10} @self
+  - effect:particlering{particle=smoke;radius=10;points=121;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=10;points=121;amount=1;hS=1;vS=0} @self
+  - damage{amount=500;pi=true;pk=true} @PIR{r=10}
+A15_BleedNova:
+  Skills:
+  - effect:particlering{particle=reddust;radius=8;points=81;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - effect:particlesphere{particle=reddust;amount=300;r=8} @self
+### TOTEM SKILLS -----------------------------------------------
+A15_Summon_1:
+  Skills:
+  - summon{type=Totem_Bleed;amount=1;radius=15;yr=0;yu=true} @Self
+A15_Summon_2:
+  Skills:
+  - summon{type=Totem_Curse;amount=1;radius=15;yr=0;yu=true} @Self
+A15_Summon_3:
+  Skills:
+  - summon{type=Totem_Freeze;amount=1;radius=15;yr=0;yu=true} @Self
+A15_Summon_4:
+  Skills:
+  - summon{type=Totem_Chaos;amount=1;radius=15;yr=0;yu=true} @Self
+A15_SummonRandomTotem:
+  Cooldown: 15
+  Skills:
+  - effect:sound{s=block.portal.travel;v=0.5;p=2}
+  - randomskill{skills=A15_Summon_1,A15_Summon_2,A15_Summon_3,A15_Summon_4}
+### COMPOSITE SKILLS -------------------------------------------
+A15_HeavySpam:
+  Skills:
+  - skill{s=A15_TripleShot}
+  - delay 20
+  - skill{s=A15_TripleShot}
+  - delay 20
+  - skill{s=A15_TripleShot}
+A15_LeftRight:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=90;v=20;i=1;hR=2.0;vR=2.0}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=60;v=20;i=1;hR=2.0;vR=2.0}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=30;v=20;i=1;hR=2.0;vR=2.0}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=0;v=20;i=1;hR=2.0;vR=2.0}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=330;v=20;i=1;hR=2.0;vR=2.0}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=300;v=20;i=1;hR=2.0;vR=2.0}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=270;v=20;i=1;hR=2.0;vR=2.0}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+A15_CircleSpam:
+  Skills:
+  - skill{s=A15_DeathCircle}
+  - delay 5
+  - skill{s=A15_DeathCircle}
+  - delay 5
+  - skill{s=A15_DeathCircle}
+  - delay 5
+  - skill{s=A15_DeathCircle}
+  - delay 5
+  - skill{s=A15_DeathCircle}
+  - delay 5
+  - skill{s=A15_DeathCircle}
+  - delay 5
+  - skill{s=A15_DeathCircle}
+  - delay 5
+  - skill{s=A15_DeathCircle}
+  - delay 5
+  - skill{s=A15_DeathCircle}
+### PHASES -----------------------------------------------------
+A15_RandomSkill:
+  Cooldown: 4
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=80}
+  - randomskill{skills=A15_HeavySpam,A15_TPSlam,A15_CircleSpam,A15_DeathNova,A15_LeftRight}

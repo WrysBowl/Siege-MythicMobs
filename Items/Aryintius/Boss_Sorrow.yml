@@ -1,0 +1,128 @@
+### TRIAL OF SORROW --------------------------------------------
+Fist:
+  Id: 145
+  Display: "&6&oY'razotj's Fist&7&7"
+  Lore:
+  - "&7Left-click to melee"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2&o✶"
+  - "&0 "
+  - "&6★ &7&oDeals &c&o250.0❤ &7&obase damage."
+  - "&6★ &7&o25% critical strike chance."
+  - "&6★ &7&o10.0x damage on critical hit."
+  - "&0 "
+  - "&7“&6The prized gauntlet of the"
+  - "&6 dead dragon slayer--able"
+  - "&6 to level cities with a single"
+  - "&6 calculated punch.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Earth4:
+  Id: 397
+  Data: 2
+  Display: "&6&oY'razotj's Head&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2&o✶"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Damage: &c100.0❤x4"
+  - "&0 "
+  - "&6★ &7&oRestore &c&o10.0❤ &7&owhenever"
+  - "&7&o  you hit an enemy."
+  - "&6★ &7&oSneaking reduces spread."
+  - "&0 "
+  - "&7“&6Killing him was one thing, but"
+  - "&6 this is going too far...&7”"
+  Skills:
+  - heal{a=20} @Self ~onBowHit
+Dragoon:
+  Id: 397
+  Data: 5
+  Display: "&6&oThe Dragoon&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2&o✶"
+  - "&0 "
+  - "&7Type: &fRanged"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fInsanely fast"
+  - "&7Damage: &c200.0❤"
+  - "&0 "
+  - "&6★ &7&o200% increased gun recoil."
+  - "&6★ &8&o-80% &7&omovement speed if this"
+  - "&7&o  is held in your main hand."
+  - "&0 "
+  - "&7“&6A minigun built into a dragon's"
+  - "&6 skull. Yes. It's THAT awesome.&7”"
+  Attributes:
+    MainHand:
+      MovementSpeed: -0.8
+  Hide:
+  - ATTRIBUTES
+Charm_Yrazotj:
+  Id: 396
+  Display: "&6&oY'razotj's Endurance"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2&o✶"
+  - "&0 "
+  - "&6» &7&oWhile equipped in off hand:"
+  - "&6★ &c&o+15.0❤ &7&omaximum health."
+  - "&6★ &7&oRestore &c&o5.0❤ &7&oevery second."
+  - "&6★ &7&o50% chance for your attacks"
+  - "&7&o  to &e&oIgnite &7&oenemies for 5.0s."
+  - "&0 "
+  - "&7“&6Every war eventually devolves"
+  - "&6 into a battle of attrition.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    OffHand:
+      Health: 30.0
+  Skills:
+  - heal{a=10} @Self ~onTimer:20
+  - skill{s=Ignite_Title} @target ~onBowHit 0.5
+  - skill{s=Ignite_Title} @target ~onAttack 0.5
+T1_Sorrow:
+  Id: 314
+  Display: "&6&oAspect of Sorrow"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &2&o✶"
+  - "&0 "
+  - "&6★ &a&o+10% &7&omovement speed."
+  - "&6★ &c&o+20.0❤ &7&owhile equipped."
+  - "&6★ &7&oFully restore your health once"
+  - "&7&o  every 5.0s."
+  - "&0 "
+  - "&7“&6The death of all dragons left an"
+  - "&6 inescapable surge of sadness in"
+  - "&6 the world--and since then, it has"
+  - "&6 rotted to the core...&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 40.0
+      MovementSpeed: 0.1
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - heal{a=2000} @Self ~onTimer:100

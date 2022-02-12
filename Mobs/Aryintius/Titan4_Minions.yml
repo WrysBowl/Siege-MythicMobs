@@ -1,0 +1,104 @@
+### SAHUVAR'S MINIONS ---------------------------------------------------------
+T4_Melee:
+  Type: HUSK
+  Display: "&6« &eShadow of Doubt &6»"
+  Health: 800
+  Damage: 750
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_12:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.05} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=DamageBuff} @Self =50%
+  - skill{s=Poison_60} @PIR{r=3} ~onAttack 0.5
+  ### EFFECTS
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25} @self ~onDamaged
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.5} @self ~onDamaged
+T4_Ranger:
+  Type: SKELETON
+  Display: "&4« &eShroud of Madness &4»"
+  Health: 650
+  Damage: 500
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_12:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - Boss_Bow2:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.05} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=T4_Arrow} @NearestPlayer{r=50} ~onTimer:40
+  ### EFFECTS
+  - effect:sound{s=entity.ghast.hurt;p=1.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.ghast.hurt;p=0.6;v=0.5} @self ~onDeath
+T4_Mage:
+  Type: WITHER_SKELETON
+  Display: "&4« &cVeil of Insanity &4»"
+  Health: 3200
+  Damage: 1000
+  Drops:
+  - Currency_Rifts_2
+  - Corrupted
+  - Mythic
+  - Iridescent
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_12:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - STICK:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=T4M_Missiles} @NearestPlayer{r=50} ~onTimer:60
+  - potion{type=ABSORPTION;duration=200;level=9} @Self ~onDamaged <50%
+  ### EFFECTS
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.ghast.hurt;p=1.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.zombie_villager.converted;p=2;v=2} @self ~onDeath

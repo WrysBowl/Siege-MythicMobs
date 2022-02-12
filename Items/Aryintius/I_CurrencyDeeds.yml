@@ -1,0 +1,86 @@
+###---------------------------------------------------------###
+### CURRENCY ITEMS (Valuable Deeds)
+###---------------------------------------------------------###
+Deed_1:
+  Id: PAPER
+  Display: "&aBronze Deed"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&a★ &7Value: &610,000Σ"
+  - "&a★ &7Can be traded for sigmas"
+  - "&7  using &f/withdraw&7."
+  - "&0 "
+  - "&7“&aA small piece of parchment"
+  - "&a that holds immense value.&7”"
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Deed_2:
+  Id: PAPER
+  Display: "&aSilver Deed"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&a★ &7Value: &6100,000Σ"
+  - "&a★ &7Can be traded for sigmas"
+  - "&7  using &f/withdraw&7."
+  - "&0 "
+  - "&7“&aA small piece of parchment"
+  - "&a that holds immense value.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Deed_3:
+  Id: PAPER
+  Display: "&eGolden Deed"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&e★ &7Value: &61,000,000Σ"
+  - "&e★ &7Can be traded for sigmas"
+  - "&7  using &f/withdraw&7."
+  - "&0 "
+  - "&7“&eA small piece of parchment"
+  - "&e that holds immense value.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Deed_4:
+  Id: PAPER
+  Display: "&dPlatinum Deed"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&d★ &7Value: &610,000,000Σ"
+  - "&d★ &7Can be traded for sigmas"
+  - "&7  using &f/withdraw&7."
+  - "&0 "
+  - "&7“&dA small piece of parchment"
+  - "&d that holds immense value.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Deed_5:
+  Id: PAPER
+  Display: "&bDiamond Deed"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&b★ &7Value: &6100,000,000Σ"
+  - "&b★ &7Can be traded for sigmas"
+  - "&7  using &f/withdraw&7."
+  - "&0 "
+  - "&7“&bA small piece of parchment"
+  - "&b that holds incredible value.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES

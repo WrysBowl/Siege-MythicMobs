@@ -1,0 +1,289 @@
+### LOST TOMB ENEMIES ------------------------------------------
+A7_Melee:
+  Type: HUSK
+  Display: "&4« &eUnearthed Warrior &4»"
+  Health: 400
+  Damage: 500
+  Drops:
+  - Currency_Atlas_1
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - LHelm:4
+  - LChest:3
+  - LLegs:2
+  - LBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    Silent: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.01} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=CancelSlowness} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:10
+  - skill{s=InflictCurse} @target ~onAttack 0.1
+A7_MiniBoss:
+  Type: HUSK
+  Display: "&4« &cMass of Souls &4»"
+  Health: 3000
+  Damage: 750
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  - Corrupted
+  Disguise:
+    Type: BLOCK
+    Block: SOUL_SAND
+    BlockData: 0
+    ShowName: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=CancelSlowness} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=InflictCurse} @target ~onAttack
+  - skill{s=Atlas_CurseNova} @Self ~onTimer:20
+  - damage{a=750;pi=true;pk=true} @PIR{r=5} ~onTimer:20
+  ### EFFECTS
+  - effect:sound{s=ambient.cave;p=2.0;v=0.75} @self ~onTimer:40
+  - effect:sound{s=block.sand.place;p=0.1;v=0.75} @self ~onDamaged
+  - effect:sound{s=block.sand.break;p=0.1;v=1} @self ~onDeath
+### THE CRUMBLING CASTLE ---------------------------------------
+A8_Melee:
+  Type: SKELETON
+  Display: "&6« &eAncient Guardsman &6»"
+  Health: 400
+  Damage: 500
+  Drops:
+  - Currency_Atlas_1
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - IHelm:4
+  - IChest:3
+  - ILegs:2
+  - IBoots:1
+  - BrahmkSword:0
+  - Shield_Immune:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    Silent: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.01} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Bleed_30} @PIR{r=5} ~onAttack 0.2
+A8_Ranger:
+  Type: SKELETON
+  Display: "&4« &eAncient Archer &4»"
+  Health: 400
+  Damage: 500
+  Drops:
+  - Currency_Atlas_1
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - CHelm:4
+  - CChest:3
+  - CLegs:2
+  - CBoots:1
+  - Bow4:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    Silent: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.01} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Boss4Fire} @target ~onTimer:20 0.5
+A8_MiniBoss:
+  Type: SKELETON
+  Display: "&4« &cBloodzerker &4»"
+  Health: 3000
+  Damage: 750
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  - Corrupted
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_2:4
+  - UChest_5:3
+  - ULegs_5:2
+  - UBoots_5:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    KnockbackResistance: 1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Bleed_60} @PIR{r=5} ~onAttack 0.25
+  ### EFFECTS
+  - effect:sound{s=entity.zombie.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.zombie.death;p=0.5;v=0.5} @self ~onDamaged
+### FROZEN WASTES ----------------------------------------------
+A11_Wolf:
+  Type: SKELETON
+  Display: "&6« &eDire Wolf &6»"
+  Health: 400
+  Damage: 750
+  Drops:
+  - Currency_Atlas_1
+  - Mythic
+  Disguise:
+    Type: WOLF
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onTimer:10
+  - healpercent{m=0.01} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=InflictFreeze} @PIR{r=5} ~onAttack 0.25
+  ### EFFECTS
+  - effect:sound{s=entity.wolf.growl;p=1;v=0.5} @self ~onTimer:60
+  - effect:sound{s=entity.wolf.ambient;p=0.75;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.wolf.howl;p=1;v=0.5} @self ~onDeath
+A11_Ranger:
+  Type: SKELETON
+  Display: "&4« &eSnowhunter &4»"
+  Health: 400
+  Damage: 500
+  Drops:
+  - Currency_Atlas_1
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - UChest_1:3
+  - ULegs_1:2
+  - DBoots:1
+  - Bow4:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.01} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Atlas_FrostBolt} @target ~onTimer:40 0.5
+  ### EFFECTS
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+A11_MiniBoss:
+  Type: SKELETON
+  Display: "&4« &cWhite Death &4»"
+  Health: 3000
+  Damage: 250
+  Drops:
+  - Currency_Atlas_2
+  - Corrupted
+  - Mythic
+  Equipment:
+  - BlockHead_3:4
+  - UChest_1:3
+  - ULegs_1:2
+  - UBoots_1:1
+  - Arch_Sword:0
+  - Shield_Frost:5
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=A11_FrostNova} @Self ~onTimer:80 0.3
+  ### EFFECTS
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged

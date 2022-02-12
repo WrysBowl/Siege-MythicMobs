@@ -1,0 +1,128 @@
+OB1_SkillShot: ### Death bolt
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=1;p=2}
+  - effect:sound{s=entity.skeleton.death;v=1;p=2}
+  - projectile{ot=OB1SS_Tick;oh=OB1SS_Hit;v=20;i=1;hR=1;vR=1}
+OB1SS_Tick:
+  Skills:
+  - effect:particles{p=reddust;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+OB1SS_Hit:
+  Skills:
+  - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
+  - effect:sound{s=entity.blaze.death;v=1;p=2}
+  - damage{a=20;ia=true;pi=true;pk=true}
+  - delay 20
+  - damage{a=500;pk=true}
+OB1_OneShot: ### Not quite a one-shot anymore due to power creep. :(
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.skeleton.death;v=1;p=2}
+  - projectile{ot=OB1OS_Tick;oh=OB1OS_Hit;v=10;i=1;hR=1;vR=1}
+OB1OS_Tick:
+  Skills:
+  - effect:particles{p=reddust;amount=20;speed=0;hS=0.3;vS=0.3} @origin
+  - effect:particles{p=reddust;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+OB1OS_Hit:
+  Skills:
+  - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
+  - effect:sound{s=entity.blaze.death;v=1;p=2}
+  - damage{a=40;ia=true;pi=true;pk=true}
+  - delay 20
+  - damage{a=1000;pk=true}
+OB1_Teleport: ### Teleport Slam
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @NearestPlayer{r=50}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=50}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=50}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=50}
+  - randommessage
+      {
+      m=
+      "<mob.name> &eTime to die!",
+      "<mob.name> &eThe sun sets on your worthless life!",
+      "<mob.name> &eNothing can save you now!";
+      } @PIR{r=30}
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=400;r=7} @self
+  - effect:particlesphere{particle=largesmoke;amount=400;r=7} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=350;r=6} @self
+  - effect:particlesphere{particle=largesmoke;amount=350;r=6} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=300;r=5} @self
+  - effect:particlesphere{particle=largesmoke;amount=300;r=5} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=250;r=4} @self
+  - effect:particlesphere{particle=largesmoke;amount=250;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=200;r=3} @self
+  - effect:particlesphere{particle=largesmoke;amount=200;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=150;r=2} @self
+  - effect:particlesphere{particle=largesmoke;amount=150;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=100;r=1} @self
+  - effect:particlesphere{particle=largesmoke;amount=100;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=350;r=5} @self
+  - effect:particlesphere{particle=largesmoke;amount=350;r=5} @self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
+  - damage{amount=10000;pk=true} @PIR{r=5}
+OB1_Explosion: ### Explosion that deals a crapton of damage.
+  Skills:
+  - effect:particlesphere{particle=reddust;amount=150;r=5} @self
+  - effect:particlesphere{particle=largesmoke;amount=100;r=5} @self
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1} @PIR{r=25}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0} @PIR{r=25}
+  - damage{amount=1500} @PIR{r=5}
+### COMPOSITE SKILLS
+OB1_Burst: ### Rapidfire burst
+  Skills:
+  - skill{s=OB1_SkillShot} @target
+  - delay 2
+  - skill{s=OB1_SkillShot} @target
+  - delay 2
+  - skill{s=OB1_SkillShot} @target
+OB1_SummonDeath: ### Summons explosions EVERYWHERE.
+  Skills:
+  - summon{mob=OB1_Explode;amount=3;noise=3} @Self
+  - delay 5
+  - summon{mob=OB1_Explode;amount=3;noise=6} @Self
+  - delay 5
+  - summon{mob=OB1_Explode;amount=3;noise=9} @Self
+  - delay 5
+  - summon{mob=OB1_Explode;amount=3;noise=12} @Self
+  - delay 5
+  - summon{mob=OB1_Explode;amount=3;noise=18} @Self
+  - delay 5
+  - summon{mob=OB1_Explode;amount=3;noise=18} @Self
+  - delay 5
+  - summon{mob=OB1_Explode;amount=3;noise=12} @Self
+  - delay 5
+  - summon{mob=OB1_Explode;amount=3;noise=9} @Self
+  - delay 5
+  - summon{mob=OB1_Explode;amount=3;noise=6} @Self
+  - delay 5
+  - summon{mob=OB1_Explode;amount=3;noise=3} @Self
+OB1_Attack_1: ### Attack 1
+  Skills:
+  - skill{s=OB1_Burst} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=OB1_Burst} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=OB1_Burst} @NearestPlayer{r=50}
+  - delay 10
+  - skill{s=OB1_OneShot} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=OB1_OneShot} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=OB1_OneShot} @NearestPlayer{r=50}
+OB1_Attack_2: ### Attack 2
+  Skills:
+  - skill{s=OB1_SummonDeath} @Self
+  - delay 60
+  - skill{s=OB1_Teleport}
+  - delay 40

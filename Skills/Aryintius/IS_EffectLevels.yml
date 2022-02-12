@@ -1,0 +1,77 @@
+### EFFECT LEVELS ----------------------------------------------
+JumpBoost_3: ### Jump Boost III
+  Skills:
+  - potion{type=JUMP;duration=100;lvl=2;overwrite=true}
+RapidDecayES:
+  Skills:
+  - effect:sound{s=entity.zombie_villager.converted;v=0.25;p=4}
+  - potion{type=ABSORPTION;duration=200;lvl=39;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=38;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=37;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=34;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=31;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=28;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=24;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=21;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=10;lvl=18;overwrite=true}
+###
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=15;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=12;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=10;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=9;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=6;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=4;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=200;lvl=2;overwrite=true}
+  - delay 2
+  - potion{type=ABSORPTION;duration=5;lvl=0;overwrite=true}
+RandomStrength: ### Gain strength between 100-200 on hit.
+  Skills:
+  - randomskill{s=RStr_1,RStr_2,RStr_3,RStr_4,RStr_5,RStr_6,RStr_7,RStr_8,RStr_9,RStr_10,RStr_11}
+RStr_1:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=99;overwrite=true}
+RStr_2:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=109;overwrite=true}
+RStr_3:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=119;overwrite=true}
+RStr_4:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=129;overwrite=true}
+RStr_5:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=139;overwrite=true}
+RStr_6:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=149;overwrite=true}
+RStr_7:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=159;overwrite=true}
+RStr_8:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=169;overwrite=true}
+RStr_9:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=179;overwrite=true}
+RStr_10:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=189;overwrite=true}
+RStr_11:
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=199;overwrite=true}

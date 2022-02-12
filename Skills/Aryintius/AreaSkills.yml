@@ -1,0 +1,27 @@
+### METEOR SHOWER
+MeteorShower:
+  Cooldown: 10
+  Skills:
+  - summon{m=MeteorPointer;a=15;r=10}
+MeteorPointerSpawn:
+  Skills:
+  - potion{type=INVISIBILITY;d=2000;l=1} @self
+  - delay 200
+  - skill{s=MeteorPointerFinish}
+MeteorPointerFinish:
+  Cooldown: 100
+  Skills:
+  - projectile{onTick=MeteorTick;onEnd=MeteorEnd;onHit=MeteorDamage;v=30;i=1;hR=2;vR=2;syo=75;sfo=20;mr=1000;d=500;sE=false} @Self
+  - delay 500
+  - remove{m=MeteorPointer} @Self
+MeteorTick:
+  Skills:
+  - effect:particles{p=flame;a=30;vS=0.5;hS=0.5} @Origin
+  - effect:particles{p=largesmoke;a=15;vS=0.75;hS=0.75} @Origin
+  - effect:particles{p=largeexplosion;a=3;vS=0.3;hS=0.3} @Origin
+MeteorEnd:
+  Skills:
+  - remove{m=MeteorPointer} @Self
+MeteorDamage:
+  Skills:
+  - damage{a=1000;pk=true} @PIR{r=3}

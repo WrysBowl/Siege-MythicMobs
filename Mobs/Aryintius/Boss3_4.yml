@@ -1,0 +1,102 @@
+Boss3:
+  Type: WITHER_SKELETON
+  Display: '&4&l<&4« &cRith the Foolish &4»&4&l>'
+  Health: 4500
+  Damage: 1250
+  BossBar:
+    Enabled: true
+    Title: '&4&l<&4« &cRith the Foolish &4»&4&l>'
+    Range: 50
+    Color: RED
+    Style: SOLID
+  Equipment:
+  - BlockHead_1:4
+  - UChest_5:3
+  - ULegs_5:2
+  - UBoots_5:1
+  - Boss_Axe:0
+  - Shield_Reaper:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Currency_Trials_Boss
+  - Boss3
+  - Boss34_Set
+  - MiddleKey
+  - Mythic
+  - Corrupted
+  - Iridescent
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+  Skills:
+  - message{m="<mob.name> &fHahaha! Another victim for the slaughter!"} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=SummonKef} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &fDon't run, I will make your death most... enjoyable!",
+      "<mob.name> &fYes... yes... struggle more! I like the feisty ones!",
+      "<mob.name> &fFighting back will only make your flesh tastier!";
+      } @PIR{r=30} ~onTimer:300
+  - skill{s=Boss3Knockback} @target ~onTimer:120
+  - skill{s=Boss3Drag} @target ~onTimer:400
+  - message{m="<mob.name> &fWhat is this feeling... Is this... death?"} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+Boss4:
+  Type: WITHER_SKELETON
+  Display: '&4&l<&4« &cKef the Wise &4»&4&l>'
+  Health: 3500
+  Damage: 1000
+  BossBar:
+    Enabled: true
+    Title: '&4&l<&4« &cKef the Wise &4»&4&l>'
+    Range: 50
+    Color: RED
+    Style: SOLID
+  Equipment:
+  - BlockHead_2:4
+  - UChest_5:3
+  - ULegs_5:2
+  - UBoots_5:1
+  - Boss_Bow:0
+  - 0:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Currency_Trials_Boss
+  - Boss4
+  - Boss34_Set
+  - MiddleKey
+  - Mythic
+  - Corrupted
+  - Iridescent
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+  Skills:
+  - message{m="<mob.name> &fA mortal? Down here? Surely you jest, Rith!"} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &fBy the flames! You will make a worthy sacrifice to Magmos.",
+      "<mob.name> &fYour death will be greatly appreciated!",
+      "<mob.name> &fLeave this place now, or your soul will be the only thing that will!";
+      } @PIR{r=30} ~onTimer:300
+  - skill{s=Boss4_Phase_1} @target ~onTimer:120 >50%
+  - skill{s=Boss4_Phase_2} @target ~onTimer:200 <50%
+  - message{m="<mob.name> &fRith, you imbecile... you've doomed us both..."} @PlayersInRadius{r=25} ~onDeath
+  - remove @MIR{r=10;t=Boss4} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

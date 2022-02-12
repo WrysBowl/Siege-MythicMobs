@@ -1,0 +1,113 @@
+### QUU'RAK MINIONS ------------------------------------------------------
+T7_Melee:
+  Type: HUSK
+  Display: "&6« &eGranite Golem &6»"
+  Health: 4000
+  Damage: 1500
+  Disguise:
+    Type: IRON_GOLEM
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=0} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=InflictFreeze} @PIR{r=3} ~onAttack 0.2
+  - skill{s=Bleed_60} @PIR{r=3} ~onAttack 0.15
+  ### EFFECTS
+  - effect:sound{s=entity.irongolem.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.irongolem.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.irongolem.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=entity.irongolem.death;v=1;p=0} @Self ~onDeath
+
+T7_Mage:
+  Type: HUSK
+  Display: "&4« &eHemomancer &4»"
+  Health: 800
+  Damage: 500
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_2:4
+  - UChest_5:3
+  - ULegs_5:2
+  - UBoots_5:1
+  - BLAZE_ROD:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    Silent: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.05} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=T7_Fire} @NearestPlayer{r=50} ~onTimer:10 0.3
+
+T7_MiniBoss:
+  Type: SLIME
+  Display: "&4« &cSwamp Slime &4»"
+  Health: 40000
+  Damage: 2000
+  Drops:
+  - Currency_Rifts_2
+  - Corrupted
+  - Mythic
+  - Iridescent
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    Silent: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    PreventSlimeSplit: true
+    Size: 4
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - damage{a=2000;pi=true;pk=true} @PIR{r=3} ~onTimer:20

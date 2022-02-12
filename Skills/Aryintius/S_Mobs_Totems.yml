@@ -1,0 +1,58 @@
+### TOTEM SKILLS/EFFECTS ---------------------------------------
+Totem_BleedNova:
+  Skills:
+  - effect:particlering{particle=reddust;radius=8;points=81;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=reddust;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - effect:particlesphere{particle=reddust;amount=300;r=8} @self
+Totem_CurseNova:
+  Skills:
+  - effect:particlering{particle=witchMagic;radius=8;points=81;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=witchMagic;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=witchMagic;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=witchMagic;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - effect:particlesphere{particle=witchMagic;amount=300;r=8} @self
+Totem_FrostNova:
+  Skills:
+  - effect:particlering{particle=cloud;radius=8;points=81;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=cloud;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=cloud;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=cloud;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - effect:particlesphere{particle=cloud;amount=300;r=8} @self
+Totem_ShockNova:
+  Skills:
+  - effect:particlering{particle=magicCrit;radius=8;points=81;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=magicCrit;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=magicCrit;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=magicCrit;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - effect:particlesphere{particle=magicCrit;amount=300;r=8} @self
+Totem_BurnNova:
+  Skills:
+  - effect:particlering{particle=flame;radius=8;points=81;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=flame;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=flame;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=flame;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - effect:particlesphere{particle=flame;amount=300;r=8} @self
+Totem_TPSlam: ### Classic teleport slam
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @NearestPlayer{r=50}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
+  - delay 5
+  - effect:particlesphere{particle=smoke;amount=200;r=5} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=200;r=5} @self
+  - delay 20
+  - effect:particlering{particle=largesmoke;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=blockcrack_173;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=largesmoke;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=blockcrack_173;radius=3;points=16;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=largesmoke;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=blockcrack_173;radius=1;points=4;amount=1;hS=1;vS=0} @self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
+  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}

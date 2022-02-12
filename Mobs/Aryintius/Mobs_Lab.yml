@@ -1,0 +1,498 @@
+###---------------------------------------###
+### PHASE 1 ENEMIES - JUNGLE
+###---------------------------------------###
+LabZ1:
+  Type: ZOMBIE
+  Display: "&f« &7Undead &f»"
+  Health: 20
+  Damage: 2
+  Drops:
+  - Food
+  - Currency_Floor_1
+  - Common
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - chainmail_helmet:4
+  - leather_chestplate:3
+  - chainmail_leggings:2
+  - leather_boots:1
+  - stone_axe:0
+  - stone_axe:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+LabS1:
+  Type: SKELETON
+  Display: "&f« &7Lost Soul &f»"
+  Health: 20
+  Damage: 2
+  Drops:
+  - Food
+  - Currency_Floor_1
+  - Common
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - chainmail_helmet:4
+  - leather_chestplate:3
+  - chainmail_leggings:2
+  - leather_boots:1
+  - T6_7:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+LabMB1:
+  Type: WITHER_SKELETON
+  Display: "&4« &cChest Guardian &4»"
+  Health: 100
+  Damage: 10
+  Drops:
+  - Food
+  - Currency_Floor_2
+  - Common
+  - Uncommon
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - chainmail_helmet:4
+  - iron_chestplate:3
+  - chainmail_leggings:2
+  - iron_boots:1
+  - stone_axe:0
+  - stone_axe:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+###---------------------------------------###
+### PHASE 2 ENEMIES - RUINS
+###---------------------------------------###
+LabZ2:
+  Type: ZOMBIE
+  Display: "&e« &fStarving Undead &e»"
+  Health: 50
+  Damage: 2
+  Drops:
+  - Food
+  - Currency_Floor_2
+  - Uncommon
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - iron_helmet:4
+  - iron_chestplate:3
+  - chainmail_leggings:2
+  - chainmail_boots:1
+  - T5_2:0
+  - T5_2:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+LabS2:
+  Type: SKELETON
+  Display: "&e« &fCraving Soul &e»"
+  Health: 50
+  Damage: 5
+  Drops:
+  - Food
+  - Currency_Floor_2
+  - Uncommon
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - iron_helmet:4
+  - chainmail_chestplate:3
+  - iron_leggings:2
+  - chainmail_boots:1
+  - T5_4:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+LabMB2:
+  Type: WITHER_SKELETON
+  Display: "&4« &cTreasure Guardian &4»"
+  Health: 250
+  Damage: 16
+  Drops:
+  - Food
+  - Currency_Floor_3
+  - Uncommon
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - gold_helmet:4
+  - chainmail_chestplate:3
+  - gold_leggings:2
+  - chainmail_boots:1
+  - stone_axe:0
+  - stone_axe:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventItemPickup: true
+LabA1:
+  Type: WITHER_SKELETON
+  Display: "&6« &eAncient Caster &6»"
+  Health: 60
+  Damage: 5
+  Drops:
+  - Food
+  - Currency_Floor_3
+  - Uncommon
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - 0:4
+  - 0:3
+  - 0:2
+  - 0:1
+  - STICK:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.1
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=BlueFire} @NearestPlayer{r=15} ~onTimer:40
+###---------------------------------------###
+### PHASE 3 ENEMIES - DESERT
+###---------------------------------------###
+LabZ3:
+  Type: HUSK
+  Display: "&6« &eAccursed Undead &6»"
+  Health: 30
+  Damage: 10
+  Drops:
+  - Food
+  - Currency_Floor_3
+  - Rare
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - GHelm:4
+  - CChest:3
+  - GLegs:2
+  - CBoots:1
+  - T4_1:0
+  - T4_1:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventItemPickup: true
+LabS3:
+  Type: SKELETON
+  Display: "&6« &eTainted Soul &6»"
+  Health: 30
+  Damage: 5
+  Drops:
+  - Food
+  - Currency_Floor_3
+  - Rare
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - CHelm:4
+  - GChest:3
+  - CLegs:2
+  - GBoots:1
+  - Bow3:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+LabA2:
+  Type: WITHER_SKELETON
+  Display: "&4« &cCorrupted Caster &4»"
+  Health: 120
+  Damage: 5
+  Drops:
+  - Food
+  - Currency_Floor_3
+  - Rare
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - STICK:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.1
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=ShadowStorm} @NearestPlayer{r=15} ~onTimer:100
+LabMB3:
+  Type: SPIDER
+  Display: "&4« &cTomb Scarab &4»"
+  Health: 500
+  Damage: 30
+  Drops:
+  - Food
+  - Currency_Floor_4
+  - Rare
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - diamond_helmet:4
+  - chainmail_chestplate:3
+  - diamond_leggings:2
+  - chainmail_boots:1
+  - T4_1:0
+  - T4_1:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.5
+    PreventOtherDrops: true
+    PreventItemPickup: true
+LabLegend:
+  Type: WITHER_SKELETON
+  Display: "&6« &fImmortal Guardian &6»"
+  Health: 2500
+  Damage: 1000
+  Drops:
+  - Currency_Trials_1
+  - Exalted
+  - Corrupted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - Titan_Helm:4
+  - Titan_Chest:3
+  - Titan_Legs:2
+  - Titan_Boots:1
+  - T0_1:0
+  - T0_1:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.8
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - message{cooldown=120;m="<mob.name> &cYou are unworthy of our gifts, mortal, and thus you shall perish!"} @PlayersInRadius{r=25} ~onSpawn
+  - message{cooldown=20;m="<mob.name> &cHow interesting... perhaps you are worthy after all..."} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PlayersInRadius{r=30} ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @PlayersInRadius{r=30} ~onDeath
+###---------------------------------------###
+### PHASE 4 ENEMIES - AQUIR
+###---------------------------------------###
+LabZ4:
+  Type: ZOMBIE
+  Display: "&4« &eWretched Undead &4»"
+  Health: 60
+  Damage: 16
+  Drops:
+  - Food
+  - Currency_Floor_4
+  - Superior
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - CChest:3
+  - CLegs:2
+  - DBoots:1
+  - T3_2:0
+  - T3_2:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=SpeedBuff} @Self =50%
+LabSlime:
+  Type: SLIME
+  Display: "&4« &eToxic Sludge &4»"
+  Health: 1200
+  Damage: 20
+  Drops:
+  - Food
+  - Currency_Floor_4
+  - Superior
+  Options:
+    AlwaysShowName: true
+    Size: 3
+    MovementSpeed: 0.35
+    PreventSlimeSplit: true
+    PreventOtherDrops: true
+  Equipment:
+  - diamond_helmet:4
+  - chainmail_chestplate:3
+  - chainmail_leggings:2
+  - DBoots:1
+  - T3_2:0
+  - T3_2:5
+  Skills:
+  - skill{s=ToxicBlast} @NearestPlayer{r=10} ~onTimer:50
+LabSlimeX:
+  Type: SLIME
+  Display: "&4« &cElder Sludge &4»"
+  Health: 5000
+  Damage: 150
+  Drops:
+  - Food
+  - Currency_Floor_5
+  - Superior
+  Options:
+    AlwaysShowName: true
+    Size: 5
+    MovementSpeed: 0.35
+    PreventSlimeSplit: true
+    PreventOtherDrops: true
+  Equipment:
+  - diamond_helmet:4
+  - chainmail_chestplate:3
+  - chainmail_leggings:2
+  - DBoots:1
+  - T3_2:0
+  - T3_2:5
+  Skills:
+  - skill{s=SuperToxicBlast} @NearestPlayer{r=10} ~onTimer:100
+LabS4:
+  Type: SKELETON
+  Display: "&4« &eManic Soul &4»"
+  Health: 60
+  Damage: 5
+  Drops:
+  - Food
+  - Currency_Floor_4
+  - Superior
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - CHelm:4
+  - DChest:3
+  - DLegs:2
+  - CBoots:1
+  - Bow4:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=LB2Fire} @NearestPlayer{r=20} ~onTimer:40
+LabA3:
+  Type: WITHER_SKELETON
+  Display: "&5« &dAncient Caster &5»"
+  Health: 250
+  Damage: 5
+  Drops:
+  - Food
+  - Currency_Floor_5
+  - Superior
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - STICK:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.1
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=VoidMissile} @NearestPlayer{r=15} ~onTimer:40
+###---------------------------------------###
+### PHASE 5 ENEMIES - SKY FORTRESS
+###---------------------------------------###
+LabZ5:
+  Type: HUSK
+  Display: "&4« &cDivine Guardian &4»"
+  Health: 200
+  Damage: 20
+  Drops:
+  - Food
+  - Currency_Floor_5
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_6:4
+  - GChest:3
+  - GLegs:2
+  - GBoots:1
+  - T2_1:0
+  - T2_1:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=DamageBuff} @Self =70%
+LabS5:
+  Type: SKELETON
+  Display: "&4« &cEternal Soul &4»"
+  Health: 200
+  Damage: 5
+  Drops:
+  - Food
+  - Currency_Floor_5
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_5:4
+  - GChest:3
+  - GLegs:2
+  - GBoots:1
+  - Bow4:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - skill{s=LB2Spam} @target ~onTimer:100 <70%
+  - skill{s=LB2Death} @target ~onTimer:20 <70%
+LabA4:
+  Type: WITHER_SKELETON
+  Display: "&5« &dForgotten Sorceror &5»"
+  Health: 250
+  Damage: 5
+  Drops:
+  - Food
+  - Currency_Trials_1
+  - Exalted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - UHelm_1:4
+  - UChest_1:3
+  - ULegs_1:2
+  - UBoots_1:1
+  - STICK:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.1
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=A4Storm} @NearestPlayer{r=15} ~onTimer:100
+  - skill{s=SummonMages} @Self =70%

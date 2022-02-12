@@ -1,0 +1,239 @@
+### SAHUVAR'S SKILLS
+T4_Drag: ### Kind of a cyclone thing that guarantees a melee hit.
+  Skills:
+  - effect:sound{s=block.portal.trigger;v=1;p=2}
+  - potion{type=CONFUSION;duration=60;lvl=3;overwrite=true}
+  - pull{velocity=1} @PIR{r=8}
+  - damage{a=500;pk=true} @PIR{r=8}
+  - delay 2
+  - pull{velocity=1} @PIR{r=8}
+  - damage{a=500;pk=true} @PIR{r=8}
+  - delay 2
+  - pull{velocity=1} @PIR{r=8}
+  - damage{a=750;pk=true} @PIR{r=8}
+  - delay 2
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=750;pk=true} @PIR{r=8}
+  - delay 2
+  - pull{velocity=2} @PIR{r=8}
+  - damage{a=1000;pk=true} @PIR{r=8}
+  - delay 2
+  - pull{velocity=3} @PIR{r=8}
+  - damage{a=1000;pk=true} @PIR{r=8}
+  - delay 2
+  - pull{velocity=3} @PIR{r=8}
+  - damage{a=1250;pk=true} @PIR{r=8}
+  - delay 2
+  - pull{velocity=4} @PIR{r=8}
+  - damage{a=1250;pk=true} @PIR{r=8}
+  - delay 2
+  - pull{velocity=4} @PIR{r=8}
+  - damage{a=1500;pk=true} @PIR{r=8}
+  - delay 2
+  - pull{velocity=5} @PIR{r=8}
+  - damage{a=1500;pk=true} @PIR{r=8}
+  - delay 2
+  - pull{velocity=5} @PIR{r=8}
+  - damage{a=1500;pk=true} @PIR{r=8}
+T4_Drag_FX:
+  Skills:
+  - effect:particlesphere{particle=largesmoke;amount=300;r=8} @self
+  - effect:particlesphere{particle=happyVillager;amount=300;r=8} @self
+  - delay 10
+  - effect:particlesphere{particle=largesmoke;amount=250;r=8} @self
+  - effect:particlesphere{particle=happyVillager;amount=250;r=8} @self
+  - delay 10
+  - effect:particlesphere{particle=largesmoke;amount=200;r=8} @self
+  - effect:particlesphere{particle=happyVillager;amount=200;r=8} @self
+
+T4_Fire: ### Toxin missiles
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - projectile{ot=T4F_Tick;oh=T4F_Hit;v=20;i=1;hR=1;vR=1;syo=3;in=10}
+T4F_Tick:
+  Skills:
+  - effect:particles{p=happyVillager;amount=5;speed=0;hS=0.2;vS=0.2} @origin
+T4F_Hit:
+  Skills: ### Deals 20.0 hearts on hit (against max loadout)
+  - effect:particles{p=largesmoke;a=3;hS=1;vS=1}
+  - damage{a=1000;pi=true;pk=true}
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - skill{s=Poison_150X}
+
+T4_Barrage: ### Fires 5 shots at once.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=entity.shulker.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - projectile{onTick=T4B-Tick;onHit=T4B-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T4B-Tick;onHit=T4B-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T4B-Tick;onHit=T4B-Hit;hO=30;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T4B-Tick;onHit=T4B-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T4B-Tick;onHit=T4B-Hit;hO=330;v=20;i=1;hR=1.5;vR=1.5}
+T4B-Tick:
+  Skills:
+  - effect:particles{p=blockcrack_133;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+T4B-Hit:
+  Skills: ### Deals 20.0 hearts on hit (against max loadout)
+  - effect:particles{p=largesmoke;a=3;hS=1;vS=1}
+  - damage{a=1000;pi=true;pk=true}
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - skill{s=Poison_150X}
+
+### AREA SKILLS
+T4_Buffs:
+  Skills:
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
+  - effect:particlesphere{particle=reddust;color=#008000;amount=50;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;color=#008000;amount=100;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;color=#008000;amount=150;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;color=#008000;amount=200;r=4} @self
+  - delay 2
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=200} @Self
+  - potion{type=SPEED;duration=100;lvl=4} @Self
+
+T4_TPSlam: ### Radial Teleport Slam. Guaranteed 1-shot at center. Hurts a lot on edge.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @NearestPlayer{r=50}
+  - effect:sound{s=entity.zombie_villager.converted;v=2;p=2} @PIR{r=50}
+  - effect:sound{s=entity.endermen.teleport;v=2;p=1} @PIR{r=50}
+  - delay 2
+  - effect:particlesphere{particle=happyVillager;amount=200;r=7} @self
+  - effect:particlesphere{particle=largesmoke;amount=200;r=7} @self
+  - delay 2
+  - effect:particlesphere{particle=happyVillager;amount=150;r=6} @self
+  - effect:particlesphere{particle=largesmoke;amount=150;r=6} @self
+  - delay 2
+  - effect:particlesphere{particle=happyVillager;amount=100;r=5} @self
+  - effect:particlesphere{particle=largesmoke;amount=100;r=5} @self
+  - delay 2
+  - effect:particlesphere{particle=happyVillager;amount=70;r=4} @self
+  - effect:particlesphere{particle=largesmoke;amount=70;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=happyVillager;amount=50;r=3} @self
+  - effect:particlesphere{particle=largesmoke;amount=50;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=happyVillager;amount=20;r=2} @self
+  - effect:particlesphere{particle=largesmoke;amount=20;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=happyVillager;amount=10;r=1} @self
+  - effect:particlesphere{particle=largesmoke;amount=10;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=250;r=5} @self
+  - effect:particlesphere{particle=largesmoke;amount=100;r=5} @self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
+  - damage{a=1250;pk=true} @PIR{r=9}
+  - damage{a=2500;pk=true} @PIR{r=7}
+  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+
+T4_Teleport: ### Teleport melee. Spams this to kill people.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @target
+  - damage{amount=2500;pk=true} @PIR{r=3}
+  - effect:sound{s=entity.zombie_villager.converted;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
+##
+## COMPOSITE SKILLS/PHASES
+##
+T4_Phase_1:
+  Cooldown: 15
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=300}
+  - skill{s=T4_Teleport}
+  - delay 20
+  - skill{s=T4_Drag} @Self
+  - skill{s=T4_Drag_FX} @Self
+  - delay 20
+  - skill{s=T4_Fire}
+  - delay 5
+  - skill{s=T4_Fire}
+  - delay 5
+  - skill{s=T4_Fire}
+  - delay 5
+  - skill{s=T4_Fire}
+  - delay 5
+  - skill{s=T4_Barrage}
+  - delay 30
+  - skill{s=T4_TPSlam}
+  - delay 30
+  - skill{s=T4_TPSlam}
+  - delay 30
+  - skill{s=T4_TPSlam}
+T4_Phase_2:
+  Cooldown: 15
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=300}
+  - skill{s=T4_Teleport}
+  - delay 20
+  - skill{s=T4_Drag} @Self
+  - skill{s=T4_Drag_FX} @Self
+  - delay 20
+  - skill{s=T4_Barrage}
+  - delay 5
+  - skill{s=T4_Barrage}
+  - delay 5
+  - skill{s=T4_Barrage}
+  - delay 5
+  - skill{s=T4_Barrage}
+  - delay 30
+  - skill{s=T4_TPSlam}
+  - delay 30
+  - skill{s=T4_TPSlam}
+  - delay 30
+  - skill{s=T4_TPSlam}
+
+### MINION SKILLS
+T4_Arrow: ### Slow ranged attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=T4_Arrow-Tick;onHit=T4_Arrow-Hit;v=10;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.irongolem.hurt;v=1;p=2}
+T4_Arrow-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#008000;amount=3;speed=0;hS=0.1;vS=0.1} @origin
+  - effect:particles{p=crit;amount=5;speed=0;hS=0.2;vS=0.2} @origin
+T4_Arrow-Hit:
+  Skills:
+  - damage{a=1000;pk=true}
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
+  - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
+  - skill{s=Poison_150X}
+
+T4M_Missiles: ### Spams boss missiles
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - skill{s=T4_Fire} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=T4_Fire} @NearestPlayer{r=50}
+  - delay 5
+  - skill{s=T4_Fire} @NearestPlayer{r=50}

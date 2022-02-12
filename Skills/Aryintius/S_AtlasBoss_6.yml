@@ -1,0 +1,105 @@
+### BRAHMK'S SKILLS --------------------------------------------
+A6_Blast:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A6B-Tick;onHit=A6B-Hit;hO=15;vO=0.35;g=1.0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A6B-Tick;onHit=A6B-Hit;hO=0;vO=0.35;g=1.0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A6B-Tick;onHit=A6B-Hit;hO=345;vO=0.35;g=1.0;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+A6_MegaBlast:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A6B-Tick;onHit=A6B-Hit;hO=30;vO=0.35;g=1.0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A6B-Tick;onHit=A6B-Hit;hO=15;vO=0.35;g=1.0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A6B-Tick;onHit=A6B-Hit;hO=0;vO=0.35;g=1.0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A6B-Tick;onHit=A6B-Hit;hO=345;vO=0.35;g=1.0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A6B-Tick;onHit=A6B-Hit;hO=330;vO=0.35;g=1.0;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+A6B-Tick:
+  Skills:
+  - effect:particles{p=reddust;amount=5;speed=0;hS=0.1;vS=0.1} @origin
+A6B-Hit: ### 20.0 hearts of damage against a full loadout. Ouch.
+  Skills:
+  - damage{a=1000;pk=true}
+A6_Knockback: ### Knockback attack.
+  Skills:
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2} @PIR{r=25}
+  - effect:particlesphere{particle=reddust;amount=10;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=20;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=40;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=60;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=80;r=5} @self
+  - damage{a=1500} @PIR{r=8}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
+A6_Phase_1: ### Phase 1 Attack
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - summon{type=TX_Explosion3;amount=5;radius=15;yr=0;yu=true} @Self
+  - skill{s=A6_Knockback} @Self
+  - delay 20
+  - skill{s=A6_Blast}
+  - delay 5
+  - skill{s=A6_Blast}
+  - delay 5
+  - skill{s=A6_Blast}
+  - delay 5
+  - skill{s=A6_Blast}
+  - delay 5
+  - skill{s=A6_Blast}
+  - delay 20
+  - skill{s=T2_Eruption}
+  - delay 10
+  - skill{s=T2_Eruption}
+  - delay 10
+  - skill{s=T2_Eruption}
+  - delay 10
+  - skill{s=T2_Eruption}
+A6_Phase_2: ### Phase 2 Attack
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - summon{type=TX_Explosion3;amount=8;radius=20;yr=0;yu=true} @Self
+  - skill{s=A6_Knockback} @Self
+  - delay 20
+  - skill{s=A6_MegaBlast}
+  - delay 5
+  - skill{s=A6_MegaBlast}
+  - delay 5
+  - skill{s=A6_MegaBlast}
+  - delay 5
+  - skill{s=A6_MegaBlast}
+  - delay 5
+  - skill{s=A6_MegaBlast}
+  - delay 5
+  - skill{s=A6_MegaBlast}
+  - delay 5
+  - skill{s=A6_MegaBlast}
+  - delay 20
+  - skill{s=T2_Eruption}
+  - delay 10
+  - skill{s=T2_Eruption}
+  - delay 10
+  - skill{s=T2_Eruption}
+  - delay 10
+  - skill{s=T2_Eruption}
+  - delay 10
+  - skill{s=T2_Eruption}
+  - delay 10
+  - skill{s=T2_Eruption}

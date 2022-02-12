@@ -1,0 +1,232 @@
+### WARDEN'S SKILLS --------------------------------------------
+A14_DeathCircle: ### Fires 8 projectiles in all directions
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A14C-Tick;onHit=A14C-Hit;hO=0;vO=0;v=5;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A14C-Tick;onHit=A14C-Hit;hO=45;vO=0;v=5;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A14C-Tick;onHit=A14C-Hit;hO=90;vO=0;v=5;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A14C-Tick;onHit=A14C-Hit;hO=135;vO=0;v=5;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A14C-Tick;onHit=A14C-Hit;hO=180;vO=0;v=5;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A14C-Tick;onHit=A14C-Hit;hO=225;vO=0;v=5;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A14C-Tick;onHit=A14C-Hit;hO=270;vO=0;v=5;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A14C-Tick;onHit=A14C-Hit;hO=315;vO=0;v=5;i=1;hR=1.0;vR=1.0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+A14C-Tick:
+  Skills:
+  - effect:particles{p=witchMagic;amount=1;speed=0;hS=0.1;vS=0.1} @origin
+A14C-Hit:
+  Skills:
+  - damage{amount=10000;ia=true;pi=true;pk=true}
+A14_Heavy: ### Death Bolt Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A14H-Tick;onHit=A14C-Hit;v=12;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+A14_TripleHeavy:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A14H-Tick;onHit=A14C-Hit;hO=0;v=12;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A14H-Tick;onHit=A14C-Hit;hO=30;v=12;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A14H-Tick;onHit=A14C-Hit;hO=330;v=12;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=1}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+A14H-Tick:
+  Skills:
+  - effect:particles{p=smoke;amount=4;speed=0;hS=0.35;vS=0.35} @origin
+  - effect:particles{p=witchMagic;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+A14_Laser:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A14L-Tick;onHit=A14L-Hit;hO=0;vO=0;v=15;i=1;hR=1.0;vR=1.0}
+  - effect:sound{s=entity.skeleton_horse.death;v=1;p=1}
+  - delay 2
+  - projectile{onTick=A14L-Tick;onHit=A14L-Hit;hO=0;vO=0;v=15;i=1;hR=1.0;vR=1.0}
+  - effect:sound{s=entity.skeleton_horse.death;v=1;p=1}
+  - delay 2
+  - projectile{onTick=A14L-Tick;onHit=A14L-Hit;hO=0;vO=0;v=15;i=1;hR=1.0;vR=1.0}
+  - effect:sound{s=entity.skeleton_horse.death;v=1;p=1}
+  - delay 2
+  - projectile{onTick=A14L-Tick;onHit=A14L-Hit;hO=0;vO=0;v=15;i=1;hR=1.0;vR=1.0}
+  - effect:sound{s=entity.skeleton_horse.death;v=1;p=1}
+  - delay 2
+  - projectile{onTick=A14L-Tick;onHit=A14L-Hit;hO=0;vO=0;v=15;i=1;hR=1.0;vR=1.0}
+  - effect:sound{s=entity.skeleton_horse.death;v=1;p=1}
+  - delay 2
+  - projectile{onTick=A14L-Tick;onHit=A14L-Hit;hO=0;vO=0;v=15;i=1;hR=1.0;vR=1.0}
+  - effect:sound{s=entity.skeleton_horse.death;v=1;p=1}
+A14L-Tick:
+  Skills:
+  - effect:particles{p=witchMagic;amount=1;speed=0;hS=0.1;vS=0.1} @origin
+  - effect:particles{p=portal;amount=1;speed=0;hS=0.12;vS=0.12} @origin
+A14L-Hit:
+  Skills:
+  - damage{amount=1000;pi=true;pk=true}
+A14_TPSlam: ### Teleport slam attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @NearestPlayer{r=50}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
+  - delay 5
+  - effect:particlesphere{particle=witchMagic;amount=200;r=5} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=200;r=5} @self
+  - delay 5
+  - effect:particlesphere{particle=witchMagic;amount=100;r=3} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=100;r=3} @self
+  - delay 5
+  - effect:particlesphere{particle=witchMagic;amount=35;r=1} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=35;r=1} @self
+  - delay 10
+  - effect:particlering{particle=largesmoke;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=witchMagic;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=largesmoke;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=witchMagic;radius=3;points=16;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=largesmoke;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=witchMagic;radius=1;points=4;amount=1;hS=1;vS=0} @self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
+  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+A14_CurseNova:
+  Skills:
+  - effect:particlering{particle=witchMagic;radius=5;points=25;amount=1;hS=1;vS=0} @Self
+  - effect:particlering{particle=witchMagic;radius=3;points=16;amount=1;hS=1;vS=0} @Self
+  - effect:particlering{particle=portal;radius=1;points=4;amount=3;hS=1;vS=0} @Self
+  - effect:sound{s=ambient.cave;p=2.0;v=0.75} @Self
+  - skill{s=InflictCurse} @PIR{r=5}
+  - damage{amount=1250;pi=true;pk=true} @PIR{r=5}
+  - delay 20
+  - effect:particlering{particle=witchMagic;radius=5;points=25;amount=1;hS=1;vS=0} @Self
+  - effect:particlering{particle=witchMagic;radius=3;points=16;amount=1;hS=1;vS=0} @Self
+  - effect:particlering{particle=portal;radius=1;points=4;amount=3;hS=1;vS=0} @Self
+  - effect:sound{s=ambient.cave;p=2.0;v=0.75} @Self
+  - skill{s=InflictCurse} @PIR{r=5}
+  - damage{amount=1250;pi=true;pk=true} @PIR{r=5}
+  - delay 20
+  - effect:particlering{particle=witchMagic;radius=5;points=25;amount=1;hS=1;vS=0} @Self
+  - effect:particlering{particle=witchMagic;radius=3;points=16;amount=1;hS=1;vS=0} @Self
+  - effect:particlering{particle=portal;radius=1;points=4;amount=3;hS=1;vS=0} @Self
+  - effect:sound{s=ambient.cave;p=2.0;v=0.75} @Self
+  - skill{s=InflictCurse} @PIR{r=5}
+  - damage{amount=1250;pi=true;pk=true} @PIR{r=5}
+  - delay 20
+  - effect:particlering{particle=witchMagic;radius=5;points=25;amount=1;hS=1;vS=0} @Self
+  - effect:particlering{particle=witchMagic;radius=3;points=16;amount=1;hS=1;vS=0} @Self
+  - effect:particlering{particle=portal;radius=1;points=4;amount=3;hS=1;vS=0} @Self
+  - effect:sound{s=ambient.cave;p=2.0;v=0.75} @Self
+  - skill{s=InflictCurse} @PIR{r=5}
+  - damage{amount=1250;pi=true;pk=true} @PIR{r=5}
+### COMPOSITE SKILLS -------------------------------------------
+A14_BeamLaser:
+  Skills:
+  - skill{s=A14_Laser}
+  - delay 5
+  - skill{s=A14_Laser}
+  - delay 5
+  - skill{s=A14_Laser}
+  - delay 5
+  - skill{s=A14_Laser}
+  - delay 5
+  - skill{s=A14_Laser}
+  - delay 5
+  - skill{s=A14_Laser}
+  - delay 5
+  - skill{s=A14_Laser}
+  - delay 5
+  - skill{s=A14_Laser}
+  - delay 5
+  - skill{s=A14_Laser}
+A14_CircleSpam:
+  Skills:
+  - skill{s=A14_DeathCircle}
+  - delay 20
+  - skill{s=A14_DeathCircle}
+  - delay 20
+  - skill{s=A14_DeathCircle}
+  - delay 20
+  - skill{s=A14_DeathCircle}
+  - delay 20
+  - skill{s=A14_DeathCircle}
+A14_CircleSpam2:
+  Skills:
+  - skill{s=A14_DeathCircle}
+  - delay 10
+  - skill{s=A14_DeathCircle}
+  - delay 10
+  - skill{s=A14_DeathCircle}
+  - delay 10
+  - skill{s=A14_DeathCircle}
+  - delay 10
+  - skill{s=A14_DeathCircle}
+  - delay 10
+  - skill{s=A14_DeathCircle}
+  - delay 10
+  - skill{s=A14_DeathCircle}
+  - delay 10
+  - skill{s=A14_DeathCircle}
+  - delay 10
+  - skill{s=A14_DeathCircle}
+A14_HeavySpam:
+  Skills:
+  - skill{s=A14_Heavy}
+  - delay 10
+  - skill{s=A14_Heavy}
+  - delay 10
+  - skill{s=A14_Heavy}
+  - delay 10
+  - skill{s=A14_Heavy}
+  - delay 10
+  - skill{s=A14_Heavy}
+  - delay 10
+  - skill{s=A14_Heavy}
+  - delay 10
+  - skill{s=A14_Heavy}
+  - delay 10
+  - skill{s=A14_Heavy}
+  - delay 10
+  - skill{s=A14_Heavy}
+A14_HeavySpam2:
+  Skills:
+  - skill{s=A2_Knockback} @Self
+  - delay 20
+  - skill{s=A14_TripleHeavy}
+  - delay 20
+  - skill{s=A14_TripleHeavy}
+  - delay 20
+  - skill{s=A14_TripleHeavy}
+  - delay 20
+  - skill{s=A14_TripleHeavy}
+### PHASES -----------------------------------------------------
+A14_RandomSkill:
+  Cooldown: 5
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=100}
+  - randomskill{skills=A14_HeavySpam,A14_TPSlam,A14_BeamLaser,A14_CurseNova}
+A14_RandomSkill2:
+  Cooldown: 5
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=100}
+  - randomskill{skills=A14_CircleSpam,A14_HeavySpam2,A14_TPSlam,A14_BeamLaser,A14_CurseNova}
+A14_RandomSkill3:
+  Cooldown: 5
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=100}
+  - randomskill{skills=A14_CircleSpam2,A14_HeavySpam2,A14_TPSlam,A14_BeamLaser,A14_CurseNova}

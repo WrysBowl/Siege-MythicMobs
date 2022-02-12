@@ -1,0 +1,192 @@
+### N'AZHRAK DROPS ---------------------------------------------
+RogueDagger:
+  Id: 359
+  Display: "&6&oPerfect Shadow&7&7"
+  Lore:
+  - "&7Left-click to melee"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5&o✶"
+  - "&0 "
+  - "&6★ &7&oDeals &c&o150.0❤ &7&oflat damage."
+  - "&6★ &7&o40% critical strike chance."
+  - "&6★ &7&o10x damage on critical."
+  - "&6★ &7&oOn hit, gain &a&oSpeed X &7&ofor 2.5s."
+  - "&6★ &7&oOn hit, gain &a&oInvisibility &7&ofor 10.0s."
+  - "&6★ &7&oOn hit, set your gold hearts to"
+  - "&e&o  80.0❤ &7&ofor 1.0s."
+  - "&6★ &c&oMelee damage and attack speed"
+  - "&c&o  cannot be modified by effects."
+  - "&0 "
+  - "&7“&6Few have entered the Void and"
+  - "&6 survived its madness. But those"
+  - "&6 that do gain abilites unlike any"
+  - "&6 seen in the mortal realm.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Infsword:
+  Id: 276
+  Display: "&6&oInfinity Shard&7&7"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Sweeping Edge C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5&o✶"
+  - "&0 "
+  - "&7Type: &fMelee"
+  - "&7Ability: &c30.0❤x5"
+  - "&7Cooldown: &f2.0 Seconds"
+  - "&0 "
+  - "&6★ &a&o+90% &7&oattack speed."
+  - "&6★ &7&oRight-click to use ability."
+  - "&0 "
+  - "&7“&6This strange, twisted blade"
+  - "&6 is forged from a fragment"
+  - "&6 of the Void.&7”"
+  Enchantments:
+  - DAMAGE_ALL:500
+  - SWEEPING_EDGE:100
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.1
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+Curse4:
+  Id: 403
+  Display: "&6&oCascades&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5&o✶"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fInstant"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c250.0❤"
+  - "&0 "
+  - "&6★ &7&oAttacks from this weapon can"
+  - "&7&o  pass through walls."
+  - "&6★ &7&oGains damage/status bonuses"
+  - "&7&o  from melee items/accessories."
+  - "&6★ &c&oRanged/magic bonuses have"
+  - "&c&o  no effect on this weapon."
+  - "&0 "
+  - "&7“&6A forbidden sorcery used long"
+  - "&6 ago by the ancient Void mages.&7”"
+Hexstorm:
+  Id: 403
+  Display: "&6&oHexstorm&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5&o✶"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fInsanely Fast"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c250.0❤"
+  - "&0 "
+  - "&6★ &8&o-35% &7&omovement speed while this"
+  - "&7&o  is held in your main hand."
+  - "&0 "
+  - "&7“&6A forbidden sorcery used long"
+  - "&6 ago by the ancient Void mages.&7”"
+  Attributes:
+    MainHand:
+      MovementSpeed: -0.35
+  Hide:
+  - ATTRIBUTES
+VoidLauncher:
+  Id: 138
+  Display: "&6&oThe Singularity&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5&o✶"
+  - "&0 "
+  - "&7Type: &fLauncher"
+  - "&7Ammo: &fDiamond"
+  - "&7Radius: &f5 Blocks"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c0.0-3000.0❤"
+  - "&0 "
+  - "&6★ &7&oGrenades detonate exactly 1.5"
+  - "&7&o  seconds after launch."
+  - "&6★ &7&oInflicts &8&oBlindness&7&o, &8&oSlowness&7&o, and"
+  - "&8&o  Wither X &7&oon all targets in radius"
+  - "&7&o  for up to 5.0s."
+  - "&0 "
+  - "&7“&6Formed from the core of the Void,"
+  - "&6 the singularity is a well of limitless"
+  - "&6 power--and some say it has grown"
+  - "&6 a mind of its own...&7”"
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Shield_Regen:
+  Id: 442
+  Display: "&6&oEldritch Aegis"
+  Lore:
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5&o✶"
+  - "&0 "
+  - "&6★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, gain &a&oRegen. X"
+  - "&7&o  for up to 10.0s."
+  - "&0 "
+  - "&7“&6Within the depths of the void,"
+  - "&6 the Titans rise again, reborn"
+  - "&6 as the old gods...&7”"
+  Options:
+    Color: GREEN
+    Unbreakable: true
+  BannerLayers:
+  - LIME GRADIENT_UP
+  - GRAY STRAIGHT_CROSS
+  - GRAY RHOMBUS_MIDDLE
+  - LIME CIRCLE_MIDDLE
+  - GRAY FLOWER
+  Enchantments:
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+T1_Wrath:
+  Id: 298
+  Display: "&6&oAspect of Wrath"
+  Lore:
+  - "&7No Enchantments"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5&o✶"
+  - "&0 "
+  - "&6★ &7&o50% chance to add &c&o100.0❤ &7&odamage"
+  - "&7&o  to all attacks."
+  - "&6★ &7&o25% chance to add &c&o500.0❤ &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&6★ &7&o25% chance to add &c&o250.0❤ &7&odamage"
+  - "&7&o  to all ranged/magic attacks."
+  - "&0 "
+  - "&7“&6As realms collapsed and universes"
+  - "&6 merged, only the Void remained--an"
+  - "&6 eternal, timeless constant...&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - skill{s=Phys_100} @target ~onAttack 0.5
+  - skill{s=Phys_100} @target ~onBowHit 0.5
+  - skill{s=Phys_500} @target ~onAttack 0.25
+  - skill{s=Phys_250} @target ~onBowHit 0.25

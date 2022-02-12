@@ -1,0 +1,126 @@
+### BASE ITEMS (3.0+)
+### LEVEL 1 BASE ITEMS -----------------------------------------
+B1_1:
+  Id: 268
+  Display: "&9Rustic Sword"
+  Lore:
+  - "&7Sharpness XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Level: &f✦&8✦✦✦✦"
+  - "&7Rarity: &fCommon"
+  - "&0 "
+  - "&9★ &a+15% &7attack speed."
+  - "&0 "
+  - "&7“&9Lore WIP.&7”"
+  Enchantments:
+  - DAMAGE_ALL:20
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.5
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+### LEVEL 2 BASE ITEMS -----------------------------------------
+B2_1:
+  Id: 272
+  Display: "&9Elder Sword"
+  Lore:
+  - "&7Sharpness C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Level: &f✦✦&8✦✦✦"
+  - "&7Rarity: &fCommon"
+  - "&0 "
+  - "&9★ &a+25% &7attack speed."
+  - "&0 "
+  - "&7“&9Lore WIP.&7”"
+  Enchantments:
+  - DAMAGE_ALL:100
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.45
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+### LEVEL 3 BASE ITEMS -----------------------------------------
+B3_1:
+  Id: 267
+  Display: "&9Ancient Sword"
+  Lore:
+  - "&7Sharpness CCL"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Level: &f✦✦✦&8✦✦"
+  - "&7Rarity: &fCommon"
+  - "&0 "
+  - "&9★ &a+35% &7attack speed."
+  - "&0 "
+  - "&7“&9Lore WIP.&7”"
+  Enchantments:
+  - DAMAGE_ALL:250
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.4
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+### LEVEL 4 BASE ITEMS -----------------------------------------
+B4_1:
+  Id: 276
+  Display: "&9Forgotten Sword"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Level: &f✦✦✦✦&8✦"
+  - "&7Rarity: &fCommon"
+  - "&0 "
+  - "&9★ &a+50% &7attack speed."
+  - "&0 "
+  - "&7“&9Lore WIP.&7”"
+  Enchantments:
+  - DAMAGE_ALL:500
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.3
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+### LEVEL 5 BASE ITEMS -----------------------------------------
+B5_1:
+  Id: 283
+  Display: "&9Infernal Sword"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Level: &f✦✦✦✦✦"
+  - "&7Rarity: &fCommon"
+  - "&0 "
+  - "&9★ &a+75% &7attack speed."
+  - "&0 "
+  - "&7“&9Lore WIP.&7”"
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE

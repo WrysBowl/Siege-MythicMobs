@@ -1,0 +1,473 @@
+### ATLAS UNIQUES (Mid Tier) -----------------------------------
+WraithMelee:
+  Id: 293
+  Display: "&6&oRuneleaf Scythe"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6★ &a&o+75% &7&oattack speed."
+  - "&6★ &7&o20% chance to inflict &c&o100.0❤"
+  - "&4&o  Bleed &7&odamage over a period"
+  - "&7&o  of 1.0s."
+  - "&0 "
+  - "&7“&6Legends say this ancient tool"
+  - "&6 was taken from the remains of"
+  - "&6 a Titan, slain long ago.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Bleed_100} @target ~onAttack 0.2
+WraithHelm:
+  Id: 298
+  Display: "&6&oRuneleaf Crest"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6★ &a&o+30% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oYou have &a&oRegeneration X&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&6★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to"
+  - "&7&o  all melee attacks."
+  - "&0 "
+  - "&7“&6A strange inscription is written"
+  - "&6 on the front side of this ancient"
+  - "&6 worn-out helmet.&7”"
+  Options:
+    Color: 143,87,255
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 30.0
+      MovementSpeed: 0.3
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Phys_150-300} @target ~onAttack
+  - potion{type=REGENERATION;duration=200;lvl=9;overwrite=true} @Self ~onTimer:100
+WraithLegs:
+  Id: 300
+  Display: "&6&oRuneleaf Leggings"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore &c&o15.0❤ &7&owhenever you hit"
+  - "&7&o  an enemy with your melee attacks."
+  - "&6★ &7&oRestore &c&o4.0❤ &7&owhenever you hit"
+  - "&7&o  an enemy with your ranged/magic"
+  - "&7&o  attacks."
+  - "&0 "
+  - "&7“&6There is no greater combination of"
+  - "&6 power than the union of strength"
+  - "&6 and wisdom.&7”"
+  Options:
+    Color: 143,87,255
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - heal{a=30} @Self ~onAttack
+  - heal{a=8} @Self ~onBowHit
+### BLADE GOLEM ------------------------------------------------
+StoneforgeAxe:
+  Id: 258
+  Display: "&6&oMountain Cleaver"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Knockback II"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6★ &a&o+50% &7&oattack speed."
+  - "&6★ &7&oAdds &c&o15.0❤ &7&odamage to all melee"
+  - "&7&o  attacks for every 10 &a&oStrength&7&o."
+  - "&7&o  (E.g. 300.0 extra damage from"
+  - "&7&o  Strength CC.)"
+  - "&0 "
+  - "&7“&6This massive hatchet is fabled to"
+  - "&6 have created the ravine where"
+  - "&6 Stoneforge was built.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.25
+  Enchantments:
+  - DAMAGE_ALL:500
+  - KNOCKBACK:2
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=PhysFromStrength} @Self ~onAttack
+StoneforgeHelm:
+  Id: 306
+  Display: "&6&oStoneforge Greathelm"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6★ &8&o-50% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&o35% chance to inflict &8&oSlowness IV"
+  - "&7&o  for 5.0s with all your attacks."
+  - "&6★ &7&oAdds &c&o250.0❤ &7&odamage to all melee"
+  - "&7&o  attacks against &8&oSlowed &7&oenemies."
+  - "&0 "
+  - "&7“&6This hefty helmet has a strangely"
+  - "&6 high amount of weight to it, despite"
+  - "&6 being made of lightweight material.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 30.0
+      MovementSpeed: -0.5
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - potion{type=SLOW;duration=100;lvl=3;overwrite=true} @target ~onAttack 0.5
+  - potion{type=SLOW;duration=100;lvl=3;overwrite=true} @target ~onBowHit 0.25
+  - skill{s=ExtraSlowDamage} @target ~onAttack
+StoneforgeLegs:
+  Id: 308
+  Display: "&6&oStoneforge Greaves"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6★ &8&o-50% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oYou are immune to &d&oLevitation&7&o."
+  - "&6★ &7&oAdds &c&o75.0-150.0❤ &7&odamage to all"
+  - "&7&o  ranged/magic attacks."
+  - "&0 "
+  - "&7“&6The inhabitants of Stoneforge had"
+  - "&6 discovered weight was the key to"
+  - "&6 remaining grounded in battle.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 30.0
+      MovementSpeed: -0.5
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  Skills:
+  - skill{s=Phys_75-150} @target ~onBowHit
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+### AZURE GUARDIAN ---------------------------------------------
+AzureMagic:
+  Id: 403
+  Display: "&6&oCoalescence&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c60.0❤x3"
+  - "&0 "
+  - "&6★ &7&oGain &c&o25.0❤ &7&oextra damage for"
+  - "&7&o  every level of &a&oHaste&7&o. (Up to"
+  - "&7&o  250.0 damage from Haste X)."
+  - "&0 "
+  - "&7“&6In time, the people of the Azure"
+  - "&6 Islands would explore all of the"
+  - "&6 world, forming the Aquir Empire.&7”"
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Skills:
+  - skill{s=PhysFromHaste} @target ~onBowHit
+AzureHelm:
+  Id: 298
+  Display: "&6&oThe Azure Ring"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o75.0-150.0❤ &7&odamage to"
+  - "&7&o  all ranged/magic attacks."
+  - "&6★ &7&oYou have &a&oHaste X&7&o. (Refreshes"
+  - "&7&o  once every 5.0s)."
+  - "&0 "
+  - "&7“&6Warriors of the Azure Islands"
+  - "&6 worshipped lightning, thus they"
+  - "&6 took on its form in battle.&7”"
+  Options:
+    Color: 80,86,185
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Phys_75-150} @target ~onBowHit
+  - potion{type=FAST_DIGGING;duration=200;lvl=9;overwrite=true} @Self ~onTimer:100
+AzureLegs:
+  Id: 300
+  Display: "&6&oStriking Fury"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&o30% chance to gain &a&oSpeed X"
+  - "&7&o  for 15.0s whenever you take"
+  - "&7&o  damage."
+  - "&0 "
+  - "&7“&6The power of lightning allowed"
+  - "&6 people of the Azure Islands to"
+  - "&6 evolve at an alarming pace.&7”"
+  Options:
+    Color: 80,86,185
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - potion{type=SPEED;duration=300;lvl=9;overwrite=true} @Self ~onDamaged 0.3
+### STORM KING -------------------------------------------------
+SniperZ:
+  Id: 419
+  Display: "&6&oThe Ram's Horn&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&7Type: &fSniper"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c150.0❤"
+  - "&0 "
+  - "&6★ &7&o10.0x damage on headshot."
+  - "&6★ &7&o200% increased knockback."
+  - "&6★ &7&oKnockback from this weapon"
+  - "&7&o  cannot be resisted."
+  - "&0 "
+  - "&7“&6Distance is the enemy of many,"
+  - "&6 if not all, attackers.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+StormChest:
+  Id: 311
+  Display: "&6&oLightning Coil"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore &c&o10.0❤ &7&oevery second."
+  - "&6★ &7&o25% chance to &3&oShock &7&oenemies"
+  - "&7&o  within 5 blocks for up to 5.0s"
+  - "&7&o  whenever you attack."
+  - "&0 "
+  - "&7“&6The soul is the perfect conduit"
+  - "&6 for channeling electricity.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_EXPLOSIONS:10
+  Skills:
+  - heal{a=10} @Self ~onTimer:10
+  - skill{s=Item_ShockNova} @Self ~onAttack 0.3
+  - skill{s=Item_ShockNova} @Self ~onBowHit 0.2
+StormBoots:
+  Id: 313
+  Display: "&6&oThunderstep"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6★ &a&o+50% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o200.0-350.0❤ &7&odamage to all"
+  - "&7&o  attacks against &3&oShocked &7&oenemies."
+  - "&0 "
+  - "&7“&6Nothing marches forwards with as"
+  - "&6 much intent as a coming storm.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      Health: 30.0
+      MovementSpeed: 0.5
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=Shock_200-350} @target ~onAttack
+  - skill{s=Shock_200-350} @target ~onBowHit
+### HULAAK THE MIGHTY ------------------------------------------
+FrostBuff:
+  Id: 334
+  Display: "&6&oHulaak's Warcry&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&7Type: &fMagic (Buff)"
+  - "&7Radius: &f20 Blocks"
+  - "&7Cooldown: &f30 Seconds"
+  - "&0 "
+  - "&6★ &7&oPlayers within radius gain"
+  - "&a&o  Strength CC &7&ofor 10.0s."
+  - "&0 "
+  - "&7“&6Hulaak easily rallied legions"
+  - "&6 of followers with his distinct"
+  - "&6 earsplitting call.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Skills:
+  - skill{s=Warcry_Strength} @Self ~onUse
+Shield_Frost:
+  Id: 442
+  Display: "&6&oVraast's Banner"
+  Lore:
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6» &7&oWhile equipped in off hand:"
+  - "&6★ &c&o+15.0❤ &7&omaximum health."
+  - "&6★ &7&o20% chance to &b&oFreeze &7&oenemies"
+  - "&7&o  for 5.0s with all your attacks."
+  - "&6★ &7&oRestore &c&o50.0❤ &7&owhenever you hit"
+  - "&7&o  a &b&oFrozen &7&oenemy."
+  - "&0 "
+  - "&7“&6A heavy shield used by members of"
+  - "&6 the frost legion, eternally cursed"
+  - "&6 to be undead.&7”"
+  Options:
+    Color: LIGHT_BLUE
+    Unbreakable: true
+  Attributes:
+    OffHand:
+      Health: 30.0
+  BannerLayers:
+  - WHITE CURLY_BORDER
+  - BLUE RHOMBUS_MIDDLE
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack 0.25
+  - skill{s=InflictFreeze} @target ~onBowHit 0.15
+  - skill{s=FreezeHeal} @Self ~onAttack
+  - skill{s=FreezeHeal} @Self ~onBowHit
+FrostHelm:
+  Id: 310
+  Display: "&6&oHulaak's Jaw"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &e✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o250.0-400.0❤ &7&odamage to all"
+  - "&7&o  attacks against &b&oFrozen &7&oenemies."
+  - "&6★ &7&o25% chance for your ranged/magic"
+  - "&7&o  attacks to &b&oFreeze &7&oenemies for 5.0s."
+  - "&6★ &7&o35% chance for your melee attacks"
+  - "&7&o  to &b&oFreeze &7&oenemies for 5.0s."
+  - "&0 "
+  - "&7“&6This massive hunk of bone came from"
+  - "&6 the corpse of an incredibly powerful"
+  - "&6 giant--servant to the Titan, Vraast.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=ExtraFreezeDamage3} @target ~onAttack
+  - skill{s=InflictFreeze} @target ~onAttack 0.35
+  - skill{s=InflictFreeze} @target ~onBowHit 0.25

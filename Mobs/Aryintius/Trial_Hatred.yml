@@ -1,0 +1,79 @@
+###---------------------------------------###
+### TRIAL OF HATRED
+###---------------------------------------###
+Firesworn:
+  Type: HUSK
+  Display: "&6« &eFiresworn &6»"
+  Health: 500
+  Damage: 1000
+  Drops:
+  - Currency_Trials_1
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - FireHead:4
+  - Firesong_Chest:3
+  - Firesong_Legs:2
+  - Firesong_Boots:1
+  - gold_sword:0
+  - gold_sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+MagmaRager: 
+  Type: BABY_ZOMBIE
+  Display: "&6« &eMagma Rager &6»"
+  Health: 2
+  Damage: 15
+  # Drops:
+  # - Placeholder
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - MAGMA:4
+  - Firesong_Chest:3
+  - Firesong_Legs:2
+  - Firesong_Boots:1
+  - gold_sword:0
+  - gold_sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+InfernalSpectre:
+  Type: WITHER_SKELETON
+  Display: "&4« &cInfernal Spectre &4»"
+  Health: 1600
+  Damage: 1000
+  Drops:
+  - Currency_Trials_3
+  - Exalted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - MAGMA:4
+  - Firesong_Chest:3
+  - Firesong_Legs:2
+  - Firesong_Boots:1
+  - Bow_Spectre4:0
+  - 0:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=SummonRager} @Self ~onTimer:200
+  - skill{s=SpeedBuff} @Self =50%
+  - command{c="mm mobs kill MagmaRager"} ~onDeath

@@ -1,0 +1,571 @@
+###---------------------------------------------------------###
+### WEAPONS
+###---------------------------------------------------------###
+T3_1:
+  Id: 276
+  Display: "&9Forgotten Blade"
+  Lore:
+  - "&7Sharpness L"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+50% &7attack speed."
+  - "&9★ &a+10% &7movement speed."
+  - "&0 "
+  - "&7“&9Forged by a smith with no"
+  - "&9 face and wielded by a king"
+  - "&9 with no name.&7”"
+  Enchantments:
+  - DAMAGE_ALL:50
+  - DURABILITY:9999
+  - MENDING:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.3
+      MovementSpeed: 0.1
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_2:
+  Id: 267
+  Display: "&9Bloodlust"
+  Lore:
+  - "&7Sharpness XXV"
+  - "&7Smite XXV"
+  - "&7Bane of Arthropods XXV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+50% &7attack speed."
+  - "&0 "
+  - "&7“&9I hunger for vengeance"
+  - "&9 and nothing less.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:25
+  - DAMAGE_ARTHROPODS:25
+  - DAMAGE_ALL:25
+  - DURABILITY:9999
+  - MENDING:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.5
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_3:
+  Id: 258
+  Display: "&9Heavy Greataxe"
+  Lore:
+  - "&7Sharpness C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &8-80% &7movement speed."
+  - "&0 "
+  - "&7“&9Despite its encumbering"
+  - "&9 weight, this axe retains"
+  - "&9 a very powerful blade.&7”"
+  Enchantments:
+  - DAMAGE_ALL:100
+  - DURABILITY:9999
+  - MENDING:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.6
+      MovementSpeed: -0.8
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_4:
+  Id: 359
+  Display: "&9Winged Claw"
+  Lore:
+  - "&7Sharpness C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+100% &7attack speed."
+  - "&0 "
+  - "&7“&9A set of razor-sharp spikes"
+  - "&9 fastened to a leather glove.&7”"
+  Enchantments:
+  - DAMAGE_ALL:100
+  - DURABILITY:9999
+  - MENDING:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.1
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_5:
+  Id: 261
+  Display: "&9Oakheart Bow"
+  Lore:
+  - "&7Power C"
+  - "&7Infinity"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7“&9Blessed by the ancients and"
+  - "&9 carved from the core of the"
+  - "&9 wisest of trees.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:100
+  - ARROW_INFINITE:1
+  - DURABILITY:9999
+  - MENDING:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_6:
+  Id: 277
+  Display: "&9Spade Spear"
+  Lore:
+  - "&7Sharpness CL"
+  - "&7Efficiency X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+25% &7movement speed."
+  - "&0 "
+  - "&7“&9It's a spear. It's a spade."
+  - "&9 It's a... spaerde?&7”"
+  Enchantments:
+  - DIG_SPEED:10
+  - DAMAGE_ALL:150
+  - DURABILITY:9999
+  - MENDING:10
+  Attributes:
+    MainHand:
+      MovementSpeed: 0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_7:
+  Id: 272
+  Display: "&9Runic Longsword"
+  Lore:
+  - "&7Smite XXV"
+  - "&7Sharpness L"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+20% &7attack speed."
+  - "&9★ &a+20% &7movement speed."
+  - "&0 "
+  - "&7“&9An ancient stone sword"
+  - "&9 with strange carvings on"
+  - "&9 its weathered blade.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:25
+  - DAMAGE_ALL:50
+  - DURABILITY:9999
+  - MENDING:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.5
+      MovementSpeed: 0.2
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_8:
+  Id: 283
+  Display: "&9Blessed Rapier"
+  Lore:
+  - "&7Sharpness C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+30% &7attack speed."
+  - "&9★ &c+5.0❤ &7while in off hand."
+  - "&9★ &c+10.0❤ &7while in main hand."
+  - "&0 "
+  - "&7“&9A lightweight, powerful sword"
+  - "&9 imbued with a holy essence.&7”"
+  Enchantments:
+  - DAMAGE_ALL:100
+  - DURABILITY:9999
+  - MENDING:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.45
+      Health: 20.0
+    OffHand:
+      Health: 10.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_9:
+  Id: 280
+  Display: "&9Master's Staff"
+  Lore:
+  - "&7Smite XV"
+  - "&7Sharpness L"
+  - "&7Bane of Arthropods XV"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7“&9Used by ancient monks to"
+  - "&9 train in many martial arts.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:15
+  - DAMAGE_ALL:50
+  - DAMAGE_ARTHROPODS:15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_10:
+  Id: 352
+  Display: "&9Cave Bone"
+  Lore:
+  - "&7Smite L"
+  - "&7Bane of Arthropods C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &c+7.5❤ &7while in off hand."
+  - "&0 "
+  - "&7“&9A heavy bone used by early"
+  - "&9 humans to hunt for prey.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:50
+  - DAMAGE_ARTHROPODS:100
+  Attributes:
+    OffHand:
+      Health: 15.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### ARMOR BITS (No effects)
+###---------------------------------------------------------###
+T3_11:
+  Id: 307
+  Display: "&9Ironscale Cuirass"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &c+10.0❤ &7while equipped."
+  - "&9★ &8-15% &7movement speed."
+  - "&0 "
+  - "&7“&9A strange, heavy armor made"
+  - "&9 from various small hardened"
+  - "&9 scales.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 20.0
+      MovementSpeed: -0.15
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_12:
+  Id: 313
+  Display: "&9The Slow Step"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &c+15.0❤ &7while equipped."
+  - "&9★ &8-90% &7movement speed."
+  - "&0 "
+  - "&7“&9Slow and steady wins the"
+  - "&9 race. Strong and ready"
+  - "&9 survives the war.&7”"
+  Enchantments:
+  - PROTECTION_FALL:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 30.0
+      MovementSpeed: -0.9
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_13:
+  Id: 305
+  Display: "&9Winged Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+80% &7movement speed."
+  - "&0 "
+  - "&7“&9A blessed relic from a dying"
+  - "&9 age--bursts of speed shall"
+  - "&9 now ease your rage.&7”"
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.8
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_14:
+  Id: 308
+  Display: "&9Unyielding Stance"
+  Lore:
+  - "&7Protection XV"
+  - "&7Blast Protection XV"
+  - "&7Projectile Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &c-5.0❤ &7while equipped."
+  - "&9★ &8-30% &7movement speed."
+  - "&0 "
+  - "&7“&9Most fall when they are"
+  - "&9 struck. I remain still and"
+  - "&9 enjoy the breeze.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:15
+  - PROTECTION_EXPLOSIONS:15
+  - PROTECTION_PROJECTILE:15
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: -10.0
+      MovementSpeed: -0.3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_15:
+  Id: 310
+  Display: "&9Frost Crown"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &c+10.0❤ &7while equipped."
+  - "&9★ &8-20% &7movement speed."
+  - "&0 "
+  - "&7“&9An icy touch shrouds your"
+  - "&9 gaze. A glassy stare now"
+  - "&9 ends your daze.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 20.0
+      MovementSpeed: -0.20
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### UNIQUE WEAPONS (Stuff with effects)
+###---------------------------------------------------------###
+T3_U1:
+  Id: 284
+  Display: "&9Mechanical Spade"
+  Lore:
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &7Effect: &aHaste II&7."
+  - "&9★ &a+20% &7attack speed."
+  - "&0 "
+  - "&7“&9It beeps!&7”"
+  Enchantments:
+  - DURABILITY:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.5
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_U2:
+  Id: 279
+  Display: "&9Forgotten Cleaver"
+  Lore:
+  - "&7Smite XL"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &7Effect: &aStrength II&7."
+  - "&9★ &a+20% &7attack speed."
+  - "&9★ &a+20% &7movement speed."
+  - "&0 "
+  - "&7“&9Legends told of a design"
+  - "&9 for a weapon like this one,"
+  - "&9 curved yet resilient.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:40
+  - DURABILITY:9999
+  - MENDING:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.5
+      MovementSpeed: 0.2
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_U3:
+  Id: 276
+  Display: "&9Spirit Ravager"
+  Lore:
+  - "&7Sharpness XXV"
+  - "&7Smite XXV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &7Effect: &aSpeed II&7."
+  - "&9★ &a+50% &7attack speed."
+  - "&0 "
+  - "&7“&9An ancient sword forged"
+  - "&9 from captured souls strung"
+  - "&9 together.&7”"
+  Enchantments:
+  - DAMAGE_ALL:25
+  - DAMAGE_UNDEAD:25
+  - DURABILITY:9999
+  - MENDING:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.35
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_U4:
+  Id: 277
+  Display: "&9Giant's Spear"
+  Lore:
+  - "&7Sharpness CC"
+  - "&7Knockback V"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &7Effect: &aResist. II&7."
+  - "&9★ &8-40% &7attack speed."
+  - "&9★ &8-40% &7movement speed."
+  - "&0 "
+  - "&7“&9The ground seems to shake"
+  - "&9 as you drag this massive"
+  - "&9 weapon at your side...&7”"
+  Enchantments:
+  - DAMAGE_ALL:200
+  - KNOCKBACK:5
+  - MENDING:1
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.85
+      MovementSpeed: -0.4
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### SHIELDS
+###---------------------------------------------------------###
+Shield_Hyacinth:
+  Id: 442
+  Display: "&9Hyacinth Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Effect: &aRegeneration II"
+  - "&0 "
+  - "&7“&9A lightweight, elegant shield"
+  - "&9 forged with ancient magics.&7”"
+  Options:
+    Color: SILVER
+    Unbreakable: true
+  BannerLayers:
+  - WHITE TRIANGLE_TOP
+  - WHITE TRIANGLE_BOTTOM
+  - GRAY CURLY_BORDER
+  - PURPLE RHOMBUS_MIDDLE
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Shield_Aquir:
+  Id: 442
+  Display: "&9Aquir Aegis"
+  Lore:
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Effect: &aWaterbreathing"
+  - "&0 "
+  - "&7“&9A powerful shield forged"
+  - "&9 by great craftsmen in the"
+  - "&9 days of the Aquir empire.&7”"
+  Options:
+    Color: LIGHT_BLUE
+    Unbreakable: true
+  BannerLayers:
+  - CYAN HALF_VERTICAL
+  - GRAY STRIPE_MIDDLE
+  - GRAY STRIPE_CENTER
+  - WHITE STRAIGHT_CROSS
+  - ORANGE CIRCLE_MIDDLE
+  - BLUE GRADIENT_UP
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Shield_Sunrise:
+  Id: 442
+  Display: "&9Sunrise Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Effect: &aFire Resistance"
+  - "&0 "
+  - "&7“&9Forged in the fires of"
+  - "&9 the earliest daylight.&7”"
+  Options:
+    Color: PINK
+    Unbreakable: true
+  BannerLayers:
+  - YELLOW FLOWER
+  - ORANGE CIRCLE_MIDDLE
+  - WHITE TRIANGLE_BOTTOM
+  - BROWN TRIANGLES_BOTTOM
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE

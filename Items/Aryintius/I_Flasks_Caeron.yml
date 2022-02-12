@@ -1,0 +1,83 @@
+### CAERON SHOP FLASKS -----------------------------------------
+CFlask_1:
+  Id: 437
+  Display: "&9Assassin's Acrimony&9"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&9★ &7Gain &aHaste X &7for 10.0s."
+  - "&9★ &7Restores full health on use."
+  - "&0 "
+  - "&7“&9By inflicting death upon others,"
+  - "&9 you destroy yourself the most.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+CFlask_2:
+  Id: 437
+  Display: "&9Sentinel's Stability&9"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&9★ &7Gain &aRegen. X &7for 10.0s."
+  - "&9★ &7Gain &aWaterbreathing &7for 10.0s."
+  - "&0 "
+  - "&7“&9The Aquir machines were reknown"
+  - "&9 for their incredible durability.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+CFlask_3:
+  Id: 437
+  Display: "&9Rabbit's Rush&9"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&9★ &7Gain &aSpeed V &7for 10.0s."
+  - "&9★ &7Gain &aJump Boost II &7for 10.0s."
+  - "&9★ &7Removes &8Slowness &7on use."
+  - "&9★ &7Removes &8Levitation &7on use."
+  - "&0 "
+  - "&7“&9To chase the hare is to revel"
+  - "&9 in one's own foolishness.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+CFlask_4:
+  Id: 437
+  Display: "&9Tanuki's Tenacity&9"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&9★ &7Gain &aStrength C &7for 10.0s."
+  - "&9★ &7Suffer &8Blindness &7for 3.0s."
+  - "&0 "
+  - "&7“&9Loyalty is the progenitor of"
+  - "&9 patience and determination.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10

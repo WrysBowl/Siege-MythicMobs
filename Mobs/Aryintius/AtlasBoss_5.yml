@@ -1,0 +1,98 @@
+AtlasBoss_5:
+  Type: STRAY
+  Display: "&8&l<&7« &eSand Spirit &7»&8&l>"
+  Health: 15000
+  Damage: 1000
+  BossBar:
+    Enabled: true
+    Title: "&8&l<&7« &eThe Spirit of the Sands &7»&8&l>"
+    Range: 30
+    Color: YELLOW
+    Style: SOLID
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - BlockHead_4B:4
+  - UChest_8:3
+  - ULegs_8:2
+  - UBoots_8:1
+  - WOOD_SWORD:0
+  - WOOD_SWORD:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Currency_Atlas_Boss
+  - AtlasBoss_5
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fNone shall disturb these ancient bones."} @PlayersInRadius{r=30} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7These dunes shall swallow you whole!",
+      "<mob.name> &7I will erode your soul into dust!",
+      "<mob.name> &7The power of the winds will destroy you!";
+      } @PIR{r=30} ~onTimer:300
+  - effect:sound{s=entity.wither.hurt;p=2.0;v=0.25} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=2.0;v=0.5} @self ~onDamaged
+### PHASE 1
+  - summon{mob=A5_TornadoPointer;amount=1;radius=10;yu=true} @Self ~onTimer:400
+  - skill{s=A5_Phase_1} @NearestPlayer{r=30} ~onTimer:10 >60%
+### PHASE 2
+  - skill{s=A5_Phase_2} @NearestPlayer{r=30} ~onTimer:10 <60%
+### DEATH STUFF
+  - message{m="<mob.name> &fI return... to the sands..."} @PlayersInRadius{r=30} ~onDeath
+  - remove @MIR{r=50;t=A5_TornadoPointer} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+A5_TornadoPointer:
+  Type: BABY_ZOMBIE
+  Display: ''
+  Health: 20
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+  - potion{type=INVISIBILITY;duration=200;level=1} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;level=1} @Self ~onTimer:20
+  - skill{s=A5_Tornado} @Self ~onSpawn
+  - skill{s=A5_Tornado} @Self ~onTimer:100
+  - skill{s=A5_TornadoX} @Self ~onTimer:10
+  - remove{delay=200} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true

@@ -1,0 +1,87 @@
+### LEGACY FLASKS ----------------------------------------------
+LGC_Flask4:
+  Id: 437
+  Display: "&6&oUndying Rage&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f15 Seconds"
+  - "&0 "
+  - "&6★ &7&oGain &a&oStrength CC &7&ofor 10.0s."
+  - "&6★ &7&oRemoves &a&oRegeneration &7&oon use."
+  - "&6★ &7&oRemoves all gold hearts on use."
+  - "&0 "
+  - "&7“&6The ashes of the fallen give rise"
+  - "&6 to new life. But the eternals feel"
+  - "&6 none, for they cannot die...&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+LGC_Flask5:
+  Id: 437
+  Display: "&6&oStoneheart Brew&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&6★ &7&oGain &a&oResist. V &7&ofor 10.0s."
+  - "&6★ &7&oSuffer &8&oSlowness X &7&ofor 3.0s."
+  - "&6★ &7&oSuffer &8&oWeakness X &7&ofor 3.0s."
+  - "&0 "
+  - "&7“&6A strange elixir distilled from a"
+  - "&6 recipe that has long since been"
+  - "&6 forgotten...&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+LGC_Flask11:
+  Id: 437
+  Display: "&6&oFlask of Lifeforce&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f60 Seconds"
+  - "&0 "
+  - "&6★ &7&oGain &a&oRegen. X &7&ofor up to 10.0s."
+  - "&6★ &c&o+10.0❤ &7&omaximum HP for 5 minutes."
+  - "&0 "
+  - "&7“&6In the end, no essence resonates"
+  - "&6 stronger than life itself.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+LGC_VFlask_L1:
+  Id: 437
+  Display: "&6&oSunfoil Brew&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f30 Seconds"
+  - "&0 "
+  - "&6★ &7&oSets your gold hearts to"
+  - "&e&o  100.0❤ &7&ofor up to 20.0s."
+  - "&6★ &7&oRemoves &a&oResistance &7&oon use."
+  - "&0 "
+  - "&7“&6Channeled directly from within"
+  - "&6 a star, this fiery brew grants"
+  - "&6 terrifying power.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10

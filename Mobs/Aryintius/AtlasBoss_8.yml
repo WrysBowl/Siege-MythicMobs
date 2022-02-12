@@ -1,0 +1,64 @@
+AtlasBoss_8:
+  Type: HUSK
+  Display: "&4&l<&c« &fBlade Golem &c»&4&l>"
+  Health: 25000
+  Damage: 2000
+  BossBar:
+    Enabled: true
+    Title: "&4&l<&c« &fBlade Golem &c»&4&l>"
+    Range: 25
+    Color: RED
+    Style: SEGMENTED_6
+  Disguise:
+    Type: IRON_GOLEM
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - AtlasBoss_8
+  - Currency_Atlas_Boss2
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fThousands of years alone have given me sentience, but you are still an intruder in this domain I have sworn to protect."} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7Leave now and never come back!",
+      "<mob.name> &7There is nothing here for you to take.",
+      "<mob.name> &7Go now, before I am forced to destroy you.";
+      } @PIR{r=25} ~onTimer:300
+  - effect:sound{s=entity.irongolem.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.irongolem.hurt;p=1.0;v=0.5} @self ~onDamaged
+### PHASE 1
+  - skill{s=A8_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >55%
+### PHASE 2
+  - skill{s=A8_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <55%
+### DEATH STUFF
+  - message{m="<mob.name> &fI have failed you, Stoneforge..."} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

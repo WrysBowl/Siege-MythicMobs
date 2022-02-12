@@ -1,0 +1,98 @@
+LabBoss4:
+  Type: STRAY
+  Display: '&4&l<&4« &cVenrok &4»&4&l>'
+  Health: 2000
+  Damage: 10
+  BossBar:
+    Enabled: true
+    Title: '&4&l<&4« &cHigh Guardian Venrok &4»&4&l>'
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_6
+  Equipment:
+  - UHelm_1:4
+  - CChest:3
+  - ULegs_1:2
+  - CBoots:1
+  - T0_3:0
+  - Shield_Paladin:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Food
+  - Money_Boss
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - Exalted
+  - Mythic
+  - MicroIridescent
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.4
+    FollowRange: 120
+    MaxCombatDistance: 120
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Despawn: false
+  Skills:
+### SPAWN
+  - message{m="<mob.name> &fI alone control the winds. Kneel before me!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &fThe winds shall see to it that your existence is no more!",
+      "<mob.name> &fSuch weapons cannot harm me, mortal, for I am divine!",
+      "<mob.name> &fYour death will make a great prize for the Architect!";
+      } @PIR{r=50} ~onTimer:300
+  - skill{s=CancelDespawn} @Self ~onTimer:20
+### PHASE 1
+  - skill{s=LB4_Drag} @self ~onTimer:100
+  - skill{s=LB4_Phase1} @PIR{r=50} ~onTimer:100 >50%
+### PHASE 2
+  - skill{s=DamageBuff} @Self =50%
+  - skill{s=SpeedBuff} @Self =50%
+  - skill{s=LB4_Phase2} @PIR{r=50} ~onTimer:100 <50%
+### SUMMONS
+  - skill{s=LB4_Summon} @Self ~onTimer:400
+### DEATH
+  - message{m="&f&l<&f« &6The Architect &f»&f&l> &eDestroyed another one of my wonderous guardians, have you? I will make an offer. Leave now, and I will spare your life. Stay and you will certainly die."} @PlayersInRadius{r=30} ~onDeath
+  - remove @MIR{r=50;t=TornadoPointer} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+TornadoPointer:
+  Type: BABY_ZOMBIE
+  Display: ''
+  Health: 1000
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=4} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=LB4_Tornado} @Self ~onSpawn
+  - skill{s=LB4_Tornado} @Self ~onTimer:100
+  - skill{s=LB4_TornadoX} @Self ~onTimer:10
+  - remove{delay=200} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true

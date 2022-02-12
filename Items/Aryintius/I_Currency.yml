@@ -1,0 +1,273 @@
+###---------------------------------------------------------###
+### CURRENCY ITEMS (Labyrinth, etc.)
+###---------------------------------------------------------###
+Coin_Silver:
+  Id: 452
+  Display: "&aSilver Coin"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&a★ &7&oCan be sold for Sigmas"
+  - "&7&o  or traded with NPCs."
+  - "&0 "
+  - "&7“&aOnce a universal measure"
+  - "&a of value across the world"
+  - "&a centuries ago.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Coin_Gold:
+  Id: 371
+  Display: "&aGold Coin"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&a★ &7&oCan be sold for Sigmas"
+  - "&7&o  or traded with NPCs."
+  - "&0 "
+  - "&7“&aSought by many, treasured"
+  - "&a by all. Gold was the center"
+  - "&a of all civilization.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Coin_Diamond:
+  Id: 264
+  Display: "&aUncut Diamond"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&a★ &7&oCan be sold for Sigmas"
+  - "&7&o  or traded with NPCs."
+  - "&0 "
+  - "&7“&aA priceless formation of"
+  - "&a the natural world, worth"
+  - "&a dozens of coins.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Coin_Emerald:
+  Id: 388
+  Display: "&aAncient Emerald"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&a★ &7&oCan be sold for Sigmas"
+  - "&7&o  or traded with NPCs."
+  - "&0 "
+  - "&7“&aThe sole remnant of a long"
+  - "&a dead civilization, often held"
+  - "&a as a symbol of pride.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Coin_Tear:
+  Id: 370
+  Display: "&aTearstone"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&a★ &7&oCan be sold for Sigmas"
+  - "&7&o  or traded with NPCs."
+  - "&0 "
+  - "&7“&aA crystalline material that"
+  - "&a is often found in the ruins"
+  - "&a of the Aquir Empire.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Coin_Nether:
+  Id: 399
+  Display: "&aStar Fragment"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&a★ &7&oCan be sold for Sigmas"
+  - "&7&o  or traded with NPCs."
+  - "&0 "
+  - "&7“&aUsed by many a Divine, few"
+  - "&a mortals could hope to own"
+  - "&a such treasures.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+###---------------------------------------------------------###
+### ENDGAME CURRENCY ITEMS (Vyrdano Crafting)
+###---------------------------------------------------------###
+DreamFragment:
+  Id: 406
+  Display: "&5&oDr&d&oeam Fragme&5&ont"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&d★ &7&oCan be traded with NPCs in"
+  - "&7&o  Vyrdano to create special"
+  - "&7&o  endgame items."
+  - "&0 "
+  - "&7“&dThe e&5ssence of a lo&dng-dead"
+  - "&d Titan, no&5w impris&doned within a"
+  - "&d morta&5l's soul.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+EtherCrystal:
+  Id: 377
+  Display: "&5&oEt&d&oher Cryst&5&oal"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&d★ &7&oCan be traded with NPCs in"
+  - "&7&o  Vyrdano to create special"
+  - "&7&o  endgame items."
+  - "&0 "
+  - "&7“&dA s&5hard of the Void, fore&dver"
+  - "&d entan&5gled in the lifef&dorce of"
+  - "&d th&5e world.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+ChaosSphere:
+  Id: 378
+  Display: "&5&oCh&d&oaos Sphe&5&ore"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&d★ &7&oCan be traded with NPCs in"
+  - "&7&o  Vyrdano to create special"
+  - "&7&o  endgame items."
+  - "&0 "
+  - "&7“&dBef&5ore there was life, th&dere"
+  - "&d was only p&5rimordial di&dscord.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+PhoenixAshes:
+  Id: 289
+  Display: "&5&oPh&d&ooenix Ash&5&oes"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&d★ &7&oCan be traded with NPCs in"
+  - "&7&o  Vyrdano to create special"
+  - "&7&o  endgame items."
+  - "&0 "
+  - "&7“&dLife s&5prings forth fro&dm the"
+  - "&d soi&5ls below, even in the fa&dce"
+  - "&d of even&5tual failu&dre.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+AncientHide:
+  Id: 367
+  Display: "&5&oAn&d&ocient Hi&5&ode"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&d★ &7&oCan be traded with NPCs in"
+  - "&7&o  Vyrdano to create special"
+  - "&7&o  endgame items."
+  - "&0 "
+  - "&7“&dA scr&5ap of hardened leat&dher"
+  - "&d cured from t&5he skin&ds of many"
+  - "&d for&5gotten creatu&dres.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Astralite:
+  Id: 266
+  Display: "&5&oAs&d&otrali&5&ote"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&d★ &7&oCan be traded with NPCs in"
+  - "&7&o  Vyrdano to create special"
+  - "&7&o  endgame items."
+  - "&0 "
+  - "&7“&dFor&5ged from the pures&dt of"
+  - "&d divine m&5etals, f&dew can match"
+  - "&d suc&5h strength and po&dwer.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+###---------------------------------------------------------###
+### DRAGON CURRENCY ITEMS (SUPER ENDGAME CRAFTING)
+###---------------------------------------------------------###
+Drachma:
+  Id: 175
+  Display: "&a&oDrachma"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&a★ &7&oCan be traded with NPCs"
+  - "&7&o  in Skull Island to create"
+  - "&7&o  special items."
+  - "&0 "
+  - "&7“&aAn ancient coin used for"
+  - "&a trading during the reign"
+  - "&a of the Aquir Empire.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Token:
+  Id: 347
+  Display: "&a&oBoss Token"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&a★ &7&oIngredient required to"
+  - "&7&o  create vaulted relics."
+  - "&a★ &7&oUse &f&o/dc &7&oto access the"
+  - "&7&o  divine crafting table."
+  - "&0 "
+  - "&7“&aTo explore the past we"
+  - "&a must use time reserved"
+  - "&a for the future.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+DragonScale:
+  Id: 351
+  Data: 2
+  Display: "&a&oDragon Scale"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&a★ &7&oCan be traded with NPCs"
+  - "&7&o  in Wyrmwood to create"
+  - "&7&o  special items."
+  - "&0 "
+  - "&7“&aThe darkened scale of a"
+  - "&a long-dead dragon.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES

@@ -1,0 +1,184 @@
+### MAGMOS' MINIONS -----------------------------------------------------------
+T2_Melee:
+  Type: HUSK
+  Display: "&6« &eAshen Soul &6»"
+  Health: 800
+  Damage: 750
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_1:4
+  - UChest_5:3
+  - ULegs_5:2
+  - UBoots_5:1
+  - Arch_Sword:0
+  - Shield_Frenzy:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.05} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Ignite_Title} @target ~onAttack 0.25
+  ### EFFECTS
+  - effect:sound{s=entity.blaze.hurt;p=1.0;v=1} @self ~onDamaged
+  - effect:sound{s=block.fire.extinguish;p=1.5;v=0.5} @self ~onDamaged
+T2_Mage:
+  Type: SKELETON
+  Display: "&4« &eFlamecaster &4»"
+  Health: 650
+  Damage: 500
+  Drops:
+  - Currency_Rifts_1
+  - Corrupted
+  - Mythic
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_2:4
+  - UChest_5:3
+  - ULegs_5:2
+  - UBoots_5:1
+  - BLAZE_ROD:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.05} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=T2_RandomFire} @NearestPlayer{r=20} ~onTimer:5 0.3
+  ### EFFECTS
+  - effect:sound{s=entity.blaze.hurt;p=1.0;v=1} @self ~onDamaged
+  - effect:sound{s=block.fire.extinguish;p=1.5;v=0.5} @self ~onDamaged
+T2_MiniBoss:
+  Type: MAGMA_CUBE
+  Display: "&4« &cLiving Magma &4»"
+  Health: 8000
+  Damage: 1200
+  Drops:
+  - Currency_Rifts_2
+  - Corrupted
+  - Mythic
+  - Iridescent
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_12:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - STICK:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventSlimeSplit: true
+    Size: 3
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=T2_Eruption} @NearestPlayer{r=15} ~onTimer:60
+  - skill{s=T2_Blast} @NearestPlayer{r=15} ~onTimer:40
+  ### EFFECTS
+  - effect:sound{s=entity.blaze.hurt;p=1.0;v=1} @self ~onDamaged
+  - effect:sound{s=block.fire.extinguish;p=1.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.zombie_villager.converted;p=2;v=2} @self ~onDeath
+### POINTER MOBS (For Skills Usage) -------------------------------------------
+T2_MeteorPointer: ### Pointer mob for meteor skill
+  Type: BAT
+  Display: ''
+  Health: 1000
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+  ### INITIALIZATION
+  - potion{type=DAMAGE_RESISTANCE;duration=100;level=4;overwrite=true} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=100;level=1;overwrite=true} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=100;level=1;overwrite=true} @Self ~onSpawn
+  ### TICKING/SKILLS
+  - potion{type=DAMAGE_RESISTANCE;duration=100;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=100;level=1;overwrite=true} @Self ~onTimer:10
+  - potion{type=INVISIBILITY;duration=100;level=1;overwrite=true} @Self ~onTimer:10
+  - skill{s=T2_Meteor} @Self ~onSpawn
+  ### ENDING
+  - remove{delay=20} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+T2_MeteorPointer2: ### Pointer mob for meteor explosion
+  Type: BAT
+  Display: ''
+  Health: 1000
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+  ### INITIALIZATION
+  - potion{type=DAMAGE_RESISTANCE;duration=100;level=4;overwrite=true} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=100;level=1;overwrite=true} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=100;level=1;overwrite=true} @Self ~onSpawn
+  ### TICKING/SKILLS
+  - potion{type=DAMAGE_RESISTANCE;duration=100;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=100;level=1;overwrite=true} @Self ~onTimer:10
+  - potion{type=INVISIBILITY;duration=100;level=1;overwrite=true} @Self ~onTimer:10
+  - skill{s=T2_MeteorExplosion} @Self ~onSpawn
+  ### ENDING
+  - remove{delay=20} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true

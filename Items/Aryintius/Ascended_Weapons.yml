@@ -1,0 +1,170 @@
+### ASCENDED ITEMS ---------------------------------------------
+# Upgraded Legendary items that have insane bonuses.
+WorldEater:
+  Id: 261
+  Display: "&6&oTh&e&oe World-Eat&6&oer&7&7"
+  Lore:
+  - "&7Power D"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c500.0❤"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&6★ &7&oFully-draw shots to cast ability."
+  - "&e★ &7&oDeals &c&o500.0❤ &5&oChaos &7&odamage for"
+  - "&7&o  each elemental effect inflicted."
+  - "&0 "
+  - "&7“&eWithi&6n the bowels of this barr&een"
+  - "&e land, the ol&6d gods lie dre&eaming.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:500
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=WorldEaterElements} @target ~onBowHit
+  # - heal{a=20} @Self ~onBowHit
+  # - skill{s=RandomPhys} @target ~onBowHit
+  # - skill{s=RandomChaos} @target ~onBowHit
+Skywhisper:
+  Id: 261
+  Display: "&6&oSk&e&oywhisp&6&oer&7&7"
+  Lore:
+  - "&7Power M"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c750.0❤"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&6★ &7&oFully-draw shots to cast ability."
+  - "&e★ &7&o50% critical strike chance."
+  - "&6★ &7&o100.0x damage on critical hit."
+  - "&0 "
+  - "&7“&eFar be&6yond the clouds t&ehere sits"
+  - "&e a lo&6nely tree, accompanied sol&eely"
+  - "&e by the v&6oice of th&ee wind.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:1000
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+ElementalBow:
+  Id: 261
+  Display: "&6&oEq&e&ouilibri&6&oum&7&7"
+  Lore:
+  - "&7Power D"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c80.0❤x12"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&e★ &7&oFully-draw shots to cast ability."
+  - "&6★ &7&o50% chance to convert base damage"
+  - "&7&o  into &5&oChaos &7&odamage on hit."
+  - "&e★ &7&o25% chance to &3&oShock&7&o, &b&oFreeze&7&o, &6&oIgnite"
+  - "&7&o  or &d&oCurse &7&oenemies on hit."
+  - "&0 "
+  - "&7“&eThe w&6orld hangs eternally i&en a small"
+  - "&e and fr&6agile balance.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:500
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Chaos_80} @target ~onBowHit 0.5
+  - skill{s=RandomDebuff} @target ~onBowHit 0.25
+### MELEE ITEMS ------------------------------------------------
+Judgement:
+  Id: 286
+  Display: "&6&oJu&e&odgeme&6&ont"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&6★ &a&o+75% &7&oattack speed."
+  - "&6★ &7&oAdds &c&o150.0❤ &7&odamage to all melee"
+  - "&7&o  attacks for every 20 &a&oStrength&7&o."
+  - "&7&o  (Up to 1500.0❤ from Strength CC.)"
+  - "&6★ &7&o25% chance to fully restore your"
+  - "&7&o  health and gold hearts on attack."
+  - "&0 "
+  - "&7“&eThe wor&6ld trembles in t&ehe wake of"
+  - "&e di&6vine retribu&etion.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=PhysFromJudgement} @Self ~onAttack
+  - skill{s=RestoreEqualES} @Self ~onAttack 0.25
+  - heal{a=1000} @Self ~onAttack 0.25
+Singularity_Sword:
+  Id: 267
+  Display: "&6&oSin&e&ogularity Her&6&oald"
+  Lore:
+  - "&7Smite C"
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed"
+  - "&0 "
+  - "&6★ &a&o+250% &7&oattack speed."
+  - "&e★ &7&o35% status effect chance."
+  - "&e★ &7&oDeals &c&o30.0❤ &4&oBleed &7&odamage"
+  - "&7&o  over a period of 3.0s."
+  - "&6★ &7&oInflicts &c&o75.0❤ &2&oToxin &7&odamage"
+  - "&7&o  to bleeding enemies up to 3"
+  - "&7&o  times each second."
+  - "&0 "
+  - "&7“&eI awa&6ken within the de&epths of"
+  - "&e the Void, c&6onfined foreve&er in"
+  - "&e th&6is wretched ab&eyss.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: 2.0
+  Enchantments:
+  - DAMAGE_ALL:500
+  - DAMAGE_UNDEAD:100
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Bleed_30} @target ~onAttack 0.35
+  - skill{s=Poison_90} @target ~onAttack 0.35

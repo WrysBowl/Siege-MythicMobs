@@ -1,0 +1,568 @@
+###---------------------------------------------------------###
+### MITHRIL ARMOR SET
+###---------------------------------------------------------###
+Mithril_Helm:
+  Id: 306
+  Display: "&3Mithril Helmet"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &a+20% &7knockback resist."
+  - "&3★ &7Set Bonus: &aResist. II&7."
+  - "&0 "
+  - "&7“&3Coveted by many, found"
+  - "&3 by few, and treasured"
+  - "&3 by all mortals...&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:8
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 10.0
+      KnockbackResistance: 0.2
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Mithril_Chest:
+  Id: 307
+  Display: "&3Mithril Breastplate"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &7Restore &c1.0❤ &7every"
+  - "&7  second."
+  - "&3★ &7Set Bonus: &aResist. II&7."
+  - "&0 "
+  - "&7“&3Mithril was the center of"
+  - "&3 forging and subsequent"
+  - "&3 advancements...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:7
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - heal{a=2} @Self ~onTimer:20
+Mithril_Legs:
+  Id: 308
+  Display: "&3Mithril Greaves"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &7Restore &c1.0❤ &7whenever"
+  - "&7  you hit an enemy."
+  - "&3★ &7Set Bonus: &aResist. II&7."
+  - "&0 "
+  - "&7“&3Many scoured the depths"
+  - "&3 of the land for more of"
+  - "&3 the precious material...&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:7
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - heal{a=2} @Self ~onAttack
+  - heal{a=2} @Self ~onBowHit
+Mithril_Boots:
+  Id: 309
+  Display: "&3Mithril Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &a+20% &7knockback resist."
+  - "&3★ &7Set Bonus: &aResist. II&7."
+  - "&0 "
+  - "&7“&3And their exploration led"
+  - "&3 to a miracle: the discovery"
+  - "&3 of Byzantite.&7”"
+  Enchantments:
+  - PROTECTION_FALL:8
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 10.0
+      KnockbackResistance: 0.2
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### BUNNY ARMOR SET
+###---------------------------------------------------------###
+Bunny_Helm:
+  Id: 298
+  Display: "&3Bunny Helmet"
+  Lore:
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+25% &7knockback resist."
+  - "&3★ &7Set Bonus: &aJump Boost III&7."
+  - "&0 "
+  - "&7“&3What is this even made of?&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  Options:
+    Color: 255,235,132
+    Unbreakable: true
+  Attributes:
+    Head:
+      KnockbackResistance: 0.25
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Bunny_Chest:
+  Id: 299
+  Display: "&3Bunny Tunic"
+  Lore:
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+25% &7knockback resist."
+  - "&3★ &7Set Bonus: &aJump Boost III&7."
+  - "&0 "
+  - "&7“&3It smells like a rabbit...&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:5
+  Options:
+    Color: 255,235,132
+    Unbreakable: true
+  Attributes:
+    Chest:
+      KnockbackResistance: 0.25
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Bunny_Legs:
+  Id: 300
+  Display: "&3Bunny Chaps"
+  Lore:
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+25% &7knockback resist."
+  - "&3★ &7Set Bonus: &aJump Boost III&7."
+  - "&0 "
+  - "&7“&3Where do you even get this"
+  - "&3 much rabbit hide?&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:5
+  Options:
+    Color: 255,235,132
+    Unbreakable: true
+  Attributes:
+    Legs:
+      KnockbackResistance: 0.25
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Bunny_Boots:
+  Id: 301
+  Display: "&3Bunny Hoppers"
+  Lore:
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+25% &7knockback resist."
+  - "&3★ &7Set Bonus: &aJump Boost III&7."
+  - "&0 "
+  - "&7“&3Boing, boing, boing!&7”"
+  Enchantments:
+  - PROTECTION_FALL:9
+  Options:
+    Color: 255,235,132
+    Unbreakable: true
+  Attributes:
+    Feet:
+      KnockbackResistance: 0.25
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### AQUIR ARMOR SET
+###---------------------------------------------------------###
+Aquir_Helm:
+  Id: 310
+  Display: "&3Aquir War Helm"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+30% &7movement speed."
+  - "&3★ &7You have &e10.0❤ &7while you"
+  - "&7  have &aWaterbreathing&7."
+  - "&7  (Refreshes every 10.0s)."
+  - "&3★ &7Set Bonus: &aWaterbreathing&7."
+  - "&0 "
+  - "&7“&3In an ancient age of time"
+  - "&3 long lost, the stars aligned"
+  - "&3 at the Aquir's cost...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:8
+  - WATER_WORKER:1
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.3
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=AquirES} @Self ~onTimer:200
+Aquir_Chest:
+  Id: 311
+  Display: "&3Aquir Scalemail"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &7Adds &c1.5❤ &5Chaos &7damage to"
+  - "&7  ranged/magic attacks while"
+  - "&7  you have &aWaterbreathing&7."
+  - "&3★ &7Set Bonus: &aWaterbreathing&7."
+  - "&0 "
+  - "&7“&3Their power grew as the tides"
+  - "&3 honed true, their world alight"
+  - "&3 with radiance bright...&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:8
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=AquirChaos} @target ~onBowHit
+Aquir_Legs:
+  Id: 312
+  Display: "&3Aquir Greaves"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &7Adds &c1.5❤ &5Chaos &7damage to"
+  - "&7  ranged/magic attacks while"
+  - "&7  you have &aWaterbreathing&7."
+  - "&3★ &7Set Bonus: &aWaterbreathing&7."
+  - "&0 "
+  - "&7“&3But all was supplanted by a"
+  - "&3 corruption deep, kept in the"
+  - "&3 darkness by a shadowy keep...&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:8
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=AquirChaos} @target ~onBowHit
+Aquir_Boots:
+  Id: 313
+  Display: "&3Aquir Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+30% &7movement speed."
+  - "&3★ &7You have &aHaste IV &7while"
+  - "&7  you have &aWaterbreathing&7."
+  - "&7  (Refreshes every 5.0s)."
+  - "&3★ &7Set Bonus: &aWaterbreathing&7."
+  - "&0 "
+  - "&7“&3The Aquir, so lost, now dwell"
+  - "&3 beneath the waves, remembered"
+  - "&3 by none in their watery graves.&7”"
+  Enchantments:
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.3
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=AquirHaste} @Self ~onTimer:100
+###---------------------------------------------------------###
+### RUNE PRIEST ARMOR SET
+###---------------------------------------------------------###
+Runic_Helm:
+  Id: 302
+  Display: "&3Rune Priest Veil"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &7You have &aFire Resistance&7."
+  - "&7  (Refreshes every 10.0s)."
+  - "&3★ &7Set Bonus: &aRegen. III&7."
+  - "&0 "
+  - "&7“&3Magic is a gift squandered"
+  - "&3 by mortals, abused for the"
+  - "&3 simple squalor of life...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:9
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=200;lvl=0;overwrite=true} @Self ~onTimer:200
+Runic_Chest:
+  Id: 299
+  Display: "&3Rune Priest Robes"
+  Lore:
+  - "&7Projectile Protection VIII"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &7Restore &c10.0❤ &7every 8.0s."
+  - "&3★ &7Set Bonus: &aRegen. III&7."
+  - "&0 "
+  - "&7“&3Into mere mockeries they"
+  - "&3 twist it so, ignorant uses"
+  - "&3 of arcane power...&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:8
+  Options:
+    Color: 46,112,145
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 10.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - heal{a=20} @Self ~onTimer:160
+Runic_Legs:
+  Id: 304
+  Display: "&3Rune Priest Dress"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &710% chance to gain &aSpeed II"
+  - "&7  for 5.0s whenever you take"
+  - "&7  damage."
+  - "&3★ &7Set Bonus: &aRegen. III&7."
+  - "&0 "
+  - "&7“&3War pervaded as discovery"
+  - "&3 knelt, bathing the foolish in"
+  - "&3 an endless strife...&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:9
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - potion{type=SPEED;duration=200;lvl=1;overwrite=true} @Self ~onDamaged 0.1
+Runic_Boots:
+  Id: 301
+  Display: "&3Rune Priest Sandals"
+  Lore:
+  - "&7Feather Falling VIII"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &a+30% &7knockback resist."
+  - "&3★ &7Set Bonus: &aRegen. III&7."
+  - "&0 "
+  - "&7“&3But we evolved from this"
+  - "&3 petty misuse. And without"
+  - "&3 them, magic shall not sour.&7”"
+  Enchantments:
+  - PROTECTION_FALL:8
+  Options:
+    Color: 46,112,145
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 10.0
+      KnockbackResistance: 0.3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### BERSERKER ARMOR SET
+###---------------------------------------------------------###
+Berserker_Helm:
+  Id: 302
+  Display: "&3Berserker's Helm"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+20% &7movement speed."
+  - "&3★ &7Adds &c5.0❤ &7damage to all melee"
+  - "&7  attacks."
+  - "&3★ &7Set Bonus: &aStrength X&7."
+  - "&0 "
+  - "&7“&3Blood is the essence of all mortal"
+  - "&3 existence, gifted by the eternals"
+  - "&3 to aid us in our journeys...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:6
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.2
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=10;pk=true} @target ~onAttack
+Berserker_Chest:
+  Id: 299
+  Display: "&3Berserker's Cuirass"
+  Lore:
+  - "&7Projectile Protection X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &7Adds &c3.0❤ &5Chaos &7damage to"
+  - "&7  all melee attacks while you"
+  - "&7  have &aStrength&7."
+  - "&3★ &7Set Bonus: &aStrength X&7."
+  - "&0 "
+  - "&7“&3But greed and envy corrupted"
+  - "&3 this gift, marring the world in a"
+  - "&3 meaningless strife...&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:8
+  Options:
+    Color: 87,0,0
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 10.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=BerserkerChaos} @Self ~onAttack
+Berserker_Legs:
+  Id: 300
+  Display: "&3Berserker's Greaves"
+  Lore:
+  - "&7Blast Protection VIII"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &7Adds &c3.0❤ &5Chaos &7damage to"
+  - "&7  all melee attacks while you"
+  - "&7  have &aStrength&7."
+  - "&3★ &7Set Bonus: &aStrength X&7."
+  - "&0 "
+  - "&7“&3And so, I spill their blood, for the"
+  - "&3 good of my people--and to ward"
+  - "&3 off the corruption's influence...&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:8
+  Options:
+    Color: 87,0,0
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 10.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=BerserkerChaos} @Self ~onAttack
+Berserker_Boots:
+  Id: 305
+  Display: "&3Berserker's Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+20% &7movement speed."
+  - "&3★ &7Adds &c5.0❤ &7damage to all melee"
+  - "&7  attacks."
+  - "&3★ &7Set Bonus: &aStrength X&7."
+  - "&0 "
+  - "&7“&3I know that I may be hated, even"
+  - "&3 killed, for my actions. but I must"
+  - "&3 fight to restore honor.&7”"
+  Enchantments:
+  - PROTECTION_FALL:6
+  - DEPTH_STRIDER:6
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.2
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=10;pk=true} @target ~onAttack

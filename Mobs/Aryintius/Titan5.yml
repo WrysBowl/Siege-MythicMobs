@@ -1,0 +1,68 @@
+Titan5:
+  Type: HUSK
+  Display: '&8&l<&8« &3Nameless Titan &8»&8&l>'
+  Health: 100000
+  Damage: 1250
+  BossBar:
+    Enabled: true
+    Title: '&8&l<&8« &3Nameless Titan &8»&8&l>'
+    Range: 35
+    Color: BLUE
+    Style: SEGMENTED_12
+  Equipment:
+  - CHelm:4
+  - DChest:3
+  - DLegs:2
+  - CBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Titan_Fragments
+  - Currency_Rifts_Boss
+  - Titan5
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.4
+    KnockbackResistance: 1
+    FollowRange: 120
+    MaxCombatDistance: 120
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+### SPAWN/INITIALIZATION
+  - message{m="<mob.name> &fYou waste my time, mortal. Begone with you!"} @PlayersInRadius{r=30} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:5
+  - randommessage
+      {
+      m=
+      "<mob.name> &7These gusts will be the last thing you hear!",
+      "<mob.name> &7My winds shall tear your soul apart!",
+      "<mob.name> &7Behold, the power of the storm!",
+      "<mob.name> &7The maelstrom of chaos consumes us all!",
+      "<mob.name> &7You cannot escape from the storm's eye!";
+      } @PIR{r=30} ~onTimer:300
+### PHASE 1
+  - skill{s=T5_Missile} @NearestPlayer{r=50} ~onTimer:40 >50%
+  - skill{s=T5_Blast} @NearestPlayer{r=50} ~onTimer:55 >50%
+  - skill{s=T5_Storm} @Self ~onTimer:420 >50%
+  - summon{mob=T5_Pointer_2;amount=1;noise=0} @Self ~onTimer:600 >50%
+### PHASE 2
+  - skill{s=T5_RapidMissiles} @NearestPlayer{r=50} ~onTimer:40 <50%
+  - skill{s=T5_RapidBlast} @NearestPlayer{r=50} ~onTimer:55 <50%
+  - summon{mob=T5_Pointer_2;amount=1;noise=0} @Self ~onTimer:300 <50%
+  - skill{s=T5_Storm} @Self ~onTimer:300 <50%
+### DEATH
+  - message{m="<mob.name> &fThe storm ends... I can see the daylight once again..."} @PlayersInRadius{r=30} ~onDeath
+  - remove @MIR{r=50;t=T5_Pointer_1} ~onDeath
+  - remove @MIR{r=50;t=T5_Pointer_2} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=2} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=0} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=1.5;p=1} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

@@ -1,0 +1,167 @@
+### VYRDANO SHOP SCROLLS ---------------------------------------
+VScroll_1:
+  Id: 339
+  Display: "&d&oScroll of Clarity&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c0.0❤"
+  - "&7Cooldown: &f10 Seconds"
+  - "&0 "
+  - "&d★ &7&oGain &a&oSpeed X &7&ofor 5.0s."
+  - "&d★ &7&oRemoves &8&oSlowness &7&oon use."
+  - "&d★ &7&oRemoves &8&oBlindness &7&oon use."
+  - "&0 "
+  - "&7“&dBe free from the weight of"
+  - "&d others' visions.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+VScroll_2:
+  Id: 339
+  Display: "&d&oScroll of Shielding&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c0.0❤"
+  - "&7Cooldown: &f15 Seconds"
+  - "&0 "
+  - "&d★ &7&oRestores full health on use."
+  - "&d★ &7&oSet your gold hearts to &e&o100.0❤"
+  - "&7&o  for up to 10.0s."
+  - "&d★ &7&oRemoves &a&oRegeneration &7&oon use."
+  - "&0 "
+  - "&7“&dBrimming with divine energies, few"
+  - "&d can break these defenses.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+VScroll_3:
+  Id: 339
+  Display: "&d&oScroll of Armouring&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c0.0❤"
+  - "&7Cooldown: &f15 Seconds"
+  - "&0 "
+  - "&d★ &7&oGain &a&oResistance IV &7&ofor 10.0s."
+  - "&d★ &7&oGain &a&oRegeneration X &7&ofor 10.0s."
+  - "&d★ &7&oRemoves all gold hearts on use."
+  - "&0 "
+  - "&7“&dBehind a mask of metal, even the"
+  - "&d weakest yield strong defenses.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+VScroll_4:
+  Id: 339
+  Display: "&d&oScroll of Vision&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c0.0❤"
+  - "&7Cooldown: &f7 Seconds"
+  - "&0 "
+  - "&d★ &7&oGain &a&oNight Vision &7&ofor 30.0s."
+  - "&d★ &7&oRemoves &8&oNausea &7&oon use."
+  - "&d★ &7&oRemoves &8&oBlindness &7&oon use."
+  - "&0 "
+  - "&7“&dEyes as bright as the stars"
+  - "&d shall never truly be blind.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+### LEGENDARY SCROLLS ------------------------------------------
+VScroll_L1:
+  Id: 339
+  Display: "&5&oScroll of Anger&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c0.0❤"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&5★ &7&oGain &a&oStrength CC &7&ofor 10.0s."
+  - "&5★ &7&oRemoves &8&oFatigue &7&oon use."
+  - "&5★ &7&oRemoves &8&oWeakness &7&oon use."
+  - "&0 "
+  - "&7“&5This spell was first cast long"
+  - "&5 ago by the only mage to ever"
+  - "&5 use berserking.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+VScroll_L2:
+  Id: 339
+  Display: "&5&oScroll of Divinity&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c0.0❤"
+  - "&7Cooldown: &f30 Seconds"
+  - "&0 "
+  - "&5★ &7&oGain &a&oResistance V &7&ofor 15.0s."
+  - "&5★ &7&oRemoves &a&oRegeneration &7&oon use."
+  - "&5★ &7&oRemoves all gold hearts on use."
+  - "&0 "
+  - "&7“&5This spell briefly separates the"
+  - "&5 soul from the body--allowing for"
+  - "&5 temporal invincibility.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+VScroll_L3:
+  Id: 339
+  Display: "&5&oScroll of Frenzy&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fMagic (Consumable)"
+  - "&7Damage: &c0.0❤"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&5★ &7&oGain &a&oHaste X &7&ofor 10.0s."
+  - "&5★ &7&oGain &a&oSpeed X &7&ofor 10.0s."
+  - "&5★ &7&oRemoves &8&oFatigue &7&oon use."
+  - "&5★ &7&oRemoves &8&oSlowness &7&oon use."
+  - "&0 "
+  - "&7“&5Fear is the greatest of all"
+  - "&5 mortal motivations.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES

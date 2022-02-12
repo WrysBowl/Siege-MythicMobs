@@ -1,0 +1,512 @@
+### FORGE ENEMIES ----------------------------------------------
+A12_Melee:
+  Type: HUSK
+  Display: "&6« &eGreater Firesworn &6»"
+  Health: 800
+  Damage: 750
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  - Corrupted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - FireHead:4
+  - UChest_3:3
+  - ULegs_3:2
+  - UBoots_3:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    Silent: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.025} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Ignite_Title} @target ~onAttack 0.2
+A12_Ranger:
+  Type: STRAY
+  Display: "&4« &eAscended Firesworn &4»"
+  Health: 650
+  Damage: 500
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  - Corrupted
+  Modules:
+    ThreatTable: true
+  Disguise:
+    Type: BLAZE
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - GHelm:4
+  - GChest:3
+  - GLegs:2
+  - GBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.025} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=CancelLevitation} @Self ~onTimer:10
+  - skill{s=Ignite_Title} @target ~onAttack 0.1
+  - skill{s=Atlas_FireBolt} @NearestPlayer{r=30} ~onTimer:10 0.2
+  ### EFFECTS
+  - effect:sound{s=entity.blaze.ambient;p=1.0;v=0.75} @self ~onTimer:100
+  - effect:sound{s=entity.blaze.hurt;p=1.0;v=1} @self ~onDamaged
+  - effect:sound{s=entity.blaze.death;p=1.0;v=1} @self ~onDeath
+A12_MiniBoss:
+  Type: HUSK
+  Display: "&4« &cUnforged &4»"
+  Health: 5000
+  Damage: 1000
+  Drops:
+  - Currency_Atlas_3
+  - Mythic
+  - Corrupted
+  - Iridescent
+  Disguise:
+    Type: BLOCK
+    Block: MAGMA
+    BlockData: 0
+    ShowName: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=CancelSlowness} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Ignite_Title} @target ~onAttack 0.5
+  - skill{s=Atlas_FireNova} @Self ~onTimer:20
+  - damage{a=1000;pi=true;pk=true} @PIR{r=5} ~onTimer:20
+  ### EFFECTS
+  - effect:sound{s=entity.blaze.burn;p=1.0;v=1.0} @self ~onTimer:20
+  - effect:sound{s=entity.blaze.burn;p=0.5;v=1.0} @self ~onTimer:40
+  - effect:sound{s=entity.ghast.shoot;p=0.75;v=0.75} @self ~onDamaged
+  - effect:sound{s=entity.generic.explode;p=1.0;v=1} @self ~onDeath
+  - effect:sound{s=entity.generic.explode;p=0.5;v=1} @self ~onDeath
+### SUNKEN CITY ENEMIES ----------------------------------------
+A13_Melee:
+  Type: HUSK
+  Display: "&6« &eCursed Aquiran &6»"
+  Health: 800
+  Damage: 750
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  - Corrupted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_8:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    Silent: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.025} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=InflictCurse} @target ~onAttack 0.1
+A13_Ranger:
+  Type: SKELETON
+  Display: "&4« &eAquir Sentinel &4»"
+  Health: 650
+  Damage: 500
+  Disguise:
+    Type: GUARDIAN
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  - Corrupted
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    KnockbackResistance: 1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onTimer:10
+  - healpercent{m=0.025} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Atlas_WaterBolt} @NearestPlayer{r=30} ~onTimer:10 0.2
+  ### EFFECTS
+  - effect:sound{s=entity.elder_guardian.hurt_land;p=1;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.elder_guardian.curse;p=2;v=0.5} @self ~onDeath
+A13_MiniBoss:
+  Type: SKELETON
+  Display: "&4« &cAncient Sentinel &4»"
+  Health: 5000
+  Damage: 750
+  Disguise:
+    Type: ELDER_GUARDIAN
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Drops:
+  - Currency_Atlas_3
+  - Mythic
+  - Corrupted
+  - Iridescent
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Atlas_WaterBolt} @NearestPlayer{r=30} ~onTimer:5 0.4
+  ### EFFECTS
+  - effect:sound{s=entity.zombie.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.zombie.death;p=0.5;v=0.5} @self ~onDamaged
+### ASYLUM ENEMIES ---------------------------------------------
+A14_Melee:
+  Type: HUSK
+  Display: "&6« &eAsylum Guard &6»"
+  Health: 800
+  Damage: 750
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  - Corrupted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - IHelm:4
+  - IChest:3
+  - ILegs:2
+  - IBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    Silent: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.025} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Bleed_60} @target ~onAttack 0.1
+A14_Ranger:
+  Type: SKELETON
+  Display: "&4« &eAsylum Keeper &4»"
+  Health: 650
+  Damage: 500
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  - Corrupted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - IHelm:4
+  - CChest:3
+  - ILegs:2
+  - CBoots:1
+  - BLAZE_ROD:0
+  - ENCHANTED_BOOK:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.1
+    Silent: false
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.025} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=A8_Blast} @NearestPlayer{r=30} ~onTimer:10 0.2
+A14_MiniBoss:
+  Type: HUSK
+  Display: "&4« &cElemental Guardian &4»"
+  Health: 5000
+  Damage: 1000
+  Disguise:
+    Type: IRON_GOLEM
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Drops:
+  - Currency_Atlas_3
+  - Mythic
+  - Corrupted
+  - Iridescent
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  ### SKILLS
+  - skill{s=Bleed_60} @target ~onAttack 0.1
+  - skill{s=Atlas_Bladestorm} @NearestPlayer{r=30} ~onTimer:50
+  ### EFFECTS
+  - effect:sound{s=entity.irongolem.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.irongolem.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.irongolem.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=entity.irongolem.death;v=1;p=0} @Self ~onDeath
+### MAUGRI ENEMIES ---------------------------------------------
+A15_Melee:
+  Type: SKELETON
+  Display: "&6« &eFlesh-Eater &6»"
+  Health: 1000
+  Damage: 750
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  - Corrupted
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - BlockHead_1:4
+  - UChest_5:3
+  - ULegs_5:2
+  - UBoots_5:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - healpercent{m=0.025} @Self ~onTimer:10
+  ### SKILLS
+  - randomskill{skills=InflictShock,InflictFreeze,Ignite_Title} @PIR{r=5} ~onAttack 0.25
+  ### EFFECTS
+  - effect:sound{s=entity.zombie.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.zombie.death;p=0.5;v=0.5} @self ~onDamaged
+A15_Ranger:
+  Type: HUSK
+  Display: "&4« &eCorrupted Giant &4»"
+  Health: 1000
+  Damage: 750
+  Drops:
+  - Currency_Atlas_2
+  - Mythic
+  - Corrupted
+  Disguise:
+    Type: WITHER
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - skill{s=CancelLevitation} @Self ~onTimer:10
+  - healpercent{m=0.025} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Atlas_SmokeNova} @Self ~onTimer:20
+  - damage{a=1250;pi=true;pk=true} @PIR{r=5} ~onTimer:20
+  - skill{s=Atlas_SmokeBolt} @NearestPlayer{r=30} ~onTimer:10 0.35
+  ### EFFECTS
+  - effect:sound{s=entity.wither.ambient;p=1;v=0.5} @self ~onTimer:100
+  - effect:sound{s=entity.wither.hurt;p=1;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.ghast.death;p=1;v=1} @self ~onDeath
+A15_Rider_Top:
+  Type: SKELETON
+  Display: "&4« &cSoul Harvester &4»"
+  Health: 6000
+  Damage: 1200
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - UHelm_0:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - Headsman:0
+  - 0:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Currency_Atlas_3
+  - Mythic
+  - Corrupted
+  - Iridescent
+  Mount: A15_Rider_Bottom
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.01
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10
+  - remount ~onTimer:10
+  ### SKILLS
+  - remove @mount ~onDeath
+  - skill{s=InflictCurse} @target ~onAttack 0.2
+  ### EFFECTS
+  - effect:sound{s=entity.blaze.hurt;p=1;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.endermen.hurt;p=0.5;v=0.5} @self ~onDamaged
+A15_Rider_Bottom:
+  Type: SKELETON
+  Display: "&4« &cForgotten Steed &4»"
+  Health: 6000
+  Damage: 1200
+  Disguise:
+    Type: SKELETON_HORSE
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - UHelm_0:4
+  - UChest_0:3
+  - ULegs_0:2
+  - UBoots_0:1
+  - Arch_Sword:0
+  - Shield_Reaper:5
+  Drops:
+  - Currency_Atlas_3
+  - Mythic
+  - Corrupted
+  - Iridescent
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+  ### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelSlowness} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:10
+  ### SKILLS
+  - skill{s=Atlas_HorseRally} @Self ~onTimer:200
+  - skill{s=Bleed_100} @target ~onAttack 0.2
+  - remove @parent ~onDeath
+  ### EFFECTS
+  - effect:sound{s=entity.skeleton_horse.ambient;p=1;v=1} @self ~onTimer:60
+  - effect:sound{s=entity.skeleton_horse.hurt;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.skeleton_horse.death;p=1;v=1} @self ~onDeath

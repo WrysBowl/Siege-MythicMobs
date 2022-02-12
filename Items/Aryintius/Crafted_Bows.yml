@@ -1,0 +1,652 @@
+NG_Bow_0:
+  Id: 261
+  Display: "&fLongbow"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &fCommon (Crafted)"
+  - "&0 "
+  - "&f★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&0 "
+  - "&7“&fA powerful Bow carved"
+  - "&f from the branch of a large"
+  - "&f ironwood oak.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+### 1 PREFIX ---------------------------------------------------
+NG_Bow_P1:
+  Id: 261
+  Display: "&2Unholy Longbow"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &7Adds &c10.0❤ &5Chaos &7damage"
+  - "&7  to all ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Chaos_10} @target ~onBowHit
+NG_Bow_P2:
+  Id: 261
+  Display: "&2Coiled Longbow"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &725% to &3Shock &7enemies for up"
+  - "&7  to 5.0s."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=InflictShock} @target ~onBowHit 0.25
+NG_Bow_P3:
+  Id: 261
+  Display: "&2Icy Longbow"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &725% to &bFreeze &7enemies for"
+  - "&7  up to 5.0s."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=InflictFreeze} @target ~onBowHit 0.25
+NG_Bow_P4:
+  Id: 261
+  Display: "&2Flaming Longbow"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &725% to &6Ignite &7enemies for"
+  - "&7  up to 5.0s."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Ignite_Title} @target ~onBowHit 0.25
+### 1 SUFFIX ---------------------------------------------------
+NG_Bow_S1:
+  Id: 261
+  Display: "&2Longbow of Healing"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &7Restore &c10.0❤ &7whenever you"
+  - "&7  hit an enemy."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - heal{a=20} @Self ~onBowHit
+NG_Bow_S2:
+  Id: 261
+  Display: "&2Longbow of Lightning"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &3Shocked &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Shock_50-100} @target ~onBowHit
+NG_Bow_S3:
+  Id: 261
+  Display: "&2Longbow of Winter"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &bFrozen &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Freeze_50-100} @target ~onBowHit
+NG_Bow_S4:
+  Id: 261
+  Display: "&2Longbow of Embers"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &6Ignited &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Ignite_50-100} @target ~onBowHit
+### 1 PREFIX 1 SUFFIX ------------------------------------------
+NG_Bow_P1S1:
+  Id: 261
+  Display: "&3Unholy Longbow of Healing"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &7Adds &c10.0❤ &5Chaos &7damage"
+  - "&7  to all ranged/magic attacks."
+  - "&3★ &7Restore &c10.0❤ &7whenever you"
+  - "&7  hit an enemy."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Chaos_10} @target ~onBowHit
+  - heal{a=20} @Self ~onBowHit
+NG_Bow_P1S2:
+  Id: 261
+  Display: "&3Unholy Longbow of Lightning"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &7Adds &c10.0❤ &5Chaos &7damage"
+  - "&7  to all ranged/magic attacks."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &3Shocked &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Chaos_10} @target ~onBowHit
+  - skill{s=Shock_50-100} @target ~onBowHit
+NG_Bow_P1S3:
+  Id: 261
+  Display: "&3Unholy Longbow of Winter"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &7Adds &c10.0❤ &5Chaos &7damage"
+  - "&7  to all ranged/magic attacks."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &bFrozen &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Chaos_10} @target ~onBowHit
+  - skill{s=Freeze_50-100} @target ~onBowHit
+NG_Bow_P1S4:
+  Id: 261
+  Display: "&3Unholy Longbow of Embers"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &7Adds &c10.0❤ &5Chaos &7damage"
+  - "&7  to all ranged/magic attacks."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &6Ignited &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Chaos_10} @target ~onBowHit
+  - skill{s=Ignite_50-100} @target ~onBowHit
+NG_Bow_P2S1:
+  Id: 261
+  Display: "&3Coiled Longbow of Healing"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &3Shock &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Restore &c10.0❤ &7whenever you"
+  - "&7  hit an enemy."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=InflictShock} @target ~onBowHit 0.25
+  - heal{a=20} @Self ~onBowHit
+NG_Bow_P2S2:
+  Id: 261
+  Display: "&3Coiled Longbow of Lightning"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &3Shock &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &3Shocked &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=InflictShock} @target ~onBowHit 0.25
+  - skill{s=Shock_50-100} @target ~onBowHit
+NG_Bow_P2S3:
+  Id: 261
+  Display: "&3Coiled Longbow of Winter"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &3Shock &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &bFrozen &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=InflictShock} @target ~onBowHit 0.25
+  - skill{s=Freeze_50-100} @target ~onBowHit
+NG_Bow_P2S4:
+  Id: 261
+  Display: "&3Coiled Longbow of Embers"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &3Shock &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &6Ignited &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=InflictShock} @target ~onBowHit 0.25
+  - skill{s=Ignite_50-100} @target ~onBowHit
+NG_Bow_P3S1:
+  Id: 261
+  Display: "&3Icy Longbow of Healing"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &bFreeze &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Restore &c10.0❤ &7whenever you"
+  - "&7  hit an enemy."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=InflictFreeze} @target ~onBowHit 0.25
+  - heal{a=20} @Self ~onBowHit
+NG_Bow_P3S2:
+  Id: 261
+  Display: "&3Icy Longbow of Lightning"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &bFreeze &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &3Shocked &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=InflictFreeze} @target ~onBowHit 0.25
+  - skill{s=Shock_50-100} @target ~onBowHit
+NG_Bow_P3S3:
+  Id: 261
+  Display: "&3Icy Longbow of Winter"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &bFreeze &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &bFrozen &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=InflictFreeze} @target ~onBowHit 0.25
+  - skill{s=Freeze_50-100} @target ~onBowHit
+NG_Bow_P3S4:
+  Id: 261
+  Display: "&3Icy Longbow of Embers"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &bFreeze &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &6Ignited &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=InflictFreeze} @target ~onBowHit 0.25
+  - skill{s=Ignite_50-100} @target ~onBowHit
+NG_Bow_P4S1:
+  Id: 261
+  Display: "&3Flaming Longbow of Healing"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &6Ignite &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Restore &c10.0❤ &7whenever you"
+  - "&7  hit an enemy."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Ignite_Title} @target ~onBowHit 0.25
+  - heal{a=20} @Self ~onBowHit
+NG_Bow_P4S2:
+  Id: 261
+  Display: "&3Flaming Longbow of Lightning"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &6Ignite &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &3Shocked &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Ignite_Title} @target ~onBowHit 0.25
+  - skill{s=Shock_50-100} @target ~onBowHit
+NG_Bow_P4S3:
+  Id: 261
+  Display: "&3Flaming Longbow of Winter"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &6Ignite &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &bFrozen &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Ignite_Title} @target ~onBowHit 0.25
+  - skill{s=Freeze_50-100} @target ~onBowHit
+NG_Bow_P4S4:
+  Id: 261
+  Display: "&3Flaming Longbow of Embers"
+  Lore:
+  - "&7Power C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3★ &7Adds &c100.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &725% to &6Ignite &7enemies for up"
+  - "&7  to 5.0s."
+  - "&3★ &7Adds &c50.0-100.0❤ &7damage to all"
+  - "&7  attacks against &6Ignited &7enemies."
+  Enchantments:
+  - ARROW_DAMAGE:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=200;pk=true} @target ~onBowHit
+  - skill{s=Ignite_Title} @target ~onBowHit 0.25
+  - skill{s=Ignite_50-100} @target ~onBowHit

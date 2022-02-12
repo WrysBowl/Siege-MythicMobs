@@ -1,0 +1,791 @@
+###---------------------------------------------------------###
+### WEAPONS
+###---------------------------------------------------------###
+T5_1:
+  Id: 272
+  Display: "&2Twisted Blade"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+15% &7attack speed."
+  - "&0 "
+  - "&7“&2A strange, spiral-shaped"
+  - "&2 sword forged through"
+  - "&2 unknown means.&7”"
+  Enchantments:
+  - DAMAGE_ALL:5
+  - DAMAGE_UNDEAD:5
+  - DURABILITY:5
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.5
+  Hide:
+  - ATTRIBUTES
+T5_2:
+  Id: 267
+  Display: "&2Ancient Greatsword"
+  Lore:
+  - "&7Sharpness XXXV"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &8-50% &7attack speed."
+  - "&2★ &8-20% &7movement speed."
+  - "&0 "
+  - "&7“&2Despite its age, this heavy"
+  - "&2 blade can still chop through"
+  - "&2 most enemies.&7”"
+  Enchantments:
+  - DAMAGE_ALL:35
+  - DURABILITY:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.85
+      MovementSpeed: -0.2
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T5_3:
+  Id: 267
+  Display: "&2Butcher's Knife"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &8-10% &7attack speed."
+  - "&0 "
+  - "&7“&2Better to chop then serve"
+  - "&2 than to serve then chop!&7”"
+  Enchantments:
+  - DAMAGE_ALL:8
+  - DURABILITY:8
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.65
+  Hide:
+  - ATTRIBUTES
+T5_4:
+  Id: 261
+  Display: "&2Harpwood Longbow"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2This bow was crafted deep"
+  - "&2 in the southern forests, now"
+  - "&2 lost to the Void...&7”"
+  Enchantments:
+  - ARROW_DAMAGE:8
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+T5_5:
+  Id: 261
+  Display: "&2Firesworn Shortbow"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2A weapon used by lesser"
+  - "&2 members of the Firesworn,"
+  - "&2 insane worshippers of the"
+  - "&2 mad giants, Rith and Kef.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:5
+  - ARROW_FIRE:10
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+T5_6:
+  Id: 267
+  Display: "&2Pain Razor"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2Wow, that's pretty edgy!&7”"
+  Enchantments:
+  - DAMAGE_ALL:9
+  - SWEEPING_EDGE:3
+  Hide:
+  - ATTRIBUTES
+T5_7:
+  Id: 283
+  Display: "&2Elven Dagger"
+  Lore:
+  - "&7Sharpness XV"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2An extremely sharp blade"
+  - "&2 used by the now-extinct"
+  - "&2 elves of the south.&7”"
+  Enchantments:
+  - DAMAGE_ALL:15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T5_8:
+  Id: 258
+  Display: "&2Dwarven Axe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+13% &7attack speed."
+  - "&0 "
+  - "&7“&2Forged by the Dwarves of"
+  - "&2 the northern mountains in"
+  - "&2 the golden age of the Aquir"
+  - "&2 empire.&7”"
+  Enchantments:
+  - DAMAGE_ALL:8
+  - DURABILITY:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.6
+  Hide:
+  - ATTRIBUTES
+T5_9:
+  Id: 272
+  Display: "&2Jade Knife"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+30% &7attack speed."
+  - "&0 "
+  - "&7“&2A shiny, jeweled blade"
+  - "&2 with a greenish hue.&7”"
+  Enchantments:
+  - DAMAGE_ALL:5
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.4
+  Hide:
+  - ATTRIBUTES
+T5_10:
+  Id: 280
+  Display: "&2Deadly Caduceus"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2A long, wooden staff"
+  - "&2 that was sharpened"
+  - "&2 at both ends.&7”"
+  Enchantments:
+  - DAMAGE_ALL:8
+  - KNOCKBACK:4
+  Hide:
+  - ATTRIBUTES
+T5_11:
+  Id: 280
+  Display: "&2Giant's Quarterstaff"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &8-15% &7attack speed."
+  - "&2★ &8-15% &7movement speed."
+  - "&0 "
+  - "&7“&2A massive staff carved"
+  - "&2 out of an entire tree.&7”"
+  Enchantments:
+  - DAMAGE_ALL:10
+  - KNOCKBACK:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.75
+      MovementSpeed: -0.15
+  Hide:
+  - ATTRIBUTES
+T5_12:
+  Id: 256
+  Display: "&2Giantspike"
+  Lore:
+  - "&7Sharpness XV"
+  - "&7Knockback III"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &8-25% &7attack speed."
+  - "&2★ &8-25% &7movement speed."
+  - "&0 "
+  - "&7“&2Is it a giant's pike or"
+  - "&2 a giant spike?&7”"
+  Enchantments:
+  - DAMAGE_ALL:15
+  - KNOCKBACK:3
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.8
+      MovementSpeed: -0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T5_13:
+  Id: 267
+  Display: "&2Steel Longsword"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2An average sword with"
+  - "&2 a sharpened edge.&7”"
+  Enchantments:
+  - DAMAGE_ALL:6
+  Hide:
+  - ATTRIBUTES
+T5_14:
+  Id: 258
+  Display: "&2Righteous Swing"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+10% &7attack speed."
+  - "&2★ &a+10% &7movement speed."
+  - "&0 "
+  - "&7“&2A hammer forged from"
+  - "&2 a holy fire.&7”"
+  Enchantments:
+  - DAMAGE_ALL:8
+  - FIRE_ASPECT:4
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.5
+      MovementSpeed: 0.1
+  Hide:
+  - ATTRIBUTES
+T5_15:
+  Id: 294
+  Display: "&2Woeful Scythe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+15% &7attack speed."
+  - "&2★ &a+5% &7movement speed."
+  - "&0 "
+  - "&7“&2A blade that belonged to"
+  - "&2 a southern elf. It seems"
+  - "&2 to be stained with tears.&7”"
+  Enchantments:
+  - DAMAGE_ALL:6
+  - DURABILITY:5
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.4
+      MovementSpeed: 0.05
+  Hide:
+  - ATTRIBUTES
+T5_16:
+  Id: 276
+  Display: "&2Dagger of Night"
+  Lore:
+  - "&7Sharpness XX"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+75% &7attack speed."
+  - "&2★ &a+25% &7movement speed."
+  - "&2★ &c-3.0❤&7 when this is held"
+  - "&7  in your main hand."
+  - "&0 "
+  - "&7“&2A dagger afflicted by"
+  - "&2 an ancient curse.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:20
+  - DURABILITY:9001
+  - MENDING:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.2
+      MovementSpeed: 0.25
+      Health: -6.0
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+T5_17:
+  Id: 369
+  Display: "&2Infernal Staff"
+  Lore:
+  - "&7Sharpness XX"
+  - "&7Fire Aspect X"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+10% &7attack speed."
+  - "&2★ &a+5% &7movement speed."
+  - "&0 "
+  - "&7“&2Fire courses through "
+  - "&2 the core of the world,"
+  - "&2 harnessed by man for"
+  - "&2 selfish needs...&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:20
+  - FIRE_ASPECT:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.6
+      MovementSpeed: 0.05
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+T5_18:
+  Id: 346
+  Display: "&2Lucky Fishing Rod"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2It once caught a shark.&7”"
+  Enchantments:
+  - LURE:3
+  - DURABILITY:5
+  Hide:
+  - ATTRIBUTES
+T5_19:
+  Id: 293
+  Display: "&2Windforce Scythe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+20% &7attack speed."
+  - "&2★ &a+20% &7movement speed."
+  - "&0 "
+  - "&7“&2Mastery the elements,"
+  - "&2 one at a time.&7”"
+  Enchantments:
+  - DAMAGE_ALL:10
+  - DURABILITY:10
+  - MENDING:1
+  - KNOCKBACK:3
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.45
+      MovementSpeed: 0.2
+  Hide:
+  - ATTRIBUTES
+T5_20:
+  Id: 442
+  Display: "&2Shield of Lifeforce"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+10.0❤&7 when this is held"
+  - "&7  in your off hand."
+  - "&2★ &8-75% &7movement speed."
+  - "&0 "
+  - "&7“&2I am free from the curse!&7”"
+  Options:
+    Color: PINK
+    Unbreakable: true
+  BannerLayers:
+  - WHITE BORDER
+  - RED CIRCLE_MIDDLE
+  Attributes:
+    OffHand:
+      MovementSpeed: -0.75
+      Health: 20.0
+    MainHand:
+      MovementSpeed: -0.75
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+T5_21:
+  Id: 442
+  Display: "&2Wizard's Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+80% &7knockback resist."
+  - "&7  when this is equipped in"
+  - "&7  your off hand."
+  - "&0 "
+  - "&7“&2You... shall not... pass!&7”"
+  Options:
+    Color: PURPLE
+    Unbreakable: true
+  BannerLayers:
+  - PINK GRADIENT_UP
+  - BLACK TRIANGLES_TOP
+  - BLACK TRIANGLES_BOTTOM
+  - BLACK FLOWER
+  Attributes:
+    OffHand:
+      KnockbackResistance: 0.15
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+T5_22:
+  Id: 442
+  Display: "&2Windforce Shield II"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+20% &7movement speed"
+  - "&7  when this is equipped in"
+  - "&7  your off hand."
+  - "&0 "
+  - "&7“&2A better gust, yes that is"
+  - "&2 true. But odd enough, this"
+  - "&2 shield is now blue.&7”"
+  Options:
+    Color: BLUE
+    Unbreakable: true
+  BannerLayers:
+  - WHITE STRAIGHT_CROSS
+  - WHITE RHOMBUS_MIDDLE
+  Attributes:
+    OffHand:
+      MovementSpeed: 0.20
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+T5_23:
+  Id: 442
+  Display: "&2Hybrid Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+10% &7movement speed"
+  - "&2★ &a+20% &7knockback resist."
+  - "&2★ &c+5.0❤&7 while equipped."
+  - "&0 "
+  - "&7“&2The best of all worlds.&7”"
+  Options:
+    Color: BLACK
+    Unbreakable: true
+  BannerLayers:
+  - YELLOW SQUARE_TOP_LEFT
+  - YELLOW SQUARE_BOTTOM_RIGHT
+  - ORANGE TRIANGLE_TOP
+  - ORANGE TRIANGLE_BOTTOM
+  - RED RHOMBUS_MIDDLE
+  - BLACK CIRCLE_MIDDLE
+  Attributes:
+    OffHand:
+      MovementSpeed: 0.1
+      KnockbackResistance: 0.1
+      Health: 10.0
+    MainHand:
+      MovementSpeed: 0.1
+      KnockbackResistance: 0.1
+      Health: 10.0
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+T5_24:
+  Id: 261
+  Display: "&2Giant's Recurve Bow"
+  Lore:
+  - "&7Power XXXII"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &8-80% &7movement speed"
+  - "&0 "
+  - "&7“&2A massive bow that fires"
+  - "&2 arrows as large as the"
+  - "&2 northen greatpines.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:32
+  - ARROW_INFINITE:1
+  - DURABILITY:9001
+  - MENDING:10
+  Attributes:
+    MainHand:
+      MovementSpeed: -0.8
+    OffHand:
+      MovementSpeed: -0.8
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T5_25:
+  Id: 276
+  Display: "&2Windforce Blade"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+15% &7attack speed"
+  - "&2★ &a+15% &7movement speed"
+  - "&0 "
+  - "&7“&2A humble gift from the"
+  - "&2 winds in fall. It brings"
+  - "&2 power and endurance"
+  - "&2 in the coming squall.&7”"
+  Enchantments:
+  - DAMAGE_ALL:7
+  - DAMAGE_UNDEAD:7
+  - FIRE_ASPECT:7
+  - DAMAGE_ARTHROPODS:7
+  - DURABILITY:7
+  - MENDING:1
+  Attributes:
+    MainHand:
+      MovementSpeed: 0.15
+      AttackSpeed: 0.55
+  Hide:
+  - ATTRIBUTES
+###---------------------------------------------------------###
+### ARMOR PIECES
+###---------------------------------------------------------###
+T5_26:
+  Id: 305
+  Display: "&2Eternity Sandals"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+30% &7movement speed."
+  - "&0 "
+  - "&7“&2Three thousand years"
+  - "&2 have brought me only"
+  - "&2 endless tears.&7”"
+  Enchantments:
+  - PROTECTION_FALL:7
+  - DEPTH_STRIDER:5
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.3
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+T5_27:
+  Id: 316
+  Display: "&2Sunplate Leggings"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+8% &7movement speed."
+  - "&0 "
+  - "&7“&2A shining piece of armor"
+  - "&2 forged in an unknown flame.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:6
+  - DURABILITY:10
+  Attributes:
+    Legs:
+      MovementSpeed: 0.08
+  Hide:
+  - ATTRIBUTES
+T5_28:
+  Id: 306
+  Display: "&2Battered Helm"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+10% &7movement speed."
+  - "&0 "
+  - "&7“&2There's a curious-looking"
+  - "&2 gash and stain on its left"
+  - "&2 side. How morbid.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  - DURABILITY:5
+  Attributes:
+    Head:
+      MovementSpeed: 0.1
+  Hide:
+  - ATTRIBUTES
+T5_29:
+  Id: 303
+  Display: "&2Arcane Chainmail"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+3.0❤&7 while equipped."
+  - "&2★ &a+18% &7movement speed."
+  - "&0 "
+  - "&7“&2A lightweight piece of armor"
+  - "&2 forged with strange magics.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  - PROTECTION_PROJECTILE:5
+  Attributes:
+    Chest:
+      MovementSpeed: 0.18
+      Health: 6.0
+  Hide:
+  - ATTRIBUTES
+T5_30:
+  Id: 307
+  Display: "&2Steel Plate Mail"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+6.0❤&7 while equipped."
+  - "&2★ &8-30% &7movement speed."
+  - "&0 "
+  - "&7“&2Forged in the fires of early"
+  - "&2 man, this type of heavy armor"
+  - "&2 was widely-used long before"
+  - "&2 the Corruption took hold.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  - PROTECTION_PROJECTILE:8
+  - DURABILITY:5
+  Attributes:
+    Chest:
+      MovementSpeed: -0.3
+      Health: 12.0
+  Hide:
+  - ATTRIBUTES
+T5_31:
+  Id: 311
+  Display: "&2Watcher's Cuirass"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+3.0❤&7 while equipped."
+  - "&2★ &a+3% &7movement speed."
+  - "&0 "
+  - "&7“&2There is no waste in being"
+  - "&2 overtly cautious...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  - PROTECTION_EXPLOSIONS:3
+  - PROTECTION_PROJECTILE:3
+  - PROTECTION_FIRE:3
+  - DURABILITY:3
+  Attributes:
+    Chest:
+      MovementSpeed: 0.03
+      Health: 6.0
+  Hide:
+  - ATTRIBUTES
+T5_32:
+  Id: 301
+  Display: "&2Tracker's Boots"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+2.0❤&7 while equipped."
+  - "&2★ &a+20% &7movement speed."
+  - "&0 "
+  - "&7“&2Worn by hunters to sneak"
+  - "&2 up silently on their prey.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  - PROTECTION_FALL:5
+  - DURABILITY:10
+  Attributes:
+    Feet:
+      MovementSpeed: 0.2
+      Health: 4.0
+  Hide:
+  - ATTRIBUTES
+T5_33:
+  Id: 299
+  Display: "&2Demolitionist Garb"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+5% &7movement speed."
+  - "&2★ &a+35% &7knockback resist."
+  - "&0 "
+  - "&7“&2This strangely-specialized"
+  - "&2 tunic is covered in ashes"
+  - "&2 smelling vaguely of flesh...&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:5
+  - DURABILITY:10
+  - MENDING:1
+  Options:
+    Color: 40,40,40
+  Attributes:
+    Chest:
+      MovementSpeed: 0.05
+      KnockbackResistance: 0.15
+  Hide:
+  - ATTRIBUTES
+T5_34:
+  Id: 302
+  Display: "&2Ringmail Helmet"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &a+8% &7movement speed."
+  - "&2★ &a+15% &7knockback resist."
+  - "&0 "
+  - "&7“&2A lightweight helm designed"
+  - "&2 to repel arrows and bolts.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:7
+  Attributes:
+    Head:
+      MovementSpeed: 0.08
+      KnockbackResistance: 0.1
+  Hide:
+  - ATTRIBUTES
+T5_35:
+  Id: 298
+  Display: "&2Lacquered Helmet"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c+1.0❤&7 while equipped."
+  - "&2★ &a+10% &7movement speed."
+  - "&0 "
+  - "&7“&2A shiny, polished piece"
+  - "&2 of leather armor.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  - DURABILITY:5
+  Attributes:
+    Head:
+      MovementSpeed: 0.1
+      Health: 2.0
+  Hide:
+  - ATTRIBUTES
+T5_36:
+  Id: 312
+  Display: "&2Crystal Greaves"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&2★ &c-5.0❤&7 while equipped."
+  - "&2★ &8-10% &7movement speed."
+  - "&0 "
+  - "&7“&2An extremely strong piece"
+  - "&2 of leg armor, but its might"
+  - "&2 comes at a price.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_EXPLOSIONS:10
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_FIRE:10
+  Attributes:
+    Legs:
+      MovementSpeed: -0.1
+      Health: -10.0
+  Hide:
+  - ATTRIBUTES

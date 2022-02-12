@@ -1,0 +1,378 @@
+### PETRUS' SKILLS ---------------------------------------------
+A13_Burst_Left: ### 5x barrage (Left)
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=30;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=15;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=345;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=330;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13_Burst_Right: ### 5x barrage (Right)
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=330;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=345;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=15;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 5
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=30;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13_FastBurst_Left: ### 5x Fast barrage (Left)
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=30;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=15;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=345;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=330;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13_FastBurst_Right: ### 5x Fast barrage (Right)
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=330;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=345;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=15;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - delay 2
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=30;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13_PentaShot: ### 5x Basic Shot Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=30;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=15;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=345;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=330;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13_Circle: ### 30 degree Circle of basic attacks
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=180;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=150;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=120;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=90;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=60;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=30;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=330;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=300;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=270;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=240;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=210;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=0.75;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13_BigCircle: ### 20 degree Circle of basic attacks
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=160;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=140;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=120;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=100;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=80;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=60;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=40;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=20;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=340;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=320;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=300;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=280;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=260;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=240;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=220;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=200;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=180;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=0.75;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13F-Tick:
+  Skills:
+  - effect:particles{p=magicCrit;a=3} @origin
+  - effect:particles{p=bubble;amount=5;speed=0;hS=0.2;vS=0.2} @origin
+A13F-Hit: ### 20 hearts of physical damage.
+  Skills:
+  - damage{a=1000;pi=true;pk=true}
+A13_Heavy: ### Heavy shot attack.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=0;v=15;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13_Heavy_2: ### Double Heavy shot attack.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=15;v=15;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=345;v=15;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13_Heavy_3: ### Triple Heavy shot attack.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=15;v=15;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=0;v=10;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=345;v=15;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13_Heavy_4: ### Quad Heavy shot attack.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=30;v=15;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=15;v=10;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=345;v=10;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=330;v=15;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13_Heavy_5: ### Fast Penta Heavy shot attack.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=30;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=15;v=15;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=0;v=10;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=345;v=15;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A13H-Tick;onHit=A13H-Hit;hO=330;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A13H-Tick:
+  Skills:
+  - effect:particles{p=magicCrit;amount=5;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=bubble;amount=8;speed=0;hS=0.4;vS=0.4} @origin
+A13H-Hit: ### Shocks you and deals 250% of your max health as physical damage.
+  Skills:
+  - skill{s=InflictShock}
+  - delay 2
+  - percentDamage{percent=2.5}
+A13_Nova: ### Water Nova Slam Attack
+  Skills:
+  - effect:sound{s=entity.elder_guardian.curse;v=0.5;p=0} @PIR{r=25}
+  - effect:sound{s=entity.enderdragon.growl;v=1;p=1} @PIR{r=25}
+  - effect:particlesphere{particle=magicCrit;amount=500;r=10} @self
+  - damage{amount=750;pi=true;pk=true} @PIR{r=10}
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=400;r=8} @self
+  - damage{amount=750;pi=true;pk=true} @PIR{r=8}
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=300;r=6} @self
+  - damage{amount=500;pi=true;pk=true} @PIR{r=6}
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=200;r=4} @self
+  - damage{amount=500;pi=true;pk=true} @PIR{r=4}
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=150;r=3} @self
+  - damage{amount=250;pi=true;pk=true} @PIR{r=3}
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=100;r=2} @self
+  - damage{amount=250;pi=true;pk=true} @PIR{r=2}
+  - potion{type=BLINDNESS;lvl=0;duration=60;overwrite=true} @PIR{r=10}
+  - potion{type=SLOW;lvl=3;duration=60;overwrite=true} @PIR{r=10}
+A13_Teleport:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - teleport{spreadh=2;spreadv=1} @NearestPlayer{r=30}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
+  - randommessage
+      {
+      m=
+      "<mob.name> &fYou cannot escape the holy light!",
+      "<mob.name> &fThis is the end of your presence, dark one!",
+      "<mob.name> &fI shall cleanse your unholiness!";
+      } @NearestPlayer{r=30}
+  - potion{type=CONFUSION;duration=200;lvl=3;overwrite=true} @PIR{15}
+### Phases (This boss will have three, because 20-second phases can bug out really badly)
+### Each phase should be ~150 ticks long (7.5 seconds) to allow 2.5 seconds for melee attacks.
+A13_Phase_1:
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A13_Burst_Left}
+  - delay 30
+  - skill{s=A13_Burst_Right}
+  - delay 30
+  - skill{s=A13_Teleport} @NearestPlayer{r=30}
+  - skill{s=A13_Nova} @Self
+  - delay 20
+  - skill{s=A13_Circle}
+  - delay 10
+  - skill{s=A13_Circle}
+  - delay 10
+  - skill{s=A13_Circle}
+  - delay 20
+  - skill{s=A13_Heavy}
+  - delay 10
+  - skill{s=A13_Heavy_2}
+  - delay 10
+  - skill{s=A13_Heavy_3}
+  - delay 10
+  - skill{s=A13_Heavy_4}
+A13_Phase_2:
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A13_PentaShot}
+  - delay 5
+  - skill{s=A13_PentaShot}
+  - delay 5
+  - skill{s=A13_PentaShot}
+  - delay 5
+  - skill{s=A13_PentaShot}
+  - delay 5
+  - skill{s=A13_PentaShot}
+  - delay 15
+  - skill{s=A13_Teleport} @NearestPlayer{r=30}
+  - skill{s=A13_Nova} @Self
+  - delay 25
+  - skill{s=A13_BigCircle}
+  - delay 10
+  - skill{s=A13_Circle}
+  - delay 10
+  - skill{s=A13_BigCircle}
+  - delay 10
+  - skill{s=A13_Circle}
+  - delay 10
+  - skill{s=A13_Heavy}
+  - delay 10
+  - skill{s=A13_Heavy_2}
+  - delay 10
+  - skill{s=A13_Heavy_3}
+  - delay 10
+  - skill{s=A13_Heavy_4}
+  - delay 10
+  - skill{s=A13_Heavy_5}
+A13_Phase_3:
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A13_FastBurst_Left}
+  - delay 10
+  - skill{s=A13_PentaShot}
+  - delay 5
+  - skill{s=A13_PentaShot}
+  - delay 5
+  - skill{s=A13_PentaShot}
+  - delay 20
+  - skill{s=A13_FastBurst_Right}
+  - delay 10
+  - skill{s=A13_PentaShot}
+  - delay 5
+  - skill{s=A13_PentaShot}
+  - delay 5
+  - skill{s=A13_PentaShot}
+  - delay 10
+  - skill{s=A13_Teleport} @NearestPlayer{r=30}
+  - skill{s=A13_Nova} @Self
+  - delay 20
+  - skill{s=A13_BigCircle}
+  - delay 10
+  - skill{s=A13_Circle}
+  - delay 10
+  - skill{s=A13_BigCircle}
+  - delay 15
+  - skill{s=A13_Heavy_5}
+  - delay 5
+  - skill{s=A13_Heavy_5}
+  - delay 5
+  - skill{s=A13_Heavy_5}
+  - delay 5
+  - skill{s=A13_Heavy_5}

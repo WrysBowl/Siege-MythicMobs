@@ -1,0 +1,147 @@
+Tier_1:
+  Id: 308
+  Display: "&9Thrunn of Looys"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Level: &f✦✦✦✦✦"
+  - "&7Rarity: &9Common"
+  - "&0 "
+  - "&9★ &c+15.0❤ &7while equipped."
+  - "&9★ &710% Critical strike chance."
+  - "&9★ &7Deals &c10.0❤ &5Chaos &7damage"
+  - "&7  on melee critical hit."
+  - "&0 "
+  - "&7“&9One truly invites their demise"
+  - "&9 when they choose to sit on a"
+  - "&9 throne of lies.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Attributes:
+    Legs:
+      Health: 30.0
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+Tier_2:
+  Id: 308
+  Display: "&3Thrunn of Looys"
+  Lore:
+  - "&7Projectile Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Level: &f✦✦✦✦&8✦"
+  - "&7Rarity: &3Uncommon"
+  - "&0 "
+  - "&3★ &c+10.0❤ &7while equipped."
+  - "&3★ &720% Critical strike chance."
+  - "&3★ &7Deals &c25.0❤ &5Chaos &7damage"
+  - "&7  on melee critical hit."
+  - "&0 "
+  - "&7“&3One truly invites their demise"
+  - "&3 when they choose to sit on a"
+  - "&3 throne of lies.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:15
+  Attributes:
+    Legs:
+      Health: 20.0
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+Tier_3:
+  Id: 308
+  Display: "&bThrunn of Looys"
+  Lore:
+  - "&7Projectile Protection X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Level: &f✦✦✦&8✦✦"
+  - "&7Rarity: &bSuperior"
+  - "&0 "
+  - "&b★ &c+7.5❤ &7while equipped."
+  - "&b★ &730% Critical strike chance."
+  - "&b★ &7Deals &c50.0❤ &5Chaos &7damage"
+  - "&7  on melee critical hit."
+  - "&0 "
+  - "&7“&bOne truly invites their demise"
+  - "&b when they choose to sit on a"
+  - "&b throne of lies.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:10
+  Attributes:
+    Legs:
+      Health: 15.0
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+Tier_4:
+  Id: 308
+  Display: "&dThrunn of Looys"
+  Lore:
+  - "&7Projectile Protection VIII"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Level: &f✦✦&8✦✦✦"
+  - "&7Rarity: &dLegendary"
+  - "&0 "
+  - "&d★ &c+5.0❤ &7while equipped."
+  - "&d★ &750% Critical strike chance."
+  - "&d★ &7Deals &c75.0❤ &5Chaos &7damage"
+  - "&7  on melee critical hit."
+  - "&0 "
+  - "&7“&dOne truly invites their demise"
+  - "&d when they choose to sit on a"
+  - "&d throne of lies.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:8
+  Attributes:
+    Legs:
+      Health: 10.0
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+Tier_U:
+  Id: 308
+  Display: "&6Thrunn of Looys"
+  Lore:
+  - "&7Projectile Protection V"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Level: &f✦&8✦✦✦✦"
+  - "&7Rarity: &6Unique"
+  - "&0 "
+  - "&6★ &c+2.0❤ &7while equipped."
+  - "&6★ &710% Critical strike chance."
+  - "&6★ &7+5% Critical strike chance"
+  - "&7  for every 10 &aStrength&7."
+  - "&6★ &7Deals &c100.0❤ &5Chaos &7damage"
+  - "&7  on melee critical hit."
+  - "&0 "
+  - "&7“&6One truly invites their demise"
+  - "&6 when they choose to sit on a"
+  - "&6 throne of lies.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:5
+  Attributes:
+    Legs:
+      Health: 4.0
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE

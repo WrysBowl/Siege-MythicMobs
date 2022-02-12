@@ -1,0 +1,94 @@
+###---------------------------------------------------------###
+### KEY FRAGMENTS
+###---------------------------------------------------------###
+Key_Up:
+  Id: 351
+  Data: 11
+  Display: "&eUpper Key Fragment"
+  Lore:
+  - "&e&oCombine all three to"
+  - "&e&oenter the void..."
+  Enchantments: 
+  - ARROW_INFINITE:1
+Key_Mid:
+  Id: 351
+  Data: 1
+  Display: "&eMiddle Key Fragment"
+  Lore:
+  - "&e&oCombine all three to"
+  - "&e&oenter the void..."
+  Enchantments: 
+  - ARROW_INFINITE:1
+Key_Low:
+  Id: 409
+  Display: "&eLower Key Fragment"
+  Lore:
+  - "&e&oCombine all three to"
+  - "&e&oenter the void..."
+  Enchantments: 
+  - ARROW_INFINITE:1
+### Compass Shards
+Key_North:
+  Id: 409
+  Display: "&eNorthern Compass Shard"
+  Lore:
+  - "&7Key Item"
+  - "&0 "
+  - "&e★ &7&oCan be used to unlock"
+  - "&7&o  the center of the Atlas."
+  - "&0 "
+  - "&7“&eOne piece was left deep in"
+  - "&e the ruins of an asylum built"
+  - "&e to house the undead...&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Key_South:
+  Id: 409
+  Display: "&eSouthern Compass Shard"
+  Lore:
+  - "&7Key Item"
+  - "&0 "
+  - "&e★ &7&oCan be used to unlock"
+  - "&7&o  the center of the Atlas."
+  - "&0 "
+  - "&7“&eThe second companion was"
+  - "&e consumed by fire, doomed"
+  - "&e to burn eternally...&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Key_East:
+  Id: 409
+  Display: "&eEastern Compass Shard"
+  Lore:
+  - "&7Key Item"
+  - "&0 "
+  - "&e★ &7&oCan be used to unlock"
+  - "&7&o  the center of the Atlas."
+  - "&0 "
+  - "&7“&eThe third was entrusted to"
+  - "&e Petrus, who in time was lost"
+  - "&e to the depths of the sea...&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Key_West:
+  Id: 409
+  Display: "&eWestern Compass Shard"
+  Lore:
+  - "&7Key Item"
+  - "&0 "
+  - "&e★ &7&oCan be used to unlock"
+  - "&7&o  the center of the Atlas."
+  - "&0 "
+  - "&7“&eAnd the last piece was kept"
+  - "&e by Maugri himself, wandering"
+  - "&e forever in the world's heart.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10

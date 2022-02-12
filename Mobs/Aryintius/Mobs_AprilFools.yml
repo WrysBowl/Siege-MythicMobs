@@ -1,0 +1,131 @@
+AprilFool:
+  Type: HUSK
+  Display: "&4« &cApril Fool &4»"
+  Health: 20000
+  Damage: 750
+  Disguise:
+    Type: VINDICATOR
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Drops:
+  - AprilFools_Mob
+  - Currency_Atlas_3
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - Exalted
+  - Mythic
+  - Corrupted
+  - Iridescent
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - DHelm:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - BrahmkSword:0
+  - BrahmkSword:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onTimer:5
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+  - randommessage
+      {
+      m=
+      "<mob.name> &fIt's time for your yearly prank!",
+      "<mob.name> &fI am everywhere. I am everyone.",
+      "<mob.name> &fTee-hee!",
+      "<mob.name> &fHo ho ho, merry Fool's Day!",
+      "<mob.name> &fYou need to laugh some more!";
+      } @PlayersInRadius{r=50} ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7Hey, stop that! That's not funny at all!",
+      "<mob.name> &7Ha ha, hee hee, hoo hoo!",
+      "<mob.name> &7Laugh! Laugh for me!",
+      "<mob.name> &7According to all known laws of aviation, there is no way that a bee should be able to fly.",
+      "<mob.name> &7Life is pain, so is death.";
+      } @PIR{r=50} ~onTimer:300
+### EFFECTS
+  - effect:sound{s=entity.vindication_illager.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.vindication_illager.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.vindication_illager.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=entity.vindication_illager.death;v=1;p=0} @Self ~onDeath
+### SKILLS
+  - damage{a=200;pi=true;ia=true;pk=true} @Parent ~onDamaged
+### PHASE 1
+  - skill{s=ATX_RandomShot} @NearestPlayer{r=50} ~onTimer:10
+  - skill{s=ATX_RandomHeavy} @NearestPlayer{r=50} ~onTimer:10
+  - skill{s=ATX_RandomNova} @Self ~onTimer:10
+### DEATH STUFF
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+  - randommessage
+      {
+      m=
+      "<mob.name> &fHi ho, hi ho, off to Hell I go...",
+      "<mob.name> &fOh dear, this isn't what I meant by a prank at all!",
+      "<mob.name> &fSo mean, honestly...",
+      "<mob.name> &fArgh, right in the lasagna!",
+      "<mob.name> &fOuch, my entire existence!",
+      "<mob.name> &fOw! My spleen!";
+      } @PIR{r=50} ~onDeath
+
+AF_SlamExplosion: ### Teleport Slam Explosion
+  Type: SILVERFISH
+  Health: 1000
+  Damage: 0
+  Faction: Totem
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;level=0} @Self ~onSpawn
+### SKILLS
+  - remove{delay=40} @Self ~onSpawn
+  - effect:particlering{particle=largesmoke;radius=6;points=49;amount=1;hS=1;vS=0} @self ~onSpawn
+  - effect:particlering{particle=witchMagic;radius=5;points=36;amount=1;hS=1;vS=0} @self ~onSpawn
+  - effect:particlering{particle=largesmoke;radius=4;points=25;amount=1;hS=1;vS=0} @self ~onSpawn
+  - effect:particlering{particle=witchMagic;radius=3;points=16;amount=1;hS=1;vS=0} @self ~onSpawn
+  - effect:particlering{particle=largesmoke;radius=2;points=9;amount=1;hS=1;vS=0} @self ~onSpawn
+  - effect:particlering{particle=witchMagic;radius=1;points=4;amount=1;hS=1;vS=0} @self ~onSpawn
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @self ~onSpawn
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @self ~onSpawn
+  - effect:sound{s=entity.wither.death;v=1;p=1} @self ~onSpawn
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2} @Self ~onSpawn
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1} @Self ~onSpawn
+  - damage{amount=1000;ia=true;pi=true;pk=true} @EntitiesInRadius{r=5;ignore=players,samefaction} ~onSpawn
+  - damage{amount=20000;pi=true;pk=true} @EntitiesInRadius{r=5;ignore=players,samefaction} ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+    NoAI: true

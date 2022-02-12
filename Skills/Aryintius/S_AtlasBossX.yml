@@ -1,0 +1,84 @@
+### FINAL ATLAS BOSS SKILLS ----------------------------------------------------
+ATX_SpawnKing:
+  Cooldown: 20
+  Skills:
+  - randomskill{skills=ATX_King_1,ATX_King_2,ATX_King_3,ATX_King_4}
+ATX_King_1:
+  Skills:
+  - summon{type=AtlasBoss_X;a=1} @Location{c=997,45,3497}
+ATX_King_2:
+  Skills:
+  - summon{type=AtlasBoss_X;a=1} @Location{c=1003,45,3503}
+ATX_King_3:
+  Skills:
+  - summon{type=AtlasBoss_X;a=1} @Location{c=997,45,3503}
+ATX_King_4:
+  Skills:
+  - summon{type=AtlasBoss_X;a=1} @Location{c=1003,45,3497}
+ATX_SpawnTotem:
+  Cooldown: 15
+  Skills:
+  - effect:sound{s=block.portal.travel;v=1;p=2}
+  - randomskill{skills=ATX_Totem_1,ATX_Totem_2,ATX_Totem_3,ATX_Totem_4}
+ATX_Totem_1:
+  Skills:
+  - summon{type=Totem_Chaos;a=1} @Location{c=1000,45,3500}
+ATX_Totem_2:
+  Skills:
+  - summon{type=Totem_Bleed;a=1} @Location{c=1000,45,3500}
+ATX_Totem_3:
+  Skills:
+  - summon{type=Totem_Curse;a=1} @Location{c=1000,45,3500}
+ATX_Totem_4:
+  Skills:
+  - summon{type=Totem_Freeze;a=1} @Location{c=1000,45,3500}
+### PHASES --------------------------------------------------------------------
+ATX_RandomShot:
+  Cooldown: 2
+  Skills:
+  - randomskill
+      {
+      skills=
+      A1_Fire,
+      A3_Blast,
+      A4_TriBolt,
+      A5_Burst,
+      A8_4444,
+      A9_TriShot,
+      A10_4444,
+      A12_FlameBlast,
+      A15_TripleShot
+      }
+ATX_RandomHeavy:
+  Cooldown: 5
+  Skills:
+  - randomskill
+      {
+      skills=
+      A1_Poison,
+      A2_Blast,
+      A3_PoisonBlast,
+      A4_Heavy,
+      A5_Blast,
+      A6_Blast,
+      A8_Blast,
+      A9_Heavy,
+      A14_Heavy
+      }
+ATX_RandomNova:
+  Cooldown: 10
+  Skills:
+  - randomskill
+      {
+      skills=
+      A6_Knockback,
+      A8_Knockback,
+      A9_Nova,
+      A10_Nova,
+      A11_FrostNova,
+      A12_FireNova,
+      A12_LavaPlains,
+      A13_BigCircle,
+      A14_DeathCircle,
+      A15_DeathCircle
+      }

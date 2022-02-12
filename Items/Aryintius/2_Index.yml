@@ -1,0 +1,422 @@
+###---------------------------------------------------------###
+### WEAPONS
+###---------------------------------------------------------###
+T2_1:
+  Id: 283
+  Display: "&d&oCelestial Tracer"
+  Lore:
+  - "&7Sharpness CXV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+80% &7&oattack speed."
+  - "&d★ &a&o+30% &7&omovement speed."
+  - "&d★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, gain &a&oHaste IV&7&o."
+  - "&0 "
+  - "&7“&dForged from folded shards of"
+  - "&d reality, this dagger could make"
+  - "&d even the divines bleed.&7”"
+  Enchantments:
+  - DURABILITY:9999
+  - MENDING:10
+  - DAMAGE_ALL:115
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.1
+      MovementSpeed: 0.3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T2_2:
+  Id: 279
+  Display: "&d&oGiant's Greataxe"
+  Lore:
+  - "&7Sharpness CCC"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &8&o-80% &7&oattack speed."
+  - "&d★ &8&o-30% &7&omovement speed."
+  - "&d★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, gain &a&oResist. IV&7&o."
+  - "&0 "
+  - "&7“&dA hefty axe crafted by ancient"
+  - "&d giants, eager to please their"
+  - "&d masters--the Titans.&7”"
+  Enchantments:
+  - DURABILITY:9999
+  - MENDING:10
+  - DAMAGE_ALL:300
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.9
+      MovementSpeed: -0.3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T2_3:
+  Id: 292
+  Display: "&d&oWhirling Serenade"
+  Lore:
+  - "&7Sharpness LXX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+50% &7&oattack speed."
+  - "&d★ &a&o+50% &7&omovement speed."
+  - "&d★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, gain &a&oSpeed II&7&o."
+  - "&0 "
+  - "&7“&dShall we have a dance?&7”"
+  Enchantments:
+  - DURABILITY:9999
+  - MENDING:10
+  - DAMAGE_ALL:70
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.25
+      MovementSpeed: 0.5
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T2_4:
+  Id: 290
+  Display: "&d&oSudden Strike"
+  Lore:
+  - "&7Smite L"
+  - "&7Knockback V"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &8&o-40% &7&oattack speed."
+  - "&d★ &a&o+20% &7&omovement speed."
+  - "&0 "
+  - "&7“&dThere is no preparation,"
+  - "&d for death does not wait.&7”"
+  Enchantments:
+  - DURABILITY:9999
+  - MENDING:10
+  - DAMAGE_UNDEAD:50
+  - KNOCKBACK:5
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.8
+      MovementSpeed: 0.2
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T2_5:
+  Id: 267
+  Display: "&d&oBlade of the Phoenix"
+  Lore:
+  - "&7Sharpness XC"
+  - "&7Fire Aspect X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+50% &7&oattack speed."
+  - "&d★ &a&o+50% &7&omovement speed."
+  - "&0 "
+  - "&7“&dBorn by fire, forged by"
+  - "&d cinder, the legend rises"
+  - "&d from ash once more.&7”"
+  Enchantments:
+  - DURABILITY:9999
+  - MENDING:10
+  - DAMAGE_ALL:90
+  - FIRE_ASPECT:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.2
+      MovementSpeed: 0.5
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T2_6:
+  Id: 276
+  Display: "&d&oThree Horns Divide"
+  Lore:
+  - "&7Smite L"
+  - "&7Sweeping Edge X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+80% &7&oattack speed."
+  - "&0 "
+  - "&7“&dA vicious, pronged blade"
+  - "&d outfitted with a peculiar"
+  - "&d enchantment.&7”"
+  Enchantments:
+  - DURABILITY:9999
+  - MENDING:10
+  - DAMAGE_UNDEAD:50
+  - SWEEPING_EDGE:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.1
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### ACCESSORY ITEMS
+###---------------------------------------------------------###
+T2_13:
+  Id: 449
+  Display: "&d&oSurvival Instincts"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &7&oEffect: &a&oRegen. III&7&o."
+  - "&d★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, set your gold"
+  - "&7&o  hearts to &e&o2.0❤&7&o."
+  - "&0 "
+  - "&7“&dLife remains a basic necessity"
+  - "&d that no sane soul would wish to"
+  - "&d be taken away.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T2_14:
+  Id: 293
+  Display: "&d&oBroken Sceptre"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &7&oEffect: Set your gold hearts"
+  - "&7&o  to &e&o10.0❤&7&o. (Refreshes every"
+  - "&7&o  10.0 seconds)"
+  - "&0 "
+  - "&7“&dThe once beautiful staff of a"
+  - "&d mage long defeated..&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  - DURABILITY:9999
+  - MENDING:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+###---------------------------------------------------------###
+### ARMOR PIECES
+###---------------------------------------------------------###
+T2_15:
+  Id: 311
+  Display: "&d&oHoly Chestplate"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &7&oEffect: &a&oResist. III&7&o."
+  - "&d★ &a&o+10% &7&omovement speed."
+  - "&0 "
+  - "&7“&dA sacred artifact from"
+  - "&d a long-dead religion.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      MovementSpeed: 0.1
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+T2_16:
+  Id: 314
+  Display: "&d&oAquir Laurel"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &7&oEffect: &a&oWaterbreathing&7&o."
+  - "&d★ &c&o+5.0❤ &7&owhile equipped."
+  - "&d★ &a&o+10% &7&omovement speed."
+  - "&0 "
+  - "&7“&dA piece of headwear common"
+  - "&d amongst the Aquir nobility.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - WATER_WORKER:1
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.1
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+T2_17:
+  Id: 309
+  Display: "&d&oLevitation Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &7&oEffect: &a&oLevitation I&7&o."
+  - "&d★ &a&o+40% &7&omovement speed."
+  - "&0 "
+  - "&7“&dA magical pair of boots made"
+  - "&d long ago by a strange wizard.&7”"
+  Enchantments:
+  - PROTECTION_FALL:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.4
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+T2_18:
+  Id: 312
+  Display: "&d&oFlaming Kilt"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &7&oEffect: &a&oFire Resist&7&o."
+  - "&d★ &c&o+4.0❤ &7&owhile equipped."
+  - "&0 "
+  - "&7“&dI guess they really are"
+  - "&d hot pants.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 8.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+T2_19:
+  Id: 316
+  Display: "&d&oBlubber Legs"
+  Lore:
+  - "&7No Enchantments"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &c&o+20.0❤ &7&owhile equipped."
+  - "&0 "
+  - "&7“&dA massive pair of leggings"
+  - "&d crafted from animal blubber"
+  - "&d carelessly sewn together.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 40.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### UNIQUE ULTIMATES
+###---------------------------------------------------------###
+Unity:
+  Id: 276
+  Display: "&d&oUnity"
+  Lore:
+  - "&7Sharpness L"
+  - "&7Knockback III"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &7&oEffect: &a&oStrength X&7&o."
+  - "&d★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, gain &a&oStrength L&7&o."
+  - "&0 "
+  - "&7“&dBurning with holy fire, few can"
+  - "&d wield this ancient blade, chosen"
+  - "&d by the essence within.&7”"
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:50
+  - KNOCKBACK:3
+  - DURABILITY:9999
+  - MENDING:10
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+Gigaspade:
+  Id: 277
+  Display: "&d&oGigaspade"
+  Lore:
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &7&oEffect: &a&oHaste II&7&o."
+  - "&d★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, gain &a&oHaste IV&7&o."
+  - "&0 "
+  - "&7“&dMy shovel is the one that will"
+  - "&d pierce the heavens!&7”"
+  Enchantments:
+  - DIG_SPEED:10
+  - DURABILITY:10
+  Hide:
+  - ATTRIBUTES
+Doomhammer:
+  Id: 279
+  Display: "&d&oDoomhammer"
+  Lore:
+  - "&7Smite L"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&d★ &a&o+50% &7&oattack speed."
+  - "&d★ &7&oEffect: Inflicts &8&oWeakness"
+  - "&7&o  on enemy monsters/bosses."
+  - "&0 "
+  - "&7“&dElephants guide me.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:50
+  - DURABILITY:9999
+  - MENDING:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.4
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES

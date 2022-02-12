@@ -1,0 +1,65 @@
+Titan4:
+  Type: STRAY
+  Display: "&2&l<&2« &eSahuvar &2»&2&l>"
+  Health: 100000
+  Damage: 1250
+  BossBar:
+    Enabled: true
+    Title: "&2&l<&2« &eSahuvar the Deceiver &2»&2&l>"
+    Range: 30
+    Color: GREEN
+    Style: SEGMENTED_12
+  LevelModifiers:
+  - health 5
+  - damage 0.5
+  Equipment:
+  - Dreamer_Helm:4
+  - Dreamer_Chest:3
+  - Dreamer_Legs:2
+  - Dreamer_Boots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Titan_Fragments
+  - Currency_Rifts_Boss
+  - Titan4
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+### Initialization
+  - message{m="<mob.name> &fSo, a new challenger approaches my lair? Good, good. I shall ensure your death is swift and painful!"} @PlayersInRadius{r=30} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - effect:sound{s=entity.ghast.hurt;p=1.5;v=1} @self ~onDamaged
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=1} @self ~onDamaged
+  - randommessage
+      {
+      m=
+      "<mob.name> &7Bow down to the mightiest of the Titans!",
+      "<mob.name> &7Cower before the face of your unmaking!",
+      "<mob.name> &7Give in to death's embrace!",
+      "<mob.name> &7Darkness rises as my shadows strike!",
+      "<mob.name> &7Your soul will make the grandest of trophies!";
+      } @PIR{r=30} ~onTimer:300
+### Phase 1
+  - skill{s=T4_Phase_1} @NearestPlayer{r=50} ~onTimer:20 >50%
+### Phase 2
+  - skill{s=T4_Phase_2} @NearestPlayer{r=50} ~onTimer:20 <50%
+### Death
+  - message{m="<mob.name> &fThis is not the end... I will have my vengeance..."} @PlayersInRadius{r=50} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=2} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=0} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=1.5;p=1} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

@@ -1,0 +1,82 @@
+Titan3:
+  Type: STRAY
+  Display: "&f&l<&f« &bVraast &f»&f&l>"
+  Health: 100000
+  Damage: 1250
+  BossBar:
+    Enabled: true
+    Title: "&f&l<&f« &bVraast, Heir of Frost &f»&f&l>"
+    Range: 50
+    Color: WHITE
+    Style: SEGMENTED_12
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - UHelm_2:4
+  - UChest_1:3
+  - ULegs_1:2
+  - UBoots_1:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Titan_Fragments
+  - Currency_Rifts_Boss
+  - Titan3
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fAh, another sacrifice for my frost legion? Wonderful!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onTimer:200
+  - randommessage
+      {
+      m=
+      "<mob.name> &7You seek my power? Then you seek death!",
+      "<mob.name> &7Kneel before the power of the frost legion!",
+      "<mob.name> &7Accept your fate as another soul for the collective!",
+      "<mob.name> &7You would make a fine addition to my legion...",
+      "<mob.name> &7None can escape the frost legion's grasp!";
+      } @PIR{r=50} ~onTimer:300
+  - skill{s=CancelSlowness} @Self ~onTimer:5
+  - skill{s=CancelFatigue} @Self ~onTimer:5
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=block.glass.break;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+### PHASE 1
+  - skill{s=T3_Summon_1} @Self ~onTimer:530 >50%
+  - skill{s=T3_Burst_1} @PIR{r=30} ~onTimer:80 >50%
+  - skill{s=T3_Teleport} @target ~onTimer:300
+  - skill{s=T3_FrostNova} @Self ~onTimer:100 >50%
+  - skill{s=T3_IcePlains} @Self ~onTimer:200 >50%
+### PHASE 2
+  - skill{s=T3_Summon_2} @Self ~onTimer:410 <50%
+  - skill{s=T3_Burst_2} @PIR{r=30} ~onTimer:80 <50%
+  - skill{s=T3_FrostNova} @Self ~onTimer:60 <50%
+  - skill{s=T3_IcePlains} @Self ~onTimer:100 <50%
+### DEATH STUFF
+  - message{m="<mob.name> &fI may be gone forever... but my frost legion remains eternal..."} @PlayersInRadius{r=50} ~onDeath
+  - remove @MIR{r=30;t=T3_Melee_NoDrop} ~onDeath
+  - remove @MIR{r=30;t=T3_Mage_NoDrop} ~onDeath
+  - remove @MIR{r=30;t=T3_MiniBoss_NoDrop} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=2} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=0} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=1.5;p=1} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

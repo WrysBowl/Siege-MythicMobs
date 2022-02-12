@@ -1,0 +1,103 @@
+### Titan 5 Skills (Lord of Lightning)
+T5_Missile: ### Basic missile bolt attack.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - projectile{ot=T5_Missile-Tick;oh=T5_Missile-Hit;v=20;i=1;hR=1;vR=1}
+T5_Missile-Tick:
+  Skills:
+  - effect:particles{p=largesmoke;amount=1;speed=0;hS=0.3;vS=0.3} @origin
+  - effect:particles{p=magicCrit;amount=5;speed=0;hS=0.2;vS=0.2} @origin
+T5_Missile-Hit: ### 40 hearts of physical damage. OUCH.
+  Skills:
+  - damage{a=2000;pi=true;pk=true}
+T5_Blast: ### Heavy missile bolt attack.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.5;p=1}
+  - projectile{ot=T5_Blast-Tick;oh=T5_Blast-Hit;v=15;i=1;hR=1;vR=1}
+T5_Blast-Tick:
+  Skills:
+  - effect:particles{p=magicCrit;amount=5;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=largeexplode;a=1} @Origin
+T5_Blast-Hit: ### Guaranteed shock + 400% of maximum life.
+  Skills:
+  - skill{s=InflictShock}
+  - delay 2
+  - percentDamage{percent=4.0}
+T5_SpamEffect:
+  Skills:
+  - itemspray{i=nether_star;a=8;r=0;d=5}
+### AREA OF EFFECT SKILLS --------------------------------
+T5_Explosion_1: ### Explosion attack spammed en masse.
+  Skills:
+  - effect:particlesphere{particle=magicCrit;amount=100;r=5} @self
+  - effect:particlesphere{particle=cloud;amount=50;r=5} @self
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - damage{amount=3000;pi=true} @PIR{r=5}
+T5_TornadoFX: ### Tornado attack
+  Skills:
+  - effect:particletornado{p=smoke;cp=largeexplode;mr=1.5;h=3;i=1;d=100;rs=0.5;sh=1;cs=1;ca=1;chs=0.5;cvs=0.5;cps=1;cyo=0} @origin
+T5_Tornado:
+  Skills:
+  - pull{velocity=3} @PIR{r=8}
+  - damage{a=1500;pi=true;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.35;p=1} @PIR{r=35}
+  - effect:sound{s=entity.enderdragon.growl;v=0.35;p=0} @PIR{r=35}
+  - delay 2
+  - pull{velocity=5} @PIR{r=8}
+  - damage{a=1500;pi=true;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.35;p=1} @PIR{r=35}
+  - effect:sound{s=entity.enderdragon.growl;v=0.35;p=0} @PIR{r=35}
+  - delay 2
+  - pull{velocity=5} @PIR{r=8}
+  - damage{a=1500;pi=true;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.35;p=1} @PIR{r=35}
+  - effect:sound{s=entity.enderdragon.growl;v=0.35;p=0} @PIR{r=35}
+  - delay 2
+  - pull{velocity=5} @PIR{r=8}
+  - damage{a=1500;pi=true;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.35;p=1} @PIR{r=35}
+  - effect:sound{s=entity.enderdragon.growl;v=0.35;p=0} @PIR{r=35}
+  - delay 2
+  - pull{velocity=5} @PIR{r=8}
+  - damage{a=1500;pi=true;pk=true} @PIR{r=5}
+  - effect:sound{s=entity.enderdragon.growl;v=0.35;p=1} @PIR{r=35}
+  - effect:sound{s=entity.enderdragon.growl;v=0.35;p=0} @PIR{r=35}
+### COMPOSITE SKILLS -------------------------------------
+T5_Storm:
+  Skills:
+  - summon{mob=T5_Pointer_1;amount=5;noise=15} @Self
+  - delay 10
+  - summon{mob=T5_Pointer_1;amount=5;noise=12} @Self
+  - delay 10
+  - summon{mob=T5_Pointer_1;amount=5;noise=9} @Self
+  - delay 10
+  - summon{mob=T5_Pointer_1;amount=5;noise=6} @Self
+  - delay 10
+  - summon{mob=T5_Pointer_1;amount=5;noise=3} @Self
+  - delay 10
+  - summon{mob=T5_Pointer_1;amount=5;noise=2} @Self
+  - delay 10
+  - summon{mob=T5_Pointer_1;amount=5;noise=0} @Self
+T5_RapidMissiles:
+  Skills:
+  - skill{s=T5_Missile}
+  - delay 5
+  - skill{s=T5_Missile}
+  - delay 5
+  - skill{s=T5_Missile}
+  - delay 5
+  - skill{s=T5_Missile}
+T5_RapidBlast:
+  Skills:
+  - skill{s=T5_Blast}
+  - delay 10
+  - skill{s=T5_Blast}
+  - delay 10
+  - skill{s=T5_Blast}

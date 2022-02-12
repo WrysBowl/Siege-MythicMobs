@@ -1,0 +1,197 @@
+Dummy:
+  Type: HUSK
+  Display: '&2&l<&a« &fDefault Dummy &a»&2&l>'
+  Health: 200000
+  Damage: 1
+  BossBar:
+    Enabled: true
+    Title: '&2&l<&a« &fDefault Dummy &a»&2&l>'
+    Range: 25
+    Color: GREEN
+    Style: SOLID
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.01
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    NoAI: true
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - message{cooldown=120;m="<mob.name> &fDummy spawned with 100,000 HP."} @PlayersInRadius{r=25} ~onSpawn
+  - message{cooldown=20;m="<mob.name> &fDummy Destroyed"} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath
+Dummy_Armor:
+  Type: HUSK
+  Display: '&5&l<&5« &fArmored Dummy &5»&5&l>'
+  Health: 200000
+  Damage: 1
+  BossBar:
+    Enabled: true
+    Title: '&5&l<&5« &fArmored Dummy &5»&5&l>'
+    Range: 25
+    Color: PURPLE
+    Style: SOLID
+  Equipment:
+  - IHelm:4
+  - IChest:3
+  - ILegs:2
+  - IBoots:1
+  - T0_1:0
+  - T0_1:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.01
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    NoAI: true
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - message{cooldown=120;m="<mob.name> &fDummy spawned with 100,000 HP, armored, no effects."} @PlayersInRadius{r=25} ~onSpawn
+  - message{cooldown=20;m="<mob.name> &fDummy Destroyed"} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath
+Dummy_Resist:
+  Type: HUSK
+  Display: '&1&l<&9« &fResistance Dummy &9»&1&l>'
+  Health: 200000
+  Damage: 1
+  BossBar:
+    Enabled: true
+    Title: '&1&l<&9« &fResistance Dummy &9»&1&l>'
+    Range: 25
+    Color: BLUE
+    Style: SOLID
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.01
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    NoAI: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - message{cooldown=120;m="<mob.name> &fDummy spawned with 100,000 HP, Resistance IV."} @PlayersInRadius{r=25} ~onSpawn
+  - message{cooldown=20;m="<mob.name> &fDummy Destroyed"} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath
+Dummy_Hybrid:
+  Type: HUSK
+  Display: '&6&l<&e« &fHybrid Dummy &e»&6&l>'
+  Health: 200000
+  Damage: 1
+  BossBar:
+    Enabled: true
+    Title: '&6&l<&e« &fHybrid Dummy &e»&6&l>'
+    Range: 25
+    Color: WHITE
+    Style: SOLID
+  Equipment:
+  - GHelm:4
+  - GChest:3
+  - GLegs:2
+  - GBoots:1
+  - T7_1:0
+  - T7_1:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.01
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    NoAI: true
+  Skills:
+  # - skill{s=T5_SpamEffect} @Self ~onTimer:5
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - message{cooldown=120;m="<mob.name> &fDummy spawned with 100,000 HP, armored, Resistance IV."} @PlayersInRadius{r=25} ~onSpawn
+  - message{cooldown=20;m="<mob.name> &fDummy Destroyed"} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath
+ReflectDummy:
+  Type: HUSK
+  Display: '&5&l<&5« &dReflective Dummy &5»&5&l>'
+  Health: 2000
+  Damage: 1
+  BossBar:
+    Enabled: true
+    Title: '&5&l<&5« &dReflective Dummy &5»&5&l>'
+    Range: 25
+    Color: PURPLE
+    Style: SOLID
+  Equipment:
+  - ReflectHelm:4
+  - ReflectChest:3
+  - ReflectLegs:2
+  - ReflectBoots:1
+  - T7_1:0
+  - T7_1:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.01
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    NoAI: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - message{cooldown=120;m="<mob.name> &fDummy spawned with 1,000 HP, armored, Resistance IV and Thorns M."} @PlayersInRadius{r=25} ~onSpawn
+  - message{cooldown=20;m="<mob.name> &fDummy Destroyed"} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath
+DropDummy:
+  Type: HUSK
+  Display: '&7&l<&7« &fDrop Tester &7»&7&l>'
+  Health: 20
+  Damage: 1
+  BossBar:
+    Enabled: true
+    Title: '&7&l<&7« &fDrop Tester &7»&7&l>'
+    Range: 25
+    Color: WHITE
+    Style: SOLID
+  Drops:
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - Exalted
+  - Corrupted
+  - Mythic
+  - Iridescent
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.01
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    NoAI: true
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - message{cooldown=120;m="<mob.name> &fDummy spawned with 10 HP."} @PlayersInRadius{r=25} ~onSpawn
+  - message{cooldown=20;m="<mob.name> &fDummy Destroyed"} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath

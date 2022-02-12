@@ -1,0 +1,343 @@
+### STATUS EFFECTS ---------------------------------------------
+InflictFreeze: ### Inflicts Freezing for 5.0s.
+  Skills:
+  - potion{type=SLOW;duration=100;lvl=9;overwrite=true}
+  - potion{type=SLOW_DIGGING;duration=100;lvl=9;overwrite=true}
+  - effect:particlesphere{particle=cloud;amount=8;r=1}
+  - sendtitle{title="&b&lFrozen";subtitle="&fAll speed reduced";d=20}
+  - effect:sound{s=entity.wither.ambient;v=0.2;p=0}
+InflictShock: ### Inflicts Shock for 5.0s.
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=1;lvl=1;overwrite=true}
+  - potion{type=FAST_DIGGING;duration=100;lvl=9;overwrite=true}
+  - potion{type=SPEED;duration=100;lvl=9;overwrite=true}
+  - effect:particlesphere{particle=angryVillager;amount=8;r=1}
+  - sendtitle{title="&3&lShocked";subtitle="&fNo resistance/increased movement speed";d=20}
+  - effect:sound{s=block.fire.extinguish;v=0.25;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.25;p=1}
+  - effect:sound{s=entity.blaze.death;v=0.25;p=2}
+Shock_NoSpeed: ### Inflicts Shock without the speed.
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=1;lvl=1;overwrite=true}
+  - potion{type=FAST_DIGGING;duration=100;lvl=9;overwrite=true}
+  - effect:particlesphere{particle=angryVillager;amount=8;r=1}
+  - sendtitle{title="&3&lShocked";subtitle="&fNo resistance/increased movement speed";d=20}
+  - effect:sound{s=block.fire.extinguish;v=0.25;p=2}
+  - effect:sound{s=block.fire.extinguish;v=0.25;p=1}
+  - effect:sound{s=entity.blaze.death;v=0.25;p=2}
+CancelSpeedX:
+  TargetConditions:
+  - haspotioneffect{t=SPEED;level=9} true
+  Skills:
+  - potion{type=SPEED;duration=1;lvl=0;overwrite=true}
+InflictIgnite: ### Ignites Enemy
+  Skills:
+  - effect:sound{s=entity.blaze.shoot;v=0.25;p=2}
+  - effect:sound{s=entity.blaze.shoot;v=0.25;p=1}
+  - effect:sound{s=entity.blaze.shoot;v=0.25;p=0}
+  - effect:particlesphere{particle=flame;amount=10;r=1}
+  - potion{type=REGENERATION;duration=1;lvl=1;overwrite=true}
+  - potion{type=SLOW;duration=100;lvl=3;overwrite=true}
+  - potion{type=BLINDNESS;duration=100;overwrite=true}
+Ignite_Title: ### Ignite with title announcement
+  Skills:
+  - sendtitle{title="&6&lIgnited";subtitle="&fNo Regeneration + Slowness/Blindness";d=20}
+  - effect:sound{s=entity.blaze.shoot;v=0.25;p=2}
+  - effect:sound{s=entity.blaze.shoot;v=0.25;p=1}
+  - effect:sound{s=entity.blaze.shoot;v=0.25;p=0}
+  - effect:particlesphere{particle=flame;amount=10;r=1}
+  - potion{type=REGENERATION;duration=1;lvl=1;overwrite=true}
+  - potion{type=SLOW;duration=100;lvl=3;overwrite=true}
+  - potion{type=BLINDNESS;duration=100;overwrite=true}
+InflictCurse:
+  Skills:
+  - sendtitle{title="&5&lCursed";subtitle="&fRandom negative effects";d=20}
+  - skill{s=RandomBadStuff} @target
+### MORE GIMMICKY STUFF ----------------------------------------
+FrozenWhileShocked: ### Inflicts Freezing while Shocked
+  Conditions:
+  - haspotioneffect{t=SPEED;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - potion{type=SLOW;duration=100;lvl=9;overwrite=true}
+  - potion{type=SLOW_DIGGING;duration=100;lvl=9;overwrite=true}
+  - effect:particlesphere{particle=cloud;amount=10;r=1}
+  - sendtitle{title="&b&lFrozen";subtitle="&fMovement speed reduced";d=20}
+  - effect:sound{s=entity.wither.ambient;v=0.2;p=0}
+ShockedWhileFrozen: ### Inflicts Shock while Frozen
+  Conditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=1;lvl=1;overwrite=true}
+  - potion{type=FAST_DIGGING;duration=100;lvl=9;overwrite=true}
+  - potion{type=SPEED;duration=100;lvl=9;overwrite=true}
+  - effect:particlesphere{particle=angryVillager;amount=10;r=1}
+ShockedWhileFrozen_Enemy: ### Inflicts Shock while enemy is Frozen
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - skill{s=InflictShock}
+ShockWhileStronk: ### Inflicts Shock while you are STRONK
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE} true
+  Skills:
+  - skill{s=InflictShock}
+ExtraIgniteDamage: ### Adds extra damage to ignited enemies
+  TargetConditions:
+  - haspotioneffect{t=SLOW;level=3} true
+  Skills:
+  - damage{a=35;ia=true;pi=true;pk=true} @target
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+ExtraIgniteDamage2: ### Adds extra damage to ignited enemies
+  TargetConditions:
+  - haspotioneffect{t=BLINDNESS} true
+  Skills:
+  - damage{a=35;ia=true;pi=true;pk=true} @target
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+ExtraFreezeDamage: ### Adds extra melee damage to frozen enemies
+  TargetConditions:
+  - haspotioneffect{t=SLOW;level=9} true
+  Skills:
+  - damage{a=240;ia=true;pi=true;pk=true} @target
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+ExtraFreezeDamage2: ### Adds extra ranged/magic damage to frozen enemies
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - damage{a=80;ia=true;pi=true;pk=true} @target
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+ExtraFreezeDamage3: ### Adds extra phys damage to frozen enemies
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - skill{s=Phys_250-400} @target
+  - effect:sound{s=block.glass.break;p=1;v=1}
+  - effect:sound{s=block.glass.break;p=0.5;v=0.8}
+ExtraWaterDamage: ### Adds extra chaos damage from waterbreathing
+  Conditions:
+  - haspotioneffect{t=WATER_BREATHING} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.08;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.08;p=2}
+  - damage{a=60;ia=true;pi=true;pk=true} @target
+ExtraSlowDamage: ### Adds extra phys damage to slowed enemies
+  TargetConditions:
+  - haspotioneffect{t=SLOW} true
+  Skills:
+  - damage{a=500;pk=true} @target
+  - effect:sound{s=entity.player.attack.sweep​;v=1;p=1}
+Bone_Shock: ### Bone of the Ancients effects
+  TargetConditions:
+  - haspotioneffect{t=SPEED;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - skill{s=Phys_150-300} @target
+Bone_Freeze:
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - skill{s=Phys_150-300} @target
+Bone_Ignite:
+  TargetConditions:
+  - haspotioneffect{t=BLINDNESS} true
+  Skills:
+  - skill{s=Phys_150-300} @target
+### ELEMENTAL LEECH --------------------------------------------
+FreezeHeal:
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - heal{a=100} @Self
+IgniteHeal: ### heal from ignites.
+  TargetConditions:
+  - haspotioneffect{t=SLOW;level=3} true
+  Skills:
+  - heal{a=20} @Self
+IgniteHeal2:
+  TargetConditions:
+  - haspotioneffect{t=BLINDNESS} true
+  Skills:
+  - heal{a=20} @Self
+ShockHeal:
+  TargetConditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - heal{a=80} @Self
+### ADDED DAMAGE -----------------------------------------------
+Freeze_50-100: ### Adds extra damage to frozen enemies
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - skill{s=Phys_50-100} @target
+Freeze_75-150:
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - skill{s=Phys_75-150} @target
+Freeze_100-250:
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - skill{s=Phys_100-250} @target
+Freeze_200-350:
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - skill{s=Phys_200-350} @target
+Freeze_350-500:
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - skill{s=Phys_350-500} @target
+Freeze_500-750:
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - skill{s=Phys_500-750} @target
+Shock_50-100: ### Adds extra damage to shocked enemies
+  TargetConditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - skill{s=Phys_50-100} @target
+Shock_100-250:
+  TargetConditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - skill{s=Phys_100-250} @target
+Shock_150-300:
+  TargetConditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - skill{s=Phys_150-300} @target
+Shock_200-350:
+  TargetConditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - skill{s=Phys_200-350} @target
+Shock_250-400:
+  TargetConditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - skill{s=Phys_250-400} @target
+Shock_350-500:
+  TargetConditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - skill{s=Phys_350-500} @target
+Shock_500-750:
+  TargetConditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - skill{s=Phys_500-750} @target
+Shock_500-1500:
+  TargetConditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - skill{s=Phys_500-1500} @target
+Ignite_50-100: ### Adds extra damage to ignited enemies
+  TargetConditions:
+  - haspotioneffect{t=BLINDNESS} true
+  Skills:
+  - skill{s=Phys_50-100} @target
+Ignite_75-150:
+  TargetConditions:
+  - haspotioneffect{t=BLINDNESS} true
+  Skills:
+  - skill{s=Phys_75-150} @target
+Ignite_100-250:
+  TargetConditions:
+  - haspotioneffect{t=BLINDNESS} true
+  Skills:
+  - skill{s=Phys_100-250} @target
+Ignite_350-500:
+  TargetConditions:
+  - haspotioneffect{t=BLINDNESS} true
+  Skills:
+  - skill{s=Phys_350-500} @target
+Ignite_500-750:
+  TargetConditions:
+  - haspotioneffect{t=BLINDNESS} true
+  Skills:
+  - skill{s=Phys_500-750} @target
+### THE WORLD-EATER --------------------------------------------
+WE_Freeze:
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=3000;ia=true;pi=true;pk=true}
+WE_Shock:
+  TargetConditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  - haspotioneffect{t=DAMAGE_RESISTANCE} false
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=3000;ia=true;pi=true;pk=true}
+WE_Ignite:
+  TargetConditions:
+  - haspotioneffect{t=BLINDNESS} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=3000;ia=true;pi=true;pk=true}
+### NOVA ATTACKS -----------------------------------------------
+Item_ShockNova: ### Shock Nova Attack (Items only)
+  Cooldown: 3
+  Skills:
+  - effect:sound{s=item.totem.use;v=0.3;p=2}
+  - effect:sound{s=item.totem.use;v=0.25;p=1}
+  - effect:particlesphere{particle=magicCrit;amount=100;r=5} @self
+  - skill{s=InflictShock} @EntitiesInRadius{r=5;ignore=players}
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=80;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=60;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=40;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=20;r=1} @self
+Item_FireNova:
+  Cooldown: 3
+  Skills:
+  - effect:particlering{particle=flame;radius=5;points=25;amount=1;hS=1;vS=0} @Self
+  - effect:particlering{particle=lava;radius=1;points=3;amount=1;hS=1;vS=0} @Self
+  - effect:sound{s=entity.blaze.burn;v=0.5;p=1}
+  - effect:sound{s=entity.blaze.burn;v=0.5;p=0}
+  - skill{s=Ignite_Title} @EntitiesInRadius{r=5;ignore=players}
+  - delay 5
+  - effect:particlering{particle=flame;radius=5;points=25;amount=1;hS=1;vS=0} @Self
+  - effect:particlering{particle=lava;radius=1;points=3;amount=1;hS=1;vS=0} @Self
+  - delay 5
+  - effect:particlering{particle=flame;radius=5;points=25;amount=1;hS=1;vS=0} @Self
+  - effect:particlering{particle=lava;radius=1;points=3;amount=1;hS=1;vS=0} @Self
+Item_IceNova: ### Ice Nova Attack (Items only)
+  Cooldown: 3
+  Skills:
+  - effect:sound{s=block.glass.break;v=0.5;p=0}
+  - effect:sound{s=block.glass.break;v=0.5;p=1}
+  - effect:sound{s=block.glass.break;v=0.5;p=2}
+  - effect:particlesphere{particle=cloud;amount=100;r=5} @Self
+  - skill{s=InflictFreeze} @EntitiesInRadius{r=5;ignore=players}
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=80;r=4} @Self
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=60;r=3} @Self
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=40;r=2} @Self
+  - delay 2
+  - effect:particlesphere{particle=cloud;amount=20;r=1} @Self

@@ -1,0 +1,342 @@
+###---------------------------------------------------------###
+### LEGACY ARMOR SETS
+###---------------------------------------------------------###
+Singularity_Helm:
+  Id: 298
+  Display: "&b&oSingularity Crown"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+20.0❤ &7&owhile equipped."
+  - "&b★ &7&oAdds &c&o10.0-25.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all your attacks."
+  - "&b★ &7&oRestore &c&o50.0❤ &7&oover a period of"
+  - "&7&o  5.0s whenever you hit an enemy."
+  - "&b★ &7&oSet Bonus: &a&oRegen. X &7&o+ &a&oStrength C&7&o."
+  - "&0 "
+  - "&7“&bIn the beginning, there was nothing."
+  - "&b Only the void: an infinite expanse of"
+  - "&b sheer emptiness that encompassed"
+  - "&b much of the universe...&7”"
+  Options:
+    Color: 0,0,0
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 40.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Chaos_10-25} @target ~onBowHit
+  - skill{s=Chaos_10-25} @target ~onAttack
+  - skill{s=Heal_50x5} @Self ~onAttack
+  - skill{s=Heal_50x5} @Self ~onBowHit
+Singularity_Helm2:
+  Id: 302
+  Display: "&b&oSingularity Veil"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+30% &7&omovement speed."
+  - "&b★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to all"
+  - "&7&o  ranged/magic attacks."
+  - "&b★ &7&oSet Bonus: Whenever you hit an"
+  - "&7&o  enemy monster/boss, set your"
+  - "&7&o  gold hearts to &e&o50.0❤&7&o for 20.0s."
+  - "&0 "
+  - "&7“&bIn the beginning, there was nothing."
+  - "&b Only the void: an infinite expanse of"
+  - "&b sheer emptiness that encompassed"
+  - "&b much of the universe...&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      MovementSpeed: 0.3
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Phys_150-300} @target ~onBowHit
+Singularity_Helm3:
+  Id: 310
+  Display: "&b&oSingularity Bascinet"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+30.0❤ &7&owhile equipped."
+  - "&b★ &7&oAdds &c&o350.0-500.0❤ &7&odamage to all"
+  - "&7&o  melee attacks."
+  - "&b★ &7&oSet Bonus: You have &a&oStrength CC&7&o."
+  - "&7&o  Whenever you hit a monster/boss,"
+  - "&7&o  fully restore your health."
+  - "&0 "
+  - "&7“&bIn the beginning, there was nothing."
+  - "&b Only the void: an infinite expanse of"
+  - "&b sheer emptiness that encompassed"
+  - "&b much of the universe...&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 60.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Phys_350-500} @target ~onAttack
+Singularity_Chest: ### ACTUAL SET STARTS HERE
+  Id: 299
+  Display: "&b&oSingularity Carapace"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+30.0❤ &7&owhile equipped."
+  - "&b★ &7&oYou have &a&oFire Resist &7&o+ &a&oResist. IV&7&o."
+  - "&7&o  (Refreshes every second)."
+  - "&b★ &7&oSet Bonus changes based on the"
+  - "&7&o  helmet variant equipped."
+  - "&0 "
+  - "&7“&bBut an oddity disturbed this peace,"
+  - "&b germinating life. And we watched as"
+  - "&b it bloomed--ravenous and decrepit,"
+  - "&b a disease upon the Void...&7”"
+  Options:
+    Color: 0,0,0
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 60.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=200;lvl=0;overwrite=true} @Self ~onTimer:20
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=3;overwrite=true} @Self ~onTimer:20
+Singularity_Legs:
+  Id: 300
+  Display: "&b&oSingularity Greaves"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oYou cannot be knocked back."
+  - "&b★ &7&oAdds &c&o30.0-50.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all attacks."
+  - "&b★ &7&oSet Bonus changes based on the"
+  - "&7&o  helmet variant equipped."
+  - "&0 "
+  - "&7“&bWe struck at their centers--rotten"
+  - "&b pits of imperfection they deemed as"
+  - "&b civilizations. But their strongest, the"
+  - "&b Titans, silenced us... for a moment...&7”"
+  Options:
+    Color: 0,0,0
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  - ENCHANTS
+  Attributes:
+    Legs:
+      KnockbackResistance: 1.0
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Skills:
+  - skill{s=Chaos_30-50} @target ~onBowHit
+  - skill{s=Chaos_30-50} @target ~onAttack
+Singularity_Boots:
+  Id: 301
+  Display: "&b&oSingularity Boots"
+  Lore:
+  - "&7Depth Strider XX"
+  - "&7Feather Falling XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+80% &7&omovement speed."
+  - "&b★ &7&oYou cannot be &8&oSlowed&7&o, &b&oChilled&7&o, or"
+  - "&b&o  Frozen&7&o."
+  - "&b★ &7&oSet Bonus changes based on the"
+  - "&7&o  helmet variant equipped."
+  - "&0 "
+  - "&7“&bNow they are consumed, enslaved by"
+  - "&b the Void. Soon, when all of existence"
+  - "&b is gone, we shall once again become..."
+  - "&c wh&4ole.&7”"
+  Options:
+    Color: 0,0,0
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  - ENCHANTS
+  Attributes:
+    Feet:
+      MovementSpeed: 0.8
+  Enchantments:
+  - PROTECTION_FALL:20
+  - DEPTH_STRIDER:20
+  Skills:
+  - skill{s=CancelSlowness} @Self ~onTimer:1
+  - skill{s=CancelFatigue} @Self ~onTimer:1
+LGC_Lithaan_Helm:
+  Id: 298
+  Display: "&b&oLithaan's Presence"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+10.0❤ &7&owhile equipped."
+  - "&b★ &7&oAdds &c&o50.0❤ &7&odamage to attacks"
+  - "&7&o  for every level of &a&oSpeed&7&o."
+  - "&7&o  (Up to 500.0❤ from Speed X.)"
+  - "&b★ &7&oSet Bonus: &a&oRegen. X&7&o + &e&o40.0❤&7&o."
+  - "&7&o  (Refreshes once every 10.0s.)"
+  - "&0 "
+  - "&7“&bDeep within the confines of the"
+  - "&b Titans' realm, the last remaining"
+  - "&b member of their kin waits...&7”"
+  Enchantments: 
+  - PROTECTION_ENVIRONMENTAL:20
+  Attributes:
+    Head:
+      Health: 20.0
+  Options:
+    Unbreakable: true
+    Color: 25,222,215
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=PhysFromSpeed} @target ~onBowHit
+  - skill{s=PhysFromSpeed} @target ~onAttack
+LGC_Lithaan_Chest:
+  Id: 311
+  Display: "&b&oLithaan's Dream"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+10.0❤ &7&owhile equipped."
+  - "&b★ &7&oEvery 5.0s, restore &c&o500.0❤"
+  - "&7&o  health over a period of 1.5s."
+  - "&b★ &7&oSet Bonus: &a&oRegen. X&7&o + &e&o40.0❤&7&o."
+  - "&7&o  (Refreshes once every 10.0s.)"
+  - "&0 "
+  - "&7“&bHis brethren have long passed,"
+  - "&b taken in their slumber by their"
+  - "&b maddening nightmares...&7”"
+  Enchantments: 
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=GuardianHeal} @Self ~onTimer:100
+LGC_Lithaan_Legs:
+  Id: 300
+  Display: "&b&oLithaan's Solitude"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+10.0❤ &7&owhile equipped."
+  - "&b★ &7&o50% chance to fully restore"
+  - "&7&o  your gold hearts after taking"
+  - "&7&o  damage."
+  - "&b★ &7&oSet Bonus: &a&oRegen. X&7&o + &e&o40.0❤&7&o."
+  - "&7&o  (Refreshes once every 10.0s.)"
+  - "&0 "
+  - "&7“&bHe wanders alone amongst aging"
+  - "&b halls and the endless stairs of"
+  - "&b fleeting memories...&7”"
+  Enchantments: 
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 25,222,215
+  Attributes:
+    Legs:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=RestoreEqualES} @Self ~onDamaged 0.5
+LGC_Lithaan_Boots:
+  Id: 313
+  Display: "&b&oLithaan's Despair"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+80% &7&omovement speed."
+  - "&b★ &c&o+10.0❤ &7&owhile equipped."
+  - "&b★ &7&oYou cannot be knocked back."
+  - "&b★ &7&oSet Bonus: &a&oRegen. X&7&o + &e&o40.0❤&7&o."
+  - "&7&o  (Refreshes once every 10.0s.)"
+  - "&0 "
+  - "&7“&bAnd soon, he too will fall into the"
+  - "&b endless sleep--resting eternally"
+  - "&b in the shattered dream.&7”"
+  Enchantments: 
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 20.0
+      KnockbackResistance: 1.0
+      MovementSpeed: 0.80
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE

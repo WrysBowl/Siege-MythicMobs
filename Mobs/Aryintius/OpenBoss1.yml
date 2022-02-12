@@ -1,0 +1,97 @@
+OpenBoss1:
+  Type: STRAY
+  Display: '&4&l<&4« &cLoren, Corrupted Hunter &4»&4&l>'
+  Health: 2500
+  Damage: 3000
+  BossBar:
+    Enabled: true
+    Title: '&4&l<&4« &cLoren, Corrupted Hunter &4»&4&l>'
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_12
+  Equipment:
+  - UHelm_4:4
+  - UChest_4:3
+  - ULegs_4:2
+  - UBoots_4:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Food
+  - Money_Boss
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - Exalted
+  - Corrupted
+  - Mythic
+  - Iridescent
+  - CFrags_3
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    FollowRange: 120
+    MaxCombatDistance: 120
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+### SPAWN/INITIALIZATION
+  - randommessage
+      {
+      m=
+      "<mob.name> &eHahaha, I've found you!",
+      "<mob.name> &eYour sins will not go unpunished!",
+      "<mob.name> &eDeath comes, and I follow.";
+      } @PlayersInRadius{r=32} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - randommessage
+      {cooldown=20;m=
+      "<mob.name> &eFighting will not stop the Corruption!",
+      "<mob.name> &eHope... is lost... give unto the Void...",
+      "<mob.name> &eI am beyond salvation. Join me in death!";
+      } @target ~onDamage
+### PHASE 1
+  - skill{s=OB1_Attack_1} @PIR{r=50} ~onTimer:80
+  - skill{s=OB1_Attack_2} @PIR{r=50} ~onTimer:200
+### DEATH
+  - message{cooldown=20;m="<mob.name> &eI... am free..."} @PlayersInRadius{r=30} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+##
+## SUMMONS AND STUFF
+##
+OB1_Explode: ### EXPLOSION MOB
+  Type: BAT
+  Display: ''
+  Health: 1000
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=4} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=OB1_Explosion} @Self ~onSpawn
+  - remove{delay=20} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true

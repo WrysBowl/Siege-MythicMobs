@@ -1,0 +1,82 @@
+### Y'RAZOTJ SKILLS
+Boss2_Drag: ### Kind of a cyclone thing that guarantees a melee hit.
+  Skills:
+  - effect:particlesphere{particle=largesmoke;amount=300;r=5} @self
+  - effect:particlesphere{particle=flame;amount=300;r=5} @self
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - randommessage
+      {
+      m=
+      "<mob.name> &cYOU NO RUN. ME KILL YOU!",
+      "<mob.name> &cNO RUN. ONLY SMASH!",
+      "<mob.name> &cDIE, INSECT!",
+      } @PlayersInRadius{r=10}
+  - pull{velocity=2} @PIR{r=5}
+  - delay 2
+  - pull{velocity=2} @PIR{r=5}
+  - delay 2
+  - pull{velocity=2} @PIR{r=5}
+  - delay 2
+  - pull{velocity=2} @PIR{r=5}
+  - delay 2
+  - pull{velocity=2} @PIR{r=5}
+  - delay 2
+  - pull{velocity=2} @PIR{r=5}
+  - delay 2
+  - pull{velocity=2} @PIR{r=5}
+  - delay 2
+  - pull{velocity=2} @PIR{r=5}
+  - delay 2
+  - pull{velocity=2} @PIR{r=5}
+  - delay 2
+  - pull{velocity=2} @PIR{r=5}
+  - delay 2
+  - pull{velocity=2} @PIR{r=5}
+Boss2_Fire: ### Tracking Missile that slows enemies.
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=1;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=1}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=0}
+  - missile{ot=Boss2F_Tick;oh=Boss2F_Hit;v=10;i=1;hR=1;vR=1;syo=3;in=10}
+Boss2F_Tick:
+  Skills:
+  - effect:particles{p=largesmoke;amount=8;speed=0;hS=1;vS=1} @origin
+  - effect:particles{p=flame;amount=30;speed=0;hS=0.2;vS=0.2} @origin
+Boss2F_Hit:
+  Skills: ### Deals 20.0 hearts on hit (against max loadout)
+  - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
+  - effect:sound{s=entity.generic.hurt;v=1;p=1}
+  - damage{a=1000;pk=true}
+  - potion{type=SLOW;lvl=3;duration=40} @target
+  - potion{type=BLINDNESS;lvl=1;duration=40} @target
+  - sendtitle{title="&6&lBurning";subtitle="&fSlowed and Blinded";d=20}
+### AREA SKILLS
+Boss2_Buffs:
+  Skills:
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
+  - effect:particlesphere{particle=reddust;amount=50;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=100;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=150;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=200;r=4} @self
+  - delay 2
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=200} @Self
+  - potion{type=SPEED;duration=100;lvl=4} @Self
+Boss2_Teleport: ### Teleport. Doesn't actually slam.
+  Skills:
+  - effect:particlesphere{particle=reddust;amount=100;r=1} @self
+  - effect:particlesphere{particle=largesmoke;amount=100;r=1} @self
+  - teleport{spreadh=0;spreadv=0} @target
+  - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
+  - randommessage
+      {
+      m=
+      "<mob.name> &cME FIND YOU!",
+      "<mob.name> &cYOU NO RUN. RUN NO SAVE LIFE!",
+      "<mob.name> &cTIME TO DIE!";
+      } @PIR{r=30}

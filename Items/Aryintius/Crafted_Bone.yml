@@ -1,0 +1,273 @@
+### BONE OF THE ANCIENTS VARIANTS ------------------------------
+Bone_11:
+  Id: 352
+  Display: "&b&oBone of the Ancients&3"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&o50% chance for your attacks to"
+  - "&7&o  inflict &3&oShock &7&ofor up to 5.0s."
+  - "&b★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to all"
+  - "&7&o  attacks against &3&oShocked &7&oenemies."
+  - "&0 "
+  - "&7“&bSo. You want to hear a story, eh?&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictShock} @target ~onAttack 0.5
+  - skill{s=InflictShock} @target ~onBowHit 0.5
+  - skill{s=Bone_Shock} @target ~onAttack
+  - skill{s=Bone_Shock} @target ~onBowHit
+Bone_12:
+  Id: 352
+  Display: "&b&oBone of the Ancients&4"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&o50% chance for your attacks to"
+  - "&7&o  inflict &3&oShock &7&ofor up to 5.0s."
+  - "&b★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to all"
+  - "&7&o  attacks against &b&oFrozen &7&oenemies."
+  - "&0 "
+  - "&7“&bSo. You want to hear a story, eh?&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictShock} @target ~onAttack 0.5
+  - skill{s=InflictShock} @target ~onBowHit 0.5
+  - skill{s=Bone_Freeze} @target ~onAttack
+  - skill{s=Bone_Freeze} @target ~onBowHit
+Bone_13:
+  Id: 352
+  Display: "&b&oBone of the Ancients&5"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&o50% chance for your attacks to"
+  - "&7&o  inflict &3&oShock &7&ofor up to 5.0s."
+  - "&b★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to all"
+  - "&7&o  attacks against &e&oIgnited &7&oenemies."
+  - "&0 "
+  - "&7“&bSo. You want to hear a story, eh?&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictShock} @target ~onAttack 0.5
+  - skill{s=InflictShock} @target ~onBowHit 0.5
+  - skill{s=Bone_Ignite} @target ~onAttack
+  - skill{s=Bone_Ignite} @target ~onBowHit
+### FREEZE VARIANTS --------------------------------------------
+Bone_21:
+  Id: 352
+  Display: "&b&oBone of the Ancients&a"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&o50% chance for your attacks to"
+  - "&7&o  inflict &b&oFreeze &7&ofor up to 5.0s."
+  - "&b★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to all"
+  - "&7&o  attacks against &3&oShocked &7&oenemies."
+  - "&0 "
+  - "&7“&bSo. You want to hear a story, eh?&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack 0.5
+  - skill{s=InflictFreeze} @target ~onBowHit 0.5
+  - skill{s=Bone_Shock} @target ~onAttack
+  - skill{s=Bone_Shock} @target ~onBowHit
+Bone_22:
+  Id: 352
+  Display: "&b&oBone of the Ancients&b"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&o50% chance for your attacks to"
+  - "&7&o  inflict &b&oFreeze &7&ofor up to 5.0s."
+  - "&b★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to all"
+  - "&7&o  attacks against &b&oFrozen &7&oenemies."
+  - "&0 "
+  - "&7“&bSo. You want to hear a story, eh?&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack 0.5
+  - skill{s=InflictFreeze} @target ~onBowHit 0.5
+  - skill{s=Bone_Freeze} @target ~onAttack
+  - skill{s=Bone_Freeze} @target ~onBowHit
+Bone_23:
+  Id: 352
+  Display: "&b&oBone of the Ancients&c"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&o50% chance for your attacks to"
+  - "&7&o  inflict &b&oFreeze &7&ofor up to 5.0s."
+  - "&b★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to all"
+  - "&7&o  attacks against &e&oIgnited &7&oenemies."
+  - "&0 "
+  - "&7“&bSo. You want to hear a story, eh?&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack 0.5
+  - skill{s=InflictFreeze} @target ~onBowHit 0.5
+  - skill{s=Bone_Ignite} @target ~onAttack
+  - skill{s=Bone_Ignite} @target ~onBowHit
+### IGNITE VARIANTS --------------------------------------------
+Bone_31:
+  Id: 352
+  Display: "&b&oBone of the Ancients&d"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&o50% chance for your attacks to"
+  - "&7&o  inflict &e&oIgnite &7&ofor up to 5.0s."
+  - "&b★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to all"
+  - "&7&o  attacks against &3&oShocked &7&oenemies."
+  - "&0 "
+  - "&7“&bSo. You want to hear a story, eh?&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictIgnite} @target ~onAttack 0.5
+  - skill{s=InflictIgnite} @target ~onBowHit 0.5
+  - skill{s=Bone_Shock} @target ~onAttack
+  - skill{s=Bone_Shock} @target ~onBowHit
+Bone_32:
+  Id: 352
+  Display: "&b&oBone of the Ancients&f"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&o50% chance for your attacks to"
+  - "&7&o  inflict &e&oIgnite &7&ofor up to 5.0s."
+  - "&b★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to all"
+  - "&7&o  attacks against &b&oFrozen &7&oenemies."
+  - "&0 "
+  - "&7“&bSo. You want to hear a story, eh?&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictIgnite} @target ~onAttack 0.5
+  - skill{s=InflictIgnite} @target ~onBowHit 0.5
+  - skill{s=Bone_Freeze} @target ~onAttack
+  - skill{s=Bone_Freeze} @target ~onBowHit
+Bone_33:
+  Id: 352
+  Display: "&b&oBone of the Ancients&e"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&o50% chance for your attacks to"
+  - "&7&o  inflict &e&oIgnite &7&ofor up to 5.0s."
+  - "&b★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to all"
+  - "&7&o  attacks against &e&oIgnited &7&oenemies."
+  - "&0 "
+  - "&7“&bSo. You want to hear a story, eh?&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictIgnite} @target ~onAttack 0.5
+  - skill{s=InflictIgnite} @target ~onBowHit 0.5
+  - skill{s=Bone_Ignite} @target ~onAttack
+  - skill{s=Bone_Ignite} @target ~onBowHit

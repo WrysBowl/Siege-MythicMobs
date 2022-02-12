@@ -1,0 +1,289 @@
+Heal_30x3: ### Heals 30.0 over a period of 3.0s (no cap) -------
+  Skills:
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+Heal_50x5: ### Heals 50.0 over a period of 5.0s (no cap) -------
+  Skills:
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+  - delay 5
+  - heal{a=5}
+Heal_50x10: ### Heals 50.0 over a period of 10.0s (no cap) -------
+  Skills:
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+  - delay 10
+  - heal{a=5}
+HealRegen: ### Heal 3.0 per level of Regen ---------------------
+  Skills:
+  - skill{s=HealGen_1}
+  - skill{s=HealGen_2}
+  - skill{s=HealGen_3}
+  - skill{s=HealGen_4}
+  - skill{s=HealGen_5}
+  - skill{s=HealGen_5+}
+HealGen_1:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=0} true
+  Skills:
+  - heal{a=3} @Self
+HealGen_2:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=1} true
+  Skills:
+  - heal{a=6} @Self
+HealGen_3:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=2} true
+  Skills:
+  - heal{a=9} @Self
+HealGen_4:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=3} true
+  Skills:
+  - heal{a=12} @Self
+HealGen_5:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=4} true
+  Skills:
+  - heal{a=18} @Self
+HealGen_5+:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=>5} true
+  Skills:
+  - heal{a=30} @Self
+HealStrength: ### 1.0 Heal per 10 Strength ---------------------
+  Skills:
+  - skill{s=HealStrength_1}
+  - skill{s=HealStrength_2}
+  - skill{s=HealStrength_3}
+  - skill{s=HealStrength_4}
+  - skill{s=HealStrength_5}
+  - skill{s=HealStrength_6}
+  - skill{s=HealStrength_7}
+  - skill{s=HealStrength_8}
+  - skill{s=HealStrength_9}
+  - skill{s=HealStrength_10}
+  - skill{s=HealStrength_11}
+  - skill{s=HealStrength_12}
+  - skill{s=HealStrength_13}
+  - skill{s=HealStrength_14}
+  - skill{s=HealStrength_15}
+  - skill{s=HealStrength_16}
+  - skill{s=HealStrength_17}
+  - skill{s=HealStrength_18}
+  - skill{s=HealStrength_19}
+  - skill{s=HealStrength_20}
+HealStrength_1:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>8} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<18} true
+  Skills:
+  - heal{a=1} @Self
+HealStrength_2:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>18} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<28} true
+  Skills:
+  - heal{a=2} @Self
+HealStrength_3:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>28} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<38} true
+  Skills:
+  - heal{a=3} @Self
+HealStrength_4:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>38} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<48} true
+  Skills:
+  - heal{a=4} @Self
+HealStrength_5:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>48} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<58} true
+  Skills:
+  - heal{a=5} @Self
+HealStrength_6:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>58} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<68} true
+  Skills:
+  - heal{a=6} @Self
+HealStrength_7:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>68} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<78} true
+  Skills:
+  - heal{a=7} @Self
+HealStrength_8:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>78} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<88} true
+  Skills:
+  - heal{a=8} @Self
+HealStrength_9:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>88} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<98} true
+  Skills:
+  - heal{a=9} @Self
+HealStrength_10:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>98} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<108} true
+  Skills:
+  - heal{a=10} @Self
+HealStrength_11:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>108} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<118} true
+  Skills:
+  - heal{a=11} @Self
+HealStrength_12:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>118} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<128} true
+  Skills:
+  - heal{a=12} @Self
+HealStrength_13:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>128} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<138} true
+  Skills:
+  - heal{a=13} @Self
+HealStrength_14:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>138} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<148} true
+  Skills:
+  - heal{a=14} @Self
+HealStrength_15:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>148} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<158} true
+  Skills:
+  - heal{a=15} @Self
+HealStrength_16:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>158} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<168} true
+  Skills:
+  - heal{a=16} @Self
+HealStrength_17:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>168} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<178} true
+  Skills:
+  - heal{a=17} @Self
+HealStrength_18:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>178} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<188} true
+  Skills:
+  - heal{a=18} @Self
+HealStrength_19:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>188} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<198} true
+  Skills:
+  - heal{a=19} @Self
+HealStrength_20:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
+  Skills:
+  - heal{a=20} @Self

@@ -1,0 +1,298 @@
+###---------------------------------------------------------###
+### CORRUPTED TOOLS/WEAPONS
+###---------------------------------------------------------###
+Corrupted_Pick:
+  Id: 278
+  Display: "&4&oRadiant Silhouette"
+  Lore:
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&7Effect: &8Weakness X"
+  - "&0 "
+  - "&7“&4A pitch black object"
+  - "&4 shaped vaguely like a"
+  - "&4 diamond pickaxe.&7”"
+  Enchantments:
+  - DIG_SPEED:10
+  - FIRE_ASPECT:10
+  Hide:
+  - ATTRIBUTES
+Corrupted_Spade:
+  Id: 277
+  Display: "&4&oUmbral Brilliance"
+  Lore:
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&7Effect: &8Poison X"
+  - "&0 "
+  - "&7“&4A pitch black object"
+  - "&4 shaped vaguely like a"
+  - "&4 diamond shovel.&7”"
+  Enchantments:
+  - DIG_SPEED:10
+  - DAMAGE_ALL:10
+  Hide:
+  - ATTRIBUTES
+Corrupted_Axe:
+  Id: 279
+  Display: "&4&oTwilight Flare"
+  Lore:
+  - "&7Efficiency X"
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&7Effect: &8Wither X"
+  - "&0 "
+  - "&7“&4A pitch black object"
+  - "&4 shaped vaguely like a"
+  - "&4 diamond axe.&7”"
+  Enchantments:
+  - DURABILITY:9999
+  - MENDING:10
+  - DIG_SPEED:10
+  - DAMAGE_ALL:500
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Corrupted_Sword:
+  Id: 276
+  Display: "&4&oLucent Shadow"
+  Lore:
+  - "&7Smite C"
+  - "&7Knockback III"
+  - "&7Unbreakable"
+  - ""
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&7Effect: &8Blindness"
+  - "&0 "
+  - "&7“&4A pitch black object"
+  - "&4 shaped vaguely like a"
+  - "&4 diamond sword.&7”"
+  Enchantments:
+  - DURABILITY:9999
+  - MENDING:10
+  - DAMAGE_UNDEAD:100
+  - KNOCKBACK:3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+### UNIQUE CORRUPTED ITEMS
+SpectralHunter:
+  Id: 261
+  Display: "&4&oThe Spect&c&oral Hunter"
+  Lore:
+  - "&7Power C"
+  - "&7Punch X"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&7Effect: &8Slowness II&7, &8Fatigue II"
+  - "&0 "
+  - "&7“&4In the old war, a&c tortured soul"
+  - "&c was fused with this bow,&4 and the"
+  - "&4 ensuing monstrosity &cbecame a"
+  - "&c ruthless killer, unstoppable in"
+  - "&c force, driven &4only by madness...&7”"
+  Enchantments:
+  - ARROW_DAMAGE:100
+  - ARROW_KNOCKBACK:10
+  - ARROW_INFINITE:1
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+TwinViper:
+  Id: 283
+  Display: "&4&oThe Tw&c&oin Viper"
+  Lore:
+  - "&7Sharpness CD"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, gain &a&oHaste X&7&o."
+  - "&4★ &7&oSuffer &8&oSlowness IV&7&o."
+  - "&0 "
+  - "&7“&4This dual-blad&ced dagger can"
+  - "&c easily shre&4d enemies to bits."
+  - "&4 But its incredible v&celocity"
+  - "&c leaves it lacking &4in power.&7”"
+  Enchantments:
+  - DAMAGE_ALL:400
+  - DURABILITY:9999
+  - MENDING:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+LifesBane:
+  Id: 279
+  Display: "&4&oLife's &c&oBane"
+  Lore:
+  - "&7Sharpness V"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &7&oWhenever you attack, double"
+  - "&7&o  this axe's damage. Stacks up"
+  - "&7&o  to 3 times before expiring."
+  - "&4★ &7&oSuffer &8&oFatigue III&7&o."
+  - "&0 "
+  - "&7“&cThis axe was for&4ged deep within"
+  - "&4 the fires of the under&cworld and"
+  - "&c sent out in&4to civilization to bring"
+  - "&4 about the next apoc&calypse.&7”"
+  Enchantments:
+  - DAMAGE_ALL:30
+  - DAMAGE_UNDEAD:30
+  - UNBREAKING:9999
+  - MENDING:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### CORRUPTED ACCESSORIES
+###---------------------------------------------------------###
+Jewel_Fire:
+  Id: 351
+  Data: 1
+  Display: "&4&oJewel of Fire"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&4★ &7&oYou have &a&oStrength CC&7&o. (Refreshes"
+  - "&7&o  once every 10.0 seconds)."
+  - "&4★ &7&oWhenever you hit a monster/boss,"
+  - "&7&o  you are &b&oFrozen &7&ofor up to 10.0s."
+  - "&0 "
+  - "&7“&4This strange, glowing stone is filled"
+  - "&4 with dark, forgotten energies.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Jewel_Water:
+  Id: 351
+  Data: 6
+  Display: "&4&oJewel of Water"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&4★ &7&oYou have &a&oRegeneration X&7&o."
+  - "&4★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, suffer from"
+  - "&7&o  &8&oWeakness C &7&ofor 10.0s."
+  - "&0 "
+  - "&7“&4A strange, shining stone that"
+  - "&4 radiates dark energies.&7”"
+  Enchantments:
+  - ARROW_INFINITE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Jewel_Earth:
+  Id: 351
+  Data: 2
+  Display: "&4&oJewel of Earth"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&4★ &7&oYou have &a&oHaste X&7&o."
+  - "&4★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, suffer from"
+  - "&8&o  Blindness &7&ofor 10.0s."
+  - "&0 "
+  - "&7“&4A strange, ridged stone that"
+  - "&4 radiates dark energies.&7”"
+  Enchantments:
+  - DURABILITY:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Jewel_Air:
+  Id: 406
+  Display: "&4&oJewel of Air"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &4&oCorrupted"
+  - "&0 "
+  - "&4★ &7&oYou have &a&oSpeed X&7&o."
+  - "&4★ &7&oTake &c&o200.0❤ &7&odamage every"
+  - "&7&o  time you hit a monster/boss."
+  - "&0 "
+  - "&7“&4A strange, glimmering stone"
+  - "&4 that radiates dark energies.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+WiltedRose:
+  Id: 38
+  Display: "&4&oWilte&c&od Rose"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &7&oEffect: &7&oSet your golden"
+  - "&7&o  hearts to &e&o20.0❤&7&o. (Repeats"
+  - "&7&o  every 10.0 seconds.)"
+  - "&4★ &7&oSuffer &8&oSlowness III&7&o."
+  - "&0 "
+  - "&7“&cIt looks ve&4ry disappointed."
+  - "&4 Someon&ce probably mistook"
+  - "&c it &4for a poppy.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+###---------------------------------------------------------###
+### CORRUPTED ARMOR BITS
+###---------------------------------------------------------###
+SBH:
+  Id: 313
+  Display: "&4&oSuper Bun&c&ony Hoppers"
+  Lore:
+  - "&7Feather Falling C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&7Effect: &aJump Boost V&7, &8Hunger X"
+  - "&0 "
+  - "&7“&cSomething see&4ms off about this"
+  - "&4 pair of Bunny Hop&cpers...&7”"
+  Enchantments:
+  - PROTECTION_FALL:100
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE

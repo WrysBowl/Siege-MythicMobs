@@ -1,0 +1,11 @@
+ChaosGolem-Body:
+  Skills:
+  - remove @children
+  - summon{type=ChaosGolem-Body;a=1} @self
+  - disguise{type=BLOCK;block=MAGMA;glowing=TRUE}
+  - delay 2
+  - mounttarget @children
+ChaosGolem-Calm:
+  Skills:
+  - remove @children
+  - disguise{type=BLOCK;block=COAL_BLOCK;glowing=FALSE}

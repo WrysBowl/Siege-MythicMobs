@@ -1,0 +1,343 @@
+### RARE ARTIFACTS ---------------------------------------------
+T4_A1:
+  Id: 302
+  Display: "&3Robber's Hood"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+10% &7movement speed."
+  - "&3★ &7Adds &c10.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&0 "
+  - "&7“&3Greed is the mother of all"
+  - "&3 ambition.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.1
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  Skills:
+  - damage{a=20;pk=true} @target ~onBowHit
+T4_A2:
+  Id: 314
+  Display: "&3Vampiric Crown"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+8.0❤ &7while equipped."
+  - "&3★ &7Restore &c1.0❤ &7whenever"
+  - "&7  you attack an enemy."
+  - "&0 "
+  - "&7“&3The only craving retained"
+  - "&3 while undead is the mortal"
+  - "&3 grief a soul.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 16.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  Skills:
+  - heal{a=2} @Self ~onAttack
+  - heal{a=2} @Self ~onBowHit
+T4_A3:
+  Id: 311
+  Display: "&3Blessed Chestplate"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &7Restore &c3.0❤ &7whenever"
+  - "&7  you take damage."
+  - "&0 "
+  - "&7“&3This heavy plate was once"
+  - "&3 worn by both priests and"
+  - "&3 mages alike.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:8
+  Skills:
+  - heal{a=6} @Self ~onDamaged
+T4_A4:
+  Id: 303
+  Display: "&3Rotting Bonemail"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+3.0❤ &7while equipped."
+  - "&3★ &a+10% &7movement speed."
+  - "&3★ &7Adds &c15.0❤ &7damage to all"
+  - "&7  melee attacks."
+  - "&0 "
+  - "&7“&3Torn from the dead hands of"
+  - "&3 a nameless corpse to serve"
+  - "&3 an equally nameless master.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      MovementSpeed: 0.1
+      Health: 6.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  - PROTECTION_PROJECTILE:4
+  Skills:
+  - damage{a=30;pk=true} @target ~onAttack
+T4_A5:
+  Id: 299
+  Display: "&3Barbarian Tunic"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &7Adds &c5.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &7Adds &c8.0❤ &7damage to all"
+  - "&7  melee attacks."
+  - "&0 "
+  - "&7“&3I feel no fear when all my"
+  - "&3 enemies are slain.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  - PROTECTION_PROJECTILE:5
+  Skills:
+  - damage{a=16;pk=true} @target ~onAttack
+  - damage{a=10;pk=true} @target ~onBowHit
+T4_A6:
+  Id: 308
+  Display: "&3Dark Leggings"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &7Adds &c1.0❤ &5Chaos &7damage"
+  - "&7  to all attacks."
+  - "&0 "
+  - "&7“&3Victory only comes when one"
+  - "&3 embraces the shadows.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:6
+  - PROTECTION_PROJECTILE:3
+  Skills:
+  - skill{s=Chaos_1} @target ~onAttack
+  - skill{s=Chaos_1} @target ~onBowHit
+T4_A7:
+  Id: 316
+  Display: "&3Caster's Robe"
+  Lore:
+  - "&7No Enchantments"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+10% &7movement speed."
+  - "&3★ &7Set your gold hearts to"
+  - "&e  10.0❤&7. (Fully refreshes"
+  - "&7  once every 8.0s)."
+  - "&0 "
+  - "&7“&3Empowered by magics old, a"
+  - "&3 shield of energy shrouds"
+  - "&3 your being.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      MovementSpeed: 0.1
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=4;overwrite=true} @Self ~onTimer:160
+T4_A8:
+  Id: 301
+  Display: "&3Strider Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+25% &7movement speed."
+  - "&3★ &c+10.0❤ &7while equipped."
+  - "&0 "
+  - "&7“&3Life without exploration is"
+  - "&3 a wasted opportunity.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 20.0
+      MovementSpeed: 0.25
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DEPTH_STRIDER:10
+T4_A9:
+  Id: 317
+  Display: "&3Frightwalker"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &c+5.0❤ &7while equipped."
+  - "&3★ &735% chance to gain &aSpeed IV"
+  - "&7  and &aJump Boost III &7for 5.0s"
+  - "&7  after taking damage."
+  - "&0 "
+  - "&7“&3Without fear, death will quickly"
+  - "&3 consume all traces of life.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_FALL:10
+  Skills:
+  - skill{s=Frightwalker} @Self ~onDamaged 0.35
+### WEAPONS ONLY -----------------------------------------------
+T4_W1:
+  Id: 276
+  Display: "&3Cursed Saber"
+  Lore:
+  - "&7Sharpness XXXV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+50% &7attack speed."
+  - "&3★ &7Adds &c2.0❤ &5Chaos &7damage"
+  - "&7  to all melee attacks."
+  - "&0 "
+  - "&7“&3A strange artifact of an"
+  - "&3 unknown origin.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DAMAGE_ALL:35
+  Skills:
+  - skill{s=Chaos_2} @target ~onAttack
+T4_W2:
+  Id: 258
+  Display: "&3Battleaxe"
+  Lore:
+  - "&7Sharpness XL"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &a+35% &7attack speed."
+  - "&3★ &720% chance to inflict &c15.0❤"
+  - "&4  Bleed &7damage over a period"
+  - "&7  of 1.5s."
+  - "&0 "
+  - "&7“&3A sharp, lightweight axe used"
+  - "&3 in many wars long ago.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.35
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DAMAGE_ALL:40
+  Skills:
+  - skill{s=Bleed_15} @target ~onAttack 0.2
+T4_W3:
+  Id: 275
+  Display: "&3Runic Greataxe"
+  Lore:
+  - "&7Sharpness C"
+  - "&7Knockback II"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&3★ &8-30% &7attack speed."
+  - "&3★ &7Adds &c1.0❤ &5Chaos &7damage"
+  - "&7  to all melee attacks."
+  - "&3★ &7Restore &c10.0❤ &7whenever"
+  - "&7  you attack an enemy."
+  - "&0 "
+  - "&7“&3A massive axe forged from"
+  - "&3 a runestone in the days of"
+  - "&3 the ancients.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.8
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DAMAGE_ALL:100
+  - KNOCKBACK:2
+  Skills:
+  - heal{a=20} @Self ~onAttack
+  - skill{s=Chaos_1} @target ~onAttack

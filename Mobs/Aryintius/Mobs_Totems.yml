@@ -1,0 +1,252 @@
+### TOTEM MOBS ----------------------------------------------------------------
+Totem_Bleed: ### Blood Totem
+  Type: HUSK
+  Display: "&8« &7Sanguine Totem &8»"
+  Health: 1000
+  Damage: 0
+  Disguise:
+    Type: BLOCK
+    Block: NETHER_WART_BLOCK
+    BlockData: 0
+    ShowName: true
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+### SKILLS
+  - remove{delay=200} @Self ~onSpawn
+  - skill{s=Bleed_60} @PIR{r=8} ~onTimer:20
+  - skill{s=Totem_BleedNova} @Self ~onTimer:20
+  - effect:sound{s=block.fire.extinguish;p=1;v=1} @Self ~onTimer:20
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+Totem_Curse: ### Curse Totem
+  Type: HUSK
+  Display: "&8« &7Profane Totem &8»"
+  Health: 1000
+  Damage: 0
+  Disguise:
+    Type: BLOCK
+    Block: SOUL_SAND
+    BlockData: 0
+    ShowName: true
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+### SKILLS
+  - remove{delay=200} @Self ~onSpawn
+  - skill{s=InflictCurse} @PIR{r=8} ~onTimer:20
+  - skill{s=Totem_CurseNova} @Self ~onTimer:20
+  - effect:sound{s=block.fire.extinguish;p=1;v=1} @Self ~onTimer:20
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+Totem_Chaos: ### TELEPORT SLAM TOTEM
+  Type: HUSK
+  Display: "&8« &7Chaos Totem &8»"
+  Health: 1000
+  Damage: 0
+  Disguise:
+    Type: BLOCK
+    Block: OBSIDIAN
+    BlockData: 0
+    ShowName: true
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+### SKILLS
+  - remove{delay=200} @Self ~onSpawn
+  - skill{s=Totem_TPSlam} @NearestPlayer{r=30} ~onTimer:40
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+### ELEMENTAL TOTEMS ----------------------------------------------------------
+Totem_Freeze: ### Frost Totem
+  Type: HUSK
+  Display: "&8« &7Glacial Totem &8»"
+  Health: 1000
+  Damage: 0
+  Disguise:
+    Type: BLOCK
+    Block: SNOW_BLOCK
+    BlockData: 0
+    ShowName: true
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+### SKILLS
+  - remove{delay=200} @Self ~onSpawn
+  - skill{s=InflictFreeze} @PIR{r=8} ~onTimer:20
+  - skill{s=Totem_FrostNova} @Self ~onTimer:20
+  - effect:sound{s=block.fire.extinguish;p=1;v=1} @Self ~onTimer:20
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+Totem_Shock: ### Shock Totem
+  Type: HUSK
+  Display: "&8« &7Energized Totem &8»"
+  Health: 1000
+  Damage: 0
+  Disguise:
+    Type: BLOCK
+    Block: PRISMARINE
+    BlockData: 1
+    ShowName: true
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+### SKILLS
+  - remove{delay=200} @Self ~onSpawn
+  - skill{s=InflictShock} @PIR{r=8} ~onTimer:20
+  - skill{s=Totem_ShockNova} @Self ~onTimer:20
+  - effect:sound{s=block.fire.extinguish;p=1;v=1} @Self ~onTimer:20
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+Totem_Ignite: ### Ignite Totem
+  Type: HUSK
+  Display: "&8« &7Molten Totem &8»"
+  Health: 1000
+  Damage: 0
+  Disguise:
+    Type: BLOCK
+    Block: MAGMA
+    BlockData: 0
+    ShowName: true
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+### SKILLS
+  - remove{delay=200} @Self ~onSpawn
+  - skill{s=InflictIgnite} @PIR{r=8} ~onTimer:20
+  - skill{s=Totem_BurnNova} @Self ~onTimer:20
+  - effect:sound{s=block.fire.extinguish;p=1;v=1} @Self ~onTimer:20
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true

@@ -1,0 +1,166 @@
+### XYVRICIUS THE INSATIABLE -----------------------------------
+SwampAxe:
+  Id: 258
+  Display: "&6&oTerrormaw&7&7"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &c✷"
+  - "&0 "
+  - "&6★ &a&o+95% &7&oattack speed."
+  - "&6★ &7&oDeals &c&o1000.0-1500.0❤ &7&odamage"
+  - "&7&o  to &4&oBleeding &7&oenemies."
+  - "&6★ &7&oRestore 50% of your maximum"
+  - "&7&o  health when you hit an enemy."
+  - "&0 "
+  - "&7“&6This accursed weapon whispers"
+  - "&6 faintly with each swing--hungry"
+  - "&6 for flesh and blood.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.05
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+  Skills:
+  - skill{s=UnluckDamage4} @target ~onAttack
+  - healpercent{m=0.5} @Self ~onAttack
+SwampBow:
+  Id: 261
+  Display: "&6&oDreadsinew&7&7"
+  Lore:
+  - "&7Power D"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &c✷"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c125.0❤x16"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&6★ &7&oFully-draw shots to cast ability."
+  - "&6★ &7&o35% critical strike chance."
+  - "&6★ &7&oDeals 9.0x damage on critical hit."
+  - "&6★ &7&o50% chance to inflict &c&o600.0❤ &4&oBleed"
+  - "&7&o  damage over a period of 1.5s."
+  - "&0 "
+  - "&7“&6We are killers by nature, butchers"
+  - "&6 of life for sustenance.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:500
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=SwampBow_Skill} @target ~onBowHit 0.5
+SwampMagic:
+  Id: 38
+  Data: 4
+  Display: "&6&oLaceration&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0"
+  - "&7Tier: &6&oLegendary &c✷"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c90.0❤x5"
+  - "&0 "
+  - "&6★ &7&oSneaking increases spread."
+  - "&6★ &7&oDeals &c&o250.0-400.0❤ &7&odamage"
+  - "&7&o  to &4&oBleeding &7&oenemies."
+  - "&6★ &7&oRestore 15% of your maximum"
+  - "&7&o  health when you hit an enemy."
+  - "&0 "
+  - "&7“&6The deepest wounds can never"
+  - "&6 truly be healed by time.&7”"
+  Skills:
+  - healpercent{m=0.15} @Self ~onBowHit
+  - skill{s=UnluckDamage} @target ~onBowHit
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+SwampLegs:
+  Id: 300
+  Display: "&6&oCloak of Savagery"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &c✷"
+  - "&0 "
+  - "&6★ &c&o+20.0❤ &7&owhile equipped."
+  - "&6★ &7&oYour attacks inflict &c&o100.0❤"
+  - "&4&o  Bleed &7&odamage over a period"
+  - "&7&o  of 3.0s."
+  - "&6★ &7&oDamage inflicted by this item"
+  - "&7&o  affects all enemies within a"
+  - "&7&o  radius of 5 blocks."
+  - "&0 "
+  - "&7“&6Carnage comes fastest when"
+  - "&6 one craves the slaughter.&7”"
+  Attributes:
+    Legs:
+      Health: 40.0
+  Options:
+    Unbreakable: true
+    Color: 255,0,0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=BleedSummon_1} @target ~onBowHit
+  - skill{s=BleedSummon_1} @target ~onAttack
+SwampBoots:
+  Id: 301
+  Display: "&6&oDeath's Dance"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &c✷"
+  - "&0 "
+  - "&6★ &c&o+20.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore 10% of your maximum"
+  - "&7&o  health when you hit an enemy."
+  - "&6★ &7&oAdds &c&o30.0-50.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all attacks against &4&oBleeding"
+  - "&7&o  enemies."
+  - "&0 "
+  - "&7“&6The feast of souls begins when"
+  - "&6 mortals ascend from flesh.&7”"
+  Attributes:
+    Feet:
+      Health: 40.0
+  Options:
+    Unbreakable: true
+    Color: 255,0,0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Skills:
+  - healpercent{m=0.1} @Self ~onAttack
+  - healpercent{m=0.1} @Self ~onBowHit
+  - skill{s=UnluckChaos} @target ~onAttack
+  - skill{s=UnluckChaos} @target ~onBowHit

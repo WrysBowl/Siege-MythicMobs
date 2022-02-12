@@ -1,0 +1,18 @@
+### ATLAS SKILLS (Shared by all) -------------------------------
+AT_Shot: ### Basic bolt attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=ATS-Tick;onHit=ATS-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+ATS-Tick:
+  Skills:
+  - effect:particles{p=snowballpoof;amount=10} @origin
+  - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+ATS-Hit:
+  Skills:
+  - damage{a=1250;pk=true}
+AT_Seethe:
+  Skills:
+  - effect:smokeswirl{duration=10;interval=10} @Self

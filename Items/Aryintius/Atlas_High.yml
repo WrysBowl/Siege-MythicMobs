@@ -1,0 +1,383 @@
+### ATLAS UNIQUES (High Tier} ----------------------------------
+Soulfire:
+  Id: 403
+  Display: "&6&oSoulfire&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c95.0❤x10"
+  - "&0 "
+  - "&6★ &7&o50% critical strike chance."
+  - "&6★ &7&o8.0x damage on critical hit."
+  - "&0 "
+  - "&7“&6This powerful technique was"
+  - "&6 developed by the giants, all"
+  - "&6 of whom served Titans.&7”"
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+EmberChest:
+  Id: 299
+  Display: "&6&oEmberheart"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore &c&o12.5❤ &7&owhen you hit"
+  - "&7&o  an enemy with a melee attack."
+  - "&6★ &7&o50% chance for your attacks"
+  - "&7&o  to deal &c&o500.0❤ &e&oBurning &7&odamage"
+  - "&7&o  over a period of 2.5s."
+  - "&0 "
+  - "&7“&6To truly leave a mark upon the"
+  - "&6 world, the brightest flame must"
+  - "&6 burn from within.&7”"
+  Options:
+    Unbreakable: true
+    Color: 255,0,0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - heal{a=25} @Self ~onAttack
+  - skill{s=Burn_0} @target ~onAttack 0.5
+  - skill{s=Burn_0} @target ~onBowHit 0.35
+EmberLegs:
+  Id: 300
+  Display: "&6&oThe First Spark"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore &c&o20.0❤ &7&owhenever you"
+  - "&7&o  hit an &e&oIgnited &7&oenemy."
+  - "&6★ &7&oAdds &c&o35.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  your attacks against &e&oIgnited"
+  - "&7&o  enemies."
+  - "&0 "
+  - "&7“&6Fire is the primordial element,"
+  - "&6 giving warmth, energy and life"
+  - "&6 to all beings.&7”"
+  Options:
+    Color: 255,0,0
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Skills:
+  - skill{s=IgniteHeal} @target ~onAttack
+  - skill{s=IgniteHeal2} @target ~onAttack
+  - skill{s=IgniteHeal} @target ~onBowHit
+  - skill{s=IgniteHeal2} @target ~onBowHit
+  - skill{s=ExtraIgniteDamage} @target ~onAttack
+  - skill{s=ExtraIgniteDamage2} @target ~onAttack
+  - skill{s=ExtraIgniteDamage} @target ~onBowHit
+  - skill{s=ExtraIgniteDamage2} @target ~onBowHit
+### PETRUS THE FORGOTTEN ---------------------------------------
+TigrisPrime:
+  Id: 418
+  Display: "&6&oTigris Aquira&7&7 «0 | 0»"
+  Lore:
+  - "&7Left/Right click to shoot"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&7Type: &fShotgun"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c200.0❤x16"
+  - "&0 "
+  - "&6★ &7&oShots deal 50% less damage"
+  - "&7&o  for every second in air."
+  - "&6★ &7&oCrouching reduces recoil and"
+  - "&7&o  reduces bullet spread."
+  - "&0 "
+  - "&7“&6A Tigris model constructed using"
+  - "&6 the original Aquiran designs.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+PetrusChest:
+  Id: 315
+  Display: "&6&oPetrus Anulla"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore &c&o50.0❤ &7&oover a period"
+  - "&7&o  of 10.0s whenever you take"
+  - "&7&o  damage."
+  - "&7&o  (Effect stacks for each hit)."
+  - "&0 "
+  - "&7“&6Despite his exile, Petrus is still"
+  - "&6 hailed as a hero to the people"
+  - "&6 of the Aquir Empire.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=Heal_50x10} @Self ~onDamaged
+PetrusBoots:
+  Id: 317
+  Display: "&6&oPetrus' Tenacity"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&6★ &a&o+50% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oYou are immune to &8&oWeakness&7&o."
+  - "&6★ &7&oAdds &c&o200.0-350.0❤ &7&odamage to all"
+  - "&7&o  melee attacks."
+  - "&0 "
+  - "&7“&6Petrus was reknown throughout the"
+  - "&6 world for his incredible endurance,"
+  - "&6 thought to be inhuman in nature.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      Health: 30.0
+      MovementSpeed: 0.5
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=Phys_200-350} @target ~onAttack
+  - skill{s=CancelWeakness} @Self ~onTimer:5
+### THE WARDEN -------------------------------------------------
+CritRifle:
+  Id: 417
+  Display: "&6&oThe Stinger&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&7Type: &fRifle"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c125.0❤x3"
+  - "&0 "
+  - "&6★ &7&oBurst fire (3 shots)."
+  - "&6★ &7&o35% critical strike chance."
+  - "&6★ &7&o8.0x damage on critical hit."
+  - "&0 "
+  - "&7“&6May nature have mercy on"
+  - "&6 fools that dare to disturb"
+  - "&6 the hornet's nest.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+WardenChest:
+  Id: 303
+  Display: "&6&oPrisoner's Chains"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o100.0-250.0❤ &7&odamage to"
+  - "&7&o  all ranged/magic attacks."
+  - "&6★ &7&oAdds &c&o250.0-400.0❤ &7&odamage to"
+  - "&7&o  all melee attacks."
+  - "&0 "
+  - "&7“&6Centuries of imprisonment have"
+  - "&6 only served to strengthen my"
+  - "&6 resolve and patience.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=Phys_100-250} @target ~onBowHit
+  - skill{s=Phys_250-400} @target ~onAttack
+WardenBoots:
+  Id: 305
+  Display: "&6&oExile's Path"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&6★ &a&o+35% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oYou have &a&oVoid Pact &7&owhile you"
+  - "&7&o  are affected by &8&oSlowness&7&o."
+  - "&0 "
+  - "&7“&6It is a cruel joke that mankind"
+  - "&6 was born with more intent than"
+  - "&6 life.&7”"
+  Options:
+    Unbreakable: true
+    Color: 230,84,221
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      Health: 30.0
+      MovementSpeed: 0.35
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=VoidPact_Slow} @Self ~onAttack
+  - skill{s=VoidPact_Slow} @Self ~onBowHit
+### MAUGRI -----------------------------------------------------
+MaugriSword:
+  Id: 276
+  Display: "&6&oMaugri's Leadership"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&6★ &a&o+60% &7&oattack speed."
+  - "&6★ &7&oRestore &c&o15.0❤ &7&owhenever you"
+  - "&7&o  hit an enemy with your melee"
+  - "&7&o  attacks."
+  - "&6★ &7&oRestore &c&o15.0❤ &7&oto all players"
+  - "&7&o  within 20 blocks whenever you"
+  - "&7&o  hit an enemy with your melee"
+  - "&7&o  attacks."
+  - "&0 "
+  - "&7“&6Few could unite a crew that was"
+  - "&6 as dedicated and loyal for such"
+  - "&6 a daunting journey.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.2
+  Enchantments:
+  - DAMAGE_ALL:500
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - heal{a=30} @Self ~onAttack
+  - heal{a=30} @PIR{r=20} ~onAttack
+MaugriCharm:
+  Id: 410
+  Display: "&6&oMaugri's Rumination"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&6» &7&oWhile equipped in off hand:"
+  - "&6★ &c&o+10.0❤ &7&omaximum health."
+  - "&6★ &7&oRestore &c&o10.0❤ &7&oevery second."
+  - "&6★ &7&oRestore &c&o10.0❤ &7&oto all players"
+  - "&7&o  within 20 blocks every second"
+  - "&7&o  while you have &a&oRegeneration&7&o."
+  - "&0 "
+  - "&7“&6The great explorer believed that"
+  - "&6 the mind was best put to use while"
+  - "&6 speculating about the future.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    OffHand:
+      Health: 20.0
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - heal{a=10} @Self ~onTimer:10
+  - skill{s=Maugri_Heal} @Self ~onTimer:10
+MaugriBoots:
+  Id: 301
+  Display: "&6&oMaugri's Advance"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✦"
+  - "&0 "
+  - "&6★ &a&o+80% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore &c&o3.0❤ &7&oevery second for"
+  - "&7&o  every level of &a&oRegeneration&7&o."
+  - "&7&o  (E.g. 30.0 from Regeneration X)."
+  - "&0 "
+  - "&7“&6Maugri seldom took rest during his"
+  - "&6 journey to map the dimension known"
+  - "&6 as the Heart of the World.&7”"
+  Options:
+    Unbreakable: true
+    Color: 230,84,221
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      Health: 30.0
+      MovementSpeed: 0.8
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=HealRegen} @Self ~onTimer:10

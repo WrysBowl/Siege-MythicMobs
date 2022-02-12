@@ -1,0 +1,308 @@
+###---------------------------------------------------------###
+### COMMON TOOLS
+###---------------------------------------------------------###
+Flint_Pick:
+  Id: 274
+  Display: "&fFlint Pickaxe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fA simple pickaxe held by"
+  - "&f sticks and flint shards.&7”"
+  Enchantments:
+  - DIG_SPEED:3
+  Hide:
+  - ATTRIBUTES
+Flint_Spade:
+  Id: 273
+  Display: "&fFlint Shovel"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fA primitive digging tool.&7”"
+  Enchantments:
+  - DIG_SPEED:2
+  - DURABILITY:2
+  Hide:
+  - ATTRIBUTES
+Flint_Axe:
+  Id: 275
+  Display: "&fFlint Hatchet"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fA simple hatchet crafted"
+  - "&f out of a sharpened flint.&7”"
+  Enchantments:
+  - DAMAGE_ALL:2
+  - DIG_SPEED:2
+  Hide:
+  - ATTRIBUTES
+Flint_Hoe:
+  Id: 291
+  Display: "&fFlint Hoe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fA surprisingly sharp"
+  - "&f farming utensil made"
+  - "&f from flint shards.&7”"
+  Enchantments:
+  - DIG_SPEED:3
+  - DURABILITY:3
+  Hide:
+  - ATTRIBUTES
+Flint_Sword:
+  Id: 272
+  Display: "&fFlint Knife"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fA crude and primitive"
+  - "&f weapon fashioned from"
+  - "&f flint shards.&7”"
+  Enchantments:
+  - DAMAGE_ALL:3
+  - FIRE_ASPECT:1
+  Hide:
+  - ATTRIBUTES
+###---------------------------------------------------------###
+### UNCOMMON TOOLS
+###---------------------------------------------------------###
+Alloy_Pick:
+  Id: 257
+  Display: "&2Alloy Pickaxe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2A lightweight pickaxe made"
+  - "&2 from a strange metal.&7”"
+  Enchantments:
+  - DIG_SPEED:4
+  - DURABILITY:3
+  Hide:
+  - ATTRIBUTES
+Alloy_Axe:
+  Id: 258
+  Display: "&2Alloy Axe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2A hefty axe made from"
+  - "&2 synthetic materials.&7”"
+  Enchantments:
+  - DIG_SPEED:3
+  - DAMAGE_ALL:3
+  - DURABILITY:3
+  Hide:
+  - ATTRIBUTES
+Alloy_Spade:
+  Id: 256
+  Display: "&2Alloy Spade"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2A durable digging tool"
+  - "&2 forged with precision.&7”"
+  Enchantments:
+  - DIG_SPEED:5
+  - DURABILITY:2
+  Hide:
+  - ATTRIBUTES
+Alloy_Hoe:
+  Id: 292
+  Display: "&2Alloy Hoe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2A strong tool made"
+  - "&2 for endless farming.&7”"
+  Enchantments:
+  - DURABILITY:10
+  Hide:
+  - ATTRIBUTES
+Alloy_Sword:
+  Id: 267
+  Display: "&2Alloy Dagger"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7“&2A powerful dagger made"
+  - "&2 of strange metals.&7”"
+  Enchantments:
+  - DAMAGE_ALL:5
+  - DURABILITY:3
+  Hide:
+  - ATTRIBUTES
+###---------------------------------------------------------###
+### RARE TOOLS
+###---------------------------------------------------------###
+Aquir_Pick:
+  Id: 257
+  Display: "&3Aquir Pickaxe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7“&3A powerful mining tool"
+  - "&3 designed by the Aquir.&7”"
+  Enchantments:
+  - DIG_SPEED:7
+  - DURABILITY:5
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+Aquir_Axe:
+  Id: 258
+  Display: "&3Aquir War Axe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7“&3A glistening, sharpened"
+  - "&3 axe made by the Aquir.&7”"
+  Enchantments:
+  - DAMAGE_ALL:6
+  - DIG_SPEED:6
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+Aquir_Spade:
+  Id: 256
+  Display: "&3Aquir Drill"
+  Lore:
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7“&3A brilliant digging tool"
+  - "&3 remade from an ancient"
+  - "&3 blueprint long lost.&7”"
+  Enchantments:
+  - DIG_SPEED:8
+  - DURABILITY:5
+  Hide:
+  - ATTRIBUTES
+Aquir_Hoe:
+  Id: 292
+  Display: "&3Aquir Reaver"
+  Lore:
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7“&3A strange tool used in"
+  - "&3 the ancient days to cull"
+  - "&3 the infected and undead.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:10
+  - KNOCKBACK:1
+  - FIRE_ASPECT:1
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+Aquir_Sword:
+  Id: 267
+  Display: "&3Aquir Longsword"
+  Lore:
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7“&3An incredibly intricate"
+  - "&3 weapon design from an"
+  - "&3 era long forgotten.&7”"
+  Enchantments:
+  - DAMAGE_ALL:9
+  - KNOCKBACK:3
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+###---------------------------------------------------------###
+### SUPERIOR TOOLS
+###---------------------------------------------------------###
+Byzantite_Pick:
+  Id: 278
+  Display: "&5Byzantite Pickaxe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5Superior"
+  - "&0 "
+  - "&7“&5A heavy pickaxe made"
+  - "&5 from a dense material.&7”"
+  Enchantments:
+  - DIG_SPEED:5
+  - LOOT_BONUS_BLOCKS:3
+  - DURABILITY:10
+  Hide:
+  - ATTRIBUTES
+Byzantite_Axe:
+  Id: 279
+  Display: "&5Byzantite Cleaver"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5Superior"
+  - "&0 "
+  - "&7“&5A massive battleaxe"
+  - "&5 forged with the finest"
+  - "&5 of elements.&7”"
+  Enchantments:
+  - DAMAGE_ALL:5
+  - DIG_SPEED:5
+  - DURABILITY:10
+  Hide:
+  - ATTRIBUTES
+Byzantite_Spade:
+  Id: 277
+  Display: "&5Byzantite Shovel"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5Superior"
+  - "&0 "
+  - "&7“&5A powerful digging"
+  - "&5 utensil forged from"
+  - "&5 a hard material.&7”"
+  Enchantments:
+  - DIG_SPEED:5
+  - DURABILITY:10
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES
+Byzantite_Hoe:
+  Id: 293
+  Display: "&5Byzantite Reaper"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5Superior"
+  - "&0 "
+  - "&7“&5A weapon forged from"
+  - "&5 fire to destroy the"
+  - "&5 undead curse.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:5
+  - DAMAGE_ALL:5
+  - DURABILITY:10
+  Hide:
+  - ATTRIBUTES
+Byzantite_Sword:
+  Id: 276
+  Display: "&5Byzantite Scimitar"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5Superior"
+  - "&0 "
+  - "&7“&5A viciously sharp"
+  - "&5 curved longsowrd.&7”"
+  Enchantments:
+  - DAMAGE_ALL:5
+  - FIRE_ASPECT:5
+  - MENDING:1
+  Hide:
+  - ATTRIBUTES

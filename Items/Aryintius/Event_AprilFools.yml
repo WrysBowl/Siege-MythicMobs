@@ -1,0 +1,81 @@
+SlamSpell:
+  Id: 403
+  Display: "&f&oTeleport Slam"
+  Lore:
+  - "&7Right-click to use cast"
+  - "&0 "
+  - "&7Tier: &f&oApril Fool's 2019"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Range: &f25 Blocks"
+  - "&7Radius: &f5 Blocks"
+  - "&7Cooldown: &f10.0 Seconds"
+  - "&0 "
+  - "&f★ &7&oTeleports to the cursor on cast."
+  - "&f★ &7&oDeals &c&o10000.0❤ &7&ophysical damage"
+  - "&7&o  and &c&o500.0❤ &5&oChaos &7&odamage on slam."
+  - "&f★ &c&oDeals no damage to other players."
+  - "&0 "
+  - "&7“&fWho reads the lore text, anyway?&7”"
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=AF_TPSlam} @crosshairlocation{length=25} ~onUse
+ZootBorx:
+  Id: 397
+  Data: 3
+  Display: "&f&oZoot Borx"
+  Lore:
+  - "&7Consumable Item"
+  - "&0 "
+  - "&7Tier: &f&oApril Fool's 2019"
+  - "&0 "
+  - "&f★ &7&oRight-click to use item."
+  - "&f★ &7&oSummons a LOOT EXPLOSION"
+  - "&7&o  at your current location."
+  - "&f★ &7&oItem Cooldown: &f&o10.0 &7&oseconds."
+  - "&f★ &c&oLoot may not spawn in safe"
+  - "&c&o  zones such as Towns."
+  - "&0 "
+  - "&7“&fThere's not much better in life"
+  - "&f than a pile of sweet loot.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+    Player: MHF_Chest
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=AF_LootSplosion} @Self ~onUse
+BanSword:
+  Id: 276
+  Display: "&f&oNicked Blade"
+  Lore:
+  - "&7No Attack Damage"
+  - "&0 "
+  - "&7Tier: &f&oApril Fool's 2019"
+  - "&0 "
+  - "&f★ &7&oCasts /rng whenever you attack."
+  - "&f★ &7&o50% chance to deal lethal damage."
+  - "&f★ &7&o50% chance to ban yourself for 1"
+  - "&7&o  hour when you hit an enemy."
+  - "&0 "
+  - "&7“&fBehold my field of fucks--observe"
+  - "&f how it is barren.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  # - damage{a=2000000;pi=true;pk=true;ia=true} @target ~onAttack 0.5
+  # - command{c="ban <target.name> 1h BIG YEET"} @Self ~onAttack 0.5
+  # - command{c="sudo <target.name> broll D100"} @Self ~onSwing

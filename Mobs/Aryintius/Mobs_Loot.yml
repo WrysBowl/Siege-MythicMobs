@@ -1,0 +1,84 @@
+LootGolem: ### Loot Explosion Dummy Test
+  Type: HUSK
+  Display: ''
+  Health: 1000
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=4} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=BR_SummonLoot} @Self ~onSpawn
+  - remove{delay=200} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    NoAI: true
+LootExplosion_WithCurrency: ### Pointer mob for loot explosions (With Currency)
+  Type: BAT
+  Display: ''
+  Health: 1000
+  Damage: 0
+  Drops:
+  - Money_Titan
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - Exalted
+  - Corrupted
+  - Mythic
+  - Iridescent
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=BR_ParExp} ~onSpawn
+  - skill{s=BR_KillSelf} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+LootExplosion: ### Pointer mob without currency
+  Type: BAT
+  Display: ''
+  Health: 1000
+  Damage: 0
+  Drops:
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - Exalted
+  - Corrupted
+  - Mythic
+  - Iridescent
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=BR_ParExp} ~onSpawn
+  - skill{s=BR_KillSelf} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true

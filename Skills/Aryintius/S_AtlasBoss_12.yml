@@ -1,0 +1,230 @@
+### PHOENIX SKILLS ---------------------------------------------
+A12_FlameBlast:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A12FB-Tick;onHit=A12FB-Hit;hO=0;vO=0;v=15;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A12FB-Tick;onHit=A12FB-Hit;hO=350;vO=0;v=15;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A12FB-Tick;onHit=A12FB-Hit;hO=10;vO=0;v=15;i=1;hR=1.0;vR=1.0}
+  - projectile{onTick=A12FB-Tick;onHit=A12FB-Hit;hO=0;vO=0.1;v=15;i=1;hR=1.0;vR=1.0}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=1}
+A12FB-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=1;speed=0;hS=0.1;vS=0.1} @origin
+  - effect:particles{p=smoke;a=1;hS=0.15;vS=0.15} @Origin
+A12FB-Hit:
+  Skills:
+  - damage{a=750;pi=true;pk=true}
+A12_Missile:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A12M-Tick;onHit=A12M-Hit;hO=0;vO=0;v=20;i=1;hR=2.0;vR=2.0}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=0}
+A12_Missile_Left:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A12M-Tick;onHit=A12M-Hit;hO=45;vO=0;v=20;i=1;hR=2.0;vR=2.0}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=0}
+A12_Missile_Right:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A12M-Tick;onHit=A12M-Hit;hO=315;vO=0;v=20;i=1;hR=2.0;vR=2.0}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=0}
+A12M-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=4;speed=0;hS=0.25;vS=0.25} @origin
+  - effect:particles{p=largesmoke;a=1;hS=0.5;vS=0.5} @Origin
+A12M-Hit:
+  Skills:
+  - damage{a=2000;pk=true}
+  - skill{s=Ignite_Title}
+### COMPOSITE SKILLS -------------------------------------------
+A12_RapidBlast:
+  Skills:
+  - skill{s=A12_FlameBlast}
+  - delay 5
+  - skill{s=A12_FlameBlast}
+  - delay 5
+  - skill{s=A12_FlameBlast}
+  - delay 5
+  - skill{s=A12_FlameBlast}
+  - delay 5
+  - skill{s=A12_FlameBlast}
+  - delay 5
+  - skill{s=A12_FlameBlast}
+  - delay 5
+  - skill{s=A12_FlameBlast}
+A12_MissileBlast:
+  Skills:
+  - skill{s=A12_Missile}
+  - delay 10
+  - skill{s=A12_Missile_Left}
+  - delay 10
+  - skill{s=A12_Missile_Right}
+  - delay 10
+  - skill{s=A12_Missile}
+  - delay 10
+  - skill{s=A12_Missile_Left}
+  - delay 10
+  - skill{s=A12_Missile_Right}
+  - delay 10
+  - skill{s=A12_Missile}
+A12_Eruption: ### FIRE EVERYWHERE
+  Skills:
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=0;vO=0.4;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=330;vO=0.3;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=30;vO=0.2;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=45;vO=0.1;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=315;vO=0.5;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=0;vO=0.5;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=330;vO=0.4;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=30;vO=0.4;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=45;vO=0.3;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=315;vO=0.3;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=0;vO=0.2;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=330;vO=0.2;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=30;vO=0.2;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=45;vO=0.1;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+  - delay 2
+  - projectile{onTick=T2S-Tick;onHit=T2S-Hit;v=20;i=1;hR=1;vR=1;hO=315;vO=0.1;syo=2;g=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=1}
+  - effect:sound{s=entity.blaze.burn;v=2;p=0}
+A12_TPSlam:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @NearestPlayer{r=50}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
+  - delay 5
+  - effect:particlesphere{particle=flame;amount=200;r=5} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=200;r=5} @self
+  - delay 5
+  - effect:particlesphere{particle=flame;amount=100;r=3} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=100;r=3} @self
+  - delay 5
+  - effect:particlesphere{particle=flame;amount=35;r=1} @self
+  - effect:particlesphere{particle=blockcrack_173;amount=35;r=1} @self
+  - delay 10
+  - effect:particlering{particle=largesmoke;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=flame;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=largesmoke;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=flame;radius=3;points=16;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=largesmoke;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=flame;radius=1;points=4;amount=1;hS=1;vS=0} @self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
+  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+A12_LavaPlains:
+  Skills:
+  - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - damage{amount=1500;pk=true} @PIR{r=15}
+  - effect:sound{s=entity.generic.explode;v=2;p=0}
+  - delay 20
+  - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - damage{amount=1500;pk=true} @PIR{r=15}
+  - effect:sound{s=entity.generic.explode;v=2;p=0}
+  - delay 20
+  - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
+  - damage{amount=1500;pk=true} @PIR{r=15}
+  - effect:sound{s=entity.generic.explode;v=2;p=0}
+A12_FireNova:
+  Skills:
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
+  - effect:particlesphere{particle=flame;amount=400;r=10} @self
+  - damage{amount=500;pk=true} @PIR{r=10}
+  - delay 10
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
+  - effect:particlesphere{particle=flame;amount=300;r=8} @self
+  - damage{amount=800;pk=true} @PIR{r=8}
+  - delay 10
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
+  - effect:particlesphere{particle=flame;amount=200;r=6} @self
+  - damage{amount=1200;pk=true} @PIR{r=6}
+  - delay 10
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
+  - effect:particlesphere{particle=flame;amount=100;r=4} @self
+  - damage{amount=1800;pk=true} @PIR{r=4}
+  - delay 10
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
+  - effect:particlesphere{particle=flame;amount=50;r=2} @self
+  - damage{amount=2500;pk=true} @PIR{r=2}
+  - delay 10
+  - skill{s=Ignite_Title} @PIR{r=10}
+### PHASES -----------------------------------------------------
+A12_RandomSkill:
+  Cooldown: 4
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=80}
+  - randomskill{skills=A12_RapidBlast,A12_MissileBlast,A12_TPSlam,A12_LavaPlains,A12_FireNova,A12_Eruption}
+A12_RandomSkill2:
+  Cooldown: 3
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=60}
+  - randomskill{skills=A12_RapidBlast,A12_MissileBlast,A12_TPSlam,A12_LavaPlains,A12_FireNova,A12_Eruption}
+A12_RandomSkill3:
+  Cooldown: 2
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=40}
+  - randomskill{skills=A12_RapidBlast,A12_MissileBlast,A12_TPSlam,A12_LavaPlains,A12_FireNova,A12_Eruption}

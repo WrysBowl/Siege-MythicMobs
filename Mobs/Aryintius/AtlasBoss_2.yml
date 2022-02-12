@@ -1,0 +1,65 @@
+AtlasBoss_2:
+  Type: HUSK
+  Display: "&5&l<&d« &fThe Witch &d»&5&l>"
+  Health: 15000
+  Damage: 1000
+  BossBar:
+    Enabled: true
+    Title: "&5&l<&d« &fThe Witch of the Wilds &d»&5&l>"
+    Range: 25
+    Color: PINK
+    Style: SOLID
+  Disguise:
+    Type: WITCH
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - GHelm:4
+  - GChest:3
+  - GLegs:2
+  - GBoots:1
+  - 0:0
+  - 0:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - AtlasBoss_2
+  - Currency_Atlas_Boss
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fDo not stand in the way of my ritual, fool!"} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7The wrath of the ancients shall destroy you!",
+      "<mob.name> &7How dare you waste my precious time!",
+      "<mob.name> &7You trifle with power beyond your understanding!";
+      } @PIR{r=25} ~onTimer:300
+  - effect:sound{s=entity.witch.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.witch.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.ghast.hurt;v=0.5;p=1} @self ~onDamaged
+### PHASE 1
+  - skill{s=A2_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >60%
+### PHASE 2
+  - skill{s=A2_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <60%
+### DEATH STUFF
+  - message{m="<mob.name> &fMy ritual... has failed..."} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

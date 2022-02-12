@@ -1,0 +1,73 @@
+AtlasBoss_13:
+  Type: HUSK
+  Display: "&6&l<&e« &fPetrus &e»&6&l>"
+  Health: 60000
+  Damage: 750
+  BossBar:
+    Enabled: true
+    Title: "&6&l<&e« &fPetrus, the Forgotten &e»&6&l>"
+    Range: 50
+    Color: YELLOW
+    Style: SEGMENTED_10
+  Equipment:
+  - GHelm:4
+  - GChest:3
+  - GLegs:2
+  - GBoots:1
+  - Arch_Sword:0
+  - Shield_Aquir:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Shard_East
+  - AtlasBoss_13
+  - Currency_Atlas_Boss3
+  - Atlas_Fragments
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+    Despawn: false
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fThe corruption has consumed my brethren... but I shall not fall to its influence!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7I hear no voices... no cheering... Where am I?",
+      "<mob.name> &7I must not forget who I am... for it is all I have left...",
+      "<mob.name> &7My life, my legacy... have all amounted to nothing...",
+      "<mob.name> &7The Aquir... have fallen... I can sense it... see it...",
+      "<mob.name> &7My past is slipping away... but I must not let go of the future!";
+      } @PIR{r=50} ~onTimer:300
+  - effect:sound{s=entity.zombie.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.zombie.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;v=0.75;p=0.5} @self ~onDamaged
+  - skill{s=CancelSlowness} @Self ~onTimer:5
+  - skill{s=CancelDespawn} @Self ~onTimer:20
+  - skill{s=InflictShock} @target ~onAttack 0.2
+### PHASE 1
+  - skill{s=A13_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >70%
+### PHASE 2
+  - skill{s=A13_Phase_2} @NearestPlayer{r=50} ~onTimer:10 =35%-70%
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:100 =35%-70%
+  - potion{type=SPEED;duration=200;level=1;overwrite=true} @Self ~onTimer:10 =35%-70%
+### PHASE 3
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
+  - potion{type=SPEED;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
+  - skill{s=A13_Phase_3} @NearestPlayer{r=50} ~onTimer:10 <35%
+### DEATH STUFF
+  - message{m="<mob.name> &fI am beyond saving... But you... Never forget who... or what you are..."} @PlayersInRadius{r=50} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

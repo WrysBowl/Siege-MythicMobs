@@ -1,0 +1,99 @@
+### SPIDER SKILLS ----------------------------------------------
+A3_Blast: ### Tri-bolt slow attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A3B-Tick;onHit=A3B-Hit;hO=15;vO=0.35;g=0.8;v=15;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A3B-Tick;onHit=A3B-Hit;hO=0;vO=0.35;g=0.8;v=15;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A3B-Tick;onHit=A3B-Hit;hO=345;vO=0.35;g=0.8;v=15;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=0.8;p=1}
+A3_PoisonBlast: ### Toxic tri-bolt attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A3P-Tick;onHit=Poison_60;hO=15;v=15;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A3P-Tick;onHit=Poison_60;hO=0;v=15;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A3P-Tick;onHit=Poison_60;hO=345;v=15;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.blaze.hurt;v=1;p=2}
+  - effect:sound{s=entity.blaze.hurt;v=1;p=1}
+A3B-Tick:
+  Skills:
+  - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+A3P-Tick:
+  Skills:
+  - effect:particles{p=happyVillager;amount=5;speed=0;hS=0.1;vS=0.1} @origin
+A3B-Hit: ### 15.0 hearts + Slowness IV
+  Skills:
+  - damage{a=750;pk=true}
+  - potion{type=SLOW;duration=100;lvl=3;overwrite=true}
+A3_Knockback: ### Knockback attack.
+  Skills:
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1} @PIR{r=25}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=0.5} @PIR{r=25}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2} @PIR{r=25}
+  - effect:particlesphere{particle=explode;amount=20;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=explode;amount=40;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=explode;amount=60;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=explode;amount=80;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=explode;amount=100;r=5} @self
+  - damage{a=1000} @PIR{r=8}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
+A3_Summon: ### Summons a brood of spiders.
+  Cooldown: 20
+  Skills:
+  - randommessage
+      {
+      m=
+      "<mob.name> &fFeast on this maggot, my children!",
+      "<mob.name> &fYour corpse will make a wonderful meal!",
+      "<mob.name> &fYessss... so much blood...";
+      } @PIR{r=25}
+  - summon{type=A3_Brood;amount=3;radius=8;yu=true} @Self
+A3_Phase_1: ### Phase 1 Attack
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A3_Knockback} @Self
+  - delay 30
+  - skill{s=A3_Blast}
+  - delay 20
+  - skill{s=A3_Blast}
+  - delay 20
+  - skill{s=A3_Blast}
+  - delay 20
+  - skill{s=A3_PoisonBlast}
+  - delay 20
+  - skill{s=A3_PoisonBlast}
+  - delay 20
+  - skill{s=A3_PoisonBlast}
+A3_Phase_2: ### Phase 2 Attack
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A3_Knockback} @Self
+  - delay 30
+  - skill{s=A3_Blast}
+  - delay 15
+  - skill{s=A3_PoisonBlast}
+  - delay 15
+  - skill{s=A3_Blast}
+  - delay 15
+  - skill{s=A3_PoisonBlast}
+  - delay 15
+  - skill{s=A3_Blast}
+  - delay 15
+  - skill{s=A3_PoisonBlast}
+  - delay 15
+  - skill{s=A3_Blast}
+  - delay 15
+  - skill{s=A3_PoisonBlast}

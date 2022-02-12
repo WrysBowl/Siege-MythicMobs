@@ -1,0 +1,469 @@
+### SUPERIOR ARTIFACTS -----------------------------------------
+T3_A1:
+  Id: 298
+  Display: "&9Archer's Hood"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+20% &7movement speed."
+  - "&9★ &7Adds &c25.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&0 "
+  - "&7“&9May your arrow fly straight"
+  - "&9 and true against the wind.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.2
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:10
+  Skills:
+  - damage{a=50;pk=true} @target ~onBowHit
+T3_A2:
+  Id: 306
+  Display: "&9Giant's Helm"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &8-50% &7movement speed."
+  - "&9★ &c+10.0❤ &7while equipped."
+  - "&9★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  melee attacks."
+  - "&0 "
+  - "&7“&9A giant's hands never lie idle."
+  - "&9 They forge weapons of war,"
+  - "&9 waiting to strike.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: -0.5
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_EXPLOSIONS:10
+  - PROTECTION_ENVIRONMENTAL:10
+  Skills:
+  - damage{a=100;pk=true} @target ~onAttack
+T3_A3:
+  Id: 314
+  Display: "&9Burial Mask"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+15% &7movement speed."
+  - "&9★ &730% chance to set your gold"
+  - "&7  hearts to &e10.0❤ &7for up to 5.0s"
+  - "&7  whenever you attack an enemy."
+  - "&9★ &7Adds &c15.0❤ &7damage to all your"
+  - "&7  attacks."
+  - "&0 "
+  - "&7“&9The dying expression of a fading"
+  - "&9 soul, captured eternally with this"
+  - "&9 grotesquely-carved mask.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.15
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:8
+  - PROTECTION_PROJECTILE:8
+  Skills:
+  - damage{a=30;pk=true} @target ~onAttack
+  - damage{a=30;pk=true} @target ~onBowHit
+  - potion{type=ABSORPTION;duration=100;lvl=4;overwrite=true} @Self ~onAttack 0.3
+T3_A4:
+  Id: 303
+  Display: "&9The Darkeater"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &7Adds &c2.0❤ &5Chaos &7damage"
+  - "&7  to all attacks."
+  - "&9★ &7Restore &c3.0❤ &7whenever"
+  - "&7  you hit an enemy."
+  - "&0 "
+  - "&7“&9This strange silk robe was"
+  - "&9 crafted from the spires of"
+  - "&9 thousands of void leeches.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:9
+  - PROTECTION_PROJECTILE:9
+  Skills:
+  - skill{s=Chaos_2} @target ~onAttack
+  - skill{s=Chaos_2} @target ~onBowHit
+  - heal{a=6} @Self ~onAttack
+  - heal{a=6} @Self ~onBowHit
+T3_A5:
+  Id: 307
+  Display: "&9Knight's Blessing"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+20% &7movement speed."
+  - "&9★ &c+10.0❤ &7while equipped."
+  - "&9★ &7Restore &c2.0-4.0❤ &7whenever"
+  - "&7  you hit an enemy."
+  - "&0 "
+  - "&7“&9Worn by many members of a"
+  - "&9 chivalrous order, the deeds"
+  - "&9 of its past stay forever.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      MovementSpeed: 0.2
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  Skills:
+  - skill{s=Heal_Low} @Self ~onAttack
+  - skill{s=Heal_Low} @Self ~onBowHit
+T3_A6:
+  Id: 315
+  Display: "&9Emperor's Platemail"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &c+15.0❤ &7while equipped."
+  - "&9★ &7Restore &c4.0❤ &7whenever"
+  - "&7  you take damage."
+  - "&0 "
+  - "&7“&9In a high position of power,"
+  - "&9 one must never fall to the"
+  - "&9 clutches of fear.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 30.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:8
+  - PROTECTION_PROJECTILE:8
+  Skills:
+  - heal{a=8} @Self ~onDamaged
+T3_A7:
+  Id: 312
+  Display: "&9Crystal Plateskirt"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &c-5.0❤ &7while equipped."
+  - "&9★ &7You have &aResistance II&7."
+  - "&7  (Refreshes every 5.0s)."
+  - "&0 "
+  - "&7“&9An ancient piece of armor"
+  - "&9 comprised of thousands of"
+  - "&9 crystal shards.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: -10.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_EXPLOSIONS:10
+  - PROTECTION_FIRE:10
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=1;overwrite=true} @Self ~onTimer:100
+T3_A8:
+  Id: 300
+  Display: "&9Snakeskin Leggings"
+  Lore:
+  - "&7Projectile Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+30% &7movement speed."
+  - "&9★ &c+10.0❤ &7while equipped."
+  - "&9★ &7Restore &c4.0❤ &7every second."
+  - "&0 "
+  - "&7“&9A warrior clad in scales cannot"
+  - "&9 be slain by those envenomed.&7”"
+  Options:
+    Unbreakable: true
+    Color: 80,150,0
+  Attributes:
+    Legs:
+      MovementSpeed: 0.3
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:15
+  Skills:
+  - heal{a=8} @Self ~onTimer:20
+T3_A9:
+  Id: 304
+  Display: "&9Dark Chainmail"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &8-25% &7movement speed."
+  - "&9★ &7Adds &c5.0❤ &5Chaos &7damage"
+  - "&7  to all attacks."
+  - "&0 "
+  - "&7“&9The deeper one explores of"
+  - "&9 magics old, the darker views"
+  - "&9 of minds we hold.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      MovementSpeed: -0.25
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  Skills:
+  - skill{s=Chaos_5} @target ~onAttack
+  - skill{s=Chaos_5} @target ~onBowHit
+T3_A10:
+  Id: 313
+  Display: "&9Abysswalker"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+25% &7movement speed."
+  - "&9★ &c+10.0❤ &7while equipped."
+  - "&9★ &710% chance to gain &aSpeed X &7for"
+  - "&7  5.0s whenever you take damage."
+  - "&0 "
+  - "&7“&9One must tread carefully around"
+  - "&9 the depths of the world, lest they"
+  - "&9 wake beasts of terrors untold.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 20.0
+      MovementSpeed: 0.25
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_FALL:5
+  - DEPTH_STRIDER:10
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=9;overwrite=true} @Self ~onDamaged 0.1
+T3_A11:
+  Id: 309
+  Display: "&9Snowfall Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+60% &7movement speed."
+  - "&9★ &710% chance for your attacks"
+  - "&7  to &bFreeze &7enemies for 5.0s."
+  - "&0 "
+  - "&7“&9The spirits grow restless in the"
+  - "&9 frigid winds of winter.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.6
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:5
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack 0.1
+  - skill{s=InflictFreeze} @target ~onBowHit 0.1
+T3_A12:
+  Id: 305
+  Display: "&9Unchained Horror"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+30% &7movement speed."
+  - "&9★ &7Adds &c1.0❤ &5Chaos &7damage to all"
+  - "&7  attacks for every 10 &aStrength&7."
+  - "&7  (E.g. 5.0 extra Chaos damage"
+  - "&7  from Strength L.)"
+  - "&0 "
+  - "&7“&9Nothing will be held back in the"
+  - "&9 eyes of total madness.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.3
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_FALL:5
+  - DEPTH_STRIDER:5
+  Skills:
+  - skill{s=ChaosFromStrength_Low} @Self ~onAttack
+  - skill{s=ChaosFromStrength_Low} @Self ~onBowHit
+### WEAPONS ----------------------------------------------------
+T3_W1:
+  Id: 258
+  Display: "&9Dread Cleaver"
+  Lore:
+  - "&7Smite X"
+  - "&7Sharpness L"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+50% &7attack speed."
+  - "&9★ &725% chance to inflict &c30.0❤"
+  - "&4  Bleed &7damage over a period"
+  - "&7  of 1.5s."
+  - "&0 "
+  - "&7“&9Sharpened by blood and honed"
+  - "&9 through sacrifice--all fear the"
+  - "&9 dread clever's might.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DAMAGE_ALL:40
+  - DAMAGE_UNDEAD:10
+  Skills:
+  - skill{s=Bleed_30} @target ~onAttack 0.25
+T3_W2:
+  Id: 276
+  Display: "&9Aquir Sabre"
+  Lore:
+  - "&7Sharpness C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &a+75% &7attack speed."
+  - "&9★ &730% chance for your melee"
+  - "&7  attacks to &bFreeze &7enemies"
+  - "&7  for up to 5.0s."
+  - "&0 "
+  - "&7“&9A lightweight sword used by"
+  - "&9 many members of the Aquir"
+  - "&9 ruling class.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DAMAGE_ALL:100
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack 0.3
+T3_W3:
+  Id: 279
+  Display: "&9Firebrand"
+  Lore:
+  - "&7No Attack Damage"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &7100% status effect chance."
+  - "&9★ &7Deals &c500.0❤ &6Burning &7damage"
+  - "&7  over a period of 2.5s."
+  - "&9★ &cStatus effects cannot stack."
+  - "&0 "
+  - "&7“&9From within my soul burns the"
+  - "&9 the cursed flame, together all"
+  - "&9 shall know the pain.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - skill{s=Burn_0} @target ~onAttack
+T3_W4:
+  Id: 292
+  Display: "&9Silence"
+  Lore:
+  - "&7No Attack Damage"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&9★ &7Deals &c10.0❤ &5Chaos &7damage"
+  - "&7  whenever you hit an enemy."
+  - "&0 "
+  - "&7“&9An infinite symphony of sound"
+  - "&9 rests within every mind.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - skill{s=Chaos_10} @target ~onAttack

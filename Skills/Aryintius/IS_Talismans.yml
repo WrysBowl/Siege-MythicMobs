@@ -1,0 +1,108 @@
+### TALISMAN SKILLS --------------------------------------------
+TalCooldown:
+  Skills:
+  - effect:sound{s=block.enchantment_table.use;v=1;p=0}
+  - effect:sound{s=block.enchantment_table.use;v=1;p=1}
+  - effect:sound{s=block.enchantment_table.use;v=1;p=2}
+  - actionmessage{m="&7TALISMAN ACTIVATED"}
+  - delay 10
+  - actionmessage{m="&7TALISMAN CHARGING &f| &74.5"}
+  - delay 10
+  - actionmessage{m="&7TALISMAN CHARGING &f| &74.0"}
+  - delay 10
+  - actionmessage{m="&7TALISMAN CHARGING &f| &73.5"}
+  - delay 10
+  - actionmessage{m="&7TALISMAN CHARGING &f| &73.0"}
+  - delay 10
+  - actionmessage{m="&7TALISMAN CHARGING &f| &72.5"}
+  - delay 10
+  - actionmessage{m="&7TALISMAN CHARGING &f| &72.0"}
+  - delay 10
+  - actionmessage{m="&7TALISMAN CHARGING &f| &71.5"}
+  - delay 10
+  - actionmessage{m="&7TALISMAN CHARGING &f| &71.0"}
+  - delay 10
+  - actionmessage{m="&7TALISMAN RECHARGED"}
+TalCooldown_Long:
+  Skills:
+  - effect:sound{s=block.enchantment_table.use;v=1;p=0}
+  - effect:sound{s=block.enchantment_table.use;v=1;p=1}
+  - effect:sound{s=block.enchantment_table.use;v=1;p=2}
+  - actionmessage{m="&7TALISMAN ACTIVATED"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &714.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &713.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &712.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &711.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &710.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &79.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &78.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &77.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &76.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &75.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &74.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &73.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &72.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN CHARGING &f| &71.0"}
+  - delay 20
+  - actionmessage{m="&7TALISMAN RECHARGED"}
+Tal_Enrage:
+  Cooldown: 15
+  Skills:
+  - skill{s=TalCooldown_Long} @Self
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=199;overwrite=true}
+Tal_Frenzy:
+  Cooldown: 18
+  Skills:
+  - potion{type=SPEED;duration=200;lvl=9;overwrite=true}
+  - potion{type=FAST_DIGGING;duration=200;lvl=9;overwrite=true}
+Tal_ESCharge: ### Creates 80 ES over 2.5s.
+  Cooldown: 5
+  Skills:
+  - skill{s=TalCooldown} @Self
+  - skill{s=ES_80} @Self
+Tal_RGS: ### Random positive effect for 5.0s.
+  Cooldown: 5
+  Skills:
+  - skill{s=TalCooldown} @Self
+  - skill{s=RandomGoodStuff}
+Tal_Restore: ### Restore 80 HP over 2.5s.
+  Cooldown: 5
+  Skills:
+  - skill{s=TalCooldown} @Self
+  - heal{amount=20}
+  - effect:particlesphere{particle=heart;amount=7;r=1}
+  - delay 5
+  - heal{amount=20}
+  - effect:particlesphere{particle=heart;amount=7;r=1}
+  - delay 5
+  - heal{amount=20}
+  - effect:particlesphere{particle=heart;amount=7;r=1}
+  - delay 5
+  - heal{amount=20}
+  - effect:particlesphere{particle=heart;amount=7;r=1}
+  - delay 5
+  - heal{amount=20}
+  - effect:particlesphere{particle=heart;amount=7;r=1}
+  - delay 5
+  - heal{amount=20}
+  - effect:particlesphere{particle=heart;amount=7;r=1}
+  - delay 5
+  - heal{amount=20}
+  - effect:particlesphere{particle=heart;amount=7;r=1}
+  - delay 5
+  - heal{amount=20}
+  - effect:particlesphere{particle=heart;amount=7;r=1}

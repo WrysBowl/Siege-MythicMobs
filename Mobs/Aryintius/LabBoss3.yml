@@ -1,0 +1,94 @@
+LabBoss3:
+  Type: HUSK
+  Display: '&3&l<&3« &bSoul of the Guardian &3»&3&l>'
+  Health: 1000
+  Damage: 10
+  BossBar:
+    Enabled: true
+    Title: '&3&l<&3« &bSoul of the Guardian &3»&3&l>'
+    Range: 50
+    Color: BLUE
+    Style: SEGMENTED_6
+  Equipment:
+  - BlockHead_8:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - T2_2:0
+  - Shield_Aquir:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Food
+  - Money_Max
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - Exalted
+  - MicroIridescent
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.4
+    FollowRange: 120
+    MaxCombatDistance: 120
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Despawn: false
+  Skills:
+### SPAWN
+  - message{m="<mob.name> &fYou have come far, but this is the end, mortal."} @PlayersInRadius{r=30} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &fStriking back will not save you. Leave this place now!",
+      "<mob.name> &fImpossible! None have fought me and lived to tell the tale!",
+      "<mob.name> &fMortality is inevitable. Accept your fate!";
+      } @PIR{r=50} ~onTimer:300
+  - skill{s=CancelDespawn} @Self ~onTimer:20
+### PHASE 1
+  - skill{s=LB3Knockback} @NearestPlayer{r=50} ~onTimer:120
+  - skill{s=LB3Drag} @NearestPlayer{r=50} ~onTimer:400
+  - skill{s=LB3_Burst} @NearestPlayer{r=50} ~onTimer:100 >50%
+  - skill{s=LB3_Blast} @PIR{r=50} ~onTimer:40 >50%
+### PHASE 2
+  - skill{s=5sInvincible} @Self =50%
+  - skill{s=DamageBuff} @Self =50%
+  - skill{s=SpeedBuff} @Self =50%
+### SUMMONS
+  - skill{s=LB3_Summon} @self =75%
+  - skill{s=LB3_Summon} @self =50%
+  - skill{s=LB3_Summon} @self =25%
+### DEATH
+  - message{m="<mob.name> &fAnd so I perish... be well on your way, for you are more than just a mortal now..."} @PlayersInRadius{r=30} ~onDeath
+  - message{m="&f&l<&f« &6The Architect &f»&f&l> &eAnother disappointment. No matter, you will not survive my strongest creations, for this Labyrinth is my creation alone."} @PlayersInRadius{r=30} ~onDeath
+  - remove @MIR{r=50;t=LabBoss3_Minion_1} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+LabBoss3_Minion_1:
+  Type: BABY_ZOMBIE
+  Display: '&3« &bSoul Totem &3»'
+  Health: 100
+  Damage: 0
+  Equipment:
+  - BlockHead_8:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - Shield_Aquir:0
+  - Shield_Aquir:5
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0
+    FollowRange: 120
+    MaxCombatDistance: 120
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=4} @Self ~onSpawn
+  - potion{type=SLOW;duration=999999;level=4} @Self ~onSpawn
+  - skill{s=LB3_Doom} @NearestPlayer{r=50} ~onTimer:150

@@ -1,0 +1,23 @@
+BR_SummonLoot: ### Summons loot explosion.
+  Skills:
+  - delay 100
+  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - delay 5
+  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - delay 5
+  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - delay 5
+  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - delay 5
+  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+BR_ParExp: ### Particle explosion/sound for loot death.
+  Skills:
+  - effect:particlesphere{particle=reddust;amount=100;r=5} @self
+  - effect:particlesphere{particle=witchMagic;amount=100;r=5} @self
+  - effect:particlesphere{particle=magicCrit;amount=100;r=5} @self
+  - effect:sound{s=entity.firework.blast_far;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.firework.blast_far;v=1;p=1} @PIR{r=25}
+BR_KillSelf: ### Loot explosion mob kills self after 1/2 a second.
+  Skills:
+  - delay 10
+  - damage{a=10000}

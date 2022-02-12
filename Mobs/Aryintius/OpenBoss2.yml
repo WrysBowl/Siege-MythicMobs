@@ -1,0 +1,80 @@
+OpenBoss2: ### Unused boss.
+  Type: HUSK
+  Display: '&8&l<&8« &cIriik, the Devourer &8»&8&l>'
+  Health: 100000
+  Damage: 1250
+  BossBar:
+    Enabled: true
+    Title: '&8&l<&8« &cIriik, the Devourer &8»&8&l>'
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_12
+  Equipment:
+  - IHelm:4
+  - IChest:3
+  - ILegs:2
+  - IBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Food
+  - Money_Boss
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - Exalted
+  - Corrupted
+  - Mythic
+  - CFrags_3
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    KnockbackResistance: 1
+    FollowRange: 120
+    MaxCombatDistance: 120
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+### SPAWN/INITIALIZATION
+### PHASE 1
+### DEATH
+  - message{cooldown=20;m="<mob.name> &eI... am free..."} @PlayersInRadius{r=30} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PlayersInRadius{r=30} ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @PlayersInRadius{r=30} ~onDeath
+##
+## SUMMONS AND STUFF
+##
+OB2_Explode: ### EXPLOSION POINTER
+  Type: BAT
+  Display: ''
+  Health: 1000
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=4} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=999999;level=1} @Self ~onSpawn
+  - remove{delay=20} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true

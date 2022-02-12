@@ -1,0 +1,93 @@
+### COMPOSITE SKILLS
+SkullBarrage:
+  Skills:
+  - shootskull{y=1;v=4} @target
+  - delay 10
+  - shootskull{y=1;v=4} @target
+  - delay 10
+  - shootskull{y=1;v=4} @target
+VoidStorm:
+  Skills:
+  - message{cooldown=30;m="<mob.name> &cBehold, the true power of the Void!"} @PIR{r=50}
+  - skill{s=SHomer} @PIR{r=100}
+  - delay 2
+  - skill{s=SHomer} @PIR{r=100}
+  - delay 2
+  - skill{s=SHomer} @PIR{r=100}
+  - delay 2
+IceStorm2:
+  Skills:
+  - skill{s=IceMissile} @PIR{r=50}
+  - delay 2
+  - skill{s=IceMissile} @PIR{r=50}
+  - delay 2
+  - skill{s=IceMissile} @PIR{r=50}
+  - delay 2
+VoidBlast:
+  Skills:
+  - skill{s=SHomer} @PIR{r=30}
+  - delay 20
+  - skill{s=SHomer} @PIR{r=30}
+  - delay 20
+  - skill{s=SHomer} @PIR{r=30}
+  - delay 20
+IceStorm:
+  Skills:
+  - skill{s=IceMissile} @PIR{r=50}
+  - delay 10
+  - skill{s=IceMissile} @PIR{r=50}
+  - delay 10
+  - skill{s=IceMissile} @PIR{r=50}
+  - delay 10
+ShadowStorm:
+  Skills:
+  - skill{s=BlackFire} @PIR{r=10}
+  - delay 10
+  - skill{s=BlackFire} @PIR{r=10}
+  - delay 10
+  - skill{s=BlackFire} @PIR{r=10}
+  - delay 10
+FireStorm:
+  Skills:
+  - skill{s=Homer} @PIR{r=50}
+  - delay 2
+  - skill{s=Homer} @PIR{r=50}
+  - delay 2
+  - skill{s=Homer} @PIR{r=50}
+  - delay 10
+  - skill{s=Homer} @PIR{r=50}
+  - delay 2
+  - skill{s=Homer} @PIR{r=50}
+  - delay 2
+  - skill{s=Homer} @PIR{r=50}
+  - delay 10
+  - skill{s=Homer} @PIR{r=50}
+  - delay 2
+  - skill{s=Homer} @PIR{r=50}
+  - delay 2
+  - skill{s=Homer} @PIR{r=50}
+  - delay 10
+SuperEarthStrike:
+  Skills:
+  - skill{s=EarthStrike} @PIR{r=20}
+  - delay 10
+  - skill{s=EarthStrike} @PIR{r=20}
+  - delay 10
+  - skill{s=EarthStrike} @PIR{r=20}
+  - delay 10
+SuperToxicBlast:
+  Skills:
+  - skill{s=ToxicBlast} @PIR{r=20}
+  - delay 10
+  - skill{s=ToxicBlast} @PIR{r=20}
+  - delay 10
+  - skill{s=ToxicBlast} @PIR{r=20}
+  - delay 10
+A4Storm:
+  Skills:
+  - skill{s=VoidMissile2} @PIR{r=15}
+  - delay 10
+  - skill{s=VoidMissile2} @PIR{r=15}
+  - delay 10
+  - skill{s=VoidMissile2} @PIR{r=15}
+  - delay 10

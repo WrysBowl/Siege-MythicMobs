@@ -1,0 +1,296 @@
+### EXALTED ITEMS (CS ONLY) ------------------------------------
+### RANGED ITEMS -----------------------------------------------
+Bow3:
+  Id: 261
+  Display: "&d&oFrostfall Bow&7&7 «1»"
+  Lore:
+  - "&7Power C"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c180.0❤x3"
+  - "&7Cooldown: &f2 Seconds"
+  - "&0 "
+  - "&d★ &7&oFully-drawn shots cast a"
+  - "&7&o  devastating ability!"
+  - "&d★ &7&oAbility &b&oFreezes &7&otargets for 3.5s."
+  - "&0 "
+  - "&7“&dCrafted with the fleeting essence"
+  - "&d of a harsh winter, this bow stirs"
+  - "&d with powerful magics...&7”"
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:100
+  - ARROW_INFINITE:1
+  - DURABILITY:9999
+  - MENDING:10
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+Laser2:
+  Id: 379
+  Display: "&d&oLaser Blaster&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&7Left-click to scope"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fShotgun"
+  - "&7Ammo: &fPrismarine Crystal"
+  - "&7Speed: &fFast"
+  - "&7Damage: &c40.0❤x4"
+  - "&0 "
+  - "&d★ &7&o4x damage on headshot."
+  - "&0 "
+  - "&7“&dPEW! PEW! PEW!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Rocket3:
+  Id: 355
+  Data: 2
+  Display: "&d&oThe Obliterator&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fLauncher"
+  - "&7Ammo: &fFire Charge"
+  - "&7Radius: &f3 Blocks"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c0.0-450.0❤"
+  - "&0 "
+  - "&7“&dNo body? No problem!&7”"
+Scattergun4:
+  Id: 417
+  Display: "&d&oIridium Scattergun&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fScattergun"
+  - "&7Ammo: &fIron Ingot"
+  - "&7Speed: &fFast"
+  - "&7Damage: &c40.0❤x7"
+  - "&0 "
+  - "&d★ &7&oCrouching focuses shots."
+  - "&d★ &7&oCrouching reduces recoil."
+  - "&0 "
+  - "&7“&dA powerful weapon forged"
+  - "&d from a hefty material.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+BurstRifle2:
+  Id: 417
+  Display: "&d&oGreat War Repeater&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fRifle"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c35.0❤"
+  - "&0 "
+  - "&d★ &7&oBurst fire (3 shots)."
+  - "&d★ &7&oCrouching reduces spread."
+  - "&0 "
+  - "&7“&dA well-worn repeating rifle"
+  - "&d from an era long past.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Shotgun4:
+  Id: 417
+  Display: "&d&oThe Heartless Matador&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fShotgun"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fAverage"
+  - "&7Damage: &c40.0❤x9"
+  - "&0 "
+  - "&d★ &7&oShots may ignite enemies."
+  - "&0 "
+  - "&7“&dA powerful, double-barreled"
+  - "&d shotgun once used to stop"
+  - "&d rampaging bulls.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+SMG3:
+  Id: 355
+  Data: 6
+  Display: "&d&oThe Syringe&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fSMG"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c22.5❤"
+  - "&0 "
+  - "&d★ &7&oOn hit, gain &a&oRegen. IV"
+  - "&7&o  for up to 5.0s."
+  - "&0 "
+  - "&7“&dMedic! Medic! Medic!&7”"
+Sniper3:
+  Id: 417
+  Display: "&d&oThe Guillotine&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fSniper"
+  - "&7Ammo: &fBlaze Rod"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c40.0❤"
+  - "&0 "
+  - "&d★ &7&o9x damage on headshot."
+  - "&0 "
+  - "&7“&dOff with their heads!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+### MAGIC ITEMS ------------------------------------------------
+Frost2:
+  Id: 403
+  Display: "&d&oIce Blast&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Charge: &fSlow"
+  - "&7Damage: &c75.0❤x3"
+  - "&0 "
+  - "&d★ &b&oFreezes &7&oenemies for"
+  - "&7&o  up to 3.0s."
+  - "&0 "
+  - "&7“&dThis powerful spell was"
+  - "&d used to stop Rith from"
+  - "&d sieging Vyrdano.&7”"
+Frost3:
+  Id: 403
+  Display: "&d&oAvalanche&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c35.0❤x5"
+  - "&0 "
+  - "&d★ &b&oFreezes &7&oenemies for 3.0s."
+  - "&d★ &7&o25% critical strike chance."
+  - "&d★ &7&o3.0x damage on critical hit."
+  - "&0 "
+  - "&7“&dThe endless winds of frost"
+  - "&d strike thee, and deep below,"
+  - "&d death smiles with glee.&7”"
+Curse3:
+  Id: 433
+  Display: "&d&oShadow Crawler&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Slow"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c30.0❤x8"
+  - "&0 "
+  - "&7“&dThis strange orb glows"
+  - "&d with magical energy.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Fire3:
+  Id: 369
+  Display: "&d&oMeteor Staff&7&7"
+  Lore:
+  - "&7Left-click to cast"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c40.0❤x6"
+  - "&0 "
+  - "&7“&dLet death rain from above!&7”"
+  Enchantments:
+  - ARROW_FIRE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Earth3:
+  Id: 231
+  Display: "&d&oBoulder&7&7 «0»"
+  Lore:
+  - "&7Left-click to cast"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Damage: &c150.0❤"
+  - "&0 "
+  - "&d★ &7&oBolts bounce up to 3 times."
+  - "&0 "
+  - "&7“&dThe boulder feels conflicted"
+  - "&d about fighting a young, blind"
+  - "&d girl.&7”"
+Water3:
+  Id: 403
+  Display: "&d&oCrashing Waves&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fAverage"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c25.0❤x8"
+  - "&0 "
+  - "&d★ &7&oInflicts &8&oBlindness &7&oon targets"
+  - "&7&o  for up to 2.0s."
+  - "&0 "
+  - "&7“&dThis massive tome radiates with"
+  - "&d the essence of the ocean.&7”"

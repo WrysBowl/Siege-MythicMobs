@@ -1,0 +1,153 @@
+### LORD OF LIGHTNING ITEMS
+ShockSword:
+  Id: 276
+  Display: "&6&oThunderbolt"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &3✷"
+  - "&0 "
+  - "&6★ &a&o+75% &7&oattack speed."
+  - "&6★ &7&o50% chance to &3&oShock &7&oenemies"
+  - "&7&o  for up to 5.0s."
+  - "&6★ &3&oShocked &7&oenemies do not gain"
+  - "&7&o  movement speed."
+  - "&0 "
+  - "&7“&6A blade forged from the fires"
+  - "&6 of lightning, still crackling with"
+  - "&6 electrical energy.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Enchantments:
+  - DAMAGE_ALL:500
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Shock_NoSpeed} @target ~onAttack 0.5
+  - skill{s=CancelSpeedX} @target ~onAttack
+ShockRifle:
+  Id: 419
+  Display: "&6&oStratocumulus&7&7 ▪ «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &3✷"
+  - "&0 "
+  - "&7Type: &fRifle"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c350.0❤x5"
+  - "&0 "
+  - "&6★ &7&oBurst fire (3 shots)."
+  - "&6★ &7&oShots have no recoil."
+  - "&6★ &7&oShots Inflict &3&oShock &7&oon enemies"
+  - "&7&o  for up to 5.0s."
+  - "&0 "
+  - "&7“&6The birth of a storm begins far"
+  - "&6 above--deep inside the clouds.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+ShockMagic:
+  Id: 403
+  Display: "&6&oOvercharge&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &3✷"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Charge: &fSlowest"
+  - "&7Damage: &c2000.0❤x2"
+  - "&0 "
+  - "&6★ &7&o50% critical strike chance."
+  - "&6★ &7&o50.0x damage on critical hit."
+  - "&0 "
+  - "&7“&6Worshipped by the ancients, none"
+  - "&6 dared to challenge the power of"
+  - "&6 the nameless titan.&7”"
+  Hide:
+  - ATTRIBUTES
+ShockHelm:
+  Id: 298
+  Display: "&6&oThe Stormcaller"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &3✷"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&o35% chance to &3&oShock &7&oenemies"
+  - "&7&o  for up to 5.0s."
+  - "&6★ &7&oAdds &c&o350.0-500.0❤ &7&odamage to"
+  - "&7&o  all attacks against &3&oShocked"
+  - "&7&o  enemies."
+  # - "&6★ &7&oEffect: 20% chance to &3&oShock"
+  # - "&7&o  enemies you hit for 5.0s with"
+  # - "&7&o  ranged/magic attacks."
+  - "&0 "
+  - "&7“&6In channeling your inner self,"
+  - "&6 you shall create the deadliest"
+  - "&6 of fires--lightning.&7”"
+  Options:
+    Unbreakable: true
+    Color: 50,100,255
+  Attributes:
+    Head:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=InflictShock} @target ~onAttack 0.35
+  - skill{s=InflictShock} @target ~onBowHit 0.35
+  - skill{s=Shock_350-500} @target ~onAttack
+  - skill{s=Shock_350-500} @target ~onBowHit
+ShockLegs:
+  Id: 300
+  Display: "&6&oLightning Legs"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &3✷"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o250.0-400.0❤ &7&odamage to"
+  - "&7&o  all attacks against &3&oShocked"
+  - "&7&o  enemies."
+  - "&6★ &7&oEnemies within 8 blocks cannot"
+  - "&7&o  be affected by &a&oSpeed&7&o."
+  - "&0 "
+  - "&7“&6There is nothing more whimsical"
+  - "&6 than a jolt of electricity.&7”"
+  Options:
+    Unbreakable: true
+    Color: 50,100,255
+  Attributes:
+    Legs:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Skills:
+  # - skill{s=ShockHeal} @target ~onAttack
+  - skill{s=CancelSpeed} @EntitiesInRadius{r=8;ignore=players} ~onTimer:1
+  - skill{s=Shock_250-400} @target ~onAttack
+  - skill{s=Shock_250-400} @target ~onBowHit

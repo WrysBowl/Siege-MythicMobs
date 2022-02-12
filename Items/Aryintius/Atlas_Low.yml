@@ -1,0 +1,572 @@
+### ATLAS UNIQUES (Low Tier) -----------------------------------
+Delusion:
+  Id: 261
+  Display: "&6&oDelusion&7&7"
+  Lore:
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c175.0❤x4"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&6★ &7&oFully-draw shots to cast ability."
+  - "&6★ &7&oInflicts &c&o150.0❤ &2&oToxin &7&odamage over"
+  - "&7&o  a period of 1.5s."
+  - "&6★ &7&oInflicts &c&o30.0❤ &4&oBleed &7&odamage over"
+  - "&7&o  a period of 1.5s."
+  - "&0 "
+  - "&7“&6A twisted mind fathers the darkest"
+  - "&6 of ambitions--conjuring unnatural"
+  - "&6 magics to defy even death.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Poison_150X} @target ~onBowHit
+  - skill{s=Bleed_30X} @target ~onBowHit
+HakgonChest:
+  Id: 299
+  Display: "&6&oHallucination"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&o10% chance for your attacks"
+  - "&7&o  to inflict &c&o60.0❤ &2&oToxin &7&odamage"
+  - "&7&o  over a period of 1.5s."
+  - "&6★ &7&o10% chance for your attacks"
+  - "&7&o  to inflict &c&o15.0❤ &4&oBleed &7&odamage"
+  - "&7&o  over a period of 1.5s."
+  - "&0 "
+  - "&7“&6There is no turning back once"
+  - "&6 a dream has corrupted into a"
+  - "&6 nightmare.&7”"
+  Options:
+    Color: 129,255,20
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=Poison_60} @target ~onBowHit 0.08
+  - skill{s=Poison_60} @target ~onAttack 0.12
+  - skill{s=Bleed_15} @target ~onBowHit 0.08
+  - skill{s=Bleed_15} @target ~onAttack 0.12
+HakgonBoots:
+  Id: 301
+  Display: "&6&oHakgon's Reverie"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &a&o+50% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore &c&o30.0❤ &7&oover a period"
+  - "&7&o  of 3.0s while you are affected"
+  - "&7&o  by either &8&oNausea &7&oor &2&oPoison&7&o."
+  - "&0 "
+  - "&7“&6Hakgon sought to find the Titans"
+  - "&6 and free them by sealing himself"
+  - "&6 within the realm of dreams.&7”"
+  Options:
+    Unbreakable: true
+    Color: 129,255,20
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      Health: 30.0
+      MovementSpeed: 0.5
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=RestoreWhilePoison} @Self ~onTimer:20
+  - skill{s=RestoreWhileNausea} @Self ~onTimer:20
+### WITCH OF THE WILDS -----------------------------------------
+WitchMagic:
+  Id: 403
+  Display: "&6&oWitch's Hex&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0"
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fAverage"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c70.0❤x16"
+  - "&0 "
+  - "&6★ &7&oSneaking increases spread."
+  - "&0 "
+  - "&7“&6This spell was discovered by"
+  - "&6 witches living deep within the"
+  - "&6 mushroom mountains.&7”"
+WitchHelm:
+  Id: 298
+  Display: "&6&oShroomhide Hat"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o25.0-75.0❤ &7&odamage to all"
+  - "&7&o  ranged/magic attacks."
+  - "&6★ &7&oAdds &c&o5.0-15.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all ranged/magic attacks."
+  - "&0 "
+  - "&7“&6Ancient mushrooms often bloomed"
+  - "&6 with incredible amounts of magical"
+  - "&6 energy.&7”"
+  Options:
+    Color: 128,60,60
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Chaos_5-15} @target ~onBowHit
+  - skill{s=Phys_25-75} @target ~onBowHit
+WitchLegs:
+  Id: 300
+  Display: "&6&oTattered Robe"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &a&o+25% &7&omovement speed."
+  - "&6★ &7&oSet your gold hearts to &e&o20.0❤"
+  - "&7&o  for 10.0s once every second."
+  - "&0 "
+  - "&7“&6Despite its worn appearance, a"
+  - "&6 heavy field of energy projects"
+  - "&6 from this robe.&7”"
+  Options:
+    Color: 128,60,60
+    Unbreakable: true
+  Attributes:
+    Legs:
+      MovementSpeed: 0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  - PROTECTION_EXPLOSIONS:20
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=9;overwrite=true} @Self ~onTimer:20
+### WEBMOTHER MAVLAK -------------------------------------------
+WoeFang:
+  Id: 288
+  Display: "&6&oWoefang&7&7"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&7Type: &fMelee"
+  - "&7Ability: &c120.0❤x8"
+  - "&7Cooldown: &f3.0 Seconds"
+  - "&0 "
+  - "&6★ &7&oRight-click to use ability."
+  - "&6★ &7&oAbility inflicts &c&o25.0-75.0❤ &2&oToxin"
+  - "&7&o  damage over a period of 1.5s."
+  - "&0 "
+  - "&7“&6Venom is a merciful tool, soothing"
+  - "&6 prey's journey from the living to"
+  - "&6 the dead.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=PoisonRNG_1} @target ~onBowHit
+SpiderHelm:
+  Id: 314
+  Display: "&6&oEight-Eyed Crown"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oYou are immune to &8&oNausea&7&o."
+  - "&6★ &7&oYou are immune to &8&oBlindness&7&o."
+  - "&6★ &7&oGain &a&oNight Vision &7&ofor up to 15.0s"
+  - "&7&o  whenever you hit an enemy."
+  - "&0 "
+  - "&7“&6Vision is the key to a successful"
+  - "&6 and prosperous hunt.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=CancelNausea} @Self ~onTimer:1
+  - skill{s=CancelBlindness} @Self ~onTimer:1
+  - potion{type=NIGHT_VISION;duration=300;lvl=0;overwrite=true} @Self ~onAttack
+  - potion{type=NIGHT_VISION;duration=300;lvl=0;overwrite=true} @Self ~onBowHit
+SpiderChest:
+  Id: 299
+  Display: "&6&oSpidersilk Vest"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oRestore &c&o5.0-10.0❤ &7&owhenever"
+  - "&7&o  you take damage."
+  - "&6★ &7&o10% chance for all your attacks"
+  - "&7&o  to inflict &8&oSlowness IV &7&oon targets"
+  - "&7&o  for up to 5.0s."
+  - "&0 "
+  - "&7“&6Tread carefully in the spider's den,"
+  - "&6 for it is easy to become ensnared in"
+  - "&6 their web of shadows.&7”"
+  Options:
+    Color: 225,225,225
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=Heal_5-10} @Self ~onDamaged
+  - potion{type=SLOW;duration=100;lvl=3;overwrite=true} @target ~onAttack 0.12
+  - potion{type=SLOW;duration=100;lvl=3;overwrite=true} @target ~onBowHit 0.08
+### NORYK THE UNBOUND ------------------------------------------
+LibraryMagic:
+  Id: 369
+  Display: "&6&oSoul Cipher&7&7 «0»"
+  Lore:
+  - "&7Left-click to cast"
+  - "&0"
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c120.0❤x3"
+  - "&0 "
+  - "&6★ &7&oBurst fire (3 charges)."
+  - "&6★ &7&o25% critical strike chance."
+  - "&6★ &7&o4.0x damage on critical hit."
+  - "&0 "
+  - "&7“&6Noryk had studied numerous"
+  - "&6 forbidden magics in order to"
+  - "&6 free the Titans.&7”"
+  Enchantments:
+  - ARROW_INFINITE:1
+  Hide:
+  - ENCHANTS
+LibraryLegs:
+  Id: 300
+  Display: "&6&oScholar's Robes"
+  Lore:
+  - "&7Blast Protection XV"
+  - "&7Projectile Protection V"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &8&o-25% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o50.0-100.0❤ &7&odamage to all"
+  - "&7&o  ranged/magic attacks."
+  - "&0 "
+  - "&7“&6This heavy cloak was worn by the"
+  - "&6 inhabitants of the grand archives,"
+  - "&6 seeking to end curiosity.&7”"
+  Options:
+    Color: 130,130,255
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 30.0
+      MovementSpeed: -0.25
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:5
+  - PROTECTION_EXPLOSIONS:15
+  Skills:
+  - skill{s=Phys_50-100} @target ~onBowHit
+LibraryBoots:
+  Id: 309
+  Display: "&6&oNoryk's Pace"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &a&o+30% &7&omovement speed."
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&o50% chance to add &c&o15.0❤ &5&oChaos"
+  - "&7&o  damage to ranged/magic attacks."
+  - "&6★ &7&o25% chance to add &c&o30.0❤ &5&oChaos"
+  - "&7&o  damage to ranged/magic attacks."
+  - "&0 "
+  - "&7“&6Time did not pass in the archives,"
+  - "&6 eventually causing Noryk's mind to"
+  - "&6 be consumed by madness.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      Health: 30.0
+      MovementSpeed: 0.3
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=Chaos_15} @target ~onBowHit 0.5
+  - skill{s=Chaos_30} @target ~onBowHit 0.25
+### THE SAND SPIRIT --------------------------------------------
+ScattergunX:
+  Id: 417
+  Display: "&6&oThe Scorpion&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&7Type: &fScattergun"
+  - "&7Ammo: &fIron Ingot"
+  - "&7Speed: &fFast"
+  - "&7Damage: &c150.0❤x18"
+  - "&0 "
+  - "&6★ &7&oCrouching focuses shots."
+  - "&6★ &7&oCrouching reduces recoil."
+  - "&0 "
+  - "&7“&6Aryntius was once a great desert,"
+  - "&6 formed from the ashes of the war"
+  - "&6 between divines.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+SandHelm:
+  Id: 302
+  Display: "&6&oDunecaller"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o10.0-25.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&6★ &7&oAdds &c&o5.0-15.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all ranged/magic attacks."
+  - "&0 "
+  - "&7“&6The destruction wrought created"
+  - "&6 towering monsters that devoured"
+  - "&6 all life in sight.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Chaos_10-25} @target ~onAttack
+  - skill{s=Chaos_5-15} @target ~onBowHit
+SandBoots:
+  Id: 301
+  Display: "&6&oSandstrider"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &a&o+80% &7&omovement speed."
+  - "&6★ &7&o20% chance to refresh your"
+  - "&7&o  gold hearts when you attack."
+  - "&6★ &7&oYou cannot be &8&oSlowed&7&o, &b&oChilled&7&o,"
+  - "&7&o  or &b&oFrozen &7&oby enemy attacks."
+  - "&0 "
+  - "&7“&6Though they may no longer walk"
+  - "&6 among mortals, the great beasts"
+  - "&6 of the desert still live on.&7”"
+  Options:
+    Unbreakable: true
+    Color: 191,191,95
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      MovementSpeed: 0.8
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=RestoreEqualES} @Self ~onAttack 0.25
+  - skill{s=RestoreEqualES} @Self ~onBowHit 0.15
+  - skill{s=CancelSlowness} @Self ~onTimer:1
+  - skill{s=CancelFatigue} @Self ~onTimer:1
+### BRAHMK THE UNHINGED ----------------------------------------
+BrahmkSword:
+  Id: 283
+  Display: "&6&oBrahmk's Fury"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &a&o+75% &7&oattack speed."
+  - "&6★ &7&oAdds &c&o50.0❤ &7&odamage to your melee"
+  - "&7&o  attacks for every level of &a&oHaste&7&o."
+  - "&7&o  (Up to 500.0 damage at Haste X)"
+  - "&6★ &7&oAdds &c&o50.0❤ &7&odamage to your melee"
+  - "&7&o  attacks for every level of &a&oSpeed&7&o."
+  - "&7&o  (Up to 500.0 damage at Speed X)"
+  - "&0 "
+  - "&7“&6Trapped within the same landscape"
+  - "&6 for centuries, Brahmk's soul faded"
+  - "&6 until only his rage remained.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=PhysFromSpeed} @target ~onAttack
+  - skill{s=PhysFromHaste} @target ~onAttack
+BrahmkChest:
+  Id: 307
+  Display: "&6&oConniptions"
+  Lore:
+  - "&7Protection XV"
+  - "&7Projectile Protection XV"
+  - "&7Blast Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oAdds &c&o150.0-300.0❤ &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&6★ &7&oGain &a&oHaste &7&oequal to your"
+  - "&7&o  level of &a&oSpeed&7&o. (E.g. Haste"
+  - "&7&o  IV from Speed IV)."
+  - "&0 "
+  - "&7“&6Hawkwood was right.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:15
+  - PROTECTION_EXPLOSIONS:15
+  - PROTECTION_ENVIRONMENTAL:15
+  Skills:
+  - skill{s=Phys_150-300} @target ~onAttack
+  - skill{s=HasteEqual2Speed} @Self ~onTimer:20
+BrahmkBoots:
+  Id: 304
+  Display: "&6&oThornmail"
+  Lore:
+  - "&7Thorns M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &a✦"
+  - "&0 "
+  - "&6★ &8&o-50% &7&omovement speed."
+  - "&6★ &c&o+25.0❤ &7&owhile equipped."
+  - "&0 "
+  - "&7“&6Pain is one of the most"
+  - "&6 excellent teachers.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 50.0
+      MovementSpeed: -0.5
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - THORNS:1000

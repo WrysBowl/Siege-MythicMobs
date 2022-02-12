@@ -1,0 +1,185 @@
+### WORTHLESS ITEMS
+Poop:
+  Id: 351
+  Data: 3
+  Display: "&8Poop"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&7“&8It looks delicious!&7”"
+### ACTUAL GARBAGE LOOT (WEAPONS)
+T7_1:
+  Id: 267
+  Display: "&8Broken Sword"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&8★ &c-50% &7attack speed."
+  - "&0 "
+  - "&7“&8An old sword that lost"
+  - "&8 its edge long ago.&7”"
+  Enchantments:
+  - DAMAGE_ALL:2
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.85
+  Hide:
+  - ATTRIBUTES
+T7_2:
+  Id: 280
+  Display: "&8Ordinary Staff"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&7“&8A wooden staff that"
+  - "&8 lacks any magical"
+  - "&8 properties.&7”"
+  Enchantments:
+  - KNOCKBACK:1
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.85
+  Hide:
+  - ATTRIBUTES
+T7_3:
+  Id: 271
+  Display: "&8Driftwood Axe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&8★ &c-10% &7attack speed."
+  - "&8★ &c-10% &7movement speed."
+  - "&0 "
+  - "&7“&8It smells like a corpse.&7”"
+  Enchantments:
+  - DAMAGE_ALL:2
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.85
+      MovementSPeed: -0.1
+  Hide:
+  - ATTRIBUTES
+T7_4:
+  Id: 261
+  Display: "&8Broken Bow"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&8★ &c-20% &7movement speed."
+  - "&0 "
+  - "&7“&8Attempting to put this back"
+  - "&8 together lowers your focus"
+  - "&8 on the battle.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:1
+  Attributes:
+    MainHand:
+      MovementSPeed: -0.2
+  Hide:
+  - ATTRIBUTES
+T7_5:
+  Id: 346
+  Display: "&8Broken Fishing Rod"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&8★ &c-2.0❤&7 while equipped."
+  - "&0 "
+  - "&7“&8It can't even catch shrimp.&7”"
+  Enchantments:
+  - LURE:1
+  Attributes:
+    MainHand:
+      Health: -4.0
+  Hide:
+  - ATTRIBUTES
+### ACTUAL GARBAGE LOOT (ARMOR)
+T7_6:
+  Id: 302
+  Display: "&8Decrepit Helm"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&8★ &c-10%&7 movement speed."
+  - "&8★ &c-1.0❤&7 while equipped."
+  - "&0 "
+  - "&7“&8There is nothing remotely"
+  - "&8 redeemable about this filthy"
+  - "&8 old helmet.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
+  Attributes:
+    Head:
+      MovementSpeed: -0.1
+      Health: -2.0
+  Hide:
+  - ATTRIBUTES
+T7_7:
+  Id: 315
+  Display: "&8Midas' Touch"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&8★ &c-50%&7 movement speed."
+  - "&0 "
+  - "&7“&8This armor makes you"
+  - "&8 gold... forever...&7”"
+  Enchantments:
+  - BINDING_CURSE:1
+  Attributes:
+    Chest:
+      MovementSpeed: -0.5
+  Hide:
+  - ATTRIBUTES
+T7_8:
+  Id: 300
+  Display: "&8Vanishing Cloak"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&7“&8This cloak will quickly"
+  - "&8 disappear... from you...&7”"
+  Enchantments:
+  - VANISHING_CURSE:1
+  Hide:
+  - ATTRIBUTES
+### ITEMS WITH DEBUFFS
+OldHoe:
+  Id: 292
+  Display: "&8Old Hoe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&7Effect: &cFatigue V"
+  - "&0 "
+  - "&7“&8How disgusting!&7”"
+  Enchantments:
+  - DURABILITY:10
+  Hide:
+  - ATTRIBUTES
+BluntSword:
+  Id: 267
+  Display: "&8Blunt Sword"
+  Lore:
+  - "&0 "
+  - "&7Tier: &8Worthless"
+  - "&0 "
+  - "&7Effect: &cWeakness X"
+  - "&0 "
+  - "&7“&8Why would you even"
+  - "&8 make this?&7”"
+  Enchantments:
+  - DURABILITY:10
+  - MENDING:10
+  Hide:
+  - ATTRIBUTES

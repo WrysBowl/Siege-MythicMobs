@@ -1,0 +1,39 @@
+### SUPPORTER UNIQUES/WHATEVERS
+ShrubSpell:
+  Id: 409
+  Display: "&b&oThe Flood&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fInsanely Fast"
+  - "&7Damage: &c250.0❤"
+  - "&0 "
+  - "&b★ &7&oDeals &c&o30.0❤ &7&oextra &5&oChaos &7&odamage"
+  - "&7&o  while you have &a&oWaterbreathing&7&o."
+  - "&b★ &7&oDeals &c&o3.0❤ &7&oextra &5&oChaos &7&odamage for"
+  - "&7&o  every level of &a&oRegeneration&7&o. (Up to"
+  - "&7&o  30.0❤ chaos damage at Regen. X)."
+  # - "&b★ &7&o25% chance to &3&oShock &7&oand &b&oFreeze"
+  # - "&7&o  enemies for up to 5.0s."
+  # - "&b★ &7&oAttacks from this weapon can pass"
+  # - "&7&o  through walls."
+  # - "&b★ &7&oGains damage/status bonuses from"
+  # - "&7&o  melee items/accessories."
+  # - "&b★ &c&oRanged and magic bonuses have no"
+  # - "&c&o  effect on this weapon."
+  - "&0 "
+  - "&7“&bNeed an ark? I Noah guy.&7”"
+  # - "&7“&bYour scientists were so preoccupied"
+  # - "&b with whether or not they could, they"
+  # - "&b didn’t stop to think if they should.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=ChaosRegen} @Self ~onBowHit
+  - skill{s=ExtraWaterDamage} @Self ~onBowHit

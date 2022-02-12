@@ -1,0 +1,251 @@
+NovaBlade_Skill: ### Nova Blade's Totem Skill
+  Cooldown: 1
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{oT=NovaBlade_Tick;oH=NovaBlade_Hit;hO=0;vO=0;v=8;i=1;hR=1.0;vR=1.0;hp=false;hnp=true}
+  - effect:sound{s=entity.ghast.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=0.2;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=0.2;p=1}
+NovaBlade_Tick:
+  Skills:
+  - effect:particles{p=flame;amount=1;speed=0;hS=0.1;vS=0.1} @origin
+NovaBlade_Hit:
+  Skills:
+  - damage{amount=200;ia=true;pi=true;pk=true}
+Bladestorm_Skill: ### Blade storm
+  Cooldown: 2
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - delay 5
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=330;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=345;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=0;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=15;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=30;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - effect:sound{s=entity.player.attack.sweep;v=1;p=1} @Self
+  - delay 5
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=330;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=345;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=0;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=15;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=30;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - effect:sound{s=entity.player.attack.sweep;v=1;p=1} @Self
+  - delay 5
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=330;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=345;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=0;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=15;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=30;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - effect:sound{s=entity.player.attack.sweep;v=1;p=1} @Self
+  - delay 5
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=330;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=345;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=0;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=15;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - projectile{oT=Bladestorm_Tick;oH=Bladestorm_Hit;hO=30;vO=0;v=20;i=1;hR=1.25;vR=1.0;hp=false;hnp=true}
+  - effect:sound{s=entity.player.attack.sweep;v=1;p=1} @Self
+Bladestorm_Tick:
+  Skills:
+  - effect:particles{p=sweepAttack;amount=1;speed=0;hS=0.1;vS=0.1} @origin
+Bladestorm_Hit:
+  Skills:
+  - damage{amount=150;ia=true;pi=true;pk=true}
+RestoreNearby: ### Restores full health in radius
+  Skills:
+  - effect:particlering{particle=flame;radius=5;points=25;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=flame;radius=3;points=16;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=lava;radius=1;points=4;amount=1;hS=1;vS=0}
+  - heal{amount=2000} @PIR{r=5}
+InvincibleBuff: ### Invincibility for 5.0s.
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.1;p=0}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=0.1;p=2}
+  - effect:sound{s=entity.wither.death;v=0.2;p=1}
+FullRestore:
+  Skills:
+  - heal{a=1000}
+  - delay 5
+  - heal{a=1000}
+RestoreNearbySkill:
+  Skills:
+  - effect:sound{s=block.portal.travel;v=0.1;p=2} @PIR{r=8}
+  - skill{s=RestoreNearby}
+  - delay 10
+  - skill{s=RestoreNearby}
+  - delay 10
+  - skill{s=RestoreNearby}
+  - delay 10
+  - skill{s=RestoreNearby}
+  - delay 10
+  - skill{s=RestoreNearby}
+  - delay 10
+  - skill{s=RestoreNearby}
+  - delay 10
+  - skill{s=RestoreNearby}
+  - delay 10
+  - skill{s=RestoreNearby}
+RestoreWhilePoison:
+  Conditions:
+  - haspotioneffect{t=POISON} true
+  Skills:
+  - skill{s=Heal_30x3}
+RestoreWhileNausea:
+  Conditions:
+  - haspotioneffect{t=CONFUSION} true
+  Skills:
+  - skill{s=Heal_30x3}
+Conquest_1:
+  TargetConditions:
+  - haspotioneffect{t=WEAKNESS} true
+  Skills:
+  - skill{s=Phys_250-1000} @target
+Conquest_2:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE} true
+  Skills:
+  - skill{s=Phys_250-1000}
+WeakDamage:
+  TargetConditions:
+  - haspotioneffect{t=WEAKNESS} true
+  Skills:
+  - skill{s=Phys_1250-2000} @target
+UnluckDamage:
+  TargetConditions:
+  - haspotioneffect{t=UNLUCK} true
+  Skills:
+  - skill{s=Phys_250-400} @target
+UnluckDamage2:
+  TargetConditions:
+  - haspotioneffect{t=UNLUCK} true
+  Skills:
+  - skill{s=Phys_450-600} @target
+UnluckDamage3:
+  TargetConditions:
+  - haspotioneffect{t=UNLUCK} true
+  Skills:
+  - skill{s=Phys_500-750} @target
+UnluckDamage4:
+  TargetConditions:
+  - haspotioneffect{t=UNLUCK} true
+  Skills:
+  - skill{s=Phys_1000-1500} @target
+UnluckChaos:
+  TargetConditions:
+  - haspotioneffect{t=UNLUCK} true
+  Skills:
+  - skill{s=Chaos_30-50} @target
+WorldEaterElements:
+  Cooldown: 1
+  Skills:
+  - skill{s=WE_Shock} @target
+  - skill{s=WE_Freeze} @target
+  - skill{s=WE_Ignite} @target
+Maugri_Heal:
+  Conditions:
+  - haspotioneffect{t=REGENERATION} true
+  Skills:
+  - heal{a=10} @PIR{r=20}
+  - effect:particlering{particle=magicCrit;radius=2;points=9;amount=1;hS=1;vS=0} @self
+Corrupt_SuperHeal:
+  Conditions:
+  - haspotioneffect{t=REGENERATION} true
+  Skills:
+  - heal{a=30} @PIR{r=8}
+  - effect:particlering{particle=mobSpell;radius=2;points=9;amount=1;hS=1;vS=0} @self
+Titan_SuperHeal:
+  Conditions:
+  - haspotioneffect{t=REGENERATION} true
+  Skills:
+  - heal{a=20} @self
+CurseWhileHaste:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING} true
+  Skills:
+  - skill{s=InflictCurse}
+### ARMOR EFFECTS ----------------------------------------------
+IgnoreLethalDamage:
+  Cooldown: 10
+  Skills:
+  - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=4;overwrite=true}
+  - delay 60
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=3;overwrite=true}
+TakeLethalDamageOnHit:
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=1;lvl=0;overwrite=true}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0.5}
+  - delay 5
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - lightning @Self
+  - damage{a=10000}
+WaterBuff: ### Water Skill
+  Conditions:
+  - inblock STATIONARY_WATER
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=4;overwrite=true}
+Frightwalker: ### Frightwalker buff
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=3;overwrite=true}
+  - potion{type=JUMP;duration=100;lvl=2;overwrite=true}
+Onslaught_1: ### Onslaught 1
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE} true
+  Skills:
+  - potion{type=REGENERATION;duration=100;lvl=9;overwrite=true}
+Onslaught_2: ### Onslaught 1
+  Conditions:
+  - haspotioneffect{t=REGENERATION} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=40;ia=true;pi=true;pk=true}
+InvisibleRNG: ### Random positive effect while invisible.
+  Conditions:
+  - haspotioneffect{t=INVISIBILITY} true
+  Skills:
+  - skill{s=RandomGoodStuff} @Self
+VoidPact_Slow: ### You have Void Pact while you are Slowed.
+  Conditions:
+  - haspotioneffect{t=SLOW} true
+  Skills:
+  - heal{a=2000}
+  - potion{type=REGENERATION;duration=1;lvl=0;overwrite=true}
+DayArmorBuff: ### Day Armor
+  Conditions:
+  - day true
+  Skills:
+  - potion{type=SPEED;duration=300;lvl=9;overwrite=true}
+  - potion{type=JUMP;duration=300;lvl=2;overwrite=true}
+NightArmorBuff: ### Night Armor Buff
+  Conditions:
+  - night true
+  Skills:
+  - potion{type=ABSORPTION;duration=99999;lvl=19;overwrite=true}
+Evangelion_Melee:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE} true
+  Skills:
+  - randomskill{s=Chaos_80,Chaos_100,Chaos_120} @target
+Evangelion_Ranged:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE} true
+  Skills:
+  - randomskill{s=Chaos_40,Chaos_50,Chaos_60,Chaos_70,Chaos_80} @target
+ESLegs_Charge: ### Shield recharge
+  Skills:
+  - effect:sound{s=block.portal.travel;v=0.1;p=2}
+  - potion{type=ABSORPTION;duration=99999;lvl=19;overwrite=true}
+SlowHealOnHit:
+  Cooldown: 4
+  Skills:
+  - delay 10
+  - heal{amount=12}
+  - delay 10
+  - heal{amount=12}
+  - delay 10
+  - heal{amount=12}
+  - delay 10
+  - heal{amount=12}

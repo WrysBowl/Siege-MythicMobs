@@ -1,0 +1,149 @@
+### ENDGAME ATLAS UNIQUES --------------------------------------
+EtherMagic:
+  Id: 6
+  Data: 2
+  Display: "&6&oMiscreation&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &d✦"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c120.0❤x16"
+  - "&0 "
+  - "&6★ &7&o50% critical strike chance."
+  - "&6★ &7&o5.0x damage on critical hit."
+  - "&6★ &7&oDeals &c&o30.0❤ &5&oChaos &7&odamage"
+  - "&7&o  whenever you hit an enemy."
+  - "&0 "
+  - "&7“&6There can be no life without"
+  - "&6 primordial chaos.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=Chaos_30} @target ~onBowHit
+EtherRifle:
+  Id: 418
+  Display: "&6&oDream Eater&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &d✦"
+  - "&0 "
+  - "&7Type: &fRifle"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fAverage"
+  - "&7Damage: &c200.0❤x4"
+  - "&0 "
+  - "&6★ &7&o25% critical strike chance."
+  - "&6★ &7&o25.0x damage on critical hit."
+  - "&0 "
+  - "&7“&6The perfect feast begins inside"
+  - "&6 an ambitious mind.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_INFINITE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+EtherAxe:
+  Id: 258
+  Display: "&6&oRebirth"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &d✦"
+  - "&0 "
+  - "&6★ &a&o+75% &7&oattack speed."
+  - "&6★ &7&oAdds &c&o350.0-500.0❤ &7&odamage to all"
+  - "&7&o  melee attacks."
+  - "&6★ &7&oAdds &c&o2.0❤ &5&oChaos &7&odamage to melee"
+  - "&7&o  attacks for every level of &a&oHaste&7&o."
+  - "&7&o  (E.g. 20.0❤ from Haste X)."
+  - "&6★ &7&oAdds &c&o2.0❤ &5&oChaos &7&odamage to melee"
+  - "&7&o  attacks for every level of &a&oSpeed&7&o."
+  - "&7&o  (E.g. 20.0❤ from Speed X)."
+  - "&0 "
+  - "&7“&6When the world ends, my task begins.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Phys_350-500} @target ~onAttack
+  - skill{s=ChaosFromSpeed} @self ~onAttack
+  - skill{s=ChaosFromHaste} @self ~onAttack
+EtherChest:
+  Id: 299
+  Display: "&6&oTabula Rasa"
+  Lore:
+  - "&7No Enchantments"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &d✦"
+  - "&0 "
+  - "&6★ &7&oFully restore your health"
+  - "&7&o  once every 3.0s."
+  - "&6★ &7&oRefresh your gold hearts"
+  - "&7&o  once every 3.0s."
+  - "&0 "
+  - "&7“&6The world is a blank canvas,"
+  - "&6 molded by the hands of both"
+  - "&6 good and evil.&7”"
+  Options:
+    Color: 255,255,255
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - skill{s=RestoreEqualES_NoSound} @Self ~onTimer:60
+  - heal{a=1000} @Self ~onTimer:60
+EtherBoots:
+  Id: 305
+  Display: "&6&oEtherflight"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &d✦"
+  - "&0 "
+  - "&6★ &a&o+75% &7&omovement speed."
+  - "&6★ &c&o+10.0❤ &7&owhile equipped."
+  - "&6★ &7&o50% chance to inflict &d&oCurse"
+  - "&7&o  with all your attacks."
+  - "&0 "
+  - "&7“&6Every journey begins with a"
+  - "&6 single step.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      Health: 20.0
+      MovementSpeed: 0.75
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=InflictCurse} @target ~onBowHit 0.5
+  - skill{s=InflictCurse} @target ~onAttack 0.5

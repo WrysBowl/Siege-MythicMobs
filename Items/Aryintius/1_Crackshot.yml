@@ -1,0 +1,297 @@
+### Mythic Crackshot Items -------------------------------------
+Rocket4:
+  Id: 355
+  Data: 4
+  Display: "&5&oAvenging Wrath&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fLauncher"
+  - "&7Ammo: &fFire Charge"
+  - "&7Radius: &f3 Blocks"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c0.0-500.0❤x2"
+  - "&0 "
+  - "&7“&5Justice rains from above!&7”"
+SMG4:
+  Id: 355
+  Data: 15
+  Display: "&5&oThe Widowmaker&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fSMG"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c30.0❤"
+  - "&0 "
+  - "&5★ &7&oInflicts &8&oConfusion&7&o on"
+  - "&7&o  targets for up to 1.5s."
+  - "&0 "
+  - "&7“&5Arrivederci, mi amore.&7”"
+Crossbow4:
+  Id: 285
+  Display: "&5&oHelios Stormbow&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fCrossbow"
+  - "&7Ammo: &fArrow"
+  - "&7Speed: &fVery fast"
+  - "&7Damage: &c120.0❤"
+  - "&0 "
+  - "&5★ &7&o4.0x damage on headshot."
+  - "&0 "
+  - "&7“&5On this day all will be graced by"
+  - "&5 the presence of a new god!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Tigris:
+  Id: 417
+  Display: "&5&oThe Tigris&7&7 «0 | 0»"
+  Lore:
+  - "&7Left/Right click to shoot"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fShotgun"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fAverage"
+  - "&7Damage: &c150.0❤x12"
+  - "&0 "
+  - "&5★ &7&oShots deal 50% less damage"
+  - "&7&o  for every second in air."
+  - "&0 "
+  - "&7“&5You get the strange urge to"
+  - "&5 stuff it full of puzzle pieces.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+BurstRifle3:
+  Id: 418
+  Display: "&5&oRatt's Wheelgun&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fRifle"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c45.0❤x3"
+  - "&0 "
+  - "&5★ &7&oFires as fast as you can"
+  - "&7&o  pull the trigger."
+  - "&5★ &7&oCrouching reduces spread."
+  - "&5★ &7&o50% critical strike chance."
+  - "&5★ &7&o4.0x damage on critical hit."
+  - "&0 "
+  - "&7“&5An old-fashioned relic from"
+  - "&5 the wilder days of the land.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Scattergun5:
+  Id: 418
+  Display: "&5&oCoronal Ejection&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fScattergun"
+  - "&7Ammo: &fIron Ingot"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c95.0❤x20"
+  - "&0 "
+  - "&5★ &7&oShots have no recoil."
+  - "&5★ &7&oCrouching focuses shots."
+  - "&0 "
+  - "&7“&5Feel the wrath of the sun!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Sniper4:
+  Id: 418
+  Display: "&5&oThe Flying Hatchet&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fSniper"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c50.0❤"
+  - "&0 "
+  - "&5★ &7&o8x damage on headshot."
+  - "&0 "
+  - "&7“&5Heads will fly into the sky!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+### BOWS -------------------------------------------------------
+Bow_Stronk:
+  Id: 261
+  Display: "&5&oConquest&7&7"
+  Lore:
+  - "&7Power D"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c120.0❤x18"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&5★ &7&oFully-draw shots to cast ability."
+  - "&5★ &7&oDeals &c&o250.0-1000.0❤ &7&oextra damage"
+  - "&7&o  to &8&oWeakened &7&oenemies."
+  - "&5★ &7&oDeals &c&o250.0-1000.0❤ &7&oextra damage"
+  - "&7&o  while you have &a&oStrength&7&o."
+  - "&0 "
+  - "&7“&5In a battle of wills, strength remains"
+  - "&5 an uncontestable virtue.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:500
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Conquest_1} @target ~onBowHit
+  - skill{s=Conquest_2} @target ~onBowHit
+Bow_Shock:
+  Id: 261
+  Display: "&5&oThunderclap&7&7"
+  Lore:
+  - "&7Power D"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c500.0❤x8"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&5★ &7&oFully-draw shots to cast ability."
+  - "&5★ &7&oRapidly fires 3 shots during ability."
+  - "&5★ &7&o15% chance to &3&oShock &7&oenemies on hit."
+  - "&5★ &7&oDeals &c&o500.0-1500.0❤ &7&oextra damage"
+  - "&7&o  to &3&oShocked &7&oenemies."
+  - "&0 "
+  - "&7“&5The storm cares not for those which"
+  - "&5 crave its furious wrath.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:500
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictShock} @target ~onBowHit 0.15
+  - skill{s=Shock_500-1500} @target ~onBowHit
+### MAGIC ITEMS ------------------------------------------------
+Fire4:
+  Id: 403
+  Display: "&5&oNapalm Death&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Charge: &fVery Fast"
+  - "&7Damage: &c350.0❤"
+  - "&0 "
+  - "&5★ &7&o50% chance to &e&oIgnite"
+  - "&7&o  enemies for 5.0s."
+  - "&0 "
+  - "&7“&5You suffer, but why?&7”"
+  Skills:
+  - skill{s=Ignite_Title} @target ~onBowHit 0.5
+Water4:
+  Id: 403
+  Display: "&5&oTsunami&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0"
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c60.0❤x7"
+  - "&0 "
+  - "&5★ &7&oInflicts &8&oBlindness &7&oon targets"
+  - "&7&o  for up to 3.0s."
+  - "&0 "
+  - "&7“&5The sea cannot be measured!&7”"
+Frost4:
+  Id: 403
+  Display: "&5&oGlacial Spike&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Charge: &fFast"
+  - "&7Damage: &c250.0❤"
+  - "&0 "
+  - "&5★ &b&oFreezes &7&oenemies for 5.0s."
+  - "&5★ &7&o35% critical strike chance."
+  - "&5★ &7&o8.0x damage on critical hit."
+  - "&0 "
+  - "&7“&5The fires of hatred lie calm"
+  - "&5 at last. Icy and barren are"
+  - "&5 their lands, once vast.&7”"
+Apple:
+  Id: 322
+  Data: 1
+  Display: "&5&oApple of Discord&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c50.0❤x5"
+  - "&0 "
+  - "&5★ &7&o25% critical strike chance."
+  - "&5★ &7&o8.0x damage on critical hit."
+  - "&5★ &7&oWhenever you hit an enemy,"
+  - "&7&o  set your gold hearts to &e&o20.0❤&7."
+  - "&0 "
+  - "&7“&5Coveted by the goddesses three,"
+  - "&5 squandered by mortals with glee.&7”"

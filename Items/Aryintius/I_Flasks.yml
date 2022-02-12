@@ -1,0 +1,236 @@
+###---------------------------------------------------------###
+### FLASKS
+###---------------------------------------------------------###
+Flask1:
+  Id: 437
+  Display: "&3Mithril Flask&3"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&3★ &7&oGain &a&oRegen. X&7&o for 10.0s."
+  - "&3★ &7&oFully restore your health."
+  - "&0 "
+  - "&7“&3An ancient remedy brewed to"
+  - "&3 quicken recovery in battle.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Flask2:
+  Id: 437
+  Display: "&9Byzantite Flask&9"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&9★ &7&oSet your gold hearts to &e&o50.0❤&7&o."
+  - "&9★ &7&oSuffer &8&oSlowness V&7&o, &8&oWeakness V&7&o,"
+  - "&7&o  and &8&oBlindness &7&ofor up to 5.0s."
+  - "&0 "
+  - "&7“&9Filled to the brim with powerful"
+  - "&9 ingredients, this flask can cheat"
+  - "&9 even death...&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Flask3:
+  Id: 437
+  Display: "&d&oUranium Flask&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f15 Seconds"
+  - "&0 "
+  - "&d★ &7&oGain &a&oSpeed IV &7&ofor 10.0s."
+  - "&d★ &7&oSuffer &8&oPoison X &7&ofor 30.0s."
+  - "&d★ &7&oRemoves &8&oSlowness&7&o/&b&oFreezing&7&o."
+  - "&0 "
+  - "&7“&dThe flame of radiation melts all"
+  - "&d that is cold. But the pain of its"
+  - "&d embers will continue to hold.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Flask4:
+  Id: 437
+  Display: "&5&oUndying Rage&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f15 Seconds"
+  - "&0 "
+  - "&5★ &7&oGain &a&oStrength CC &7&ofor 10.0s."
+  - "&5★ &7&oRemoves &a&oRegeneration &7&oon use."
+  - "&5★ &7&oRemoves all gold hearts on use."
+  - "&0 "
+  - "&7“&5The ashes of the fallen give rise"
+  - "&5 to new life. But the eternals feel"
+  - "&5 none, for they cannot die...&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Flask5:
+  Id: 437
+  Display: "&5&oStoneheart Brew&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&5★ &7&oGain &a&oResist. V &7&ofor 10.0s."
+  - "&5★ &7&oSuffer &8&oSlowness X &7&ofor 3.0s."
+  - "&5★ &7&oSuffer &8&oWeakness X &7&ofor 3.0s."
+  - "&0 "
+  - "&7“&5A strange elixir distilled from a"
+  - "&5 recipe that has long since been"
+  - "&5 forgotten...&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+### Selthine Alchemist
+Flask6:
+  Id: 437
+  Display: "&2Flask of Swiftness&2"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&2★ &7&oGain &a&oSpeed X&7&o for 10.0s."
+  - "&0 "
+  - "&7“&2There is no limit to speed,"
+  - "&2 only bravery.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Flask7:
+  Id: 437
+  Display: "&2Flask of Rejuvenation&2"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&2★ &7&oGain &a&oRegen. X&7&o for 10.0s."
+  - "&2★ &7&oYou are immune to &c&oHunger"
+  - "&7&o  for 10.0s."
+  - "&2★ &7&oSuffer &8&oBlindness&7&o for 5.0s."
+  - "&0 "
+  - "&7“&2A lovely brew from a culture"
+  - "&2 that invented the art of the"
+  - "&2 fine banquet.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Flask8:
+  Id: 437
+  Display: "&fFlask of Healing&f"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f15 Seconds"
+  - "&0 "
+  - "&f★ &7&oFully restore your health."
+  - "&0 "
+  - "&7“&fA simple brew passed down"
+  - "&f through the ages to mend"
+  - "&f wounds quickly.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Flask9:
+  Id: 437
+  Display: "&fFlask of Frenzy&f"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&f★ &7&oGain &a&oHaste IV&7&o for 10.0s."
+  - "&f★ &7&oGain &a&oSpeed IV&7&o for 10.0s."
+  - "&0 "
+  - "&7“&fPoured from a glass of bottled"
+  - "&f rage--fit for anyone except a"
+  - "&f mage.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Flask10:
+  Id: 437
+  Display: "&3Flask of Curing&3"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&3★ &7&oInstantly removes all negative"
+  - "&7&o  effects on usage."
+  - "&0 "
+  - "&7“&3A spectacular recipe brewed by"
+  - "&3 alchemists of Selthine for over"
+  - "&3 a thousand years.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+Flask11:
+  Id: 437
+  Display: "&5&oFlask of Lifeforce&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f60 Seconds"
+  - "&0 "
+  - "&5★ &7&oGain &a&oRegen. X &7&ofor up to 10.0s."
+  - "&5★ &c&o+10.0❤ &7&omaximum HP for 5 minutes."
+  - "&0 "
+  - "&7“&5In the end, no essence resonates"
+  - "&5 stronger than life itself.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10

@@ -1,0 +1,86 @@
+###---------------------------------------###
+### THE VOID
+###---------------------------------------###
+VoidLeech:
+  Type: ENDERMITE
+  Display: "&5« &dPhantom &5»"
+  Health: 200
+  Damage: 1200
+  Drops:
+  - Currency_Trials_2
+  - Mythic
+  - Corrupted
+  Modules:
+    ThreatTable: true
+  Mount: VoidSpectre
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.7
+    PreventOtherDrops: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+VoidSpectre:
+  Type: ZOMBIE
+  Health: 400
+  Damage: 800
+  # Drops:
+  # - Placeholder
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - Boss_Skull_1:4
+  - Elytra:3
+  - 0:2
+  - 0:1
+  - Iron_Hoe:0
+  - Iron_Hoe:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.15
+    PreventOtherDrops: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+VoidMiniboss:
+  Type: ZOMBIE
+  Display: "&4&l<&4« &cFallen Hero &4»&4&l>"
+  Health: 12500
+  Damage: 2500
+  BossBar:
+    Enabled: true
+    Title: "&4&l<&4« &cFallen Hero &4»&4&l>"
+    Range: 25
+    Color: RED
+    Style: SEGMENTED_6
+  Drops:
+  - Currency_Trials_3
+  - Corrupted
+  - Mythic
+  - Iridescent
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - Boss_Skull_2:4
+  - Cultist_Chest:3
+  - Cultist_Legs:2
+  - Cultist_Boots:1
+  - Shield_Void:0
+  - Shield_Void:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    FollowRange: 25
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+  Skills:
+  - message{cooldown=120;m="<mob.name> &6There is no hope in the Void... succumb to the darkness..."} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=ABSORPTION;duration=999999;level=10} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=HeroSpeech} @target ~onTimer:100
+  - skill{s=VoidBlast} @target ~onTimer:100 <50%
+  - message{cooldown=20;m="<mob.name> &bThe nightmare... ends... Thank you, stranger..."} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PlayersInRadius{r=30} ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @PlayersInRadius{r=30} ~onDeath

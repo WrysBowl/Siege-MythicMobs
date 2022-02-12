@@ -1,0 +1,192 @@
+### FINAL BOSS ITEMS -------------------------------------------
+DreamSaber:
+  Id: 267
+  Display: "&6&oThe Shattered Dream"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &d✷"
+  - "&0 "
+  - "&6★ &a&o+75% &7&oattack speed."
+  - "&6★ &c&o+10.0❤ &7&oif held in main hand."
+  - "&6★ &7&oAdds &c&o80.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all melee attacks."
+  - "&0 "
+  - "&7“&6The slumbering gods dare not"
+  - "&6 awaken, for only the nightmare"
+  - "&6 of reality will greet them.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+      Health: 20.0
+  Enchantments:
+  - DAMAGE_ALL:500
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Chaos_80} @target ~onAttack
+ChaosBow:
+  Id: 261
+  Display: "&6&oMalevolence&7&7"
+  Lore:
+  - "&7Power D"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &d✷"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c600.0❤"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&6★ &7&oFully-draw shots to cast ability."
+  - "&6★ &7&oProjectiles fired using the ability"
+  - "&7&o  hit enemies instantly."
+  - "&6★ &7&oDeals &c&o600.0❤ &5&oChaos &7&odamage on hit."
+  - "&0 "
+  - "&7“&6The greatest evils are always done"
+  - "&6 out of fear.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:500
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=600C_CD} @target ~onBowHit
+AbyssHelm:
+  Id: 298
+  Display: "&6&oIzenryl's Thoughts"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &d✷"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&oGain a random positive effect"
+  - "&7&o  for 5.0s once every 15.0s."
+  - "&6★ &7&o45% chance for your attacks"
+  - "&7&o  to inflict &d&oCurse &7&oon enemies."
+  - "&0 "
+  - "&7“&6A mind which wanders about in"
+  - "&6 darkness is a most dangerous"
+  - "&6 threat indeed.&7”"
+  Options:
+    Unbreakable: true
+    Color: 255,0,0
+  Attributes:
+    Head:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=RandomGoodStuff} @Self ~onTimer:300
+  - skill{s=InflictCurse} @target ~onAttack 0.45
+  - skill{s=InflictCurse} @target ~onBowHit 0.45
+AbyssLegs:
+  Id: 316
+  Display: "&6&oAmbition"
+  Lore:
+  - "&7No Enchantments"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &d✷"
+  - "&0 "
+  - "&6★ &c&o+25.0❤ &7&owhile equipped."
+  - "&6★ &7&o10% chance to ignore all incoming"
+  - "&7&o  physical damage for up to 3.0s."
+  - "&6★ &c&oAbility has a cooldown of 10.0s."
+  - "&0 "
+  - "&7“&6Consumed by his insatiable lust for"
+  - "&6 knowledge, Izenryl spent decades"
+  - "&6 researching the rifts.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 50.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - skill{s=IgnoreLethalDamage} @Self ~onDamaged 0.1
+AbyssMagic:
+  Id: 175
+  Data: 5
+  Display: "&6&oBloomcull&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &d✷"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Charge: &fVery Fast"
+  - "&7Damage: &c450.0❤"
+  - "&0 "
+  - "&6★ &7&oRecharges independently"
+  - "&7&o  from equipment slots."
+  - "&6★ &7&o75% chance to inflict &d&oCurse"
+  - "&7&o  with ranged/magic attacks."
+  - "&0 "
+  - "&7“&6From death springs only life.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=InflictCurse} @target ~onBowHit 0.75
+### UPGRADED ITEMS ---------------------------------------------
+DreamSaber2:
+  Id: 283
+  Display: "&6&oDre&e&oam Sa&6&ober"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oAs&e&ocend&6&oed &d✷"
+  - "&0 "
+  - "&6★ &a&o+100% &7&oattack speed."
+  - "&6★ &c&o+20.0❤ &7&oif held in main hand."
+  - "&6★ &3&oShocks&7&o, &b&oFreezes&7&o, and &e&oIgnites"
+  - "&7&o  enemies you attack for 5.0s."
+  - "&6★ &7&oAdds &c&o250.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all melee attacks."
+  - "&0 "
+  - "&7“&eThe body can ne&6ver enter the"
+  - "&6 eth&eer--for only the min&6d shall"
+  - "&6 be wil&eling to return.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.075
+      Health: 40.0
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Shock_NoSpeed} @target ~onAttack
+  - skill{s=InflictFreeze} @target ~onAttack
+  - skill{s=Ignite_Title} @target ~onAttack
+  - skill{s=Chaos_250} @target ~onAttack

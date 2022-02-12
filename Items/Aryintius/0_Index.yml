@@ -1,0 +1,200 @@
+###---------------------------------------------------------###
+### WEAPONS
+###---------------------------------------------------------###
+T0_1:
+  Id: 267
+  Display: "&6&oSingularity Rift"
+  Lore:
+  - "&7Smite L"
+  - "&7Sharpness C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6★ &a&o+250% &7&oattack speed."
+  - "&0 "
+  - "&7“&6We're burning to the"
+  - "&6 ground. You won't"
+  - "&6 drag me down...&7”"
+  Enchantments:
+  - DAMAGE_ALL:100
+  - DAMAGE_UNDEAD:50
+  - DURABILITY:9001
+  - MENDING:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: 2.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T0_2:
+  Id: 261
+  Display: "&6&oUnstoppable Force"
+  Lore:
+  - "&7Power CD"
+  - "&7Punch X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7“&6Nothing can stand in"
+  - "&6 my way... except for"
+  - "&6 an unmovable object.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:400
+  - ARROW_KNOCKBACK:10
+  - DURABILITY:9001
+  - MENDING:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+T0_3:
+  Id: 275
+  Display: "&6&oSkyforge Greataxe"
+  Lore:
+  - "&7Sharpness CD"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6★ &8&o-50% &7&oattack speed."
+  - "&6★ &8&o-50% &7&omovement speed."
+  - "&0 "
+  - "&7“&6A weapon of unspeakable power"
+  - "&6 wielded by Titans who fought for"
+  - "&6 the Dragons during the war.&7”"
+  Enchantments:
+  - DAMAGE_ALL:400
+  - DURABILITY:9001
+  - MENDING:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.825
+      MovementSpeed: -0.5
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### ARMOR BITS
+###---------------------------------------------------------###
+T0_29:
+  Id: 443
+  Display: "&6&oAncient Wings"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6★ &a&o+100% &7&omovement speed."
+  - "&6★ &c&o+30.0❤ &7&owhile equipped."
+  - "&0 "
+  - "&7“&6May your soul take flight.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 60.0
+      MovementSpeed: 1.0
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:10
+T0_30:
+  Id: 310
+  Display: "&6&oHybrid Theory"
+  Lore:
+  - "&7Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &a&o+50% &7&omovement speed."
+  - "&6★ &a&o+50% &7&oknockback resist."
+  - "&0 "
+  - "&7“&6Forfeit the game before"
+  - "&6 somebody else takes you"
+  - "&6 out of the frame...&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  - ENCHANTS
+  Attributes:
+    Head:
+      Health: 30.0
+      MovementSpeed: 0.5
+      KnockbackResistance: 0.5
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:15
+###---------------------------------------------------------###
+### EFFECTED WEAPONS/TOOLS
+###---------------------------------------------------------###
+TitanBlade:
+  Id: 276
+  Display: "&6&oTitan Blade"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6★ &7&oEffect: &a&oStrength L&7&o."
+  - "&6★ &a&o+50% &7&oattack speed."
+  - "&6★ &c&o+20.0❤ &7&oif held in off hand."
+  - "&6★ &c&o+20.0❤ &7&oif held in main hand."
+  - "&0 "
+  - "&7“&6A massive greatsword favored"
+  - "&6 by many a Titan--forged using"
+  - "&6 thousands of souls.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    OffHand:
+      Health: 40.0
+    MainHand:
+      Health: 40.0
+      AttackSpeed: -0.25
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+Vibro_Sword:
+  Id: 267
+  Display: "&6&oVibro-Sword"
+  Lore:
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Effect: &aLevitation I"
+  - "&0 "
+  - "&7“&6It's a sword that also"
+  - "&6 vibrates. Yeah... I don't"
+  - "&6 know, either.&7”"
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:10
+  - FIRE_ASPECT:10
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### EFFECTED ARMOR/UNIQUE LEGENDARIES
+###---------------------------------------------------------###
+###---------------------------------------------------------###
+### CHARMS
+###---------------------------------------------------------###

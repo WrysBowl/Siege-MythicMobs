@@ -1,0 +1,129 @@
+### MAGIC (AURAS) ----------------------------------------------
+## These items have been removed from the server due to issues
+## with balancing their overall DPS. They will NOT be returned
+## to service.
+Aura_Frost:
+  Id: 353
+  Display: "&6&oOrb of Frost&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fMagic (Aura)"
+  - "&7Radius: &f1.5 Blocks"
+  - "&7Damage: &c25.0❤"
+  - "&0 "
+  - "&6★ &7&oHits up to 5 times per second."
+  - "&6★ &b&oFreezes &7&oenemies for 5.0s."
+  - "&6★ &7&oGains damage/status bonuses"
+  - "&7&o  from melee items/accessories."
+  - "&6★ &c&oRanged/magic bonuses have"
+  - "&c&o  no effect on this weapon."
+  - "&0 "
+  - "&7“&6Stolen from the heart of an ice"
+  - "&6 giant, this chilling essence feels"
+  - "&6 strangely warm in your hands.&7”"
+  Options:
+    Destroy: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Aura_Fire:
+  Id: 378
+  Display: "&6&oOrb of Cinder&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fMagic (Aura)"
+  - "&7Radius: &f1.5 Blocks"
+  - "&7Damage: &c80.0❤"
+  - "&0 "
+  - "&6★ &7&oHits up to 5 times per second."
+  - "&6★ &7&oTake &c&o200.0❤ &7&odamage for every"
+  - "&7&o  second this aura is active."
+  - "&6★ &7&oGains damage/status bonuses"
+  - "&7&o  from melee items/accessories."
+  - "&6★ &c&oRanged/magic bonuses have"
+  - "&c&o  no effect on this weapon."
+  - "&0 "
+  # OLD DESCRIPTION (May use later)
+  # - "&7“&6From within each soul of this"
+  # - "&6 cursed flame comes a power"
+  # - "&6 untold from years of shame.&7”"
+  - "&7“&6This flame burns within each soul,"
+  - "&6 filling the world with life's breath."
+  - "&6 But we squandered these gifts in"
+  - "&6 our greed, twisting life into death.&7”"
+  Options:
+    Destroy: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Aura_Earth:
+  Id: 341
+  Display: "&6&oOrb of Dunes&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fMagic (Aura)"
+  - "&7Radius: &f1.5 Blocks"
+  - "&7Damage: &c35.0❤"
+  - "&0 "
+  - "&6★ &7&oHits up to 5 times per second."
+  - "&6★ &7&oInflicts &8&oWeakness X &7&o+ &8&oBlindness"
+  - "&7&o  on enemies for 5.0s."
+  - "&6★ &7&oGains damage/status bonuses"
+  - "&7&o  from melee items/accessories."
+  - "&6★ &c&oRanged/magic bonuses have"
+  - "&c&o  no effect on this weapon."
+  - "&0 "
+  - "&7“&6Infused with the energies of the"
+  - "&6 earth and the wind, this sphere"
+  - "&6 calls forth endless power.&7”"
+  Options:
+    Destroy: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Aura_Speed:
+  Id: 347
+  Display: "&6&oOrb of Acceleration&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fMagic (Aura)"
+  - "&7Radius: &f1.5 Blocks"
+  - "&7Damage: &c65.0❤"
+  - "&0 "
+  - "&6★ &7&oHits up to 5 times per second."
+  - "&6★ &7&oGain &a&oSpeed V &7&ofor 15.0s whenever"
+  - "&7&o  you hit an enemy."
+  - "&6★ &7&oEnemies gain &a&oSpeed V &7&ofor up to"
+  - "&7&o  15.0s whenever they are hit."
+  - "&6★ &7&oGains damage/status bonuses"
+  - "&7&o  from melee items/accessories."
+  - "&6★ &c&oRanged/magic bonuses have"
+  - "&c&o  no effect on this weapon."
+  - "&0 "
+  - "&7“&6Consumed by a temporal rift, few"
+  - "&6 can escape the clutches of time.&7”"
+  Options:
+    Destroy: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES

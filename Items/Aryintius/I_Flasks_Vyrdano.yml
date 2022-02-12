@@ -1,0 +1,112 @@
+### VYRDANO SHOP FLASKS ----------------------------------------
+VFlask_1:
+  Id: 437
+  Display: "&d&oFlask of Deftness&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&d★ &7&oGain &a&oHaste X &7&ofor 10.0s."
+  - "&d★ &7&oGain &a&oRegen. X &7&ofor 10.0s."
+  - "&0 "
+  - "&7“&dThis brew comes from a"
+  - "&d recipe developed by the"
+  - "&d thieves' guild.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+VFlask_2:
+  Id: 437
+  Display: "&d&oLifeweave Flask&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&d★ &7&oRestores full health on use."
+  - "&d★ &7&oGain &a&oSpeed X &7&ofor 10.0s."
+  - "&d★ &7&oGain &a&oWaterbreathing &7&ofor 10.0s."
+  - "&0 "
+  - "&7“&dThe Aquir made swift usage of a"
+  - "&d similar mixture--allowing them to"
+  - "&d live peacefully under the sea.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+VFlask_3:
+  Id: 437
+  Display: "&d&oFlask of Grounding&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&d★ &7&oSets your gold hearts to"
+  - "&e&o  100.0❤ &7&ofor up to 5.0s."
+  - "&d★ &7&oRemoves &8&oSlowness &7&oon use."
+  - "&d★ &7&oRemoves &8&oLevitation &7&oon use."
+  - "&0 "
+  - "&7“&dThe earth beneath us bears"
+  - "&d all of our triumphs and thus,"
+  - "&d our burdens as well.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+VFlask_4:
+  Id: 437
+  Display: "&d&oFlask of Leaping&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f20 Seconds"
+  - "&0 "
+  - "&d★ &7&oGain &a&oJump Boost V &7&ofor 12.0s."
+  - "&d★ &7&oSuffer &b&oFrozen &7&ofor 3.0s."
+  - "&d★ &7&oSuffer &8&oBlindness &7&ofor 3.0s."
+  - "&0 "
+  - "&7“&dDespite a bitter taste, this brew"
+  - "&d lightens your weight, allowing for"
+  - "&d higher jumps.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10
+### LEGENDARY FLASKS -------------------------------------------
+VFlask_L1:
+  Id: 437
+  Display: "&5&oSunfoil Brew&o"
+  Lore:
+  - "&7Right-click to activate"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&7Type: &fFlask"
+  - "&7Cooldown: &f30 Seconds"
+  - "&0 "
+  - "&5★ &7&oSets your gold hearts to"
+  - "&e&o  100.0❤ &7&ofor up to 20.0s."
+  - "&5★ &7&oRemoves &a&oResistance &7&oon use."
+  - "&0 "
+  - "&7“&5Channeled directly from within"
+  - "&5 a star, this fiery brew grants"
+  - "&5 terrifying power.&7”"
+  Hide:
+  - ENCHANTS
+  Enchantments: 
+  - ARROW_DAMAGE:10

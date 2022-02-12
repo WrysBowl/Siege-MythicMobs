@@ -1,0 +1,55 @@
+Dev_Railgun:
+  Id: 292
+  Display: "&a&oPizza's Apple Corer&7&7"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &a&oDev Only"
+  - "&0 "
+  - "&7Type: &fOther"
+  - "&7Ammo: &fNone"
+  - "&7Speed: &fInstant"
+  - "&7Damage: &c4000000.0❤"
+  - "&0 "
+  - "&a★ &7&oCreates a unique hologram"
+  - "&7&o  whenever you hit an enemy."
+  - "&0 "
+  - "&7“&aI totally didn't steal its design"
+  - "&a from my favorite ever hypixel"
+  - "&a mini-game... No way! :^)&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+Dev_Charm:
+  Id: 337
+  Display: "&a&oCharm of Invulnerability"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &a&oDev Only"
+  - "&0 "
+  - "&a★ &7&oYou have &9&oResistance V&7&o."
+  - "&7&o  (Refreshes every 10.0s)."
+  - "&a» &7&oWhile equipped in off hand:"
+  - "&a★ &c&o+20.0❤ &7&omaximum health."
+  - "&a★ &7&oWhenever you take damage,"
+  - "&7&o  fully restore your health."
+  - "&0 "
+  - "&7“&aFinally reworked after over"
+  - "&a a year of no changes. LMAO.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - heal{a=1000} @Self ~onDamaged
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=4;overwrite=true} @Self ~onTimer:1

@@ -1,0 +1,64 @@
+AtlasBoss_4:
+  Type: STRAY
+  Display: "&1&l<&9« &fNoryk &9»&1&l>"
+  Health: 15000
+  Damage: 1000
+  BossBar:
+    Enabled: true
+    Title: "&1&l<&9« &fNoryk the Unbound &9»&1&l>"
+    Range: 25
+    Color: BLUE
+    Style: SOLID
+  Disguise:
+    Type: WITHER_SKELETON
+    Invisible: false
+    Burning: false
+    ShowName: true
+    ModifyBoundingBox: true
+  Equipment:
+  - DHelm:4
+  - CChest:3
+  - CLegs:2
+  - DBoots:1
+  - BLAZE_ROD:0
+  - Coin_Nether:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Currency_Atlas_Boss
+  - AtlasBoss_4
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fFinally... I am free from the curse!"} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7I will not go back to this prison!",
+      "<mob.name> &7The world will stare in awe at my power!",
+      "<mob.name> &7You are a fool to challenge me!";
+      } @PIR{r=25} ~onTimer:300
+  - effect:sound{s=entity.endermen.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.endermen.hurt;p=1.0;v=0.5} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;v=0.5;p=1}
+### PHASE 1
+  - skill{s=A4_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >60%
+### PHASE 2
+  - skill{s=A4_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <60%
+### DEATH STUFF
+  - message{m="<mob.name> &fI was... so close..."} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

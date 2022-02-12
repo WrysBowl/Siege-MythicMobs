@@ -1,0 +1,321 @@
+### NEW ARMOR SETS EFFECTS -------------------------------------
+GuardianHeal: ### Time of Need, bro.
+  Skills:
+  - heal{amount=100}
+  - effect:particlesphere{particle=totem;amount=15;r=3}
+  - delay 5
+  - heal{amount=100}
+  - effect:particlesphere{particle=totem;amount=15;r=3}
+  - delay 5
+  - heal{amount=100}
+  - effect:particlesphere{particle=totem;amount=15;r=2}
+  - delay 5
+  - heal{amount=100}
+  - effect:particlesphere{particle=totem;amount=15;r=2}
+  - delay 5
+  - heal{amount=100}
+  - effect:particlesphere{particle=totem;amount=15;r=2}
+  - delay 5
+  - heal{amount=100}
+  - effect:particlesphere{particle=totem;amount=15;r=1}
+  - delay 5
+  - heal{amount=100}
+  - effect:particlesphere{particle=totem;amount=15;r=1}
+  - delay 5
+  - heal{amount=100}
+  - effect:particlesphere{particle=totem;amount=15;r=1}
+AquirES:
+  Conditions:
+  - haspotioneffect{t=WATER_BREATHING;level=0} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=4;overwrite=true}
+AquirHaste:
+  Conditions:
+  - haspotioneffect{t=WATER_BREATHING;level=0} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=200;lvl=3;overwrite=true}
+AquirChaos:
+  Conditions:
+  - haspotioneffect{t=WATER_BREATHING;level=0} true
+  Skills:
+  - damage{a=3;ia=true;pi=true;pk=true} @target
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+BerserkerChaos:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE} true
+  Skills:
+  - damage{a=6;ia=true;pi=true;pk=true} @target
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+### ICETOMB ARMOR SET ------------------------------------------
+Icetomb_Helm:
+  TargetConditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - damage{a=1300;pk=true} @target
+  - effect:sound{s=block.glass.break;p=1;v=1}
+  - effect:sound{s=block.glass.break;p=0.5;v=0.8}
+Icetomb_Chest:
+  Conditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - heal{a=40}
+Icetomb_Legs:
+  Conditions:
+  - haspotioneffect{t=SLOW_DIGGING;level=9} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true}
+### INFERNAL ARMOR SET -----------------------------------------
+SetBonus_Ignite:
+  TargetConditions:
+  - haspotioneffect{t=LUCK} true
+  Skills:
+  - damage{a=2000;pk=true} @target
+  - effect:sound{s=entity.blaze.hurt;p=1;v=0.5}
+Infernal_Bleed:
+  Cooldown: 2
+  TargetConditions:
+  - haspotioneffect{t=BLINDNESS} true
+  Skills:
+  - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
+  - sendtitle{title="&4&lBleeding";subtitle="&fChaos damage over time";d=20}
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.4}
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=1}
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=1}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+  - delay 2
+  - damage{a=10;ia=true;pi=true;pk=true}
+### GUARDIAN ARMOR SET -----------------------------------------
+SetBonus_Guardian:
+  Conditions:
+  - haspotioneffect{t=LUCK;level=3} true
+  Skills:
+  - potion{type=ABSORPTION;duration=100;lvl=49;overwrite=true} @PIR{r=20}
+  - effect:particlesphere{particle=totem;amount=20;r=4}
+  - delay 10
+  - effect:particlesphere{particle=totem;amount=15;r=3}
+  - delay 10
+  - effect:particlesphere{particle=totem;amount=10;r=2}
+  - delay 10
+  - effect:particlesphere{particle=totem;amount=5;r=1}
+Guardian_ChestSkill:
+  Cooldown: 10
+  Conditions:
+  - haspotioneffect{t=LEVITATION} true
+  Skills:
+  - sendtitle{title="&e✦&6✷&e✦";subtitle="&7You are now immune!";d=20}
+  - effect:sound{s=entity.zombie_villager.converted;v=2;p=2}
+  - effect:sound{s=block.portal.travel;v=0.5;p=2}
+  - actionmessage{m="&6SKILL ENGAGED &f| &710.0"}
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - actionmessage{m="&7SKILL DELAY &f| &79.0"}
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - actionmessage{m="&7SKILL DELAY &f| &78.0"}
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - actionmessage{m="&7SKILL DELAY &f| &77.0"}
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - actionmessage{m="&7SKILL DELAY &f| &76.0"}
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+  - heal{a=1000}
+  - skill{s=RestoreEqualES_NoSound}
+  - delay 2
+  - sendtitle{title="&c✦&4✷&c✦";subtitle="&7Immunity Expired";d=20}
+  - effect:sound{s=entity.irongolem.death;v=1;p=0.5}
+  - actionmessage{m="&4SKILL EXPIRED &f| &75.0"}
+  - delay 20
+  - actionmessage{m="&7SKILL DELAY &f| &74.0"}
+  - delay 20
+  - actionmessage{m="&7SKILL DELAY &f| &73.0"}
+  - delay 20
+  - actionmessage{m="&7SKILL DELAY &f| &72.0"}
+  - delay 20
+  - actionmessage{m="&7SKILL DELAY &f| &71.0"}
+  - delay 20
+  - actionmessage{m="&7SKILL RECHARGED"}
+Guardian_LegsSkill:
+  Conditions:
+  - haspotioneffect{t=REGENERATION} true
+  Skills:
+  - heal{a=15} @PIR{r=15}
+  - effect:particlering{particle=reddust;radius=2;points=9;amount=1;hS=1;vS=0} @self
+### JUGGERNAUT ARMOR SET ---------------------------------------
+SetBonus_JUGG:
+  TargetConditions:
+  - haspotioneffect{t=LUCK} true
+  Skills:
+  - damage{a=8000;pk=true} @target
+  - effect:sound{s=entity.zombie.break_door_wood;p=1;v=0.05}
+JUGG_HelmSkill:
+  TargetConditions:
+  - haspotioneffect{t=UNLUCK} true
+  Skills:
+  - skill{s=Phys_500-750} @target
+  - effect:sound{s=entity.player.attack.crit;p=1;v=1}
+JUGG_LegsSkill:
+  Conditions:
+  - haspotioneffect{t=REGENERATION} true
+  Skills:
+  - heal{a=10}
+### ASSASSIN'S ARMOR SET ---------------------------------------
+InvisChaos:
+  Conditions:
+  - haspotioneffect{t=INVISIBILITY} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=50;ia=true;pi=true;pk=true} @target
+NVisionChaos:
+  Conditions:
+  - haspotioneffect{t=NIGHT_VISION} true
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=50;ia=true;pi=true;pk=true} @target
+AssassinES:
+  Conditions:
+  - haspotioneffect{t=INVISIBILITY} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=39;overwrite=true}
+HasteFromInvis:
+  Conditions:
+  - haspotioneffect{t=INVISIBILITY} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=200;lvl=9;overwrite=true}
+DeathMark:
+  Cooldown: 10
+  Skills:
+  - potion{type=GLOWING;duration=100;lvl=0;overwrite=true} @target
+DeathMark_120:
+  TargetConditions:
+  - haspotioneffect{t=GLOWING} true
+  Skills:
+  - damage{a=240;ia=true;pi=true;pk=true} @target
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  

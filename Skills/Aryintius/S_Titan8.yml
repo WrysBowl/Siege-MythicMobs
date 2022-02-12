@@ -1,0 +1,257 @@
+### OTIN'S SKILLS -----------------------------------------------------------------------
+T8_WaveAttack: ### Fires ALL bolts at the SAME time
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=330;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=30;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+T8A-Tick:
+  Skills:
+  - effect:particles{p=blockcrack_49;amount=1;speed=0;hS=0.1;vS=0.1} @origin
+  - effect:particles{p=smoke;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+T8A-Tick-2: ### Alternate Tick Effect
+  Skills:
+  - effect:particles{p=reddust;color=#AB3FAB;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=witchMagic;amount=1;speed=0} @origin
+T8A-Hit:
+  Skills:
+  - damage{a=1250;pi=true;pk=true}
+  - skill{s=InflictCurse} 0.1
+
+T8_Circle: ### Fires 8 projectiles in massive radius
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=T8B-Tick;onHit=T8B-Hit;hO=0;v=10;i=1;hR=2.5;vR=2.5}
+  - projectile{onTick=T8B-Tick;onHit=T8B-Hit;hO=45;v=10;i=1;hR=2.5;vR=2.5}
+  - projectile{onTick=T8B-Tick;onHit=T8B-Hit;hO=90;v=10;i=1;hR=2.5;vR=2.5}
+  - projectile{onTick=T8B-Tick;onHit=T8B-Hit;hO=135;v=10;i=1;hR=2.5;vR=2.5}
+  - projectile{onTick=T8B-Tick;onHit=T8B-Hit;hO=180;v=10;i=1;hR=2.5;vR=2.5}
+  - projectile{onTick=T8B-Tick;onHit=T8B-Hit;hO=225;v=10;i=1;hR=2.5;vR=2.5}
+  - projectile{onTick=T8B-Tick;onHit=T8B-Hit;hO=270;v=10;i=1;hR=2.5;vR=2.5}
+  - projectile{onTick=T8B-Tick;onHit=T8B-Hit;hO=315;v=10;i=1;hR=2.5;vR=2.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=0}
+  - effect:sound{s=entity.wither.shoot;v=1;p=1}
+T8B-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#FF00FF;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+T8B-Hit:
+  Skills:
+  - damage{a=2000;pk=true}
+
+T8_NovaBlast: ### Radial Nova attack.
+  Skills:
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.generic.explode;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.generic.explode;v=0.75;p=0.5} @PIR{r=25}
+  - effect:sound{s=entity.generic.explode;v=0.75;p=2} @PIR{r=25}
+  - effect:particlesphere{particle=largesmoke;amount=5;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=10;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=15;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=20;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=largesmoke;amount=35;r=5} @self
+  - damage{a=2500;pi=true} @PIR{r=8}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
+
+T8_SUCC: ### BIG SUCC
+  Skills:
+  - effect:enderbeam{d=60;y=0}
+  - damage{a=2000;pi=true;pk=true}
+  - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
+  - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - heal{a=500} @Self
+  - delay 15
+  - damage{a=2000;pi=true;pk=true}
+  - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
+  - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - heal{a=500} @Self
+  - delay 15
+  - damage{a=2000;pi=true;pk=true}
+  - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
+  - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - heal{a=500} @Self
+  - delay 15
+  - damage{a=2000;pi=true;pk=true}
+  - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
+  - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - heal{a=500} @Self
+  - delay 15
+  - damage{a=2000;pi=true;pk=true}
+  - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
+  - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - heal{a=500} @Self
+#
+### BOSS PHASES -------------------------------------------------------------------------
+#
+T8_Phase_1: ### Phase 1 Attack
+  Cooldown: 20
+  Conditions:
+  - targetinlineofsight true
+  - offgcd
+  Skills:
+  - gcd{ticks=400}
+  ### Does this weird reverse sweep from out --> in
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=90;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=270;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=75;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=285;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=60;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=300;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=45;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=315;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=30;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=330;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=10;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=350;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=5;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick;onHit=T8A-Hit;hO=355;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - delay 5
+  ### Does alternating wave + solo attack.
+  - skill{s=T8_WaveAttack}
+  - delay 10
+  - projectile{onTick=T8B-Tick;onHit=T8B-Hit;hO=0;v=20;i=1;hR=2.5;vR=2.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=0}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - delay 10
+  - skill{s=T8_WaveAttack}
+  - delay 10
+  - projectile{onTick=T8B-Tick;onHit=T8B-Hit;hO=0;v=20;i=1;hR=2.5;vR=2.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=0}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - delay 10
+  - skill{s=T8_WaveAttack}
+  - delay 10
+  - projectile{onTick=T8B-Tick;onHit=T8B-Hit;hO=0;v=20;i=1;hR=2.5;vR=2.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=0}
+  - effect:sound{s=entity.wither.death;v=0.5;p=2}
+  - delay 20
+  - skill{s=T8_NovaBlast} @Self
+  ### Summons some stuff after a noticeable pause. Good time to melee attack.
+  - summon{type=T8_ProjTotem;amount=4;radius=25;yr=0;yu=true} @Self
+  - delay 80
+  - skill{s=T8_SUCC} @PIR{r=30}
+  - delay 100
+  - skill{s=T8_NovaBlast} @Self
+  ### 5 Extra seconds blank for the sake of melee users.
+
+T8_Phase_2: ### Phase 2 Attack
+  Cooldown: 20
+  Conditions:
+  - targetinlineofsight true
+  - offgcd
+  Skills:
+  - gcd{ticks=400}
+  - skill{s=T8_NovaBlast} @Self
+  - skill{s=T8_Circle}
+  - delay 10
+  - skill{s=T8_WaveAttack}
+  - delay 5
+  - skill{s=T8_WaveAttack}
+  - delay 5
+  - skill{s=T8_WaveAttack}
+  - delay 5
+  - skill{s=T8_WaveAttack}
+  - delay 5
+  - skill{s=T8_WaveAttack}
+  - delay 5
+  - skill{s=T8_WaveAttack}
+  - delay 5
+  - skill{s=T8_WaveAttack}
+  - delay 5
+  - skill{s=T8_WaveAttack}
+  - delay 5
+  - skill{s=T8_WaveAttack}
+  - delay 20
+  - skill{s=T8_NovaBlast} @Self
+  - summon{type=T8_ProjTotem;amount=3;radius=25;yr=0;yu=true} @Self
+  - delay 80
+  - skill{s=T8_SUCC} @PIR{r=30}
+  - delay 80
+  - skill{s=T8_NovaBlast} @Self
+  - summon{type=T8_ProjTotem;amount=3;radius=25;yr=0;yu=true} @Self
+  - delay 80
+  - skill{s=T8_SUCC} @PIR{r=30}
+#
+### INDIVIDUAL MOB SKILLS ---------------------------------------------------------------
+#
+T8_SuicideBomb:
+  Skills:
+  - delay 195
+  - effect:particlering{particle=flame;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=flame;radius=3;points=16;amount=1;hS=1;vS=0} @self
+  - effect:particlering{particle=flame;radius=1;points=4;amount=1;hS=1;vS=0} @self
+  - effect:particlesphere{particle=flame;amount=200;r=5} @self
+  - effect:sound{s=entity.generic.explode;v=1.5;p=2} @Self
+  - effect:sound{s=entity.generic.explode;v=1.5;p=1} @Self
+  - skill{s=Chaos_100-250} @PIR{r=5}
+
+T8_MiniWave: ### Fires 3 bolts, sort of a mini version of the wave attack.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=T8A-Tick-2;onHit=T8A-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick-2;onHit=T8A-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=T8A-Tick-2;onHit=T8A-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+
+T8_WitherBolt: ### Smook blat
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=T8W-Tick;onHit=T8W-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=T8W-Tick;onHit=T8W-Hit;hO=10;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=T8W-Tick;onHit=T8W-Hit;hO=350;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=0.5}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
+  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
+T8W-Tick:
+  Skills:
+  - effect:particles{p=blockcrack_49;amount=1;speed=0;hS=0.1;vS=0.1} @origin
+  - effect:particles{p=smoke;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+T8W-Hit:
+  Skills:
+  - damage{a=2500;pi=true;pk=true}

@@ -1,0 +1,31 @@
+LeapStaff_SL_0:
+  Id: 267
+  Display: "&fWingblade"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &fCommon (Crafted)"
+  - "&0 "
+  - "&f★ &a+75% &7attack speed."
+  - "&f★ &7Right-click to dash in the"
+  - "&7  direction of your cursor."
+  - "&f★ &7Dash Length: &aShort"
+  - "&f★ &7Dash Cooldown: &cLong"
+  - "&0 "
+  - "&7“&fA sharp, curved sword"
+  - "&f forged from metals that"
+  - "&f no longer exist.&7”"
+  Enchantments:
+  - DAMAGE_ALL:500
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=LeapSlam_13} @crosshairlocation{length=10} ~onUse

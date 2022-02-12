@@ -1,0 +1,170 @@
+###---------------------------------------------------------###
+### EXPLOSIVES
+###---------------------------------------------------------###
+Grenade:
+  Id: 341
+  Display: "&fStandard Grenade&f"
+  Lore:
+  - "&7Right-click to throw."
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7Type: &fExplosives"
+  - "&7Fuse: &f3 Seconds"
+  - "&7Radius: &f4 Blocks"
+  - "&7DPS: &c0.5 - 15.0❤"
+Flashbang:
+  Id: 351
+  Data: 8
+  Display: "&2Steam Grenade&2"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7Type: &fExplosives"
+  - "&7Fuse: &f1 Second"
+  - "&7Radius: &f6 Blocks"
+  - "&7DPS: &c0.0❤"
+  - "&0 "
+  - "&7Right-click to throw. Disorientates"
+  - "&7targets upon detonation."
+FireGrenade:
+  Id: 378
+  Display: "&2Incendiary Grenade&2"
+  Lore:
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7Type: &fExplosives"
+  - "&7Fuse: &f2 Seconds"
+  - "&7Radius: &f5 Blocks"
+  - "&7DPS: &c0.5 - 15.0❤"
+  - "&0 "
+  - "&7Right-click to throw. Ignites"
+  - "&7targets upon detonation."
+BoomNuts:
+  Id: 351
+  Data: 3
+  Display: "&3Boom Nuts&3"
+  Lore:
+  - "&7Right-click to throw."
+  - "&0 "
+  - "&7Tier: &3Rare"
+  - "&0 "
+  - "&7Type: &fExplosives"
+  - "&7Fuse: &f2 Seconds"
+  - "&7Radius: &f4 Blocks"
+  - "&7DPS: &c3.0 - 9.0❤x10"
+  - "&0 "
+  - "&7“&3A cluster bomb that releases"
+  - "&3 10 bomblets upon detonation.&7”"
+FireGrenade2:
+  Id: 405
+  Display: "&9Your Mixtape&9"
+  Lore:
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fExplosives"
+  - "&7Fuse: &f1 Second"
+  - "&7Radius: &f15 Blocks"
+  - "&7DPS: &c0.5 - 15.0❤"
+  - "&0 "
+  - "&7Right-click to throw. Ignites"
+  - "&7targets upon detonation."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+VoidBurst:
+  Id: 351
+  Data: 5
+  Display: "&9Void Grenade&9"
+  Lore:
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fExplosives"
+  - "&7Fuse: &f1 Second"
+  - "&7Radius: &f8 Blocks"
+  - "&7DPS: &c0.5 - 15.0❤"
+  - "&0 "
+  - "&7Right-click to throw. Pulls enemies"
+  - "&7towards the center of detonation."
+  - "&0 "
+  - "&7“&9Infused with the essence of the"
+  - "&9 Void, this small orb can lift even"
+  - "&9 the heaviest of enemies.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+NukeGrenade:
+  Id: 351
+  Data: 10
+  Display: "&d&oNuclear Grenade&o"
+  Lore:
+  - "&0 "
+  - "&7Tier: &d&oExalted"
+  - "&0 "
+  - "&7Type: &fExplosives"
+  - "&7Fuse: &f1 Second"
+  - "&7Radius: &f15 Blocks"
+  - "&7Cooldown: &f15 Seconds"
+  - "&7DPS: &c999.0❤"
+  - "&0 "
+  - "&7Right-click to throw. Obliterates"
+  - "&7targets upon detonation."
+  - "&0 "
+  - "&7“&dThis was probably a bad idea.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Airstrike:
+  Id: 50
+  Display: "&9Airstrike Flare&9"
+  Lore:
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fFlare"
+  - "&7Fuse: &f3 Seconds"
+  - "&7Radius: &f8 Blocks"
+  - "&7Cooldown: &f15 Seconds"
+  - "&7DPS: &c20.0❤x3"
+  - "&0 "
+  - "&7Right-click to throw."
+  - "&0 "
+  - "&7“&9Calls in an airship fleet to"
+  - "&9 strike at the thrown flare.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+NukeStrike:
+  Id: 76
+  Display: "&6&oNuclear Airstrike Flare&o"
+  Lore:
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fFlare"
+  - "&7Fuse: &f5 Seconds"
+  - "&7Radius: &f20 Blocks"
+  - "&7Cooldown: &f30 Seconds"
+  - "&7DPS: &c9999.0❤"
+  - "&0 "
+  - "&7Right-click to throw."
+  - "&0 "
+  - "&7“&6Launches a nuclear strike"
+  - "&6 at the marked location.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES

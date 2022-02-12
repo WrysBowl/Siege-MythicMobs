@@ -1,0 +1,79 @@
+ChaosGolem:
+  Type: HUSK
+  Display: '&5&l<&5« &dChaos Golem &5»&5&l>'
+  Health: 1500
+  Damage: 600
+  Disguise:
+    Type: BLOCK
+    Block: COAL_BLOCK
+  HealthBar:
+    Enabled: TRUE
+    Offset: -0.35
+  ThreatTable:
+    Enabled: TRUE
+  Options:
+    KnockbackResistance: 0
+    Silent: true
+    PreventOtherDrops: true
+  Drops:
+  - Money_High
+  - Mythic
+  - Iridescent
+  Equipment:
+  - MAGMA:4
+  - MAGMA:3
+  - MAGMA:2
+  - MAGMA:1
+  AITargetSelectors:
+  - clear
+  AIGoalSelectors:
+  - clear
+  Skills: 
+  - threat{amount=1} @PIR{r=4} ~onTimer:4
+  - skill{s=ChaosGolem-Body} ~onEnterCombat
+  - skill{s=ChaosGolem-Calm} ~onPlayerKill
+  - skill{s=ChaosGolem-Calm} ~onDropCombat
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.4} @self ~onDamaged
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=2} @self ~onDamaged
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=2} @self ~onDamaged
+  - effect:sound{s=entity.zombie_horse.death;p=0.1;v=0.4} @self ~onDeath
+  - effect:sound{s=entity.zombie.death;p=0.1;v=2} @self ~onDeath
+  - effect:particles{p=largeSmoke;s=0.2;a=200;hS=0.5;vS=0.5;y=0.5} @self ~onDeath
+  - remove @children ~onDeath
+ChaosGolem-Body:
+  Type: CAVE_SPIDER
+  Display: '&5&l<&5« &dChaos Golem &5»&5&l>'
+  Health: 1500
+  Damage: 600
+  Disguise:
+    Type: SPIDER
+    Invisible: TRUE
+    Glowing: TRUE
+  ThreatTable:
+    Enabled: TRUE
+  Options:
+    ShowNameOnDamaged: true
+    Silent: true
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    PassthroughDamage: true
+  Drops:
+  - Money_High
+  - Mythic
+  - Iridescent
+  Equipment:
+  - MAGMA:4
+  - MAGMA:3
+  - MAGMA:2
+  - MAGMA:1
+  AITargetSelectors:
+  - clear
+  - players
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  Skills: 
+  - threat{amount=1} @PIR{r=6} ~onTimer:4
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.1;v=2} @self ~onSpawn
+  - effect:sound{s=entity.vex.ambient;p=0.1;v=2} @self ~onSpawn
+  - effect:particles{p=largesmoke;s=0.0;a=10;hS=0.5;vS=0.5;y=0.5} @self ~onTimer:4

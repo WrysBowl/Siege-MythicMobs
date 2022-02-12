@@ -1,0 +1,426 @@
+###---------------------------------------------------------###
+### ASSASSIN ARMOR SET
+###---------------------------------------------------------###
+Assassin_Helm:
+  Id: 298
+  Display: "&b&oAssassin's Hood"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+35% &7&omovement speed."
+  - "&b★ &7&oAdds &c&o25.0❤ &5&oChaos &7&odamage to all"
+  - "&7&o  attacks while you have &a&oInvisibility&7&o."
+  - "&b★ &7&oAdds &c&o25.0❤ &5&oChaos &7&odamage to all"
+  - "&7&o  attacks while you have &a&oNight Vision&7&o."
+  - "&b★ &7&oSet Bonus: Gain &a&oInvisibility &7&ofor 10.0s"
+  - "&7&o  whenever you hit a monster/boss."
+  - "&0 "
+  - "&7“&bDarkness resides within every being."
+  - "&b Young or old, rich or poor. None are"
+  - "&b truly free from vice...&7”"
+  Options:
+    Color: 30,30,30
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      MovementSpeed: 0.35
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=InvisChaos} @target ~onBowHit
+  - skill{s=InvisChaos} @target ~onAttack
+  - skill{s=NVisionChaos} @target ~onBowHit
+  - skill{s=NVisionChaos} @target ~onAttack
+Assassin_Chest:
+  Id: 299
+  Display: "&b&oAssassin's Tunic"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+25% &7&omovement speed."
+  - "&b★ &7&oYou have &a&oFire Resist &7&o+ &a&oResist. IV&7&o."
+  - "&7&o  (Refreshes every second)."
+  - "&b★ &7&oYour attacks inflict &f&oDeath Mark &7&ofor"
+  - "&7&o  5.0s. (Ability Cooldown: 10.0s)."
+  - "&b★ &7&oSet Bonus: Gain &a&oInvisibility &7&ofor 10.0s"
+  - "&7&o  whenever you hit a monster/boss."
+  - "&0 "
+  - "&7“&bBut who shall keep the world's order"
+  - "&b when the hearts of men sit corrupt?"
+  - "&b Fear is the sole solution...&7”"
+  Options:
+    Color: 95,95,95
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      MovementSpeed: 0.25
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=DeathMark} @target ~onAttack
+  - skill{s=DeathMark} @target ~onBowHit
+  - potion{type=FIRE_RESISTANCE;duration=200;lvl=0;overwrite=true} @Self ~onTimer:20
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=3;overwrite=true} @Self ~onTimer:20
+Assassin_Legs:
+  Id: 300
+  Display: "&b&oAssassin's Cloak"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+25% &7&omovement speed."
+  - "&b★ &7&oYou have &e&o80.0❤ &7&owhile &a&oInvisible&7&o."
+  - "&7&o  (Refreshes every second)."
+  - "&b★ &7&oAdds &c&o120.0❤ &5&oChaos &7&odamage against"
+  - "&7&o  enemies with &f&oDeath Mark&7&o."
+  - "&b★ &7&oSet Bonus: Gain &a&oInvisibility &7&ofor 10.0s"
+  - "&7&o  whenever you hit a monster/boss."
+  - "&0 "
+  - "&7“&bAnd what better fear would control"
+  - "&b than that of death? Its presence is"
+  - "&b primal---the ultimate unknown...&7”"
+  Options:
+    Color: 160,160,160
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      MovementSpeed: 0.25
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:20
+  Skills:
+  - skill{s=AssassinES} @Self ~onTimer:20
+  - skill{s=DeathMark_120} @target ~onAttack
+  - skill{s=DeathMark_120} @target ~onBowHit
+Assassin_Boots:
+  Id: 301
+  Display: "&b&oAssassin's Boots"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+35% &7&omovement speed."
+  - "&b★ &7&oGain &a&oHaste X &7&owhile you are &a&oInvisible&7&o."
+  - "&b★ &7&o25% chance to gain &a&oSpeed X &7&ofor up"
+  - "&7&o  to 10.0s whenever you hit an enemy."
+  - "&b★ &7&oSet Bonus: Gain &a&oInvisibility &7&ofor 10.0s"
+  - "&7&o  whenever you hit a monster/boss."
+  - "&0 "
+  - "&7“&bBut as one pledges their faith unto"
+  - "&b the coldness of death, they risk the"
+  - "&b loss of their own self and soul.&7”"
+  Options:
+    Color: 225,225,225
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      MovementSpeed: 0.35
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=HasteFromInvis} @Self ~onTimer:20
+  - potion{type=SPEED;duration=200;lvl=9;overwrite=true} @Self ~onAttack 0.28
+  - potion{type=SPEED;duration=200;lvl=9;overwrite=true} @Self ~onBowHit 0.22
+###---------------------------------------------------------###
+### JUGGERNAUT ARMOR SET
+###---------------------------------------------------------###
+JUGG_Helm:
+  Id: 306
+  Display: "&b&oJuggernaut's Greathelm"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+15.0❤ &7&owhile equipped."
+  - "&b★ &7&oAdds &c&o250.0-400.0❤ &7&odamage to"
+  - "&7&o  all melee attacks."
+  - "&b★ &7&oDamage from this item is tripled"
+  - "&7&o  against &4&oBleeding &7&oenemies."
+  - "&b★ &7&oSet Bonus: Adds &c&o4000.0❤ &7&oextra"
+  - "&7&o  damage to all melee attacks."
+  - "&0 "
+  - "&7“&bA warrior's spirit comes not from"
+  - "&b anger, but from discipline. Without"
+  - "&b it, they accomplish nothing...&7”"
+  Enchantments: 
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Phys_250-400} @target ~onAttack
+  - skill{s=JUGG_HelmSkill} @target ~onAttack
+  - skill{s=SetBonus_JUGG} @target ~onAttack
+JUGG_Chest:
+  Id: 307
+  Display: "&b&oJuggernaut's Cuirass"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+15.0❤ &7&owhile equipped."
+  - "&b★ &7&oYou have &a&oResist. IV &7&o+ &a&oRegen. X&7&o."
+  - "&7&o  (Refreshes every second)."
+  - "&b★ &7&oAdds &c&o350.0-500.0❤ &7&odamage to"
+  - "&7&o  all melee attacks."
+  - "&b★ &7&oSet Bonus: Adds &c&o4000.0❤ &7&oextra"
+  - "&7&o  damage to all melee attacks."
+  - "&0 "
+  - "&7“&bBut as order scales beyond the"
+  - "&b reach of the fighter, it ferments"
+  - "&b into the sin of conquest...&7”"
+  Enchantments: 
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Phys_350-500} @target ~onAttack
+  - potion{type=REGENERATION;duration=200;lvl=9;overwrite=true} @Self ~onTimer:20
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=3;overwrite=true} @Self ~onTimer:20
+JUGG_Legs:
+  Id: 308
+  Display: "&b&oJuggernaut's Platelegs"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+15.0❤ &7&owhile equipped."
+  - "&b★ &7&oRestore &c&o20.0❤ &7&owhen you hit an"
+  - "&7&o  enemy with a melee attack."
+  - "&b★ &7&oRestore &c&o10.0❤ &7&oevery second"
+  - "&7&o  while you have &a&oRegeneration&7&o."
+  - "&b★ &7&oSet Bonus: Adds &c&o4000.0❤ &7&oextra"
+  - "&7&o  damage to all melee attacks."
+  - "&0 "
+  - "&7“&bOnly war remains, and individual"
+  - "&b skill becomes outmoded in favor"
+  - "&b of strategy and automation...&7”"
+  Enchantments: 
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Color: 150,65,0
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - heal{a=40} @Self ~onAttack
+  - skill{s=JUGG_LegsSkill} @Self ~onTimer:10
+JUGG_Boots:
+  Id: 309
+  Display: "&b&oJuggernaut's Sabatons"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+50% &7&omovement speed."
+  - "&b★ &c&o+15.0❤ &7&owhile equipped."
+  - "&b★ &7&oYou cannot be &8&oSlowed&7&o, &b&oChilled&7&o,"
+  - "&7&o  or &b&oFrozen &7&oby enemy attacks."
+  - "&b★ &7&oSet Bonus: Adds &c&o4000.0❤ &7&oextra"
+  - "&7&o  damage to all melee attacks."
+  - "&0 "
+  - "&7“&bNow none divides the conqueror"
+  - "&b from the conquered except for"
+  - "&b mere perseverance.&7”"
+  Enchantments: 
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Options:
+    Color: 200,80,0
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 30.0
+      MovementSpeed: 0.5
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=CancelSlowness} @Self ~onTimer:1
+  - skill{s=CancelFatigue} @Self ~onTimer:1
+###---------------------------------------------------------###
+### GUARDIAN ARMOR SET
+###---------------------------------------------------------###
+Guardian_Helm:
+  Id: 310
+  Display: "&b&oGuardian's Crest"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oAdds &c&o150.0-300.0❤ &7&odamage to"
+  - "&7&o  all your attacks."
+  - "&b★ &7&oYou have &a&oResist. IV &7&o+ &a&oRegen. X&7&o."
+  - "&7&o  (Refreshes every second)."
+  - "&b★ &7&oSet Bonus: You and all players"
+  - "&7&o  within 20 blocks have &e&o100.0❤&7&o."
+  - "&7&o  (Refreshes once every 3.0s.)"
+  - "&0 "
+  - "&7“&bMortals and Eternals once lived"
+  - "&b in harmony, free from the grasp"
+  - "&b of conflict and war...&7”"
+  Enchantments: 
+  - PROTECTION_ENVIRONMENTAL:20
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Phys_150-300} @target ~onAttack
+  - skill{s=Phys_150-300} @target ~onBowHit
+  - potion{type=REGENERATION;duration=200;lvl=9;overwrite=true} @Self ~onTimer:20
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=3;overwrite=true} @Self ~onTimer:20
+  - skill{s=SetBonus_Guardian} @Self ~onTimer:60
+Guardian_Chest:
+  Id: 311
+  Display: "&b&oGuardian's Platemail"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+10.0❤ &7&owhile equipped."
+  - "&b★ &7&oYou ignore all physical damage"
+  - "&7&o  for 5.0s after suffering from"
+  - "&d&o  Levitation&7&o. (Cooldown: 10.0s)."
+  - "&b★ &7&oSet Bonus: You and all players"
+  - "&7&o  within 20 blocks have &e&o100.0❤&7&o."
+  - "&7&o  (Refreshes once every 3.0s.)"
+  - "&0 "
+  - "&7“&bBut all was destroyed when the"
+  - "&b Void woke from its slumber, and"
+  - "&b so ended the world we knew...&7”"
+  Enchantments: 
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Guardian_ChestSkill} @Self ~onTimer:10
+Guardian_Legs:
+  Id: 312
+  Display: "&b&oGuardian's Robes"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+10.0❤ &7&owhile equipped."
+  - "&b★ &7&oRestore &c&o15.0❤ &7&oto all players"
+  - "&7&o  within 15 blocks every second"
+  - "&7&o  while you have &a&oRegeneration&7&o."
+  - "&b★ &7&oSet Bonus: You and all players"
+  - "&7&o  within 20 blocks have &e&o100.0❤&7&o."
+  - "&7&o  (Refreshes once every 3.0s.)"
+  - "&0 "
+  - "&7“&bWithin the turmoil, a few stayed"
+  - "&b resolute, founding an order to"
+  - "&b protect us from corruption...&7”"
+  Enchantments: 
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+  Attributes:
+    Legs:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Guardian_LegsSkill} @Self ~onTimer:10
+Guardian_Boots:
+  Id: 313
+  Display: "&b&oGuardian's Sandals"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+75% &7&omovement speed."
+  - "&b★ &7&oYou and all players within 15"
+  - "&7&o  blocks cannot &8&oSlowed&7&o."
+  - "&b★ &7&oSet Bonus: You and all players"
+  - "&7&o  within 20 blocks have &e&o100.0❤&7&o."
+  - "&7&o  (Refreshes once every 3.0s.)"
+  - "&0 "
+  - "&7“&bThus the Guardians were born,"
+  - "&b the last line of defense against"
+  - "&b all-consuming darkness.&7”"
+  Enchantments: 
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.75
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=CancelSlowness} @PIR{r=15} ~onTimer:1

@@ -1,0 +1,141 @@
+HealingPointer: ### Pointer mob for healing beacon skill
+  Type: COW
+  Display: ''
+  Health: 1000
+  Damage: 0
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=4} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=BeaconSkill} @Self ~onSpawn
+  - remove{delay=100} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+CorpseExplosion: ### Exploding Corpse
+  Type: SKELETON
+  Display: "&8« &7Corpse &8»"
+  Health: 1000
+  Damage: 0
+  Faction: Totem
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onTimer:10
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+### SKILLS
+  - remove{delay=10} @Self ~onSpawn
+  - skill{s=Megumin} @Self ~onSpawn
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2} @Self ~onSpawn
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1} @Self ~onSpawn
+  - skill{s=Chaos_100-250} @EntitiesInRadius{r=5;ignore=players,samefaction} ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+BleedExplosion: ### Chain Bleed Attack
+  Type: SILVERFISH
+  Health: 1000
+  Damage: 0
+  Faction: Totem
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onSpawn
+### SKILLS
+  - remove{delay=60} @Self ~onSpawn
+  - skill{s=A15_BleedNova} @Self ~onSpawn
+  - skill{s=Bleed_100} @EntitiesInRadius{r=5;ignore=players,samefaction} ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+    NoAI: true
+FrostExplosion: ### Frost Bomb backend mob
+  Type: SILVERFISH
+  Health: 1000
+  Damage: 0
+  Faction: Totem
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Skills:
+### INITIALIZATION
+  - potion{type=FIRE_RESISTANCE;duration=200;level=0} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;level=0} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=4;overwrite=true} @Self ~onSpawn
+### SKILLS
+  - remove{delay=10} @Self ~onSpawn
+  - effect:sound{s=block.glass.break;v=2;p=2} @Self ~onSpawn
+  - effect:sound{s=block.glass.break;v=2;p=1} @Self ~onSpawn
+  - effect:sound{s=block.glass.break;v=2;p=0} @Self ~onSpawn
+  - skill{s=InflictFreeze} @EntitiesInRadius{r=5;ignore=players,samefaction} ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true
+    NoAI: true

@@ -1,0 +1,58 @@
+###---------------------------------------------------------###
+### HUNTING HOUSE ITEMS (special currency, etc)
+###---------------------------------------------------------###
+HH_1:
+  Id: 263
+  Data: 1
+  Display: "&cCorrupted Fragment"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&c★ &7&oCan be traded with NPCs in"
+  - "&7&o  the Hunter's Covenant."
+  - "&0 "
+  - "&7“&cA piece of a monster's soul,"
+  - "&c tainted beyond salvation by"
+  - "&c an unknown force.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+HH_2:
+  Id: 263
+  Data: 1
+  Display: "&4Greater Corrupted Fragment"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&4★ &7&oCan be traded with NPCs in"
+  - "&7&o  the Hunter's Covenant."
+  - "&0 "
+  - "&7“&4A large piece of a monster's"
+  - "&4 soul, nearly destroyed from"
+  - "&4 exposure to dark energies.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+HH_3:
+  Id: 263
+  Data: 1
+  Display: "&4&oEssence of S&c&ohadows"
+  Lore:
+  - "&7Currency Item"
+  - "&0 "
+  - "&4★ &7&oCan be traded with NPCs in"
+  - "&7&o  the Hunter's Covenant."
+  - "&0 "
+  - "&7“&4An unstable so&cul--shrouded"
+  - "&c in dar&4kness after centu&cries"
+  - "&c of corr&4uption.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+### HUNTING HOUSE UNIQUE ITEMS ------------------------------------

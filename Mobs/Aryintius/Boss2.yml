@@ -1,0 +1,60 @@
+Boss2:
+  Type: HUSK
+  Display: '&6&l<&6« &eY''razotj &6»&6&l>'
+  Health: 7000
+  Damage: 200
+  BossBar:
+    Enabled: true
+    Title: '&6&l<&6« &eY''razotj the Scourge &6»&6&l>'
+    Range: 50
+    Color: YELLOW
+    Style: SOLID
+  Equipment:
+  - GHelm:4
+  - GChest:3
+  - GLegs:2
+  - GBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Currency_Trials_Boss
+  - Boss2
+  - Boss2_Set
+  - UpperKey
+  - Mythic
+  - Corrupted
+  - Iridescent
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fME SMELL YOU... ME KILL!"} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &fYOU NO KILL I! ME KILL YOU!",
+      "<mob.name> &fFIGHT MAKE ME ANGRY. YOU DIE NOW!",
+      "<mob.name> &fI WILL CRUSH YOU INTO PANCAKE!";
+      } @PIR{r=25} ~onTimer:300
+### PHASE 1
+  - skill{s=Boss2_Teleport} @target ~onTimer:300 >50%
+  - skill{s=Boss2_Buffs} @Self ~onTimer:600 >50%
+  - skill{s=Boss2_Fire} @PIR{r=30} ~onTimer:100 >50%
+  - skill{s=Boss2_Drag} @PIR{r=15} ~onTimer:400 >50%
+### PHASE 2
+  - skill{s=Boss2_Teleport} @target ~onTimer:150 <50%
+  - skill{s=Boss2_Buffs} @Self ~onTimer:300 <50%
+  - skill{s=Boss2_Fire} @PIR{r=30} ~onTimer:50 <50%
+  - skill{s=Boss2_Drag} @PIR{r=15} ~onTimer:300 <50%
+### DEATH
+  - message{m="<mob.name> &fME... DIE?"} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=1;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

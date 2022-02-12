@@ -1,0 +1,573 @@
+##
+### ARMOR (HELMS) ----------------------------------------------
+##
+Helm_Chaos:
+  Id: 298
+  Display: "&4&oWa&c&orbring&4&oer"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &c&o+10.0❤ &7&owhile equipped."
+  - "&c★ &7&oAdds &c&o3.0❤ &5&oChaos &7&odamage to all"
+  - "&7&o  attacks for every 10 &a&oStrength&7&o."
+  - "&7&o  (E.g. 15.0 extra Chaos damage"
+  - "&7&o  from Strength L.)"
+  - "&4★ &7&oYou cannot have gold hearts."
+  - "&0 "
+  - "&7“&4Eve&cry battle mak&4es us str&conger.&7”"
+  Options:
+    Unbreakable: true
+    Color: 120,0,0
+  Attributes:
+    Head:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=CancelAbsorption} @self ~onTimer:1
+  - skill{s=ChaosFromStrength_High} @self ~onAttack
+  - skill{s=ChaosFromStrength_High} @self ~onBowHit
+Helm_Blind:
+  Id: 310
+  Display: "&4&oBl&c&oind Justi&4&oce"
+  Lore:
+  - "&7No Enchantments"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &c&o+10.0❤ &7&owhile equipped."
+  - "&4★ &7&oAdds &c&o750.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to next melee attack once"
+  - "&7&o  every 2.0s."
+  - "&c★ &7&oYou have &8&oBlindness&7&o."
+  - "&7&o  (Refreshes every second)."
+  - "&0 "
+  - "&7“&4In d&carkness, little separ&4ates"
+  - "&4 the jus&ct from the ve&4ngeful.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - potion{type=BLINDNESS;duration=200;lvl=0;overwrite=true} @Self ~onTimer:20
+  - skill{s=MeleeCrit_Chaos} @target ~onAttack
+Helm_Frenzy:
+  Id: 314
+  Display: "&4&oTh&c&oe Ravag&4&oer"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &c&o+10.0❤ &7&owhile equipped."
+  - "&c★ &7&oYou have &a&oHaste X &7&o+ &a&oSpeed X&7&o."
+  - "&7&o  (Refreshes every second)."
+  - "&4★ &7&oTake &c&o1000.0❤ &7&odamage every"
+  - "&7&o  time you attack an enemy."
+  - "&0 "
+  - "&7“&4The g&createst fighter&4s always"
+  - "&4 sa&ccrifice their hum&4anity.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - potion{type=SPEED;duration=60;lvl=9;overwrite=true} @Self ~onTimer:20
+  - potion{type=FAST_DIGGING;duration=60;lvl=9;overwrite=true} @Self ~onTimer:20
+  - damage{a=2000;pi=true;pk=true} @Self ~onAttack
+  - damage{a=2000;pi=true;pk=true} @Self ~onBowHit
+Helm_Melee:
+  Id: 302
+  Display: "&4&oIm&c&operfecti&4&oon"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &c&o+15.0❤ &7&owhile equipped."
+  - "&4★ &7&oAdds &c&o1500.0-2500.0❤ &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&4★ &7&oYou cannot have &a&oStrength&7&o."
+  - "&0 "
+  - "&7“&4De&cstruction is the making o&4f a"
+  - "&4 fool, un&cable to co&4rrect even"
+  - "&4 the sim&cplest of mistak&4es.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Phys_1500-2500} @target ~onAttack
+  - skill{s=CancelStrength} @Self ~onTimer:1
+Helm_Ranger:
+  Id: 306
+  Display: "&4&oAn&c&onihilati&4&oon"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &7&o25% chance to inflict &c&o300.0❤ &2&oToxin"
+  - "&7&o  damage over a period of 1.5s with"
+  - "&7&o  your ranged/magic attacks."
+  - "&c★ &7&oYou cannot have &a&oSpeed&7&o."
+  - "&4★ &7&oYou cannot have &a&oStrength&7&o."
+  - "&0 "
+  - "&7“&4De&cstruction is the tool of a cun&4ning"
+  - "&4 conquero&cr, inspiring bot&4h fear and"
+  - "&4 loy&calty amongst the subjug&4ated.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Poison_300X} @target ~onBowHit 0.25
+  - skill{s=CancelStrength} @Self ~onTimer:1
+  - skill{s=CancelSpeed} @Self ~onTimer:1
+##
+### ARMOR (CHESTPLATES) ----------------------------------------
+##
+Chest_Phys:
+  Id: 299
+  Display: "&4&oTh&c&oe Undaun&4&oted"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &c&o+40.0❤ &7&owhile equipped."
+  - "&c★ &7&oAdds &c&o250.0❤ &7&odamage to all"
+  - "&7&o  ranged/magic attacks."
+  - "&c★ &7&oAdds &c&o750.0❤ &7&odamage to all"
+  - "&7&o  melee attacks."
+  - "&4★ &7&oYou cannot have &a&oResistance&7&o."
+  - "&0 "
+  - "&7“&4I canno&ct feel fear, o&4nly the"
+  - "&4 ru&csh of bloo&4d and anger.&7”"
+  Options:
+    Unbreakable: true
+    Color: 40,0,120
+  Attributes:
+    Chest:
+      Health: 80.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=CancelResist} @self ~onTimer:1
+  - damage{a=1500;pk=true} @target ~onAttack
+  - damage{a=500;pk=true} @target ~onBowHit
+Chest_Melee:
+  Id: 307
+  Display: "&4&oTh&c&oe Gryph&4&oon"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &c&o+20.0❤ &7&owhile equipped."
+  - "&c★ &7&oAdds &c&o2000.0-3500.0❤ &7&odamage to"
+  - "&7&o  all melee attacks."
+  - "&4★ &7&oTake &c&o1000.0❤ &7&odamage when you"
+  - "&7&o  hit an enemy with ranged/magic"
+  - "&7&o  attacks."
+  - "&0 "
+  - "&7“&4High ab&cove the jagged mounta&4ins,"
+  - "&4 the k&cing of birds gentl&4y basks in"
+  - "&4 the warmth o&cf the rising sun.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=Phys_2000-3500} @target ~onAttack
+  - damage{a=2000;pi=true;pk=true} @Self ~onBowHit
+Chest_Ranger:
+  Id: 303
+  Display: "&4&oTh&c&oe Chime&4&ora"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &7&oAdds &c&o500.0-1000.0❤ &7&odamage"
+  - "&7&o  to all ranged/magic attacks."
+  - "&c★ &7&o10% chance to refresh your"
+  - "&7&o  gold hearts when you attack."
+  - "&4★ &7&oTake &c&o1000.0❤ &7&odamage every"
+  - "&7&o  time your melee attacks hit."
+  - "&0 "
+  - "&7“&4Th&ce creature with a thous&4and"
+  - "&4 faces l&cies within th&4e deepest"
+  - "&4 cha&csm of the abyss.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Phys_500-1000} @target ~onBowHit
+  - skill{s=RestoreEqualES_NoSound} @Self ~onAttack 0.1
+  - skill{s=RestoreEqualES_NoSound} @Self ~onBowHit 0.1
+  - damage{a=1000;pi=true;pk=true} @Self ~onAttack
+Chest_Decay:
+  Id: 315
+  Display: "&4&oFl&c&oeeting Victo&4&ory"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &a&o+30% &7&omovement speed."
+  - "&c★ &7&oSet your gold hearts to &e&o80.0❤"
+  - "&7&o  whenever you hit an enemy."
+  - "&7&o  (Hearts rapidly decay over a"
+  - "&7&o  period of 1.5s)."
+  - "&0 "
+  - "&7“&4Tim&ce is the enemy of progr&4ess.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      MovementSpeed: 0.3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=RapidDecayES} @Self ~onAttack
+  - skill{s=RapidDecayES} @Self ~onBowHit
+Chest_Lethal:
+  Id: 315
+  Display: "&4&oCu&c&orsed Shro&4&oud"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &7&oYou have &a&oResistance V&7&o."
+  - "&c★ &7&o13% chance for enemy hits to"
+  - "&7&o  deal lethal damage."
+  - "&4★ &7&oDamage from lethal hits cannot"
+  - "&7&o  be mitigated or reflected."
+  - "&0 "
+  - "&7“&4Morta&cls loved by the di&4vine were"
+  - "&4 given ma&cny gifts, igno&4rant to the"
+  - "&4 effe&ccts on the unwo&4rthy.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=4;overwrite=true} @Self ~onTimer:20
+  - skill{s=TakeLethalDamageOnHit} @Self ~onDamaged 0.13
+##
+### ARMOR (LEGGINGS) -------------------------------------------
+##
+Legs_Chaos:
+  Id: 300
+  Display: "&4&oSha&c&odowma&4&oil"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &c&o+10.0❤ &7&owhile equipped."
+  - "&c★ &7&oAdds &c&o40.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all of your attacks."
+  - "&4★ &7&oYou take &c&o1.0❤ &5&oChaos &7&odamage"
+  - "&7&o  every time you hit an enemy."
+  # - "&4★ &5&oChaos &7&odamage ignores armor,"
+  # - "&7&o  resistance, and gold hearts."
+  - "&0 "
+  - "&7“&4What happen&cs to survivors of"
+  - "&c a lan&4d unknown? Some may r&cise,"
+  - "&c oth&4ers fall. And so&cme... do both.&7”"
+  Options:
+    Unbreakable: true
+    Color: 40,0,120
+  Attributes:
+    Legs:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=Chaos_1} @Self ~onAttack
+  - skill{s=Chaos_1} @Self ~onBowHit
+  - skill{s=Chaos_40} @target ~onAttack
+  - skill{s=Chaos_40} @target ~onBowHit
+Legs_FullHeal:
+  Id: 304
+  Display: "&4&oIn&c&ooculati&4&oon"
+  Lore:
+  - "&7Protection XX"
+  - "&7Projectile Protection XX"
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCo&c&orrupt&4&oed"
+  - "&0 "
+  - "&4★ &c&o+20.0❤ &7&owhile equipped."
+  - "&c★ &7&oRestore 40% of your maximum"
+  - "&7&o  health when you take damage."
+  - "&4★ &7&oYou cannot have &a&oRegeneration&7&o."
+  - "&0 "
+  - "&7“&4Ther&ce exists a certain se&4renity"
+  - "&4 achieva&cble only from sa&4crifice.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 40.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  - PROTECTION_EXPLOSIONS:20
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=CancelRegen} @self ~onTimer:1
+  - healpercent{m=0.4} @self ~onDamaged
+Legs_Block:
+  Id: 304
+  Display: "&4&oIntangibility"
+  Lore:
+  - "&7Protection XX"
+  - "&7Projectile Protection XX"
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCo&c&orrupt&4&oed"
+  - "&0 "
+  - "&4★ &c&o+20.0❤ &7&owhile equipped."
+  - "&c★ &7&oIgnore physical melee damage."
+  - "&0 "
+  - "&7“&4Ther&ce exists a certain se&4renity"
+  - "&4 achieva&cble only from sa&4crifice.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 40.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  - PROTECTION_EXPLOSIONS:20
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=CancelDamage;sync=true} ~onDamaged
+##
+### ARMOR (BOOTS) ----------------------------------------------
+##
+Boots_Featherborne:
+  Id: 301
+  Display: "&4&oFe&c&oatherb&c&oorne Boo&4&ots"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c★ &a&o+50% &7&omovement speed."
+  - "&4★ &c&o+20.0❤ &7&owhile equipped."
+  - "&4★ &7&oGain &a&oSpeed IV &7&o+ &a&oJump Boost III"
+  - "&7&o  for up to 10.0s whenever you"
+  - "&7&o  take damage."
+  - "&c★ &7&oYou have &8&oFatigue &7&o+ &8&oWeakness II&7&o."
+  - "&0 "
+  - "&7“&4A sac&crifice of some vigor brin&4gs"
+  - "&4 to you nearly p&cerpetual m&4obility.&7”"
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Attributes:
+    Feet:
+      MovementSpeed: 0.5
+      Health: 40.0
+  Options:
+    Color: 180,0,0
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - potion{type=SPEED;duration=200;lvl=3;overwrite=true} @Self ~onDamaged
+  - potion{type=JUMP;duration=200;lvl=2;overwrite=true} @Self ~onDamaged
+  - potion{type=SLOW_DIGGING;duration=200;lvl=0;overwrite=true} @Self ~onTimer:20
+  - potion{type=WEAKNESS;duration=200;lvl=0;overwrite=true} @Self ~onTimer:20
+Boots_ShockFrost:
+  Id: 301
+  Display: "&4&oMa&c&oelstr&4&oom"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c★ &a&o+75% &7&omovement speed."
+  - "&4★ &c&o+10.0❤ &7&owhile equipped."
+  - "&c★ &7&oEnemies you have &3&oShocked &7&oare"
+  - "&7&o  also &b&oFrozen &7&ofor up to 5.0s."
+  - "&4★ &7&oYou are &3&oShocked &7&owhile you are"
+  - "&8&o  Slowed&7&o, &b&oChilled&7&o, or &b&oFrozen&7&o."
+  - "&0 "
+  - "&7“&4To co&cmbine the elemen&4ts was to"
+  - "&4 tempt t&che Void itse&4lf.&7”"
+  Options:
+    Unbreakable: true
+    Color: 30,180,180
+  Attributes:
+    Feet:
+      MovementSpeed: 0.75
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Skills:
+  - skill{s=ShockedWhileFrozen} @self ~onTimer:5
+  - skill{s=FrozenWhileShocked} @target ~onAttack
+  - skill{s=FrozenWhileShocked} @target ~onBowHit
+Boots_Madness:
+  Id: 317
+  Display: "&4&oTo&c&otal Madne&4&oss"
+  Lore:
+  - "&7No Enchantments"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c★ &a&o+50% &7&omovement speed."
+  - "&4★ &7&oWhenever you attack, gain"
+  - "&7&o  a random positive effect"
+  - "&7&o  for up to 5.0s."
+  - "&c★ &7&oWhenever you take damage,"
+  - "&7&o  suffer a random negative"
+  - "&7&o  effect for up to 5.0s."
+  - "&0 "
+  - "&7“&4Whe&cn the forces of goo&4d and"
+  - "&4 evil com&ce togethe&4r, only chaos"
+  - "&4 wil&cl remain.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      MovementSpeed: 0.5
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - skill{s=RandomGoodStuff} @Self ~onAttack
+  - skill{s=RandomGoodStuff} @Self ~onBowHit
+  - skill{s=RandomBadStuff} @Self ~onDamaged
+Boots_NoSpeed:
+  Id: 301
+  Display: "&4&oOn&c&oslaug&4&oht"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &c&o+20.0❤ &7&owhile equipped."
+  - "&c★ &a&o+150% &7&omovement speed."
+  - "&4★ &7&oYou cannot have &a&oSpeed&7&o."
+  - "&0 "
+  - "&7“&4Ther&ce can be n&4o amends"
+  - "&4 i&cn a wa&4r that nev&cer ends.&7”"
+  Options:
+    Unbreakable: true
+    Color: 0,120,0
+  Attributes:
+    Feet:
+      Health: 40.0
+      MovementSpeed: 1.5
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Skills:
+  - skill{s=CancelSpeed} @self ~onTimer:1

@@ -1,0 +1,121 @@
+### TALISMANS (LEGACY) -----------------------------------------
+LGC_Talisman_1:
+  Id: 318
+  Display: "&6&oTalisman of Shielding"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6» &7&oActive Skill (Right-click):"
+  - "&6★ &7&oSet your gold hearts to &e&o80.0❤"
+  - "&7&o  for up to 3.0s."
+  - "&6★ &c&oSkill has a cooldown of 5.0s."
+  - "&6» &7&oPassive Skill (Off-hand):"
+  - "&6★ &7&oSet your gold hearts to &e&o40.0❤"
+  - "&7&o  once every 1.5s."
+  - "&6★ &c&oRegeneration has no effect."
+  - "&0 "
+  - "&7“&6Blessed by dust from the realm"
+  - "&6 of the Titans, this carved stone"
+  - "&6 gleams with unimaginable power.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  Skills:
+  - skill{s=ES_40} @Self ~onTimer:30
+  - skill{s=Tal_ESCharge} @Self ~onUse
+  - skill{s=CancelRegen} @Self ~onTimer:5
+LGC_Talisman_2:
+  Id: 318
+  Display: "&6&oTalisman of Restoration"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6» &7&oActive Skill (Right-click):"
+  - "&6★ &7&oRestore &c&o80.0❤ &7&oover a period"
+  - "&7&o  of 2.5s."
+  - "&6★ &c&oSkill has a cooldown of 5.0s."
+  - "&6» &7&oPassive Skill (Off-hand):"
+  - "&6★ &c&o+30.0❤ &7&omaximum health."
+  - "&6★ &7&oRestore &c&o10.0❤ &7&oevery second."
+  - "&0 "
+  - "&7“&6Blessed by dust from the realm"
+  - "&6 of the Titans, this carved stone"
+  - "&6 gleams with unimaginable power.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 60.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=Tal_Restore} @Self ~onUse
+  - heal{a=10} @Self ~onTimer:10
+LGC_Talisman_3:
+  Id: 318
+  Display: "&6&oTalisman of Shaping"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6» &7&oActive Skill (Right-click):"
+  - "&6★ &7&oGain a random positive effect"
+  - "&7&o  for up to 5.0s."
+  - "&6★ &c&oSkill has a cooldown of 5.0s."
+  - "&6» &7&oPassive Skill (Off-hand):"
+  - "&6★ &c&o+20.0❤ &7&omaximum health."
+  - "&6★ &7&o35% chance for your attacks"
+  - "&7&o  to inflict &d&oCurse &7&oon enemies."
+  - "&0 "
+  - "&7“&6Blessed by dust from the realm"
+  - "&6 of the Titans, this carved stone"
+  - "&6 gleams with unimaginable power.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=Tal_RGS} @Self ~onUse
+  - skill{s=InflictCurse} @target ~onAttack 0.35
+  - skill{s=InflictCurse} @target ~onBowHit 0.35
+LGC_Talisman_4:
+  Id: 318
+  Display: "&6&oTalisman of Rage"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6» &7&oActive Skill (Right-click):"
+  - "&6★ &7&oGain &a&oStrength CC &7&ofor 10.0s."
+  - "&6★ &c&oSkill has a cooldown of 15.0s."
+  - "&6» &7&oPassive Skill (Off-hand):"
+  - "&6★ &c&o+20.0❤ &7&omaximum health."
+  - "&6★ &7&oGain &a&oHaste X &7&oand &a&oSpeed X &7&ofor"
+  - "&7&o  10.0s once every 20.0s."
+  - "&0 "
+  - "&7“&6Blessed by dust from the realm"
+  - "&6 of the Titans, this carved stone"
+  - "&6 gleams with unimaginable power.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=Tal_Enrage} @Self ~onUse
+  - skill{s=Tal_Frenzy} @Self ~onTimer:10

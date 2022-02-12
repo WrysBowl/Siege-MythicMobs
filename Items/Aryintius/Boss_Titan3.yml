@@ -1,0 +1,166 @@
+### VRAAST ITEMS -------------------------------------------------
+## These unique items drop exclusively from Vraast, Heir of Frost.
+FrostBow:
+  Id: 261
+  Display: "&6&oVraast's Reach&7&7"
+  Lore:
+  - "&7Power C"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &f✷"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c750.0❤x5"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&6★ &7&oFully-draw shots to cast ability."
+  - "&6★ &7&o50% ability critical strike chance."
+  - "&6★ &7&o3.0x ability damage on critical hit."
+  - "&6★ &7&oAbility &b&oFreezes &7&otargets for 5.0s."
+  - "&0 "
+  - "&7“&6Enemies slain by Vraast would quickly"
+  - "&6 be absorbed into the frost legion, an"
+  - "&6 undead army of terrifying power.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:100
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+FrostBomb:
+  Id: 79
+  Display: "&6&oFrost Bomb&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &f✷"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Slow"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c750.0❤"
+  - "&0 "
+  - "&6★ &7&oBolts explode upon impact."
+  - "&6★ &7&oExplosion has a 5 block radius."
+  - "&6★ &7&oExplosion &b&oFreezes &7&oall targets"
+  - "&7&o  in radius for up to 10.0s."
+  - "&0 "
+  # - "&7“&6Astounded by his freedom without"
+  # - "&6 a heart, Vraast beheaded millions"
+  # - "&6 in his pursuit of power.&7”"
+  - "&7“&6Anger had fermented into hatred"
+  - "&6 deep within Vraast's heart. Soon,"
+  - "&6 he and his legion fell to the Void.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Skills:
+  - summon{type=FrostExplosion;amount=1;radius=1;yu=true} @target ~onBowHit
+FrostAxe:
+  Id: 279
+  Display: "&6&oSubjugation"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &f✷"
+  - "&0 "
+  - "&6★ &a&o+75% &7&oattack speed."
+  - "&6★ &7&o35% chance for your melee"
+  - "&7&o  attacks to &b&oFreeze &7&oall enemies"
+  - "&7&o  within 5 blocks for up to 5.0s."
+  - "&0 "
+  - "&7“&6Defiance was the quickest path"
+  - "&6 to total destruction in the eyes"
+  - "&6 of the mad titan.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictFreeze} @EntitiesInRadius{r=5;ignore=players} ~onAttack 0.35
+FrostChest:
+  Id: 303
+  Display: "&6&oVraast's Chains"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &f✷"
+  - "&0 "
+  - "&6★ &c&o+15.0❤ &7&owhile equipped."
+  - "&6★ &7&o50% chance for your attacks"
+  - "&7&o  to &b&oFreeze &7&oenemies for 5.0s."
+  - "&6★ &7&oEnemies within 5 blocks of you"
+  - "&7&o  are &b&oFrozen &7&ofor 5.0s whenever"
+  - "&7&o  you take damage."
+  - "&7&o  (Ability Cooldown: 3.0s)"
+  - "&0 "
+  - "&7“&6The heir of frost would not sit"
+  - "&6 idle in his prison, and soon his"
+  - "&6 dominion would free him.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack 0.5
+  - skill{s=InflictFreeze} @target ~onBowHit 0.5
+  - skill{s=Item_IceNova} @Self ~onDamaged
+FrostBoots:
+  Id: 301
+  Display: "&6&oRimestride"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &f✷"
+  - "&0 "
+  - "&6★ &a&o+50% &7&omovement speed."
+  - "&6★ &7&oAdds &c&o200.0-350.0❤ &7&odamage to all"
+  - "&7&o  attacks against &b&oFrozen &7&oenemies."
+  - "&6★ &7&oYou cannot be &8&oSlowed&7&o, &b&oChilled&7&o, or"
+  - "&b&o  Frozen &7&oby enemy attacks."
+  - "&0 "
+  - "&7“&6As winter draws closer with every"
+  - "&6 step, it leaves a chilling reminder"
+  - "&6 of the heir of frost.&7”"
+  Options:
+    Unbreakable: true
+    Color: 255,255,255
+  Attributes:
+    Feet:
+      MovementSpeed: 0.5
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Skills:
+  - skill{s=CancelSlowness} @Self ~onTimer:1
+  - skill{s=CancelFatigue} @Self ~onTimer:1
+  - skill{s=Freeze_200-350} @target ~onAttack
+  - skill{s=Freeze_200-350} @target ~onBowHit

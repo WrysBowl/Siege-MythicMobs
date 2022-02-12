@@ -1,0 +1,756 @@
+#
+### ARMOR (HELMETS) --------------------------------------------
+#
+T1_A1:
+  Id: 310
+  Display: "&5&oSeer's Vigil"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &a&o+30% &7&omovement speed."
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&oYou are immune to &8&oBlindness&7&o."
+  - "&0 "
+  - "&7“&5None can deceive the watchers"
+  - "&5 of time--they see not with their"
+  - "&5 eyes, only their minds.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.3
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_EXPLOSIONS:10
+  Skills:
+  - skill{s=CancelBlindness} @Self ~onTimer:1
+T1_A2:
+  Id: 302
+  Display: "&5&oHorned Helmet"
+  Lore:
+  - "&7Protection XV"
+  - "&7Projectile Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+15.0❤ &7&owhile equipped."
+  - "&5★ &7&oYou have &a&oStrength LXV&7&o."
+  - "&7&o  (Refreshes every 8.0s)."
+  - "&5★ &7&oAdds &c&o25.0-75.0❤ &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&0 "
+  - "&7“&5Wearing this makes you feel"
+  - "&5 very aggressive.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:15
+  - PROTECTION_PROJECTILE:15
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=200;lvl=64;overwrite=true} @Self ~onTimer:160
+  - skill{s=Phys_25-75} @target ~onAttack
+T1_A3:
+  Id: 310
+  Display: "&5&oMind Shield"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &a&o+30% &7&omovement speed."
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&oSet your gold hearts to &e&o40.0❤"
+  - "&7&o  for 10.0s once every 5.0s."
+  - "&0 "
+  - "&7“&5Discipline trains integrity in both"
+  - "&5 the body and the mind.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: 0.3
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=19;overwrite=true} @Self ~onTimer:100
+T1_A4:
+  Id: 298
+  Display: "&5&oBloodscreech"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&o50% chance for your melee attacks"
+  - "&7&o  to deal &c&o30.0❤ &4&oBleed &7&odamage over a"
+  - "&7&o  period of 1.5s."
+  - "&5★ &7&o25% chance for your melee attacks"
+  - "&7&o  to deal &c&o60.0❤ &4&oBleed &7&odamage over a"
+  - "&7&o  period of 1.5s."
+  - "&0 "
+  - "&7“&5Flesh is only a prison for my infinite"
+  - "&5 hunger and ambition.&7”"
+  Options:
+    Color: 128,50,50
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=Bleed_30} @target ~onAttack 0.5
+  - skill{s=Bleed_60} @target ~onAttack 0.25
+T1_A5:
+  Id: 306
+  Display: "&5&oGolem Skull"
+  Lore:
+  - "&7Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&oAdds &c&o75.0-150.0❤ &7&odamage to"
+  - "&7&o  all melee attacks."
+  - "&5★ &7&oAdds &c&o10.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all melee attacks."
+  - "&0 "
+  - "&7“&5Man's physical strength is easily"
+  - "&5 surpassed by the machine's.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:15
+  Skills:
+  - skill{s=Phys_75-150} @target ~onAttack
+  - skill{s=Chaos_10} @target ~onAttack
+T1_A6:
+  Id: 314
+  Display: "&5&oBrasshead"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &8&o-15% &7&omovement speed."
+  - "&5★ &c&o+20.0❤ &7&owhile equipped."
+  - "&5★ &7&oRestore 10% of your maximum"
+  - "&7&o  health when you hit an enemy."
+  - "&0 "
+  - "&7“&5A fortress built upon solitude"
+  - "&5 will only become one's tomb.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Head:
+      MovementSpeed: -0.15
+      Health: 40.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - healpercent{m=0.1} @Self ~onAttack
+  - healpercent{m=0.1} @Self ~onBowHit
+#
+### ARMOR (CHESTPLATES) ----------------------------------------
+#
+T1_B1:
+  Id: 307
+  Display: "&5&oUndying Cuirass"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+20.0❤ &7&owhile equipped."
+  - "&5★ &7&oRestore 10% of your maximum"
+  - "&7&o  health when you take damage."
+  - "&0 "
+  - "&7“&5Blessed is the one who fears"
+  - "&5 none in death--prepared for"
+  - "&5 the end long ago.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 40.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - healpercent{m=0.1} @Self ~onDamaged
+T1_B2:
+  Id: 311
+  Display: "&5&oFrostwraith Platemail"
+  Lore:
+  - "&7Protection XV"
+  - "&7Projectile Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+15.0❤ &7&owhile equipped."
+  - "&5★ &7&o20% chance for your attacks to"
+  - "&7&o  inflict &b&oFreeze &7&ofor up to 5.0s."
+  - "&5★ &7&oAdds &c&o50.0-100.0❤ &7&odamage to all"
+  - "&7&o  attacks against &b&oFrozen &7&oenemies."
+  - "&0 "
+  - "&7“&5Winter remains the strongest of"
+  - "&5 all four seasons.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:15
+  - PROTECTION_PROJECTILE:15
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack 0.2
+  - skill{s=InflictFreeze} @target ~onBowHit 0.2
+  - skill{s=Freeze_50-100} @target ~onAttack
+  - skill{s=Freeze_50-100} @target ~onBowHit
+T1_B3:
+  Id: 299
+  Display: "&5&oHatemail"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+15.0❤ &7&owhile equipped."
+  - "&5★ &7&o20% chance for your attacks to"
+  - "&7&o  inflict &e&oIgnite &7&ofor up to 5.0s."
+  - "&5★ &7&oAdds &c&o50.0-100.0❤ &7&odamage to all"
+  - "&7&o  attacks against &e&oIgnited &7&oenemies."
+  - "&0 "
+  - "&7“&5It's flaming hot. Metaphorically, of"
+  - "&5 course.&7”"
+  Options:
+    Unbreakable: true
+    Color: 255,50,50
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=Ignite_Title} @target ~onAttack 0.2
+  - skill{s=Ignite_Title} @target ~onBowHit 0.2
+  - skill{s=Ignite_50-100} @target ~onAttack
+  - skill{s=Ignite_50-100} @target ~onBowHit
+T1_B4:
+  Id: 303
+  Display: "&5&oFrostburn Tunic"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&oAdds &c&o50.0-100.0❤ &7&odamage to all"
+  - "&7&o  attacks against &b&oFrozen &7&oenemies."
+  - "&5★ &7&oAdds &c&o50.0-100.0❤ &7&odamage to all"
+  - "&7&o  attacks against &e&oIgnited &7&oenemies."
+  - "&0 "
+  - "&7“&5The combination of fire and ice is"
+  - "&5 is a far greater force than each"
+  - "&5 on their own.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 20.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=Freeze_50-100} @target ~onAttack
+  - skill{s=Freeze_50-100} @target ~onBowHit
+  - skill{s=Ignite_50-100} @target ~onAttack
+  - skill{s=Ignite_50-100} @target ~onBowHit
+T1_B5:
+  Id: 315
+  Display: "&5&oBlighted Tunic"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&oAdds &c&o10.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all ranged/magic attacks."
+  - "&5★ &7&oAdds &c&o20.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all melee attacks."
+  - "&0 "
+  - "&7“&5Crafted with an ancient curse,"
+  - "&5 dark magics radiate from deep"
+  - "&5 within...&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 20.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=Chaos_10} @target ~onBowHit
+  - skill{s=Chaos_20} @target ~onAttack
+T1_B6:
+  Id: 299
+  Display: "&5&oCloud Regalia"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&o10% chance for your attacks to"
+  - "&7&o  inflict &3&oShock &7&ofor up to 5.0s."
+  - "&5★ &7&oAdds &c&o100.0-250.0❤ &7&odamage to all"
+  - "&7&o  attacks against &3&oShocked &7&oenemies."
+  - "&0 "
+  - "&7“&5Mages of the Azure Isles trained"
+  - "&5 for centuries to tame the powers"
+  - "&5 of the storm.&7”"
+  Options:
+    Unbreakable: true
+    Color: 100,100,255
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Chest:
+      Health: 20.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - healpercent{m=0.1} @Self ~onDamaged
+  - skill{s=InflictShock} @target ~onAttack 0.15
+  - skill{s=InflictShock} @target ~onBowHit 0.1
+  - skill{s=Shock_100-250} @target ~onAttack
+  - skill{s=Shock_100-250} @target ~onBowHit
+#
+### ARMOR (LEGGINGS) -------------------------------------------
+#
+T1_C1:
+  Id: 300
+  Display: "&5&oHopetassel"
+  Lore:
+  - "&7Blast Protection XV"
+  - "&7Projectile Protection V"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+15.0❤ &7&owhile equipped."
+  - "&5★ &7&oYou have &a&oResistance IV&7&o."
+  - "&7&o  (Refreshes every 5.0s)."
+  - "&5★ &7&oRestore &c&o8.0❤ &7&owhenever"
+  - "&7&o  you hit an enemy with a"
+  - "&7&o  melee attack."
+  - "&0 "
+  - "&7“&5A strange light emanates"
+  - "&5 from these holy robes.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:5
+  - PROTECTION_EXPLOSIONS:15
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=3;overwrite=true} @Self ~onTimer:100
+  - heal{a=16} @Self ~onAttack
+T1_C2:
+  Id: 316
+  Display: "&5&oCorpse Shroud"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&oAdds &c&o10.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  all attacks."
+  - "&5★ &7&oRestore &c&o5.0-10.0❤ &7&owhenever"
+  - "&7&o  you hit an enemy with a melee"
+  - "&7&o  attack."
+  - "&0 "
+  - "&7“&5Unholy energies seep from the"
+  - "&5 tattered remains of this ancient"
+  - "&5 burial robe.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 20.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:20
+  Skills:
+  - skill{s=Chaos_10} @target ~onAttack
+  - skill{s=Chaos_10} @target ~onBowHit
+  - skill{s=Heal_5-10} @Self ~onAttack
+T1_C3:
+  Id: 308
+  Display: "&5&oStudded Skirt"
+  Lore:
+  - "&7Blast Protection XV"
+  - "&7Projectile Protection XV"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+15.0❤ &7&owhile equipped."
+  - "&5★ &7&oAdds &c&o25.0-75.0❤ &7&odamage to"
+  - "&7&o  all ranged/magic attacks."
+  - "&5★ &7&oRestore &c&o3.0-7.0❤ &7&owhenever"
+  - "&7&o  you hit an enemy."
+  - "&0 "
+  - "&7“&5No archer is complete without"
+  - "&5 a protective pair of leggings.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_PROJECTILE:15
+  - PROTECTION_EXPLOSIONS:15
+  Skills:
+  - skill{s=Heal_3-7} @Self ~onAttack
+  - skill{s=Heal_3-7} @Self ~onBowHit
+  - skill{s=Phys_25-75} @target ~onBowHit
+T1_C4:
+  Id: 300
+  Display: "&5&oRagelust"
+  Lore:
+  - "&7No Enchantments"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &8&o-50% &7&omovement speed."
+  - "&5★ &c&o+20.0❤ &7&owhile equipped."
+  - "&5★ &7&oYou have &a&oStrength C&7&o."
+  - "&7&o  (Refreshes every 10.0s)."
+  - "&0 "
+  - "&7“&5Anger is the strongest of"
+  - "&5 all inner flames.&7”"
+  Options:
+    Color: 200,0,0
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 40.0
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=300;lvl=99;overwrite=true} @Self ~onTimer:200
+T1_C5:
+  Id: 312
+  Display: "&5&oElemental Overload"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+15.0❤ &7&owhile equipped."
+  - "&5★ &7&o5% chance for your attacks to"
+  - "&7&o  inflict &b&oFreeze &7&ofor up to 5.0s."
+  - "&5★ &7&o5% chance for your attacks to"
+  - "&7&o  inflict &3&oShock &7&ofor up to 5.0s."
+  - "&5★ &7&o5% chance for your attacks to"
+  - "&7&o  inflict &e&oIgnite &7&ofor up to 5.0s."
+  - "&0 "
+  - "&7“&5It is unwise to trifle with nature.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Legs:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:10
+  - PROTECTION_PROJECTILE:10
+  - PROTECTION_ENVIRONMENTAL:10
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack 0.05
+  - skill{s=InflictFreeze} @target ~onBowHit 0.05
+  - skill{s=InflictShock} @target ~onAttack 0.05
+  - skill{s=InflictShock} @target ~onBowHit 0.05
+  - skill{s=Ignite_Title} @target ~onAttack 0.05
+  - skill{s=Ignite_Title} @target ~onBowHit 0.05
+#
+### ARMOR (BOOTS) ----------------------------------------------
+#
+T1_D1:
+  Id: 309
+  Display: "&5&oSoulforge Boots"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &a&o+50% &7&omovement speed."
+  - "&5★ &c&o+15.0❤ &7&owhile equipped."
+  - "&5★ &7&oRestore &c&o10.0❤ &7&owhenever"
+  - "&7&o  you take damage."
+  - "&0 "
+  - "&7“&5A soul of cinder ferments"
+  - "&5 only into a heart of iron.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      MovementSpeed: 0.5
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - heal{a=20} @Self ~onDamaged
+T1_D2:
+  Id: 305
+  Display: "&5&oMountainstride"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &8&o-80% &7&omovement speed."
+  - "&5★ &c&o+20.0❤ &7&owhile equipped."
+  - "&5★ &7&oYou have &a&oResistance IV&7&o."
+  - "&7&o  (Refreshes every second)."
+  - "&0 "
+  - "&7“&5Nothing stops the perpertual"
+  - "&5 pace of nature at work.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      MovementSpeed: -0.8
+      Health: 40.0
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=3;overwrite=true} @Self ~onTimer:20
+T1_D3:
+  Id: 317
+  Display: "&5&oMoonfury"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &a&o+40% &7&omovement speed."
+  - "&5★ &7&o10% chance to fully restore"
+  - "&7&o  your gold hearts whenever"
+  - "&7&o  you hit an enemy."
+  - "&0 "
+  - "&7“&5The total eclipse is only the"
+  - "&5 beginning of the end.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      MovementSpeed: 0.4
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=RestoreEqualES} @Self ~onAttack 0.1
+  - skill{s=RestoreEqualES} @Self ~onBowHit 0.1
+T1_D4:
+  Id: 313
+  Display: "&5&oWindrusher"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+15.0❤ &7&owhile equipped."
+  - "&5★ &7&o50% chance to gain &a&oHaste V &7&ofor"
+  - "&7&o  8.0s whenever you attack."
+  - "&5★ &7&o50% chance to gain &a&oSpeed V &7&ofor"
+  - "&7&o  8.0s whenever you take damage."
+  - "&0 "
+  - "&7“&5The quick seldom have the time to"
+  - "&5 remember the slow.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - potion{type=FAST_DIGGING;duration=160;lvl=4;overwrite=true} @Self ~onAttack 0.5
+  - potion{type=FAST_DIGGING;duration=160;lvl=4;overwrite=true} @Self ~onBowHit 0.5
+  - potion{type=SPEED;duration=160;lvl=4;overwrite=true} @Self ~onDamaged 0.5
+T1_D5:
+  Id: 301
+  Display: "&5&oSludgestep"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &a&o+30% &7&omovement speed."
+  - "&5★ &7&o20% chance to cast &2&oToxic Nova"
+  - "&7&o  whenever you attack."
+  - "&5★ &2&oToxic Nova &7&oinflicts &c&o90.0❤ &2&oToxin"
+  - "&7&o  damage over a period of 1.5s"
+  - "&7&o  to all enemies within 5 blocks."
+  - "&0 "
+  - "&7“&5Deadly fumes and poison waters"
+  - "&5 make perfect breeding grounds"
+  - "&5 for the common slime.&7”"
+  Options:
+    Color: 71,97,25
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Feet:
+      MovementSpeed: 0.3
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - skill{s=Poison_90} @EntitiesInRadius{r=5;ignore=players} ~onAttack 0.2
+  - skill{s=Poison_90} @EntitiesInRadius{r=5;ignore=players} ~onBowHit 0.2
+Boots_Healing:
+  Id: 301
+  Display: "&5&oThe Battle-born"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &a&o+75% &7&omovement speed."
+  - "&5★ &c&o+15.0❤ &7&owhile equipped."
+  - "&5★ &7&oRestore &c&o8.0❤ &7&oevery second."
+  - "&0 "
+  - "&7“&5Life is the grandest of fights,"
+  - "&5 a restless brawl with no clear"
+  - "&5 victor.&7”"
+  Options:
+    Unbreakable: true
+    Color: 255,128,0
+  Attributes:
+    Feet:
+      Health: 30.0
+      MovementSpeed: 0.75
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Skills:
+  - heal{amount=8} @Self ~onTimer:10

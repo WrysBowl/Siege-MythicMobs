@@ -1,0 +1,616 @@
+### IRIDESCENT ARTIFACTS (2.2.0+)
+Charm_ESCharge:
+  Id: 289
+  Display: "&b&oMortal Anguish"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &7&oSet your gold hearts to &e&o20.0❤"
+  - "&7&o  once every 3.0 seconds."
+  - "&b★ &7&oSet your gold hearts to &e&o40.0❤"
+  - "&7&o  once every 7.0 seconds."
+  - "&b★ &7&oSet your gold hearts to &e&o80.0❤"
+  - "&7&o  once every 10.0 seconds."
+  - "&b★ &7&oYou cannot have &a&oRegeneration&7&o."
+  - "&0 "
+  - "&7“&bWhat greater pain is there than"
+  - "&b to know your days are limited?&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  Skills:
+  - skill{s=ES_20} @Self ~onTimer:60
+  - skill{s=ES_40} @Self ~onTimer:140
+  - skill{s=ES_80} @Self ~onTimer:200
+  - skill{s=CancelRegen} @Self ~onTimer:1
+Charm_VaalPact:
+  Id: 433
+  Display: "&b&oVoid Pact"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&oFully restore your health when"
+  - "&7&o  you hit an enemy."
+  - "&b★ &7&oYou cannot have &a&oRegeneration&7&o."
+  - "&0 "
+  - "&7“&bTo truly cleanse these worlds of"
+  - "&b corruption, a deal had to be made"
+  - "&b with the darkness itself.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Skills:
+  - heal{amount=2000} @Self ~onAttack
+  - heal{amount=2000} @Self ~onBowHit
+  - skill{s=CancelRegen} @Self ~onTimer:1
+Charm_Bleed:
+  Id: 351
+  Data: 14
+  Display: "&b&oCharm of Purpose"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oEnemies you hit are marked"
+  - "&7&o  as &4&oBleeding &7&ofor 10.0s."
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &7&oAdds &c&o250.0-400.0❤ &7&odamage"
+  - "&7&o  against &4&oBleeding &7&oenemies."
+  - "&b★ &7&oYou are immune to nonlethal"
+  - "&7&o  damage while &4&oBleeding&7&o."
+  - "&0 "
+  - "&7“&bThere is a certain amount of"
+  - "&b determination in every heart"
+  - "&b and soul.&7”"
+  Enchantments:
+  - ARROW_INFINITE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=BleedImmunity} @Self ~onTimer:5
+  - potion{type=UNLUCK;duration=200;lvl=1;overwrite=true} @target ~onAttack
+  - potion{type=UNLUCK;duration=200;lvl=1;overwrite=true} @target ~onBowHit
+  - skill{s=UnluckDamage} @target ~onBowHit
+  - skill{s=UnluckDamage} @target ~onAttack
+Charm_Titan:
+  Id: 434
+  Display: "&b&oTitan's Heart"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &7&oAdds &c&o150.0-500.0❤ &7&odamage to"
+  - "&7&o  all melee attacks."
+  - "&b★ &7&oRestore 20% of your maximum"
+  - "&7&o  health when you hit an enemy"
+  - "&7&o  with a melee attack."
+  - "&0 "
+  - "&7“&bDivine blood seethes from this"
+  - "&b still-beating heart of a fallen"
+  - "&b Titan--corrosive to mortals.&7”"
+  Enchantments:
+  - ARROW_INFINITE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=TitanCharm} @target ~onAttack
+  - healpercent{m=0.2} @Self ~onAttack
+Charm_Defense:
+  Id: 337
+  Display: "&b&oCharm of Deftness"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+10.0❤ &7&omaximum health."
+  - "&b★ &7&oYou have &a&oResistance IV&7&o."
+  - "&7&o  (Refreshes every second)."
+  - "&b★ &7&oYou cannot be &8&oSlowed&7&o, &b&oChilled&7&o,"
+  - "&7&o  or &b&oFrozen &7&oby enemy attacks."
+  - "&0 "
+  - "&7“&bThere are two types of people,"
+  - "&b the swift and the dead.&7”"
+  Enchantments:
+  - ARROW_INFINITE:10
+  Attributes:
+    OffHand:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=40;lvl=3;overwrite=true} @Self ~onTimer:20
+  - skill{s=CancelSlowness} @Self ~onTimer:1
+  - skill{s=CancelFatigue} @Self ~onTimer:1
+Charm_Negate:
+  Id: 351
+  Data: 12
+  Display: "&b&oCharm of Purity"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &7&oRemoves all negative effects"
+  - "&7&o  from you once every 3.0s."
+  - "&b★ &7&o10% chance to fully restore"
+  - "&7&o  your health and gold hearts"
+  - "&7&o  when you take damage."
+  - "&0 "
+  - "&7“&bThis small amulet was blessed"
+  - "&b by the Guardians to ward off"
+  - "&b the corruption.&7”"
+  Enchantments:
+  - ARROW_INFINITE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=RestoreEqualES_NoSound} @Self ~onDamaged 0.1
+  - heal{a=1000} @Self ~onDamaged 0.1
+### Cancels negative effects:
+  - skill{s=CancelSlowness} @Self ~onTimer:60
+  - skill{s=CancelFatigue} @Self ~onTimer:60
+  - skill{s=CancelBlindness} @Self ~onTimer:60
+  - skill{s=CancelNausea} @Self ~onTimer:60
+  - skill{s=CancelWeakness} @Self ~onTimer:60
+  - skill{s=CancelLevitation} @Self ~onTimer:60
+  - skill{s=CancelPoison} @Self ~onTimer:60
+  - skill{s=CancelHunger} @Self ~onTimer:60
+Charm_NVision:
+  Id: 375
+  Display: "&b&oEye of the Void"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oYou have &a&oNight Vision&7&o."
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+15.0❤ &7&omaximum health."
+  - "&b★ &7&oAdds &c&o25.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all attacks."
+  - "&b★ &7&oYou are immune to &8&oBlindness&7&o."
+  - "&0 "
+  - "&7“&bDarkness falls upon the horizon,"
+  - "&b swallowing the light of the world.&7”"
+  Enchantments:
+  - ARROW_INFINITE:10
+  Attributes:
+    OffHand:
+      Health: 30.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Chaos_25} @target ~onBowHit
+  - skill{s=Chaos_25} @target ~onAttack
+  - skill{s=CancelBlindness} @Self ~onTimer:1
+Charm_Freeze:
+  Id: 351
+  Data: 7
+  Display: "&b&oUnending Solstice"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &7&oAdds &c&o40.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  ranged/magic attacks against"
+  - "&b&o  Frozen &7&oenemies."
+  - "&b★ &7&oAdds &c&o120.0❤ &5&oChaos &7&odamage to"
+  - "&7&o  melee attacks against &b&oFrozen"
+  - "&7&o  enemies."
+  - "&0 "
+  - "&7“&bThere will come a time when the"
+  - "&b seasons disappear, and winter"
+  - "&b shall rule this world alone.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=ExtraFreezeDamage} @target ~onAttack
+  - skill{s=ExtraFreezeDamage2} @target ~onBowHit
+SpellCatalyst:
+  Id: 369
+  Display: "&b&oEternal Catalyst"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &7&o50% chance to add &c&o20.0❤ &5&oChaos"
+  - "&7&o  damage to ranged/magic attacks."
+  - "&b★ &7&o25% chance to add &c&o40.0❤ &5&oChaos"
+  - "&7&o  damage to ranged/magic attacks."
+  - "&b★ &7&o15% chance to add &c&o80.0❤ &5&oChaos"
+  - "&7&o  damage to ranged/magic attacks."
+  - "&0 "
+  - "&7“&bN'azhrak gifted the mortals magic"
+  - "&b and intelligence long before they"
+  - "&b were consumed by the Void.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Skills:
+  - skill{s=Chaos_20} @target ~onBowHit 0.5
+  - skill{s=Chaos_40} @target ~onBowHit 0.25
+  - skill{s=Chaos_80} @target ~onBowHit 0.15
+SniperScope:
+  Id: 345
+  Display: "&b&oSniper Scope"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+10.0❤ &7&omaximum health."
+  - "&b★ &7&oAdds &c&o600.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all ranged/magic attacks"
+  - "&7&o  once every 5.0s."
+  # - "&b★ &7&oFully restore your health"
+  # - "&7&o  whenever you hit an enemy."
+  # - "&c&o  Skill has a cooldown of 5.0s."
+  - "&0 "
+  - "&7“&bThrough my eye I can see all"
+  - "&b fates. With my hands--I bring"
+  - "&b only death.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    OffHand:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - skill{s=RangerCrit} @Self ~onBowHit
+Dragon_Tear:
+  Id: 370
+  Display: "&b&oDragon's Tear"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oYou have &e&o20.0❤&7&o. (Refreshes"
+  - "&7&o  once every 10.0 seconds.)"
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&oYou have &e&o20.0❤&7&o. (Refreshes"
+  - "&7&o  once every 2.5 seconds.)"
+  - "&0 "
+  - "&7“&bIt was rare that one would see"
+  - "&b a dragon weep, but with the end"
+  - "&b of the Titans, a deep sorrow"
+  - "&b had begun to seep.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=9;overwrite=true} @Self ~onTimer:50
+### MELEE ITEMS ------------------------------------------------
+Dragon_Sword_2:
+  Id: 276
+  Display: "&b&oDragon's Will"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+30% &7&oattack speed."
+  - "&b★ &7&o75% status effect chance."
+  - "&b★ &7&oDeals &c&o5000.0❤ &8&oBurning &7&odamage"
+  - "&7&o  over a period of 2.5s."
+  - "&0 "
+  - "&7“&bWrath can never truly overcome"
+  - "&b pure, focused willpower.&7”"
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.35
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Burn_2X} @target ~onAttack 0.75
+BrokenSword:
+  Id: 283
+  Display: "&b&oPo&3&ower Cre&b&oep"
+  Lore:
+  - "&7Sharpness MMXVIII"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oSup&3&oer Iridesc&b&oent"
+  - "&0 "
+  - "&b★ &a&o+75% &7&oattack speed."
+  - "&3★ &7&oAdds &c&o5000.0❤ &7&odamage to all"
+  - "&7&o  melee attacks."
+  - "&3★ &7&oAdds &c&o250.0❤ &5&oChaos &7&odamage."
+  - "&7&o  to all melee attacks."
+  - "&3★ &7&o50% chance to &3&oShock &7&oenemies"
+  - "&7&o  for 5.0s with melee attacks."
+  - "&b★ &7&o50% chance to &b&oFreeze &7&oenemies"
+  - "&7&o  for 5.0s with melee attacks."
+  - "&0 "
+  - "&7“&bWhy ba&3lance and test fe&batures"
+  - "&b whe&3n you can just be l&bazy?&7”"
+  Enchantments:
+  - DAMAGE_ALL:2018
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Chaos_250} @target ~onAttack
+  - skill{s=Phys_5000} @target ~onAttack
+  - skill{s=InflictFreeze} @target ~onAttack 0.5
+  - skill{s=InflictShock} @target ~onAttack 0.5
+ToxinDagger:
+  Id: 359
+  Display: "&b&oBoundless Cruelty"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+90% &7&oattack speed."
+  - "&b★ &7&o100% status effect chance."
+  - "&b★ &7&oInflicts &c&o300.0❤ &2&oToxin &7&odamage"
+  - "&7&o  over a period of 1.0s."
+  - "&0 "
+  - "&7“&bI relish in the screams of the"
+  - "&b innocent and the damned alike.&7”"
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.1
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Poison_150} @target ~onAttack
+NovaBlade:
+  Id: 283
+  Display: "&b&oSupernova"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+90% &7&oattack speed."
+  - "&b★ &7&o100% status effect chance."
+  - "&b★ &7&oInflicts &c&o300.0❤ &2&oToxin &7&odamage"
+  - "&7&o  over a period of 1.0s."
+  - "&0 "
+  - "&7“&bI relish in the screams of the"
+  - "&b innocent and the damned alike.&7”"
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.1
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=NovaBlade_Skill} @EntitiesInRadius{r=10;ignore=players} ~onSwing
+SandScythe:
+  Id: 294
+  Display: "&b&oScythe of the Sands"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+75% &7&oattack speed."
+  - "&b★ &7&oDeals &c&o12.0❤ &5&oChaos &7&odamage"
+  - "&7&o  for every &e&o20.0❤ &7&oyou have."
+  - "&7&o  (Up to 60.0❤ Chaos damage)."
+  - "&b★ &7&o30% chance to refresh your"
+  - "&7&o  gold hearts whenever you hit"
+  - "&7&o  an enemy with this weapon."
+  - "&0 "
+  - "&7“&bEntombed for all eternity within"
+  - "&b a massive desert, this powerful"
+  - "&b tool was feared by even Titans.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+  Skills:
+  - skill{s=RestoreEqualES} @Self ~onAttack 0.3
+  - skill{s=ChaosFromES} @Self ~onAttack
+### SKILL SHIELDS ----------------------------------------------
+Shield_Crimson:
+  Id: 442
+  Display: "&b&oCrimson Echoes"
+  Lore:
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+20.0❤ &7&omaximum health."
+  - "&b★ &7&oAdds &c&o1500.0-2500.0❤ &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&b★ &7&oRestore 10% of your maximum"
+  - "&7&o  health when you take damage."
+  - "&0 "
+  - "&7“&bTraces of the past inhabit the"
+  - "&b empty battlefields--stained in"
+  - "&b the blood of the fallen.&7”"
+  Options:
+    Color: RED
+    Unbreakable: true
+  Attributes:
+    OffHand:
+      Health: 40.0
+  BannerLayers:
+  - WHITE CROSS
+  - WHITE RHOMBUS_MIDDLE
+  - GRAY CIRCLE_MIDDLE
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Phys_1500-2500} @target ~onAttack
+  - healpercent{m=0.1} @Self ~onDamaged
+Shield_Energy:
+  Id: 442
+  Display: "&b&oEthereal Aegis"
+  Lore:
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &7&oYou have &e&o20.0❤ &7&ofor each 40"
+  - "&7&o  levels of &a&oStrength&7&o."
+  - "&7&o  (Up to 100.0❤ at 200 levels)."
+  - "&b★ &7&o25% chance to refresh your"
+  - "&7&o  gold hearts when you attack."
+  - "&0 "
+  - "&7“&bCorporeal existence is merely"
+  - "&b an astral projection of man's"
+  - "&b eternal soul.&7”"
+  Options:
+    Color: YELLOW
+    Unbreakable: true
+  BannerLayers:
+  - SILVER STRIPE_DOWNLEFT
+  - BLACK CIRCLE_MIDDLE
+  - GRAY FLOWER
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=ESFromStronk} @Self ~onTimer:60
+  - skill{s=RestoreEqualES_NoSound} @Self ~onAttack 0.25
+  - skill{s=RestoreEqualES_NoSound} @Self ~onBowHit 0.25
+Shield_Block:
+  Id: 442
+  Display: "&b&oThe Fortress"
+  Lore:
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+20.0❤ &7&omaximum health while"
+  - "&7&o  equipped in your off hand."
+  - "&b★ &7&oYou are immune to non-chaos"
+  - "&7&o  damage for 5.0s after you've"
+  - "&7&o  blocked with your main hand."
+  - "&b★ &c&oEffect has a 15.0s cooldown."
+  - "&0 "
+  - "&7“&bEvery attack can be blocked if"
+  - "&b your shield is as strong as a"
+  - "&b kingdom's walls.&7”"
+  Options:
+    Color: SILVER
+    Unbreakable: true
+  Attributes:
+    OffHand:
+      Health: 40.0
+  BannerLayers:
+  - GRAY BRICKS
+  - BLACK GRADIENT_UP
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=BlockBuff} @Self ~onUse
+Shield_Immune:
+  Id: 442
+  Display: "&b&oDivine Favor"
+  Lore:
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+60% &7&omovement speed while"
+  - "&7&o  equipped in your off hand."
+  - "&b★ &7&oYou are immune to non-lethal"
+  - "&7&o  damage for up to 5.0s after"
+  - "&7&o  blocking with your main hand."
+  - "&b★ &c&oEffect has a 15.0s cooldown."
+  - "&0 "
+  - "&7“&bIt was rare to see Titans grant"
+  - "&b their blessings, but the few who"
+  - "&b have would never be forgotten.&7”"
+  Options:
+    Color: WHITE
+    Unbreakable: true
+  Attributes:
+    OffHand:
+      MovementSpeed: 0.6
+  BannerLayers:
+  - BLACK CURLY_BORDER
+  - WHITE TRIANGLE_TOP
+  - WHITE TRIANGLE_BOTTOM
+  - GRAY CIRCLE_MIDDLE
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=IgnoreNonlethal} @Self ~onUse

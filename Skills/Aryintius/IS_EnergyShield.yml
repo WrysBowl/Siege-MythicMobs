@@ -1,0 +1,152 @@
+ESFromHaste: ### Gain 10.0 ES from every level of haste --------
+  Skills:
+  - skill{s=ESHaste_1}
+  - skill{s=ESHaste_2}
+  - skill{s=ESHaste_3}
+  - skill{s=ESHaste_4}
+  - skill{s=ESHaste_5}
+  - skill{s=ESHaste_6}
+  - skill{s=ESHaste_7}
+  - skill{s=ESHaste_8}
+  - skill{s=ESHaste_9}
+  - skill{s=ESHaste_10}
+ESHaste_1:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=0} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=4;overwrite=true}
+ESHaste_2:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=1} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=9;overwrite=true}
+ESHaste_3:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=2} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=14;overwrite=true}
+ESHaste_4:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=3} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=19;overwrite=true}
+ESHaste_5:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=4} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=24;overwrite=true}
+ESHaste_6:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=5} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=29;overwrite=true}
+ESHaste_7:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=6} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=34;overwrite=true}
+ESHaste_8:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=7} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=39;overwrite=true}
+ESHaste_9:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=8} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=44;overwrite=true}
+ESHaste_10:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=49;overwrite=true}
+
+ESFromStronk: ### Gain 20.0 ES per 40 Strength -----------------
+  Skills:
+  - skill{s=ESStronk_1}
+  - skill{s=ESStronk_2}
+  - skill{s=ESStronk_3}
+  - skill{s=ESStronk_4}
+  - skill{s=ESStronk_5}
+ESStronk_1:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>38} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<78} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=9;overwrite=true}
+ESStronk_2:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>78} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<118} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=9;overwrite=true}
+ESStronk_3:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>118} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<158} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=9;overwrite=true}
+ESStronk_4:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>158} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<198} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=9;overwrite=true}
+ESStronk_5:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=49;overwrite=true}
+
+RestoreEqualES: ### Restore ES equal to level ------------------
+  Skills:
+  - effect:sound{s=block.portal.travel;v=0.1;p=2}
+  - skill{s=REES_1}
+  - skill{s=REES_2}
+  - skill{s=REES_3}
+  - skill{s=REES_4}
+  - skill{s=REES_5}
+  - skill{s=REES_6}
+RestoreEqualES_NoSound: ### Passive version (No Sound)
+  Skills:
+  - skill{s=REES_1}
+  - skill{s=REES_2}
+  - skill{s=REES_3}
+  - skill{s=REES_4}
+  - skill{s=REES_5}
+  - skill{s=REES_6}
+REES_1:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>8} true
+  - haspotioneffect{t=ABSORPTION;level=<18} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=9;overwrite=true}
+REES_2:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>18} true
+  - haspotioneffect{t=ABSORPTION;level=<28} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=19;overwrite=true}
+REES_3:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>28} true
+  - haspotioneffect{t=ABSORPTION;level=<38} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=29;overwrite=true}
+REES_4:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>38} true
+  - haspotioneffect{t=ABSORPTION;level=<48} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=39;overwrite=true}
+REES_5:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>48} true
+  - haspotioneffect{t=ABSORPTION;level=<58} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=49;overwrite=true}
+REES_6:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>58} true
+  Skills:
+  - potion{type=ABSORPTION;duration=200;lvl=59;overwrite=true}

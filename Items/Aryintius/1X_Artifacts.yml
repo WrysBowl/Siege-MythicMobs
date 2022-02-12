@@ -1,0 +1,422 @@
+### CORRUPTED ITEMS (2.2.0+)
+### WEAPONS -----------------------------------------------
+ChaosScythe:
+  Id: 293
+  Display: "&4&oDes&c&opair"
+  Lore:
+  - "&7No Attack Damage"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &7&oDeals &c&o40.0❤ &5&oChaos &7&odamage"
+  - "&7&o  when you hit an enemy."
+  - "&c★ &7&o25% critical strike chance."
+  - "&c★ &7&o3.0x damage on critical hit."
+  - "&4★ &7&oYou cannot have &a&oStrength&7&o."
+  - "&0 "
+  - "&7“&4The&cre is nothing lef&4t in this"
+  - "&4 world, s&cave for the loo&4ming"
+  - "&4 pre&csence of de&4ath.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=CancelStrength} @self ~onTimer:1
+  - skill{s=Chaos_40} @target ~onAttack
+  - skill{s=Chaos_80} @target ~onAttack 0.25
+FrostSaber:
+  Id: 276
+  Display: "&4&oWi&c&onterspi&4&ore"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Knockback II"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &a&o+75% &7&oattack speed."
+  - "&c★ &7&oYour melee attacks &b&oFreeze"
+  - "&7&o  enemies for up to 5.0s."
+  - "&4★ &7&oYou are &b&oFrozen &7&owhile this is"
+  - "&7&o  equipped in either hand."
+  - "&0 "
+  - "&7“&4Win&cd howls from the maw of t&4he"
+  - "&4 abyss, b&cathing this wo&4rld in an"
+  - "&4 endle&css chilling sto&4rm.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:1000
+  - KNOCKBACK:2
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=InflictFreeze} @target ~onAttack
+  - potion{type=SLOW;duration=200;lvl=9;overwrite=true} @Self ~onTimer:100
+  - potion{type=SLOW_DIGGING;duration=200;lvl=9;overwrite=true} @Self ~onTimer:100
+LeechSword:
+  Id: 272
+  Display: "&4&oBl&c&oood Drin&4&oker"
+  Lore:
+  - "&7Sharpness D"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c★ &a&o+60% &7&oattack speed."
+  - "&4★ &c&o+10.0❤ &7&oif held in main hand."
+  - "&c★ &7&oRestore 50% of your maximum"
+  - "&7&o  health when you melee attack."
+  - "&c★ &7&oYou cannot have &a&oRegeneration&7&o."
+  - "&0 "
+  - "&7“&4Eve&cn the greatest of str&4engths"
+  - "&4 can b&ce taken a&4way.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:500
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.2
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  # - skill{s=RGS_Heal} @Self ~onAttack 0.25
+  - healpercent{m=0.5} @self ~onAttack
+  - skill{s=CancelRegen} @Self ~onTimer:1
+PhysSword:
+  Id: 283
+  Display: "&4&oFa&c&ote's Tou&4&och"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c★ &a&o+75% &7&oattack speed."
+  - "&4★ &7&oAdds &c&o1500.0❤ &7&odamage to all"
+  - "&7&o  melee attacks."
+  - "&4★ &7&oYou take &c&o1500.0❤ &7&odamage"
+  - "&7&o  whenever you hit an enemy."
+  - "&0 "
+  - "&7“&4The&cre are certain things in l&4ife"
+  - "&4 that humani&cty was ne&4ver meant"
+  - "&4 to ma&cster.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:500
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - damage{a=3000;pk=true} @target ~onAttack
+  # - damage{a=20;pk=true;pi=true} @Self ~onAttack
+  # So it turns out, bypassing armor breaks chaos
+  # damage with the new Death Screen.
+  - damage{a=3000;pk=true} @Self ~onAttack
+  - damage{a=3000;pk=true} @Self ~onBowHit
+BleedAxe:
+  Id: 258
+  Display: "&4&oFl&c&oeshre&4&ond"
+  Lore:
+  - "&7Sharpness M"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c★ &a&o+50% &7&oattack speed."
+  - "&4★ &7&o25% chance to inflict &c&o60.0❤"
+  - "&4&o  Bleed &7&odamage over a period"
+  - "&7&o  of 1.5s."
+  - "&c★ &7&oYou cannot have &a&oHaste&7&o."
+  - "&0 "
+  - "&7“&4The l&cife of my enemy ca&4nnot"
+  - "&4 be destr&coyed unti&4l even his"
+  - "&4 corp&cse is torn asun&4der.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:1000
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.25
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Bleed_60} @target ~onAttack 0.25
+  - skill{s=CancelHaste} @Self ~onTimer:1
+BleedSword:
+  Id: 267
+  Display: "&4&oHo&c&opesund&4&oer"
+  Lore:
+  - "&7No Attack Damage"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4★ &a&o+90% &7&oattack speed."
+  - "&c★ &7&o50% chance to inflict &c&o60.0❤"
+  - "&4&o  Bleed &7&odamage over a period"
+  - "&7&o  of 1.5s."
+  - "&0 "
+  - "&7“&4Hum&canity's greatest streng&4th is"
+  - "&4 also its gr&ceatest we&4akness.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Bleed_60} @target ~onAttack 0.5
+### ACCESSORIES/SHIELDS ----------------------------------------
+BloodCatalyst:
+  Id: 280
+  Display: "&4&oHe&c&omatur&4&ogy"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c» &7&oWhile equipped in off hand:"
+  - "&4★ &c&o+30.0❤ &7&omaximum health."
+  - "&4★ &7&oInflicts &c&o30.0❤ &4&oBleed &7&odamage"
+  - "&7&o  over a period 1.5s with your"
+  - "&7&o  ranged/magic attacks."
+  - "&4★ &7&oYou take &c&o15.0❤ &4&oBleed &7&odamage"
+  - "&7&o  every second while attacking."
+  - "&0 "
+  - "&7“&4The m&cost primal magics rel&4y not"
+  - "&4 on the ca&cster's menta&4l capacity"
+  - "&4 bu&ct on blood sacrif&4ice.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 60.0
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Bleed_30X} @target ~onBowHit
+  - skill{s=Bleed_15} @Self ~onBowHit
+ShockCatalyst:
+  Id: 288
+  Display: "&4&oTh&c&ounderwi&4&ong"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&4» &7&oWhile equipped in off hand:"
+  - "&c★ &7&oAdds &c&o250.0-400.0❤ &7&odamage to all"
+  - "&7&o  your ranged/magic attacks."
+  - "&c★ &7&oAdds &c&o350.0-500.0❤ &7&odamage to all"
+  - "&7&o  attacks against &3&oShocked &7&oenemies."
+  - "&c★ &7&o25% chance to inflict &3&oShock &7&owhile"
+  - "&7&o  you have &a&oStrength&7&o."
+  - "&4★ &7&oYou cannot have &a&oRegeneration&7&o."
+  - "&0 "
+  - "&7“&4The e&cye of the storm is hom&4e only"
+  - "&4 to the mos&ct tranquil o&4f fury.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Skills:
+  - skill{s=Phys_250-400} @target ~onBowHit
+  - skill{s=Shock_350-500} @target ~onBowHit
+  - skill{s=Shock_350-500} @target ~onAttack
+  - skill{s=ShockWhileStronk} @target ~onBowHit 0.25
+  - skill{s=ShockWhileStronk} @target ~onAttack 0.25
+  - skill{s=CancelRegen} @Self ~onTimer:1
+BoneCatalyst:
+  Id: 352
+  Display: "&4&oDe&c&oath's Ha&4&ond"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c» &7&oWhile equipped in off hand:"
+  - "&4★ &7&oAdds &c&o1500.0-2500.0❤ &7&odamage"
+  - "&7&o  to all melee attacks."
+  - "&4★ &7&oAdds &c&o50000.0❤ &7&odamage to next"
+  - "&7&o  melee attack once every 2.0s."
+  - "&4★ &7&oYou cannot have &a&oRegeneration&7&o."
+  - "&c★ &7&oYou cannot have gold hearts."
+  - "&0 "
+  - "&7“&4Leg&cends say this cursed st&4aff"
+  - "&4 was hurle&cd down fr&4om the apex"
+  - "&4 of the T&citan's Realm.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Skills:
+  - skill{s=Phys_1500-2500} @target ~onAttack
+  - skill{s=MeleeCrit} @target ~onAttack
+  - skill{s=CancelAbsorption} @self ~onTimer:1
+  - skill{s=CancelRegen} @Self ~onTimer:1
+Charm_Eldritch:
+  Id: 341
+  Display: "&4&oEy&c&oe of the Eldri&4&otch"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c» &7&oWhile equipped in off hand:"
+  - "&4★ &7&oAdds &c&o100.0-150.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all ranged/magic attacks."
+  - "&4★ &7&o50% chance to refresh your gold"
+  - "&7&o  hearts when you take damage."
+  - "&4★ &7&oYou cannot have &a&oRegeneration&7&o."
+  - "&c★ &7&oYou cannot have &a&oStrength&7&o."
+  - "&0 "
+  - "&7“&4Han&cd over your soul and we s&4hall"
+  - "&4 offer you po&cwer beyon&4d all mortal"
+  - "&4 compre&chension.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=Chaos_100-150} @target ~onBowHit
+  - skill{s=RestoreEqualES} @Self ~onDamaged 0.5
+  - skill{s=CancelStrength} @Self ~onTimer:1
+  - skill{s=CancelRegen} @Self ~onTimer:1
+Charm_SuperHeal:
+  Id: 351
+  Data: 11
+  Display: "&4&oCh&c&oarm of Divini&4&oty"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c» &7&oWhile equipped in off hand:"
+  - "&4★ &c&o+20.0❤ &7&omaximum health."
+  - "&4★ &7&oRestore &c&o30.0❤ &7&oto all players"
+  - "&7&o  within 8 blocks every second"
+  - "&7&o  while you have &a&oRegeneration&7&o."
+  - "&c★ &7&oYou cannot have gold hearts."
+  - "&0 "
+  - "&7“&4In c&choosing an aspect for f&4inal"
+  - "&4 ascensio&cn, one must n&4ever step"
+  - "&4 ove&cr their boundaries.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 40.0
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=CancelAbsorption} @Self ~onTimer:1
+  - skill{s=Corrupt_SuperHeal} @Self ~onTimer:10
+Shield_Madness:
+  Id: 442
+  Display: "&4&oSh&c&oield of Madne&4&oss"
+  Lore:
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c» &7&oWhile equipped in off hand:"
+  - "&4★ &c&o+20.0❤ &7&omaximum health."
+  - "&4★ &7&o15% chance to &3&oShock&7&o, &b&oFreeze&7&o,"
+  - "&6&o  Ignite &7&oor &d&oCurse &7&oenemies on hit"
+  - "&7&o  with all your attacks."
+  - "&c★ &a&oSpeed &7&o+ &a&oHaste &7&ohave no effect."
+  - "&0 "
+  - "&7“&4The w&corld constantly hinge&4s on"
+  - "&4 the edg&ce of insanit&4y.&7”"
+  Options:
+    Color: RED
+    Unbreakable: true
+  Attributes:
+    OffHand:
+      Health: 40.0
+  BannerLayers:
+  - PURPLE TRIANGLES_BOTTOM
+  - BLUE HALF_HORIZONTAL
+  - YELLOW HALF_VERTICAL_MIRROR
+  - LIME STRIPE_RIGHT
+  - ORANGE TRIANGLE_TOP
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=CancelHaste} @Self ~onTimer:1
+  - skill{s=CancelSpeed} @Self ~onTimer:1
+  - skill{s=RandomDebuff} @target ~onBowHit 0.15
+  - skill{s=RandomDebuff} @target ~onAttack 0.25
+Shield_Chaos:
+  Id: 442
+  Display: "&4&oE&c&ontrop&4&oy"
+  Lore:
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted"
+  - "&0 "
+  - "&c» &7&oWhile equipped in off hand:"
+  - "&4★ &7&o50% chance to add &c&o100.0❤ &5&oChaos"
+  - "&7&o  damage to all your attacks."
+  - "&4★ &7&oYou take &c&o1000.0❤ &7&odamage when"
+  - "&7&o  you hit an enemy."
+  - "&c★ &7&oYou cannot have gold hearts."
+  - "&0 "
+  - "&7“&4Exi&cstence is born from primor&4dial"
+  - "&4 chaos, an&cd thus, shall r&4eturn to it"
+  - "&4 whe&cn the time is right.&7”"
+  Options:
+    Color: WHITE
+    Unbreakable: true
+  BannerLayers:
+  - BLACK DIAGONAL_LEFT_MIRROR
+  - ORANGE STRIPE_DOWNRIGHT
+  - SILVER RHOMBUS_MIDDLE
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=CancelAbsorption} @self ~onTimer:1
+  - skill{s=Chaos_100} @target ~onAttack 0.5
+  - skill{s=Chaos_100} @target ~onBowHit 0.5
+  - damage{a=2000;pi=true;pk=true} @Self ~onAttack
+  - damage{a=2000;pi=true;pk=true} @Self ~onBowHit

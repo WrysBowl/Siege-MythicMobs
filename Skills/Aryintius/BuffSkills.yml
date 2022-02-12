@@ -1,0 +1,38 @@
+### BUFF SKILLS
+SpeedBuff:
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:particlesphere{particle=flame;amount=10;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=20;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=80;r=4} @self
+  - delay 2
+  - potion{type=SPEED;duration=99999;lvl=4} @Self
+5sInvincible:
+  Skills:
+  - effect:sound{s=entity.elder_guardian.curse;v=0.5;p=2}
+  - effect:particlesphere{particle=instantSpell;amount=10;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=instantSpell;amount=20;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=instantSpell;amount=40;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=instantSpell;amount=80;r=4} @self
+  - delay 2
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4} @Self
+DamageBuff:
+  Skills:
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
+  - effect:particlesphere{particle=reddust;amount=10;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=20;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=40;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=reddust;amount=80;r=4} @self
+  - delay 2
+  - potion{type=INCREASE_DAMAGE;duration=99999;lvl=10} @Self

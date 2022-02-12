@@ -1,0 +1,27 @@
+### OPEN WORLD BOSS SKILLS
+OpenBoss1_Phase_1:
+  Skills:
+  - skill{s=LB5_Missile} @PIR{r=32}
+  - delay 10
+  - skill{s=LB5_Missile} @PIR{r=32}
+  - delay 10
+  - skill{s=LB5_Missile} @PIR{r=32}
+OpenBoss2_Phase_2:
+  Skills:
+  - skill{s=LB5_Missile} @PIR{r=32}
+  - delay 5
+  - skill{s=LB5_Missile} @PIR{r=32}
+  - delay 5
+  - skill{s=LB5_Missile} @PIR{r=32}
+  - delay 20
+  - skill{s=LB5_Missile} @PIR{r=32}
+  - delay 5
+  - skill{s=LB5_Missile} @PIR{r=32}
+  - delay 5
+  - skill{s=LB5_Missile} @PIR{r=32}
+  - delay 20
+  - skill{s=LB5_Missile} @PIR{r=32}
+  - delay 5
+  - skill{s=LB5_Missile} @PIR{r=32}
+  - delay 5
+  - skill{s=LB5_Missile} @PIR{r=32}

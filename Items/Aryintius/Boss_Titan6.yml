@@ -1,0 +1,148 @@
+### REALM GUARDIAN ITEMS ---------------------------------------
+Shield_Melee:
+  Id: 442
+  Display: "&6&oWarriors' Crest"
+  Lore:
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5✷"
+  - "&0 "
+  - "&6» &7&oWhile equipped in off hand:"
+  - "&6★ &c&o+20.0❤ &7&omaximum health."
+  - "&6★ &7&oAdds &c&o2.0❤ &5&oChaos &7&odamage to all your"
+  - "&7&o  melee attacks for every 10 &a&oStrength&7&o."
+  - "&7&o  (E.g. 20.0 extra Chaos damage from"
+  - "&7&o  Strength C.)"
+  - "&0 "
+  - "&7“&6United by ambition, ruled by conquest--"
+  - "&6 fighters under the same banner remain"
+  - "&6 forever intertwined.&7”"
+  Options:
+    Color: BLUE
+    Unbreakable: true
+  Attributes:
+    OffHand:
+      Health: 40.0
+  BannerLayers:
+  - BLACK STRAIGHT_CROSS
+  - BLACK TRIANGLE_BOTTOM
+  - WHITE RHOMBUS_MIDDLE
+  - BLACK GRADIENT_UP
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=ChaosFromStrength} @self ~onAttack
+Riftwalker:
+  Id: 317
+  Display: "&6&oRiftwalker"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5✷"
+  - "&0 "
+  - "&6★ &a&o+75% &7&omovement speed."
+  - "&6★ &c&o+10.0❤ &7&owhile equipped."
+  - "&6★ &7&o35% chance to add &c&o40.0❤ &5&oChaos"
+  - "&7&o  damage to ranged/magic attacks."
+  - "&6★ &7&o15% chance to add &c&o80.0❤ &5&oChaos"
+  - "&7&o  damage to ranged/magic attacks."
+  - "&0 "
+  - "&7“&6Between dreams and reality, there"
+  - "&6 lies a desolate realm, untainted by"
+  - "&6 both the mortals and the gods.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.75
+      Health: 20.0
+  Enchantments:
+  - DEPTH_STRIDER:10
+  - PROTECTION_FALL:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Chaos_40} @target ~onBowHit 0.35
+  - skill{s=Chaos_80} @target ~onBowHit 0.15
+Charm_Frenzy:
+  Id: 352
+  Display: "&6&oAspect of the Wolf"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5✷"
+  - "&0 "
+  - "&6» &7&oWhile equipped in off hand:"
+  - "&6★ &a&o+50% &7&omovement speed."
+  - "&6★ &7&oWhenever you take damage, gain"
+  - "&a&o  Haste X &7&ofor up to 5.0s."
+  - "&6★ &7&oWhenever you hit an enemy, gain"
+  - "&a&o  Speed X &7&ofor up to 5.0s."
+  - "&0 "
+  - "&7“&6The hunter is never born--they"
+  - "&6 are built from sheer necessity.&7”"
+  Enchantments:
+  - DAMAGE_ALL:10
+  Attributes:
+    OffHand:
+      MovementSpeed: 0.5
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=9;overwrite=true} @Self ~onDamaged
+  - potion{type=SPEED;duration=100;lvl=9;overwrite=true} @Self ~onAttack
+  - potion{type=SPEED;duration=100;lvl=9;overwrite=true} @Self ~onBowHit
+Charm_Curse:
+  Id: 415
+  Display: "&6&oAncestral Effigy"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5✷"
+  - "&0 "
+  - "&6» &7&oWhile equipped in off hand:"
+  - "&6★ &c&o+10.0❤ &7&omaximum health."
+  - "&6★ &7&oYour attacks inflict &d&oCurse&7&o."
+  - "&6★ &7&oRestore &c&o20.0❤ &7&oevery second"
+  - "&7&o  while you have &a&oRegeneration&7&o."
+  - "&0 "
+  - "&7“&6Despite being crudely-carved,"
+  - "&6 this small wooden doll radiates"
+  - "&6 with incredible magical energy.&7”"
+  Enchantments:
+  - DAMAGE_ALL:10
+  Attributes:
+    OffHand:
+      Health: 20.0
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Skills:
+  - skill{s=InflictCurse} @target ~onAttack
+  - skill{s=InflictCurse} @target ~onBowHit
+  - skill{s=Titan_SuperHeal} @Self ~onTimer:10
+Charm_Slow_4:
+  Id: 348
+  Display: "&6&oSands of Creation"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &5✷"
+  - "&0 "
+  - "&6★ &7&oInflicts &8&oSlowness IV &7&oon enemy"
+  - "&7&o  monsters/bosses you attack"
+  - "&7&o  for up to 10.0s."
+  - "&0 "
+  - "&7“&6Behold, the essence from which"
+  - "&6 all life is shaped! With it, I shall"
+  - "&6 undo the illness it has become.&7”"
+  Enchantments:
+  - DAMAGE_ALL:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS

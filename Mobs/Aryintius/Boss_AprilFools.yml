@@ -1,0 +1,159 @@
+AF_Izzy:
+  Type: BABY_ZOMBIE
+  Display: "&4&l<&c« &eIzzy &c»&4&l>"
+  Health: 300000
+  Damage: 3000
+  BossBar:
+    Enabled: true
+    Title: "&4&l<&c« &eIzzy the Tiny Lord &c»&4&l>"
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_20
+  Equipment:
+  - UHelm_4:4
+  - UChest_4:3
+  - ULegs_4:2
+  - UBoots_4:1
+  - BLAZE_ROD:0
+  - ENCHANTED_BOOK:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Titan_Fragments
+  - Currency_Rifts_Boss
+  - TitanX
+  - AprilFools
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 100
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Despawn: false
+    Silent: true
+  Skills:
+### INITIALIZATION/UTILS
+  - message{m="<mob.name> &fYou've ruined me once. I will not fail again!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelSlowness} @Self ~onTimer:5
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+  - skill{s=CancelDespawn} @Self ~onTimer:20
+  - skill{s=TX_Melee} @target ~onAttack
+  - randommessage
+      {
+      m=
+      "<mob.name> &7Face the wrath of my small magical power!",
+      "<mob.name> &7How pathetic, you can't even hit me!",
+      "<mob.name> &7I consign your remains to the Void!",
+      "<mob.name> &7There is no life in the Void... only memes.",
+      "<mob.name> &7Taste the flames of the sun!";
+      } @PIR{r=50} ~onTimer:300
+  - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.4} @self ~onDamaged
+  - effect:sound{s=entity.vex.hurt;p=0.2;v=1} @self ~onDamaged
+  - effect:sound{s=entity.zombie.hurt;p=0.2;v=1} @self ~onDamaged
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=block.glass.break;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+### PHASE 1
+  - skill{s=T2_Vaporize} @NearestPlayer{r=50} ~onTimer:250
+  - skill{s=TX_Teleport} @RTT ~onTimer:200
+  - skill{s=TX_AtziriSpam} @Self ~onTimer:350
+  - skill{s=TX_NovaKill} @Self ~onTimer:200
+  - skill{s=TX_DeathTotem} @Self ~onTimer:600 >50%
+### PHASE 2
+  - skill{s=TX_DeathTotem2} @Self ~onTimer:600 <50%
+### DEATH
+  - message{m="<mob.name> &fArgh... I will have my revenge..."} @PlayersInRadius{r=50} ~onDeath
+  - remove @MIR{r=100;t=TX_Explosion} ~onDeath
+  - remove @MIR{r=100;t=TX_Explosion2} ~onDeath
+  - remove @MIR{r=100;t=TX_Explosion3} ~onDeath
+  - effect:sound{s=entity.enderdragon.death;v=1;p=2} @Self ~onDeath
+  - effect:sound{s=entity.enderdragon.death;v=1;p=1} @Self ~onDeath
+  - effect:sound{s=entity.enderdragon.death;v=1;p=0} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=2;p=2} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+  # - command{c="mm m spawn LootGolem 1 Dungeon,-1477,73,-1770"} ~onDeath
+  - summon{type=LootGolem;a=1} @Location{c=-1000,80,1000} ~onDeath
+### OTHER BOSS ------------------------------------------------------------------------------------
+AF_Archie:
+  Type: BABY_ZOMBIE
+  Display: '&f&l<&f« &6Archie &f»&f&l>'
+  Health: 300000
+  Damage: 1000
+  BossBar:
+    Enabled: true
+    Title: '&f&l<&f« &6Archie &f»&f&l>'
+    Range: 50
+    Color: WHITE
+    Style: SEGMENTED_12
+  Equipment:
+  - PortalHead:4
+  - UChest_9:3
+  - ULegs_9:2
+  - UBoots_9:1
+  - Coin_Nether:0
+  - Coin_Nether:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Money_Titan
+  - Common
+  - Uncommon
+  - Rare
+  - Superior
+  - Exalted
+  - Corrupted
+  - Mythic
+  - Iridescent
+  - LabBossX
+  - AprilFools
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    FollowRange: 120
+    MaxCombatDistance: 120
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+### SPAWN
+  - message{m="<mob.name> &eWe meet again, it seems. So be it. This time you'll perish for sure!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - randommessage
+      {
+      m=
+      "<mob.name> &7It's time for you to die! AHAHAHAHAHAH!",
+      "<mob.name> &7Oh yeah by the way, we both spawn a Loot Explosion on death.",
+      "<mob.name> &7Why won't you die?!",
+      "<mob.name> &7I am become bread, destroyer of food.",
+      "<mob.name> &7Hey, cut that out!";
+      } @PIR{r=50} ~onTimer:300
+### PHASE 1
+  - skill{s=LBX_Phase_1} @PIR{r=50} ~onTimer:20
+  - randomskill{s=LBX_SummonClone_1,LBX_SummonClone_2} @Self ~onTimer:530 =50%-80%
+  - skill{s=LBX_Summon2} @Self ~onTimer:400
+  - skill{s=LBX_Summon} @Self ~onTimer:300 >50%
+### PHASE 2
+  - randomskill{s=LBX_SummonClone_1,LBX_SummonClone_2} @Self ~onTimer:370 <50%
+  - skill{s=LBX_Summon} @Self ~onTimer:150 <50%
+### DEATH
+  - message{m="&f&l<&f« &6The Architect &f»&f&l> &cDIE FOR ME, MUAHAHAHAHA!"} @PIR{r=25} ~onKillPlayer
+  - message{m="<mob.name> &eOuch, that really hurt. Good thing I'll respawn in a few minutes..."} @PlayersInRadius{r=50} ~onDeath
+  - remove @MIR{r=50;t=ShaperPointer} ~onDeath
+  - remove @MIR{r=50;t=ShaperMinion} ~onDeath
+  - remove @MIR{r=50;t=ShaperCloneX} ~onDeath
+  - remove @MIR{r=50;t=ShaperCloneY} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=2} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=0} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=1.5;p=1} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+  - summon{type=LootGolem;a=1} @Location{c=-1000,80,1000} ~onDeath

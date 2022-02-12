@@ -1,0 +1,126 @@
+### HAKGON SKILLS ----------------------------------------------
+A1_Fire: ### Basic shot attack, used in composite skills.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A1F-Tick;onHit=A1F-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.arrow.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+A1F-Tick:
+  Skills:
+  - effect:particles{p=crit;amount=8;speed=0;hS=0.2;vS=0.2} @origin
+A1F-Hit:
+  Skills:
+  - damage{a=750;pk=true}
+A1_Poison: ### Poison shot attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A1P-Tick;onHit=A1P-Hit;v=10;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.irongolem.hurt;v=1;p=2}
+  - effect:sound{s=entity.irongolem.hurt;v=1;p=1}
+  - effect:sound{s=entity.irongolem.hurt;v=1;p=0}
+A1P-Tick:
+  Skills:
+  - effect:particles{p=happyVillager;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=crit;amount=8;speed=0;hS=0.2;vS=0.2} @origin
+A1P-Hit:
+  Skills:
+  - damage{a=1000}
+  - effect:sound{s=block.fire.extinguish;v=1;p=2}
+  - effect:sound{s=block.fire.extinguish;v=1;p=1}
+  - effect:sound{s=block.fire.extinguish;v=1;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
+  - potion{type=POISON;duration=200;lvl=0;overwrite=true}
+  - sendtitle{title="&2&lToxic";subtitle="&fDamage over time/confusion";d=20} @target
+  - delay 10
+  - damage{a=100;pi=true;pk=true}
+  - delay 10
+  - damage{a=100;pi=true;pk=true}
+  - delay 10
+  - damage{a=100;pi=true;pk=true}
+A1_ToxicNova: ### Toxic Nova Attack
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=1;p=0} @PIR{r=30}
+  - effect:sound{s=entity.irongolem.death;v=1;p=0} @PIR{r=30}
+  - effect:particlesphere{particle=happyVillager;amount=500;r=10} @self
+  - damage{amount=500;pi=true;pk=true} @PIR{r=10}
+  - delay 2
+  - effect:particlesphere{particle=happyVillager;amount=400;r=8} @self
+  - damage{amount=500;pi=true;pk=true} @PIR{r=8}
+  - delay 2
+  - effect:particlesphere{particle=happyVillager;amount=300;r=6} @self
+  - damage{amount=500;pi=true;pk=true} @PIR{r=6}
+  - delay 2
+  - effect:particlesphere{particle=happyVillager;amount=200;r=4} @self
+  - damage{amount=500;pi=true;pk=true} @PIR{r=4}
+  - delay 2
+  - effect:particlesphere{particle=happyVillager;amount=100;r=2} @self
+  - damage{amount=500;pi=true;pk=true} @PIR{r=2}
+  - delay 2
+  - skill{s=A1P-Hit} @PIR{r=12}
+### Phases
+A1_Phase_1:
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A1_Fire}
+  - delay 10
+  - skill{s=A1_Fire}
+  - delay 10
+  - skill{s=A1_Fire}
+  - delay 10
+  - skill{s=A1_Fire}
+  - delay 10
+  - skill{s=A1_Fire}
+  - delay 20
+  - skill{s=A1_ToxicNova} @Self
+  - delay 20
+  - skill{s=A1_Poison}
+  - delay 15
+  - skill{s=A1_Poison}
+  - delay 15
+  - skill{s=A1_Poison}
+A1_Phase_2:
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A1_ToxicNova} @Self
+  - delay 10
+  - skill{s=A1_Fire}
+  - delay 5
+  - skill{s=A1_Fire}
+  - delay 5
+  - skill{s=A1_Fire}
+  - delay 5
+  - skill{s=A1_Fire}
+  - delay 5
+  - skill{s=A1_Fire}
+  - delay 5
+  - skill{s=A1_Fire}
+  - delay 5
+  - skill{s=A1_Fire}
+  - delay 5
+  - skill{s=A1_Fire}
+  - delay 5
+  - skill{s=A1_Fire}
+  - delay 5
+  - skill{s=A1_Fire}
+  - delay 10
+  - skill{s=A1_ToxicNova} @Self
+  - delay 10
+  - skill{s=A1_Poison}
+  - delay 10
+  - skill{s=A1_Poison}
+  - delay 10
+  - skill{s=A1_Poison}
+  - delay 10
+  - skill{s=A1_Poison}
+  - delay 10
+  - skill{s=A1_Poison}

@@ -1,0 +1,132 @@
+### MYTHIC ARMOR SETS ------------------------------------------
+Lithaan_Helm:
+  Id: 298
+  Display: "&5&oLithaan's Presence"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&oAdds &c&o50.0❤ &7&odamage to attacks"
+  - "&7&o  for every level of &a&oSpeed&7&o."
+  - "&7&o  (Up to 500.0❤ from Speed X.)"
+  - "&5★ &7&oSet Bonus: &a&oRegen. X&7&o + &e&o40.0❤&7&o."
+  - "&7&o  (Refreshes once every 10.0s.)"
+  - "&0 "
+  - "&7“&5Deep within the confines of the"
+  - "&5 Titans' realm, the last remaining"
+  - "&5 member of their kin waits...&7”"
+  Enchantments: 
+  - PROTECTION_ENVIRONMENTAL:20
+  Attributes:
+    Head:
+      Health: 20.0
+  Options:
+    Unbreakable: true
+    Color: 25,222,215
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=PhysFromSpeed} @target ~onBowHit
+  - skill{s=PhysFromSpeed} @target ~onAttack
+Lithaan_Chest:
+  Id: 311
+  Display: "&5&oLithaan's Dream"
+  Lore:
+  - "&7Projectile Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&oEvery 5.0s, restore &c&o500.0❤"
+  - "&7&o  health over a period of 1.5s."
+  - "&5★ &7&oSet Bonus: &a&oRegen. X&7&o + &e&o40.0❤&7&o."
+  - "&7&o  (Refreshes once every 10.0s.)"
+  - "&0 "
+  - "&7“&5His brethren have long passed,"
+  - "&5 taken in their slumber by their"
+  - "&5 maddening nightmares...&7”"
+  Enchantments: 
+  - PROTECTION_PROJECTILE:20
+  Options:
+    Unbreakable: true
+  Attributes:
+    Chest:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=GuardianHeal} @Self ~onTimer:100
+Lithaan_Legs:
+  Id: 300
+  Display: "&5&oLithaan's Solitude"
+  Lore:
+  - "&7Blast Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&o50% chance to fully restore"
+  - "&7&o  your gold hearts after taking"
+  - "&7&o  damage."
+  - "&5★ &7&oSet Bonus: &a&oRegen. X&7&o + &e&o40.0❤&7&o."
+  - "&7&o  (Refreshes once every 10.0s.)"
+  - "&0 "
+  - "&7“&5He wanders alone amongst aging"
+  - "&5 halls and the endless stairs of"
+  - "&5 fleeting memories...&7”"
+  Enchantments: 
+  - PROTECTION_EXPLOSIONS:20
+  Options:
+    Unbreakable: true
+    Color: 25,222,215
+  Attributes:
+    Legs:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=RestoreEqualES} @Self ~onDamaged 0.5
+Lithaan_Boots:
+  Id: 313
+  Display: "&5&oLithaan's Despair"
+  Lore:
+  - "&7Depth Strider X"
+  - "&7Feather Falling X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &5&oMythic"
+  - "&0 "
+  - "&5★ &a&o+80% &7&omovement speed."
+  - "&5★ &c&o+10.0❤ &7&owhile equipped."
+  - "&5★ &7&oYou cannot be knocked back."
+  - "&5★ &7&oSet Bonus: &a&oRegen. X&7&o + &e&o40.0❤&7&o."
+  - "&7&o  (Refreshes once every 10.0s.)"
+  - "&0 "
+  - "&7“&5And soon, he too will fall into the"
+  - "&5 endless sleep--resting eternally"
+  - "&5 in the shattered dream.&7”"
+  Enchantments: 
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      Health: 20.0
+      KnockbackResistance: 1.0
+      MovementSpeed: 0.80
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE

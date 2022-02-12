@@ -1,0 +1,272 @@
+### SUPERIOR ITEMS (CS ONLY) -----------------------------------
+### RANGED ITEMS -----------------------------------------------
+Bow2:
+  Id: 261
+  Display: "&9Ebonwood Bow&7&7 «1»"
+  Lore:
+  - "&7Power L"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c120.0❤x3"
+  - "&7Cooldown: &f5 Seconds"
+  - "&0 "
+  - "&9★ &7Fully-drawn shots cast a"
+  - "&7  devastating ability!"
+  - "&0 "
+  - "&7“&9A strange, shadowy bow made"
+  - "&9 from suspicious materials...&7”"
+  Other:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:50
+  - ARROW_INFINITE:1
+  - DURABILITY:9999
+  - MENDING:10
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+Crossbow3:
+  Id: 278
+  Display: "&9The Eradicator&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fCrossbow"
+  - "&7Ammo: &fArrow"
+  - "&7Speed: &fFast"
+  - "&7Damage: &c25.0❤x3"
+  - "&0 "
+  - "&9★ &7Burst-fire (3 shots)"
+  - "&0 "
+  - "&7“&9Let the sky rain spears!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Rocket2:
+  Id: 355
+  Data: 10
+  Display: "&9Pwnlauncher&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fLauncher"
+  - "&7Ammo: &fFire Charge"
+  - "&7Radius: &f3 Blocks"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c0.0-300.0❤"
+  - "&0 "
+  - "&7“&9Kaboom, kaboom, kaboom!&7”"
+BurstRifle1:
+  Id: 417
+  Display: "&9Carbine&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fRifle"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c20.0❤"
+  - "&0 "
+  - "&9★ &7Burst fire (3 shots)."
+  - "&9★ &7Crouching reduces recoil."
+  - "&9★ &7Crouching reduces spread."
+  - "&0 "
+  - "&7“&9A lightweight, semi-automatic"
+  - "&9 repeating rifle.&7”"
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Scattergun3:
+  Id: 418
+  Display: "&9Scatterburst&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fScattergun"
+  - "&7Ammo: &fIron Ingot"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c35.0❤x9"
+  - "&0 "
+  - "&9★ &7Burst Fire (3 shots)"
+  - "&9★ &7Crouching focuses shots."
+  - "&9★ &7Crouching reduces recoil."
+  - "&0 "
+  - "&7“&9A heavy scattergun that"
+  - "&9 rapidly fires iron shrapnel.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Shotgun3:
+  Id: 418
+  Display: "&9Clockwork Tempest&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fShotgun"
+  - "&7Ammo: &fCoal"
+  - "&7Speed: &fSlow"
+  - "&7Damage: &c30.0❤x8"
+  - "&0 "
+  - "&9★ &7Shots may ignite enemies."
+  - "&0 "
+  - "&7“&9A strange, lightweight shotgun"
+  - "&9 powered by steam.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+SMG2:
+  Id: 355
+  Data: 7
+  Display: "&9The Taipan&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fSMG"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c15.0❤"
+  - "&0 "
+  - "&9★ &7Inflicts &aPoison IV&7 on targets"
+  - "&7  for up to 3.0s."
+  - "&0 "
+  - "&7“&9This feisty little submachine"
+  - "&9 gun packs a very venomous"
+  - "&9 punch.&9 &7”"
+Sniper2:
+  Id: 417
+  Display: "&9The Toxic Avenger&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fSniper"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c125.0❤"
+  - "&0 "
+  - "&9★ &7Poisons targets for 8.0s"
+  - "&7  on headshot."
+  - "&0 "
+  - "&7“&9It's now a musical as well!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+### MAGIC ITEMS ------------------------------------------------
+Fire2:
+  Id: 280
+  Display: "&9Staff of Flames&7&7"
+  Lore:
+  - "&7Left-click to cast"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fAverage"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c50.0❤x3"
+  - "&0 "
+  - "&7“&9This wooden staff feels"
+  - "&9 oddly hot to the touch.&7”"
+  Enchantments:
+  - ARROW_FIRE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Frost1:
+  Id: 403
+  Display: "&9Frostbolt&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Charge: &fSlow"
+  - "&7Damage: &c125.0❤"
+  - "&0 "
+  - "&9★ &bFreezes &7enemies for"
+  - "&7  up to 2.0s."
+  - "&0 "
+  - "&7“&9Even the dead shall be"
+  - "&9 chilled to the bone.&7”"
+Water2:
+  Id: 403
+  Display: "&9Raging Current&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Charge: &fSlow"
+  - "&7Damage: &c30.0❤x3"
+  - "&0 "
+  - "&7“&9Flow like the rivers,"
+  - "&9 strike like the tides.&7”"
+Fire6:
+  Id: 403
+  Display: "&9Flameblast&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0"
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fAverage"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c25.0❤x5"
+  - "&0 "
+  - "&9★ &730% Critical strike chance."
+  - "&9★ &72.5x damage on critical hit."
+  - "&0 "
+  - "&7“&9Even the smallest flame has"
+  - "&9 the potential to grow into an"
+  - "&9 all-consuming conflagration.&7”"
+Earth2:
+  Id: 403
+  Display: "&9Dust Devil&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0"
+  - "&7Tier: &9Superior"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c20.0❤"
+  - "&0 "
+  - "&9★ &720% chance to inflict &8Slowness"
+  - "&7  on enemies for up to 3.0s."
+  - "&0 "
+  - "&7“&9A storm comprised of earth is a"
+  - "&9 most interesting phenomenon.&7”"
+  Skills:
+  - potion{type=SLOW;duration=60;lvl=0;overwrite=true} @target ~onBowHit 0.2

@@ -1,0 +1,94 @@
+###---------------------------------------###
+### TRIAL OF CUNNING
+###---------------------------------------###
+Drowned:
+  Type: ZOMBIE
+  Display: "&6« &eDrowned &6»"
+  Health: 200
+  Damage: 1000
+  Drops:
+  - Currency_Trials_1
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - Drowned_Helm:4
+  - Drowned_Chest:3
+  - Drowned_Legs:2
+  - Drowned_Boots:1
+  - stone_spade:0
+  - stone_spade:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=SpeedBuff} @Self =50%
+  - skill{s=5sInvincible} @Self =50%
+  - skill{s=DamageBuff} @Self =50%
+Sentinel:
+  Type: GUARDIAN
+  Display: "&4« &eSentinel &4»"
+  Health: 250
+  Damage: 500
+  Drops:
+  - Currency_Trials_1
+  - Exalted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.35
+    PreventOtherDrops: true
+    FollowRange: 8
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=2} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+SquidHead:
+  Type: ZOMBIE
+  Display: "&6« &eInfected Wraith &6»"
+  Health: 100
+  Damage: 4
+  # Drops:
+  # - Placeholder
+  Modules:
+    ThreatTable: true
+  Disguise:
+    Type: SQUID
+    Invisible: false
+    Burning: false
+    ShowName: false
+    ModifyBoundingBox: true
+  Mount: SquidButt
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+SquidButt:
+  Type: ZOMBIE
+  Display: "&4« &eAwakened Wraith &4»"
+  Health: 250
+  Damage: 1000
+  Drops:
+  - Currency_Trials_2
+  - Exalted
+  Modules:
+    ThreatTable: true
+  Equipment:
+  - 0:4
+  - DChest:3
+  - DLegs:2
+  - DBoots:1
+  - T0_1:0
+  - T0_1:5
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.45
+    PreventOtherDrops: true
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=5sInvincible} @Self =50%
+  - skill{s=DamageBuff} @Self =50%

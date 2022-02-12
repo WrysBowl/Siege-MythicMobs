@@ -1,0 +1,292 @@
+###---------------------------------------------------------###
+### IRIDESCENT CHARMS
+###---------------------------------------------------------###
+Charm_Feather:
+  Id: 288
+  Display: "&b&oImperial Feather"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Effect: &aSpeed IV &7+ &aHaste IV&7."
+  - "&0 "
+  - "&7“&bA deathly pale feather from a"
+  - "&b royal peacock. It moves swiftly"
+  - "&b in the wind, yet cuts as harsh"
+  - "&b as a thousand knives.&7”"
+  Enchantments:
+  - ARROW_FIRE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+ShadowReaver:
+  Id: 291
+  Display: "&b&oShadow Reaver"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oGain &a&oRegen. X &7&oif you have"
+  - "&7&o  a full set of Shadewalker"
+  - "&7&o  armor equipped."
+  - "&b★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, restore &c&o4.0❤&7&o."
+  - "&0 "
+  - "&7“&bA strange, glistening scythe"
+  - "&b radiating with energies from"
+  - "&b the void...&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - UNBREAKABLE
+  - ENCHANTS
+  - ATTRIBUTES
+Charm_Moonstone:
+  Id: 337
+  Display: "&b&oThe Moonstone"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - '&b★ &7&oIf equipped with the Redeemer''s'
+  - "&7&o  set: Refresh your golden hearts"
+  - "&7&o  whenever you hit a monster/boss."
+  - "&0 "
+  - "&7“&bBlessed by the first eternals, none"
+  - "&b have seen this artifact's exquisite"
+  - "&b beauty until now.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+Charm_Clockwork:
+  Id: 347
+  Display: "&b&oChrono Aquira"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oGain &a&oRegen. V &7&oif you have a"
+  - "&7&o  full set of Clockwork armor"
+  - "&7&o  equipped."
+  - "&0 "
+  - "&7“&bA modified timepiece used for"
+  - "&b immense calculations designed"
+  - "&b by the Aquir Empire.&7”"
+  Enchantments:
+  - DURABILITY:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Charm_Aquir:
+  Id: 410
+  Display: "&b&oRecollection Crystal"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oGain &a&oRegen. IV &7&oand &a&oSpeed IV"
+  - "&7&o  if you also have a set of"
+  - "&7&o  Aquir armor equipped."
+  - "&0 "
+  - "&7“&bA common device used to view"
+  - "&b and record memories, sacred"
+  - "&b to the Aquir Empire.&7”"
+  Enchantments:
+  - DURABILITY:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Charm_Jump:
+  Id: 414
+  Display: "&b&oCharm of Leaping"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oGain &a&oJump Boost X &7&oif you"
+  - "&7&o  also have a full set of"
+  - "&7&o  Bunny Armor equipped."
+  - "&0 "
+  - "&7“&bMoon shoes, anyone?&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+###---------------------------------------------------------###
+### IRIDESCENT WEAPONS/TOOLS
+###---------------------------------------------------------###
+Dragon_Sword:
+  Id: 276
+  Display: "&b&oDragon's Wrath"
+  Lore:
+  - "&7Sharpness L"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Ignites enemies infinitely."
+  - "&0 "
+  - "&7“&bA remnant of the past..."
+  - "&b waiting to be found. Never"
+  - "&b truly resting...&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - DAMAGE_ALL:50
+  - FIRE_ASPECT:100
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+Headsman:
+  Id: 292
+  Display: "&b&oThe Headsman"
+  Lore:
+  - "&7Smite C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+50% &7&oattack speed."
+  - "&b★ &a&o+30% &7&omovement speed."
+  - "&b★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, gain &a&oHaste X"
+  - "&7&o  for up to 10.0s."
+  - "&0 "
+  - "&7“&bWith a single strike, heads shall"
+  - "&b fall. And thus, death now heeds"
+  - "&b my call.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:100
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.25
+      MovementSpeed: 0.3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+###---------------------------------------------------------###
+### IRIDESCENT SHIELDS
+###---------------------------------------------------------###
+Shield_Clockwork:
+  Id: 442
+  Display: "&b&oClockwork Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oGain &a&oResist. IV &7&oif you have a full"
+  - "&7&o  set of Clockwork armor equipped."
+  - "&b★ &7&oSet your gold hearts to &e&o30.0❤ &7&oif"
+  - "&7&o  you have a full set of Clockwork"
+  - "&7&o  armor equipped."
+  - "&0 "
+  - "&7“&bA strange, shining shield composed"
+  - "&b of dozens of intricate devices all"
+  - "&b ticking in unison.&7”"
+  Options:
+    Color: YELLOW
+    Unbreakable: true
+  BannerLayers:
+  - BROWN TRIANGLES_TOP
+  - BROWN TRIANGLES_BOTTOM
+  - WHITE CIRCLE_MIDDLE
+  - BROWN FLOWER
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Shield_Void:
+  Id: SHIELD
+  Display: "&b&oThe Event Horizon"
+  Lore:
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oYou have &a&oHaste X &7&owhile a full set"
+  - "&7&o  of Dragonscale armor is equipped."
+  - "&b★ &7&oYou have &a&oSpeed X &7&owhile a full set"
+  - "&7&o  of Titan armor is equipped."
+  - "&b★ &7&oYou have &e&o80.0❤ &7&owhile a full set of"
+  - "&7&o  Redeemer's armor is equipped."
+  - "&0 "
+  - "&7“&bWhen you gaze into the abyss... the"
+  - "&b abyss gazes back...&7”"
+  Options:
+    Color: BLACK
+    Unbreakable: true
+  BannerLayers:
+  - YELLOW STRIPE_DOWNLEFT
+  - ORANGE RHOMBUS_MIDDLE
+  - RED FLOWER
+  - BLACK CIRCLE_MIDDLE
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Shield_Paladin:
+  Id: SHIELD
+  Display: "&b&oPaladin's Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+30.0❤ &7&owhen equipped in"
+  - "&7&o  your off hand."
+  - "&b★ &c&o+50.0❤ &7&owhen equipped in"
+  - "&7&o  your main hand."
+  - "&0 "
+  - "&7“&bI am a warrior of the light."
+  - "&b Hunt the darkness, I shall,"
+  - "&b until my dying breath.&7”"
+  Options:
+    Color: YELLOW
+    Unbreakable: true
+  Attributes:
+    OffHand:
+      Health: 60.0
+    MainHand:
+      Health: 100.0
+  BannerLayers:
+  - WHITE TRIANGLES_TOP
+  - WHITE TRIANGLES_BOTTOM
+  - WHITE BORDER
+  - WHITE RHOMBUS_MIDDLE
+  - SILVER CIRCLE_MIDDLE
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+Shield_Turtle:
+  Id: SHIELD
+  Display: "&b&oTurtle Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&oYou have &a&oResistance V &7&owhile"
+  - "&7&o  6 Turtle Shields are equipped."
+  - "&7&o  (Refreshes every 10.0s)."
+  - "&0 "
+  - "&7“&bIs it a blessing or a curse to"
+  - "&b possess infinite recursion?&7”"
+  Options:
+    Color: LIGHT_BLUE
+    Unbreakable: true
+  BannerLayers:
+  - BLUE GRADIENT_UP
+  - WHITE TRIANGLES_TOP
+  - WHITE TRIANGLES_BOTTOM
+  - GREEN FLOWER
+  - BROWN CIRCLE_MIDDLE
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE

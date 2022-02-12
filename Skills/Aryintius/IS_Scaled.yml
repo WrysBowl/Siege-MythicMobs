@@ -1,0 +1,469 @@
+### These item effects scale
+CritFromStrength: ### +5% crit chance per 10 Strength ----------
+  Skills:
+  - effect:sound{s=entity.player.attack.crit;v=0.5;p=1}
+  - effect:sound{s=entity.player.attack.crit;v=0.5;p=2}
+  - skill{s=CritStrength_0}
+  - skill{s=CritStrength_1}
+  - skill{s=CritStrength_2}
+  - skill{s=CritStrength_3}
+  - skill{s=CritStrength_4}
+  - skill{s=CritStrength_5}
+  - skill{s=CritStrength_6}
+  - skill{s=CritStrength_7}
+  - skill{s=CritStrength_8}
+  - skill{s=CritStrength_9}
+  - skill{s=CritStrength_10}
+  - skill{s=CritStrength_11}
+  - skill{s=CritStrength_12}
+  - skill{s=CritStrength_13}
+  - skill{s=CritStrength_14}
+  - skill{s=CritStrength_15}
+  - skill{s=CritStrength_16}
+  - skill{s=CritStrength_17}
+  - skill{s=CritStrength_18}
+  - skill{s=CritStrength_19}
+  - skill{s=CritStrength_20}
+CritStrength_0:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE} false
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.1
+CritStrength_1:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>8} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<18} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.15
+CritStrength_2:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>18} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<28} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.2
+CritStrength_3:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>28} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<38} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.25
+CritStrength_4:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>38} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<48} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.3
+CritStrength_5:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>48} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<58} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.35
+CritStrength_6:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>58} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<68} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.4
+CritStrength_7:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>68} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<78} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.45
+CritStrength_8:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>78} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<88} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.5
+CritStrength_9:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>88} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<98} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.55
+CritStrength_10:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>98} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<108} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.6
+CritStrength_11:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>108} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<118} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.65
+CritStrength_12:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>118} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<128} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.7
+CritStrength_13:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>128} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<138} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.75
+CritStrength_14:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>138} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<148} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.8
+CritStrength_15:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>148} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<158} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.85
+CritStrength_16:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>158} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<168} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.9
+CritStrength_17:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>168} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<178} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.95
+CritStrength_18:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>178} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<188} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 1.0
+CritStrength_19:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>188} true
+  - haspotioneffect{t=INCREASE_DAMAGE;level=<188} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 1.0
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.05
+CritStrength_20:
+  Conditions:
+  - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
+  Skills:
+  - damage{a=200;ia=true;pi=true;pk=true} @target 1.0
+  - damage{a=200;ia=true;pi=true;pk=true} @target 0.1
+ResFromAbsorb: ### Resistance From Absorption ------------------
+  Skills:
+  - skill{s=ResAbsorb_1}
+  - skill{s=ResAbsorb_2}
+  - skill{s=ResAbsorb_3}
+  - skill{s=ResAbsorb_4}
+  - skill{s=ResAbsorb_5+}
+ResAbsorb_1:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=<18} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=0;overwrite=true}
+ResAbsorb_2:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>18} true
+  - haspotioneffect{t=ABSORPTION;level=<28} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=1;overwrite=true}
+ResAbsorb_3:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>28} true
+  - haspotioneffect{t=ABSORPTION;level=<38} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=2;overwrite=true}
+ResAbsorb_4:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>38} true
+  - haspotioneffect{t=ABSORPTION;level=<48} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=3;overwrite=true}
+ResAbsorb_5+:
+  Conditions:
+  - haspotioneffect{t=ABSORPTION;level=>48} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+ResRefresh: ### Resistance Refresh -----------------------------
+  Skills:
+  - skill{s=ResRefresh_1}
+  - skill{s=ResRefresh_2}
+  - skill{s=ResRefresh_3}
+  - skill{s=ResRefresh_4}
+  - skill{s=ResRefresh_5+}
+ResRefresh_1:
+  Conditions:
+  - haspotioneffect{t=DAMAGE_RESISTANCE;level=0} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=0;overwrite=true}
+ResRefresh_2:
+  Conditions:
+  - haspotioneffect{t=DAMAGE_RESISTANCE;level=1} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=1;overwrite=true}
+ResRefresh_3:
+  Conditions:
+  - haspotioneffect{t=DAMAGE_RESISTANCE;level=2} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=2;overwrite=true}
+ResRefresh_4:
+  Conditions:
+  - haspotioneffect{t=DAMAGE_RESISTANCE;level=3} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=3;overwrite=true}
+ResRefresh_5+:
+  Conditions:
+  - haspotioneffect{t=DAMAGE_RESISTANCE;level=4} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=100;lvl=4;overwrite=true}
+SpeedEqual2Regen: ### Speed from Regen -------------------------
+  Skills:
+  - skill{s=SpeedGen_1}
+  - skill{s=SpeedGen_2}
+  - skill{s=SpeedGen_3}
+  - skill{s=SpeedGen_4}
+  - skill{s=SpeedGen_5+}
+SpeedGen_1:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=0} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=0;overwrite=true}
+SpeedGen_2:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=1} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=1;overwrite=true}
+SpeedGen_3:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=2} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=2;overwrite=true}
+SpeedGen_4:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=4} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=4;overwrite=true}
+SpeedGen_5+:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=>5} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=9;overwrite=true}
+SpeedEqual2Haste: ### Speed from Haste -------------------------
+  Skills:
+  - skill{s=SpeedHaste_1}
+  - skill{s=SpeedHaste_2}
+  - skill{s=SpeedHaste_3}
+  - skill{s=SpeedHaste_4}
+  - skill{s=SpeedHaste_5}
+  - skill{s=SpeedHaste_6}
+  - skill{s=SpeedHaste_7}
+  - skill{s=SpeedHaste_8}
+  - skill{s=SpeedHaste_9}
+  - skill{s=SpeedHaste_10}
+SpeedHaste_1:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=0} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=0;overwrite=true}
+SpeedHaste_2:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=1} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=1;overwrite=true}
+SpeedHaste_3:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=2} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=2;overwrite=true}
+SpeedHaste_4:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=3} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=3;overwrite=true}
+SpeedHaste_5:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=4} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=4;overwrite=true}
+SpeedHaste_6:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=5} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=5;overwrite=true}
+SpeedHaste_7:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=6} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=6;overwrite=true}
+SpeedHaste_8:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=7} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=7;overwrite=true}
+SpeedHaste_9:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=8} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=8;overwrite=true}
+SpeedHaste_10:
+  Conditions:
+  - haspotioneffect{t=FAST_DIGGING;level=9} true
+  Skills:
+  - potion{type=SPEED;duration=100;lvl=9;overwrite=true}
+HasteEqual2Speed: ### Haste from Speed -------------------------
+  Skills:
+  - skill{s=HasteSpeed_1}
+  - skill{s=HasteSpeed_2}
+  - skill{s=HasteSpeed_3}
+  - skill{s=HasteSpeed_4}
+  - skill{s=HasteSpeed_5}
+  - skill{s=HasteSpeed_6}
+  - skill{s=HasteSpeed_7}
+  - skill{s=HasteSpeed_8}
+  - skill{s=HasteSpeed_9}
+  - skill{s=HasteSpeed_10}
+HasteSpeed_1:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=0} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=0;overwrite=true}
+HasteSpeed_2:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=1} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=1;overwrite=true}
+HasteSpeed_3:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=2} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=2;overwrite=true}
+HasteSpeed_4:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=3} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=3;overwrite=true}
+HasteSpeed_5:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=4} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=4;overwrite=true}
+HasteSpeed_6:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=5} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=5;overwrite=true}
+HasteSpeed_7:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=6} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=6;overwrite=true}
+HasteSpeed_8:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=7} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=7;overwrite=true}
+HasteSpeed_9:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=8} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=8;overwrite=true}
+HasteSpeed_10:
+  Conditions:
+  - haspotioneffect{t=SPEED;level=9} true
+  Skills:
+  - potion{type=FAST_DIGGING;duration=100;lvl=9;overwrite=true}
+StrengthFromRegen: ### Gain 15.0 Strength for every 1 Regen ----
+  Skills:
+  - skill{s=StrengthRegen_1}
+  - skill{s=StrengthRegen_2}
+  - skill{s=StrengthRegen_3}
+  - skill{s=StrengthRegen_4}
+  - skill{s=StrengthRegen_5}
+  - skill{s=StrengthRegen_6}
+  - skill{s=StrengthRegen_7}
+  - skill{s=StrengthRegen_8}
+  - skill{s=StrengthRegen_9}
+  - skill{s=StrengthRegen_10}
+StrengthRegen_1:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=0} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=14;overwrite=true}
+StrengthRegen_2:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=1} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=29;overwrite=true}
+StrengthRegen_3:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=2} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=44;overwrite=true}
+StrengthRegen_4:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=3} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=59;overwrite=true}
+StrengthRegen_5:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=4} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=74;overwrite=true}
+StrengthRegen_6:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=5} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=89;overwrite=true}
+StrengthRegen_7:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=6} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=104;overwrite=true}
+StrengthRegen_8:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=7} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=119;overwrite=true}
+StrengthRegen_9:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=8} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=134;overwrite=true}
+StrengthRegen_10:
+  Conditions:
+  - haspotioneffect{t=REGENERATION;level=9} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=149;overwrite=true}
+StrengthFromResist: ### Gain 40.0 Strength for every 1 Resist.
+  Skills:
+  - skill{s=StrengthResist_1}
+  - skill{s=StrengthResist_2}
+  - skill{s=StrengthResist_3}
+  - skill{s=StrengthResist_4}
+  - skill{s=StrengthResist_5}
+StrengthResist_1:
+  Conditions:
+  - haspotioneffect{t=DAMAGE_RESISTANCE;level=0} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=39;overwrite=true}
+StrengthResist_2:
+  Conditions:
+  - haspotioneffect{t=DAMAGE_RESISTANCE;level=1} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=79;overwrite=true}
+StrengthResist_3:
+  Conditions:
+  - haspotioneffect{t=DAMAGE_RESISTANCE;level=2} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=119;overwrite=true}
+StrengthResist_4:
+  Conditions:
+  - haspotioneffect{t=DAMAGE_RESISTANCE;level=3} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=159;overwrite=true}
+StrengthResist_5:
+  Conditions:
+  - haspotioneffect{t=DAMAGE_RESISTANCE;level=4} true
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=100;lvl=199;overwrite=true}

@@ -1,0 +1,223 @@
+### BOLT/MISSILE SKILLS
+SHomer: ## N'azhrak's Void Spam
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=entity.enderdragon.growl;v=1;p=2}
+  - effect:sound{s=entity.enderdragon.growl;v=1;p=0}
+  - missile{ot=SHomer_TICK;oh=SHomer_HIT;v=20;i=1;hR=1;vR=1;syo=3;in=0.25}
+SHomer_TICK:
+  Skills:
+  - effect:particles{p=witchMagic;a=2} @origin
+SHomer_HIT:
+  Skills:
+  - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
+  - effect:sound{s=entity.bat.death;v=1;p=0}
+  - damage{a=800;pk=true}
+  - potion{type=BLINDNESS;duration=200;lvl=1}
+Homer: ## Basic homing attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - missile{ot=Homer_TICK;oh=Homer_HIT;v=10;i=1;hR=1;vR=1;in=0.75}
+Homer_TICK:
+  Skills:
+  - effect:particles{p=flame;a=2} @origin
+Homer_HIT:
+  Skills:
+  - effect:particles{p=lava;a=10;hS=1;vS=1}
+  - damage{a=400;pk=true}
+IceBolt: ## Titan3 Stuff
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=IceBolt-Tick;onHit=IceBolt-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.wither.ambient;v=2;p=2}
+IceBolt-Tick:
+  Skills:
+  - effect:particles{p=snowballpoof;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+IceBolt-Hit:
+  Skills:
+  - damage{a=20}
+  - potion{type=SLOW;duration=25;lvl=5}
+  - effect:sound{s=block.glass.break;v=2;p=1}
+  - effect:sound{s=block.glass.break;v=2;p=0}
+  - effect:sound{s=block.glass.break;v=2;p=2}
+  - sendtitle{title="&b&lFrozen";subtitle="&fMovement speed reduced";d=20} @target
+IceMissile: ## Super deadly combo enabler
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=2;p=2}
+  - missile{ot=IceMissile_TICK;oh=IceMissile_HIT;v=10;i=1;hR=1;vR=1;in=0.75}
+IceMissile_TICK:
+  Skills:
+  - effect:particles{p=cloud;a=2} @origin
+IceMissile_HIT:
+  Skills:
+  - effect:particles{p=snowballpoof;a=10;hS=1;vS=1}
+  - damage{a=500;pk=true}
+  - effect:sound{s=block.glass.break;v=2;p=1}
+  - effect:sound{s=block.glass.break;v=2;p=0}
+  - effect:sound{s=block.glass.break;v=2;p=2}
+FrostBurst: ## Titan3 stuff
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=FB-Tick;onHit=FB-Hit;v=2;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=2;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=2;p=1}
+  - effect:sound{s=entity.ghast.shoot;v=2;p=0}
+FB-Tick:
+  Skills:
+  - effect:particles{p=cloud;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+FB-Hit:
+  Skills:
+  - effect:sound{s=block.glass.break;v=2;p=0}
+  - effect:sound{s=block.glass.break;v=2;p=1}
+  - effect:sound{s=block.glass.break;v=2;p=2}
+  - potion{type=SLOW;lvl=10;duration=25} @target
+  - sendtitle{title="&b&lFrozen";subtitle="&fMovement speed reduced";d=20} @PlayersInRadius{r=10}
+  - damage{a=800}
+EarthStrike: ## Unusually strong toxic damage
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=ES-Tick;onHit=ES-Hit;v=2;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.irongolem.hurt;v=1;p=2}
+  - effect:sound{s=entity.irongolem.hurt;v=1;p=1}
+  - effect:sound{s=entity.irongolem.hurt;v=1;p=0}
+ES-Tick:
+  Skills:
+  - effect:particles{p=happyVillager;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+ES-Hit:
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=1;p=2}
+  - effect:sound{s=block.fire.extinguish;v=1;p=1}
+  - effect:sound{s=block.fire.extinguish;v=1;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4}
+  - potion{type=POISON;duration=200;lvl=10}
+  - sendtitle{title="&2&lToxic";subtitle="&fDamage over time/confusion";d=20} @target
+  - damage{a=500}
+  - delay 20
+  - damage{a=500}
+  - delay 20
+  - damage{a=500}
+  - delay 20
+  - damage{a=500}
+  - delay 20
+  - damage{a=500}
+ToxicBlast: ## Labyrinth slimes
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=TSB-Tick;onHit=TSB-Hit;v=2;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=1;p=2}
+  - effect:sound{s=entity.generic.splash;v=1;p=2}
+  - effect:sound{s=entity.generic.splash;v=1;p=1}
+TSB-Tick:
+  Skills:
+  - effect:particles{p=happyVillager;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+TSB-Hit:
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=1;p=2}
+  - effect:sound{s=block.fire.extinguish;v=1;p=1}
+  - effect:sound{s=block.fire.extinguish;v=1;p=0}
+  - potion{type=CONFUSION;duration=200;lvl=4}
+  - potion{type=POISON;duration=200;lvl=10}
+  - sendtitle{title="&2&lToxic";subtitle="&fDamage over time/confusion";d=20} @target
+  - damage{a=20}
+  - delay 20
+  - damage{a=20}
+  - delay 20
+  - damage{a=20}
+  - delay 20
+  - damage{a=20}
+  - delay 20
+  - damage{a=20}
+Smite: ## Lightning bolt
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=Smite-Tick;onHit=Smite-Hit;v=40;i=1;hR=1;vR=1}
+  - effect:sound{s=block.enchantment_table.use;v=2;p=2}
+  - effect:sound{s=block.enchantment_table.use;v=2;p=1}
+  - effect:sound{s=block.enchantment_table.use;v=2;p=0}
+Smite-Tick:
+  Skills:
+  - effect:particles{p=explode;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+Smite-Hit:
+  Skills:
+  - damage{a=1500;pk=true}
+  - potion{type=WEAKNESS;duration=60;lvl=10}
+  - sendtitle{title="&4&lCrippled";subtitle="&fWeakened attack damage";d=20} @target
+TidalWave: ## Boss5 blind attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=TW-Tick;onHit=TW-Hit;v=40;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.elder_guardian.curse;v=1;p=2}
+  - effect:sound{s=entity.elder_guardian.curse;v=1;p=1}
+TW-Tick:
+  Skills:
+  - effect:particles{p=magicCrit;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+TW-Hit:
+  Skills:
+  - damage{a=500;pk=true}
+  - potion{type=BLINDNESS;duration=60;lvl=1}
+  - sendtitle{title="&8&lBlinded";subtitle="&fVision highly impaired";d=20} @target
+## LOW LEVEL CASTING
+BlueFire: ### Labyrinth Mage
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=BF-Tick;onHit=BF-Hit;v=10;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+BF-Tick:
+  Skills:
+  - effect:particles{p=magicCrit;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+BF-Hit:
+  Skills:
+  - damage{a=10;pk=true}
+BlackFire: ### Corrupted Caster
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=BlF-Tick;onHit=BlF-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+BlF-Tick:
+  Skills:
+  - effect:particles{p=largesmoke;amount=8;speed=0;hS=0.2;vS=0.2} @origin
+BlF-Hit:
+  Skills:
+  - damage{a=20;pk=true}
+VoidMissile: ### Ancient Caster
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=VM-Tick;onHit=VM-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
+VM-Tick:
+  Skills:
+  - effect:particles{p=witchMagic;amount=8;speed=0;hS=0.2;vS=0.2} @origin
+VM-Hit:
+  Skills:
+  - damage{a=60;pk=true}
+VoidMissile2: ### Forgotten Sorcerer
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=VM2-Tick;onHit=VM2-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
+  - effect:sound{s=entity.enderdragon.growl;v=0.5;p=0}
+VM2-Tick:
+  Skills:
+  - effect:particles{p=witchMagic;amount=8;speed=0;hS=0.2;vS=0.2} @origin
+VM2-Hit:
+  Skills:
+  - damage{a=120;pk=true}

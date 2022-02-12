@@ -1,0 +1,461 @@
+### LEGACY ITEMS -----------------------------------------------
+LGC_Helm_Nomad:
+  Id: 298
+  Display: "&b&oThe Nomad"
+  Lore:
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &c&o+15.0❤ &7&owhile equipped."
+  - "&b★ &7&oGain &a&oSpeed &7&oequivalent to your"
+  - "&7&o  level of &a&oRegen&7&o. (e.g. Speed III"
+  - "&7&o  from Regen. III)."
+  - "&0 "
+  - "&7“&bThe plains flow endlessly past"
+  - "&b me as I ride--a blur of green"
+  - "&b in the blazing sunlight.&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 30.0
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:10
+  - PROTECTION_PROJECTILE:10
+  Skills:
+  - skill{s=SpeedEqual2Regen} @Self ~onTimer:20
+LGC_DeathsDoor:
+  Id: 309
+  Display: "&b&oDeath's Door"
+  Lore:
+  - "&7No Enchantments"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o+70% &7&omovement speed."
+  - "&b★ &7&o35% chance to gain &a&oResist. V"
+  - "&7&o  for up to 5.0s whenever you"
+  - "&7&o  take damage."
+  - "&0 "
+  - "&7“&bThose that dare to tempt fate"
+  - "&b ill need any sense of remorse,"
+  - "&b lest fear would claim them long"
+  - "&b before death.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Feet:
+      MovementSpeed: 0.7
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - skill{s=InvincibleBuff} @Self ~onDamaged 0.35
+### CHARMS -----------------------------------------------------
+LGC_Charm_VaalPact:
+  Id: 339
+  Display: "&b&oPact of Shadows"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oWhile equipped in off hand:"
+  - "&b★ &c&o+15.0❤ &7&omaximum health."
+  - "&b★ &7&oWhenever you hit an enemy,"
+  - "&7&o  fully restore your health."
+  - "&b★ &c&oRegeneration has no effect."
+  - "&0 "
+  - "&7“&bAn ancient scroll brimming with"
+  - "&b forgotten knowledge--its aged"
+  - "&b inscription covered in blood.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Attributes:
+    OffHand:
+      Health: 30.0
+  Skills:
+  - heal{amount=2000} @Self ~onAttack
+  - heal{amount=2000} @Self ~onBowHit
+  - skill{s=CancelRegen} @Self ~onTimer:10
+  - skill{s=CancelRegen} @Self ~onDamaged
+  - skill{s=CancelRegen} @Self ~onAttack
+LGC_Charm_Void:
+  Id: 340
+  Display: "&b&oTome of Madness"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b» &7&oGain the following while you have"
+  - "&7&o  the full Void armor set equipped:"
+  - "&b★ &7&oYou have &a&oRegeneration X&7&o."
+  - "&b★ &7&oWhenever you hit a monster/boss,"
+  - "&7&o  fully restore your health."
+  - "&b★ &7&oWhenever you hit a monster/boss,"
+  - "&7&o  refresh your golden hearts."
+  - "&0 "
+  - "&7“&bFather of the old gods, mother of"
+  - "&b the Singularity--the Void is feared"
+  - "&b by all eternal creation.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+LGC_Charm_Invis:
+  Id: 402
+  Display: "&6&oCharm of Shadows"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Effect: &aInvisibility"
+  - "&0 "
+  - "&7“&6A glimmer in the dark"
+  - "&6 is all that one can see"
+  - "&6 before the final blow.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+LGC_Charm_Regen:
+  Id: 352
+  Display: "&6&oBone of the Ancients"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Effect: &aRegeneration IV"
+  - "&0 "
+  - "&7“&6Forged beneath the stars in"
+  - "&6 a time long past, this charm of"
+  - "&6 power stopped death, at last.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+LGC_Charm_Wither:
+  Id: 377
+  Display: "&6&oCharm of Rage"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6★ &7&oWhenever you hit an"
+  - "&7&o  enemy monster/boss,"
+  - "&7&o  inflict &c&oWither&7&o."
+  - "&0 "
+  - "&7“&6All shall burn before"
+  - "&6 your endless wrath!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+### ABANDONED LEGENDARIES --------------------------------------
+## In 2.3.2, I decided that only Unique Legendaries will stay in
+## circulation. All others have been turned into Legacy items or
+## will be re-tiered. The few that I still wish to support (such
+## as the Reaper Shield) will be listed below:
+LGC_Charm_Hunger:
+  Id: 382
+  Display: "&6&oCharm of Plenty"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6★ &7&oYou are immune to &c&oHunger&7&o."
+  - "&0 "
+  - "&7“&6Never again shall you feel"
+  - "&6 famine claw at your being!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+LGC_Charm_NVision:
+  Id: 375
+  Display: "&6&oEye of the Void"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6★ &7&oYou have &a&oNight Vision&7&o."
+  - "&6» &7&oWhile equipped in off hand:"
+  - "&6★ &c&o+10.0❤ &7&omaximum health."
+  - "&6★ &7&oAdds &c&o10.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all attacks."
+  - "&6★ &7&oYou are immune to &8&oBlindness&7&o."
+  - "&0 "
+  - "&7“&6Darkness falls upon the horizon,"
+  - "&6 swallowing the light of the world.&7”"
+  Enchantments:
+  - ARROW_INFINITE:10
+  Attributes:
+    OffHand:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Chaos_10} @target ~onBowHit
+  - skill{s=Chaos_10} @target ~onAttack
+  - skill{s=CancelBlindness} @Self ~onTimer:1
+LGC_SniperScope:
+  Id: 345
+  Display: "&6&oSniper Scope"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6» &7&oWhile equipped in off hand:"
+  - "&6★ &c&o+10.0❤ &7&omaximum health."
+  - "&6★ &7&oAdds &c&o600.0❤ &5&oChaos &7&odamage"
+  - "&7&o  to all ranged/magic attacks"
+  - "&7&o  once every 5.0s."
+  # - "&6★ &7&oFully restore your health"
+  # - "&7&o  whenever you hit an enemy."
+  # - "&c&o  Skill has a cooldown of 5.0s."
+  - "&0 "
+  - "&7“&6Through my eye I can see all"
+  - "&6 fates. With my hands--I bring"
+  - "&6 only death.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    OffHand:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Skills:
+  - skill{s=RangerCrit} @Self ~onBowHit
+LGC_HealingBeacon:
+  Id: 403
+  Display: "&6&oDivine Blessing&o"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fMagic (Summon)"
+  - "&7Radius: &f20 Blocks"
+  - "&7Cooldown: &f60 Seconds"
+  - "&0 "
+  - "&6★ &7&oDeploys a healing beacon at"
+  - "&7&o  the caster's location."
+  - "&6★ &7&oBeacon fully restores health"
+  - "&7&o  every second for 5.0s on all"
+  - "&7&o  players inside the radius."
+  - "&0 "
+  - "&7“&6May the forces of nature see"
+  - "&6 fit that you and your allies will"
+  - "&6 survive every hit.&7”"
+  Skills:
+  - skill{s=BeaconSpawn} @Self ~onUse
+LGC_Curse2:
+  Id: 352
+  Display: "&6&oRelentless Pursuit&7&7 «0»"
+  Lore:
+  - "&7Left-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Slow"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c300.0❤"
+  - "&0 "
+  - "&6★ &7&oTrack targets nearest"
+  - "&7&o  to the cursor."
+  - "&0 "
+  - "&7“&6There is no escape from"
+  - "&6 the clutches of the void.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+LGC_FrostBomb:
+  Id: 79
+  Display: "&6&oVraast's Malice&7&7"
+  Lore:
+  - "&7Left-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &f✷"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Slow"
+  - "&7Charge: &fVery Slow"
+  - "&7Radius: &f5 Blocks"
+  - "&7Damage: &c0.0-3000.0❤"
+  - "&0 "
+  - "&6★ &7&oBolts explode after 1.5s in air."
+  - "&6★ &7&oRecharges independently from"
+  - "&7&o  equipment slots."
+  - "&6★ &b&oFreezes &7&oand &8&oBlinds &7&otargets for"
+  - "&7&o  up to 8.0s."
+  - "&6★ &c&oDoes not trigger attack effects."
+  - "&0 "
+  # - "&7“&6Astounded by his freedom without"
+  # - "&6 a heart, Vraast beheaded millions"
+  # - "&6 in his pursuit of power.&7”"
+  - "&7“&6Anger had fermented into hatred"
+  - "&6 deep within Vraast's heart. Soon,"
+  - "&6 he and his legion fell to the Void.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+LGC_AKStilleto:
+  Id: 309
+  Display: "&6&oAKStilleto&7&7 «0»"
+  Lore:
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Type: &fSMG"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c25.0❤"
+  - "&0 "
+  - "&7“&6Are these shoes or guns?"
+  - "&6 Shoe guns? Gun shoes?&7”"
+  Enchantments:
+  - PROTECTION_FALL:10
+  - DEPTH_STRIDER:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+LGC_MoltenSword:
+  Id: 267
+  Display: "&6&oBlazing Fury"
+  Lore:
+  - "&7No Attack Damage"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6★ &7&o100% status effect chance."
+  - "&6★ &7&oDeals &c&o2500.0❤ &e&oBurning &7&odamage"
+  - "&7&o  over a period of 2.5s."
+  - "&6★ &c&oStatus effects cannot stack."
+  - "&0 "
+  - "&7“&6A life consumed by anger shall"
+  - "&6 be wasted quickly, for revenge"
+  - "&6 destroys only its own wielder.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Burn_1} @target ~onAttack
+LGC_Headsman:
+  Id: 292
+  Display: "&6&oThe Headsman"
+  Lore:
+  - "&7Smite C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&6★ &a&o+50% &7&oattack speed."
+  - "&6★ &8&o-30% &7&omovement speed."
+  - "&6★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, gain &a&oHaste X"
+  - "&7&o  for up to 10.0s."
+  - "&0 "
+  - "&7“&6With a single strike, heads shall"
+  - "&6 fall. And thus, death now heeds"
+  - "&6 my call.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:100
+  - DURABILITY:9001
+  - MENDING:10
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.25
+      MovementSpeed: -0.3
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+LGC_Shield_Reaper:
+  Id: 442
+  Display: "&6&oReaper Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Effect: &aResistance IV&7."
+  - "&0 "
+  - "&7“&6An ancient shield that defies"
+  - "&6 even death itself.&7”"
+  Options:
+    Color: BLACK
+    Unbreakable: true
+  BannerLayers:
+  - GRAY TRIANGLES_BOTTOM
+  - GRAY TRIANGLES_TOP
+  - RED CROSS
+  - SILVER SKULL
+  Enchantments:
+  - DURABILITY:9001
+  - MENDING:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+LGC_Shield_Scholar:
+  Id: 442
+  Display: "&6&oScholar's Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &6&oLegendary"
+  - "&0 "
+  - "&7Effect: &aHaste III&7, &aSpeed III"
+  - "&0 "
+  - "&7“&6When you achieve maximum"
+  - "&6 thought, all things quicken.&7”"
+  Options:
+    Color: WHITE
+    Unbreakable: true
+  BannerLayers:
+  - SILVER TRIANGLES_TOP
+  - GRAY CIRCLE_MIDDLE
+  - GREEN SQUARE_BOTTOM_LEFT
+  - GREEN SQUARE_BOTTOM_RIGHT
+  Enchantments:
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE

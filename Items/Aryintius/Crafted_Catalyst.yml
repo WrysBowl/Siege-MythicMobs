@@ -1,0 +1,379 @@
+NG_Catalyst_0:
+  Id: 280
+  Display: "&fOak Staff"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &fCommon (Crafted)"
+  - "&0 "
+  - "&f» &7While equipped in off hand:"
+  - "&f★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&0 "
+  - "&7“&fA powerful catalyst carved"
+  - "&f from the branch of a large"
+  - "&f ironwood oak.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+### 1 PREFIX ---------------------------------------------------
+NG_Catalyst_P1:
+  Id: 280
+  Display: "&2Heavy Oak Staff"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2» &7While equipped in off hand:"
+  - "&2★ &c+10.0❤ &7maximum health."
+  - "&2★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+NG_Catalyst_P2:
+  Id: 280
+  Display: "&2Fiery Oak Staff"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2» &7While equipped in off hand:"
+  - "&2★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &710% chance to inflict &6Ignite"
+  - "&7  with ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=Ignite_Title} @target ~onBowHit 0.1
+NG_Catalyst_P3:
+  Id: 280
+  Display: "&2Shocking Oak Staff"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2» &7While equipped in off hand:"
+  - "&2★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &710% chance to inflict &3Shock"
+  - "&7  with ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=InflictShock} @target ~onBowHit 0.1
+### 1 SUFFIX ---------------------------------------------------
+NG_Catalyst_S1:
+  Id: 280
+  Display: "&2Oak Staff of Freezing"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2» &7While equipped in off hand:"
+  - "&2★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &710% chance to inflict &bFreeze"
+  - "&7  with ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=InflictFreeze} @target ~onBowHit 0.1
+NG_Catalyst_S2:
+  Id: 280
+  Display: "&2Oak Staff of Corruption"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2» &7While equipped in off hand:"
+  - "&2★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&2★ &7Adds &c10.0❤ &5Chaos &7damage"
+  - "&7  to all ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=Chaos_10} @target ~onBowHit
+NG_Catalyst_S3:
+  Id: 280
+  Display: "&2Oak Staff of Swiftness"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &2Uncommon (Crafted)"
+  - "&0 "
+  - "&2» &7While equipped in off hand:"
+  - "&2★ &a+50% &7movement speed."
+  - "&2★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      MovementSpeed: 0.5
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+### 1 PREFIX + 1 SUFFIX ----------------------------------------
+NG_Catalyst_P1S1:
+  Id: 280
+  Display: "&3Heavy Oak Staff of Freezing"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3» &7While equipped in off hand:"
+  - "&3★ &c+10.0❤ &7maximum health."
+  - "&3★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &710% chance to inflict &bFreeze"
+  - "&7  with ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=InflictFreeze} @target ~onBowHit 0.1
+NG_Catalyst_P1S2:
+  Id: 280
+  Display: "&3Heavy Oak Staff of Corruption"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3» &7While equipped in off hand:"
+  - "&3★ &c+10.0❤ &7maximum health."
+  - "&3★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &7Adds &c10.0❤ &5Chaos &7damage"
+  - "&7  to all ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 20.0
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=Chaos_10} @target ~onBowHit
+NG_Catalyst_P1S3:
+  Id: 280
+  Display: "&3Heavy Oak Staff of Swiftness"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3» &7While equipped in off hand:"
+  - "&3★ &a+50% &7movement speed."
+  - "&3★ &c+10.0❤ &7maximum health."
+  - "&3★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      Health: 20.0
+      MovementSpeed: 0.5
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+NG_Catalyst_P2S1:
+  Id: 280
+  Display: "&3Fiery Oak Staff of Freezing"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3» &7While equipped in off hand:"
+  - "&3★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &710% chance to inflict &6Ignite"
+  - "&7  with ranged/magic attacks."
+  - "&3★ &710% chance to inflict &bFreeze"
+  - "&7  with ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=Ignite_Title} @target ~onBowHit 0.1
+  - skill{s=InflictFreeze} @target ~onBowHit 0.1
+NG_Catalyst_P2S2:
+  Id: 280
+  Display: "&3Fiery Oak Staff of Corruption"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3» &7While equipped in off hand:"
+  - "&3★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &710% chance to inflict &6Ignite"
+  - "&7  with ranged/magic attacks."
+  - "&3★ &7Adds &c10.0❤ &5Chaos &7damage"
+  - "&7  to all ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=Ignite_Title} @target ~onBowHit 0.1
+  - skill{s=Chaos_10} @target ~onBowHit
+NG_Catalyst_P2S3:
+  Id: 280
+  Display: "&3Fiery Oak Staff of Swiftness"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3» &7While equipped in off hand:"
+  - "&3★ &a+50% &7movement speed."
+  - "&3★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &710% chance to inflict &6Ignite"
+  - "&7  with ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      MovementSpeed: 0.5
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=Ignite_Title} @target ~onBowHit 0.1
+NG_Catalyst_P3S1:
+  Id: 280
+  Display: "&3Shocking Oak Staff of Freezing"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3» &7While equipped in off hand:"
+  - "&3★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &710% chance to inflict &3Shock"
+  - "&7  with ranged/magic attacks."
+  - "&3★ &710% chance to inflict &bFreeze"
+  - "&7  with ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=InflictShock} @target ~onBowHit 0.1
+  - skill{s=InflictFreeze} @target ~onBowHit 0.1
+NG_Catalyst_P3S2:
+  Id: 280
+  Display: "&3Shocking Oak Staff of Corruption"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3» &7While equipped in off hand:"
+  - "&3★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &710% chance to inflict &3Shock"
+  - "&7  with ranged/magic attacks."
+  - "&3★ &7Adds &c10.0❤ &5Chaos &7damage"
+  - "&7  to all ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=InflictShock} @target ~onBowHit 0.1
+  - skill{s=Chaos_10} @target ~onBowHit
+NG_Catalyst_P3S3:
+  Id: 280
+  Display: "&3Shocking Oak Staff of Swiftness"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &3Rare (Crafted)"
+  - "&0 "
+  - "&3» &7While equipped in off hand:"
+  - "&3★ &a+50% &7movement speed."
+  - "&3★ &7Adds &c50.0❤ &7damage to all"
+  - "&7  ranged/magic attacks."
+  - "&3★ &710% chance to inflict &3Shock"
+  - "&7  with ranged/magic attacks."
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Attributes:
+    OffHand:
+      MovementSpeed: 0.5
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - damage{a=100;pk=true} @target ~onBowHit
+  - skill{s=InflictShock} @target ~onBowHit 0.1

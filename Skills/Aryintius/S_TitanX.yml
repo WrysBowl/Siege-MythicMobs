@@ -1,0 +1,172 @@
+### FINAL BOSS SKILLS ------------------------------------------
+TX_Melee:
+  Skills:
+  - sendtitle{title="&5&lCursed";subtitle="&fRandom negative effects";d=20}
+  - skill{s=RandomBadStuff}
+TX_Shot: ### Rapid Bolt Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=TXS-Tick;onHit=TXS-Hit;v=30;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.skeleton.death;v=0.5;p=2}
+TXS-Tick:
+  Skills:
+  - effect:particles{p=smoke;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=reddust;amount=5;speed=0;hS=0.1;vS=0.1} @origin
+TXS-Hit:
+  Skills:
+  - damage{a=4000;pi=true;pk=true}
+TX_Blast: ### Heavy Bolt Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=TXB-Tick;onHit=TXB-Hit;v=15;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+TXB-Tick:
+  Skills:
+  - effect:particles{p=witchMagic;amount=5;speed=0;hS=0.5;vS=0.5} @origin
+  - effect:particles{p=cloud;a=1} @Origin
+TXB-Hit:
+  Skills:
+  - damage{a=2000;pi=true;pk=true}
+  - skill{s=Bleed_100} @target
+TX_Teleport: ### Generic teleport attack
+  Skills:
+  - teleport{spreadh=1;spreadv=0} @target
+  - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
+  - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
+  - potion{type=CONFUSION;duration=200;lvl=1} @PIR{15}
+### AREA SKILLS ------------------------------------------------
+TX_NovaKill: ### Deals massive damage in radius
+  Skills:
+  - effect:particlesphere{particle=witchMagic;amount=500;r=10} @self
+  - effect:particlesphere{particle=witchMagic;amount=250;r=7} @self
+  - effect:particlesphere{particle=witchMagic;amount=150;r=4} @self
+  - effect:sound{s=entity.generic.extinguish_fire;v=0.5;p=1} @PIR{r=25}
+  - delay 10
+  - effect:particlesphere{particle=witchMagic;amount=500;r=10} @self
+  - effect:particlesphere{particle=witchMagic;amount=250;r=7} @self
+  - effect:particlesphere{particle=witchMagic;amount=150;r=4} @self
+  - effect:sound{s=entity.generic.extinguish_fire;v=0.5;p=1} @PIR{r=25}
+  - delay 10
+  - effect:particlesphere{particle=witchMagic;amount=500;r=10} @self
+  - effect:particlesphere{particle=witchMagic;amount=250;r=7} @self
+  - effect:particlesphere{particle=witchMagic;amount=150;r=4} @self
+  - effect:sound{s=entity.generic.extinguish_fire;v=0.5;p=1} @PIR{r=25}
+  - delay 10
+  - effect:particlesphere{particle=witchMagic;amount=500;r=10} @self
+  - effect:particlesphere{particle=witchMagic;amount=250;r=7} @self
+  - effect:particlesphere{particle=witchMagic;amount=150;r=4} @self
+  - effect:sound{s=entity.generic.extinguish_fire;v=0.5;p=1} @PIR{r=25}
+  - delay 10
+  - effect:particlesphere{particle=witchMagic;amount=500;r=10} @self
+  - effect:particlesphere{particle=witchMagic;amount=250;r=7} @self
+  - effect:particlesphere{particle=witchMagic;amount=150;r=4} @self
+  - effect:sound{s=entity.generic.extinguish_fire;v=0.5;p=1} @PIR{r=25}
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=500;r=10} @self
+  - effect:particlesphere{particle=largesmoke;amount=100;r=10} @self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
+  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=10}
+TX_TripleNova: ### Insane triple nova
+  Skills:
+  - effect:particlesphere{particle=flame;amount=150;r=3} @self
+  - effect:particlesphere{particle=largesmoke;amount=30;r=3} @self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
+  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=3}
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=350;r=5} @self
+  - effect:particlesphere{particle=largesmoke;amount=50;r=5} @self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
+  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+  - delay 10
+  - effect:particlesphere{particle=flame;amount=500;r=10} @self
+  - effect:particlesphere{particle=largesmoke;amount=100;r=10} @self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
+  - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
+  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=10}
+TX_DeathTotem_Nova: ### Death Explosion 1
+  Skills:
+  - effect:sound{s=entity.zombie_villager.converted;v=1;p=2} @PIR{r=50}
+  - effect:particlesphere{particle=witchMagic;amount=150;r=3} @self
+  - effect:particlesphere{particle=cloud;amount=30;r=3} @self
+  - sendtitle{title="&5&lCursed";subtitle="&fRandom negative effects";d=20} @PIR{r=3}
+  - skill{s=RandomBadStuff} @PIR{r=3}
+  - delay 10
+  - skill{s=RandomBadStuff} @PIR{r=3}
+  - delay 10
+  - skill{s=RandomBadStuff} @PIR{r=3}
+TX_DeathTotem_Nova2: ### Death Explosion 2
+  Skills:
+  - effect:sound{s=entity.zombie_villager.converted;v=1;p=2} @PIR{r=50}
+  - effect:particlesphere{particle=reddust;amount=150;r=3} @self
+  - effect:particlesphere{particle=largesmoke;amount=30;r=3} @self
+  - sendtitle{title="&5&lCursed";subtitle="&fRandom negative effects";d=20} @PIR{r=3}
+  - skill{s=RandomBadStuff} @PIR{r=5}
+  - delay 10
+  - skill{s=RandomBadStuff} @PIR{r=5}
+  - delay 10
+  - skill{s=RandomBadStuff} @PIR{r=5}
+TX_DeathRadius: ### Atziri attack
+  Skills:
+  - delay 20
+  - effect:particlering{particle=reddust;radius=5;points=25;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=reddust;radius=3;points=16;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=lava;radius=1;points=4;amount=1;hS=1;vS=0}
+  - effect:sound{s=entity.generic.extinguish_fire;v=0.5;p=1} @PIR{r=15}
+  - delay 10
+  - effect:particlering{particle=reddust;radius=5;points=25;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=reddust;radius=3;points=16;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=lava;radius=1;points=4;amount=1;hS=1;vS=0}
+  - effect:sound{s=entity.generic.extinguish_fire;v=0.5;p=1} @PIR{r=15}
+  - delay 10
+  - effect:particlering{particle=reddust;radius=5;points=25;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=reddust;radius=3;points=16;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=lava;radius=1;points=4;amount=1;hS=1;vS=0}
+  - effect:sound{s=entity.generic.extinguish_fire;v=0.5;p=1} @PIR{r=15}
+  - delay 10
+  - effect:particlering{particle=reddust;radius=5;points=25;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=reddust;radius=3;points=16;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=lava;radius=1;points=4;amount=1;hS=1;vS=0}
+  - effect:sound{s=entity.generic.extinguish_fire;v=0.5;p=1} @PIR{r=15}
+  - delay 10
+  - effect:particlering{particle=reddust;radius=5;points=25;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=reddust;radius=3;points=16;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=lava;radius=1;points=4;amount=1;hS=1;vS=0}
+  - effect:sound{s=entity.generic.extinguish_fire;v=0.5;p=1} @PIR{r=15}
+  - delay 10
+  - effect:particlesphere{particle=reddust;amount=150;r=5} @Self
+  - effect:particlesphere{particle=flame;amount=150;r=5} @Self
+  - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=15}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=2} @PIR{r=15}
+  - effect:sound{s=entity.generic.explode;v=0.5;p=1} @PIR{r=15}
+  - damage{amount=10000;pk=true} @PIR{r=5}
+### SUMMON SKILLS ----------------------------------------------
+TX_DeathTotem: ### Summons a floating orb that fires at enemies.
+  Skills:
+  - summon{type=TX_Explosion;amount=3;radius=15;yu=true} @Self
+TX_DeathTotem2:
+  Skills:
+  - summon{type=TX_Explosion2;amount=4;radius=20;yu=true} @Self
+TX_AtziriSpam:
+  Skills:
+  - summon{type=TX_Explosion3;amount=8;radius=20;yr=0;yu=true} @Self
+### COMPOSITE SKILLS -------------------------------------------
+TX_Burst_1:
+  Skills:
+  - skill{s=TX_Shot}
+  - delay 2
+  - skill{s=TX_Shot}
+  - delay 2
+  - skill{s=TX_Shot}

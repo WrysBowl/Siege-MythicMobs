@@ -1,0 +1,126 @@
+### AZURE GUARDIAN SKILLS --------------------------------------
+A9_Fire: ### Basic shot attack, used in composite skills.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A9F-Tick;onHit=A9F-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A9_TriShot: ### 3x Basic Shot Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A9F-Tick;onHit=A9F-Hit;hO=30;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A9F-Tick;onHit=A9F-Hit;hO=0;v=20;i=1;hR=1;vR=1}
+  - projectile{onTick=A9F-Tick;onHit=A9F-Hit;hO=330;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A9F-Tick:
+  Skills:
+  - effect:particles{p=magicCrit;a=8} @origin
+  - effect:particles{p=bubble;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+A9F-Hit:
+  Skills:
+  - damage{a=1000}
+A9_Heavy: ### Heavy shot attack.
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A9H-Tick;onHit=A9H-Hit;v=15;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+A9H-Tick:
+  Skills:
+  - effect:particles{p=magicCrit;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=bubble;amount=20;speed=0;hS=0.4;vS=0.4} @origin
+A9H-Hit:
+  Skills:
+  - damage{a=1500}
+  - potion{type=BLINDNESS;lvl=0;duration=60;overwrite=true}
+  - potion{type=SLOW;lvl=3;duration=60;overwrite=true}
+A9_Nova: ### Water Nova Attack
+  Skills:
+  - effect:sound{s=entity.elder_guardian.curse;v=0.5;p=2} @PIR{r=25}
+  - effect:sound{s=entity.elder_guardian.curse;v=0.4;p=1} @PIR{r=25}
+  - effect:sound{s=entity.elder_guardian.curse;v=0.3;p=0} @PIR{r=25}
+  - effect:sound{s=entity.generic.burn;v=1;p=0} @PIR{r=25}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2} @PIR{r=25}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0} @PIR{r=25}
+  - effect:particlesphere{particle=magicCrit;amount=500;r=10} @self
+  - damage{amount=1000;pi=true;pk=true} @PIR{r=10}
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=400;r=8} @self
+  - damage{amount=1000;pi=true;pk=true} @PIR{r=8}
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=300;r=6} @self
+  - damage{amount=1000;pi=true;pk=true} @PIR{r=6}
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=200;r=4} @self
+  - damage{amount=1000;pi=true;pk=true} @PIR{r=4}
+  - delay 2
+  - effect:particlesphere{particle=magicCrit;amount=100;r=2} @self
+  - damage{amount=1000;pi=true;pk=true} @PIR{r=2}
+  - delay 2
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
+### Phases
+A9_Phase_1:
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A9_Nova} @Self
+  - delay 20
+  - skill{s=A9_TriShot}
+  - delay 10
+  - skill{s=A9_Fire}
+  - delay 10
+  - skill{s=A9_TriShot}
+  - delay 10
+  - skill{s=A9_Fire}
+  - delay 10
+  - skill{s=A9_TriShot}
+  - delay 20
+  - skill{s=A9_Heavy}
+  - delay 15
+  - skill{s=A9_Heavy}
+  - delay 15
+  - skill{s=A9_Heavy}
+A9_Phase_2:
+  Cooldown: 10
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=A9_Nova} @Self
+  - delay 20
+  - skill{s=A9_TriShot}
+  - delay 5
+  - skill{s=A9_Fire}
+  - delay 5
+  - skill{s=A9_TriShot}
+  - delay 5
+  - skill{s=A9_Fire}
+  - delay 5
+  - skill{s=A9_TriShot}
+  - delay 5
+  - skill{s=A9_Fire}
+  - delay 5
+  - skill{s=A9_TriShot}
+  - delay 5
+  - skill{s=A9_Fire}
+  - delay 5
+  - skill{s=A9_TriShot}
+  - delay 20
+  - skill{s=A9_Heavy}
+  - delay 10
+  - skill{s=A9_Heavy}
+  - delay 10
+  - skill{s=A9_Heavy}
+  - delay 10
+  - skill{s=A9_Heavy}
+  - delay 10
+  - skill{s=A9_Heavy}

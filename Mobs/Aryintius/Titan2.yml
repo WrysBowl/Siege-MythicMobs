@@ -1,0 +1,79 @@
+Titan2:
+  Type: HUSK
+  Display: '&4&l<&4« &cMagmos &4»&4&l>'
+  Health: 100000
+  Damage: 2500
+  BossBar:
+    Enabled: true
+    Title: '&4&l<&4« &cMagmos, Lord of Ash &4»&4&l>'
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_12
+  Equipment:
+  - FurnaceHead:4
+  - UChest_5:3
+  - ULegs_5:2
+  - UBoots_5:1
+  - Shield_Frenzy:0
+  - Shield_Frenzy:5
+  Disguise:
+    Type: GIANT
+    Invisible: true
+    Burning: true
+    ShowName: false
+    ModifyBoundingBox: true
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Titan_Fragments
+  - Currency_Rifts_Boss
+  - Titan2
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.25
+    KnockbackResistance: 1
+    FollowRange: 120
+    MaxCombatDistance: 120
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+    Despawn: false
+  Skills:
+  ### SPAWN/UTILS
+  - message{m="<mob.name> &fFool... You dare challenge the greatest of the Titans?"} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=100;level=3;overwrite=true} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=100;level=3;overwrite=true} @Self ~onTimer:20
+  - randommessage
+      {
+      m=
+      "<mob.name> &7All of creation bows before me!",
+      "<mob.name> &7Your strength betrays your weakness!",
+      "<mob.name> &7You meddle with forces beyond your understanding!",
+      "<mob.name> &7This realm is mine alone, worthless insect!",
+      "<mob.name> &7Even the Void cannot escape my influence!";
+      } @PIR{r=50} ~onTimer:300
+  - skill{s=CancelSlowness} @Self ~onTimer:5
+  - skill{s=CancelBlindness} @Self ~onTimer:5
+  - skill{s=CancelDespawn} @Self ~onTimer:20
+  - effect:sound{s=entity.irongolem.hurt;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+  ### PHASE 1
+  - skill{s=T2_Vaporize} @NearestPlayer{r=50} ~onTimer:250
+  - skill{s=T2_Blast} @NearestPlayer{r=50} ~onTimer:40 >50%
+  - skill{s=T2_FireNova} @Self ~onTimer:130 >50%
+  - skill{s=T2_LavaPlains} @Self ~onTimer:200 >50%
+  ### PHASE 2
+  - skill{s=T2_MeteorShower} @self ~onTimer:210 <50%
+  - skill{s=T2_Blast} @NearestPlayer{r=50} ~onTimer:20 <50%
+  - skill{s=T2_FireNova} @Self ~onTimer:80 <50%
+  - skill{s=T2_LavaPlains} @Self ~onTimer:120 <50%
+  ### DEATH STUFF
+  - message{m="<mob.name> &fImpossible! I cannot be... defeated..."} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=2} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=0} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=1.5;p=1} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

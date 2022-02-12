@@ -1,0 +1,131 @@
+### TRIAL OF CUNNING -------------------------------------------
+AquirJusticar:
+  Id: 279
+  Display: "&6&oAquir Justicar&7&7"
+  Lore:
+  - "&7Smite C"
+  - "&7Sharpness C"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &b&o✶"
+  - "&0 "
+  - "&7Type: &fMelee"
+  - "&7Ability: &c10.0❤x8"
+  - "&7Cooldown: &f2.0 Seconds"
+  - "&0 "
+  - "&6★ &7&oRight-click to use ability."
+  - "&6★ &7&oAbility inflicts &8&oSlowness &7&oand"
+  - "&8&o  Weakness &7&ofor up to 5.0s."
+  - "&0 "
+  - "&7“&6A powerful weapon forged long"
+  - "&6 ago to instill peace and honor"
+  - "&6 throughout the Aquir Empire.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.45
+  Enchantments:
+  - DAMAGE_ALL:100
+  - DAMAGE_UNDEAD:100
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+ShotgunY:
+  Id: 419
+  Display: "&6&oAquir Executor&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &b&o✶"
+  - " &0 "
+  - "&7Type: &fShotgun"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fAverage"
+  - "&7Damage: &c60.0❤x10"
+  - "&0 "
+  - "&6★ &7&oShots have no recoil."
+  - "&0 "
+  - "&7“&6Perfected through centuries"
+  - "&6 marvelous engineering, few of"
+  - "&6 the Aquir could hope to wield"
+  - "&6 such power.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Water5:
+  Id: 403
+  Display: "&6&oTidal Fury&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0"
+  - "&7Tier: &6&oLegendary &b&o✶"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Charge: &fVery Fast"
+  - "&7Damage: &c85.0❤x3"
+  - "&0 "
+  - "&6★ &7&oInflicts &8&oSlowness &7&oon targets"
+  - "&7&o  for up to 1.5s."
+  - "&6★ &7&oInflicts &8&oBlindness &7&oon targets"
+  - "&7&o  for up to 5.0s."
+  - "&0 "
+  - "&7“&6Untamed and wild, the vast sea"
+  - "&6 beyond Aryntius remains calm,"
+  - "&6 untouched by even the Void.&7”"
+Charm_Cunning:
+  Id: 353
+  Display: "&6&oEternal Essence"
+  Lore:
+  - "&7Accessory Item"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &b&o✶"
+  - "&0 "
+  - "&6★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, set your gold"
+  - "&7&o  hearts to &e&o10.0❤&7&o."
+  - "&0 "
+  - "&7“&6Shrouded in mystery, eternals"
+  - "&6 possessed powers far beyond"
+  - "&6 any mortal's imagination.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+T1_Cunning:
+  Id: 310
+  Display: "&6&oAspect of Cunning"
+  Lore:
+  - "&7Protection XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &b&o✶"
+  - "&0 "
+  - "&6★ &a&o+40% &7&omovement speed."
+  - "&6★ &c&o+10.0❤ &7&owhile equipped."
+  - "&6★ &7&oSet your gold hearts to &e&o10.0❤"
+  - "&7&o  once every second."
+  - "&0 "
+  - "&7“&6Tasked with protecting the Aquir"
+  - "&6 relics, the sentinels lie watching,"
+  - "&6 unaware of the collapse of their"
+  - "&6 creators' civilization...&7”"
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  - UNBREAKABLE
+  Attributes:
+    Head:
+      Health: 20.0
+      MovementSpeed: 0.4
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:20
+  Skills:
+  - skill{s=ES_10} @Self ~onTimer:20

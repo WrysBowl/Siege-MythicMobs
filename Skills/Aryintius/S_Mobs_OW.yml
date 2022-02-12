@@ -1,0 +1,129 @@
+### OPEN WORLD MOBS
+OW_Fire1: ### Basic Magic Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=OWF1-Tick;onHit=OWF1-Hit;v=15;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+OWF1-Tick:
+  Skills:
+  - effect:particles{p=blockcrack_213;amount=1;speed=0;hS=0.1;vS=0.1} @origin
+  - effect:particles{p=flame;amount=2;speed=0;hS=0.2;vS=0.2} @origin
+OWF1-Hit:
+  Skills:
+  - damage{a=10;pk=true}
+OWF1-BigHit:
+  Skills:
+  - damage{a=1000;pk=true}
+OW_Fire1_H: ### Basic Magic Attack (Heavy)
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=OWF1-Tick;onHit=OWF1-BigHit;v=15;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+OW_FireBurst: ### Spams Magic Attack 1
+  Skills:
+  - skill{s=OW_Fire1}
+  - delay 10
+  - skill{s=OW_Fire1}
+  - delay 10
+  - skill{s=OW_Fire1}
+OW_Fire2: ### Heavy Magic Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=OWF2-Tick;onHit=OWF2-Hit;v=15;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+OWF2-Tick:
+  Skills:
+  - effect:particles{p=lava;amount=1} @origin
+  - effect:particles{p=reddust;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+OWF2-Hit:
+  Skills:
+  - damage{a=1000;pk=true}
+OW_KB1:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=entity.ghast.shoot;v=1;p=0} @PIR{r=8}
+  - effect:particlesphere{particle=flame;amount=10;r=1} @self
+  - effect:particlesphere{particle=reddust;amount=5;r=1} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=20;r=2} @self
+  - effect:particlesphere{particle=reddust;amount=10;r=2} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;r=3} @self
+  - effect:particlesphere{particle=reddust;amount=20;r=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=60;r=4} @self
+  - effect:particlesphere{particle=reddust;amount=30;r=4} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=80;r=5} @self
+  - effect:particlesphere{particle=reddust;amount=40;r=5} @self
+  - damage{a=40;ia=true;pi=true} @PIR{r=5}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
+OW_FireSpam: ### Spams Magic Attacks everywhere
+  Skills:
+  - skill{s=OW_Fire2}
+  - delay 10
+  - skill{s=OW_Fire2}
+  - delay 10
+  - skill{s=OW_Fire2}
+  - delay 20
+  - skill{s=OW_Fire1_H}
+  - delay 5
+  - skill{s=OW_Fire1_H}
+  - delay 5
+  - skill{s=OW_Fire1_H}
+  - delay 5
+  - skill{s=OW_Fire1_H}
+  - delay 5
+  - skill{s=OW_Fire1_H}
+OW_Poison:
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=OWP-Tick;onHit=OWP-Hit;v=10;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.irongolem.hurt;v=2;p=2}
+  - effect:sound{s=entity.irongolem.hurt;v=2;p=1}
+  - effect:sound{s=entity.irongolem.hurt;v=2;p=0}
+OWP-Tick:
+  Skills:
+  - effect:particles{p=happyVillager;amount=8;speed=0;hS=0.2;vS=0.2} @origin
+OWP-Hit:
+  Skills:
+  - effect:sound{s=block.fire.extinguish;v=1;p=2}
+  - effect:sound{s=block.fire.extinguish;v=1;p=1}
+  - effect:sound{s=block.fire.extinguish;v=1;p=0}
+  - skill{s=Poison_60}
+###
+## SUMMON PHASES (for Idol of Corruption)
+###
+OW_Summon_1:
+  Skills:
+  - summon{mob=OpenZ1;amount=5;noise=5} @Self
+  - delay 10
+  - summon{mob=OpenS1;amount=5;noise=5} @Self
+  - delay 10
+  - summon{mob=OpenSP1;amount=3;noise=5} @Self
+OW_Summon_2:
+  Skills:
+  - summon{mob=OpenZ2;amount=5;noise=8} @Self
+  - delay 10
+  - summon{mob=OpenS2;amount=5;noise=8} @Self
+  - delay 10
+  - summon{mob=OpenZ2M;amount=3;noise=8} @Self
+OW_Summon_3:
+  Skills:
+  - summon{mob=OpenZ3;amount=3;noise=12} @Self
+  - delay 10
+  - summon{mob=OpenZ3M;amount=1;noise=12} @Self

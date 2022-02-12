@@ -1,0 +1,144 @@
+T3_Test1:
+  Id: 310
+  Display: "&5Test Item"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5Tiername"
+  - "&0 "
+  - "&5★ &a&o+0% &7&omovement speed."
+  - "&5★ &7&oInfinite Durability."
+  - "&0 "
+  - "&7“&dTest lore, please ignore,"
+  - "&d this is only to show what the"
+  - "&d text color would be like.&7”"
+  Enchantments:
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+T3_Test2:
+  Id: 310
+  Display: "&5Test &dItem"
+  Lore:
+  - "&0 "
+  - "&7Tier: &5Tier&dname"
+  - "&0 "
+  - "&5★ &a&o+0% &7&omovement speed."
+  - "&5★ &7&oInfinite Durability."
+  - "&0 "
+  - "&7“&5Test lore, pl&dease ignore,"
+  - "&d this is only t&5o show what the"
+  - "&5 text color wo&duld be like.&7”"
+  Enchantments:
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+### POE RARITY TESTS
+POE_1:
+  Id: 268
+  Display: "&fTest Item"
+  Lore:
+  - "&0 "
+  - "&7Quality: &fNormal"
+  - "&0 "
+  - "&7“&fTest lore, please ignore,"
+  - "&f this is only to show what the"
+  - "&f text color would be like.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+POE_2:
+  Id: 272
+  Display: "&9Test Item"
+  Lore:
+  - "&0 "
+  - "&7Quality: &9Magic"
+  - "&0 "
+  - "&9★ &a&o+0% &7&oattack speed."
+  - "&9★ &a&o+0% &7&omovement speed."
+  - "&0 "
+  - "&7“&9Test lore, please ignore,"
+  - "&9 this is only to show what the"
+  - "&9 text color would be like.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+POE_3:
+  Id: 267
+  Display: "&eTest Item"
+  Lore:
+  - "&0 "
+  - "&7Quality: &eRare"
+  - "&0 "
+  - "&e★ &a&o+0% &7&oattack speed."
+  - "&e★ &a&o+0% &7&omovement speed."
+  - "&0 "
+  - "&7“&eTest lore, please ignore,"
+  - "&e this is only to show what the"
+  - "&e text color would be like.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+POE_4:
+  Id: 276
+  Display: "&6&oTest Item"
+  Lore:
+  - "&0 "
+  - "&7Quality: &6&oUnique"
+  - "&0 "
+  - "&6★ &a&o+0% &7&oattack speed."
+  - "&6★ &a&o+0% &7&omovement speed."
+  - "&0 "
+  - "&7“&6Test lore, please ignore,"
+  - "&6 this is only to show what the"
+  - "&6 text color would be like.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE
+### EXPERIMENTAL TIERS/ITEMS
+XP_1:
+  Id: 276
+  Display: "&9&oTest Item"
+  Lore:
+  - "&0 "
+  - "&7Tier: &9&oLegendary"
+  - "&0 "
+  - "&7Type: &bGun"
+  - "&7Ammo: &bIron Nugget"
+  - "&7Speed: &bVery Slow"
+  - "&7Charge: &bVery Fast"
+  - "&7Damage: &c160.0❤"
+  - "&0 "
+  - "&9★ &c&o+5.0❤ &7&owhile equipped"
+  - "&9★ &a&o+20% &7&oattack speed."
+  - "&9★ &8&o-20% &7&omovement speed."
+  - "&0 "
+  - "&7“&9Test lore, please ignore,"
+  - "&9 this is only to show what the"
+  - "&9 text color would be like.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE

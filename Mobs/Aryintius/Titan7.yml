@@ -1,0 +1,62 @@
+Titan7:
+  Type: STRAY
+  Display: "&0&l<&0« &4Quu'rak &0»&l>"
+  Health: 120000
+  Damage: 2000
+  BossBar:
+    Enabled: true
+    Title: "&0&l<&0« &4Quu'rak the Insatiable &0»&l>"
+    Range: 50
+    Color: RED
+    Style: SEGMENTED_12
+  Equipment:
+  - BlockHead_2:4
+  - UChest_5:3
+  - ULegs_5:2
+  - UBoots_5:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - Titan_Fragments
+  - Currency_Rifts_Boss
+  - Titan7
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    Silent: true
+  Skills:
+### Initialization
+  - message{m="<mob.name> &fAh yes... the smell of mortal flesh. Come closer, I have much to show you!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
+  - effect:sound{s=entity.skeleton_horse.hurt;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=entity.endermen.hurt;p=0.5;v=0.5} @self ~onDamaged
+  - randommessage
+      {
+      m=
+      "<mob.name> &7I can already taste your fear!",
+      "<mob.name> &7Do not tremble, for it will all be over soon.",
+      "<mob.name> &7There is nowhere to hide from my ravenous reach!",
+      "<mob.name> &7A glorious feast shall be made from your remains!",
+      "<mob.name> &7My my, how delicious your corpse shall be!";
+      } @PIR{r=50} ~onTimer:300
+### Phase 1
+  - skill{s=T7_Phase_1} @NearestPlayer{r=50} ~onTimer:5 >50%
+### Phase 2
+  - skill{s=T7_Phase_2} @NearestPlayer{r=50} ~onTimer:5 <50%
+### Death
+  - message{m="<mob.name> &fThis vessel may be destroyed, but my hunger reigns eternal..."} @PlayersInRadius{r=50} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=2} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=0} @Self ~onDeath
+  - effect:sound{s=block.portal.travel;v=1.5;p=1} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

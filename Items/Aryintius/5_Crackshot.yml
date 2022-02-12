@@ -1,0 +1,88 @@
+### UNCOMMON ITEMS (CS ONLY) -----------------------------------
+### RANGED ITEMS -----------------------------------------------
+Crossbow1:
+  Id: 257
+  Display: "&2Iron Crossbow&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7Type: &fCrossbow"
+  - "&7Ammo: &fArrow"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c10.0❤"
+  - "&0 "
+  - "&2★ &73x damage on headshot."
+  - "&0 "
+  - "&7“&2A powerful mechanical firearm.&7”"
+  Hide:
+  - ATTRIBUTES
+Shotgun1:
+  Id: 419
+  Display: "&2Sawed-Off&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7Type: &fShotgun"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fAverage"
+  - "&7Damage: &c10.0❤x5"
+  - "&0 "
+  - "&2★ &7Shots may ignite enemies."
+  - "&2★ &7Crouching reduces recoil."
+  - "&0 "
+  - "&7“&2Illegal in over 56 states.&7”"
+### MAGIC ITEMS ------------------------------------------------
+FireTendrils:
+  Id: 403
+  Display: "&2Fire Tendrils&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0"
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Damage: &c10.0❤"
+  - "&0 "
+  - "&2★ &7Ignites enemies on hit."
+  - "&0 "
+  - "&7“&2A simple spell that casts"
+  - "&2 streams of flames.&7”"
+WheatMagic:
+  Id: 296
+  Display: "&2Harvest Winds&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0"
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c8.0❤"
+  - "&0 "
+  - "&7“&2A simple spell that casts"
+  - "&2 howling gusts.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Water0:
+  Id: 403
+  Display: "&2Splash Attack&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0"
+  - "&7Tier: &2Uncommon"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fAverage"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c4.0❤x5"
+  - "&0 "
+  - "&7“&2A weak water spell used"
+  - "&2 by many magical carp.&7”"

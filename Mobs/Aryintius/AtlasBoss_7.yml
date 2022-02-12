@@ -1,0 +1,61 @@
+AtlasBoss_7:
+  Type: HUSK
+  Display: "&8&l<&7« &eWraith King &7»&8&l>"
+  Health: 25000
+  Damage: 1500
+  BossBar:
+    Enabled: true
+    Title: "&8&l<&7« &eThe King of Wraiths &7»&8&l>"
+    Range: 25
+    Color: WHITE
+    Style: SEGMENTED_6
+  Equipment:
+  - GHelm:4
+  - IChest:3
+  - CLegs:2
+  - IBoots:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - AtlasBoss_7
+  - Currency_Atlas_Boss2
+  - Iridescent
+  - Mythic
+  - Corrupted
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: false
+  Skills:
+### SPAWN/UTILS
+  - message{m="<mob.name> &fThe dead shall once again rule this world."} @PlayersInRadius{r=25} ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
+  - randommessage
+      {
+      m=
+      "<mob.name> &7Death cannot be defied forever, interloper!",
+      "<mob.name> &7You cannot stop the will of the wraiths!",
+      "<mob.name> &7Perhaps you should join us... in death!";
+      } @PIR{r=25} ~onTimer:300
+  - skill{s=CancelSlowness} @Self ~onTimer:5
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+### PHASE 1
+  - skill{s=Bleed_60} @target ~onAttack 0.2 >50%
+  - skill{s=A7_Phase_1} @NearestPlayer{r=25} ~onTimer:10
+### PHASE 2
+  - skill{s=Bleed_60} @target ~onAttack 0.3 <50%
+  - skill{s=SpeedBuff} @Self =50%
+  - potion{type=SPEED;duration=200;level=4;overwrite=true} @Self ~onTimer:20 <50%
+### DEATH STUFF
+  - message{m="<mob.name> &fAll I wanted... was to live forever..."} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

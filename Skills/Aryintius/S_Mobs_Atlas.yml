@@ -1,0 +1,143 @@
+### ATLAS MOB SKILLS -------------------------------------------
+Atlas_Poison: ### Toxic bolt attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=AtlasP-Tick;onHit=Poison_60;hO=0;v=12;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+AtlasP-Tick:
+  Skills:
+  - effect:particles{p=happyVillager;amount=2;speed=0;hS=0.1;vS=0.1} @origin
+Atlas_WaterBolt: ### Water Bolt
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=AWB-Tick;onHit=AWB-Hit;v=15;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.hostile.swim;v=1;p=2}
+  - effect:sound{s=entity.hostile.swim;v=1;p=1}
+  - effect:sound{s=entity.hostile.swim;v=1;p=0}
+AWB-Tick:
+  Skills:
+  - effect:particles{p=splash;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=magicCrit;amount=10;speed=0;hS=0.1;vS=0.1} @origin
+AWB-Hit:
+  Skills:
+  - damage{a=750}
+  - randomskill{skills=InflictShock,InflictFreeze,Ignite_Title} 0.5
+Atlas_FrostBolt: ### Ice Bolt
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=AFS-Tick;onHit=AFS-Hit;v=10;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
+  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
+AFS-Tick:
+  Skills:
+  - effect:particles{p=snowballpoof;amount=5} @origin
+  - effect:particles{p=largeexplode;amount=1;speed=0;hS=0.2;vS=0.2} @origin
+AFS-Hit:
+  Skills:
+  - damage{a=1000;pk=true}
+  - skill{s=InflictFreeze}
+Atlas_FireBolt: ### Fire Bolt
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=AFF-Tick;onHit=AFF-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=0}
+  - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
+AFF-Tick:
+  Skills:
+  - effect:particles{p=largesmoke;amount=1} @origin
+  - effect:particles{p=flame;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+AFF-Hit:
+  Skills:
+  - damage{a=1000;pk=true}
+  - skill{s=Ignite_Title} 0.2
+Atlas_SmokeBolt: ### Smook blat
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=ASB-Tick;onHit=ASB-Hit;v=20;i=1;hR=1;vR=1}
+  - effect:sound{s=entity.wither.shoot;v=0.5;p=1}
+ASB-Tick:
+  Skills:
+  - effect:particles{p=largesmoke;amount=1} @origin
+  - effect:particles{p=smoke;amount=3;speed=0;hS=0.2;vS=0.2} @origin
+ASB-Hit:
+  Skills:
+  - damage{a=1000;pk=true}
+  - skill{s=InflictCurse}
+Atlas_PurpleNova: ### Mooshroom Nova Attack
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - effect:sound{s=block.portal.travel;v=0.25;p=2}
+  - effect:particlesphere{particle=witchMagic;amount=20;r=1} @self
+  - damage{a=250;pi=true} @PIR{r=5}
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=40;r=2} @self
+  - damage{a=250;pi=true} @PIR{r=4}
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=60;r=3} @self
+  - damage{a=250;pi=true} @PIR{r=3}
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=80;r=4} @self
+  - damage{a=250;pi=true} @PIR{r=2}
+  - delay 2
+  - effect:particlesphere{particle=witchMagic;amount=100;r=5} @self
+  - damage{a=250;pi=true} @PIR{r=1}
+Atlas_Bladestorm: ### Fires 5 blade bolts at the SAME time
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - projectile{onTick=A8A-Tick;onHit=Atlas_BSHit;hO=330;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A8A-Tick;onHit=Atlas_BSHit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A8A-Tick;onHit=Atlas_BSHit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A8A-Tick;onHit=Atlas_BSHit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
+  - projectile{onTick=A8A-Tick;onHit=Atlas_BSHit;hO=30;v=20;i=1;hR=1.5;vR=1.5}
+  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
+  - delay 2
+  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
+  - delay 2
+  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
+  - delay 2
+  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
+  - delay 2
+  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
+Atlas_BSHit:
+  Skills:
+  - damage{a=750;pk=true}
+  - randomskill{skills=InflictShock,InflictFreeze,Ignite_Title} 0.5
+Atlas_HorseRally: ### Makes horse go fast
+  Skills:
+  - potion{type=SPEED;duration=50;level=3;overwrite=true}
+  - effect:sound{s=entity.horse.angry;v=1;p=1}
+  - effect:sound{s=entity.horse.angry;v=1;p=0}
+  - effect:particlesphere{particle=smoke;amount=40;r=3}
+  - delay 2
+  - effect:particlesphere{particle=smoke;amount=40;r=3}
+  - delay 2
+  - effect:particlesphere{particle=smoke;amount=20;r=2}
+  - delay 2
+  - effect:particlesphere{particle=smoke;amount=20;r=2}
+  - delay 2
+  - effect:particlesphere{particle=smoke;amount=10;r=1}
+  - delay 2
+  - effect:particlesphere{particle=smoke;amount=10;r=1}
+### EFFECTS ----------------------------------------------------
+Atlas_CurseNova:
+  Skills:
+  - effect:particlering{particle=witchMagic;radius=5;points=25;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=witchMagic;radius=3;points=16;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=portal;radius=1;points=4;amount=3;hS=1;vS=0}
+Atlas_FireNova:
+  Skills:
+  - effect:particlering{particle=flame;radius=5;points=25;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=flame;radius=3;points=16;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=lava;radius=1;points=4;amount=3;hS=1;vS=0}
+Atlas_SmokeNova:
+  Skills:
+  - effect:particlering{particle=smoke;radius=5;points=25;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=smoke;radius=3;points=16;amount=1;hS=1;vS=0}
+  - effect:particlering{particle=largesmoke;radius=1;points=4;amount=3;hS=1;vS=0}

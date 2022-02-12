@@ -1,0 +1,36 @@
+FurnaceHead:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    type: SKULL_ITEM
+    damage: 3
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: §6§oFurnace Head
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 20
+      internal: H4sIAAAAAAAAAE2Py06DQBiFf01MkPgYbkmG2xgWLhob7ZD+IBcpsKMwyGWoTQtNmefyAaU7z+7L+c7iqAAqPEX9JMTn6aduBVfgnlXwTCxiOaVDtMrkjmZRQ9ecsqg1cktRFAalugrqMjry09jy8yMoI7+O04mfVQC4U+AhKcTE4ZfPLsnThlSpK8qZ0YXjiAifdccXdkjm/RujbFj6zYpuZ+efa4/FzhaZ6Tb5IZj2Q0K2Zij4JtTL4euCHRJPMtP/8BpPun0m8erv2IxdYGey1zH+trDrLZRooxH2ebyacR02+YCGt0aSDYHE7kbvrRfnLXalhZHr1Cl5XR7AHw/3wUgcAQAA
+FireHead:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    type: SKULL_ITEM
+    damage: 3
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: §6§oFire Head
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 20
+      internal: H4sIAAAAAAAAAE2OTW6DMBhEv1aqRFGP0S2S+Y28jJqIGMWkJASwdwRMwLHTiEBbbtUjFnXV2Y3ePGlMABNeDpdRqff+o+mUMOCR1PCKPOThCiOrdgW2vMCxLVyVjYX+UpblAmMTzFm6iX7oxP0ZjEF8D2Mv7iYAPBjwlJVqFPAjpgjxokV1EalqIsHc0wNSOyJvC3LNptMbCYie+WYZbCf8b+sPZe4r5kYtvybjSWdo6+6V2OztSh8/49XSo2HU8ZxLlp5dHtIvLqkTp9Rhktl0dUZUZpJripi82EyvHZ62Os6PDksTh2vm81RJJhNvF659niddU9h4fg+/iq4rAhgBAAA=
+PortalHead:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    type: SKULL_ITEM
+    damage: 3
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      display-name: §6§oPortal Head
+      enchants:
+        PROTECTION_ENVIRONMENTAL: 20
+      internal: H4sIAAAAAAAAAE2O306DMByFf5qYIPExvCUpFJhczn9byQpuA6S9Y1AySpkLA7U8lY8o3nnuTs73JccEMOFu345KvfUfdaOEAdekgnvkIjcoA2RVWASW6zu2FZRFbaG/FEXho8WDCeYsnUU/NOJyC8YgvoexFxcTAK4MuMkKNQr4ETpEPD+iKg9VqYk/92SPVEzkeUFOmT48EZ90875e+hsd/GO9oXj3FMPhkZ+246HL0AbvlFjv7LJLP6nkKpLMizri0Kmc4lXYMIfavNt60UQxfVaKJe1XnLSYyhebyUfJu0wxJ9V0RXQkU485BDM5O/K14XLZ1LkdzO/hF6IB6aQYAQAA

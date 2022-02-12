@@ -1,0 +1,45 @@
+TestItem:
+  Id: 276
+  Display: '&6&oTest Item&7&7'
+  Lore:
+  - '&7Left-click to melee'
+  - '&7Right-click to use ability'
+  - '&0 '
+  - '&7Tier: &6&oLegendary Item'
+  - '&0 '
+  - '&6★ &7&oDeals &c&o2000.0❤ &7&obase damage.'
+  - '&6★ &7&oAbility teleports you to the'
+  - '&7&o  target you are looking at.'
+  - '&6★ &7&oDeals 200.0x base damage'
+  - '&7&o  to players.'
+  - '&0 '
+  - '&7“&6The intent was to provide'
+  - '&6 players with a sense of'
+  - '&6 pride and accomplishment.&7”'
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+    PreventDropping: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=WarpSkill} @target ~onUse
+GuardianShield:
+  Id: 314
+  Display: §r§6Guardian
+  Lore:
+  - ''
+  - '§eAbsorptionShield Stats:'
+  - '§6- Capacity: §e20.0'
+  - '§6- Recharge Rate: §e10.0'
+  - '§6- Recharge Delay: §e5'
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - UNBREAKABLE

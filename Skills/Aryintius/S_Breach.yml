@@ -1,0 +1,106 @@
+### BREACH SKILLS -----------------------------------------------
+OpenBreach:
+  Cooldown: 120
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200}
+  - skill{s=BreachRing_Open}
+  - disguise{type=block;block=MAGMA;BlockData=0;ShowName=true}
+  - effect:sound{s=entity.wither.spawn;p=0.6;v=1.5}
+  - setstance{stance=opening}
+  - delay 80
+  - setstance{stance=opened}
+  - delay 600
+  - skill{s=BreachRing_Close}
+  - effect:sound{s=entity.wither.spawn;p=0.6;v=1.5}
+  - disguise{type=block;block=OBSIDIAN;BlockData=0;ShowName=true}
+  - setstance{stance=opening}
+  - message{cooldown=20;m="&bThe breach has been closed, stopping the invasion... for now..."} @PlayersInRadius{r=32}
+  - delay 80
+  - remove @Self
+BreachLoop:
+  Conditions:
+  - stance opened
+  Skills:
+  - effect:particles{p=lava;a=5;hs=0.5;vs=0.5;y=1;s=0}
+  - effect:particlering{particle=reddust;radius=15;points=256;amount=1;hS=1;vS=0}
+BreachLoop_Sound:
+  Conditions:
+  - stance opened
+  Skills:
+  - effect:sound{s=entity.zombie_villager.converted;v=1.5;p=2}
+BreachLoop_Closed: ### Effects so you can discover a breach
+  Conditions:
+  - stance closed
+  Skills:
+  - effect:particlesphere{particle=witchMagic;amount=20;r=1}
+  - effect:particlesphere{particle=portal;amount=40;r=1}
+BreachLoop_Sound_Closed:
+  Conditions:
+  - stance closed
+  Skills:
+  - effect:sound{s=item.elytra.flying;v=0.5;p=2}
+### EFFECTS ----------------------------------------------------
+BreachRing_Open:
+  Skills:
+  - effect:particlering{particle=reddust;radius=1;points=4;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=3;points=16;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=7;points=64;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=8;points=81;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=9;points=100;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=10;points=121;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=11;points=144;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=12;points=169;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=13;points=196;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=14;points=225;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=15;points=256;amount=1;hS=1;vS=0} @self
+BreachRing_Close:
+  Skills:
+  - effect:particlering{particle=reddust;radius=15;points=256;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=14;points=225;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=13;points=196;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=12;points=169;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=11;points=144;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=10;points=121;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=9;points=100;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=8;points=81;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=7;points=64;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=6;points=49;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=5;points=36;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=4;points=25;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=3;points=16;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=2;points=9;amount=1;hS=1;vS=0} @self
+  - delay 5
+  - effect:particlering{particle=reddust;radius=1;points=4;amount=1;hS=1;vS=0} @self

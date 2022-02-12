@@ -1,0 +1,653 @@
+### IRIDESCENT(CS ONLY) ----------------------------------------
+CritDagger:
+  Id: 272
+  Display: "&b&oAbyssal Skean&7&7"
+  Lore:
+  - "&7Sharpness XX"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &a&o0.5% &7&ochance to deal lethal"
+  - "&7&o  damage on hit."
+  - "&0 "
+  - "&7“&bThere is no poison greater"
+  - "&b than doubt--thus, no shield"
+  - "&b stronger than the mind.&7”"
+  Enchantments:
+  - DAMAGE_ALL:20
+  Options:
+    Unbreakable: true
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+RuneBlade:
+  Id: 272
+  Display: "&b&oRunic Greatsword&7&7"
+  Lore:
+  - "&7Knockback II"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&b★ &7&o35% critical strike chance."
+  - "&b★ &7&o10.0x damage on critical hit."
+  - "&b★ &7&oDeals &c&o1000.0❤ &7&obase damage."
+  - "&0 "
+  - "&7“&bForged using magics as old as the"
+  - "&b universe, no mortal blade can hope"
+  - "&b to contest this weapon's power.&7”"
+  Enchantments:
+  - KNOCKBACK:2
+  Options:
+    Unbreakable: true
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+### RANGED ITEMS -----------------------------------------------
+IonCannon:
+  Id: 355
+  Data: 3
+  Display: "&b&oIon Cannon&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fRanged"
+  - "&7Ammo: &fEmerald"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c50.0❤x3"
+  - "&0 "
+  - "&7“&bControls a remote satellite"
+  - "&b that vaporizes enemies.&7”"
+CatGun:
+  Id: 419
+  Display: "&b&oCatt's Wheelgun&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fRifle"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c90.0❤x4"
+  - "&0 "
+  - "&b★ &7&oFires as fast as you can"
+  - "&7&o  pull the trigger."
+  - "&b★ &7&oCrouching reduces spread."
+  - "&b★ &7&o50% critical strike chance."
+  - "&b★ &7&o5.0x damage on critical hit."
+  - "&b★ &7&o10% chance to spawn ocelot"
+  - "&7&o  on hit. Ocelots live for 1.5s."
+  - "&0 "
+  - "&7“&bSome sick maniac constructed"
+  - "&b this mad weapon after a brick"
+  - "&b fell on his head.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Laser:
+  Id: 379
+  Display: "&b&oLaser Cannon&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&7Left-click to scope"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fSniper"
+  - "&7Ammo: &fPrismarine Crystal"
+  - "&7Speed: &fInsanely Fast"
+  - "&7Damage: &c40.0❤"
+  - "&0 "
+  - "&b★ &7&o4x damage on headshot."
+  - "&0 "
+  - "&7“&bZAP! ZAP! ZAP!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+GLauncher:
+  Id: 380
+  Display: "&b&oThe Grenadier&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to detonate"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fLauncher"
+  - "&7Ammo: &fTNT"
+  - "&7Radius: &f3 Blocks"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c0.5 - 20000.0❤"
+  - "&0 "
+  - "&7“&bYes, Rico. Kaboom!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+Flamethrower:
+  Id: 398
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  Display: "&b&oFlamethrower&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fRanged"
+  - "&7Ammo: &fBlaze Powder"
+  - "&7Speed: &fInsanely Fast"
+  - "&7Damage: &c250.0❤"
+  - "&0 "
+  - "&b★ &e&oIgnites &7&ofor up to 5.0s on hit."
+  - "&b★ &c&oEnemies more than 8 blocks"
+  - "&c&o  away take no damage."
+  - "&0 "
+  - "&7“&bSome people just like to watch"
+  - "&b the world burn...&7”"
+AutoRifle2:
+  Id: 417
+  Display: "&b&oA Salt rifle&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&7Left-click to scope"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fRifle (Auto)"
+  - "&7Ammo: &fSalt (Sugar)"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c150.0❤"
+  - "&0 "
+  - "&b★ &7&o4.0x damage on headshot."
+  - "&b★ &7&o40% critical strike chance."
+  - "&b★ &7&o4.0x damage on critical hit."
+  - "&0 "
+  - "&7“&bAn assault rifle that uses"
+  - "&b salt as ammo. Neat.&7”"
+  Enchantments:
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+FusionRifle:
+  Id: 419
+  Display: "&b&oFusion Rifle&7&7 ▪ «0 ◀▷ 0»"
+  Lore:
+  - "&7Right-click to toggle modes"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fRifle"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c30.0❤ &7(Alt. &c500.0❤x2&7)"
+  - "&0 "
+  - "&b★ &7&o50% critical strike chance."
+  - "&b★ &7&o2.0x damage on critical hit."
+  - "&0 "
+  - "&7“&bA high-powered rifle with a"
+  - "&b missile launcher attached.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+ShotgunX:
+  Id: 397
+  Data: 1
+  Display: "&b&oThe Reaper&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - " &0 "
+  - "&7Type: &fShotgun"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fAverage"
+  - "&7Damage: &c350.0❤x16"
+  - "&0 "
+  - "&b★ &7&oShots have no recoil."
+  - "&b★ &7&oRestores full health on hit."
+  - "&b★ &7&oShots deal 80% less damage"
+  - "&7&o  for every second in air."
+  - "&0 "
+  - "&7“&bLooks like it's amateur hour.&7”"
+  Hide:
+  - ATTRIBUTES
+AutoShotgun:
+  Id: 417
+  Display: "&b&oLast Reckoning&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fShotgun"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fInsanely Fast"
+  - "&7Damage: &c125.0❤x4"
+  - "&0 "
+  - "&b★ &7&ox2 fire rate on each"
+  - "&7&o  successive shot."
+  - "&0 "
+  - "&7“&bAn insanely powerful"
+  - "&b automatic shotgun.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+SiegeCannon:
+  Id: 418
+  Display: "&b&oSiege Cannon&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fRanged"
+  - "&7Ammo: &fDiamond"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c750.0❤"
+  - "&0 "
+  - "&b★ &7&o30% critical strike chance."
+  - "&b★ &7&o20.0x damage on critical hit."
+  - "&b★ &7&oShots pass through enemies."
+  - "&b★ &c&o0% movement speed while held."
+  - "&0 "
+  - "&7“&bThe perfect hybrid of magic and"
+  - "&b technology--this massive railgun"
+  - "&b turret stands defiant against its"
+  - "&b enemies, the Titans.&7”"
+  Attributes:
+    MainHand:
+      MovementSpeed: -100.0
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Roadhog:
+  Id: 61
+  Display: "&b&oWhole Hog&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fScattergun"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c75.0❤x8"
+  - "&0 "
+  - "&b★ &7&o20% critical strike chance."
+  - "&b★ &7&o4.0x damage on critical hit."
+  - "&b★ &7&o100% increased knockback."
+  - "&b★ &7&oKnockback from this weapon"
+  - "&7&o  cannot be resisted."
+  - "&0 "
+  - "&7“&bWe're all animals.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Sniper4e:
+  Id: 417
+  Display: "&b&oJhin's Rifle&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fSniper"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c4.0❤"
+  - "&0 "
+  - "&b★ &7&o4444x damage on headshot."
+  - "&b★ &oFreezes &7&otargets for 4.0s."
+  - "&b★ &7&oDisables &a&oRegeneration &7&oon"
+  - "&7&o  targets for up to 4.0s."
+  - "&0 "
+  - "&7“&bI CAN ONLY COUNT TO FOUR!&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+Sniper4x:
+  Id: 418
+  Display: "&b&oShield Slam&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fSniper"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c30.0❤"
+  - "&0 "
+  - "&b★ &7&oOn hit, reduce target's gold"
+  - "&7&o  hearts to &e&o0.0❤&7&o."
+  - "&0 "
+  - "&7“&bWhat use is magic in the eyes"
+  - "&b of superior technology?&7”"
+Sniper5:
+  Id: 419
+  Display: "&b&oThe Slow Death&7&7 «0»"
+  Lore:
+  - "&7Left-click to shoot"
+  - "&7Right-click to scope"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fSniper"
+  - "&7Ammo: &fGold Nugget"
+  - "&7Speed: &fVery Slow"
+  - "&7Damage: &c50.0❤x4"
+  - "&0 "
+  - "&b★ &7&oShots gain &c&o500.0❤ &7&odamage"
+  - "&7&o  every second in the air."
+  - "&b★ &c&oFired projectiles move at"
+  - "&c&o  extremely slow speeds."
+  - "&0 "
+  - "&7“&bIt'll get to you eventually."
+  - "&b One way or another.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+### RANGED (BOW) -----------------------------------------------
+Venomhusk:
+  Id: 261
+  Display: "&b&oVenomhusk&7&7"
+  Lore:
+  - "&7Power D"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c400.0❤x6"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&b★ &7&oFully-draw shots to cast ability."
+  - "&b★ &7&oRapidly fires 3 shots during ability."
+  - "&b★ &7&o50% chance to inflict &c&o900.0❤ &2&oToxin"
+  - "&7&o  damage over a period of 3.0s."
+  - "&b★ &7&o35% chance to inflict &c&o300.0❤ &4&oBleed"
+  - "&7&o  damage over a period of 1.5s."
+  - "&0 "
+  - "&7“&bA seething poison made long before"
+  - "&b reveals a fate I shall truly adore.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:500
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=Venom_1} @target ~onBowHit 0.5
+  - skill{s=Venom_2} @target ~onBowHit 0.35
+Bow_Curse:
+  Id: 261
+  Display: "&b&oSpinegrip&7&7"
+  Lore:
+  - "&7Power D"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c150.0❤x10"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&b★ &7&oFully-draw shots to cast ability."
+  - "&b★ &7&oRapidly fires 2 shots during ability."
+  - "&b★ &7&o50% chance to &d&oCurse &7&oenemies on hit."
+  - "&b★ &7&oDeals &c&o1250.0-2000.0❤ &7&oextra damage"
+  - "&7&o  to &8&oWeakened &7&oenemies."
+  - "&0 "
+  - "&7“&bUnbound from flesh, yet still tethered"
+  - "&b to the mortal coil, spectres suffer an"
+  - "&b inescapable cycle of living death.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:500
+  - ARROW_INFINITE:1
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE
+  Skills:
+  - skill{s=WeakDamage} @target ~onBowHit
+  - skill{s=InflictCurse} @target ~onBowHit 0.5
+### MAGIC ITEMS ------------------------------------------------
+Euzhe:
+  Id: 280
+  Display: "&b&oStaff of Euzhe&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Damage: &c85.0❤"
+  - "&0 "
+  - "&b★ &7&oGain &a&oResist. V &7&ofor 3.0s on hit."
+  - "&b★ &7&o50% Chance bolts will bounce."
+  - "&0 "
+  - "&7“&bIt is stated that this ancient"
+  - "&b oak staff can summon the old"
+  - "&b god, Quackathulhu.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+Curse5:
+  Id: 38
+  Data: 2
+  Display: "&b&oVoid Blossom&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Slow"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c10.0❤x8"
+  - "&0 "
+  - "&b★ &7&o100% chance to inflict &d&oCurse"
+  - "&7&o  with ranged/magic attacks."
+  - "&0 "
+  - "&7“&bThis small flower fully blooms"
+  - "&b when the world lies still...&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=InflictCurse} @target ~onBowHit
+HellFire:
+  Id: 32
+  Display: "&b&oHellfire&7&7"
+  Lore:
+  - "&7Right-click to channel"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Damage: &c120.0❤"
+  - "&0 "
+  - "&b★ &7&oBurst fire (5 charges)."
+  - "&b★ &7&o50% critical strike chance."
+  - "&b★ &7&o4.0x damage on critical hit."
+  - "&b★ &7&o30% chance to &e&oIgnite &7&oenemies."
+  - "&b★ &7&o30% chance to &d&oCurse &7&oenemies"
+  - "&7&o  while you have &a&oHaste&7&o."
+  - "&0 "
+  - "&7“&bWe're so much purer than the"
+  - "&b common, vulgar, weak, licentious"
+  - "&b crowd.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=Ignite_Title} @target ~onBowHit 0.3
+  - skill{s=CurseWhileHaste} @target ~onBowHit 0.3
+IceLightning:
+  Id: 38
+  Data: 1
+  Display: "&b&oArctic Thunder&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fAverage"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c150.0❤x15"
+  - "&0 "
+  - "&b★ &7&o25% critical strike chance."
+  - "&b★ &7&o4.0x damage on critical hit."
+  - "&b★ &7&o50% chance to &3&oShock &7&oenemies"
+  - "&7&o  that are &b&oFrozen&7&o."
+  - "&0 "
+  - "&7“&bAtomic snowballs not included.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+  Skills:
+  - skill{s=ShockedWhileFrozen_Enemy} @target ~onBowHit 0.5
+Surge:
+  Id: 403
+  Display: "&b&oMind Surge&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fFast"
+  - "&7Charge: &fFast"
+  - "&7Damage: &c200.0❤x8"
+  - "&0 "
+  - "&b★ &7&o30% critical strike chance."
+  - "&b★ &7&o10.0x damage on critical hit."
+  - "&b★ &7&oDeals &c&o150.0-300.0❤ &7&odamage"
+  - "&7&o  to &3&oShocked &7&oenemies."
+  - "&b★ &7&o15% chance to &3&oShock &7&oenemies"
+  - "&7&o  while you have &a&oStrength&7&o."
+  - "&0 "
+  - "&7“&bFocus is the channeling of the"
+  - "&b self's inner storm.&7”"
+  Skills:
+  - skill{s=ShockWhileStronk} @target ~onBowHit 0.15
+  - skill{s=Shock_150-300} @target ~onBowHit
+BloodMagic2:
+  Id: 403
+  Display: "&b&oPandemonium&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fAverage"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c80.0❤x12"
+  - "&0 "
+  - "&b★ &7&oSneaking increases spread."
+  - "&b★ &7&oDeals &c&o450.0-600.0❤ &7&odamage"
+  - "&7&o  to &4&oBleeding &7&oenemies."
+  - "&0 "
+  - "&7“&bThe fastest path to seizing"
+  - "&b power is through disorder.&7”"
+  Skills:
+  - skill{s=UnluckDamage2} @target ~onBowHit
+Lyre:
+  Id: 189
+  Display: "&b&oBlessed Lyre&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fInsanely Fast"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c50.0❤x3"
+  - "&0 "
+  - "&b★ &7&oOn hit, gain &a&oSpeed IV &7&ofor 5.0s."
+  - "&b★ &7&oOn hit, gain &a&oStrength IV &7&ofor 10.0s."
+  - "&b★ &7&oOn hit, &c&o+10❤ &7&omaximum HP for 30.0s."
+  - "&b★ &7&oOn hit, set your golden hearts to"
+  - "&e&o  20.0❤ &7&ofor up to 30.0s."
+  - "&0 "
+  - "&7“&bIt is not the musician that chooses"
+  - "&b their instrument, but the instrument"
+  - "&b that chooses its musician.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+Lyre2:
+  Id: 191
+  Display: "&b&oDeath's Harp&7&7 «0»"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &b&oIridescent"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fAverage"
+  - "&7Charge: &fAverage"
+  - "&7Damage: &c250.0❤x8"
+  - "&0 "
+  - "&b★ &7&oOn hit, gain &a&oHaste X &7&ofor 5.0s."
+  - "&b★ &7&oOn hit, gain &a&oSpeed X &7&ofor 5.0s."
+  - "&b★ &7&oInflicts &3&oShock&7&o, &b&oFreeze&7&o, and &e&oIgnite"
+  - "&7&o  for up to 5.0s on hit."
+  - "&0 "
+  - "&7“&bIn madness, the tune of one's mind"
+  - "&b begins to decay... until none remain"
+  - "&b but the sound of laughter.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS

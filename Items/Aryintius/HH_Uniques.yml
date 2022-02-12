@@ -1,0 +1,331 @@
+###---------------------------------------------------------###
+### HUNTING HOUSE WEAPONS (MythicMobs File)
+###---------------------------------------------------------###
+HH_Rocket:
+  Id: 355
+  Data: 7
+  Display: "&6&oThe Destroyer&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✵"
+  - "&0 "
+  - "&7Type: &fLauncher"
+  - "&7Ammo: &fDiamond"
+  - "&7Radius: &f5 Blocks"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c0.0-3000.0❤"
+  - "&0 "
+  - "&6★ &7&oFires rockets that explode"
+  - "&7&o  on impact."
+  - "&6★ &7&oStuns/blinds enemies inside"
+  - "&7&o  radius for up to 10.0s."
+  - ""
+  - "&7“&6Wreathed in the flames of sin"
+  - "&6 and damnation, only those who"
+  - "&6 embraced the corruption can"
+  - "&6 truly harness such power.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+HH_Pistol:
+  Id: 266
+  Display: "&6&oRevolution&7&7 «0»"
+  Lore:
+  - "&7Right-click to shoot"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✵"
+  - "&0 "
+  - "&7Type: &fPistol"
+  - "&7Ammo: &fIron Nugget"
+  - "&7Speed: &fVery Fast"
+  - "&7Damage: &c150.0❤"
+  - "&0 "
+  - "&6★ &7&o50% critical strike chance."
+  - "&6★ &7&o3.5x damage on headshot."
+  - "&6★ &7&o4.5x damage on critical hit."
+  - "&6★ &7&oCrouching reduces bullet spread"
+  - "&7&o  and gun recoil."
+  - "&0 "
+  - "&7“&6Given new life by a fragment of the"
+  - "&6 corruption, this hefty weapon melts"
+  - "&6 through the toughest of armors.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+### HEADHUNTER MAGIC
+HH_Magic_Low:
+  Id: 403
+  Display: "&d&oAshen Burst&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &d&oExalted &4✵"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fInstant"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c250.0❤"
+  - "&0 "
+  - "&d★ &7&oAttacks from this weapon can"
+  - "&7&o  pass through walls."
+  - "&d★ &7&oGains damage/status bonuses"
+  - "&7&o  from melee items/accessories."
+  - "&d★ &c&oRanged/magic bonuses have"
+  - "&c&o  no effect on this weapon."
+  - "&0 "
+  - "&7“&dEven the briefest flash of light"
+  - "&d can cleanse out the darkness.&7”"
+HH_Magic_Mid:
+  Id: 403
+  Display: "&4&oCha&c&oos Bo&4&olt&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &4&oCorr&c&oupted &4✵"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fVery Slow"
+  - "&7Charge: &fVery Slow"
+  - "&7Damage: &c30.0❤"
+  - "&0 "
+  - "&4★ &7&oRecharges independently"
+  - "&7&o  from equipment slots."
+  - "&c★ &7&oRemoves &a&oResistance &7&ofrom"
+  - "&7&o  enemies on hit."
+  - "&4★ &7&oEnemies gain &a&oStrength CL&7&o,"
+  - "&e&o  +500.0❤ &7&oand &a&oSpeed IV &7&oon"
+  - "&7&o  hit."
+  - "&0 "
+  - "&7“&4Sometimes i&ct is best to fight"
+  - "&4 the co&crruption with a f&4orce"
+  - "&4 ak&cin to its own.&7”"
+HH_Magic_Final:
+  Id: 403
+  Display: "&6&oTyphoon&7&7"
+  Lore:
+  - "&7Right-click to cast"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✵"
+  - "&0 "
+  - "&7Type: &fMagic"
+  - "&7Speed: &fSlow"
+  - "&7Charge: &fSlow"
+  - "&7Damage: &c250.0❤x12"
+  - "&0 "
+  - "&6★ &7&o20% chance to inflict &d&oCurse"
+  - "&7&o  with ranged/magic attacks."
+  - "&0 "
+  - "&7“&6The soul of a storm holds such"
+  - "&6 wonderous potential--untapped"
+  - "&6 by both man and machine.&7”"
+  Skills:
+  - skill{s=InflictCurse} @target ~onBowHit 0.2
+### HEADHUNTER BOWS
+HH_Bow_Low:
+  Id: 261
+  Display: "&3Scatter Bow&7&7"
+  Lore:
+  - "&0 "
+  - "&7Tier: &3Rare &4✵"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c50.0❤x3"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&3★ &7&oFully-draw shots to cast ability."
+  - "&0 "
+  - "&7“&3With the aid of forbidden magics, this"
+  - "&3 small shortbow can summon a rain of"
+  - "&3 arrows from a world far beyond.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:10
+  - ARROW_INFINITE:1
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+HH_Bow_Mid:
+  Id: 261
+  Display: "&d&oAstral Bow&7&7"
+  Lore:
+  - "&7Power L"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &d&oExalted &4✵"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c900.0❤"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&d★ &7&oFully-draw shots to cast ability."
+  - "&0 "
+  - "&7“&dMolded by the breath of the ancients,"
+  - "&d this massive longbow saw use in many"
+  - "&d wars against the corruption.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:50
+  - ARROW_INFINITE:1
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+HH_Bow_Final:
+  Id: 261
+  Display: "&6&oSpectral Gaze&7&7"
+  Lore:
+  - "&7Power CL"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✵"
+  - "&0 "
+  - "&7Type: &fBow"
+  - "&7Ammo: &fArrow"
+  - "&7Ability: &c350.0❤x3"
+  - "&7Cooldown: &fNone"
+  - "&0 "
+  - "&6★ &7&oFully-draw shots to cast ability."
+  - "&6★ &7&oRapidly fires 3 shots during ability."
+  - "&6★ &7&oGain &a&oSpeed IV &7&ofor up to 5.0s when"
+  - "&7&o  you cast this weapon's ability."
+  - "&6★ &7&oGain &a&oNight Vision &7&ofor up to 12.5s"
+  - "&7&o  when you cast this weapon's ability."
+  - "&0 "
+  - "&7“&6Carved from the enchanted wood of"
+  - "&6 an elder tree, this massive longbow"
+  - "&6 can pierce the toughest of hides.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - ARROW_DAMAGE:150
+  - ARROW_INFINITE:1
+  Hide:
+  - ENCHANTS
+  - UNBREAKABLE
+  - ATTRIBUTES
+### MELEE ITEMS
+HH_Melee_Low:
+  Id: 272
+  Display: "&3Turmoil"
+  Lore:
+  - "&7Sharpness C"
+  - "&7Sweeping Edge X"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &3Rare &4✵"
+  - "&0 "
+  - "&3★ &a&o+90% &7&oattack speed."
+  - "&3★ &c&o+5.0❤ &7&oif held in main hand."
+  - "&0 "
+  - "&7“&3A masterful blend of confusion"
+  - "&3 and disarray seethes from this"
+  - "&3 wicked, twisted blade.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.15
+      Health: 10.0
+  Enchantments:
+  - DAMAGE_ALL:100
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+HH_Melee_Mid:
+  Id: 279
+  Display: "&d&oRising Fury"
+  Lore:
+  - "&7Smite L"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &d&oExalted &4✵"
+  - "&0 "
+  - "&d★ &a&o+150% &7&oattack speed."
+  - "&0 "
+  - "&7“&dI fear nothing, neither death"
+  - "&d nor scorn. Now I am lost, for"
+  - "&d there is only room to mourn.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.1
+  Enchantments:
+  - DAMAGE_UNDEAD:50
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+HH_Melee_Final:
+  Id: 258
+  Display: "&6&oHammer of Impurity"
+  Lore:
+  - "&7Smite D"
+  - "&7Knockback I"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✵"
+  - "&0 "
+  - "&6★ &8&o-75% &7&oattack speed."
+  - "&6★ &c&o+20.0❤ &7&oif held in main hand."
+  - "&0 "
+  - "&7“&6A heavy maul imbued with the"
+  - "&6 power of the corruption, now"
+  - "&6 a monstrous, spiked weapon.&7”"
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.9
+      Health: 20.0
+  Enchantments:
+  - DAMAGE_UNDEAD:500
+  - KNOCKBACK:1
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+  - ENCHANTS
+Shield_Frenzy:
+  Id: 442
+  Display: "&6&oShield of Frenzy"
+  Lore:
+  - "&0 "
+  - "&7Tier: &6&oLegendary &4✵"
+  - "&0 "
+  - "&6★ &7&oWhenever you hit an enemy"
+  - "&7&o  monster/boss, gain &a&oHaste V"
+  - "&7&o  and &a&oSpeed V &7&ofor 10.0s."
+  - "&0 "
+  - "&7“&6The noise of battle fills the"
+  - "&6 air, where only a fool would"
+  - "&6 feel despair.&7”"
+  Options:
+    Color: RED
+    Unbreakable: true
+  BannerLayers:
+  - BLACK GRADIENT
+  - YELLOW FLOWER
+  - BLACK RHOMBUS_MIDDLE
+  - YELLOW TRIANGLES_BOTTOM
+  - YELLOW TRIANGLES_TOP
+  Enchantments:
+  Hide:
+  - ATTRIBUTES
+  - ENCHANTS
+  - UNBREAKABLE

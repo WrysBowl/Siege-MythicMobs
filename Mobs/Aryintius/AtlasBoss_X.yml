@@ -1,0 +1,147 @@
+SecretAtlasTotem: ### Totem that spawns the bosses.
+  Type: HUSK
+  Health: 1000000
+  Damage: 0
+  BossBar:
+    Enabled: true
+    Title: "&6&l<&e« &fSeal of Creation &e»&6&l>"
+    Range: 50
+    Color: WHITE
+    Style: SEGMENTED_20
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  # - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Despawn: false
+    Silent: true
+  Skills:
+### INITIALIZATION
+  - message{m="&0« &4&kTITAN &0» &fAh, so you are the Eternal we were promised! Now... let's see if you are worthy!"} @PlayersInRadius{r=50} ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;level=0} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=200;level=0;overwrite=true} @Self ~onTimer:10
+  - skill{s=CancelSlowness} @Self ~onTimer:5
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+  - skill{s=CancelDespawn} @Self ~onTimer:20
+### EFFECTS
+  - randommessage
+      {
+      m=
+      "&0« &4&kTITAN &0» &7You must destroy the seal to escape this realm, something we were unable to do...",
+      "&0« &4&kTITAN &0» &7Attacking the guardians will damage the seal, as they are linked through the stream of life.",
+      "&0« &4&kTITAN &0» &7The Aquir have fallen as they have failed this task... But we have faith you will succeed!",
+      "&0« &4&kTITAN &0» &7The Corruption claimed the Giants long ago... But breaking this seal can release their souls.",
+      "&0« &4&kTITAN &0» &7Once the Seal of Creation is broken, the world of Aryntius shall change forever...";
+      } @PIR{r=50} ~onTimer:300
+### SKILLS
+  - skill{s=ATX_SpawnKing} ~onTimer:10
+  - skill{s=ATX_SpawnTotem} ~onTimer:10
+  - remove @MIR{r=100;t=AtlasBoss_X} ~onDeath
+  - remove @MIR{r=100;t=Totem_Chaos} ~onDeath
+  - remove @MIR{r=100;t=Totem_Bleed} ~onDeath
+  - remove @MIR{r=100;t=Totem_Freeze} ~onDeath
+  - remove @MIR{r=100;t=Totem_Curse} ~onDeath
+  - summon{type=LootGolem;a=1} @Location{c=1000,55,3500} ~onDeath
+  - summon{type=LootExplosion_Atlas;a=1} @Location{c=1000,55,3500} ~onDeath
+  - message{m="&0« &4&kTITAN &0» &fTruly impressive! The Titans will be pleased to hear you have freed their souls from this prison..."} @PlayersInRadius{r=50} ~onDeath
+
+AtlasBoss_X:
+  Type: STRAY
+  Display: "&6&l<&e« &fPrimordial Guardian &e»&6&l>"
+  Health: 100000
+  Damage: 1000
+  Equipment:
+  - UHelm_1:4
+  - UChest_1:3
+  - ULegs_1:2
+  - UBoots_1:1
+  - Arch_Sword:0
+  - Arch_Sword:5
+  DamageModifiers:
+  - ENTITY_ATTACK 0
+  - PROJECTILE 0
+  - FIRE 0
+  - FIRE_TICK 0
+  - LAVA 0
+  - FALL 0
+  - SUFFOCATION 0
+  - MAGIC 0
+  - CUSTOM 0
+  - CONTACT 0
+  - ENTITY_EXPLOSION 0
+  - BLOCK_EXPLOSION 0
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    KnockbackResistance: 1
+    FollowRange: 50
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+### SPAWN/UTILS
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3} @Self ~onTimer:5
+  - skill{s=CancelLevitation} @Self ~onTimer:5
+  - remove{delay=1200} @Self ~onSpawn
+### EFFECTS
+  - effect:sound{s=entity.endermen.hurt;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=2;v=0.8} @self ~onDamaged
+### SKILLS
+  - damage{a=200;pi=true;ia=true;pk=true} @Parent ~onDamaged
+### PHASE 1
+  - skill{s=ATX_RandomShot} @NearestPlayer{r=50} ~onTimer:10
+  - skill{s=ATX_RandomHeavy} @NearestPlayer{r=50} ~onTimer:10
+  - skill{s=ATX_RandomNova} @Self ~onTimer:10
+### DEATH STUFF
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+  - damage{a=100000;pi=true;ia=true;pk=true} @Parent ~onDeath
+  - randommessage
+      {
+      m=
+      "&0« &4&kTITAN &0» &fGreat job! Destroy more guardians to further weaken the seal!",
+      "&0« &4&kTITAN &0» &fGood work! Damaging more primordials will wear away the seal!",
+      "&0« &4&kTITAN &0» &fWell done! Attack more primordial guardians to damage the seal further!";
+      } @PIR{r=50} ~onDeath
+
+LootExplosion_Atlas:
+  Type: BAT
+  Display: ''
+  Health: 1000
+  Damage: 0
+  Drops:
+  - AtlasBoss_X
+  - Currency_Rifts_Boss
+  - Titan_Fragments
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
+  - potion{type=INVISIBILITY;duration=999999;level=1} @Self ~onSpawn
+  - skill{s=BR_ParExp} ~onSpawn
+  - skill{s=BR_KillSelf} @Self ~onSpawn
+  Options:
+    MovementSpeed: 0.01
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 1
+    Silent: true

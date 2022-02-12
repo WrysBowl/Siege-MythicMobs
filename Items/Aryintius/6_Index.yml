@@ -1,0 +1,772 @@
+###---------------------------------------------------------###
+### WEAPONS
+###---------------------------------------------------------###
+T6_1:
+  Id: 272
+  Display: "&fAncient Sword"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fA sword from an age"
+  - "&f long ago. Its edge is"
+  - "&f still quite sharp.&7”"
+  Enchantments:
+  - DAMAGE_ALL:5
+  - DURABILITY:5
+  Hide:
+  - ATTRIBUTES
+T6_2:
+  Id: 258
+  Display: "&fAbandoned Axe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fAn axe left behind"
+  - "&f by its owner.&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:3
+  - DAMAGE_ALL:3
+  Hide:
+  - ATTRIBUTES
+T6_3:
+  Id: 269
+  Display: "&fRotting Spear"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fThe wood seems to"
+  - "&f disintegrate with"
+  - "&f each swing...&7”"
+  Enchantments:
+  - DAMAGE_ALL:4
+  Hide:
+  - ATTRIBUTES
+T6_4:
+  Id: 292
+  Display: "&fCursed Scythe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fThis weapon is so old"
+  - "&f that its curse has long"
+  - "&f subsided...&7”"
+  Enchantments:
+  - DAMAGE_UNDEAD:5
+  Hide:
+  - ATTRIBUTES
+T6_5:
+  Id: 286
+  Display: "&fBitter Axe"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fIts edge seems razor"
+  - "&f sharp, but the rest of"
+  - "&f it feels too flimsy...&7”"
+  Enchantments:
+  - DAMAGE_ALL:10
+  Hide:
+  - ATTRIBUTES
+T6_6:
+  Id: 346
+  Display: "&fDeadwood Fishing Rod"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fA bone-dry fishing"
+  - "&f rod that has clearly"
+  - "&f seen better days.&7”"
+  Enchantments:
+  - LURE:2
+  Hide:
+  - ATTRIBUTES
+T6_7:
+  Id: 261
+  Display: "&fDeadwood Bow"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fA bow made of dry"
+  - "&f dead wood planks.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:4
+  Hide:
+  - ATTRIBUTES
+T6_8:
+  Id: 276
+  Display: "&fCrystal Blade"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fThis strange sword"
+  - "&f shines brilliantly with"
+  - "&f arcane power.&7”"
+  Enchantments:
+  - DAMAGE_ALL:5
+  Hide:
+  - ATTRIBUTES
+T6_9:
+  Id: 280
+  Display: "&fHeat Staff"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fThis staff feels"
+  - "&f strangely warm in"
+  - "&f your hands...&7”"
+  Enchantments:
+  - FIRE_ASPECT:5
+  Hide:
+  - ATTRIBUTES
+T6_10:
+  Id: 288
+  Display: "&fFeatherblade"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fA lightweight blade"
+  - "&f forged from phoenix"
+  - "&f feathers.&7”"
+  Enchantments:
+  - DAMAGE_ALL:4
+  - FIRE_ASPECT:4
+  Hide:
+  - ATTRIBUTES
+T6_11:
+  Id: 256
+  Display: "&fSoldier's Spear"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fThe spear of a soldier"
+  - "&f whose name is now long"
+  - "&f forgotten.&7”"
+  Enchantments:
+  - DAMAGE_ALL:4
+  - KNOCKBACK:2
+  Hide:
+  - ATTRIBUTES
+T6_12:
+  Id: 290
+  Display: "&fRepulsor Staff"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fPowerful magics resonate"
+  - "&f within this wooden staff.&7”"
+  Enchantments:
+  - KNOCKBACK:5
+  Hide:
+  - ATTRIBUTES
+T6_13:
+  Id: 267
+  Display: "&fSteel Longsword"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fA heavy but durable"
+  - "&f blade, used by knights"
+  - "&f in the previous ages.&7”"
+  Enchantments:
+  - DURABILITY:3
+  - DAMAGE_ALL:3
+  Hide:
+  - ATTRIBUTES
+T6_14:
+  Id: 442
+  Display: "&fDented Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fYou can vaguely see"
+  - "&f scuffs of battle on"
+  - "&f this old shield.&7”"
+  Options:
+    Color: BROWN
+  Enchantments:
+  - DURABILITY:5
+  Hide:
+  - ATTRIBUTES
+T6_15:
+  Id: 283
+  Display: "&fJewelless Sword"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fThis faded blade seems"
+  - "&f to have lost its splendor"
+  - "&f to thieves and traders.&7”"
+  Enchantments:
+  - DAMAGE_ALL:5
+  - DAMAGE_UNDEAD:5
+  - DAMAGE_ARTHROPODS:5
+  Hide:
+  - ATTRIBUTES
+T6_16:
+  Id: 268
+  Display: "&fQuick Shortsword"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+10% &7attack speed."
+  - "&0 "
+  - "&7“&fAn ancient magic gives"
+  - "&f this weapon a strangely"
+  - "&f lifting essence.&7”"
+  Enchantments:
+  - DAMAGE_ALL:5
+  - DURABILITY:5
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.50
+  Hide:
+  - ATTRIBUTES
+T6_17:
+  Id: 267
+  Display: "&fHeavy Greatsword"
+  Lore:
+  - "&7Sharpness XV"
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &8-30% &7attack speed."
+  - "&f★ &8-15% &7movement speed."
+  - "&0 "
+  - "&7“&fThis weapon can cleave"
+  - "&f through giants but weighs"
+  - "&f as much as a mountain.&7”"
+  Enchantments:
+  - DAMAGE_ALL:15
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.75
+      MovementSpeed: -0.15
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T6_18:
+  Id: 261
+  Display: "&fGuardian's Bow"
+  Lore:
+  - "&7Power XV"
+  - "&7Infinity"
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &8-40% &7movement speed."
+  - "&0 "
+  - "&7“&fAn incredibly powerful bow"
+  - "&f that requires the strength"
+  - "&f of a towering giant.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:20
+  - ARROW_INFINITE:1
+  Attributes:
+    MainHand:
+      MovementSpeed: -0.4
+    OffHand:
+      MovementSpeed: -0.4
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T6_19:
+  Id: 272
+  Display: "&fCarving Knife"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+5% &7attack speed."
+  - "&0 "
+  - "&7“&fAn incredibly sharp knife"
+  - "&f designed for crafting.&7”"
+  Enchantments:
+  - DAMAGE_ALL:8
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.52
+  Hide:
+  - ATTRIBUTES
+T6_20:
+  Id: 267
+  Display: "&fPeripheral Assault"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &c+1.0❤&7 while held."
+  - "&f★ &a+1% &7attack speed."
+  - "&f★ &a+1% &7movement speed."
+  - "&0 "
+  - "&7“&fAn attack from every"
+  - "&f possible side is always"
+  - "&f guaranteed to hit.&7”"
+  Enchantments:
+  - DAMAGE_ALL:1
+  - DAMAGE_UNDEAD:1
+  - DAMAGE_ARTHROPODS:1
+  - KNOCKBACK:1
+  - FIRE_ASPECT:1
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.55
+      MovementSpeed: 0.01
+      Health: 2.0
+  Hide:
+  - ATTRIBUTES
+T6_21:
+  Id: 261
+  Display: "&fWindforce Bow"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+5% &7attack speed."
+  - "&f★ &a+5% &7movement speed."
+  - "&0 "
+  - "&7“&fFormed from the winds;"
+  - "&f adopted by the earth.&7”"
+  Enchantments:
+  - ARROW_DAMAGE:4
+  - ARROW_KNOCKBACK:4
+  - ARROW_FIRE:4
+  - ARROW_INFINITE:1
+  Attributes:
+    MainHand:
+      MovementSpeed: 0.05
+    OffHand:
+      MovementSpeed: 0.05
+  Hide:
+  - ATTRIBUTES
+T6_22:
+  Id: 442
+  Display: "&fWindforce Shield"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+10% &7movement speed"
+  - "&7  when this is equipped in"
+  - "&7  your off hand."
+  - "&0 "
+  - "&7“&fFrom a shield lighter than"
+  - "&f air comes a swiftness most"
+  - "&f unfair.&7”"
+  Options:
+    Color: WHITE
+    Unbreakable: true
+  BannerLayers:
+  - GRAY STRAIGHT_CROSS
+  - GRAY RHOMBUS_MIDDLE
+  Attributes:
+    OffHand:
+      MovementSpeed: 0.10
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+T6_23:
+  Id: 442
+  Display: "&fFriedrich's Mirror"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - '&f★ &a+5% &7movement speed.'
+  - '&f★ &c+2.0❤ &7when equipped'
+  - '&7  in your off hand.'
+  - "&0 "
+  - "&7“&fWhen you gaze into the"
+  - "&f mirror, the mirror also"
+  - "&f gazes back.&7”"
+  Options:
+    Color: SILVER
+    Unbreakable: true
+  BannerLayers:
+  - BLACK BORDER
+  - BLACK TRIANGLES_TOP
+  - BLACK TRIANGLES_BOTTOM
+  Attributes:
+    OffHand:
+      Health: 4.0
+      MovementSpeed: 0.05
+    MainHand:
+      MovementSpeed: 0.05
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+T6_24:
+  Id: 267
+  Display: "&fThe Unbreakable Sword"
+  Lore:
+  - "&7Sharpness V"
+  - "&7Unbreakable"
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fIt seems to hum in your"
+  - "&f hands, vibrating with an"
+  - "&f unknown tune...&7”"
+  Enchantments:
+  - DAMAGE_ALL:5
+  - DURABILITY:9001
+  - MENDING:10
+  Hide:
+  - ENCHANTS
+  - ATTRIBUTES
+T6_25:
+  Id: 280
+  Display: "&fTempest Staff"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+2% &7attack speed."
+  - "&f★ &a+8% &7movement speed."
+  - "&0 "
+  - "&7“&fMay the winds guide you.&7”"
+  Enchantments:
+  - DAMAGE_ALL:3
+  - KNOCKBACK:3
+  Hide:
+  - ATTRIBUTES
+  Attributes:
+    MainHand:
+      AttackSpeed: -0.58
+      MovementSpeed: 0.08
+###---------------------------------------------------------###
+### ARMOR ITEMS
+###---------------------------------------------------------###
+T6_26:
+  Id: 298
+  Display: "&fBlood-stained Cap"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fHopefully you won't"
+  - "&f share the same fate"
+  - "&f as its previous owner.&7”"
+  Enchantments:
+  Options:
+    Color: 100,0,0
+  Hide:
+  - ATTRIBUTES
+T6_27:
+  Id: 301
+  Display: "&fSqueaky Boots"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fYou're not really sure"
+  - "&f why these boots make"
+  - "&f so much noise...&7”"
+  Enchantments:
+  - PROTECTION_FALL:3
+  - DURABILITY:5
+  Hide:
+  - ATTRIBUTES
+T6_28:
+  Id: 303
+  Display: "&fLatticed Ringmail"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fA flexible, well-crafted"
+  - "&f chestpiece designed to"
+  - "&f stop arrows.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:3
+  Hide:
+  - ATTRIBUTES
+T6_29:
+  Id: 308
+  Data: 80
+  Display: "&fRusted Greaves"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fEroded by rain, these"
+  - "&f iron leggings can still"
+  - "&f provide protection.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+  Hide:
+  - ATTRIBUTES
+T6_30:
+  Id: 317
+  Display: "&fWeakling's Wanderers"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+20% &7movement speed."
+  - "&0 "
+  - "&7“&fYou may call me weak,"
+  - "&f but my legs will always"
+  - "&f be strong.&7”"
+  Options:
+    Unbreakable: true
+  Enchantments:
+  - PROTECTION_FALL:5
+  - DEPTH_STRIDER:5
+  Attributes:
+    Feet:
+      MovementSpeed: 0.2
+  Hide:
+  - UNBREAKABLE
+  - ATTRIBUTES
+T6_31:
+  Id: 307
+  Display: "&fAncestral Plate"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &c+2.5❤&7 while equipped."
+  - "&f★ &8-25% &7movement speed."
+  - "&0 "
+  - "&7“&fThis finely-forged piece"
+  - "&f of armor was handed down"
+  - "&f over a dozen generations.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  - DURABILITY:5
+  Attributes:
+    Chest:
+      MovementSpeed: -0.25
+      Health: 5.0
+  Hide:
+  - ATTRIBUTES
+T6_32:
+  Id: 311
+  Display: "&fParanoia Tunic"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fYou can't be too safe"
+  - "&f in this world, y'know...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:1
+  - PROTECTION_FIRE:1
+  - PROTECTION_EXPLOSIONS:1
+  - PROTECTION_PROJECTILE:1
+  Hide:
+  - ATTRIBUTES
+T6_33:
+  Id: 299
+  Display: "&fGreyhide Tunic"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &c+5.0❤&7 while equipped."
+  - "&0 "
+  - "&7“&fA soft tunic made from"
+  - "&f grey leather.&7”"
+  Options:
+    Color: 160,160,160
+  Attributes:
+    Chest:
+      Health: 10.0
+  Hide:
+  - ATTRIBUTES
+T6_34:
+  Id: 308
+  Display: "&fStoneheart Greaves"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+50% &7Knockback Resist."
+  - "&f★ &8-35% &7movement speed."
+  - "&0 "
+  - "&7“&fLike a stone sitting in"
+  - "&f the center of a river...&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  - DURABILITY:5
+  Attributes:
+    Legs:
+      MovementSpeed: -0.35
+      KnockbackResistance: 0.1
+  Hide:
+  - ATTRIBUTES
+T6_35:
+  Id: 316
+  Display: "&fFancy Pants"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+15% &7movement speed."
+  - "&0 "
+  - "&7“&fWhat a gorgeous fighter!&7”"
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:4
+  - DURABILITY:6
+  Attributes:
+    Legs:
+      MovementSpeed: 0.15
+  Hide:
+  - ATTRIBUTES
+T6_36:
+  Id: 298
+  Display: "&fEarthen Faceguard"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &8-15% &7movement speed."
+  - "&0 "
+  - "&7“&fAn extremely resilient"
+  - "&f helm carved from stone.&7”"
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:8
+  - DURABILITY:8
+  Options:
+    Color: 100,100,100
+  Attributes:
+    Head:
+      MovementSpeed: -0.15
+  Hide:
+  - ATTRIBUTES
+T6_37:
+  Id: 314
+  Display: "&fFallen King's Crown"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+5% &7movement speed."
+  - "&0 "
+  - "&7“&fThe headpiece of a monarch"
+  - "&f that has been long forgotten.&7”"
+  Enchantments:
+  - PROTECTION_PROJECTILE:2
+  - PROTECTION_ENVIRONMENTAL:2
+  - DURABILITY:5
+  Attributes:
+    Legs:
+      MovementSpeed: 0.05
+  Hide:
+  - ATTRIBUTES
+T6_38:
+  Id: 397
+  Data: 3
+  Display: "&fReaper Hood"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+5% &7movement speed."
+  - "&f★ &c+4.0❤&7 while equipped."
+  - "&0 "
+  - "&7“&fDIE... DIE... DIE!&7”"
+  Options:
+    Player: Reaper
+  Enchantments:
+  - PROTECTION_PROJECTILE:5
+  Attributes:
+    Head:
+      MovementSpeed: 0.05
+      Health: 8.0
+  Hide:
+  - ATTRIBUTES
+T6_39:
+  Id: 397
+  Data: 3
+  Display: "&fPhantom Mask"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+8% &7movement speed."
+  - "&0 "
+  - "&7“&fWearing this makes you"
+  - "&f feel very strange...&7”"
+  Options:
+    Player: Edgy
+  Enchantments:
+  - PROTECTION_EXPLOSIONS:5
+  Attributes:
+    Head:
+      MovementSpeed: 0.08
+  Hide:
+  - ATTRIBUTES
+T6_40:
+  Id: 397
+  Data: 3
+  Display: "&fFlame Mask"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &a+12% &7knockback resist."
+  - "&0 "
+  - "&7“&fA wooden mask carved in"
+  - "&f the likeness of fire.&7”"
+  Options:
+    Player: Flaming
+  Enchantments:
+  - PROTECTION_FIRE:5
+  Attributes:
+    Head:
+      KnockbackResistance: 0.05
+  Hide:
+  - ATTRIBUTES
+T6_41:
+  Id: 397
+  Data: 3
+  Display: "&fDemon Mask"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&f★ &8-10% &7movement speed."
+  - "&0 "
+  - "&7“&fAn iron mask shaped like"
+  - "&f creatures from an older"
+  - "&f time...&7”"
+  Options:
+    Player: Satan
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:7
+  Attributes:
+    Head:
+      MovementSpeed: -0.1
+  Hide:
+  - ATTRIBUTES
+###---------------------------------------------------------###
+### OTHER ITEMS
+###---------------------------------------------------------###
+T6_Template:
+  Id: 272
+  Display: "&fCommon Item"
+  Lore:
+  - "&0 "
+  - "&7Tier: &fCommon"
+  - "&0 "
+  - "&7“&fBlah blah blah&7”"
+  Enchantments:
+  Hide:
+  - ATTRIBUTES

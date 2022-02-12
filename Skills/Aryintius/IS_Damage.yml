@@ -1,0 +1,379 @@
+### RANDOM DAMAGE??? -------------------------------
+Chaos_5-15:
+  Skills:
+  - randomskill{s=Chaos_5,Chaos_10,Chaos_15}
+Chaos_10-25:
+  Skills:
+  - randomskill{s=Chaos_10,Chaos_15,Chaos_20,Chaos_25}
+Chaos_15-30:
+  Skills:
+  - randomskill{s=Chaos_15,Chaos_20,Chaos_25,Chaos_30}
+Chaos_30-50:
+  Skills:
+  - randomskill{s=Chaos_30,Chaos_40,Chaos_50}
+Chaos_40-80:
+  Skills:
+  - randomskill{s=Chaos_40,Chaos_50,Chaos_60,Chaos_70,Chaos_80}
+Chaos_50-80:
+  Skills:
+  - randomskill{s=Chaos_50,Chaos_60,Chaos_70,Chaos_80}
+Chaos_80-120:
+  Skills:
+  - randomskill{s=Chaos_80,Chaos_100,Chaos_120}
+Chaos_100-150:
+  Skills:
+  - randomskill{s=Chaos_100,Chaos_120,Chaos_150}
+Chaos_100-250:
+  Skills:
+  - randomskill{s=Chaos_100,Chaos_150,Chaos_200,Chaos_250}
+Phys_15-45:
+  Skills:
+  - randomskill{s=Phys_15,Phys_30,Phys_45}
+Phys_25-75:
+  Skills:
+  - randomskill{s=Phys_25,Phys_50,Phys_75}
+Phys_50-100:
+  Skills:
+  - randomskill{s=Phys_50,Phys_75,Phys_100}
+Phys_75-150:
+  Skills:
+  - randomskill{s=Phys_75,Phys_100,Phys_125,Phys_150}
+Phys_100-250:
+  Skills:
+  - randomskill{s=Phys_100,Phys_150,Phys_200,Phys_250}
+Phys_150-300:
+  - randomskill{s=Phys_150,Phys_200,Phys_250,Phys_300}
+Phys_200-350:
+  - randomskill{s=,Phys_200,Phys_250,Phys_300,Phys_350}
+Phys_250-400:
+  Skills:
+  - randomskill{s=Phys_250,Phys_300,Phys_350,Phys_400}
+Phys_250-1000:
+  Skills:
+  - randomskill{s=Phys_250,Phys_300,Phys_350,Phys_400,Phys_450,Phys_500,Phys_550,Phys_600,Phys_650,Phys_700,Phys_750,Phys_1000}
+Phys_350-500:
+  Skills:
+  - randomskill{s=Phys_350,Phys_400,Phys_450,Phys_500}
+Phys_450-600:
+  Skills:
+  - randomskill{s=Phys_450,Phys_500,Phys_550,Phys_600}
+Phys_500-750:
+  Skills:
+  - randomskill{s=Phys_500,Phys_550,Phys_600,Phys_650,Phys_700,Phys_750}
+Phys_500-1000:
+  Skills:
+  - randomskill{s=Phys_500,Phys_750,Phys_1000}
+Phys_500-1500:
+  Skills:
+  - randomskill{s=Phys_500,Phys_550,Phys_600,Phys_650,Phys_700,Phys_750,Phys_1000,Phys_1250,Phys_1500}
+Phys_1000-1500:
+  Skills:
+  - randomskill{s=Phys_1000,Phys_1250,Phys_1500}
+Phys_1250-2000:
+  Skills:
+  - randomskill{s=Phys_1250,Phys_1500,Phys_2000}
+Phys_1500-2500:
+  Skills:
+  - randomskill{s=Phys_1500,Phys_2000,Phys_2500}
+Phys_2000-3500:
+  Skills:
+  - randomskill{s=Phys_2000,Phys_2500,Phys_3000,Phys_3500}
+RandomPhys:
+  Cooldown: 1
+  Skills:
+  - randomskill{s=Phys_10,Phys_50,Phys_100,Phys_250,Phys_500,Phys_1000,Phys_2500,Phys_5000,Phys_Max}
+RandomChaos:
+  Cooldown: 1
+  Skills:
+  - randomskill{s=Chaos_5,Chaos_10,Chaos_25,Chaos_40,Chaos_80,Chaos_150,Chaos_250,Chaos_Max}
+600C_CD: ### Deals 600.0 Chaos Damage (1 second cooldown)
+  Cooldown: 1
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=1200;ia=true;pi=true;pk=true}
+TitanCharm: ### 150-500 phys
+  - randomskill{s=Phys_150,Phys_200,Phys_250,Phys_300,Phys_350,Phys_400,Phys_450,Phys_500}
+### ADDED PHYS DAMAGE ------------------------------
+Phys_10: ### Deals 10.0 Damage
+  Skills:
+  - damage{a=20;pk=true}
+Phys_15: ### Deals 15.0 Damage
+  Skills:
+  - damage{a=30;pk=true}
+Phys_25: ### Deals 25.0 Damage
+  Skills:
+  - damage{a=50;pk=true}
+Phys_30: ### Deals 30.0 Damage
+  Skills:
+  - damage{a=60;pk=true}
+Phys_45: ### Deals 45.0 Damage
+  Skills:
+  - damage{a=90;pk=true}
+Phys_50: ### Deals 50.0 Damage
+  Skills:
+  - damage{a=100;pk=true}
+Phys_75: ### Deals 75.0 Damage
+  Skills:
+  - damage{a=150;pk=true}
+Phys_100: ### Deals 100.0 Damage
+  Skills:
+  - damage{a=200;pk=true}
+Phys_125: ### Deals 125.0 Damage
+  Skills:
+  - damage{a=250;pk=true}
+Phys_150: ### Deals 150.0 Damage
+  Skills:
+  - damage{a=300;pk=true}
+Phys_200: ### Deals 200.0 Damage
+  Skills:
+  - damage{a=400;pk=true}
+Phys_250: ### Deals 250.0 Damage
+  Skills:
+  - damage{a=500;pk=true}
+Phys_300: ### Deals 300.0 Damage
+  Skills:
+  - damage{a=600;pk=true}
+Phys_350: ### Deals 350.0 Damage
+  Skills:
+  - damage{a=700;pk=true}
+Phys_400: ### Deals 400.0 Damage
+  Skills:
+  - damage{a=800;pk=true}
+Phys_450: ### Deals 450.0 Damage
+  Skills:
+  - damage{a=900;pk=true}
+Phys_500: ### Deals 500.0 Damage
+  Skills:
+  - damage{a=1000;pk=true}
+Phys_550: ### Deals 550.0 Damage
+  Skills:
+  - damage{a=1100;pk=true}
+Phys_600: ### Deals 600.0 Damage
+  Skills:
+  - damage{a=1200;pk=true}
+Phys_650: ### Deals 650.0 Damage
+  Skills:
+  - damage{a=1300;pk=true}
+Phys_700: ### Deals 700.0 Damage
+  Skills:
+  - damage{a=1400;pk=true}
+Phys_750: ### Deals 750.0 Damage
+  Skills:
+  - damage{a=1500;pk=true}
+Phys_1000: ### Deals 1000.0 Damage
+  Skills:
+  - damage{a=2000;pk=true}
+Phys_1250: ### Deals 1250.0 Damage
+  Skills:
+  - damage{a=2500;pk=true}
+Phys_1500: ### Deals 1500.0 Damage
+  Skills:
+  - damage{a=3000;pk=true}
+Phys_1750: ### Deals 1750.0 Damage
+  Skills:
+  - damage{a=3500;pk=true}
+Phys_2000: ### Deals 2000.0 Damage
+  Skills:
+  - damage{a=4000;pk=true}
+Phys_2500: ### Deals 2500.0 Damage
+  Skills:
+  - damage{a=5000;pk=true}
+Phys_3000: ### Deals 3000.0 Damage
+  Skills:
+  - damage{a=6000;pk=true}
+Phys_3500: ### Deals 3500.0 Damage
+  Skills:
+  - damage{a=7000;pk=true}
+Phys_5000: ### Deals 5000.0 Damage
+  Skills:
+  - damage{a=10000;pk=true}
+Phys_Max: ### Deals 10000.0 Damage
+  Skills:
+  - damage{a=20000;pk=true}
+### CHAOS DAMAGE ------------------------------
+Chaos_Max: ### Deals 1000.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
+  - damage{a=2000;ia=true;pi=true;pk=true}
+Chaos_250: ### Deals 250.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.14;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.14;p=2}
+  - damage{a=500;ia=true;pi=true;pk=true}
+Chaos_200: ### Deals 200.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.13;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.13;p=2}
+  - damage{a=400;ia=true;pi=true;pk=true}
+Chaos_150: ### Deals 150.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.13;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.13;p=2}
+  - damage{a=300;ia=true;pi=true;pk=true}
+Chaos_120: ### Deals 120.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.13;p=2}
+  - damage{a=240;ia=true;pi=true;pk=true}
+Chaos_100: ### Deals 100.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=200;ia=true;pi=true;pk=true}
+Chaos_80: ### Deals 80.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
+  - damage{a=160;ia=true;pi=true;pk=true}
+Chaos_70: ### Deals 70.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.11;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.11;p=2}
+  - damage{a=140;ia=true;pi=true;pk=true}
+Chaos_60: ### Deals 60.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.11;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.11;p=2}
+  - damage{a=120;ia=true;pi=true;pk=true}
+Chaos_50: ### Deals 50.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=100;ia=true;pi=true;pk=true}
+Chaos_40: ### Deals 40.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=80;ia=true;pi=true;pk=true}
+Chaos_30: ### Deals 30.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=60;ia=true;pi=true;pk=true}
+Chaos_25: ### Deals 25.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=50;ia=true;pi=true;pk=true}
+Chaos_20: ### Deals 20.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=40;ia=true;pi=true;pk=true}
+Chaos_15: ### Deals 15.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=30;ia=true;pi=true;pk=true}
+Chaos_10: ### Deals 10.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=20;ia=true;pi=true;pk=true}
+Chaos_5: ### Deals 5.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=10;ia=true;pi=true;pk=true}
+Chaos_2: ### Deals 2.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=4;ia=true;pi=true;pk=true}
+Chaos_1: ### Deals 1.0 Chaos Damage
+  Skills:
+  - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
+  - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
+  - damage{a=2;ia=true;pi=true;pk=true}
+### ENERGY SHIELD ------------------------------
+ES_10: ### Sets gold hearts to 10.0
+  Skills:
+  - potion{type=ABSORPTION;duration=4000;lvl=4;overwrite=true}
+ES_20: ### Sets gold hearts to 20.0
+  Skills:
+  - potion{type=ABSORPTION;duration=4000;lvl=9;overwrite=true}
+ES_30: ### Sets gold hearts to 30.0
+  Skills:
+  - potion{type=ABSORPTION;duration=4000;lvl=14;overwrite=true}
+ES_40: ### Sets gold hearts to 40.0
+  Skills:
+  - potion{type=ABSORPTION;duration=4000;lvl=19;overwrite=true}
+ES_50: ### Sets gold hearts to 50.0
+  Skills:
+  - potion{type=ABSORPTION;duration=4000;lvl=24;overwrite=true}
+ES_80: ### Sets gold hearts to 80.0
+  Skills:
+  - potion{type=ABSORPTION;duration=4000;lvl=39;overwrite=true}
+ES_100: ### Sets gold hearts to 100.0
+  Skills:
+  - potion{type=ABSORPTION;duration=4000;lvl=49;overwrite=true}
+### HEALING AMOUNTS --------------------------------------------
+Heal_1:
+  Skills:
+  - heal{a=2}
+Heal_2:
+  Skills:
+  - heal{a=4}
+Heal_3:
+  Skills:
+  - heal{a=6}
+Heal_4:
+  Skills:
+  - heal{a=8}
+Heal_5:
+  Skills:
+  - heal{a=10}
+Heal_7:
+  Skills:
+  - heal{a=14}
+Heal_8:
+  Skills:
+  - heal{a=16}
+Heal_9:
+  Skills:
+  - heal{a=18}
+Heal_10:
+  Skills:
+  - heal{a=20}
+Heal_12half:
+  Skills:
+  - heal{a=25}
+Heal_15:
+  Skills:
+  - heal{a=30}
+Heal_20:
+  Skills:
+  - heal{a=40}
+Heal_30:
+  Skills:
+  - heal{a=60}
+Heal_40:
+  Skills:
+  - heal{a=80}
+Heal_50:
+  Skills:
+  - heal{a=100}
+### RANDOM HEALING ---------------------------------------------
+Heal_3-7:
+  Skills:
+  - randomskill{s=Heal_3,Heal_4,Heal_5,Heal_6,Heal_7}
+Heal_5-10:
+  Skills:
+  - randomskill{s=Heal_5,Heal_7,Heal_8,Heal_10}
+Heal_10-15:
+  Skills:
+  - randomskill{s=Heal_10,Heal_12half,Heal_15}
+Heal_10-20:
+  Skills:
+  - randomskill{s=Heal_10,Heal_12half,Heal_15,Heal_20}
+Heal_20-50:
+  Skills:
+  - randomskill{s=Heal_20,Heal_30,Heal_40,Heal_50}
+Heal_Low:
+  Skills:
+  - randomskill{s=Heal_2,Heal_3,Heal_4}
+Heal_High:
+  Skills:
+  - randomskill{s=Heal_8,Heal_9,Heal_10}
