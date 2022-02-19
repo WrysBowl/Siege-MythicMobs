@@ -1,6 +1,6 @@
 Broodmother:
   Type: Spider
-  Display: '&2Broodmother'
+  Display: '&4Broodmother'
   Health: 17500
   Damage: 60
   Faction: Boss
@@ -12,6 +12,8 @@ Broodmother:
     Style: SOLID
   DamageModifiers:
   - PROJECTILE 0.5
+  Modules:
+    ThreatTable: true
   Options:
     Persistent: true
     Despawn: false
@@ -33,3 +35,14 @@ Broodmother:
   - skill{s=BroodmotherEncase} ~onAttack 0.1
   - skill{s=BroodmotherBeam;repeat=2;repeatInterval=10} ~onTimer:300
   - skill{s=BroodmotherExplosionProjectiles} ~onTimer:600 0.5
+    ### PHASE 1
+  - skill{s=Poison_60} @target ~onAttack 0.15 >60%
+  - skill{s=A3_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >60%
+    ### PHASE 2
+  - skill{s=Poison_60} @target ~onAttack 0.25 <60%
+  - skill{s=A3_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <60%
+    ### DEATH STUFF
+  - message{m="<mob.name> &fMy poor spiderlings... will starve..."} @PlayersInRadius{r=25} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
