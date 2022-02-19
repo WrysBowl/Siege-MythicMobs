@@ -45,6 +45,15 @@ FoxSpirit:
   - skill{s=FoxLightning} @self ~onDamaged 0.1
   - summon{t=FoxSpiritHealingOrb;itt=false;amount=2;cooldown=20;radius=4} ~onDamaged
   - heal{a=<skill.var.damage-amount>/4} @self ~onAttack
+    ### PHASE 1
+  - skill{s=A8_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >55%
+    ### PHASE 2
+  - skill{s=A8_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <55%
+    ### DEATH STUFF
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+
 FoxSpiritClone:
   Type: Zombie
   Display: '&4Fox Spirit'

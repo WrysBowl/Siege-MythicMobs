@@ -32,3 +32,16 @@ MagmaSpirit:
   - sound{s=entity.magma_cube.hurt} @Self ~onDamaged
   - sound{s=entity.magma_cube.death} @Self ~onDeath
   - effect:blockmask{m=magma_block;r=2;d=200} @self ~onTimer:5
+  ### PHASE 1
+  - skill{s=A6_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >60%
+  ### PHASE 2
+  - potion{type=SPEED;duration=40000;level=3;overwrite=true} @Self =50%
+  - skill{s=A6_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <60%
+  - skill{s=CancelSlowness} @Self ~onTimer:10 <60%
+  ### DEATH STUFF
+  - remove @MIR{r=100;t=TX_Explosion} ~onDeath
+  - remove @MIR{r=100;t=TX_Explosion2} ~onDeath
+  - remove @MIR{r=100;t=TX_Explosion3} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

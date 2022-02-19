@@ -42,7 +42,6 @@ Broodmother:
   - skill{s=Poison_60} @target ~onAttack 0.25 <60%
   - skill{s=A3_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <60%
     ### DEATH STUFF
-  - message{m="<mob.name> &fMy poor spiderlings... will starve..."} @PlayersInRadius{r=25} ~onDeath
   - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
   - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
   - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
