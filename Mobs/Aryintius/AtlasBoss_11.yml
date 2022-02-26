@@ -50,9 +50,9 @@ AtlasBoss_11:
   - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
 A11_Clone: ### Shadow clones summoned by Hulaak
   Type: HUSK
-  Display: "&8&l<&8« &7Hulaak's Shadow &8»&8&l>"
-  Health: 20000
-  Damage: 1200
+  Display: "&7Hulaak's Shadow"
+  Health: 200
+  Damage: 10
   Disguise:
     Type: WITHER_SKELETON
     Invisible: false
