@@ -24,12 +24,6 @@ AtlasBoss_5:
   - WOOD_SWORD:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Currency_Atlas_Boss
-  - AtlasBoss_5
-  - Iridescent
-  - Mythic
-  - Corrupted
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

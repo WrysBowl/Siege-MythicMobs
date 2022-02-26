@@ -24,14 +24,6 @@ AtlasBoss_12:
   - BrahmkSword:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Shard_South
-  - AtlasBoss_12
-  - Currency_Atlas_Boss3
-  - Atlas_Fragments
-  - Iridescent
-  - Mythic
-  - Corrupted
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

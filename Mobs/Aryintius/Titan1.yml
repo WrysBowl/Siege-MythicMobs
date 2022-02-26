@@ -18,13 +18,6 @@ Titan1:
   - Chorus_Plant:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Money_Trials
-  - Titan1
-  # - Titan1_Set
-  - Corrupted
-  - Mythic
-  - Iridescent
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.2

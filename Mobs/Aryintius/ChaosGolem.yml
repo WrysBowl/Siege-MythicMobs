@@ -15,10 +15,6 @@ ChaosGolem:
     KnockbackResistance: 0
     Silent: true
     PreventOtherDrops: true
-  Drops:
-  - Money_High
-  - Mythic
-  - Iridescent
   Equipment:
   - MAGMA:4
   - MAGMA:3

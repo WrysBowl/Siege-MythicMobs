@@ -18,12 +18,6 @@ AtlasBoss_7:
   - Arch_Sword:5
   Modules:
     ThreatTable: true
-  Drops:
-  - AtlasBoss_7
-  - Currency_Atlas_Boss2
-  - Iridescent
-  - Mythic
-  - Corrupted
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.3

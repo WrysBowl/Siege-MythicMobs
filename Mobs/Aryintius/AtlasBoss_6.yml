@@ -24,12 +24,6 @@ AtlasBoss_6:
   - Judgement:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Currency_Atlas_Boss
-  - AtlasBoss_6
-  - Iridescent
-  - Mythic
-  - Corrupted
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

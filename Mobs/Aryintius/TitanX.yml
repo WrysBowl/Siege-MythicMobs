@@ -18,10 +18,6 @@ TitanX:
   - ENCHANTED_BOOK:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Titan_Fragments
-  - Currency_Rifts_Boss
-  - TitanX
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.2

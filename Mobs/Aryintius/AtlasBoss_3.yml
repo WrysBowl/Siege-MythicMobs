@@ -24,12 +24,6 @@ AtlasBoss_3:
   - Arch_Sword:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Currency_Atlas_Boss
-  - AtlasBoss_3
-  - Iridescent
-  - Mythic
-  - Corrupted
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

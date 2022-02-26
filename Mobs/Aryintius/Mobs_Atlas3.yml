@@ -4,10 +4,6 @@ A12_Melee:
   Display: "&6« &eGreater Firesworn &6»"
   Health: 800
   Damage: 750
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
-  - Corrupted
   Modules:
     ThreatTable: true
   Equipment:

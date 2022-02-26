@@ -4,10 +4,6 @@ T2_Melee:
   Display: "&6« &eAshen Soul &6»"
   Health: 800
   Damage: 750
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:

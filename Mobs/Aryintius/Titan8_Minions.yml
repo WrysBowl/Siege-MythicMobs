@@ -4,10 +4,6 @@ T8_Melee:
   Display: "&6« &eWasteland Warrior &6»"
   Health: 1000
   Damage: 1000
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:

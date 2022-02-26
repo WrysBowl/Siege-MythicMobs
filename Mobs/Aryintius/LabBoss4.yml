@@ -18,16 +18,6 @@ LabBoss4:
   - Shield_Paladin:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Food
-  - Money_Boss
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
-  - Exalted
-  - Mythic
-  - MicroIridescent
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.4

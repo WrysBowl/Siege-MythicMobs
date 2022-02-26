@@ -4,10 +4,6 @@ T3_Melee:
   Display: "&6« &eFrost Knight &6»"
   Health: 800
   Damage: 750
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Equipment:
   - UHelm_1:4
   - DChest:3

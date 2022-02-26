@@ -10,10 +10,6 @@ T7_Melee:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
