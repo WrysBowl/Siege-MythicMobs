@@ -52,3 +52,30 @@ Davy_Jones:
   - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
   - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
   - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+  - skill{s=CancelSlowness} @Self ~onTimer:5
+  - skill{s=CancelDespawn} @Self ~onTimer:20
+  - skill{s=InflictShock} @target ~onAttack 0.2
+
+    ### PHASE 1
+  - skill{s=A13_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >70%
+    ### PHASE 2
+  - skill{s=A13_Phase_2} @NearestPlayer{r=50} ~onTimer:10 =35%-70%
+  - potion{type=SPEED;duration=200;level=1;overwrite=true} @Self ~onTimer:10 =35%-70%
+    ### PHASE 3
+  - potion{type=SPEED;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
+  - skill{s=A13_Phase_3} @NearestPlayer{r=50} ~onTimer:10 <35%
+
+  - skill{s=CancelDespawn} @Self ~onTimer:20
+    ### PHASE 1
+  - skill{s=LB3Knockback} @NearestPlayer{r=50} ~onTimer:120
+  - skill{s=LB3Drag} @NearestPlayer{r=50} ~onTimer:400
+  - skill{s=LB3_Burst} @NearestPlayer{r=50} ~onTimer:100 >50%
+  - skill{s=LB3_Blast} @PIR{r=50} ~onTimer:40 >50%
+    ### PHASE 2
+  - skill{s=5sInvincible} @Self =50%
+  - skill{s=DamageBuff} @Self =50%
+  - skill{s=SpeedBuff} @Self =50%
+    ### SUMMONS
+  - skill{s=LB3_Summon} @self =75%
+  - skill{s=LB3_Summon} @self =50%
+  - skill{s=LB3_Summon} @self =25%

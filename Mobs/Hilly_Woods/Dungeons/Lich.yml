@@ -37,4 +37,20 @@ Lich:
   - skill{s=SoulShot} @Target ~onDamaged 0.5
   - skill{s=LichFloat} @Target ~onDamaged 0.25
   - skill{s=SoulSucker} @Target ~onDamaged 0.4
-  - potion{t=INVISIBILITY;d=40} @Self ~onDamaged 0.5
+  ### SPAWN/UTILS
+  - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
+  - effect:sound{s=block.glass.break;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+  ### SUMMONS
+  - skill{s=A11_Summon_1} @Self ~onTimer:10 >70%
+  - skill{s=A11_Summon_2} @Self ~onTimer:10 =35%-70%
+  - skill{s=A11_Summon_3} @Self ~onTimer:10 <35%
+  ### PHASE 1
+  - skill{s=A11_Phase_1} @NearestPlayer{r=25} ~onTimer:10 >55%
+  ### PHASE 2
+  - skill{s=A11_Phase_2} @NearestPlayer{r=25} ~onTimer:10 <55%
+  ### DEATH STUFF
+  - remove{delay=0} @MIR{r=50;t=A11_Clone} ~onDeath
+  - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
+  - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
+  - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath

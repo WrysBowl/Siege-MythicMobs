@@ -45,3 +45,13 @@ MagmaSpirit:
   - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
   - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
   - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
+  - effect:sound{s=entity.irongolem.hurt;p=0.5;v=0.8} @self ~onDamaged
+  - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
+  ### PHASE 1
+  - skill{s=A12_RandomSkill} @NearestPlayer{r=30} ~onTimer:10 >70%
+  ### PHASE 2
+  - skill{s=A12_RandomSkill2} @NearestPlayer{r=30} ~onTimer:10 =35%-70%
+  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <70%
+  ### PHASE 2
+  - skill{s=A12_RandomSkill3} @NearestPlayer{r=30} ~onTimer:10 <35%
+  - potion{type=SPEED;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
