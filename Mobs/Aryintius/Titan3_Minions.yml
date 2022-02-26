@@ -4,13 +4,6 @@ T3_Melee:
   Display: "&6« &eFrost Knight &6»"
   Health: 800
   Damage: 750
-  Equipment:
-  - UHelm_1:4
-  - DChest:3
-  - ULegs_1:2
-  - UBoots_1:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Modules:
     ThreatTable: true
   Options:
@@ -33,13 +26,6 @@ T3_Mage:
   Display: "&4« &eIce Mage &4»"
   Health: 650
   Damage: 500
-  Equipment:
-  - DHelm:4
-  - UChest_1:3
-  - DLegs:2
-  - UBoots_1:1
-  - snow:0
-  - snow:5
   Modules:
     ThreatTable: true
   Options:
@@ -62,13 +48,6 @@ T3_MiniBoss:
   Display: "&4« &cGlacial Spirit &4»"
   Health: 8000
   Damage: 3500
-  Equipment:
-  - BlockHead_3:4
-  - UChest_1:3
-  - ULegs_1:2
-  - UBoots_1:1
-  - FrostAxe:0
-  - FrostAxe:5
   Modules:
     ThreatTable: true
   Options:
@@ -92,13 +71,6 @@ T3_Melee_NoDrop:
   Display: "&8« &7Frost Knight &8»"
   Health: 1000000
   Damage: 500
-  Equipment:
-  - UHelm_1:4
-  - DChest:3
-  - ULegs_1:2
-  - UBoots_1:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Modules:
     ThreatTable: true
   Options:
@@ -118,13 +90,6 @@ T3_Mage_NoDrop:
   Display: "&8« &7Ice Mage &8»"
   Health: 1000000
   Damage: 50
-  Equipment:
-  - DHelm:4
-  - UChest_1:3
-  - DLegs:2
-  - UBoots_1:1
-  - snow:0
-  - snow:5
   Modules:
     ThreatTable: true
   Options:
@@ -144,13 +109,6 @@ T3_MiniBoss_NoDrop:
   Display: "&8« &7Glacial Spirit &8»"
   Health: 1000000
   Damage: 1200
-  Equipment:
-  - BlockHead_3:4
-  - UChest_1:3
-  - ULegs_1:2
-  - UBoots_1:1
-  - FrostAxe:0
-  - FrostAxe:5
   Modules:
     ThreatTable: true
   Options:

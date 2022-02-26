@@ -9,12 +9,6 @@ LabBoss2:
     Range: 50
     Color: GREEN
     Style: SEGMENTED_6
-  Equipment:
-  - BlockHead_4:4
-  - Bunny_Chest:3
-  - Bunny_Legs:2
-  - Bunny_Boots:1
-  - Bow4:0
   Modules:
     ThreatTable: true
   Options:

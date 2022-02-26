@@ -9,13 +9,6 @@ Titan1:
     Range: 50
     Color: PINK
     Style: SEGMENTED_12
-  Equipment:
-  - Void_Helm:4
-  - Void_Chest:3
-  - Void_Legs:2
-  - Void_Boots:1
-  - Chorus_Plant:0
-  - Chorus_Plant:5
   Modules:
     ThreatTable: true
   Options:

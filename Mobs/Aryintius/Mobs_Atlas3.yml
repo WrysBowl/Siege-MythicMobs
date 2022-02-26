@@ -6,13 +6,6 @@ A12_Melee:
   Damage: 750
   Modules:
     ThreatTable: true
-  Equipment:
-  - FireHead:4
-  - UChest_3:3
-  - ULegs_3:2
-  - UBoots_3:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.35
@@ -39,13 +32,6 @@ A12_Ranger:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Equipment:
-  - GHelm:4
-  - GChest:3
-  - GLegs:2
-  - GBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.15
@@ -82,13 +68,6 @@ A12_MiniBoss:
     Silent: true
     PreventOtherDrops: true
     PreventItemPickup: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Skills:
   ### SPAWN/UTILS
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
@@ -113,13 +92,6 @@ A13_Melee:
   Damage: 750
   Modules:
     ThreatTable: true
-  Equipment:
-  - BlockHead_8:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.35
@@ -144,13 +116,6 @@ A13_Ranger:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.15
@@ -179,13 +144,6 @@ A13_MiniBoss:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -210,13 +168,6 @@ A14_Melee:
   Damage: 750
   Modules:
     ThreatTable: true
-  Equipment:
-  - IHelm:4
-  - IChest:3
-  - ILegs:2
-  - IBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -237,13 +188,6 @@ A14_Ranger:
   Damage: 500
   Modules:
     ThreatTable: true
-  Equipment:
-  - IHelm:4
-  - CChest:3
-  - ILegs:2
-  - CBoots:1
-  - BLAZE_ROD:0
-  - ENCHANTED_BOOK:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.1
@@ -270,13 +214,6 @@ A14_MiniBoss:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -310,13 +247,6 @@ A15_Melee:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - BlockHead_1:4
-  - UChest_5:3
-  - ULegs_5:2
-  - UBoots_5:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.35
@@ -350,13 +280,6 @@ A15_Ranger:
     Silent: true
     PreventOtherDrops: true
     PreventItemPickup: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Skills:
   ### SPAWN/UTILS
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
@@ -382,13 +305,6 @@ A15_Rider_Top:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Equipment:
-  - UHelm_0:4
-  - UChest_0:3
-  - ULegs_0:2
-  - UBoots_0:1
-  - Headsman:0
-  
   Modules:
     ThreatTable: true
   Mount: A15_Rider_Bottom
@@ -423,13 +339,6 @@ A15_Rider_Bottom:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Equipment:
-  - UHelm_0:4
-  - UChest_0:3
-  - ULegs_0:2
-  - UBoots_0:1
-  - Arch_Sword:0
-  - Shield_Reaper:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

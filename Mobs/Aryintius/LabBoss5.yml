@@ -9,13 +9,6 @@ LabBoss5:
     Range: 50
     Color: RED
     Style: SEGMENTED_10
-  Equipment:
-  - UHelm_5:4
-  - UChest_5:3
-  - ULegs_5:2
-  - UBoots_5:1
-  - T0_1:0
-  - T0_1:5
   Modules:
     ThreatTable: true
   Options:

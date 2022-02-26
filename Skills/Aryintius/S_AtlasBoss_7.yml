@@ -34,7 +34,6 @@ A7_LeapSlam: ### Leap Slam Attack
   - throw{velocity=10;velocityY=3} @PIR{r=5}
 A7_Phase_1: ### First Phase
   Skills:
-  Cooldown: 10
   - skill{s=A7_Knockback} @Self
   - delay 40
   - skill{s=A7_LeapSlam} @Self

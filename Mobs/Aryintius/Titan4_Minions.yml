@@ -6,13 +6,6 @@ T4_Melee:
   Damage: 750
   Modules:
     ThreatTable: true
-  Equipment:
-  - BlockHead_12:4
-  - UChest_0:3
-  - ULegs_0:2
-  - UBoots_0:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.3
@@ -37,12 +30,6 @@ T4_Ranger:
   Damage: 500
   Modules:
     ThreatTable: true
-  Equipment:
-  - BlockHead_12:4
-  - UChest_0:3
-  - ULegs_0:2
-  - UBoots_0:1
-  - Boss_Bow2:0
   
   Options:
     AlwaysShowName: true
@@ -66,13 +53,6 @@ T4_Mage:
   Damage: 1000
   Modules:
     ThreatTable: true
-  Equipment:
-  - BlockHead_12:4
-  - UChest_0:3
-  - ULegs_0:2
-  - UBoots_0:1
-  - STICK:0
-  - ENCHANTED_BOOK:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.1

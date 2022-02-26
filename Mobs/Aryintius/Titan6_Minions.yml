@@ -6,13 +6,6 @@ T6_Melee:
   Damage: 2000
   Modules:
     ThreatTable: true
-  Equipment:
-  - DHelm:4
-  - UChest_0:3
-  - ULegs_0:2
-  - UBoots_0:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.3
@@ -36,13 +29,6 @@ T6_Ranger:
   Damage: 1000
   Modules:
     ThreatTable: true
-  Equipment:
-  - CHelm:4
-  - UChest_0:3
-  - ULegs_0:2
-  - UBoots_0:1
-  - Boss_Bow2:0
-  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.15
@@ -72,13 +58,6 @@ T6_Caster:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - BlockHead_12:4
-  - UChest_0:3
-  - ULegs_0:2
-  - UBoots_0:1
-  - STICK:0
-  - ENCHANTED_BOOK:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.1

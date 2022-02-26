@@ -15,13 +15,6 @@ Titan8:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Equipment:
-  - IHelm:4
-  - CChest:3
-  - CLegs:2
-  - IBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Modules:
     ThreatTable: true
   Options:

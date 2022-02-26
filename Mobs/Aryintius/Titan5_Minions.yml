@@ -31,13 +31,6 @@ T5_Mage:
   Damage: 150
   Modules:
     ThreatTable: true
-  Equipment:
-  - UHelm_6:4
-  - UChest_6:3
-  - ULegs_6:2
-  - UBoots_6:1
-  - Coin_Nether:0
-  - Coin_Nether:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.15

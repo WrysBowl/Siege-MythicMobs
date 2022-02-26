@@ -12,13 +12,6 @@ A2_Mooshroom:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -48,13 +41,6 @@ A2_Silverfish:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.35
@@ -85,13 +71,6 @@ A3_Spider:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.2
@@ -122,13 +101,6 @@ A3_BloodSpider:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.35
@@ -158,13 +130,6 @@ A3_BigSpider:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -190,13 +155,6 @@ A4_Mage:
   Damage: 250
   Modules:
     ThreatTable: true
-  Equipment:
-  - UHelm_6:4
-  - UChest_6:3
-  - ULegs_6:2
-  - UBoots_6:1
-  - BLAZE_ROD:0
-  - ENCHANTED_BOOK:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.15
@@ -219,13 +177,6 @@ A4_Melee:
   Damage: 500
   Modules:
     ThreatTable: true
-  Equipment:
-  - UHelm_1:4
-  - UChest_1:3
-  - ULegs_6:2
-  - UBoots_6:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -254,13 +205,6 @@ A4_MiniBoss:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - GHelm:4
-  - CChest:3
-  - GLegs:2
-  - CBoots:1
-  - BLAZE_ROD:0
-  - ENCHANTED_BOOK:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.15
@@ -285,13 +229,6 @@ A5_Melee:
   Damage: 500
   Modules:
     ThreatTable: true
-  Equipment:
-  - IHelm:4
-  - CChest:3
-  - ILegs:2
-  - CBoots:1
-  - Arch_Sword:0
-  - Shield_Immune:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -317,13 +254,6 @@ A5_MiniBoss:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - IHelm:4
-  - CChest:3
-  - ILegs:2
-  - CBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

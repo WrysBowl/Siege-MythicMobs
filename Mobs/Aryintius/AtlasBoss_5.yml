@@ -15,13 +15,6 @@ AtlasBoss_5:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Equipment:
-  - BlockHead_4B:4
-  - UChest_8:3
-  - ULegs_8:2
-  - UBoots_8:1
-  - WOOD_SWORD:0
-  - WOOD_SWORD:5
   Modules:
     ThreatTable: true
   Options:

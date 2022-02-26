@@ -9,13 +9,6 @@ Titan6:
     Range: 30
     Color: YELLOW
     Style: SEGMENTED_12
-  Equipment:
-  - GHelm:4
-  - GChest:3
-  - GLegs:2
-  - GBoots:1
-  - Judgement:0
-  - Judgement:5
   Modules:
     ThreatTable: true
   Options:

@@ -15,13 +15,6 @@ Titan3:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Equipment:
-  - UHelm_2:4
-  - UChest_1:3
-  - ULegs_1:2
-  - UBoots_1:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Modules:
     ThreatTable: true
   Options:

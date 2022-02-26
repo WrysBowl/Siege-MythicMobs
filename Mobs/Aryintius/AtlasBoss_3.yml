@@ -15,13 +15,6 @@ AtlasBoss_3:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Modules:
     ThreatTable: true
   Options:
@@ -74,13 +67,6 @@ A3_Brood:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Modules:
     ThreatTable: true
   Options:

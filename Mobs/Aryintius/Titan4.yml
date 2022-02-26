@@ -12,13 +12,6 @@ Titan4:
   LevelModifiers:
   - health 5
   - damage 0.5
-  Equipment:
-  - Dreamer_Helm:4
-  - Dreamer_Chest:3
-  - Dreamer_Legs:2
-  - Dreamer_Boots:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Modules:
     ThreatTable: true
   Options:

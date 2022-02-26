@@ -9,13 +9,6 @@ LabBoss4:
     Range: 50
     Color: RED
     Style: SEGMENTED_6
-  Equipment:
-  - UHelm_1:4
-  - CChest:3
-  - ULegs_1:2
-  - CBoots:1
-  - T0_3:0
-  - Shield_Paladin:5
   Modules:
     ThreatTable: true
   Options:

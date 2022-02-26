@@ -9,13 +9,6 @@ LabBoss3:
     Range: 50
     Color: BLUE
     Style: SEGMENTED_6
-  Equipment:
-  - BlockHead_8:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - T2_2:0
-  - Shield_Aquir:5
   Modules:
     ThreatTable: true
   Options:
@@ -63,13 +56,6 @@ LabBoss3_Minion_1:
   Display: '&3« &bSoul Totem &3»'
   Health: 100
   Damage: 0
-  Equipment:
-  - BlockHead_8:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - Shield_Aquir:0
-  - Shield_Aquir:5
   Modules:
     ThreatTable: true
   Options:

@@ -6,13 +6,6 @@ A7_Melee:
   Damage: 500
   Modules:
     ThreatTable: true
-  Equipment:
-  - LHelm:4
-  - LChest:3
-  - LLegs:2
-  - LBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -45,13 +38,6 @@ A7_MiniBoss:
     Silent: true
     PreventOtherDrops: true
     PreventItemPickup: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Skills:
   ### SPAWN/UTILS
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
@@ -74,13 +60,6 @@ A8_Melee:
   Damage: 500
   Modules:
     ThreatTable: true
-  Equipment:
-  - IHelm:4
-  - IChest:3
-  - ILegs:2
-  - IBoots:1
-  - BrahmkSword:0
-  - Shield_Immune:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -101,12 +80,6 @@ A8_Ranger:
   Damage: 500
   Modules:
     ThreatTable: true
-  Equipment:
-  - CHelm:4
-  - CChest:3
-  - CLegs:2
-  - CBoots:1
-  - Bow4:0
   
   Options:
     AlwaysShowName: true
@@ -134,13 +107,6 @@ A8_MiniBoss:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - BlockHead_2:4
-  - UChest_5:3
-  - ULegs_5:2
-  - UBoots_5:1
-  - BrahmkSword:0
-  - BrahmkSword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.35
@@ -171,13 +137,6 @@ A11_Wolf:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Equipment:
-  - DHelm:4
-  - DChest:3
-  - DLegs:2
-  - DBoots:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.3
@@ -202,12 +161,6 @@ A11_Ranger:
   Damage: 500
   Modules:
     ThreatTable: true
-  Equipment:
-  - DHelm:4
-  - UChest_1:3
-  - ULegs_1:2
-  - DBoots:1
-  - Bow4:0
   
   Options:
     AlwaysShowName: true
@@ -230,13 +183,6 @@ A11_MiniBoss:
   Display: "&4« &cWhite Death &4»"
   Health: 3000
   Damage: 250
-  Equipment:
-  - BlockHead_3:4
-  - UChest_1:3
-  - ULegs_1:2
-  - UBoots_1:1
-  - Arch_Sword:0
-  - Shield_Frost:5
   Disguise:
     Type: WITHER_SKELETON
     Invisible: false

@@ -9,13 +9,6 @@ OpenBoss1:
     Range: 50
     Color: RED
     Style: SEGMENTED_12
-  Equipment:
-  - UHelm_4:4
-  - UChest_4:3
-  - ULegs_4:2
-  - UBoots_4:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Modules:
     ThreatTable: true
   Options:

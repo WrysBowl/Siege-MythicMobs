@@ -9,13 +9,6 @@ Titan5:
     Range: 35
     Color: BLUE
     Style: SEGMENTED_12
-  Equipment:
-  - CHelm:4
-  - DChest:3
-  - DLegs:2
-  - CBoots:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Modules:
     ThreatTable: true
   Options:

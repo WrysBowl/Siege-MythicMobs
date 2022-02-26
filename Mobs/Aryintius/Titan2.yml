@@ -9,13 +9,6 @@ Titan2:
     Range: 50
     Color: RED
     Style: SEGMENTED_12
-  Equipment:
-  - FurnaceHead:4
-  - UChest_5:3
-  - ULegs_5:2
-  - UBoots_5:1
-  - Shield_Frenzy:0
-  - Shield_Frenzy:5
   Disguise:
     Type: GIANT
     Invisible: true
