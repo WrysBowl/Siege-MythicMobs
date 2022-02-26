@@ -24,13 +24,6 @@ Titan2:
     ModifyBoundingBox: true
   Modules:
     ThreatTable: true
-  Drops:
-  - Titan_Fragments
-  - Currency_Rifts_Boss
-  - Titan2
-  - Iridescent
-  - Mythic
-  - Corrupted
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

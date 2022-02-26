@@ -18,18 +18,6 @@ OpenTotem: ### Literally a breach.
   - UBoots_0:1
   - BlockHead_2:0
   - BlockHead_2:5
-  Drops:
-  - Food
-  - Money_Boss
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
-  - Exalted
-  - Corrupted
-  - Mythic
-  - Iridescent
-  - CFrags_3
   Options:
     AlwaysShowName: false
     MovementSpeed: 0.01

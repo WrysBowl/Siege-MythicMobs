@@ -4,10 +4,6 @@ T5_Melee:
   Display: "&6« &eLightning Scarab &6»"
   Health: 800
   Damage: 250
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Disguise:
@@ -16,13 +12,6 @@ T5_Melee:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Equipment:
-  - BlockHead_12:4
-  - UChest_0:3
-  - ULegs_0:2
-  - UBoots_0:1
-  - Arch_Sword:0
-  - Arch_Sword:5
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.45
@@ -40,10 +29,6 @@ T5_Mage:
   Display: "&4« &eThunder Mage &4»"
   Health: 650
   Damage: 150
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:

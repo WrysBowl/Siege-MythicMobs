@@ -18,11 +18,6 @@ AF_Izzy:
   - ENCHANTED_BOOK:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Titan_Fragments
-  - Currency_Rifts_Boss
-  - TitanX
-  - AprilFools
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.2
@@ -101,18 +96,6 @@ AF_Archie:
   - Coin_Nether:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Money_Titan
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
-  - Exalted
-  - Corrupted
-  - Mythic
-  - Iridescent
-  - LabBossX
-  - AprilFools
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.2

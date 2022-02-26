@@ -6,9 +6,6 @@ Drowned:
   Display: "&6« &eDrowned &6»"
   Health: 200
   Damage: 1000
-  Drops:
-  - Currency_Trials_1
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
@@ -33,9 +30,6 @@ Sentinel:
   Display: "&4« &eSentinel &4»"
   Health: 250
   Damage: 500
-  Drops:
-  - Currency_Trials_1
-  - Exalted
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.35
@@ -49,8 +43,6 @@ SquidHead:
   Display: "&6« &eInfected Wraith &6»"
   Health: 100
   Damage: 4
-  # Drops:
-  # - Placeholder
   Modules:
     ThreatTable: true
   Disguise:
@@ -72,13 +64,10 @@ SquidButt:
   Display: "&4« &eAwakened Wraith &4»"
   Health: 250
   Damage: 1000
-  Drops:
-  - Currency_Trials_2
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
-  - 0:4
+  
   - DChest:3
   - DLegs:2
   - DBoots:1

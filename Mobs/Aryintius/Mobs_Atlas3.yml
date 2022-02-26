@@ -31,10 +31,6 @@ A12_Ranger:
   Display: "&4« &eAscended Firesworn &4»"
   Health: 650
   Damage: 500
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
-  - Corrupted
   Modules:
     ThreatTable: true
   Disguise:
@@ -74,11 +70,6 @@ A12_MiniBoss:
   Display: "&4« &cUnforged &4»"
   Health: 5000
   Damage: 1000
-  Drops:
-  - Currency_Atlas_3
-  - Mythic
-  - Corrupted
-  - Iridescent
   Disguise:
     Type: BLOCK
     Block: MAGMA
@@ -120,10 +111,6 @@ A13_Melee:
   Display: "&6« &eCursed Aquiran &6»"
   Health: 800
   Damage: 750
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
-  - Corrupted
   Modules:
     ThreatTable: true
   Equipment:
@@ -157,10 +144,6 @@ A13_Ranger:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
-  - Corrupted
   Equipment:
   - DHelm:4
   - DChest:3
@@ -196,11 +179,6 @@ A13_MiniBoss:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Drops:
-  - Currency_Atlas_3
-  - Mythic
-  - Corrupted
-  - Iridescent
   Equipment:
   - DHelm:4
   - DChest:3
@@ -230,10 +208,6 @@ A14_Melee:
   Display: "&6« &eAsylum Guard &6»"
   Health: 800
   Damage: 750
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
-  - Corrupted
   Modules:
     ThreatTable: true
   Equipment:
@@ -261,10 +235,6 @@ A14_Ranger:
   Display: "&4« &eAsylum Keeper &4»"
   Health: 650
   Damage: 500
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
-  - Corrupted
   Modules:
     ThreatTable: true
   Equipment:
@@ -298,11 +268,6 @@ A14_MiniBoss:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Drops:
-  - Currency_Atlas_3
-  - Mythic
-  - Corrupted
-  - Iridescent
   Modules:
     ThreatTable: true
   Equipment:
@@ -337,10 +302,6 @@ A15_Melee:
   Display: "&6« &eFlesh-Eater &6»"
   Health: 1000
   Damage: 750
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
-  - Corrupted
   Disguise:
     Type: WITHER_SKELETON
     Invisible: false
@@ -377,10 +338,6 @@ A15_Ranger:
   Display: "&4« &eCorrupted Giant &4»"
   Health: 1000
   Damage: 750
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
-  - Corrupted
   Disguise:
     Type: WITHER
     Invisible: false
@@ -431,14 +388,9 @@ A15_Rider_Top:
   - ULegs_0:2
   - UBoots_0:1
   - Headsman:0
-  - 0:5
+  
   Modules:
     ThreatTable: true
-  Drops:
-  - Currency_Atlas_3
-  - Mythic
-  - Corrupted
-  - Iridescent
   Mount: A15_Rider_Bottom
   Options:
     AlwaysShowName: true
@@ -478,11 +430,6 @@ A15_Rider_Bottom:
   - UBoots_0:1
   - Arch_Sword:0
   - Shield_Reaper:5
-  Drops:
-  - Currency_Atlas_3
-  - Mythic
-  - Corrupted
-  - Iridescent
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

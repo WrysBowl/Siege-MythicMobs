@@ -45,10 +45,6 @@ T7_Mage:
   Display: "&4« &eHemomancer &4»"
   Health: 800
   Damage: 500
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -78,11 +74,6 @@ T7_MiniBoss:
   Display: "&4« &cSwamp Slime &4»"
   Health: 40000
   Damage: 2000
-  Drops:
-  - Currency_Rifts_2
-  - Corrupted
-  - Mythic
-  - Iridescent
   Modules:
     ThreatTable: true
   Equipment:

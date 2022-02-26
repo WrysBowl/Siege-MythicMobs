@@ -6,10 +6,6 @@ OpenZ1:
   Display: "&e« &4Ignis Mortus &e»"
   Health: 50
   Damage: 10
-  Drops:
-  - CFrags_1
-  - Common
-  - Uncommon
   Modules:
     ThreatTable: true
   Equipment:
@@ -31,10 +27,6 @@ OpenS1:
   Display: "&e« &4Umbra Malum &e»"
   Health: 80
   Damage: 5
-  Drops:
-  - CFrags_1
-  - Common
-  - Uncommon
   Modules:
     ThreatTable: true
   Equipment:
@@ -43,7 +35,7 @@ OpenS1:
   - chainmail_leggings:2
   - iron_boots:1
   - HH_Bow_Low:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -56,12 +48,6 @@ OpenSP1:
   Display: "&e« &4Araneid &e»"
   Health: 500
   Damage: 16
-  Drops:
-  - CFrags_1X
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
   Modules:
     ThreatTable: true
   Options:
@@ -78,11 +64,6 @@ OpenZ2:
   Display: "&6« &4Ignis Inferni &6»"
   Health: 250
   Damage: 40
-  Drops:
-  - CFrags_2
-  - Rare
-  - Superior
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
@@ -104,11 +85,6 @@ OpenS2:
   Display: "&6« &4Umbra Mortis &6»"
   Health: 250
   Damage: 5
-  Drops:
-  - CFrags_2
-  - Rare
-  - Superior
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
@@ -117,7 +93,7 @@ OpenS2:
   - CLegs:2
   - UBoots_2:1
   - HH_Bow_Mid:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -130,11 +106,6 @@ OpenZ2M:
   Display: "&6« &4Hell Reaver &6»"
   Health: 250
   Damage: 500
-  Drops:
-  - CFrags_2X
-  - Rare
-  - Superior
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
@@ -155,12 +126,6 @@ OpenSP2:
   Display: "&4« &cAranea Tenebris &4»"
   Health: 15000
   Damage: 2000
-  Drops:
-  - Superior
-  - Exalted
-  - Corrupted
-  - Mythic
-  - CFrags_2X
   Modules:
     ThreatTable: true
   Options:
@@ -177,10 +142,6 @@ OpenZ3:
   Display: "&4« &cIgnis Dominus &c»"
   Health: 1250
   Damage: 800
-  Drops:
-  - Superior
-  - Exalted
-  - CFrags_2X
   Modules:
     ThreatTable: true
   Equipment:
@@ -203,10 +164,6 @@ OpenS3:
   Display: "&4« &cUmbra Imperius &c»"
   Health: 2500
   Damage: 800
-  Drops:
-  - Superior
-  - Exalted
-  - CFrags_2X
   Modules:
     ThreatTable: true
   Equipment:
@@ -229,10 +186,6 @@ OpenZ3M:
   Display: "&4« &cReflective Wraith &4»"
   Health: 450
   Damage: 500
-  Drops:
-  - Superior
-  - Exalted
-  - CFrags_2X
   Modules:
     ThreatTable: true
   Equipment:

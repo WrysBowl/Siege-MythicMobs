@@ -18,17 +18,6 @@ OpenBoss2: ### Unused boss.
   - Arch_Sword:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Food
-  - Money_Boss
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
-  - Exalted
-  - Corrupted
-  - Mythic
-  - CFrags_3
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.2

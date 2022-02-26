@@ -24,12 +24,6 @@ AtlasBoss_11:
   - Shield_Frost:5
   Modules:
     ThreatTable: true
-  Drops:
-  - AtlasBoss_11
-  - Currency_Atlas_Boss2
-  - Iridescent
-  - Mythic
-  - Corrupted
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

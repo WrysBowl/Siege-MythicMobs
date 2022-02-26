@@ -9,17 +9,6 @@ AprilFool:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Drops:
-  - AprilFools_Mob
-  - Currency_Atlas_3
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
-  - Exalted
-  - Mythic
-  - Corrupted
-  - Iridescent
   Modules:
     ThreatTable: true
   Equipment:

@@ -18,15 +18,6 @@ LabBoss3:
   - Shield_Aquir:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Food
-  - Money_Max
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
-  - Exalted
-  - MicroIridescent
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.4

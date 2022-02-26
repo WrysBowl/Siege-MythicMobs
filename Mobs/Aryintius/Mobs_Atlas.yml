@@ -4,9 +4,6 @@ A2_Mooshroom:
   Display: "&6« &eShroomwalker &6»"
   Health: 200
   Damage: 500
-  Drops:
-  - Currency_Atlas_1
-  - Exalted
   Disguise:
     Type: MUSHROOM_COW
     Invisible: false
@@ -43,9 +40,6 @@ A2_Silverfish:
   Display: "&6« &eStonefester &6»"
   Health: 100
   Damage: 500
-  Drops:
-  - Currency_Atlas_1
-  - Exalted
   Disguise:
     Type: SILVERFISH
     Invisible: false
@@ -83,9 +77,6 @@ A3_Spider:
   Display: "&6« &eAcidmaw &6»"
   Health: 150
   Damage: 500
-  Drops:
-  - Currency_Atlas_1
-  - Exalted
   Disguise:
     Type: CAVE_SPIDER
     Invisible: false
@@ -123,9 +114,6 @@ A3_BloodSpider:
   Display: "&4« &eBloodfang &4»"
   Health: 200
   Damage: 500
-  Drops:
-  - Currency_Atlas_1
-  - Exalted
   Disguise:
     Type: SPIDER
     Invisible: false
@@ -162,9 +150,6 @@ A3_BigSpider:
   Display: "&4« &cBrood Mother &4»"
   Health: 1500
   Damage: 750
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
   Disguise:
     Type: SPIDER
     Invisible: false
@@ -203,9 +188,6 @@ A4_Mage:
   Display: "&4« &eArchivist &4»"
   Health: 150
   Damage: 250
-  Drops:
-  - Currency_Atlas_1
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
@@ -235,9 +217,6 @@ A4_Melee:
   Display: "&6« &eArchives Guard &6»"
   Health: 200
   Damage: 500
-  Drops:
-  - Currency_Atlas_1
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
@@ -267,9 +246,6 @@ A4_MiniBoss:
   Display: "&4« &cAncient Magus &4»"
   Health: 1500
   Damage: 500
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
   Disguise:
     Type: WITHER_SKELETON
     Invisible: false
@@ -307,9 +283,6 @@ A5_Melee:
   Display: "&4« &eEntombed Skeleton &4»"
   Health: 200
   Damage: 500
-  Drops:
-  - Currency_Atlas_1
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
@@ -336,9 +309,6 @@ A5_MiniBoss:
   Display: "&4« &cTombwalker &4»"
   Health: 1500
   Damage: 750
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
   Disguise:
     Type: WITHER_SKELETON
     Invisible: false

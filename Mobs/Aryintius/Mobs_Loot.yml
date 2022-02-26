@@ -34,16 +34,6 @@ LootExplosion_WithCurrency: ### Pointer mob for loot explosions (With Currency)
   Display: ''
   Health: 1000
   Damage: 0
-  Drops:
-  - Money_Titan
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
-  - Exalted
-  - Corrupted
-  - Mythic
-  - Iridescent
   Skills:
   - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
   - potion{type=INVISIBILITY;duration=999999;level=1} @Self ~onSpawn
@@ -61,15 +51,6 @@ LootExplosion: ### Pointer mob without currency
   Display: ''
   Health: 1000
   Damage: 0
-  Drops:
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
-  - Exalted
-  - Corrupted
-  - Mythic
-  - Iridescent
   Skills:
   - potion{type=FIRE_RESISTANCE;duration=999999;level=1} @Self ~onSpawn
   - potion{type=INVISIBILITY;duration=999999;level=1} @Self ~onSpawn

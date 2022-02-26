@@ -4,9 +4,6 @@ A7_Melee:
   Display: "&4« &eUnearthed Warrior &4»"
   Health: 400
   Damage: 500
-  Drops:
-  - Currency_Atlas_1
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -36,10 +33,6 @@ A7_MiniBoss:
   Display: "&4« &cMass of Souls &4»"
   Health: 3000
   Damage: 750
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
-  - Corrupted
   Disguise:
     Type: BLOCK
     Block: SOUL_SAND
@@ -79,9 +72,6 @@ A8_Melee:
   Display: "&6« &eAncient Guardsman &6»"
   Health: 400
   Damage: 500
-  Drops:
-  - Currency_Atlas_1
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -109,9 +99,6 @@ A8_Ranger:
   Display: "&4« &eAncient Archer &4»"
   Health: 400
   Damage: 500
-  Drops:
-  - Currency_Atlas_1
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -120,7 +107,7 @@ A8_Ranger:
   - CLegs:2
   - CBoots:1
   - Bow4:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.15
@@ -139,10 +126,6 @@ A8_MiniBoss:
   Display: "&4« &cBloodzerker &4»"
   Health: 3000
   Damage: 750
-  Drops:
-  - Currency_Atlas_2
-  - Mythic
-  - Corrupted
   Disguise:
     Type: WITHER_SKELETON
     Invisible: false
@@ -180,9 +163,6 @@ A11_Wolf:
   Display: "&6« &eDire Wolf &6»"
   Health: 400
   Damage: 750
-  Drops:
-  - Currency_Atlas_1
-  - Mythic
   Disguise:
     Type: WOLF
     Invisible: false
@@ -220,9 +200,6 @@ A11_Ranger:
   Display: "&4« &eSnowhunter &4»"
   Health: 400
   Damage: 500
-  Drops:
-  - Currency_Atlas_1
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -231,7 +208,7 @@ A11_Ranger:
   - ULegs_1:2
   - DBoots:1
   - Bow4:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.15
@@ -253,10 +230,6 @@ A11_MiniBoss:
   Display: "&4« &cWhite Death &4»"
   Health: 3000
   Damage: 250
-  Drops:
-  - Currency_Atlas_2
-  - Corrupted
-  - Mythic
   Equipment:
   - BlockHead_3:4
   - UChest_1:3

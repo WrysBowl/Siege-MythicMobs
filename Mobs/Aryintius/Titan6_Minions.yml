@@ -4,10 +4,6 @@ T6_Melee:
   Display: "&0« &dAbyssal Wraith &0»"
   Health: 1500
   Damage: 2000
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -38,10 +34,6 @@ T6_Ranger:
   Display: "&0« &dAbyssal Spectre &0»"
   Health: 1200
   Damage: 1000
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -50,7 +42,7 @@ T6_Ranger:
   - ULegs_0:2
   - UBoots_0:1
   - Boss_Bow2:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.15
@@ -78,11 +70,6 @@ T6_Caster:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Drops:
-  - Currency_Rifts_2
-  - Corrupted
-  - Mythic
-  - Iridescent
   Modules:
     ThreatTable: true
   Equipment:

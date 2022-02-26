@@ -33,10 +33,6 @@ T3_Mage:
   Display: "&4« &eIce Mage &4»"
   Health: 650
   Damage: 500
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Equipment:
   - DHelm:4
   - UChest_1:3
@@ -66,11 +62,6 @@ T3_MiniBoss:
   Display: "&4« &cGlacial Spirit &4»"
   Health: 8000
   Damage: 3500
-  Drops:
-  - Currency_Rifts_2
-  - Corrupted
-  - Mythic
-  - Iridescent
   Equipment:
   - BlockHead_3:4
   - UChest_1:3

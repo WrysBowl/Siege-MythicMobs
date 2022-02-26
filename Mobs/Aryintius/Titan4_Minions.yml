@@ -4,10 +4,6 @@ T4_Melee:
   Display: "&6« &eShadow of Doubt &6»"
   Health: 800
   Damage: 750
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -39,10 +35,6 @@ T4_Ranger:
   Display: "&4« &eShroud of Madness &4»"
   Health: 650
   Damage: 500
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -51,7 +43,7 @@ T4_Ranger:
   - ULegs_0:2
   - UBoots_0:1
   - Boss_Bow2:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.15
@@ -72,11 +64,6 @@ T4_Mage:
   Display: "&4« &cVeil of Insanity &4»"
   Health: 3200
   Damage: 1000
-  Drops:
-  - Currency_Rifts_2
-  - Corrupted
-  - Mythic
-  - Iridescent
   Modules:
     ThreatTable: true
   Equipment:

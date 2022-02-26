@@ -35,10 +35,6 @@ T2_Mage:
   Display: "&4« &eFlamecaster &4»"
   Health: 650
   Damage: 500
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -70,11 +66,6 @@ T2_MiniBoss:
   Display: "&4« &cLiving Magma &4»"
   Health: 8000
   Damage: 1200
-  Drops:
-  - Currency_Rifts_2
-  - Corrupted
-  - Mythic
-  - Iridescent
   Modules:
     ThreatTable: true
   Equipment:

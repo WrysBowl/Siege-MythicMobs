@@ -18,17 +18,6 @@ LabBossX:
   - Coin_Nether:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Money_Titan
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
-  - Exalted
-  - Corrupted
-  - Mythic
-  - Iridescent
-  - LabBossX
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.2

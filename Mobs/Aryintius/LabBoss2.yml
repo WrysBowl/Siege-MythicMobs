@@ -17,14 +17,6 @@ LabBoss2:
   - Bow4:0
   Modules:
     ThreatTable: true
-  Drops:
-  - Food
-  - Money_High
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
-  - MicroIridescent
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

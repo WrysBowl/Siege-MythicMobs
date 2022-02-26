@@ -6,10 +6,6 @@ VoidLeech:
   Display: "&5« &dPhantom &5»"
   Health: 200
   Damage: 1200
-  Drops:
-  - Currency_Trials_2
-  - Mythic
-  - Corrupted
   Modules:
     ThreatTable: true
   Mount: VoidSpectre
@@ -24,15 +20,13 @@ VoidSpectre:
   Type: ZOMBIE
   Health: 400
   Damage: 800
-  # Drops:
-  # - Placeholder
   Modules:
     ThreatTable: true
   Equipment:
   - Boss_Skull_1:4
   - Elytra:3
-  - 0:2
-  - 0:1
+  
+  
   - Iron_Hoe:0
   - Iron_Hoe:5
   Options:
@@ -54,11 +48,6 @@ VoidMiniboss:
     Range: 25
     Color: RED
     Style: SEGMENTED_6
-  Drops:
-  - Currency_Trials_3
-  - Corrupted
-  - Mythic
-  - Iridescent
   Modules:
     ThreatTable: true
   Equipment:

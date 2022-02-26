@@ -42,11 +42,6 @@ AIMob:
     PreventItemPickup: true
     PreventRandomEquipment: true
     Silent: true
-  Drops:
-  - Currency_Trials_Boss
-  - Iridescent
-  - Mythic
-  - Corrupted
   Faction: FollowMe
   Skills:
   - potion{t=INVISIBILITY;d=2147483647} @Self ~onSpawn

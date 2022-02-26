@@ -169,15 +169,6 @@ DropDummy:
     Range: 25
     Color: WHITE
     Style: SOLID
-  Drops:
-  - Common
-  - Uncommon
-  - Rare
-  - Superior
-  - Exalted
-  - Corrupted
-  - Mythic
-  - Iridescent
   Modules:
     ThreatTable: true
   Options:

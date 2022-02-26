@@ -6,9 +6,6 @@ Wraith:
   Display: "&6« &eWraith &6»"
   Health: 200
   Damage: 500
-  Drops:
-  - Currency_Trials_1
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
@@ -30,9 +27,6 @@ Spectre:
   Display: "&6« &eSpectre &6»"
   Health: 150
   Damage: 5
-  Drops:
-  - Currency_Trials_1
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
@@ -41,7 +35,7 @@ Spectre:
   - leather_leggings:2
   - leather_boots:1
   - Bow_Spectre:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -54,10 +48,6 @@ Wraith2:
   Display: "&4« &eElder Wraith &4»"
   Health: 300
   Damage: 750
-  Drops:
-  - Currency_Trials_2
-  - Exalted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -79,10 +69,6 @@ Spectre2:
   Display: "&4« &eElder Spectre &4»"
   Health: 300
   Damage: 5
-  Drops:
-  - Currency_Trials_2
-  - Exalted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -91,7 +77,7 @@ Spectre2:
   - gold_leggings:2
   - chainmail_boots:1
   - Bow_Spectre2:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -104,10 +90,6 @@ Wraith3:
   Display: "&4« &cAncient Wraith &4»"
   Health: 2500
   Damage: 1000
-  Drops:
-  - Currency_Trials_3
-  - Exalted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -132,10 +114,6 @@ Spectre3:
   Display: "&4« &cAncient Spectre &4»"
   Health: 2500
   Damage: 5
-  Drops:
-  - Currency_Trials_3
-  - Exalted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -144,7 +122,7 @@ Spectre3:
   - diamond_leggings:2
   - chainmail_boots:1
   - Bow_Spectre3:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.35

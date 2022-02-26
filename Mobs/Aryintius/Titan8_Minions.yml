@@ -35,10 +35,6 @@ T8_Mage:
   Display: "&4« &eChaotic Caster &4»"
   Health: 800
   Damage: 500
-  Drops:
-  - Currency_Rifts_1
-  - Corrupted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:
@@ -77,11 +73,6 @@ T8_MiniBoss:
     Burning: false
     ShowName: true
     ModifyBoundingBox: true
-  Drops:
-  - Currency_Rifts_2
-  - Corrupted
-  - Mythic
-  - Iridescent
   Modules:
     ThreatTable: true
   Equipment:

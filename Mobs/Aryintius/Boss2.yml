@@ -18,14 +18,6 @@ Boss2:
   - Arch_Sword:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Currency_Trials_Boss
-  - Boss2
-  - Boss2_Set
-  - UpperKey
-  - Mythic
-  - Corrupted
-  - Iridescent
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

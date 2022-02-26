@@ -18,13 +18,6 @@ LabBoss1:
   - TitanBlade:5
   Modules:
     ThreatTable: true
-  Drops:
-  - Food
-  - Money_Mid
-  - Common
-  - Uncommon
-  - Rare
-  - MicroIridescent
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

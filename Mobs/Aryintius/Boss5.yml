@@ -9,14 +9,6 @@ Boss5:
     Range: 50
     Color: BLUE
     Style: SOLID
-  Drops:
-  - Currency_Trials_Boss
-  - Boss5
-  - Boss5_Set
-  - LowerKey
-  - Mythic
-  - Corrupted
-  - Iridescent
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25

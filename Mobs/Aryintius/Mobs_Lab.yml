@@ -6,10 +6,6 @@ LabZ1:
   Display: "&f« &7Undead &f»"
   Health: 20
   Damage: 2
-  Drops:
-  - Food
-  - Currency_Floor_1
-  - Common
   Modules:
     ThreatTable: true
   Equipment:
@@ -29,10 +25,6 @@ LabS1:
   Display: "&f« &7Lost Soul &f»"
   Health: 20
   Damage: 2
-  Drops:
-  - Food
-  - Currency_Floor_1
-  - Common
   Modules:
     ThreatTable: true
   Equipment:
@@ -41,7 +33,7 @@ LabS1:
   - chainmail_leggings:2
   - leather_boots:1
   - T6_7:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -52,11 +44,6 @@ LabMB1:
   Display: "&4« &cChest Guardian &4»"
   Health: 100
   Damage: 10
-  Drops:
-  - Food
-  - Currency_Floor_2
-  - Common
-  - Uncommon
   Modules:
     ThreatTable: true
   Equipment:
@@ -79,10 +66,6 @@ LabZ2:
   Display: "&e« &fStarving Undead &e»"
   Health: 50
   Damage: 2
-  Drops:
-  - Food
-  - Currency_Floor_2
-  - Uncommon
   Modules:
     ThreatTable: true
   Equipment:
@@ -102,10 +85,6 @@ LabS2:
   Display: "&e« &fCraving Soul &e»"
   Health: 50
   Damage: 5
-  Drops:
-  - Food
-  - Currency_Floor_2
-  - Uncommon
   Modules:
     ThreatTable: true
   Equipment:
@@ -114,7 +93,7 @@ LabS2:
   - iron_leggings:2
   - chainmail_boots:1
   - T5_4:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -125,10 +104,6 @@ LabMB2:
   Display: "&4« &cTreasure Guardian &4»"
   Health: 250
   Damage: 16
-  Drops:
-  - Food
-  - Currency_Floor_3
-  - Uncommon
   Modules:
     ThreatTable: true
   Equipment:
@@ -148,17 +123,10 @@ LabA1:
   Display: "&6« &eAncient Caster &6»"
   Health: 60
   Damage: 5
-  Drops:
-  - Food
-  - Currency_Floor_3
-  - Uncommon
   Modules:
     ThreatTable: true
   Equipment:
-  - 0:4
-  - 0:3
-  - 0:2
-  - 0:1
+  
   - STICK:0
   - ENCHANTED_BOOK:5
   Options:
@@ -177,10 +145,6 @@ LabZ3:
   Display: "&6« &eAccursed Undead &6»"
   Health: 30
   Damage: 10
-  Drops:
-  - Food
-  - Currency_Floor_3
-  - Rare
   Modules:
     ThreatTable: true
   Equipment:
@@ -200,10 +164,6 @@ LabS3:
   Display: "&6« &eTainted Soul &6»"
   Health: 30
   Damage: 5
-  Drops:
-  - Food
-  - Currency_Floor_3
-  - Rare
   Modules:
     ThreatTable: true
   Equipment:
@@ -212,7 +172,7 @@ LabS3:
   - CLegs:2
   - GBoots:1
   - Bow3:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -223,10 +183,6 @@ LabA2:
   Display: "&4« &cCorrupted Caster &4»"
   Health: 120
   Damage: 5
-  Drops:
-  - Food
-  - Currency_Floor_3
-  - Rare
   Modules:
     ThreatTable: true
   Equipment:
@@ -245,10 +201,6 @@ LabMB3:
   Display: "&4« &cTomb Scarab &4»"
   Health: 500
   Damage: 30
-  Drops:
-  - Food
-  - Currency_Floor_4
-  - Rare
   Modules:
     ThreatTable: true
   Equipment:
@@ -268,10 +220,6 @@ LabLegend:
   Display: "&6« &fImmortal Guardian &6»"
   Health: 2500
   Damage: 1000
-  Drops:
-  - Currency_Trials_1
-  - Exalted
-  - Corrupted
   Modules:
     ThreatTable: true
   Equipment:
@@ -299,10 +247,6 @@ LabZ4:
   Display: "&4« &eWretched Undead &4»"
   Health: 60
   Damage: 16
-  Drops:
-  - Food
-  - Currency_Floor_4
-  - Superior
   Modules:
     ThreatTable: true
   Equipment:
@@ -324,10 +268,6 @@ LabSlime:
   Display: "&4« &eToxic Sludge &4»"
   Health: 1200
   Damage: 20
-  Drops:
-  - Food
-  - Currency_Floor_4
-  - Superior
   Options:
     AlwaysShowName: true
     Size: 3
@@ -348,10 +288,6 @@ LabSlimeX:
   Display: "&4« &cElder Sludge &4»"
   Health: 5000
   Damage: 150
-  Drops:
-  - Food
-  - Currency_Floor_5
-  - Superior
   Options:
     AlwaysShowName: true
     Size: 5
@@ -372,10 +308,6 @@ LabS4:
   Display: "&4« &eManic Soul &4»"
   Health: 60
   Damage: 5
-  Drops:
-  - Food
-  - Currency_Floor_4
-  - Superior
   Modules:
     ThreatTable: true
   Equipment:
@@ -384,7 +316,7 @@ LabS4:
   - DLegs:2
   - CBoots:1
   - Bow4:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.25
@@ -397,10 +329,6 @@ LabA3:
   Display: "&5« &dAncient Caster &5»"
   Health: 250
   Damage: 5
-  Drops:
-  - Food
-  - Currency_Floor_5
-  - Superior
   Modules:
     ThreatTable: true
   Equipment:
@@ -422,10 +350,6 @@ LabZ5:
   Display: "&4« &cDivine Guardian &4»"
   Health: 200
   Damage: 20
-  Drops:
-  - Food
-  - Currency_Floor_5
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
@@ -447,10 +371,6 @@ LabS5:
   Display: "&4« &cEternal Soul &4»"
   Health: 200
   Damage: 5
-  Drops:
-  - Food
-  - Currency_Floor_5
-  - Exalted
   Modules:
     ThreatTable: true
   Equipment:
@@ -459,7 +379,7 @@ LabS5:
   - GLegs:2
   - GBoots:1
   - Bow4:0
-  - 0:5
+  
   Options:
     AlwaysShowName: true
     MovementSpeed: 0.15
@@ -473,11 +393,6 @@ LabA4:
   Display: "&5« &dForgotten Sorceror &5»"
   Health: 250
   Damage: 5
-  Drops:
-  - Food
-  - Currency_Trials_1
-  - Exalted
-  - Mythic
   Modules:
     ThreatTable: true
   Equipment:

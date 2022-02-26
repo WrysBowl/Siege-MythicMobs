@@ -53,10 +53,6 @@ ChaosGolem-Body:
     MovementSpeed: 0.4
     PreventOtherDrops: true
     PassthroughDamage: true
-  Drops:
-  - Money_High
-  - Mythic
-  - Iridescent
   Equipment:
   - MAGMA:4
   - MAGMA:3
