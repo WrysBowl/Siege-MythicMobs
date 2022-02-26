@@ -17,7 +17,7 @@ OWF1-Hit:
   - damage{a=10;pk=true}
 OWF1-BigHit:
   Skills:
-  - damage{a=1000;pk=true}
+  - damage{a=100;pk=true}
 OW_Fire1_H: ### Basic Magic Attack (Heavy)
   Conditions:
   - targetinlineofsight true
@@ -49,7 +49,7 @@ OWF2-Tick:
   - effect:particles{p=reddust;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 OWF2-Hit:
   Skills:
-  - damage{a=1000;pk=true}
+  - damage{a=100;pk=true}
 OW_KB1:
   Conditions:
   - targetinlineofsight true

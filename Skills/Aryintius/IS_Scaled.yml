@@ -28,128 +28,128 @@ CritStrength_0:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE} false
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.1
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.1
 CritStrength_1:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>8} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<18} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.15
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.15
 CritStrength_2:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>18} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<28} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.2
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.2
 CritStrength_3:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>28} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<38} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.25
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.25
 CritStrength_4:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>38} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<48} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.3
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.3
 CritStrength_5:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>48} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<58} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.35
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.35
 CritStrength_6:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>58} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<68} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.4
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.4
 CritStrength_7:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>68} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<78} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.45
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.45
 CritStrength_8:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>78} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<88} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.5
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.5
 CritStrength_9:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>88} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<98} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.55
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.55
 CritStrength_10:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>98} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<108} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.6
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.6
 CritStrength_11:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>108} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<118} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.65
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.65
 CritStrength_12:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>118} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<128} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.7
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.7
 CritStrength_13:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>128} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<138} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.75
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.75
 CritStrength_14:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>138} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<148} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.8
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.8
 CritStrength_15:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>148} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<158} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.85
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.85
 CritStrength_16:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>158} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<168} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.9
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.9
 CritStrength_17:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>168} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<178} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.95
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.95
 CritStrength_18:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>178} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<188} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 1.0
+  - damage{a=20;ia=true;pi=true;pk=true} @target 1.0
 CritStrength_19:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>188} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<188} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 1.0
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.05
+  - damage{a=20;ia=true;pi=true;pk=true} @target 1.0
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.05
 CritStrength_20:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
   Skills:
-  - damage{a=200;ia=true;pi=true;pk=true} @target 1.0
-  - damage{a=200;ia=true;pi=true;pk=true} @target 0.1
+  - damage{a=20;ia=true;pi=true;pk=true} @target 1.0
+  - damage{a=20;ia=true;pi=true;pk=true} @target 0.1
 ResFromAbsorb: ### Resistance From Absorption ------------------
   Skills:
   - skill{s=ResAbsorb_1}

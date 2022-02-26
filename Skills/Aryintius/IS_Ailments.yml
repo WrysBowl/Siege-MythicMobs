@@ -11,11 +11,11 @@ Poison_60:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 10
-  - damage{a=500;pi=true;pk=true}
+  - damage{a=50;pi=true;pk=true}
   - delay 10
-  - damage{a=500;pi=true;pk=true}
+  - damage{a=50;pi=true;pk=true}
   - delay 10
-  - damage{a=500;pi=true;pk=true}
+  - damage{a=50;pi=true;pk=true}
 Poison_90:
   Cooldown: 2
   Skills:
@@ -25,11 +25,11 @@ Poison_90:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 10
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
   - delay 10
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
   - delay 10
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
 Poison_120:
   Cooldown: 2
   Skills:
@@ -39,11 +39,11 @@ Poison_120:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 10
-  - damage{a=1000;pi=true;pk=true}
+  - damage{a=100;pi=true;pk=true}
   - delay 10
-  - damage{a=1000;pi=true;pk=true}
+  - damage{a=100;pi=true;pk=true}
   - delay 10
-  - damage{a=1000;pi=true;pk=true}
+  - damage{a=100;pi=true;pk=true}
 Poison_150:
   Cooldown: 2
   Skills:
@@ -53,15 +53,15 @@ Poison_150:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 5
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
   - delay 5
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
   - delay 5
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
   - delay 5
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
   - delay 5
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
 Poison_150X:
   Skills:
   - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
@@ -70,15 +70,15 @@ Poison_150X:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 5
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
   - delay 5
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
   - delay 5
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
   - delay 5
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
   - delay 5
-  - damage{a=750;pi=true;pk=true}
+  - damage{a=75;pi=true;pk=true}
 Poison_300X:
   Skills:
   - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
@@ -87,15 +87,15 @@ Poison_300X:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 5
-  - damage{a=1500;pi=true;pk=true}
+  - damage{a=150;pi=true;pk=true}
   - delay 5
-  - damage{a=1500;pi=true;pk=true}
+  - damage{a=150;pi=true;pk=true}
   - delay 5
-  - damage{a=1500;pi=true;pk=true}
+  - damage{a=150;pi=true;pk=true}
   - delay 5
-  - damage{a=1500;pi=true;pk=true}
+  - damage{a=150;pi=true;pk=true}
   - delay 5
-  - damage{a=1500;pi=true;pk=true}
+  - damage{a=150;pi=true;pk=true}
 PoisonRNG_1: ### RNG Poison
   Cooldown: 3
   Skills:
@@ -151,7 +151,7 @@ PoisonPants:
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
-  - damage{a=1250;pi=true;pk=true}
+  - damage{a=125;pi=true;pk=true}
 ### BLEEDING DAMAGE --------------------------------------------------
 ### 1 bleed = 1 chaos
 ### As of 2.3.7, Bleed is now locked at a tickrate of 4 times
@@ -359,15 +359,15 @@ Bleed_500X:
   - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
   - damage{a=50;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=100;ia=true;pi=true;pk=true}
+  - damage{a=10;ia=true;pi=true;pk=true}
   - delay 5
   - damage{a=150;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=200;ia=true;pi=true;pk=true}
+  - damage{a=20;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=250;ia=true;pi=true;pk=true}
+  - damage{a=25;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=300;ia=true;pi=true;pk=true}
+  - damage{a=30;ia=true;pi=true;pk=true}
 ### SUMMONED DAMAGE OVER TIME ----------------------------------
 BleedSummon_1:
   Cooldown: 2
@@ -382,17 +382,17 @@ Venom_1:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 10
-  - damage{a=1800;pi=true;pk=true}
+  - damage{a=180;pi=true;pk=true}
   - delay 10
-  - damage{a=1800;pi=true;pk=true}
+  - damage{a=180;pi=true;pk=true}
   - delay 10
-  - damage{a=1800;pi=true;pk=true}
+  - damage{a=180;pi=true;pk=true}
   - delay 10
-  - damage{a=1800;pi=true;pk=true}
+  - damage{a=180;pi=true;pk=true}
   - delay 10
-  - damage{a=1800;pi=true;pk=true}
+  - damage{a=180;pi=true;pk=true}
   - delay 10
-  - damage{a=1800;pi=true;pk=true}
+  - damage{a=180;pi=true;pk=true}
 Venom_2:
   Skills:
   - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
@@ -401,13 +401,13 @@ Venom_2:
   - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
   - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
   - delay 5
-  - damage{a=100;ia=true;pi=true;pk=true}
+  - damage{a=10;ia=true;pi=true;pk=true}
   - delay 5
   - damage{a=150;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=200;ia=true;pi=true;pk=true}
+  - damage{a=20;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=250;ia=true;pi=true;pk=true}
+  - damage{a=25;ia=true;pi=true;pk=true}
 SwampBow_Skill:
   Skills:
   - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
@@ -418,11 +418,11 @@ SwampBow_Skill:
   - delay 5
   - damage{a=150;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=250;ia=true;pi=true;pk=true}
+  - damage{a=25;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=350;ia=true;pi=true;pk=true}
+  - damage{a=35;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=450;ia=true;pi=true;pk=true}
+  - damage{a=45;ia=true;pi=true;pk=true}
 ### BURNING DAMAGE ---------------------------------------------------
 Burn_0: ### 500
   Cooldown: 1

@@ -180,7 +180,7 @@ TakeLethalDamageOnHit:
   - delay 5
   - effect:sound{s=entity.wither.death;v=0.5;p=2}
   - lightning @Self
-  - damage{a=10000}
+  - damage{a=1000}
 WaterBuff: ### Water Skill
   Conditions:
   - inblock STATIONARY_WATER

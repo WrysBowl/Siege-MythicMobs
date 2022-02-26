@@ -23,7 +23,7 @@ A9F-Tick:
   - effect:particles{p=bubble;amount=20;speed=0;hS=0.2;vS=0.2} @origin
 A9F-Hit:
   Skills:
-  - damage{a=1000}
+  - damage{a=10}
 A9_Heavy: ### Heavy shot attack.
   Conditions:
   - targetinlineofsight true
@@ -38,7 +38,7 @@ A9H-Tick:
   - effect:particles{p=bubble;amount=20;speed=0;hS=0.4;vS=0.4} @origin
 A9H-Hit:
   Skills:
-  - damage{a=1500}
+  - damage{a=15}
   - potion{type=BLINDNESS;lvl=0;duration=60;overwrite=true}
   - potion{type=SLOW;lvl=3;duration=60;overwrite=true}
 A9_Nova: ### Water Nova Attack
@@ -50,19 +50,19 @@ A9_Nova: ### Water Nova Attack
   - effect:sound{s=entity.ghast.shoot;v=0.5;p=2} @PIR{r=25}
   - effect:sound{s=entity.ghast.shoot;v=0.5;p=0} @PIR{r=25}
   - effect:particlesphere{particle=magicCrit;amount=500;r=10} @self
-  - damage{amount=1000;pi=true;pk=true} @PIR{r=10}
+  - damage{amount=20;pi=true;pk=true} @PIR{r=10}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=400;r=8} @self
-  - damage{amount=1000;pi=true;pk=true} @PIR{r=8}
+  - damage{amount=20;pi=true;pk=true} @PIR{r=8}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=300;r=6} @self
-  - damage{amount=1000;pi=true;pk=true} @PIR{r=6}
+  - damage{amount=20;pi=true;pk=true} @PIR{r=6}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=200;r=4} @self
-  - damage{amount=1000;pi=true;pk=true} @PIR{r=4}
+  - damage{amount=20;pi=true;pk=true} @PIR{r=4}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=100;r=2} @self
-  - damage{amount=1000;pi=true;pk=true} @PIR{r=2}
+  - damage{amount=20;pi=true;pk=true} @PIR{r=2}
   - delay 2
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
 ### Phases

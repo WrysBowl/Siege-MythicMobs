@@ -14,11 +14,11 @@ T7A-Tick:
   - effect:particles{p=reddust;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 T7A-Hit:
   Skills:
-  - damage{a=1500;pi=true;pk=true}
+  - damage{a=150;pi=true;pk=true}
   - skill{s=Bleed_30}
 T7A-Hit_B: ### Bleed Version
   Skills:
-  - damage{a=1250;pi=true;pk=true}
+  - damage{a=125;pi=true;pk=true}
   - skill{s=Bleed_15X} 0.5
 
 T7_Heavy: ### Fires a heavier projectile
@@ -35,7 +35,7 @@ T7B-Tick:
   - effect:particles{p=reddust;amount=3;speed=0;hS=0.25;vS=0.25} @origin
 T7B-Hit:
   Skills:
-  - damage{a=2000;pi=true}
+  - damage{a=200;pi=true}
   - skill{s=Bleed_60}
 #
 ### COMPOSITE SKILLS ---------------------------------------------------------------
@@ -111,7 +111,7 @@ T7_SUCC: ### Brings all enemies towards self and does massive damage + leech
   - effect:particlering{particle=reddust;radius=2;points=9;amount=1;hS=1;vS=0} @self
   - heal{a=2000} @Self
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=2000;pi=true;pk=true} @PIR{r=5}
+  - damage{a=200;pi=true;pk=true} @PIR{r=5}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
   - delay 2
@@ -130,7 +130,7 @@ T7_SUCC: ### Brings all enemies towards self and does massive damage + leech
   - effect:particlering{particle=reddust;radius=2;points=9;amount=1;hS=1;vS=0} @self
   - heal{a=2000} @Self
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=2000;pi=true;pk=true} @PIR{r=5}
+  - damage{a=200;pi=true;pk=true} @PIR{r=5}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
   - delay 2
@@ -149,7 +149,7 @@ T7_SUCC: ### Brings all enemies towards self and does massive damage + leech
   - effect:particlering{particle=reddust;radius=2;points=9;amount=1;hS=1;vS=0} @self
   - heal{a=2000} @Self
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=2000;pi=true;pk=true} @PIR{r=5}
+  - damage{a=200;pi=true;pk=true} @PIR{r=5}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
   - delay 2
@@ -168,7 +168,7 @@ T7_SUCC: ### Brings all enemies towards self and does massive damage + leech
   - effect:particlering{particle=reddust;radius=2;points=9;amount=1;hS=1;vS=0} @self
   - heal{a=2000} @Self
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=2000;pi=true;pk=true} @PIR{r=5}
+  - damage{a=200;pi=true;pk=true} @PIR{r=5}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
   - delay 2
@@ -187,7 +187,7 @@ T7_SUCC: ### Brings all enemies towards self and does massive damage + leech
   - effect:particlering{particle=reddust;radius=2;points=9;amount=1;hS=1;vS=0} @self
   - heal{a=2000} @Self
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=2000;pi=true;pk=true} @PIR{r=5}
+  - damage{a=200;pi=true;pk=true} @PIR{r=5}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
   - delay 2
@@ -206,7 +206,7 @@ T7_SUCC: ### Brings all enemies towards self and does massive damage + leech
   - effect:particlering{particle=reddust;radius=2;points=9;amount=1;hS=1;vS=0} @self
   - heal{a=2000} @Self
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=2000;pi=true;pk=true} @PIR{r=5}
+  - damage{a=200;pi=true;pk=true} @PIR{r=5}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
   - delay 2
@@ -215,7 +215,7 @@ T7_SUCC: ### Brings all enemies towards self and does massive damage + leech
   - pull{velocity=5} @PIR{r=8}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=2000;pi=true;pk=true} @PIR{r=5}
+  - damage{a=200;pi=true;pk=true} @PIR{r=5}
 
 T7_RapidFire: ### Fires heavy missiles in a wheel pattern
   Conditions:

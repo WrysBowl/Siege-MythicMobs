@@ -12,7 +12,7 @@ T3S-Tick:
   - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
 T3S-Hit:
   Skills:
-  - damage{a=1250;pk=true}
+  - damage{a=125;pk=true}
 T3_Blast: ### Heavy Bolt Attack
   Conditions:
   - targetinlineofsight true
@@ -27,7 +27,7 @@ T3B-Tick:
   - effect:particles{p=largeexplode;a=1} @Origin
 T3B-Hit:
   Skills:
-  - damage{a=2500;pk=true}
+  - damage{a=250;pk=true}
   - skill{s=InflictFreeze}
 ## FROST TELEPORT
 T3_Teleport:

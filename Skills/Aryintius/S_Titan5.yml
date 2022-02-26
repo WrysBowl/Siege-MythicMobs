@@ -11,7 +11,7 @@ T5_Missile-Tick:
   - effect:particles{p=magicCrit;amount=5;speed=0;hS=0.2;vS=0.2} @origin
 T5_Missile-Hit: ### 40 hearts of physical damage. OUCH.
   Skills:
-  - damage{a=2000;pi=true;pk=true}
+  - damage{a=200;pi=true;pk=true}
 T5_Blast: ### Heavy missile bolt attack.
   Conditions:
   - targetinlineofsight true
@@ -46,27 +46,27 @@ T5_TornadoFX: ### Tornado attack
 T5_Tornado:
   Skills:
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=1500;pi=true;pk=true} @PIR{r=5}
+  - damage{a=150;pi=true;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.35;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.35;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=1500;pi=true;pk=true} @PIR{r=5}
+  - damage{a=150;pi=true;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.35;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.35;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=1500;pi=true;pk=true} @PIR{r=5}
+  - damage{a=150;pi=true;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.35;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.35;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=1500;pi=true;pk=true} @PIR{r=5}
+  - damage{a=150;pi=true;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.35;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.35;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=1500;pi=true;pk=true} @PIR{r=5}
+  - damage{a=150;pi=true;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.35;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.35;p=0} @PIR{r=35}
 ### COMPOSITE SKILLS -------------------------------------

@@ -18,7 +18,7 @@ Boss3Knockback:
   - delay 2
   - effect:particlesphere{particle=largesmoke;amount=80;r=5} @self
   - effect:particlesphere{particle=flame;amount=80;r=5} @self
-  - damage{a=1000} @PIR{r=5}
+  - damage{a=10} @PIR{r=5}
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
 Boss3Drag:
   Skills:
@@ -56,7 +56,7 @@ Boss4F-Tick:
   - effect:particles{p=flame;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 Boss4F-Hit:
   Skills: ### ~20.0 hearts with max damage reduction.
-  - damage{a=1000;pi=true}
+  - damage{a=10;pi=true}
 Boss4Shot: ### Skillshot that deals craptons of damage.
   Skills:
   - projectile{onTick=Boss4S-Tick;onHit=Boss4S-Hit;v=5;i=1;hR=1;vR=1}

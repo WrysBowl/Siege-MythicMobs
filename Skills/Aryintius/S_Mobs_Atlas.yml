@@ -22,7 +22,7 @@ AWB-Tick:
   - effect:particles{p=magicCrit;amount=10;speed=0;hS=0.1;vS=0.1} @origin
 AWB-Hit:
   Skills:
-  - damage{a=750}
+  - damage{a=75}
   - randomskill{skills=InflictShock,InflictFreeze,Ignite_Title} 0.5
 Atlas_FrostBolt: ### Ice Bolt
   Conditions:
@@ -37,7 +37,7 @@ AFS-Tick:
   - effect:particles{p=largeexplode;amount=1;speed=0;hS=0.2;vS=0.2} @origin
 AFS-Hit:
   Skills:
-  - damage{a=1000;pk=true}
+  - damage{a=50;pk=true}
   - skill{s=InflictFreeze}
 Atlas_FireBolt: ### Fire Bolt
   Conditions:
@@ -52,7 +52,7 @@ AFF-Tick:
   - effect:particles{p=flame;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 AFF-Hit:
   Skills:
-  - damage{a=1000;pk=true}
+  - damage{a=50;pk=true}
   - skill{s=Ignite_Title} 0.2
 Atlas_SmokeBolt: ### Smook blat
   Conditions:
@@ -66,7 +66,7 @@ ASB-Tick:
   - effect:particles{p=smoke;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 ASB-Hit:
   Skills:
-  - damage{a=1000;pk=true}
+  - damage{a=50;pk=true}
   - skill{s=InflictCurse}
 Atlas_PurpleNova: ### Mooshroom Nova Attack
   Conditions:
@@ -74,19 +74,19 @@ Atlas_PurpleNova: ### Mooshroom Nova Attack
   Skills:
   - effect:sound{s=block.portal.travel;v=0.25;p=2}
   - effect:particlesphere{particle=witchMagic;amount=20;r=1} @self
-  - damage{a=250;pi=true} @PIR{r=5}
+  - damage{a=25;pi=true} @PIR{r=5}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=40;r=2} @self
-  - damage{a=250;pi=true} @PIR{r=4}
+  - damage{a=25;pi=true} @PIR{r=4}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=60;r=3} @self
-  - damage{a=250;pi=true} @PIR{r=3}
+  - damage{a=25;pi=true} @PIR{r=3}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=80;r=4} @self
-  - damage{a=250;pi=true} @PIR{r=2}
+  - damage{a=25;pi=true} @PIR{r=2}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=100;r=5} @self
-  - damage{a=250;pi=true} @PIR{r=1}
+  - damage{a=25;pi=true} @PIR{r=1}
 Atlas_Bladestorm: ### Fires 5 blade bolts at the SAME time
   Conditions:
   - targetinlineofsight true
@@ -107,7 +107,7 @@ Atlas_Bladestorm: ### Fires 5 blade bolts at the SAME time
   - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
 Atlas_BSHit:
   Skills:
-  - damage{a=750;pk=true}
+  - damage{a=75;pk=true}
   - randomskill{skills=InflictShock,InflictFreeze,Ignite_Title} 0.5
 Atlas_HorseRally: ### Makes horse go fast
   Skills:

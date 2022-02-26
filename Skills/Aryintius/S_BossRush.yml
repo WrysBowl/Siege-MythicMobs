@@ -20,4 +20,4 @@ BR_ParExp: ### Particle explosion/sound for loot death.
 BR_KillSelf: ### Loot explosion mob kills self after 1/2 a second.
   Skills:
   - delay 10
-  - damage{a=10000}
+  - damage{a=100}

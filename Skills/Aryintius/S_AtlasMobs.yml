@@ -12,7 +12,7 @@ ATS-Tick:
   - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
 ATS-Hit:
   Skills:
-  - damage{a=1250;pk=true}
+  - damage{a=25;pk=true}
 AT_Seethe:
   Skills:
   - effect:smokeswirl{duration=10;interval=10} @Self

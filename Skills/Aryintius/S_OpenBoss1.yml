@@ -12,7 +12,7 @@ OB1SS_Hit:
   - effect:sound{s=entity.blaze.death;v=1;p=2}
   - damage{a=20;ia=true;pi=true;pk=true}
   - delay 20
-  - damage{a=500;pk=true}
+  - damage{a=50;pk=true}
 OB1_OneShot: ### Not quite a one-shot anymore due to power creep. :(
   Skills:
   - effect:sound{s=entity.ghast.shoot;v=0.5;p=1}
@@ -29,7 +29,7 @@ OB1OS_Hit:
   - effect:sound{s=entity.blaze.death;v=1;p=2}
   - damage{a=40;ia=true;pi=true;pk=true}
   - delay 20
-  - damage{a=1000;pk=true}
+  - damage{a=100;pk=true}
 OB1_Teleport: ### Teleport Slam
   Skills:
   - teleport{spreadh=0;spreadv=0} @NearestPlayer{r=50}

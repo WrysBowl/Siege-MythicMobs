@@ -26,7 +26,7 @@ T6S-Tick:
   - effect:particles{p=witchMagic;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 T6S-Hit:
   Skills:
-  - damage{a=2500;pk=true}
+  - damage{a=250;pk=true}
 T6_Blast: ### Heavy Bolt Attack
   Conditions:
   - targetinlineofsight true
@@ -41,7 +41,7 @@ T6B-Tick:
   - effect:particles{p=largesmoke;a=1} @Origin
 T6B-Hit:
   Skills:
-  - damage{a=4000;pk=true}
+  - damage{a=400;pk=true}
   - sendtitle{title="&5&lCursed";subtitle="&fRandom negative effects";d=20}
   - delay 5
   - skill{s=RandomBadStuff}

@@ -13,27 +13,27 @@ PhysResist_1:
   Conditions:
   - haspotioneffect{t=DAMAGE_RESISTANCE;level=0} true
   Skills:
-  - damage{a=200;pk=true} @target
+  - damage{a=20;pk=true} @target
 PhysResist_2:
   Conditions:
   - haspotioneffect{t=DAMAGE_RESISTANCE;level=1} true
   Skills:
-  - damage{a=400;pk=true} @target
+  - damage{a=40;pk=true} @target
 PhysResist_3:
   Conditions:
   - haspotioneffect{t=DAMAGE_RESISTANCE;level=2} true
   Skills:
-  - damage{a=600;pk=true} @target
+  - damage{a=60;pk=true} @target
 PhysResist_4:
   Conditions:
   - haspotioneffect{t=DAMAGE_RESISTANCE;level=3} true
   Skills:
-  - damage{a=800;pk=true} @target
+  - damage{a=80;pk=true} @target
 PhysResist_5:
   Conditions:
   - haspotioneffect{t=DAMAGE_RESISTANCE;level=4} true
   Skills:
-  - damage{a=1000;pk=true} @target
+  - damage{a=100;pk=true} @target
 
 PhysNoRes: ### 2500 Phys. Lose 500 per level of Res.
   Skills:
@@ -47,27 +47,27 @@ PhysNoRes_0:
   Conditions:
   - haspotioneffect{t=DAMAGE_RESISTANCE} false
   Skills:
-  - damage{a=5000;pk=true} @target
+  - damage{a=500;pk=true} @target
 PhysNoRes_1:
   Conditions:
   - haspotioneffect{t=DAMAGE_RESISTANCE;level=0} true
   Skills:
-  - damage{a=4000;pk=true} @target
+  - damage{a=400;pk=true} @target
 PhysNoRes_2:
   Conditions:
   - haspotioneffect{t=DAMAGE_RESISTANCE;level=1} true
   Skills:
-  - damage{a=3000;pk=true} @target
+  - damage{a=300;pk=true} @target
 PhysNoRes_3:
   Conditions:
   - haspotioneffect{t=DAMAGE_RESISTANCE;level=2} true
   Skills:
-  - damage{a=2000;pk=true} @target
+  - damage{a=200;pk=true} @target
 PhysNoRes_4:
   Conditions:
   - haspotioneffect{t=DAMAGE_RESISTANCE;level=3} true
   Skills:
-  - damage{a=1000;pk=true} @target
+  - damage{a=100;pk=true} @target
 PhysNoRes_5:
   Conditions:
   - haspotioneffect{t=DAMAGE_RESISTANCE;level=4} true
@@ -95,7 +95,7 @@ PhysHaste_2:
   Conditions:
   - haspotioneffect{t=FAST_DIGGING;level=1} true
   Skills:
-  - damage{a=100;pk=true} @target
+  - damage{a=10;pk=true} @target
 PhysHaste_3:
   Conditions:
   - haspotioneffect{t=FAST_DIGGING;level=2} true
@@ -105,37 +105,37 @@ PhysHaste_4:
   Conditions:
   - haspotioneffect{t=FAST_DIGGING;level=3} true
   Skills:
-  - damage{a=200;pk=true} @target
+  - damage{a=20;pk=true} @target
 PhysHaste_5:
   Conditions:
   - haspotioneffect{t=FAST_DIGGING;level=4} true
   Skills:
-  - damage{a=250;pk=true} @target
+  - damage{a=25;pk=true} @target
 PhysHaste_6:
   Conditions:
   - haspotioneffect{t=FAST_DIGGING;level=5} true
   Skills:
-  - damage{a=300;pk=true} @target
+  - damage{a=30;pk=true} @target
 PhysHaste_7:
   Conditions:
   - haspotioneffect{t=FAST_DIGGING;level=6} true
   Skills:
-  - damage{a=350;pk=true} @target
+  - damage{a=35;pk=true} @target
 PhysHaste_8:
   Conditions:
   - haspotioneffect{t=FAST_DIGGING;level=7} true
   Skills:
-  - damage{a=400;pk=true} @target
+  - damage{a=40;pk=true} @target
 PhysHaste_9:
   Conditions:
   - haspotioneffect{t=FAST_DIGGING;level=8} true
   Skills:
-  - damage{a=450;pk=true} @target
+  - damage{a=45;pk=true} @target
 PhysHaste_10:
   Conditions:
   - haspotioneffect{t=FAST_DIGGING;level=9} true
   Skills:
-  - damage{a=500;pk=true} @target
+  - damage{a=50;pk=true} @target
 
 PhysFromJudgement: ### 150.0 Phys per 20 Strength -------------------
   Skills:
@@ -154,37 +154,37 @@ PhysJudge_1:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>18} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<38} true
   Skills:
-  - damage{a=300;pk=true} @target
+  - damage{a=30;pk=true} @target
 PhysJudge_2:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>38} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<58} true
   Skills:
-  - damage{a=600;pk=true} @target
+  - damage{a=60;pk=true} @target
 PhysJudge_3:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>58} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<78} true
   Skills:
-  - damage{a=900;pk=true} @target
+  - damage{a=90;pk=true} @target
 PhysJudge_4:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>78} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<98} true
   Skills:
-  - damage{a=1200;pk=true} @target
+  - damage{a=120;pk=true} @target
 PhysJudge_5:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>98} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<118} true
   Skills:
-  - damage{a=1500;pk=true} @target
+  - damage{a=150;pk=true} @target
 PhysJudge_6:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>118} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<138} true
   Skills:
-  - damage{a=1800;pk=true} @target
+  - damage{a=180;pk=true} @target
 PhysJudge_7:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>138} true
@@ -207,7 +207,7 @@ PhysJudge_10:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
   Skills:
-  - damage{a=3000;pk=true} @target
+  - damage{a=300;pk=true} @target
 
 PhysFromSpeed_Low: ### 15.0 Phys per 1 Speed -----------------------
   Skills:
@@ -270,7 +270,7 @@ PhysSpeed_20:
   Conditions:
   - haspotioneffect{t=SPEED;level=9} true
   Skills:
-  - damage{a=300;pk=true} @target
+  - damage{a=30;pk=true} @target
 
 PhysFromSpeed: ### 50.0 Phys per 1 Speed -----------------------
   Skills:
@@ -288,52 +288,52 @@ PhysSpeed_1:
   Conditions:
   - haspotioneffect{t=SPEED;level=0} true
   Skills:
-  - damage{a=100;pk=true} @target
+  - damage{a=10;pk=true} @target
 PhysSpeed_2:
   Conditions:
   - haspotioneffect{t=SPEED;level=1} true
   Skills:
-  - damage{a=200;pk=true} @target
+  - damage{a=20;pk=true} @target
 PhysSpeed_3:
   Conditions:
   - haspotioneffect{t=SPEED;level=2} true
   Skills:
-  - damage{a=300;pk=true} @target
+  - damage{a=30;pk=true} @target
 PhysSpeed_4:
   Conditions:
   - haspotioneffect{t=SPEED;level=3} true
   Skills:
-  - damage{a=400;pk=true} @target
+  - damage{a=40;pk=true} @target
 PhysSpeed_5:
   Conditions:
   - haspotioneffect{t=SPEED;level=4} true
   Skills:
-  - damage{a=500;pk=true} @target
+  - damage{a=50;pk=true} @target
 PhysSpeed_6:
   Conditions:
   - haspotioneffect{t=SPEED;level=5} true
   Skills:
-  - damage{a=600;pk=true} @target
+  - damage{a=60;pk=true} @target
 PhysSpeed_7:
   Conditions:
   - haspotioneffect{t=SPEED;level=6} true
   Skills:
-  - damage{a=700;pk=true} @target
+  - damage{a=70;pk=true} @target
 PhysSpeed_8:
   Conditions:
   - haspotioneffect{t=SPEED;level=7} true
   Skills:
-  - damage{a=800;pk=true} @target
+  - damage{a=80;pk=true} @target
 PhysSpeed_9:
   Conditions:
   - haspotioneffect{t=SPEED;level=8} true
   Skills:
-  - damage{a=900;pk=true} @target
+  - damage{a=90;pk=true} @target
 PhysSpeed_10:
   Conditions:
   - haspotioneffect{t=SPEED;level=9} true
   Skills:
-  - damage{a=1000;pk=true} @target
+  - damage{a=100;pk=true} @target
 
 PhysFromStrength: ### 15.0 Phys per 10 Strength ----------------
   Skills:
@@ -416,7 +416,7 @@ PhysStrength_10:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>98} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<108} true
   Skills:
-  - damage{a=300;pk=true} @target
+  - damage{a=30;pk=true} @target
 PhysStrength_11:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>108} true
@@ -446,7 +446,7 @@ PhysStrength_15:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>148} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<158} true
   Skills:
-  - damage{a=450;pk=true} @target
+  - damage{a=45;pk=true} @target
 PhysStrength_16:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>158} true
@@ -475,7 +475,7 @@ PhysStrength_20:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
   Skills:
-  - damage{a=600;pk=true} @target
+  - damage{a=60;pk=true} @target
 
 PhysFromStrength2: ### 20.0 Phys per 10 Strength ----------------
   Skills:
@@ -528,7 +528,7 @@ PhysStrength_25:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>48} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<58} true
   Skills:
-  - damage{a=200;pk=true} @target
+  - damage{a=20;pk=true} @target
 PhysStrength_26:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>58} true
@@ -558,7 +558,7 @@ PhysStrength_30:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>98} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<108} true
   Skills:
-  - damage{a=400;pk=true} @target
+  - damage{a=40;pk=true} @target
 PhysStrength_31:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>108} true
@@ -588,7 +588,7 @@ PhysStrength_35:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>148} true
   - haspotioneffect{t=INCREASE_DAMAGE;level=<158} true
   Skills:
-  - damage{a=600;pk=true} @target
+  - damage{a=60;pk=true} @target
 PhysStrength_36:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>158} true
@@ -617,4 +617,4 @@ PhysStrength_40:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
   Skills:
-  - damage{a=800;pk=true} @target
+  - damage{a=80;pk=true} @target

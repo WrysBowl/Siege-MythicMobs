@@ -11,7 +11,7 @@ Boss5F-Tick:
   - effect:particles{p=magicCrit;amount=20;speed=0;hS=0.1;vS=0.1} @origin
 Boss5F-Hit:
   Skills: ### ~20.0 hearts with max damage reduction.
-  - damage{a=1000}
+  - damage{a=10}
 Boss5_Xact: ### Tracking Missile that stuns enemies.
   Skills:
   - effect:sound{s=entity.hostile.swim;v=0.5;p=1}
@@ -26,7 +26,7 @@ Boss5X_Hit:
   Skills: ### ~15.0 hearts with max damage reduction.
   - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
   - effect:sound{s=entity.generic.hurt;v=1;p=1}
-  - damage{a=750;pk=true}
+  - damage{a=75;pk=true}
 ### COMPOSITE SKILLS
 Boss5_Phase_1:
   Skills:

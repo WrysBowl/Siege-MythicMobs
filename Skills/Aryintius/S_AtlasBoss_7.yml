@@ -15,9 +15,9 @@ A7_Knockback:
   - effect:particlesphere{particle=largesmoke;amount=90;r=8} @self
   - delay 2
   - effect:particlesphere{particle=largesmoke;amount=120;r=10} @self
-  - damage{a=3000} @PIR{r=5}
-  - damage{a=1500} @PIR{r=8}
-  - damage{a=750} @PIR{r=10}
+  - damage{a=30} @PIR{r=5}
+  - damage{a=15} @PIR{r=8}
+  - damage{a=25} @PIR{r=10}
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=10}
 A7_LeapSlam: ### Leap Slam Attack
   Conditions:
@@ -30,12 +30,11 @@ A7_LeapSlam: ### Leap Slam Attack
   - delay 10
   - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=1} @PIR{r=15}
   - effect:particlesphere{particle=largesmoke;amount=30;r=5} @self
-  - damage{amount=2000;pk=true} @PIR{r=5}
+  - damage{amount=30;pk=true} @PIR{r=5}
   - throw{velocity=10;velocityY=3} @PIR{r=5}
 A7_Phase_1: ### First Phase
   Skills:
   Cooldown: 10
-  Skills:
   - skill{s=A7_Knockback} @Self
   - delay 40
   - skill{s=A7_LeapSlam} @Self

@@ -17,7 +17,7 @@ TXS-Tick:
   - effect:particles{p=reddust;amount=5;speed=0;hS=0.1;vS=0.1} @origin
 TXS-Hit:
   Skills:
-  - damage{a=4000;pi=true;pk=true}
+  - damage{a=400;pi=true;pk=true}
 TX_Blast: ### Heavy Bolt Attack
   Conditions:
   - targetinlineofsight true
@@ -31,7 +31,7 @@ TXB-Tick:
   - effect:particles{p=cloud;a=1} @Origin
 TXB-Hit:
   Skills:
-  - damage{a=2000;pi=true;pk=true}
+  - damage{a=200;pi=true;pk=true}
   - skill{s=Bleed_100} @target
 TX_Teleport: ### Generic teleport attack
   Skills:

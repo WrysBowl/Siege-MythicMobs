@@ -36,13 +36,13 @@ A4B2-Tick:
   - effect:particles{p=largeexplode;a=1} @Origin
 A4B-Hit: ### 15.0 hearts of damage against a full loadout.
   Skills:
-  - damage{a=750;pk=true}
+  - damage{a=25;pk=true}
 A4B2-Hit: ### Heavy hit.
   Skills:
   # Uncomment the lines below if you want people to suffer.
   # - potion{type=DAMAGE_RESISTANCE;lvl=0;duration=1;overwrite=true}
   # - delay 1
-  - damage{a=4000;pk=true}
+  - damage{a=40;pk=true}
   - effect:sound{s=entity.generic.explode;v=1;p=2} @PIR{r=25}
 A4_Heavy: ### Backend skill
   Conditions:
@@ -65,7 +65,7 @@ A4_Knockback: ### Knockback attack.
   - effect:particlesphere{particle=cloud;amount=60;r=4} @self
   - delay 2
   - effect:particlesphere{particle=cloud;amount=80;r=5} @self
-  - damage{a=1500} @PIR{r=8}
+  - damage{a=15} @PIR{r=8}
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
 A4_Phase_1: ### Phase 1 Attack
   Cooldown: 10

@@ -60,7 +60,7 @@ A11S-Tick:
   - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
 A11S-Hit:
   Skills:
-  - damage{a=1000;pk=true}
+  - damage{a=20;pk=true}
 ### AREA SKILLS ------------------------------------------------
 A11_FrostNova: ### Freezes enemies in radius
   Skills:

@@ -24,4 +24,4 @@ MeteorEnd:
   - remove{m=MeteorPointer} @Self
 MeteorDamage:
   Skills:
-  - damage{a=1000;pk=true} @PIR{r=3}
+  - damage{a=100;pk=true} @PIR{r=3}

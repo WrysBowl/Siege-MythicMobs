@@ -75,11 +75,11 @@ A10A-Tick:
   - effect:particles{p=endRod;amount=1;speed=0;hS=0.1;vS=0.1} @origin
 A10A-Hit:
   Skills:
-  - damage{a=500;pi=true;pk=true}
+  - damage{a=20;pi=true;pk=true}
   - delay 5
-  - damage{a=500;pi=true;pk=true}
+  - damage{a=20;pi=true;pk=true}
   - delay 5
-  - damage{a=500;pi=true;pk=true}
+  - damage{a=20;pi=true;pk=true}
 A10_Nova: ### Shock Nova Attack
   Skills:
   - effect:sound{s=item.totem.use;v=0.5;p=2} @PIR{r=25}

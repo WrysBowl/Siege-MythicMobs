@@ -13,7 +13,7 @@ A5B-Tick:
   - effect:particles{p=explosion;amount=1;speed=0;hS=0.1;vS=0.1} @origin
 A5B-Hit: ### 15.0 hearts of damage against a full loadout.
   Skills:
-  - damage{a=750;pk=true}
+  - damage{a=35;pk=true}
 A5_Burst: ### Heavy attack
   Conditions:
   - targetinlineofsight true
@@ -59,7 +59,7 @@ A5B2-Tick:
   - effect:particles{p=largeexplode;a=1} @Origin
 A5B2-Hit: ### 30.0 hearts of damage against a full loadout.
   Skills:
-  - damage{a=1500;pk=true}
+  - damage{a=15;pk=true}
   - effect:sound{s=entity.generic.explode;v=1;p=2} @PIR{r=25}
 A5_Tornado: ### Tornado Skill
   Skills:
@@ -67,51 +67,51 @@ A5_Tornado: ### Tornado Skill
 A5_TornadoX:
   Skills:
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=5}
+  - damage{a=25;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=5}
+  - damage{a=25;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=5}
+  - damage{a=25;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=5}
+  - damage{a=25;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=5}
+  - damage{a=25;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}  Skills:
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=5}
+  - damage{a=25;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=5}
+  - damage{a=25;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=5}
+  - damage{a=25;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=5}
+  - damage{a=25;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=5}
+  - damage{a=25;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
 A5_Phase_1: ### Phase 1 Attack

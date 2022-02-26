@@ -4,7 +4,7 @@ RangerCrit:
   Skills:
   - effect:sound{s=entity.zombie.break_door_wood;v=0.5;p=1} @Self
   - effect:sound{s=entity.irongolem.death;v=1;p=2} @Self
-  - damage{a=1200;ia=true;pi=true;pk=true} @target
+  - damage{a=120;ia=true;pi=true;pk=true} @target
   - actionmessage{m="&7SCOPE RECHARGE &f| &74.5"} @Self
   - effect:sound{s=block.note.hat;v=1;p=2}
   - delay 10
@@ -54,7 +54,7 @@ MeleeCrit_Chaos:
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
-  - damage{a=1500;ia=true;pi=true;pk=true}
+  - damage{a=150;ia=true;pi=true;pk=true}
 BeaconHeal: ### Super Healing Beacon
   Skills:
   - effect:particlesphere{particle=happyVillager;amount=400;r=8}

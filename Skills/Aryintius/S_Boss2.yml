@@ -47,7 +47,7 @@ Boss2F_Hit:
   Skills: ### Deals 20.0 hearts on hit (against max loadout)
   - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
   - effect:sound{s=entity.generic.hurt;v=1;p=1}
-  - damage{a=1000;pk=true}
+  - damage{a=10;pk=true}
   - potion{type=SLOW;lvl=3;duration=40} @target
   - potion{type=BLINDNESS;lvl=1;duration=40} @target
   - sendtitle{title="&6&lBurning";subtitle="&fSlowed and Blinded";d=20}

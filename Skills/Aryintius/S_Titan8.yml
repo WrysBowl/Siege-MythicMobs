@@ -20,7 +20,7 @@ T8A-Tick-2: ### Alternate Tick Effect
   - effect:particles{p=witchMagic;amount=1;speed=0} @origin
 T8A-Hit:
   Skills:
-  - damage{a=1250;pi=true;pk=true}
+  - damage{a=125;pi=true;pk=true}
   - skill{s=InflictCurse} 0.1
 
 T8_Circle: ### Fires 8 projectiles in massive radius
@@ -44,7 +44,7 @@ T8B-Tick:
   - effect:particles{p=reddust;color=#FF00FF;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 T8B-Hit:
   Skills:
-  - damage{a=2000;pk=true}
+  - damage{a=200;pk=true}
 
 T8_NovaBlast: ### Radial Nova attack.
   Skills:
@@ -62,33 +62,33 @@ T8_NovaBlast: ### Radial Nova attack.
   - effect:particlesphere{particle=largesmoke;amount=20;r=4} @self
   - delay 2
   - effect:particlesphere{particle=largesmoke;amount=35;r=5} @self
-  - damage{a=2500;pi=true} @PIR{r=8}
+  - damage{a=250;pi=true} @PIR{r=8}
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
 
 T8_SUCC: ### BIG SUCC
   Skills:
   - effect:enderbeam{d=60;y=0}
-  - damage{a=2000;pi=true;pk=true}
+  - damage{a=200;pi=true;pk=true}
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
   - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
   - heal{a=500} @Self
   - delay 15
-  - damage{a=2000;pi=true;pk=true}
+  - damage{a=200;pi=true;pk=true}
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
   - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
   - heal{a=500} @Self
   - delay 15
-  - damage{a=2000;pi=true;pk=true}
+  - damage{a=200;pi=true;pk=true}
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
   - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
   - heal{a=500} @Self
   - delay 15
-  - damage{a=2000;pi=true;pk=true}
+  - damage{a=200;pi=true;pk=true}
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
   - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
   - heal{a=500} @Self
   - delay 15
-  - damage{a=2000;pi=true;pk=true}
+  - damage{a=200;pi=true;pk=true}
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
   - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
   - heal{a=500} @Self
@@ -254,4 +254,4 @@ T8W-Tick:
   - effect:particles{p=smoke;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 T8W-Hit:
   Skills:
-  - damage{a=2500;pi=true;pk=true}
+  - damage{a=250;pi=true;pk=true}

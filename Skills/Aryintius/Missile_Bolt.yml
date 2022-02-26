@@ -13,7 +13,7 @@ SHomer_HIT:
   Skills:
   - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
   - effect:sound{s=entity.bat.death;v=1;p=0}
-  - damage{a=800;pk=true}
+  - damage{a=80;pk=true}
   - potion{type=BLINDNESS;duration=200;lvl=1}
 Homer: ## Basic homing attack
   Conditions:
@@ -28,7 +28,7 @@ Homer_TICK:
 Homer_HIT:
   Skills:
   - effect:particles{p=lava;a=10;hS=1;vS=1}
-  - damage{a=400;pk=true}
+  - damage{a=40;pk=true}
 IceBolt: ## Titan3 Stuff
   Conditions:
   - targetinlineofsight true
@@ -58,7 +58,7 @@ IceMissile_TICK:
 IceMissile_HIT:
   Skills:
   - effect:particles{p=snowballpoof;a=10;hS=1;vS=1}
-  - damage{a=500;pk=true}
+  - damage{a=50;pk=true}
   - effect:sound{s=block.glass.break;v=2;p=1}
   - effect:sound{s=block.glass.break;v=2;p=0}
   - effect:sound{s=block.glass.break;v=2;p=2}
@@ -80,7 +80,7 @@ FB-Hit:
   - effect:sound{s=block.glass.break;v=2;p=2}
   - potion{type=SLOW;lvl=10;duration=25} @target
   - sendtitle{title="&b&lFrozen";subtitle="&fMovement speed reduced";d=20} @PlayersInRadius{r=10}
-  - damage{a=800}
+  - damage{a=80}
 EarthStrike: ## Unusually strong toxic damage
   Conditions:
   - targetinlineofsight true
@@ -100,15 +100,15 @@ ES-Hit:
   - potion{type=CONFUSION;duration=200;lvl=4}
   - potion{type=POISON;duration=200;lvl=10}
   - sendtitle{title="&2&lToxic";subtitle="&fDamage over time/confusion";d=20} @target
-  - damage{a=500}
+  - damage{a=50}
   - delay 20
-  - damage{a=500}
+  - damage{a=50}
   - delay 20
-  - damage{a=500}
+  - damage{a=50}
   - delay 20
-  - damage{a=500}
+  - damage{a=50}
   - delay 20
-  - damage{a=500}
+  - damage{a=50}
 ToxicBlast: ## Labyrinth slimes
   Conditions:
   - targetinlineofsight true
@@ -150,7 +150,7 @@ Smite-Tick:
   - effect:particles{p=explode;amount=20;speed=0;hS=0.2;vS=0.2} @origin
 Smite-Hit:
   Skills:
-  - damage{a=1500;pk=true}
+  - damage{a=150;pk=true}
   - potion{type=WEAKNESS;duration=60;lvl=10}
   - sendtitle{title="&4&lCrippled";subtitle="&fWeakened attack damage";d=20} @target
 TidalWave: ## Boss5 blind attack
@@ -165,7 +165,7 @@ TW-Tick:
   - effect:particles{p=magicCrit;amount=20;speed=0;hS=0.2;vS=0.2} @origin
 TW-Hit:
   Skills:
-  - damage{a=500;pk=true}
+  - damage{a=50;pk=true}
   - potion{type=BLINDNESS;duration=60;lvl=1}
   - sendtitle{title="&8&lBlinded";subtitle="&fVision highly impaired";d=20} @target
 ## LOW LEVEL CASTING

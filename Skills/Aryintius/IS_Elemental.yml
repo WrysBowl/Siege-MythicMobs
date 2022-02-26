@@ -128,7 +128,7 @@ ExtraSlowDamage: ### Adds extra phys damage to slowed enemies
   TargetConditions:
   - haspotioneffect{t=SLOW} true
   Skills:
-  - damage{a=500;pk=true} @target
+  - damage{a=50;pk=true} @target
   - effect:sound{s=entity.player.attack.sweep​;v=1;p=1}
 Bone_Shock: ### Bone of the Ancients effects
   TargetConditions:
@@ -279,7 +279,7 @@ WE_Freeze:
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
-  - damage{a=3000;ia=true;pi=true;pk=true}
+  - damage{a=300;ia=true;pi=true;pk=true}
 WE_Shock:
   TargetConditions:
   - haspotioneffect{t=FAST_DIGGING;level=9} true
@@ -287,14 +287,14 @@ WE_Shock:
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
-  - damage{a=3000;ia=true;pi=true;pk=true}
+  - damage{a=300;ia=true;pi=true;pk=true}
 WE_Ignite:
   TargetConditions:
   - haspotioneffect{t=BLINDNESS} true
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
-  - damage{a=3000;ia=true;pi=true;pk=true}
+  - damage{a=300;ia=true;pi=true;pk=true}
 ### NOVA ATTACKS -----------------------------------------------
 Item_ShockNova: ### Shock Nova Attack (Items only)
   Cooldown: 3

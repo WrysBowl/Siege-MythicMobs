@@ -165,7 +165,7 @@ ChaosSpeed_20:
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
-  - damage{a=100;ia=true;pi=true;pk=true} @target
+  - damage{a=10;ia=true;pi=true;pk=true} @target
 
 ChaosFromHaste: ### 2.0 Chaos per 1 Haste -----------------------
   Skills:
@@ -369,7 +369,7 @@ ChaosES_7:
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.06;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.06;p=2}
-  - damage{a=100;ia=true;pi=true;pk=true} @target
+  - damage{a=10;ia=true;pi=true;pk=true} @target
 ChaosES_8:
   Conditions:
   - haspotioneffect{t=ABSORPTION;level=>28} true
@@ -385,14 +385,14 @@ ChaosES_9:
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.08;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.08;p=2}
-  - damage{a=200;ia=true;pi=true;pk=true} @target
+  - damage{a=20;ia=true;pi=true;pk=true} @target
 ChaosES_10:
   Conditions:
   - haspotioneffect{t=ABSORPTION;level=>48} true
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.09;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.09;p=2}
-  - damage{a=250;ia=true;pi=true;pk=true} @target
+  - damage{a=25;ia=true;pi=true;pk=true} @target
 
 Chaos15Strength50: ### 15.0 Chaos per 50 Strength -------------------
   Skills:

@@ -4,7 +4,7 @@ T2S-Tick: ### Arc Utils
   - effect:particles{p=flame;amount=10} @origin
 T2S-Hit:
   Skills:
-  - damage{a=1500;pk=true}
+  - damage{a=150;pk=true}
 T2_RandomFire:
   Conditions:
   - targetinlineofsight true
@@ -48,7 +48,7 @@ T2B-Tick:
   - effect:particles{p=largesmoke;a=3;hS=0.5;vS=0.5} @Origin
 T2B-Hit:
   Skills:
-  - damage{a=2500;pk=true}
+  - damage{a=250;pk=true}
   - skill{s=Ignite_Title}
 ### AREA SKILLS ------------------------------------------------
 T2_MeteorShower:

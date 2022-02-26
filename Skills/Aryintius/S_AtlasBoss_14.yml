@@ -70,7 +70,7 @@ A14L-Tick:
   - effect:particles{p=portal;amount=1;speed=0;hS=0.12;vS=0.12} @origin
 A14L-Hit:
   Skills:
-  - damage{amount=1000;pi=true;pk=true}
+  - damage{amount=40;pi=true;pk=true}
 A14_TPSlam: ### Teleport slam attack
   Conditions:
   - targetinlineofsight true
@@ -98,7 +98,7 @@ A14_TPSlam: ### Teleport slam attack
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
-  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+  - damage{amount=40;ia=true;pi=true;pk=true} @PIR{r=5}
 A14_CurseNova:
   Skills:
   - effect:particlering{particle=witchMagic;radius=5;points=25;amount=1;hS=1;vS=0} @Self
@@ -106,28 +106,28 @@ A14_CurseNova:
   - effect:particlering{particle=portal;radius=1;points=4;amount=3;hS=1;vS=0} @Self
   - effect:sound{s=ambient.cave;p=2.0;v=0.75} @Self
   - skill{s=InflictCurse} @PIR{r=5}
-  - damage{amount=1250;pi=true;pk=true} @PIR{r=5}
+  - damage{amount=40;pi=true;pk=true} @PIR{r=5}
   - delay 20
   - effect:particlering{particle=witchMagic;radius=5;points=25;amount=1;hS=1;vS=0} @Self
   - effect:particlering{particle=witchMagic;radius=3;points=16;amount=1;hS=1;vS=0} @Self
   - effect:particlering{particle=portal;radius=1;points=4;amount=3;hS=1;vS=0} @Self
   - effect:sound{s=ambient.cave;p=2.0;v=0.75} @Self
   - skill{s=InflictCurse} @PIR{r=5}
-  - damage{amount=1250;pi=true;pk=true} @PIR{r=5}
+  - damage{amount=40;pi=true;pk=true} @PIR{r=5}
   - delay 20
   - effect:particlering{particle=witchMagic;radius=5;points=25;amount=1;hS=1;vS=0} @Self
   - effect:particlering{particle=witchMagic;radius=3;points=16;amount=1;hS=1;vS=0} @Self
   - effect:particlering{particle=portal;radius=1;points=4;amount=3;hS=1;vS=0} @Self
   - effect:sound{s=ambient.cave;p=2.0;v=0.75} @Self
   - skill{s=InflictCurse} @PIR{r=5}
-  - damage{amount=1250;pi=true;pk=true} @PIR{r=5}
+  - damage{amount=40;pi=true;pk=true} @PIR{r=5}
   - delay 20
   - effect:particlering{particle=witchMagic;radius=5;points=25;amount=1;hS=1;vS=0} @Self
   - effect:particlering{particle=witchMagic;radius=3;points=16;amount=1;hS=1;vS=0} @Self
   - effect:particlering{particle=portal;radius=1;points=4;amount=3;hS=1;vS=0} @Self
   - effect:sound{s=ambient.cave;p=2.0;v=0.75} @Self
   - skill{s=InflictCurse} @PIR{r=5}
-  - damage{amount=1250;pi=true;pk=true} @PIR{r=5}
+  - damage{amount=40;pi=true;pk=true} @PIR{r=5}
 ### COMPOSITE SKILLS -------------------------------------------
 A14_BeamLaser:
   Skills:

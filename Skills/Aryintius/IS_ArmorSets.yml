@@ -53,7 +53,7 @@ Icetomb_Helm:
   TargetConditions:
   - haspotioneffect{t=SLOW_DIGGING;level=9} true
   Skills:
-  - damage{a=1300;pk=true} @target
+  - damage{a=130;pk=true} @target
   - effect:sound{s=block.glass.break;p=1;v=1}
   - effect:sound{s=block.glass.break;p=0.5;v=0.8}
 Icetomb_Chest:
@@ -71,7 +71,7 @@ SetBonus_Ignite:
   TargetConditions:
   - haspotioneffect{t=LUCK} true
   Skills:
-  - damage{a=2000;pk=true} @target
+  - damage{a=200;pk=true} @target
   - effect:sound{s=entity.blaze.hurt;p=1;v=0.5}
 Infernal_Bleed:
   Cooldown: 2
@@ -269,7 +269,7 @@ SetBonus_JUGG:
   TargetConditions:
   - haspotioneffect{t=LUCK} true
   Skills:
-  - damage{a=8000;pk=true} @target
+  - damage{a=800;pk=true} @target
   - effect:sound{s=entity.zombie.break_door_wood;p=1;v=0.05}
 JUGG_HelmSkill:
   TargetConditions:

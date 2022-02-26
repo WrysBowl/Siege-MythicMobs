@@ -4,37 +4,37 @@ T4_Drag: ### Kind of a cyclone thing that guarantees a melee hit.
   - effect:sound{s=block.portal.trigger;v=1;p=2}
   - potion{type=CONFUSION;duration=60;lvl=3;overwrite=true}
   - pull{velocity=1} @PIR{r=8}
-  - damage{a=500;pk=true} @PIR{r=8}
+  - damage{a=50;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=1} @PIR{r=8}
-  - damage{a=500;pk=true} @PIR{r=8}
+  - damage{a=50;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=1} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=8}
+  - damage{a=75;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=750;pk=true} @PIR{r=8}
+  - damage{a=75;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=1000;pk=true} @PIR{r=8}
+  - damage{a=100;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=1000;pk=true} @PIR{r=8}
+  - damage{a=100;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=1250;pk=true} @PIR{r=8}
+  - damage{a=125;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=4} @PIR{r=8}
-  - damage{a=1250;pk=true} @PIR{r=8}
+  - damage{a=125;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=4} @PIR{r=8}
-  - damage{a=1500;pk=true} @PIR{r=8}
+  - damage{a=150;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=1500;pk=true} @PIR{r=8}
+  - damage{a=150;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=1500;pk=true} @PIR{r=8}
+  - damage{a=150;pk=true} @PIR{r=8}
 T4_Drag_FX:
   Skills:
   - effect:particlesphere{particle=largesmoke;amount=300;r=8} @self
@@ -60,7 +60,7 @@ T4F_Tick:
 T4F_Hit:
   Skills: ### Deals 20.0 hearts on hit (against max loadout)
   - effect:particles{p=largesmoke;a=3;hS=1;vS=1}
-  - damage{a=1000;pi=true;pk=true}
+  - damage{a=100;pi=true;pk=true}
   - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
@@ -85,7 +85,7 @@ T4B-Tick:
 T4B-Hit:
   Skills: ### Deals 20.0 hearts on hit (against max loadout)
   - effect:particles{p=largesmoke;a=3;hS=1;vS=1}
-  - damage{a=1000;pi=true;pk=true}
+  - damage{a=100;pi=true;pk=true}
   - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
@@ -140,8 +140,8 @@ T4_TPSlam: ### Radial Teleport Slam. Guaranteed 1-shot at center. Hurts a lot on
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
-  - damage{a=1250;pk=true} @PIR{r=9}
-  - damage{a=2500;pk=true} @PIR{r=7}
+  - damage{a=125;pk=true} @PIR{r=9}
+  - damage{a=250;pk=true} @PIR{r=7}
   - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
 
 T4_Teleport: ### Teleport melee. Spams this to kill people.
@@ -222,7 +222,7 @@ T4_Arrow-Tick:
   - effect:particles{p=crit;amount=5;speed=0;hS=0.2;vS=0.2} @origin
 T4_Arrow-Hit:
   Skills:
-  - damage{a=1000;pk=true}
+  - damage{a=100;pk=true}
   - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}

@@ -12,7 +12,7 @@ LB4S-Tick:
   - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
 LB4S-Hit:
   Skills:
-  - damage{a=100;pk=true}
+  - damage{a=10;pk=true}
 LB4_Blast: ### Heavy Magic Attack
   Conditions:
   - targetinlineofsight true
@@ -27,7 +27,7 @@ LB4B-Tick:
   - effect:particles{p=largeexplode;a=1} @Origin
 LB4B-Hit:
   Skills:
-  - damage{a=400;pk=true}
+  - damage{a=40;pk=true}
 LB4_Death: ### Super Magic Attack
   Conditions:
   - targetinlineofsight true
@@ -42,7 +42,7 @@ LB4D-Tick:
   - effect:particles{p=largeexplode;a=1} @Origin
 LB4D-Hit:
   Skills:
-  - damage{a=800;pk=true}
+  - damage{a=80;pk=true}
 ### AREA SKILLS
 LB4_Tornado: ### Insane tornado attack.
   Skills:
