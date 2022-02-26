@@ -42,7 +42,7 @@ LB4D-Tick:
   - effect:particles{p=largeexplode;a=1} @Origin
 LB4D-Hit:
   Skills:
-  - damage{a=80;pk=true}
+  - damage{a=40;pk=true}
 ### AREA SKILLS
 LB4_Tornado: ### Insane tornado attack.
   Skills:

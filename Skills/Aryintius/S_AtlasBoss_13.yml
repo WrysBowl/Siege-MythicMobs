@@ -175,7 +175,7 @@ A13F-Tick:
   - effect:particles{p=bubble;amount=5;speed=0;hS=0.2;vS=0.2} @origin
 A13F-Hit: ### 20 hearts of physical damage.
   Skills:
-  - damage{a=40;pi=true;pk=true}
+  - damage{a=20;pi=true;pk=true}
 A13_Heavy: ### Heavy shot attack.
   Conditions:
   - targetinlineofsight true
@@ -240,16 +240,16 @@ A13_Nova: ### Water Nova Slam Attack
   - effect:sound{s=entity.elder_guardian.curse;v=0.5;p=0} @PIR{r=25}
   - effect:sound{s=entity.enderdragon.growl;v=1;p=1} @PIR{r=25}
   - effect:particlesphere{particle=magicCrit;amount=500;r=10} @self
-  - damage{amount=75;pi=true;pk=true} @PIR{r=10}
+  - damage{amount=25;pi=true;pk=true} @PIR{r=10}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=400;r=8} @self
-  - damage{amount=75;pi=true;pk=true} @PIR{r=8}
+  - damage{amount=25;pi=true;pk=true} @PIR{r=8}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=300;r=6} @self
-  - damage{amount=50;pi=true;pk=true} @PIR{r=6}
+  - damage{amount=25;pi=true;pk=true} @PIR{r=6}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=200;r=4} @self
-  - damage{amount=50;pi=true;pk=true} @PIR{r=4}
+  - damage{amount=25;pi=true;pk=true} @PIR{r=4}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=150;r=3} @self
   - damage{amount=25;pi=true;pk=true} @PIR{r=3}
