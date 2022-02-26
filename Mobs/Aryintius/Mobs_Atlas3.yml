@@ -77,7 +77,7 @@ A12_MiniBoss:
   ### SKILLS
   - skill{s=Ignite_Title} @target ~onAttack 0.5
   - skill{s=Atlas_FireNova} @Self ~onTimer:20
-  - damage{a=1000;pi=true;pk=true} @PIR{r=5} ~onTimer:20
+  - damage{amount=20;pi=true;pk=true} @PIR{r=5} ~onTimer:20
   ### EFFECTS
   - effect:sound{s=entity.blaze.burn;p=1.0;v=1.0} @self ~onTimer:20
   - effect:sound{s=entity.blaze.burn;p=0.5;v=1.0} @self ~onTimer:40

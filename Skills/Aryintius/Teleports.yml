@@ -8,22 +8,22 @@ TeleportSlam:
   - delay 15
   - effect:particlesphere{particle=witchMagic;amount=80;r=10} @self
   - effect:sound{s=entity.enderdragon.growl;v=1;p=0} @PIR{r=25}
-  - damage{amount=500;pk=true} @PIR{r=11}
+  - damage{amount=20;pk=true} @PIR{r=11}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=100;r=9} @self
-  - damage{amount=500;pk=true} @PIR{r=10}
+  - damage{amount=20;pk=true} @PIR{r=10}
   - delay 3
   - effect:particlesphere{particle=witchMagic;amount=150;r=8} @self
-  - damage{amount=500;pk=true} @PIR{r=9}
+  - damage{amount=20;pk=true} @PIR{r=9}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=200;r=7} @self
-  - damage{amount=1000;pk=true} @PIR{r=8}
+  - damage{amount=10;pk=true} @PIR{r=8}
   - delay 3
   - effect:particlesphere{particle=witchMagic;amount=250;r=6} @self
-  - damage{amount=1000;pk=true} @PIR{r=7}
+  - damage{amount=10;pk=true} @PIR{r=7}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=300;r=5} @self
-  - damage{amount=1000;pk=true} @PIR{r=6}
+  - damage{amount=10;pk=true} @PIR{r=6}
   - delay 3
   - effect:particlesphere{particle=witchMagic;amount=350;r=4} @self
   - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}

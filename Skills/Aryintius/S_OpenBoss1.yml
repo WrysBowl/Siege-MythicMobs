@@ -29,7 +29,7 @@ OB1OS_Hit:
   - effect:sound{s=entity.blaze.death;v=1;p=2}
   - damage{a=40;ia=true;pi=true;pk=true}
   - delay 20
-  - damage{a=100;pk=true}
+  - damage{amount=10;pk=true}
 OB1_Teleport: ### Teleport Slam
   Skills:
   - teleport{spreadh=0;spreadv=0} @NearestPlayer{r=50}
@@ -70,7 +70,7 @@ OB1_Explosion: ### Explosion that deals a crapton of damage.
   - effect:particlesphere{particle=largesmoke;amount=100;r=5} @self
   - effect:sound{s=entity.ghast.shoot;v=0.5;p=1} @PIR{r=25}
   - effect:sound{s=entity.ghast.shoot;v=0.5;p=0} @PIR{r=25}
-  - damage{amount=1500} @PIR{r=5}
+  - damage{amount=15} @PIR{r=5}
 ### COMPOSITE SKILLS
 OB1_Burst: ### Rapidfire burst
   Skills:

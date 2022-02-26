@@ -260,7 +260,7 @@ phoenixCLAWATTACK:
 phoenixCLAWATTACKDAMAGE:
   Skills:
   #- ignite{ticks=40}
-  - damage{a=100}
+  - damage{amount=10}
   
 phoenixINVIS:
   Cooldown: 5

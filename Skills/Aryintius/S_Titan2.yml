@@ -4,7 +4,7 @@ T2S-Tick: ### Arc Utils
   - effect:particles{p=flame;amount=10} @origin
 T2S-Hit:
   Skills:
-  - damage{a=150;pk=true}
+  - damage{amount=15;pk=true}
 T2_RandomFire:
   Conditions:
   - targetinlineofsight true
@@ -48,7 +48,7 @@ T2B-Tick:
   - effect:particles{p=largesmoke;a=3;hS=0.5;vS=0.5} @Origin
 T2B-Hit:
   Skills:
-  - damage{a=250;pk=true}
+  - damage{amount=25;pk=true}
   - skill{s=Ignite_Title}
 ### AREA SKILLS ------------------------------------------------
 T2_MeteorShower:
@@ -74,18 +74,18 @@ T2_MeteorExplosion:
   - effect:sound{s=entity.generic.explode;v=1;p=0} @self
   - effect:sound{s=entity.generic.explode;v=1;p=1} @self
   - effect:particlesphere{particle=largeexplosion;amount=1;r=0} @self
-  - damage{amount=3500;pk=true} @PIR{r=3}
+  - damage{amount=35;pk=true} @PIR{r=3}
 T2_FireNova: ### Burns EVERYTHING
   Skills:
   - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
   - effect:sound{s=entity.blaze.shoot;v=0.5;p=0}
   - effect:particlesphere{particle=flame;amount=500;r=10} @self
-  - damage{amount=500;pk=true} @PIR{r=10}
+  - damage{amount=20;pk=true} @PIR{r=10}
   - delay 10
   - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
   - effect:sound{s=entity.blaze.shoot;v=0.5;p=0}
   - effect:particlesphere{particle=flame;amount=400;r=8} @self
-  - damage{amount=800;pk=true} @PIR{r=8}
+  - damage{amount=80;pk=true} @PIR{r=8}
   - delay 10
   - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
   - effect:sound{s=entity.blaze.shoot;v=0.5;p=0}
@@ -100,24 +100,24 @@ T2_FireNova: ### Burns EVERYTHING
   - effect:sound{s=entity.blaze.shoot;v=0.5;p=1}
   - effect:sound{s=entity.blaze.shoot;v=0.5;p=0}
   - effect:particlesphere{particle=flame;amount=100;r=2} @self
-  - damage{amount=2500;pk=true} @PIR{r=2}
+  - damage{amount=25;pk=true} @PIR{r=2}
   - delay 10
   - skill{s=Ignite_Title} @PIR{r=10}
 T2_LavaPlains: ### Deals massive damage in radius
   Skills:
   - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
   - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
-  - damage{amount=2500;pk=true} @PIR{r=15}
+  - damage{amount=25;pk=true} @PIR{r=15}
   - effect:sound{s=entity.generic.explode;v=2;p=0}
   - delay 20
   - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
   - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
-  - damage{amount=2500;pk=true} @PIR{r=15}
+  - damage{amount=25;pk=true} @PIR{r=15}
   - effect:sound{s=entity.generic.explode;v=2;p=0}
   - delay 20
   - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
   - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
-  - damage{amount=2500;pk=true} @PIR{r=15}
+  - damage{amount=25;pk=true} @PIR{r=15}
   - effect:sound{s=entity.generic.explode;v=2;p=0}
 ### COMPOSITE SKILLS -------------------------------------------
 T2_Eruption: ### FIRE EVERYWHERE

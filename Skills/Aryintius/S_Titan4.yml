@@ -16,10 +16,10 @@ T4_Drag: ### Kind of a cyclone thing that guarantees a melee hit.
   - damage{a=75;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=100;pk=true} @PIR{r=8}
+  - damage{amount=10;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=100;pk=true} @PIR{r=8}
+  - damage{amount=10;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
   - damage{a=125;pk=true} @PIR{r=8}
@@ -28,13 +28,13 @@ T4_Drag: ### Kind of a cyclone thing that guarantees a melee hit.
   - damage{a=125;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=4} @PIR{r=8}
-  - damage{a=150;pk=true} @PIR{r=8}
+  - damage{amount=15;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=150;pk=true} @PIR{r=8}
+  - damage{amount=15;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=5} @PIR{r=8}
-  - damage{a=150;pk=true} @PIR{r=8}
+  - damage{amount=15;pk=true} @PIR{r=8}
 T4_Drag_FX:
   Skills:
   - effect:particlesphere{particle=largesmoke;amount=300;r=8} @self
@@ -60,7 +60,7 @@ T4F_Tick:
 T4F_Hit:
   Skills: ### Deals 20.0 hearts on hit (against max loadout)
   - effect:particles{p=largesmoke;a=3;hS=1;vS=1}
-  - damage{a=100;pi=true;pk=true}
+  - damage{amount=10;pi=true;pk=true}
   - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
@@ -85,7 +85,7 @@ T4B-Tick:
 T4B-Hit:
   Skills: ### Deals 20.0 hearts on hit (against max loadout)
   - effect:particles{p=largesmoke;a=3;hS=1;vS=1}
-  - damage{a=100;pi=true;pk=true}
+  - damage{amount=10;pi=true;pk=true}
   - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
@@ -141,7 +141,7 @@ T4_TPSlam: ### Radial Teleport Slam. Guaranteed 1-shot at center. Hurts a lot on
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
   - damage{a=125;pk=true} @PIR{r=9}
-  - damage{a=250;pk=true} @PIR{r=7}
+  - damage{amount=25;pk=true} @PIR{r=7}
   - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
 
 T4_Teleport: ### Teleport melee. Spams this to kill people.
@@ -149,7 +149,7 @@ T4_Teleport: ### Teleport melee. Spams this to kill people.
   - targetinlineofsight true
   Skills:
   - teleport{spreadh=0;spreadv=0} @target
-  - damage{amount=2500;pk=true} @PIR{r=3}
+  - damage{amount=25;pk=true} @PIR{r=3}
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
 ##
@@ -222,7 +222,7 @@ T4_Arrow-Tick:
   - effect:particles{p=crit;amount=5;speed=0;hS=0.2;vS=0.2} @origin
 T4_Arrow-Hit:
   Skills:
-  - damage{a=100;pk=true}
+  - damage{amount=10;pk=true}
   - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}

@@ -103,7 +103,7 @@ deadbeardBULLET_HIT:
   - targetinlineofsight{} true
   Skills:
   - potion{type=SLOW;duration=20;level=3} @target
-  - damage{amount=100} @target
+  - damage{amount=15} @target
   - effect:particles{particle=block_crack;m=redstone_block;amount=50;hS=.5;vS=1} @target
   - throw{velocity=2;velocityY=2} @target
   - sound{s=littleroom_deadbeard:littleroom.deadbeard.laugh} @self .25
@@ -155,7 +155,7 @@ tntEXPLODE:
   - effect:particlering{particle=large_smoke;radius=2;points=16;amount=12;speed=.001} @Forward{f=0;y=3.0}
   - effect:particles{particle=large_smoke;hS=1;vS=0;amount=25;speed=.01} @self
   - throw{velocity=5;velocityY=5} @PIR{r=6}
-  - damage{amount=200} @PlayersInRadius{r=5}
+  - damage{amount=20} @PlayersInRadius{r=5}
   - explosion{yield=1;bd=false;ft=false} @self
 
   

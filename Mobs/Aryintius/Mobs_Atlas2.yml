@@ -47,7 +47,7 @@ A7_MiniBoss:
   ### SKILLS
   - skill{s=InflictCurse} @target ~onAttack
   - skill{s=Atlas_CurseNova} @Self ~onTimer:20
-  - damage{a=750;pi=true;pk=true} @PIR{r=5} ~onTimer:20
+  - damage{amount=60;pi=true;pk=true} @PIR{r=5} ~onTimer:20
   ### EFFECTS
   - effect:sound{s=ambient.cave;p=2.0;v=0.75} @self ~onTimer:40
   - effect:sound{s=block.sand.place;p=0.1;v=0.75} @self ~onDamaged
