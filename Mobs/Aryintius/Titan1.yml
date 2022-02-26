@@ -25,12 +25,10 @@ Titan1:
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
   - skill{s=CancelDespawn} @Self ~onTimer:20
 ### PHASE 1 - FULL HEALTH
-  - skill{s=TitanSpeech} @PIR{r=50} ~onTimer:200 >50%
   - skill{s=FireStorm} @NearestPlayer{r=50} ~onTimer:20 >50% 0.3
   - skill{s=IceBolt} @NearestPlayer{r=50} ~onTimer:20 >50% 0.3
   - skill{s=TeleportSlam} @NearestPlayer{r=50} ~onTimer:300 =70%-100%
 ### PHASE 2 - 50% HEALTH
-  - skill{s=TitanSpeech2} @PIR{r=50} ~onTimer:200 =5%-50%
   - skill{s=EarthStrike} @NearestPlayer{r=50} ~onTimer:20 =5%-70% 0.3
   - skill{s=TidalWave} @NearestPlayer{r=50} ~onTimer:20 =5%-70% 0.3
   - skill{s=Smite} @NearestPlayer{r=50} ~onTimer:20 =5%-70% 0.25

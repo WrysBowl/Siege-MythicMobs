@@ -42,18 +42,18 @@ T3_Summon_1: ### Summons low-level enemies
   Skills:
   - message{m="<mob.name> &fArise, my minions! Take care of this... malcontent..."} @PlayersInRadius{r=50}
   - delay 10
-  - summon{type=T3_Melee_NoDrop;amount=1;noise=5} @Self
+  - summon{type=T3_Melee_NoDrop;amount=1;radius=5} @Self
   - delay 10
-  - summon{type=T3_Mage_NoDrop;amount=1;noise=5} @Self
+  - summon{type=T3_Mage_NoDrop;amount=1;radius=5} @Self
 T3_Summon_2: ### Summons High-level enemies
   Skills:
   - message{m="<mob.name> &fEnough trifling! Succumb to the wrath of the Frost Legion!"} @PlayersInRadius{r=50}
   - delay 10
-  - summon{type=T3_Melee_NoDrop;amount=2;noise=5} @Self
+  - summon{type=T3_Melee_NoDrop;amount=2;radius=5} @Self
   - delay 10
-  - summon{type=T3_Mage_NoDrop;amount=2;noise=5} @Self
+  - summon{type=T3_Mage_NoDrop;amount=2;radius=5} @Self
   - delay 10
-  - summon{type=T3_MiniBoss_NoDrop;amount=1;noise=5} @Self
+  - summon{type=T3_MiniBoss_NoDrop;amount=1;radius=5} @Self
 T3_FrostNova: ### Freezes enemies in radius
   Skills:
   - effect:sound{s=entity.wither.ambient;v=2;p=0}

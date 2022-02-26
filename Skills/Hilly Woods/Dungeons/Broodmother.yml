@@ -54,7 +54,7 @@ BroodmotherWebBolt-Tick:
 BroodmotherWebBolt-Hit:
   Skills:
   - damage{a=10} @target
-  - effect:blockmask{m=COBWEB;r=2;d=80;noair=false;onlyair=true;noise=5} @target
+  - effect:blockmask{m=COBWEB;r=2;d=80;noair=false;onlyair=true;radius=5} @target
 
 BroodmotherNest:
   Skills:

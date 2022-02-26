@@ -108,7 +108,7 @@ LB4_Summon: ### Summons Tornado Pointer Mobs.
   Skills:
   - message{m="<mob.name> &eEnough! Now you shall perish in the storm!"} @PlayersInRadius{r=25}
   - delay 10
-  - summon{type=TornadoPointer;amount=1;noise=5} @Self
+  - summon{type=TornadoPointer;amount=1;radius=5} @Self
 ### COMPOSITE SKILLS
 LB4_Phase1: ### PHASE 1 COMPOSITE
   Skills:

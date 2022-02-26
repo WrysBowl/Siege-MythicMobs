@@ -95,7 +95,7 @@ LB5_Drag_S: ### Sounds for the skill
   - effect:sound{s=entity.wither.death;v=0.5;p=0}
 LB5_Summon:
   Skills:
-  - summon{type=BloodPointer;amount=1;noise=5} @Self
+  - summon{type=BloodPointer;amount=1;radius=5} @Self
 ### PHASES
 LB5_Phase_1:
   Skills:

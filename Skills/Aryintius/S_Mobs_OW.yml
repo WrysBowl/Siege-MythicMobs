@@ -110,20 +110,20 @@ OWP-Hit:
 ###
 OW_Summon_1:
   Skills:
-  - summon{type=OpenZ1;amount=5;noise=5} @Self
+  - summon{type=OpenZ1;amount=5;radius=5} @Self
   - delay 10
-  - summon{type=OpenS1;amount=5;noise=5} @Self
+  - summon{type=OpenS1;amount=5;radius=5} @Self
   - delay 10
-  - summon{type=OpenSP1;amount=3;noise=5} @Self
+  - summon{type=OpenSP1;amount=3;radius=5} @Self
 OW_Summon_2:
   Skills:
-  - summon{type=OpenZ2;amount=5;noise=8} @Self
+  - summon{type=OpenZ2;amount=5;radius=8} @Self
   - delay 10
-  - summon{type=OpenS2;amount=5;noise=8} @Self
+  - summon{type=OpenS2;amount=5;radius=8} @Self
   - delay 10
-  - summon{type=OpenZ2M;amount=3;noise=8} @Self
+  - summon{type=OpenZ2M;amount=3;radius=8} @Self
 OW_Summon_3:
   Skills:
-  - summon{type=OpenZ3;amount=3;noise=12} @Self
+  - summon{type=OpenZ3;amount=3;radius=12} @Self
   - delay 10
-  - summon{type=OpenZ3M;amount=1;noise=12} @Self
+  - summon{type=OpenZ3M;amount=1;radius=12} @Self

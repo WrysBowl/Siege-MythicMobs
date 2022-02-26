@@ -53,11 +53,11 @@ T2B-Hit:
 ### AREA SKILLS ------------------------------------------------
 T2_MeteorShower:
   Skills:
-  - summon{m=T2_MeteorPointer;a=15;r=30;yu=true;yr=10}
+  - summon{type=T2_MeteorPointer;a=15;r=30;yu=true;yr=10}
   - delay 20
-  - summon{m=T2_MeteorPointer;a=15;r=30;yu=true;yr=10}
+  - summon{type=T2_MeteorPointer;a=15;r=30;yu=true;yr=10}
   - delay 20
-  - summon{m=T2_MeteorPointer;a=15;r=30;yu=true;yr=10}
+  - summon{type=T2_MeteorPointer;a=15;r=30;yu=true;yr=10}
 T2_Meteor:
   Skills:
   - effect:sound{s=entity.blaze.shoot;v=0.5;p=0} @Self
@@ -68,7 +68,7 @@ T2_MeteorTick:
   - effect:particles{p=largesmoke;a=3;vS=0.75;hS=0.75} @Origin
 T2_MeteorEnd:
   Skills:
-  - summon{m=T2_MeteorPointer2;a=1;r=0} @Origin
+  - summon{type=T2_MeteorPointer2;a=1;r=0} @Origin
 T2_MeteorExplosion:
   Skills:
   - effect:sound{s=entity.generic.explode;v=1;p=0} @self

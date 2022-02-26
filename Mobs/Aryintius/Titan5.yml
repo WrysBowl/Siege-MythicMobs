@@ -28,11 +28,11 @@ Titan5:
   - skill{s=T5_Missile} @NearestPlayer{r=50} ~onTimer:40 >50%
   - skill{s=T5_Blast} @NearestPlayer{r=50} ~onTimer:55 >50%
   - skill{s=T5_Storm} @Self ~onTimer:420 >50%
-  - summon{type=T5_Pointer_2;amount=1;noise=0} @Self ~onTimer:600 >50%
+  - summon{type=T5_Pointer_2;amount=1;radius=0} @Self ~onTimer:600 >50%
 ### PHASE 2
   - skill{s=T5_RapidMissiles} @NearestPlayer{r=50} ~onTimer:40 <50%
   - skill{s=T5_RapidBlast} @NearestPlayer{r=50} ~onTimer:55 <50%
-  - summon{type=T5_Pointer_2;amount=1;noise=0} @Self ~onTimer:300 <50%
+  - summon{type=T5_Pointer_2;amount=1;radius=0} @Self ~onTimer:300 <50%
   - skill{s=T5_Storm} @Self ~onTimer:300 <50%
 ### DEATH
   - message{m="<mob.name> &fThe storm ends... I can see the daylight once again..."} @PlayersInRadius{r=30} ~onDeath

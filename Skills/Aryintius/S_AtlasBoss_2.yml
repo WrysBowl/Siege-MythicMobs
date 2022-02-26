@@ -79,11 +79,11 @@ A2_Phase_1: ### Phase 1 Attack
   - delay 10
   - skill{s=A2_Blast}
   - delay 10
-  - summon{type=ShaperPointer2;amount=1;noise=12} @Self
+  - summon{type=ShaperPointer2;amount=1;radius=12} @Self
   - delay 10
-  - summon{type=ShaperPointer2;amount=1;noise=12} @Self
+  - summon{type=ShaperPointer2;amount=1;radius=12} @Self
   - delay 10
-  - summon{type=ShaperPointer2;amount=1;noise=12} @Self
+  - summon{type=ShaperPointer2;amount=1;radius=12} @Self
 A2_Phase_2: ### Phase 2 Attack
   Cooldown: 10
   Conditions:
@@ -112,8 +112,8 @@ A2_Phase_2: ### Phase 2 Attack
   - delay 5
   - skill{s=A2_Blast}
   - delay 20
-  - summon{type=ShaperPointer2;amount=2;noise=15} @Self
+  - summon{type=ShaperPointer2;amount=2;radius=15} @Self
   - delay 10
-  - summon{type=ShaperPointer2;amount=2;noise=15} @Self
+  - summon{type=ShaperPointer2;amount=2;radius=15} @Self
   - delay 10
-  - summon{type=ShaperPointer2;amount=2;noise=15} @Self
+  - summon{type=ShaperPointer2;amount=2;radius=15} @Self

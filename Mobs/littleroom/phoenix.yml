@@ -120,7 +120,7 @@ phoenixFLAMETHROWERFX_small:
     Marker: true
     #ApplyInvisibility: true
   Skills:
-  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;noise=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
+  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;radius=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
   - damage{a=1} @PIR{r=4} ~onTimer:1
   - ignite{ticks=60} @PIR{r=4} ~onTimer:1
   - skill{s=phoenixFLAMETHROWERFXSPAWN_small} @self ~onSpawn
@@ -135,7 +135,7 @@ phoenixFLAMETHROWERFX_medium:
     Marker: true
     #ApplyInvisibility: true
   Skills:
-  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;noise=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
+  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;radius=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
   - damage{a=1} @PIR{r=4} ~onTimer:1
   - ignite{ticks=60} @PIR{r=4} ~onTimer:1
   - skill{s=phoenixFLAMETHROWERFXSPAWN_medium} @self ~onSpawn
@@ -149,7 +149,7 @@ phoenixFLAMETHROWERFX_large:
     Invisible: true
     Marker: true
   Skills:
-  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;noise=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
+  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;radius=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
   - damage{a=1} @PIR{r=4} ~onTimer:1
   - ignite{ticks=60} @PIR{r=4} ~onTimer:1
   - skill{s=phoenixFLAMETHROWERFXSPAWN_large} @self ~onSpawn
@@ -165,7 +165,7 @@ phoenixFLAMETHROWERFX_xlarge:
     Marker: true
     #ApplyInvisibility: true
   Skills:
-  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;noise=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
+  - skill{s=phoenixFLAMETHROWERblockfire} @BlocksNearOrigin{radius=1;radiusy=0;radius=0;shape=cube;onlyair=false;noair=true} ~onTimer:2
   - damage{a=1} @PIR{r=4} ~onTimer:1
   - ignite{ticks=60} @PIR{r=4} ~onTimer:1
   - skill{s=phoenixFLAMETHROWERFXSPAWN_xlarge} @self ~onSpawn

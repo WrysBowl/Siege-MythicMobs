@@ -3,7 +3,7 @@ LB1Slam:
   Conditions:
   - targetinlineofsight true
   Skills:
-  - leap{velocity=400;noise=0} @target
+  - leap{velocity=400;radius=0} @target
   - delay 10
   - jump{velocity=-100}
   - effect:explosion @self

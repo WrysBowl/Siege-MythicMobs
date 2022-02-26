@@ -19,11 +19,11 @@ SummonSkeletons:
   Skills:
   - message{m="<mob.name><&co> Arise, my minions!"} @PlayersInRadius{r=40}
   - delay 20
-  - summon{type=SkeletalMinion;amount=2;noise=5} @Self
+  - summon{type=SkeletalMinion;amount=2;radius=5} @Self
   - delay 20
-  - summon{type=SkeletalMinion;amount=2;noise=5} @Self
+  - summon{type=SkeletalMinion;amount=2;radius=5} @Self
   - delay 20
-  - summon{type=SkeletalMinion;amount=2;noise=5} @Self
+  - summon{type=SkeletalMinion;amount=2;radius=5} @Self
 AngrySludgePoison:
   Cooldown: 10
   Skills:

@@ -95,6 +95,5 @@ gokartSLOW_GRASS:
   - onblock{b=GRASS_BLOCK} true
   - ismoving true
   Skills:
-  - effect:blockmask{m=GRASS_PATH;r=2;d=60} @self
   - sound{s=minecraft:block.grass.break;v=0.5} @self
   - potion{type=SLOW;duration=10;level=4} @self

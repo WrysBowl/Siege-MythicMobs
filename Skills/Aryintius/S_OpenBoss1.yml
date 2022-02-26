@@ -81,25 +81,25 @@ OB1_Burst: ### Rapidfire burst
   - skill{s=OB1_SkillShot} @target
 OB1_SummonDeath: ### Summons explosions EVERYWHERE.
   Skills:
-  - summon{type=OB1_Explode;amount=3;noise=3} @Self
+  - summon{type=OB1_Explode;amount=3;radius=3} @Self
   - delay 5
-  - summon{type=OB1_Explode;amount=3;noise=6} @Self
+  - summon{type=OB1_Explode;amount=3;radius=6} @Self
   - delay 5
-  - summon{type=OB1_Explode;amount=3;noise=9} @Self
+  - summon{type=OB1_Explode;amount=3;radius=9} @Self
   - delay 5
-  - summon{type=OB1_Explode;amount=3;noise=12} @Self
+  - summon{type=OB1_Explode;amount=3;radius=12} @Self
   - delay 5
-  - summon{type=OB1_Explode;amount=3;noise=18} @Self
+  - summon{type=OB1_Explode;amount=3;radius=18} @Self
   - delay 5
-  - summon{type=OB1_Explode;amount=3;noise=18} @Self
+  - summon{type=OB1_Explode;amount=3;radius=18} @Self
   - delay 5
-  - summon{type=OB1_Explode;amount=3;noise=12} @Self
+  - summon{type=OB1_Explode;amount=3;radius=12} @Self
   - delay 5
-  - summon{type=OB1_Explode;amount=3;noise=9} @Self
+  - summon{type=OB1_Explode;amount=3;radius=9} @Self
   - delay 5
-  - summon{type=OB1_Explode;amount=3;noise=6} @Self
+  - summon{type=OB1_Explode;amount=3;radius=6} @Self
   - delay 5
-  - summon{type=OB1_Explode;amount=3;noise=3} @Self
+  - summon{type=OB1_Explode;amount=3;radius=3} @Self
 OB1_Attack_1: ### Attack 1
   Skills:
   - skill{s=OB1_Burst} @NearestPlayer{r=50}

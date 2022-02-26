@@ -31,7 +31,7 @@ SummonKef:
   Skills:
   - delay 20
   - message{m="<mob.name> &fAid me, brother!"} @PlayersInRadius{r=25}
-  - summon{type=Boss4;amount=1;noise=0} @Self
+  - summon{type=Boss4;amount=1;radius=0} @Self
 ### KEF SKILLS ---------------------------------------------------------
 Boss4Fire: ### Basic shot attack, used in composite skills.
   Conditions:

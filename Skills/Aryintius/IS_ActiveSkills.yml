@@ -78,10 +78,10 @@ BeaconSkill:
 BeaconSpawn:
   Cooldown: 60
   Skills:
-  - summon{type=HealingPointer;a=1;noise=0} @Self
+  - summon{type=HealingPointer;a=1;radius=0} @Self
 BeaconSpawn_NoCD:
   Skills:
-  - summon{type=HealingPointer;a=1;noise=2} @Self
+  - summon{type=HealingPointer;a=1;radius=2} @Self
 Warcry_Strength_Util:
   Skills:
   - potion{type=INCREASE_DAMAGE;duration=200;lvl=199;overwrite=true}

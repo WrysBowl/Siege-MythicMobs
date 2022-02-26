@@ -50,7 +50,7 @@ LANDdragon:
   - altitude{a=>4} true
   Skills:
   - runaitargetselector{target=players}
-  - skill{s=WATERCHECK;repeat=5;repeatInterval=30} @BlocksInRadius{radius=3;radiusy=32;noise=0;shape=cube;onlyair=false;noair=true}
+  - skill{s=WATERCHECK;repeat=5;repeatInterval=30} @BlocksInRadius{radius=3;radiusy=32;radius=0;shape=cube;onlyair=false;noair=true}
 
 WATERCHECK:
   Conditions:
@@ -114,7 +114,7 @@ FLYINGpathcheck:
 FLYINGpathcheckTOTEM:
   Skills:
   #- effect:particlesphere{particle=reddust;color=#FF00FF;amount=200;radius=2}
-  - skill{s=FLYINGobstruction} @BlocksInRadius{radius=3;radiusy=1;noise=0;shape=sphere;onlyair=false;noair=true}
+  - skill{s=FLYINGobstruction} @BlocksInRadius{radius=3;radiusy=1;radius=0;shape=sphere;onlyair=false;noair=true}
   
 FLYINGobstruction:
   TargetConditions:

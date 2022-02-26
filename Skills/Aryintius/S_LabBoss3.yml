@@ -3,7 +3,7 @@ LB3_Summon:
   Skills:
   - message{m="<mob.name> &fYou may hide from me, but never my totems!"} @PlayersInRadius{r=25}
   - delay 10
-  - summon{type=LabBoss3_Minion_1;amount=1;noise=5} @Self
+  - summon{type=LabBoss3_Minion_1;amount=1;radius=5} @Self
 LB3_Shot: ### Basic Magic Attack
   Conditions:
   - targetinlineofsight true

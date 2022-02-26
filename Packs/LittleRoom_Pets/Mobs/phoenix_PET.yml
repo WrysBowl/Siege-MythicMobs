@@ -54,7 +54,6 @@ phoenixFLAMETHROWERFX_smallPET:
     Invisible: true
     Marker: true
   Skills:
-  - ignite{ticks=40} @MIR{r=3}
   - skill{s=phoenixFLAMETHROWERFX_smallPET} @self ~onSpawn
   
 phoenixFLAMETHROWERFX_mediumPET:
@@ -65,5 +64,4 @@ phoenixFLAMETHROWERFX_mediumPET:
     Invisible: true
     Marker: true
   Skills:
-  - ignite{ticks=40} @MIR{r=3}
   - skill{s=phoenixFLAMETHROWERFX_mediumPET} @self ~onSpawn

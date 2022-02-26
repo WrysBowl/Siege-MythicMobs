@@ -183,7 +183,7 @@ TakeLethalDamageOnHit:
   - damage{a=1000}
 WaterBuff: ### Water Skill
   Conditions:
-  - inblock STATIONARY_WATER
+  - inblock WATER
   Skills:
   - potion{type=DAMAGE_RESISTANCE;duration=200;lvl=4;overwrite=true}
 Frightwalker: ### Frightwalker buff
