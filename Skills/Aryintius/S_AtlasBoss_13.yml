@@ -240,22 +240,22 @@ A13_Nova: ### Water Nova Slam Attack
   - effect:sound{s=entity.elder_guardian.curse;v=0.5;p=0} @PIR{r=25}
   - effect:sound{s=entity.enderdragon.growl;v=1;p=1} @PIR{r=25}
   - effect:particlesphere{particle=magicCrit;amount=500;r=10} @self
-  - damage{amount=25;pi=true;pk=true} @PIR{r=10}
+  - damage{amount=15;pi=true;pk=true} @PIR{r=10}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=400;r=8} @self
-  - damage{amount=25;pi=true;pk=true} @PIR{r=8}
+  - damage{amount=15;pi=true;pk=true} @PIR{r=8}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=300;r=6} @self
-  - damage{amount=25;pi=true;pk=true} @PIR{r=6}
+  - damage{amount=15;pi=true;pk=true} @PIR{r=6}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=200;r=4} @self
-  - damage{amount=25;pi=true;pk=true} @PIR{r=4}
+  - damage{amount=15;pi=true;pk=true} @PIR{r=4}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=150;r=3} @self
-  - damage{amount=25;pi=true;pk=true} @PIR{r=3}
+  - damage{amount=15;pi=true;pk=true} @PIR{r=3}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=100;r=2} @self
-  - damage{amount=25;pi=true;pk=true} @PIR{r=2}
+  - damage{amount=15;pi=true;pk=true} @PIR{r=2}
   - potion{type=BLINDNESS;lvl=0;duration=60;overwrite=true} @PIR{r=10}
   - potion{type=SLOW;lvl=3;duration=60;overwrite=true} @PIR{r=10}
 A13_Teleport:

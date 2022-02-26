@@ -50,19 +50,19 @@ A9_Nova: ### Water Nova Attack
   - effect:sound{s=entity.ghast.shoot;v=0.5;p=2} @PIR{r=25}
   - effect:sound{s=entity.ghast.shoot;v=0.5;p=0} @PIR{r=25}
   - effect:particlesphere{particle=magicCrit;amount=500;r=10} @self
-  - damage{amount=20;pi=true;pk=true} @PIR{r=10}
+  - damage{amount=10;pi=true;pk=true} @PIR{r=10}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=400;r=8} @self
-  - damage{amount=20;pi=true;pk=true} @PIR{r=8}
+  - damage{amount=10;pi=true;pk=true} @PIR{r=8}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=300;r=6} @self
-  - damage{amount=20;pi=true;pk=true} @PIR{r=6}
+  - damage{amount=10;pi=true;pk=true} @PIR{r=6}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=200;r=4} @self
-  - damage{amount=20;pi=true;pk=true} @PIR{r=4}
+  - damage{amount=10;pi=true;pk=true} @PIR{r=4}
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=100;r=2} @self
-  - damage{amount=20;pi=true;pk=true} @PIR{r=2}
+  - damage{amount=10;pi=true;pk=true} @PIR{r=2}
   - delay 2
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
 ### Phases

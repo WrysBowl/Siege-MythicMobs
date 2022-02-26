@@ -19,7 +19,7 @@ A14C-Tick:
   - effect:particles{p=witchMagic;amount=1;speed=0;hS=0.1;vS=0.1} @origin
 A14C-Hit:
   Skills:
-  - damage{amount=100;ia=true;pi=true;pk=true}
+  - damage{amount=50;ia=true;pi=true;pk=true}
 A14_Heavy: ### Death Bolt Attack
   Conditions:
   - targetinlineofsight true

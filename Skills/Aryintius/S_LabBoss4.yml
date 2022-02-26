@@ -42,7 +42,7 @@ LB4D-Tick:
   - effect:particles{p=largeexplode;a=1} @Origin
 LB4D-Hit:
   Skills:
-  - damage{a=40;pk=true}
+  - damage{a=20;pk=true}
 ### AREA SKILLS
 LB4_Tornado: ### Insane tornado attack.
   Skills:
@@ -50,51 +50,51 @@ LB4_Tornado: ### Insane tornado attack.
 LB4_TornadoX:
   Skills:
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=20;pk=true} @PIR{r=5}
+  - damage{a=15;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=20;pk=true} @PIR{r=5}
+  - damage{a=15;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=20;pk=true} @PIR{r=5}
+  - damage{a=15;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=20;pk=true} @PIR{r=5}
+  - damage{a=15;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=20;pk=true} @PIR{r=5}
+  - damage{a=15;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=35}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=35}
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=20;pk=true} @PIR{r=5}
+  - damage{a=15;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=20;pk=true} @PIR{r=5}
+  - damage{a=15;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=20;pk=true} @PIR{r=5}
+  - damage{a=15;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=20;pk=true} @PIR{r=5}
+  - damage{a=15;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=20;pk=true} @PIR{r=5}
+  - damage{a=15;pk=true} @PIR{r=5}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=1} @PIR{r=20}
   - effect:sound{s=entity.enderdragon.growl;v=0.25;p=0} @PIR{r=20}
 LB4_Drag: ### Generic drag attack.

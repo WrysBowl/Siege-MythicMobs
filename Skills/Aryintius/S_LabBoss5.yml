@@ -14,9 +14,9 @@ LB5B_Hit:
   Skills:
   - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
   - effect:sound{s=entity.generic.hurt;v=1;p=1}
-  - damage{a=10;ia=true;pi=true;pk=true}
+  - damage{a=5;ia=true;pi=true;pk=true}
   - delay 20
-  - damage{a=20;pk=true}
+  - damage{a=10;pk=true}
 LB5_Missile: ### Tracking Missile. Always hits for bleed damage.
   Conditions:
   - targetinlineofsight true

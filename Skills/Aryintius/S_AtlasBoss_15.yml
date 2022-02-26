@@ -67,7 +67,7 @@ A15_TPSlam: ### Yet another teleport slam
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
-  - damage{amount=50;ia=true;pi=true;pk=true} @PIR{r=5}
+  - damage{amount=30;ia=true;pi=true;pk=true} @PIR{r=5}
 A15_DeathNova:
   Skills:
   - effect:sound{s=entity.generic.explode;v=0.5;p=2}
@@ -76,7 +76,7 @@ A15_DeathNova:
   - effect:particlesphere{particle=reddust;amount=50;r=2} @self
   - effect:particlering{particle=reddust;radius=1;points=4;amount=1;hS=1;vS=0} @self
   - effect:particlering{particle=smoke;radius=1;points=4;amount=1;hS=1;vS=0} @self
-  - damage{amount=20;pi=true;pk=true} @PIR{r=2}
+  - damage{amount=15;pi=true;pk=true} @PIR{r=2}
   - delay 5
   - effect:sound{s=entity.generic.explode;v=0.5;p=2}
   - effect:sound{s=entity.generic.explode;v=0.5;p=1}
@@ -84,7 +84,7 @@ A15_DeathNova:
   - effect:particlesphere{particle=reddust;amount=100;r=4} @self
   - effect:particlering{particle=smoke;radius=4;points=25;amount=1;hS=1;vS=0} @self
   - effect:particlering{particle=reddust;radius=4;points=25;amount=1;hS=1;vS=0} @self
-  - damage{amount=20;pi=true;pk=true} @PIR{r=4}
+  - damage{amount=15;pi=true;pk=true} @PIR{r=4}
   - delay 5
   - effect:sound{s=entity.generic.explode;v=0.5;p=2}
   - effect:sound{s=entity.generic.explode;v=0.5;p=1}
@@ -92,7 +92,7 @@ A15_DeathNova:
   - effect:particlesphere{particle=reddust;amount=200;r=6} @self
   - effect:particlering{particle=smoke;radius=6;points=49;amount=1;hS=1;vS=0} @self
   - effect:particlering{particle=reddust;radius=6;points=49;amount=1;hS=1;vS=0} @self
-  - damage{amount=20;pi=true;pk=true} @PIR{r=6}
+  - damage{amount=15;pi=true;pk=true} @PIR{r=6}
   - delay 5
   - effect:sound{s=entity.generic.explode;v=0.5;p=2}
   - effect:sound{s=entity.generic.explode;v=0.5;p=1}
@@ -108,7 +108,7 @@ A15_DeathNova:
   - effect:particlesphere{particle=reddust;amount=400;r=10} @self
   - effect:particlering{particle=smoke;radius=10;points=121;amount=1;hS=1;vS=0} @self
   - effect:particlering{particle=reddust;radius=10;points=121;amount=1;hS=1;vS=0} @self
-  - damage{amount=20;pi=true;pk=true} @PIR{r=10}
+  - damage{amount=15;pi=true;pk=true} @PIR{r=10}
 A15_BleedNova:
   Skills:
   - effect:particlering{particle=reddust;radius=8;points=81;amount=1;hS=1;vS=0} @self

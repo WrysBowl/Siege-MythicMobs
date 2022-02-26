@@ -15,7 +15,7 @@ A12FB-Tick:
   - effect:particles{p=smoke;a=1;hS=0.15;vS=0.15} @Origin
 A12FB-Hit:
   Skills:
-  - damage{a=25;pi=true;pk=true}
+  - damage{a=15;pi=true;pk=true}
 A12_Missile:
   Conditions:
   - targetinlineofsight true
@@ -40,7 +40,7 @@ A12M-Tick:
   - effect:particles{p=largesmoke;a=1;hS=0.5;vS=0.5} @Origin
 A12M-Hit:
   Skills:
-  - damage{a=20;pk=true}
+  - damage{a=10;pk=true}
   - skill{s=Ignite_Title}
 ### COMPOSITE SKILLS -------------------------------------------
 A12_RapidBlast:
@@ -161,49 +161,49 @@ A12_TPSlam:
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
-  - damage{amount=10;ia=true;pi=true;pk=true} @PIR{r=5}
+  - damage{amount=5;ia=true;pi=true;pk=true} @PIR{r=5}
 A12_LavaPlains:
   Skills:
   - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
   - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
-  - damage{amount=10;pk=true} @PIR{r=15}
+  - damage{amount=5;pk=true} @PIR{r=15}
   - effect:sound{s=entity.generic.explode;v=2;p=0}
   - delay 20
   - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
   - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
-  - damage{amount=10;pk=true} @PIR{r=15}
+  - damage{amount=5;pk=true} @PIR{r=15}
   - effect:sound{s=entity.generic.explode;v=2;p=0}
   - delay 20
   - effect:particles{p=lava;amount=100;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
   - effect:particles{p=flame;amount=500;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
-  - damage{amount=10;pk=true} @PIR{r=15}
+  - damage{amount=5;pk=true} @PIR{r=15}
   - effect:sound{s=entity.generic.explode;v=2;p=0}
 A12_FireNova:
   Skills:
   - effect:sound{s=entity.generic.explode;v=0.5;p=2}
   - effect:sound{s=entity.generic.explode;v=0.5;p=1}
   - effect:particlesphere{particle=flame;amount=400;r=10} @self
-  - damage{amount=10;pk=true} @PIR{r=10}
+  - damage{amount=5;pk=true} @PIR{r=10}
   - delay 10
   - effect:sound{s=entity.generic.explode;v=0.5;p=2}
   - effect:sound{s=entity.generic.explode;v=0.5;p=1}
   - effect:particlesphere{particle=flame;amount=300;r=8} @self
-  - damage{amount=10;pk=true} @PIR{r=8}
+  - damage{amount=5;pk=true} @PIR{r=8}
   - delay 10
   - effect:sound{s=entity.generic.explode;v=0.5;p=2}
   - effect:sound{s=entity.generic.explode;v=0.5;p=1}
   - effect:particlesphere{particle=flame;amount=200;r=6} @self
-  - damage{amount=10;pk=true} @PIR{r=6}
+  - damage{amount=5;pk=true} @PIR{r=6}
   - delay 10
   - effect:sound{s=entity.generic.explode;v=0.5;p=2}
   - effect:sound{s=entity.generic.explode;v=0.5;p=1}
   - effect:particlesphere{particle=flame;amount=100;r=4} @self
-  - damage{amount=10;pk=true} @PIR{r=4}
+  - damage{amount=5;pk=true} @PIR{r=4}
   - delay 10
   - effect:sound{s=entity.generic.explode;v=0.5;p=2}
   - effect:sound{s=entity.generic.explode;v=0.5;p=1}
   - effect:particlesphere{particle=flame;amount=50;r=2} @self
-  - damage{amount=10;pk=true} @PIR{r=2}
+  - damage{amount=5;pk=true} @PIR{r=2}
   - delay 10
   - skill{s=Ignite_Title} @PIR{r=10}
 ### PHASES -----------------------------------------------------
