@@ -39,11 +39,11 @@ Poison_120:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 10
-  - damage{a=100;pi=true;pk=true}
+  - damage{amount=10;pi=true;pk=true}
   - delay 10
-  - damage{a=100;pi=true;pk=true}
+  - damage{amount=10;pi=true;pk=true}
   - delay 10
-  - damage{a=100;pi=true;pk=true}
+  - damage{amount=10;pi=true;pk=true}
 Poison_150:
   Cooldown: 2
   Skills:
@@ -87,15 +87,15 @@ Poison_300X:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 5
-  - damage{a=150;pi=true;pk=true}
+  - damage{amount=15;pi=true;pk=true}
   - delay 5
-  - damage{a=150;pi=true;pk=true}
+  - damage{amount=15;pi=true;pk=true}
   - delay 5
-  - damage{a=150;pi=true;pk=true}
+  - damage{amount=15;pi=true;pk=true}
   - delay 5
-  - damage{a=150;pi=true;pk=true}
+  - damage{amount=15;pi=true;pk=true}
   - delay 5
-  - damage{a=150;pi=true;pk=true}
+  - damage{amount=15;pi=true;pk=true}
 PoisonRNG_1: ### RNG Poison
   Cooldown: 3
   Skills:
@@ -361,7 +361,7 @@ Bleed_500X:
   - delay 5
   - damage{a=10;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=150;ia=true;pi=true;pk=true}
+  - damage{amount=15;ia=true;pi=true;pk=true}
   - delay 5
   - damage{a=20;ia=true;pi=true;pk=true}
   - delay 5
@@ -403,7 +403,7 @@ Venom_2:
   - delay 5
   - damage{a=10;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=150;ia=true;pi=true;pk=true}
+  - damage{amount=15;ia=true;pi=true;pk=true}
   - delay 5
   - damage{a=20;ia=true;pi=true;pk=true}
   - delay 5
@@ -416,7 +416,7 @@ SwampBow_Skill:
   - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
   - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
   - delay 5
-  - damage{a=150;ia=true;pi=true;pk=true}
+  - damage{amount=15;ia=true;pi=true;pk=true}
   - delay 5
   - damage{a=25;ia=true;pi=true;pk=true}
   - delay 5

@@ -150,7 +150,7 @@ Smite-Tick:
   - effect:particles{p=explode;amount=20;speed=0;hS=0.2;vS=0.2} @origin
 Smite-Hit:
   Skills:
-  - damage{a=150;pk=true}
+  - damage{amount=15;pk=true}
   - potion{type=WEAKNESS;duration=60;lvl=10}
   - sendtitle{title="&4&lCrippled";subtitle="&fWeakened attack damage";d=20} @target
 TidalWave: ## Boss5 blind attack

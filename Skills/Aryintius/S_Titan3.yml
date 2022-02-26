@@ -27,7 +27,7 @@ T3B-Tick:
   - effect:particles{p=largeexplode;a=1} @Origin
 T3B-Hit:
   Skills:
-  - damage{a=250;pk=true}
+  - damage{amount=25;pk=true}
   - skill{s=InflictFreeze}
 ## FROST TELEPORT
 T3_Teleport:
@@ -70,37 +70,37 @@ T3_FrostNova: ### Freezes enemies in radius
   - damage{amount=180;pk=true} @PIR{r=4}
   - delay 2
   - effect:particlesphere{particle=cloud;amount=100;r=2} @self
-  - damage{amount=250;pk=true} @PIR{r=2}
+  - damage{amount=20;pk=true} @PIR{r=2}
   - delay 2
   - skill{s=InflictFreeze} @PIR{r=10}
 T3_IcePlains: ### Deals massive damage in radius
   Skills:
   - effect:particles{p=snowballpoof;amount=2000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
-  - damage{amount=250;pk=true} @PIR{r=15}
+  - damage{amount=20;pk=true} @PIR{r=15}
   - effect:sound{s=block.glass.break;v=2;p=0}
   - effect:sound{s=block.glass.break;v=2;p=1}
   - effect:sound{s=block.glass.break;v=2;p=2}
   - delay 10
   - effect:particles{p=snowballpoof;amount=2000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
-  - damage{amount=250;pk=true} @PIR{r=15}
+  - damage{amount=20;pk=true} @PIR{r=15}
   - effect:sound{s=block.glass.break;v=2;p=0}
   - effect:sound{s=block.glass.break;v=2;p=1}
   - effect:sound{s=block.glass.break;v=2;p=2}
   - delay 10
   - effect:particles{p=snowballpoof;amount=2000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
-  - damage{amount=250;pk=true} @PIR{r=15}
+  - damage{amount=20;pk=true} @PIR{r=15}
   - effect:sound{s=block.glass.break;v=2;p=0}
   - effect:sound{s=block.glass.break;v=2;p=1}
   - effect:sound{s=block.glass.break;v=2;p=2}
   - delay 10
   - effect:particles{p=snowballpoof;amount=2000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
-  - damage{amount=250;pk=true} @PIR{r=15}
+  - damage{amount=20;pk=true} @PIR{r=15}
   - effect:sound{s=block.glass.break;v=2;p=0}
   - effect:sound{s=block.glass.break;v=2;p=1}
   - effect:sound{s=block.glass.break;v=2;p=2}
   - delay 10
   - effect:particles{p=snowballpoof;amount=2000;hSpread=15;ySpread=1;speed=0;yOFfset=0.5} @Self
-  - damage{amount=250;pk=true} @PIR{r=15}
+  - damage{amount=20;pk=true} @PIR{r=15}
   - effect:sound{s=block.glass.break;v=2;p=0}
   - effect:sound{s=block.glass.break;v=2;p=1}
   - effect:sound{s=block.glass.break;v=2;p=2}

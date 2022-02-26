@@ -76,4 +76,4 @@ T7_MiniBoss:
   ### SPAWN/UTILS
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
   ### SKILLS
-  - damage{a=2000;pi=true;pk=true} @PIR{r=3} ~onTimer:20
+  - damage{amount=30;pi=true;pk=true} @PIR{r=3} ~onTimer:20

@@ -377,7 +377,7 @@ ChaosES_8:
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.07;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.07;p=2}
-  - damage{a=150;ia=true;pi=true;pk=true} @target
+  - damage{amount=15;ia=true;pi=true;pk=true} @target
 ChaosES_9:
   Conditions:
   - haspotioneffect{t=ABSORPTION;level=>38} true

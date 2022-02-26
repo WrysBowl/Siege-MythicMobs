@@ -12,7 +12,7 @@ NovaBlade_Tick:
   - effect:particles{p=flame;amount=1;speed=0;hS=0.1;vS=0.1} @origin
 NovaBlade_Hit:
   Skills:
-  - damage{amount=200;ia=true;pi=true;pk=true}
+  - damage{amount=20;ia=true;pi=true;pk=true}
 Bladestorm_Skill: ### Blade storm
   Cooldown: 2
   Conditions:
@@ -51,7 +51,7 @@ Bladestorm_Tick:
   - effect:particles{p=sweepAttack;amount=1;speed=0;hS=0.1;vS=0.1} @origin
 Bladestorm_Hit:
   Skills:
-  - damage{amount=150;ia=true;pi=true;pk=true}
+  - damage{amount=15;ia=true;pi=true;pk=true}
 RestoreNearby: ### Restores full health in radius
   Skills:
   - effect:particlering{particle=flame;radius=5;points=25;amount=1;hS=1;vS=0}
@@ -180,7 +180,7 @@ TakeLethalDamageOnHit:
   - delay 5
   - effect:sound{s=entity.wither.death;v=0.5;p=2}
   - lightning @Self
-  - damage{a=1000}
+  - damage{amount=20}
 WaterBuff: ### Water Skill
   Conditions:
   - inblock WATER

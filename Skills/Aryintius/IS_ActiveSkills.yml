@@ -54,7 +54,7 @@ MeleeCrit_Chaos:
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.15;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.15;p=2}
-  - damage{a=150;ia=true;pi=true;pk=true}
+  - damage{amount=15;ia=true;pi=true;pk=true}
 BeaconHeal: ### Super Healing Beacon
   Skills:
   - effect:particlesphere{particle=happyVillager;amount=400;r=8}

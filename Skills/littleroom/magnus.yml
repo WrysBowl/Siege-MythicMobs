@@ -199,7 +199,7 @@ magnusLAND:
   
 magnusLANDDAMAGE:
   Skills:
-  - damage{a=100}
+  - damage{amount=10}
   
 magnusGROUNDSHAKE:
   TargetConditions:

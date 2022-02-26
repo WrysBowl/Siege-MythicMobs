@@ -44,7 +44,7 @@ T8B-Tick:
   - effect:particles{p=reddust;color=#FF00FF;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 T8B-Hit:
   Skills:
-  - damage{a=200;pk=true}
+  - damage{amount=20;pk=true}
 
 T8_NovaBlast: ### Radial Nova attack.
   Skills:
@@ -62,33 +62,33 @@ T8_NovaBlast: ### Radial Nova attack.
   - effect:particlesphere{particle=largesmoke;amount=20;r=4} @self
   - delay 2
   - effect:particlesphere{particle=largesmoke;amount=35;r=5} @self
-  - damage{a=250;pi=true} @PIR{r=8}
+  - damage{amount=25;pi=true} @PIR{r=8}
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
 
 T8_SUCC: ### BIG SUCC
   Skills:
   - effect:enderbeam{d=60;y=0}
-  - damage{a=200;pi=true;pk=true}
+  - damage{amount=20;pi=true;pk=true}
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
   - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
   - heal{a=500} @Self
   - delay 15
-  - damage{a=200;pi=true;pk=true}
+  - damage{amount=20;pi=true;pk=true}
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
   - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
   - heal{a=500} @Self
   - delay 15
-  - damage{a=200;pi=true;pk=true}
+  - damage{amount=20;pi=true;pk=true}
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
   - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
   - heal{a=500} @Self
   - delay 15
-  - damage{a=200;pi=true;pk=true}
+  - damage{amount=20;pi=true;pk=true}
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
   - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
   - heal{a=500} @Self
   - delay 15
-  - damage{a=200;pi=true;pk=true}
+  - damage{amount=20;pi=true;pk=true}
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2}
   - effect:particlering{particle=smoke;radius=5;points=36;amount=1;hS=1;vS=0} @self
   - heal{a=500} @Self
@@ -254,4 +254,4 @@ T8W-Tick:
   - effect:particles{p=smoke;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 T8W-Hit:
   Skills:
-  - damage{a=250;pi=true;pk=true}
+  - damage{amount=25;pi=true;pk=true}

@@ -71,7 +71,7 @@ SetBonus_Ignite:
   TargetConditions:
   - haspotioneffect{t=LUCK} true
   Skills:
-  - damage{a=200;pk=true} @target
+  - damage{amount=20;pk=true} @target
   - effect:sound{s=entity.blaze.hurt;p=1;v=0.5}
 Infernal_Bleed:
   Cooldown: 2
@@ -269,7 +269,7 @@ SetBonus_JUGG:
   TargetConditions:
   - haspotioneffect{t=LUCK} true
   Skills:
-  - damage{a=800;pk=true} @target
+  - damage{amount=80;pk=true} @target
   - effect:sound{s=entity.zombie.break_door_wood;p=1;v=0.05}
 JUGG_HelmSkill:
   TargetConditions:
