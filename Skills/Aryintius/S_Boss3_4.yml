@@ -26,19 +26,12 @@ Boss3Drag:
   - effect:particlesphere{particle=flame;amount=80;r=5} @self
   - effect:sound{s=entity.enderdragon.growl;v=0.5;p=2}
   - effect:sound{s=entity.enderdragon.growl;v=0.5;p=1}
-  - randommessage
-      {
-      m=
-      "<mob.name> &fDid you really believe it would be that easy?",
-      "<mob.name> &fDon't be shy! We are having a feast... and you're the main course!",
-      "<mob.name> &fEscaping, are we? No, no! There is no escape. Not while I still live.",
-      } @PlayersInRadius{r=10}
   - forcepull{spread=0} @PIR{r=10}
 SummonKef:
   Skills:
   - delay 20
   - message{m="<mob.name> &fAid me, brother!"} @PlayersInRadius{r=25}
-  - summon{mob=Boss4;amount=1;noise=0} @Self
+  - summon{type=Boss4;amount=1;noise=0} @Self
 ### KEF SKILLS ---------------------------------------------------------
 Boss4Fire: ### Basic shot attack, used in composite skills.
   Conditions:

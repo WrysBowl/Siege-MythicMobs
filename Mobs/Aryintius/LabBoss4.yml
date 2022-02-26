@@ -23,13 +23,6 @@ LabBoss4:
 ### SPAWN
   - message{m="<mob.name> &fI alone control the winds. Kneel before me!"} @PlayersInRadius{r=50} ~onSpawn
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
-  - randommessage
-      {
-      m=
-      "<mob.name> &fThe winds shall see to it that your existence is no more!",
-      "<mob.name> &fSuch weapons cannot harm me, mortal, for I am divine!",
-      "<mob.name> &fYour death will make a great prize for the Architect!";
-      } @PIR{r=50} ~onTimer:300
   - skill{s=CancelDespawn} @Self ~onTimer:20
 ### PHASE 1
   - skill{s=LB4_Drag} @self ~onTimer:100

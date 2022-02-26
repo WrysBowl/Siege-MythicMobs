@@ -29,15 +29,6 @@ Titan4:
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
   - effect:sound{s=entity.ghast.hurt;p=1.5;v=1} @self ~onDamaged
   - effect:sound{s=entity.vex.hurt;p=0.2;v=1} @self ~onDamaged
-  - randommessage
-      {
-      m=
-      "<mob.name> &7Bow down to the mightiest of the Titans!",
-      "<mob.name> &7Cower before the face of your unmaking!",
-      "<mob.name> &7Give in to death's embrace!",
-      "<mob.name> &7Darkness rises as my shadows strike!",
-      "<mob.name> &7Your soul will make the grandest of trophies!";
-      } @PIR{r=30} ~onTimer:300
 ### Phase 1
   - skill{s=T4_Phase_1} @NearestPlayer{r=50} ~onTimer:20 >50%
 ### Phase 2

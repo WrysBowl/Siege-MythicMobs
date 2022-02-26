@@ -22,14 +22,6 @@ LabBoss5:
 ### SPAWN
   - message{m="<mob.name> &fBlood... yes... delicious blood!"} @PlayersInRadius{r=50} ~onSpawn
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
-  - randommessage
-      {
-      m=
-      "<mob.name> &fYour blood and soul belong to me!",
-      "<mob.name> &fI shall devour your lifeforce!",
-      "<mob.name> &fMy maw will be the last thing you see!",
-      "<mob.name> &fDie, you worthless leech!",
-      } @PlayersInRadius{r=30} ~onTimer:300
 ### PHASE 1
   - skill{s=LB5_Phase_1} @PIR{r=30} ~onTimer:100 >50%
   - skill{s=LB5_Drag} @PIR{r=30} ~onTimer:250 >50%

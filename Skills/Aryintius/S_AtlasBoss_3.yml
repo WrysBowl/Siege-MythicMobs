@@ -47,13 +47,6 @@ A3_Knockback: ### Knockback attack.
 A3_Summon: ### Summons a brood of spiders.
   Cooldown: 20
   Skills:
-  - randommessage
-      {
-      m=
-      "<mob.name> &fFeast on this maggot, my children!",
-      "<mob.name> &fYour corpse will make a wonderful meal!",
-      "<mob.name> &fYessss... so much blood...";
-      } @PIR{r=25}
   - summon{type=A3_Brood;amount=3;radius=8;yu=true} @Self
 A3_Phase_1: ### Phase 1 Attack
   Cooldown: 10

@@ -31,17 +31,10 @@ AtlasBoss_5:
 ### SPAWN/UTILS
   - message{m="<mob.name> &fNone shall disturb these ancient bones."} @PlayersInRadius{r=30} ~onSpawn
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
-  - randommessage
-      {
-      m=
-      "<mob.name> &7These dunes shall swallow you whole!",
-      "<mob.name> &7I will erode your soul into dust!",
-      "<mob.name> &7The power of the winds will destroy you!";
-      } @PIR{r=30} ~onTimer:300
   - effect:sound{s=entity.wither.hurt;p=2.0;v=0.25} @self ~onDamaged
   - effect:sound{s=entity.blaze.hurt;p=2.0;v=0.5} @self ~onDamaged
 ### PHASE 1
-  - summon{mob=A5_TornadoPointer;amount=1;radius=10;yu=true} @Self ~onTimer:400
+  - summon{type=A5_TornadoPointer;amount=1;radius=10;yu=true} @Self ~onTimer:400
   - skill{s=A5_Phase_1} @NearestPlayer{r=30} ~onTimer:10 >60%
 ### PHASE 2
   - skill{s=A5_Phase_2} @NearestPlayer{r=30} ~onTimer:10 <60%

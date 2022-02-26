@@ -32,15 +32,6 @@ Titan8:
   - message{m="<mob.name> &fMy masterpiece remains unfinished, but your soul shall make for an excellent centerpiece!"} @PlayersInRadius{r=50} ~onSpawn
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
   - potion{type=FIRE_RESISTANCE;duration=999999;level=0;overwrite=true} @Self ~onSpawn
-  - randommessage
-      {
-      m=
-      "<mob.name> &7You cannot escape from the tapestry of fate!",
-      "<mob.name> &7The end has come for you, mortal! I savor your final moments!",
-      "<mob.name> &7Any last words before I end your pitiful life?",
-      "<mob.name> &7There is nowhere to hide from fate! Accept your inevitable demise!",
-      "<mob.name> &7Will you beg for mercy when I tear your soul from your body?";
-      } @PIR{r=50} ~onTimer:300
   - effect:sound{s=entity.irongolem.hurt;p=0.5;v=0.5} @self ~onDamaged
   - effect:sound{s=entity.skeleton.hurt;p=0.5;v=0.5} @self ~onDamaged
 ### PHASE 1

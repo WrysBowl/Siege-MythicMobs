@@ -40,13 +40,6 @@ LB5_Drag: ### Massive DoT + Slowness
   Skills:
   - effect:sound{s=entity.wither.death;v=0.5;p=1}
   - effect:sound{s=entity.wither.death;v=0.5;p=0}
-  - randommessage
-      {
-      m=
-      "<mob.name> &fI shall bathe in your death!",
-      "<mob.name> &fDrown in your own sea of suffering!",
-      "<mob.name> &fGive me your face!",
-      } @PlayersInRadius{r=10}
   - skill{s=LB5_Drag_P} @self
   - skill{s=LB5_Drag_D} @PIR{r=10}
   - delay 10
@@ -102,7 +95,7 @@ LB5_Drag_S: ### Sounds for the skill
   - effect:sound{s=entity.wither.death;v=0.5;p=0}
 LB5_Summon:
   Skills:
-  - summon{mob=BloodPointer;amount=1;noise=5} @Self
+  - summon{type=BloodPointer;amount=1;noise=5} @Self
 ### PHASES
 LB5_Phase_1:
   Skills:

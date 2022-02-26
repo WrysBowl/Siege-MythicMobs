@@ -3,7 +3,7 @@ LB3_Summon:
   Skills:
   - message{m="<mob.name> &fYou may hide from me, but never my totems!"} @PlayersInRadius{r=25}
   - delay 10
-  - summon{mob=LabBoss3_Minion_1;amount=1;noise=5} @Self
+  - summon{type=LabBoss3_Minion_1;amount=1;noise=5} @Self
 LB3_Shot: ### Basic Magic Attack
   Conditions:
   - targetinlineofsight true
@@ -72,13 +72,6 @@ LB3Drag:
   - effect:particlesphere{particle=magicCrit;amount=80;r=5} @self
   - effect:sound{s=entity.elder_guardian.curse;v=0.5;p=2}
   - effect:sound{s=entity.elder_guardian.curse;v=0.5;p=1}
-  - randommessage
-      {
-      m=
-      "<mob.name> &fYou cannot run from your fate.",
-      "<mob.name> &fFace death with courage, not cowardice!",
-      "<mob.name> &fAccept your defeat.",
-      } @PlayersInRadius{r=10}
   - forcepull{spread=0} @PIR{r=10}
 LB3Knockback:
   Skills:

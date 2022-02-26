@@ -54,13 +54,6 @@ T6_WolfForm: ### Transforms into a wolf
   - effect:sound{s=entity.wolf.growl;v=2;p=2}
   - effect:sound{s=entity.wolf.growl;v=2;p=1}
   - effect:sound{s=entity.wolf.growl;v=2;p=0}
-  - randommessage
-      {
-      m=
-      "<mob.name> &cAncestors, I call upon your aid!",
-      "<mob.name> &cYou cannot hide from the huntress!",
-      "<mob.name> &cThe greatwolf consumes me!";
-      } @PlayersInRadius{r=30}
   - disguise{d=WOLF}
   - potion{type=FAST_DIGGING;lvl=10;duration=150;overwrite=true} @Self
   - potion{type=SPEED;lvl=10;duration=150;overwrite=true} @Self
@@ -73,13 +66,6 @@ T6_Teleport:
   - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
   - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
-  - randommessage
-      {
-      m=
-      "<mob.name> &cThe battle isn't over yet!",
-      "<mob.name> &cCowardice will not save you!",
-      "<mob.name> &cThe ancestors have found you!";
-      } @target
   - potion{type=CONFUSION;duration=200;lvl=1;overwrite=true} @PIR{r=15}
 ### AREA SKILLS ------------------------------------------------
 T6_HolyNova: ### Deals massive damage in radius

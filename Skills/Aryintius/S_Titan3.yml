@@ -36,32 +36,24 @@ T3_Teleport:
   - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
   - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
-  - randommessage
-      {
-      m=
-      "<mob.name> &cDid you really think you could get away so easily?",
-      "<mob.name> &cEscape is impossible, for I am eternal...",
-      "<mob.name> &cI shall consign your remains to the Void!",
-      "<mob.name> &cYou cannot hide from the frost legion!";
-      } @target
   - potion{type=CONFUSION;duration=200;lvl=1;overwrite=true} @PIR{r=15}
 ### AREA SKILLS ------------------------------------------------
 T3_Summon_1: ### Summons low-level enemies
   Skills:
   - message{m="<mob.name> &fArise, my minions! Take care of this... malcontent..."} @PlayersInRadius{r=50}
   - delay 10
-  - summon{mob=T3_Melee_NoDrop;amount=1;noise=5} @Self
+  - summon{type=T3_Melee_NoDrop;amount=1;noise=5} @Self
   - delay 10
-  - summon{mob=T3_Mage_NoDrop;amount=1;noise=5} @Self
+  - summon{type=T3_Mage_NoDrop;amount=1;noise=5} @Self
 T3_Summon_2: ### Summons High-level enemies
   Skills:
   - message{m="<mob.name> &fEnough trifling! Succumb to the wrath of the Frost Legion!"} @PlayersInRadius{r=50}
   - delay 10
-  - summon{mob=T3_Melee_NoDrop;amount=2;noise=5} @Self
+  - summon{type=T3_Melee_NoDrop;amount=2;noise=5} @Self
   - delay 10
-  - summon{mob=T3_Mage_NoDrop;amount=2;noise=5} @Self
+  - summon{type=T3_Mage_NoDrop;amount=2;noise=5} @Self
   - delay 10
-  - summon{mob=T3_MiniBoss_NoDrop;amount=1;noise=5} @Self
+  - summon{type=T3_MiniBoss_NoDrop;amount=1;noise=5} @Self
 T3_FrostNova: ### Freezes enemies in radius
   Skills:
   - effect:sound{s=entity.wither.ambient;v=2;p=0}

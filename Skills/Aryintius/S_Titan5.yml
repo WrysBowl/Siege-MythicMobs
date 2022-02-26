@@ -72,19 +72,19 @@ T5_Tornado:
 ### COMPOSITE SKILLS -------------------------------------
 T5_Storm:
   Skills:
-  - summon{mob=T5_Pointer_1;amount=5;noise=15} @Self
+  - summon{type=T5_Pointer_1;amount=5;noise=15} @Self
   - delay 10
-  - summon{mob=T5_Pointer_1;amount=5;noise=12} @Self
+  - summon{type=T5_Pointer_1;amount=5;noise=12} @Self
   - delay 10
-  - summon{mob=T5_Pointer_1;amount=5;noise=9} @Self
+  - summon{type=T5_Pointer_1;amount=5;noise=9} @Self
   - delay 10
-  - summon{mob=T5_Pointer_1;amount=5;noise=6} @Self
+  - summon{type=T5_Pointer_1;amount=5;noise=6} @Self
   - delay 10
-  - summon{mob=T5_Pointer_1;amount=5;noise=3} @Self
+  - summon{type=T5_Pointer_1;amount=5;noise=3} @Self
   - delay 10
-  - summon{mob=T5_Pointer_1;amount=5;noise=2} @Self
+  - summon{type=T5_Pointer_1;amount=5;noise=2} @Self
   - delay 10
-  - summon{mob=T5_Pointer_1;amount=5;noise=0} @Self
+  - summon{type=T5_Pointer_1;amount=5;noise=0} @Self
 T5_RapidMissiles:
   Skills:
   - skill{s=T5_Missile}

@@ -20,20 +20,7 @@ OpenBoss1:
     PreventItemPickup: true
   Skills:
 ### SPAWN/INITIALIZATION
-  - randommessage
-      {
-      m=
-      "<mob.name> &eHahaha, I've found you!",
-      "<mob.name> &eYour sins will not go unpunished!",
-      "<mob.name> &eDeath comes, and I follow.";
-      } @PlayersInRadius{r=32} ~onSpawn
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
-  - randommessage
-      {cooldown=20;m=
-      "<mob.name> &eFighting will not stop the Corruption!",
-      "<mob.name> &eHope... is lost... give unto the Void...",
-      "<mob.name> &eI am beyond salvation. Join me in death!";
-      } @target ~onDamage
 ### PHASE 1
   - skill{s=OB1_Attack_1} @PIR{r=50} ~onTimer:80
   - skill{s=OB1_Attack_2} @PIR{r=50} ~onTimer:200

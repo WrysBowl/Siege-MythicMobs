@@ -4,16 +4,16 @@ AF_LootSplosion: ### Summons lootsplosion at self
   - consumeHeldItem @Self
   - sendtitle{title="&c&lLOOTSPLOSION!";subtitle="&7WOOHOO!!!";d=20} @PIR{r=25}
   - effect:sound{s=entity.zombie.attack_door_wood;v=0.5;p=1} @Self
-  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - summon{type=LootExplosion;amount=5;radius=12;yu=true} @Self
   - delay 5
-  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - summon{type=LootExplosion;amount=5;radius=12;yu=true} @Self
   - delay 5
-  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - summon{type=LootExplosion;amount=5;radius=12;yu=true} @Self
   - actionmessage{m="&7Cooldown &f| &729.0s"} @Self
   - delay 5
-  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - summon{type=LootExplosion;amount=5;radius=12;yu=true} @Self
   - delay 5
-  - summon{mob=LootExplosion;amount=5;radius=12;yu=true} @Self
+  - summon{type=LootExplosion;amount=5;radius=12;yu=true} @Self
   - actionmessage{m="&7Cooldown &f| &728.0s"} @Self
   - delay 20
   - actionmessage{m="&7Cooldown &f| &727.0s"} @Self
@@ -84,7 +84,7 @@ AF_TPSlam: ### What has science done?
   - effect:sound{s=entity.endermen.teleport;v=0.5;p=0} @PIR{r=25}
   - actionmessage{m="&7•••••••••••••••"} @Self
   - delay 15
-  - summon{mob=AF_SlamExplosion;amount=1;radius=0;yu=true} @Self
+  - summon{type=AF_SlamExplosion;amount=1;radius=0;yu=true} @Self
   - actionmessage{m="&e•&7••••••••••••••"} @Self
   - delay 10
   - actionmessage{m="&e••&7•••••••••••••"} @Self

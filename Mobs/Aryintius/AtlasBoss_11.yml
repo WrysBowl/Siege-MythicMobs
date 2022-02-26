@@ -31,13 +31,6 @@ AtlasBoss_11:
 ### SPAWN/UTILS
   - message{m="<mob.name> &fI shall free my master, and soon the world shall tremble!"} @PlayersInRadius{r=25} ~onSpawn
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3;overwrite=true} @Self ~onSpawn
-  - randommessage
-      {
-      m=
-      "<mob.name> &7Feel the wrath of the Frost Legion!",
-      "<mob.name> &7My glacial winds shall consume you!",
-      "<mob.name> &7Resistance is futile!";
-      } @PIR{r=25} ~onTimer:300
   - effect:sound{s=block.glass.break;p=1;v=1} @self ~onDamaged
   - effect:sound{s=block.glass.break;p=0.5;v=0.8} @self ~onDamaged
   - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged

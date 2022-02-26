@@ -266,13 +266,6 @@ A13_Teleport:
   - effect:sound{s=entity.endermen.teleport;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.endermen.teleport;v=1;p=1} @PIR{r=25}
   - effect:sound{s=entity.endermen.teleport;v=1;p=0} @PIR{r=25}
-  - randommessage
-      {
-      m=
-      "<mob.name> &fYou cannot escape the holy light!",
-      "<mob.name> &fThis is the end of your presence, dark one!",
-      "<mob.name> &fI shall cleanse your unholiness!";
-      } @NearestPlayer{r=30}
   - potion{type=CONFUSION;duration=200;lvl=3;overwrite=true} @PIR{15}
 ### Phases (This boss will have three, because 20-second phases can bug out really badly)
 ### Each phase should be ~150 ticks long (7.5 seconds) to allow 2.5 seconds for melee attacks.

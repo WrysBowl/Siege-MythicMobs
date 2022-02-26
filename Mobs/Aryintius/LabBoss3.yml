@@ -23,13 +23,6 @@ LabBoss3:
 ### SPAWN
   - message{m="<mob.name> &fYou have come far, but this is the end, mortal."} @PlayersInRadius{r=30} ~onSpawn
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
-  - randommessage
-      {
-      m=
-      "<mob.name> &fStriking back will not save you. Leave this place now!",
-      "<mob.name> &fImpossible! None have fought me and lived to tell the tale!",
-      "<mob.name> &fMortality is inevitable. Accept your fate!";
-      } @PIR{r=50} ~onTimer:300
   - skill{s=CancelDespawn} @Self ~onTimer:20
 ### PHASE 1
   - skill{s=LB3Knockback} @NearestPlayer{r=50} ~onTimer:120

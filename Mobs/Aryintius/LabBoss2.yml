@@ -23,13 +23,6 @@ LabBoss2:
 ### SPAWN
   - message{m="<mob.name> &fHow dare you intrude on my domain!"} @PlayersInRadius{r=25} ~onSpawn
   - potion{type=DAMAGE_RESISTANCE;duration=999999;level=3} @Self ~onSpawn
-  - randommessage
-      {
-      m=
-      "<mob.name> &fDo not struggle for it will only prolong your demise!",
-      "<mob.name> &fThe Architect's eye sees the past, present, and future!",
-      "<mob.name> &fI will not be trifled with, worthless insect!";
-      } @PIR{r=50} ~onTimer:300
   - skill{s=CancelDespawn} @Self ~onTimer:20
 ### PHASE 1
   - skill{s=LB2Poison} @NearestPlayer{r=50} ~onTimer:150
