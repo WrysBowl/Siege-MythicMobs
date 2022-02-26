@@ -1,8 +1,4 @@
 ### METEOR SHOWER
-MeteorShower:
-  Cooldown: 10
-  Skills:
-  - summon{type=MeteorPointer;a=15;r=10}
 MeteorPointerSpawn:
   Skills:
   - potion{type=INVISIBILITY;d=2000;l=1} @self

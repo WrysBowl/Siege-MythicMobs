@@ -358,7 +358,7 @@ Heal_50:
 ### RANDOM HEALING ---------------------------------------------
 Heal_3-7:
   Skills:
-  - randomskill{s=Heal_3,Heal_4,Heal_5,Heal_6,Heal_7}
+  - randomskill{s=Heal_3,Heal_4,Heal_5,Heal_7}
 Heal_5-10:
   Skills:
   - randomskill{s=Heal_5,Heal_7,Heal_8,Heal_10}

@@ -9,7 +9,7 @@ RandomPorky:
   - outside{} true
   - day{} true
   - height{h=40to60} true
-  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND,GRASS_PATH} true
+  - onBlock{b=DIRT,COARSE_DIRT,FARMLAND} true
 
 RandomMooMoo:
   MobType: MooMoo
