@@ -12,7 +12,7 @@ T3S-Tick:
   - effect:particles{p=explode;amount=2;speed=0;hS=0.2;vS=0.2} @origin
 T3S-Hit:
   Skills:
-  - damage{a=125;pk=true}
+  - damage{a=25;pk=true}
 T3_Blast: ### Heavy Bolt Attack
   Conditions:
   - targetinlineofsight true
@@ -58,19 +58,19 @@ T3_FrostNova: ### Freezes enemies in radius
   Skills:
   - effect:sound{s=entity.wither.ambient;v=2;p=0}
   - effect:particlesphere{particle=cloud;amount=500;r=10} @self
-  - damage{amount=50;pk=true} @PIR{r=10}
+  - damage{amount=10;pk=true} @PIR{r=10}
   - delay 2
   - effect:particlesphere{particle=cloud;amount=400;r=8} @self
-  - damage{amount=80;pk=true} @PIR{r=8}
+  - damage{amount=15;pk=true} @PIR{r=8}
   - delay 2
   - effect:particlesphere{particle=cloud;amount=300;r=6} @self
-  - damage{amount=120;pk=true} @PIR{r=6}
+  - damage{amount=20;pk=true} @PIR{r=6}
   - delay 2
   - effect:particlesphere{particle=cloud;amount=200;r=4} @self
-  - damage{amount=180;pk=true} @PIR{r=4}
+  - damage{amount=30;pk=true} @PIR{r=4}
   - delay 2
   - effect:particlesphere{particle=cloud;amount=100;r=2} @self
-  - damage{amount=20;pk=true} @PIR{r=2}
+  - damage{amount=30;pk=true} @PIR{r=2}
   - delay 2
   - skill{s=InflictFreeze} @PIR{r=10}
 T3_IcePlains: ### Deals massive damage in radius

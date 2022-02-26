@@ -20,7 +20,7 @@ T8A-Tick-2: ### Alternate Tick Effect
   - effect:particles{p=witchMagic;amount=1;speed=0} @origin
 T8A-Hit:
   Skills:
-  - damage{a=125;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - skill{s=InflictCurse} 0.1
 
 T8_Circle: ### Fires 8 projectiles in massive radius

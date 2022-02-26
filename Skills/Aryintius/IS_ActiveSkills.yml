@@ -4,7 +4,7 @@ RangerCrit:
   Skills:
   - effect:sound{s=entity.zombie.break_door_wood;v=0.5;p=1} @Self
   - effect:sound{s=entity.irongolem.death;v=1;p=2} @Self
-  - damage{a=120;ia=true;pi=true;pk=true} @target
+  - damage{a=20;ia=true;pi=true;pk=true} @target
   - actionmessage{m="&7SCOPE RECHARGE &f| &74.5"} @Self
   - effect:sound{s=block.note.hat;v=1;p=2}
   - delay 10
@@ -39,7 +39,7 @@ MeleeCrit:
   Skills:
   - effect:sound{s=entity.zombie.break_door_wood;v=0.5;p=1}
   - effect:sound{s=entity.player.attack.crit;p=1;v=1}
-  - damage{a=100000;pi=true;pk=true} @target
+  - damage{a=30;pi=true;pk=true} @target
   - actionmessage{m="&c»&8»»»&l> &72.0s"} @Self
   - delay 10
   - actionmessage{m="&c»»&8»»&l> &71.5s"} @Self

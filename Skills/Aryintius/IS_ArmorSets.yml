@@ -53,7 +53,7 @@ Icetomb_Helm:
   TargetConditions:
   - haspotioneffect{t=SLOW_DIGGING;level=9} true
   Skills:
-  - damage{a=130;pk=true} @target
+  - damage{a=13;pk=true} @target
   - effect:sound{s=block.glass.break;p=1;v=1}
   - effect:sound{s=block.glass.break;p=0.5;v=0.8}
 Icetomb_Chest:
@@ -269,7 +269,7 @@ SetBonus_JUGG:
   TargetConditions:
   - haspotioneffect{t=LUCK} true
   Skills:
-  - damage{amount=80;pk=true} @target
+  - damage{amount=40;pk=true} @target
   - effect:sound{s=entity.zombie.break_door_wood;p=1;v=0.05}
 JUGG_HelmSkill:
   TargetConditions:
@@ -289,14 +289,14 @@ InvisChaos:
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
-  - damage{a=50;ia=true;pi=true;pk=true} @target
+  - damage{a=30;ia=true;pi=true;pk=true} @target
 NVisionChaos:
   Conditions:
   - haspotioneffect{t=NIGHT_VISION} true
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
-  - damage{a=50;ia=true;pi=true;pk=true} @target
+  - damage{a=30;ia=true;pi=true;pk=true} @target
 AssassinES:
   Conditions:
   - haspotioneffect{t=INVISIBILITY} true
@@ -315,7 +315,7 @@ DeathMark_120:
   TargetConditions:
   - haspotioneffect{t=GLOWING} true
   Skills:
-  - damage{a=240;ia=true;pi=true;pk=true} @target
+  - damage{a=24;ia=true;pi=true;pk=true} @target
   - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
   

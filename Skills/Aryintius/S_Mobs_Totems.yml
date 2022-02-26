@@ -55,4 +55,4 @@ Totem_TPSlam: ### Classic teleport slam
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
-  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+  - damage{amount=100;ia=true;pi=true;pk=true} @PIR{r=5}

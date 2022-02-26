@@ -41,7 +41,7 @@ T6B-Tick:
   - effect:particles{p=largesmoke;a=1} @Origin
 T6B-Hit:
   Skills:
-  - damage{amount=40;pk=true}
+  - damage{amount=20;pk=true}
   - sendtitle{title="&5&lCursed";subtitle="&fRandom negative effects";d=20}
   - delay 5
   - skill{s=RandomBadStuff}
@@ -74,19 +74,19 @@ T6_HolyNova: ### Deals massive damage in radius
   - effect:sound{s=entity.enderdragon.growl;v=1;p=1}
   - effect:sound{s=entity.enderdragon.growl;v=0.5;p=0}
   - effect:particlesphere{particle=witchMagic;amount=500;r=10} @self
-  - damage{amount=20;pk=true} @PIR{r=10}
+  - damage{amount=15;pk=true} @PIR{r=10}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=400;r=8} @self
-  - damage{amount=80;pk=true} @PIR{r=8}
+  - damage{amount=20;pk=true} @PIR{r=8}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=300;r=6} @self
-  - damage{amount=1200;pk=true} @PIR{r=6}
+  - damage{amount=20;pk=true} @PIR{r=6}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=200;r=4} @self
-  - damage{amount=1800;pk=true} @PIR{r=4}
+  - damage{amount=30;pk=true} @PIR{r=4}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=100;r=2} @self
-  - damage{amount=25;pk=true} @PIR{r=2}
+  - damage{amount=30;pk=true} @PIR{r=2}
   - delay 2
   - sendtitle{title="&5&lCursed";subtitle="&fRandom negative effects";d=20}
   - delay 5

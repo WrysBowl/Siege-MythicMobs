@@ -4,16 +4,16 @@ T4_Drag: ### Kind of a cyclone thing that guarantees a melee hit.
   - effect:sound{s=block.portal.trigger;v=1;p=2}
   - potion{type=CONFUSION;duration=60;lvl=3;overwrite=true}
   - pull{velocity=1} @PIR{r=8}
-  - damage{a=50;pk=true} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=1} @PIR{r=8}
-  - damage{a=50;pk=true} @PIR{r=8}
+  - damage{a=20;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=1} @PIR{r=8}
-  - damage{a=75;pk=true} @PIR{r=8}
+  - damage{a=25;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
-  - damage{a=75;pk=true} @PIR{r=8}
+  - damage{a=25;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=2} @PIR{r=8}
   - damage{amount=10;pk=true} @PIR{r=8}
@@ -22,10 +22,10 @@ T4_Drag: ### Kind of a cyclone thing that guarantees a melee hit.
   - damage{amount=10;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=3} @PIR{r=8}
-  - damage{a=125;pk=true} @PIR{r=8}
+  - damage{a=25;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=4} @PIR{r=8}
-  - damage{a=125;pk=true} @PIR{r=8}
+  - damage{a=25;pk=true} @PIR{r=8}
   - delay 2
   - pull{velocity=4} @PIR{r=8}
   - damage{amount=15;pk=true} @PIR{r=8}
@@ -140,9 +140,9 @@ T4_TPSlam: ### Radial Teleport Slam. Guaranteed 1-shot at center. Hurts a lot on
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
-  - damage{a=125;pk=true} @PIR{r=9}
+  - damage{a=25;pk=true} @PIR{r=9}
   - damage{amount=25;pk=true} @PIR{r=7}
-  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+  - damage{amount=20;ia=true;pi=true;pk=true} @PIR{r=5}
 
 T4_Teleport: ### Teleport melee. Spams this to kill people.
   Conditions:

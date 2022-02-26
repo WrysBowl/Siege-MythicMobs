@@ -97,19 +97,19 @@ TitanCharm: ### 150-500 phys
 ### ADDED PHYS DAMAGE ------------------------------
 Phys_10: ### Deals 10.0 Damage
   Skills:
-  - damage{a=20;pk=true}
+  - damage{a=5;pk=true}
 Phys_15: ### Deals 15.0 Damage
   Skills:
-  - damage{a=30;pk=true}
+  - damage{a=6;pk=true}
 Phys_25: ### Deals 25.0 Damage
   Skills:
-  - damage{a=50;pk=true}
+  - damage{a=7;pk=true}
 Phys_30: ### Deals 30.0 Damage
   Skills:
-  - damage{a=60;pk=true}
+  - damage{a=8;pk=true}
 Phys_45: ### Deals 45.0 Damage
   Skills:
-  - damage{a=90;pk=true}
+  - damage{a=9;pk=true}
 Phys_50: ### Deals 50.0 Damage
   Skills:
   - damage{a=10;pk=true}
@@ -121,76 +121,76 @@ Phys_100: ### Deals 100.0 Damage
   - damage{a=20;pk=true}
 Phys_125: ### Deals 125.0 Damage
   Skills:
-  - damage{a=25;pk=true}
+  - damage{a=20;pk=true}
 Phys_150: ### Deals 150.0 Damage
   Skills:
-  - damage{a=30;pk=true}
+  - damage{a=25;pk=true}
 Phys_200: ### Deals 200.0 Damage
   Skills:
-  - damage{a=40;pk=true}
+  - damage{a=25;pk=true}
 Phys_250: ### Deals 250.0 Damage
   Skills:
-  - damage{a=50;pk=true}
+  - damage{a=30;pk=true}
 Phys_300: ### Deals 300.0 Damage
   Skills:
-  - damage{a=60;pk=true}
+  - damage{a=30;pk=true}
 Phys_350: ### Deals 350.0 Damage
   Skills:
-  - damage{a=70;pk=true}
+  - damage{a=35;pk=true}
 Phys_400: ### Deals 400.0 Damage
   Skills:
-  - damage{a=80;pk=true}
+  - damage{a=35;pk=true}
 Phys_450: ### Deals 450.0 Damage
   Skills:
-  - damage{a=90;pk=true}
+  - damage{a=40;pk=true}
 Phys_500: ### Deals 500.0 Damage
   Skills:
-  - damage{amount=10;pk=true}
+  - damage{amount=40;pk=true}
 Phys_550: ### Deals 550.0 Damage
   Skills:
-  - damage{a=110;pk=true}
+  - damage{a=45;pk=true}
 Phys_600: ### Deals 600.0 Damage
   Skills:
-  - damage{a=120;pk=true}
+  - damage{a=45;pk=true}
 Phys_650: ### Deals 650.0 Damage
   Skills:
-  - damage{a=130;pk=true}
+  - damage{a=50;pk=true}
 Phys_700: ### Deals 700.0 Damage
   Skills:
-  - damage{a=140;pk=true}
+  - damage{a=50;pk=true}
 Phys_750: ### Deals 750.0 Damage
   Skills:
-  - damage{amount=15;pk=true}
+  - damage{amount=55;pk=true}
 Phys_1000: ### Deals 1000.0 Damage
   Skills:
-  - damage{amount=20;pk=true}
+  - damage{amount=55;pk=true}
 Phys_1250: ### Deals 1250.0 Damage
   Skills:
-  - damage{amount=25;pk=true}
+  - damage{amount=60;pk=true}
 Phys_1500: ### Deals 1500.0 Damage
   Skills:
-  - damage{amount=30;pk=true}
+  - damage{amount=60;pk=true}
 Phys_1750: ### Deals 1750.0 Damage
   Skills:
-  - damage{a=350;pk=true}
+  - damage{a=65;pk=true}
 Phys_2000: ### Deals 2000.0 Damage
   Skills:
-  - damage{amount=40;pk=true}
+  - damage{amount=65;pk=true}
 Phys_2500: ### Deals 2500.0 Damage
   Skills:
-  - damage{amount=50;pk=true}
+  - damage{amount=70;pk=true}
 Phys_3000: ### Deals 3000.0 Damage
   Skills:
-  - damage{amount=50;pk=true}
+  - damage{amount=70;pk=true}
 Phys_3500: ### Deals 3500.0 Damage
   Skills:
-  - damage{a=700;pk=true}
+  - damage{a=75;pk=true}
 Phys_5000: ### Deals 5000.0 Damage
   Skills:
-  - damage{amount=20;pk=true}
+  - damage{amount=75;pk=true}
 Phys_Max: ### Deals 10000.0 Damage
   Skills:
-  - damage{a=20000;pk=true}
+  - damage{a=80;pk=true}
 ### CHAOS DAMAGE ------------------------------
 Chaos_Max: ### Deals 1000.0 Chaos Damage
   Skills:

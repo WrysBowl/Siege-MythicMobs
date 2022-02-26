@@ -26,7 +26,7 @@ TeleportSlam:
   - damage{amount=10;pk=true} @PIR{r=6}
   - delay 3
   - effect:particlesphere{particle=witchMagic;amount=350;r=4} @self
-  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+  - damage{amount=100;ia=true;pi=true;pk=true} @PIR{r=5}
   - delay 2
   - effect:particlesphere{particle=witchMagic;amount=300;r=3} @self
   - delay 3

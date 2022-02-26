@@ -415,7 +415,7 @@ C15S50_2:
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.1;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.1;p=2}
-  - damage{a=60;ia=true;pi=true;pk=true} @target
+  - damage{a=50;ia=true;pi=true;pk=true} @target
 C15S50_3:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>148} true
@@ -423,14 +423,14 @@ C15S50_3:
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.11;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.11;p=2}
-  - damage{a=90;ia=true;pi=true;pk=true} @target
+  - damage{a=80;ia=true;pi=true;pk=true} @target
 C15S50_4:
   Conditions:
   - haspotioneffect{t=INCREASE_DAMAGE;level=>198} true
   Skills:
   - effect:sound{s=entity.wither.shoot;v=0.12;p=1}
   - effect:sound{s=entity.irongolem.death;v=0.12;p=2}
-  - damage{a=120;ia=true;pi=true;pk=true} @target
+  - damage{a=100;ia=true;pi=true;pk=true} @target
 
 ChaosFromStrength_Low: ### 1.0 Chaos per 10 Strength ----------------
   Skills:

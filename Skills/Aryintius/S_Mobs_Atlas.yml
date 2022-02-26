@@ -22,7 +22,7 @@ AWB-Tick:
   - effect:particles{p=magicCrit;amount=10;speed=0;hS=0.1;vS=0.1} @origin
 AWB-Hit:
   Skills:
-  - damage{a=75}
+  - damage{a=35}
   - randomskill{skills=InflictShock,InflictFreeze,Ignite_Title} 0.5
 Atlas_FrostBolt: ### Ice Bolt
   Conditions:
@@ -37,7 +37,7 @@ AFS-Tick:
   - effect:particles{p=largeexplode;amount=1;speed=0;hS=0.2;vS=0.2} @origin
 AFS-Hit:
   Skills:
-  - damage{a=50;pk=true}
+  - damage{a=30;pk=true}
   - skill{s=InflictFreeze}
 Atlas_FireBolt: ### Fire Bolt
   Conditions:
@@ -52,7 +52,7 @@ AFF-Tick:
   - effect:particles{p=flame;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 AFF-Hit:
   Skills:
-  - damage{a=50;pk=true}
+  - damage{a=40;pk=true}
   - skill{s=Ignite_Title} 0.2
 Atlas_SmokeBolt: ### Smook blat
   Conditions:
@@ -66,7 +66,7 @@ ASB-Tick:
   - effect:particles{p=smoke;amount=3;speed=0;hS=0.2;vS=0.2} @origin
 ASB-Hit:
   Skills:
-  - damage{a=50;pk=true}
+  - damage{a=30;pk=true}
   - skill{s=InflictCurse}
 Atlas_PurpleNova: ### Mooshroom Nova Attack
   Conditions:

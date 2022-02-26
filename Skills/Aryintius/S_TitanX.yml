@@ -17,7 +17,7 @@ TXS-Tick:
   - effect:particles{p=reddust;amount=5;speed=0;hS=0.1;vS=0.1} @origin
 TXS-Hit:
   Skills:
-  - damage{amount=40;pi=true;pk=true}
+  - damage{amount=20;pi=true;pk=true}
 TX_Blast: ### Heavy Bolt Attack
   Conditions:
   - targetinlineofsight true
@@ -73,7 +73,7 @@ TX_NovaKill: ### Deals massive damage in radius
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
-  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=10}
+  - damage{amount=50;ia=true;pi=true;pk=true} @PIR{r=10}
 TX_TripleNova: ### Insane triple nova
   Skills:
   - effect:particlesphere{particle=flame;amount=150;r=3} @self
@@ -81,21 +81,21 @@ TX_TripleNova: ### Insane triple nova
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
-  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=3}
+  - damage{amount=50;ia=true;pi=true;pk=true} @PIR{r=3}
   - delay 10
   - effect:particlesphere{particle=flame;amount=350;r=5} @self
   - effect:particlesphere{particle=largesmoke;amount=50;r=5} @self
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
-  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=5}
+  - damage{amount=50;ia=true;pi=true;pk=true} @PIR{r=5}
   - delay 10
   - effect:particlesphere{particle=flame;amount=500;r=10} @self
   - effect:particlesphere{particle=largesmoke;amount=100;r=10} @self
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=0} @PIR{r=25}
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=25}
   - effect:sound{s=entity.wither.death;v=1;p=1} @PIR{r=25}
-  - damage{amount=10000;ia=true;pi=true;pk=true} @PIR{r=10}
+  - damage{amount=50;ia=true;pi=true;pk=true} @PIR{r=10}
 TX_DeathTotem_Nova: ### Death Explosion 1
   Skills:
   - effect:sound{s=entity.zombie_villager.converted;v=1;p=2} @PIR{r=50}
@@ -151,7 +151,7 @@ TX_DeathRadius: ### Atziri attack
   - effect:sound{s=entity.zombie.attack_door_wood;v=1;p=2} @PIR{r=15}
   - effect:sound{s=entity.generic.explode;v=0.5;p=2} @PIR{r=15}
   - effect:sound{s=entity.generic.explode;v=0.5;p=1} @PIR{r=15}
-  - damage{amount=10000;pk=true} @PIR{r=5}
+  - damage{amount=50;pk=true} @PIR{r=5}
 ### SUMMON SKILLS ----------------------------------------------
 TX_DeathTotem: ### Summons a floating orb that fires at enemies.
   Skills:

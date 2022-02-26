@@ -11,11 +11,11 @@ Poison_60:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 10
-  - damage{a=50;pi=true;pk=true}
+  - damage{a=30;pi=true;pk=true}
   - delay 10
-  - damage{a=50;pi=true;pk=true}
+  - damage{a=30;pi=true;pk=true}
   - delay 10
-  - damage{a=50;pi=true;pk=true}
+  - damage{a=30;pi=true;pk=true}
 Poison_90:
   Cooldown: 2
   Skills:
@@ -25,11 +25,11 @@ Poison_90:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 10
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 10
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 10
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
 Poison_120:
   Cooldown: 2
   Skills:
@@ -53,15 +53,15 @@ Poison_150:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 5
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 5
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 5
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 5
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 5
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
 Poison_150X:
   Skills:
   - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
@@ -70,15 +70,15 @@ Poison_150X:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 5
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 5
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 5
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 5
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 5
-  - damage{a=75;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
 Poison_300X:
   Skills:
   - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
@@ -108,43 +108,43 @@ PoisonRNG_1: ### RNG Poison
   - randomskill{skills=PoisonRNG_X1,PoisonRNG_X2,PoisonRNG_X3}
 PoisonRNG_X1: ### Poison backend (25)
   Skills:
-  - damage{a=25;pi=true;pk=true}
+  - damage{a=15;pi=true;pk=true}
   - delay 5
-  - damage{a=25;pi=true;pk=true}
+  - damage{a=15;pi=true;pk=true}
   - delay 5
-  - damage{a=25;pi=true;pk=true}
+  - damage{a=15;pi=true;pk=true}
   - delay 5
-  - damage{a=25;pi=true;pk=true}
+  - damage{a=15;pi=true;pk=true}
   - delay 5
-  - damage{a=25;pi=true;pk=true}
+  - damage{a=15;pi=true;pk=true}
   - delay 5
-  - damage{a=25;pi=true;pk=true}
+  - damage{a=15;pi=true;pk=true}
 PoisonRNG_X2: ### Poison backend (50)
   Skills:
-  - damage{a=35;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 5
-  - damage{a=40;pi=true;pk=true}
+  - damage{a=30;pi=true;pk=true}
   - delay 5
-  - damage{a=35;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 5
-  - damage{a=40;pi=true;pk=true}
+  - damage{a=30;pi=true;pk=true}
   - delay 5
-  - damage{a=35;pi=true;pk=true}
+  - damage{a=25;pi=true;pk=true}
   - delay 5
-  - damage{a=40;pi=true;pk=true}
+  - damage{a=30;pi=true;pk=true}
 PoisonRNG_X3: ### Poison backend (75)
   Skills:
-  - damage{a=50;pi=true;pk=true}
+  - damage{a=40;pi=true;pk=true}
   - delay 5
-  - damage{a=50;pi=true;pk=true}
+  - damage{a=40;pi=true;pk=true}
   - delay 5
-  - damage{a=50;pi=true;pk=true}
+  - damage{a=40;pi=true;pk=true}
   - delay 5
-  - damage{a=50;pi=true;pk=true}
+  - damage{a=40;pi=true;pk=true}
   - delay 5
-  - damage{a=50;pi=true;pk=true}
+  - damage{a=40;pi=true;pk=true}
   - delay 5
-  - damage{a=50;pi=true;pk=true}
+  - damage{a=40;pi=true;pk=true}
 PoisonPants:
   Skills:
   - effect:sound{s=block.fire.extinguish;v=0.5;p=2}
@@ -335,21 +335,21 @@ Bleed_500:
   - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
   - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
   - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
-  - damage{a=125;ia=true;pi=true;pk=true}
+  - damage{a=25;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=125;ia=true;pi=true;pk=true}
+  - damage{a=25;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=125;ia=true;pi=true;pk=true}
+  - damage{a=25;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=125;ia=true;pi=true;pk=true}
+  - damage{a=25;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=125;ia=true;pi=true;pk=true}
+  - damage{a=25;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=125;ia=true;pi=true;pk=true}
+  - damage{a=25;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=125;ia=true;pi=true;pk=true}
+  - damage{a=25;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=125;ia=true;pi=true;pk=true}
+  - damage{a=25;ia=true;pi=true;pk=true}
 Bleed_500X:
   Skills:
   - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
@@ -357,7 +357,7 @@ Bleed_500X:
   - effect:sound{s=entity.zombie_horse.hurt;p=0.2;v=0.25}
   - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
   - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
-  - damage{a=50;ia=true;pi=true;pk=true}
+  - damage{a=30;ia=true;pi=true;pk=true}
   - delay 5
   - damage{a=10;ia=true;pi=true;pk=true}
   - delay 5
@@ -382,17 +382,17 @@ Venom_1:
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
   - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 10
-  - damage{a=180;pi=true;pk=true}
+  - damage{a=18;pi=true;pk=true}
   - delay 10
-  - damage{a=180;pi=true;pk=true}
+  - damage{a=18;pi=true;pk=true}
   - delay 10
-  - damage{a=180;pi=true;pk=true}
+  - damage{a=18;pi=true;pk=true}
   - delay 10
-  - damage{a=180;pi=true;pk=true}
+  - damage{a=18;pi=true;pk=true}
   - delay 10
-  - damage{a=180;pi=true;pk=true}
+  - damage{a=18;pi=true;pk=true}
   - delay 10
-  - damage{a=180;pi=true;pk=true}
+  - damage{a=18;pi=true;pk=true}
 Venom_2:
   Skills:
   - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}
