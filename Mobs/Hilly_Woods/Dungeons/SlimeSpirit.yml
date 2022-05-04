@@ -1,7 +1,7 @@
 SlimeSpirit:
  Type: SLIME
  Display: '&4Slime Spirit'
- Health: 2400
+ Health: 1200
  Damage: 15
  Faction: Boss
  BossBar:
@@ -27,7 +27,7 @@ SlimeSpirit:
  Skills:
   - effect:blockmask{m=slime_block;r=2;d=200} @self ~onTimer:5
   - skill{s=SlimeConsuming} ~onDamaged 0.25
-  - skill{s=AcidSpit} @target ~onTimer:100
+  - skill{s=AcidSpit} @target ~onTimer:200
   - skill{s=LungeAttack} @self ~onTimer:20
   - skill{s=SlimeSpiritBullDoze} @self ~onDamaged 0.3
   - sound{s=entity.slime.hurt} @Self ~onDamaged

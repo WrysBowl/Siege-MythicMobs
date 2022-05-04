@@ -1,7 +1,7 @@
 Necromancer:
   Type: Wither_Skeleton
   Display: '&2Necromancer'
-  Health: 9000
+  Health: 4500
   Damage: 35
   Faction: Boss
   BossBar:
@@ -26,34 +26,34 @@ Necromancer:
   Skills:
   - heal{a=2} @self ~onTimer:40
   - skill{s=NecromancerSummonUndead} @self ~onDamaged 0.1
-  - skill{s=NecromancerWitherSkullShoot} @self ~onTimer:150
-  - skill{s=NecromancerPlague} @self ~onTimer:200
-  - skill{s=NecromancerLifeSteal} @self ~onTimer:40
+  - skill{s=NecromancerWitherSkullShoot} @self ~onTimer:250
+  - skill{s=NecromancerPlague} @self ~onTimer:300
+  - skill{s=NecromancerLifeSteal} @self ~onTimer:80
   - potion{type=WITHER;duration=60;lvl=1} @target ~onAttack
-  - skill{s=NecromancerTotemOfUndying} @self ~onTimer:300
+  - skill{s=NecromancerTotemOfUndying} @self ~onTimer:400
   - setname{name='&4Necromancer &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
   - skill{s=CancelLevitation} @Self ~onTimer:5
   - effect:sound{s=entity.irongolem.hurt;p=1;v=0.8} @self ~onDamaged
   - effect:sound{s=block.anvil.land;p=2;v=0.5} @self ~onDamaged 0.5
 
     ### PHASE 1
-  - skill{s=A14_RandomSkill} @NearestPlayer{r=30} ~onTimer:10 >70%
+  - skill{s=A14_RandomSkill} @NearestPlayer{r=30} ~onTimer:20 >70%
     ### PHASE 2
-  - skill{s=A14_RandomSkill2} @NearestPlayer{r=30} ~onTimer:10 =35%-70%
+  - skill{s=A14_RandomSkill2} @NearestPlayer{r=30} ~onTimer:40 =35%-70%
   - potion{type=SPEED;duration=200;level=1;overwrite=true} @Self ~onTimer:10 =35%-70%
     ### PHASE 3
   - potion{type=SPEED;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
-  - skill{s=A14_RandomSkill3} @NearestPlayer{r=30} ~onTimer:10 <35%
+  - skill{s=A14_RandomSkill3} @NearestPlayer{r=30} ~onTimer:60 <35%
     ### DEATH STUFF
   - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
   - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
   - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
 
     ### PHASE 1
-  - skill{s=A15_RandomSkill} @NearestPlayer{r=30} ~onTimer:10
+  - skill{s=A15_RandomSkill} @NearestPlayer{r=30} ~onTimer:30
   - skill{s=A15_SummonRandomTotem} @Self ~onTimer:10
     ### PHASE 2
-  - potion{type=SPEED;duration=200;level=1;overwrite=true} @Self ~onTimer:10 =35%-70%
+  - potion{type=SPEED;duration=200;level=1;overwrite=true} @Self ~onTimer:40 =35%-70%
   - skill{s=CancelSlowness} @Self ~onTimer:60 =35%-70%
     ### PHASE 3
   - potion{type=SPEED;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
@@ -69,12 +69,12 @@ Necromancer:
 
   - skill{s=CancelDespawn} @Self ~onTimer:20
     ### PHASE 1
-  - skill{s=LB4_Drag} @self ~onTimer:100
-  - skill{s=LB4_Phase1} @PIR{r=50} ~onTimer:100 >50%
+  - skill{s=LB4_Drag} @self ~onTimer:200
+  - skill{s=LB4_Phase1} @PIR{r=50} ~onTimer:300 >50%
     ### PHASE 2
   - skill{s=DamageBuff} @Self =50%
   - skill{s=SpeedBuff} @Self =50%
-  - skill{s=LB4_Phase2} @PIR{r=50} ~onTimer:100 <50%
+  - skill{s=LB4_Phase2} @PIR{r=50} ~onTimer:200 <50%
     ### SUMMONS
   - skill{s=LB4_Summon} @Self ~onTimer:400
     ### DEATH

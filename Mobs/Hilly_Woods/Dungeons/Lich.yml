@@ -1,6 +1,6 @@
 Lich:
  Display: '&4Lich'
- Health: 6000
+ Health: 3000
  Damage: 35
  Type: Zombie
  Faction: Boss
@@ -30,7 +30,7 @@ Lich:
   - WITHER 0.0
   - PROJECTILE 0.5
  Skills:
-  - heal{a=2} @self ~onTimer:40
+  - heal{a=2} @self ~onTimer:60
   - skill{s=SoulEating} @Self ~onAttack
   - skill{s=DarkRise} @Self ~onTimer:220
   - throw{velocity=12;velocityY=5} @Target ~onAttack
@@ -42,13 +42,13 @@ Lich:
   - effect:sound{s=block.glass.break;p=0.5;v=0.8} @self ~onDamaged
   - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
   ### SUMMONS
-  - skill{s=A11_Summon_1} @Self ~onTimer:10 >70%
-  - skill{s=A11_Summon_2} @Self ~onTimer:10 =35%-70%
-  - skill{s=A11_Summon_3} @Self ~onTimer:10 <35%
+  - skill{s=A11_Summon_1} @Self ~onTimer:40 >70%
+  - skill{s=A11_Summon_2} @Self ~onTimer:60 =35%-70%
+  - skill{s=A11_Summon_3} @Self ~onTimer:80 <35%
   ### PHASE 1
-  - skill{s=A11_Phase_1} @NearestPlayer{r=25} ~onTimer:10 >55%
+  - skill{s=A11_Phase_1} @NearestPlayer{r=25} ~onTimer:20 >55%
   ### PHASE 2
-  - skill{s=A11_Phase_2} @NearestPlayer{r=25} ~onTimer:10 <55%
+  - skill{s=A11_Phase_2} @NearestPlayer{r=25} ~onTimer:40 <55%
   ### DEATH STUFF
   - remove{delay=0} @MIR{r=50;t=A11_Clone} ~onDeath
   - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath

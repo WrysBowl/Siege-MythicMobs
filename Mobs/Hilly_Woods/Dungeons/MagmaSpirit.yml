@@ -1,7 +1,7 @@
 MagmaSpirit:
  Type: MAGMA_CUBE
  Display: '&4Magma Spirit'
- Health: 3600
+ Health: 1800
  Damage: 20
  Faction: Boss
  BossBar:
@@ -26,8 +26,8 @@ MagmaSpirit:
   Silent: true
   Size: 4
  Skills:
-  - skill{s=Flamethrower} @Self ~onTimer:200
-  - skill{s=FireRing} @Self ~onTimer:400
+  - skill{s=Flamethrower} @Self ~onTimer:300
+  - skill{s=FireRing} @Self ~onTimer:500
   - skill{s=LungeAttack} @self ~onTimer:20
   - sound{s=entity.magma_cube.hurt} @Self ~onDamaged
   - sound{s=entity.magma_cube.death} @Self ~onDeath
@@ -48,10 +48,10 @@ MagmaSpirit:
   - effect:sound{s=entity.irongolem.hurt;p=0.5;v=0.8} @self ~onDamaged
   - effect:sound{s=entity.blaze.hurt;p=0.5;v=0.8} @self ~onDamaged
   ### PHASE 1
-  - skill{s=A12_RandomSkill} @NearestPlayer{r=30} ~onTimer:10 >70%
+  - skill{s=A12_RandomSkill} @NearestPlayer{r=30} ~onTimer:40 >70%
   ### PHASE 2
-  - skill{s=A12_RandomSkill2} @NearestPlayer{r=30} ~onTimer:10 =35%-70%
+  - skill{s=A12_RandomSkill2} @NearestPlayer{r=30} ~onTimer:60 =35%-70%
   - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <70%
   ### PHASE 2
-  - skill{s=A12_RandomSkill3} @NearestPlayer{r=30} ~onTimer:10 <35%
+  - skill{s=A12_RandomSkill3} @NearestPlayer{r=30} ~onTimer:80 <35%
   - potion{type=SPEED;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
