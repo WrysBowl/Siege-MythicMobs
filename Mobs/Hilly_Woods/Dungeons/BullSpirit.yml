@@ -20,7 +20,7 @@ BullSpirit:
   PreventSunburn: true
   Persistent: true
   Despawn: false
-  FollowRange: 80
+  FollowRange: 100
   KnockbackResistance: 1.0
 
  Skills:

@@ -22,7 +22,7 @@ MagmaSpirit:
   PreventItemPickup: true
   MovementSpeed: 0.4
   KnockbackResistance: 1.0
-  FollowRange: 50
+  FollowRange: 100
   Silent: true
   Size: 4
  Skills:

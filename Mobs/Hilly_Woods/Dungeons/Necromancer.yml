@@ -16,7 +16,7 @@ Necromancer:
     Persistent: true
     Despawn: false
     Silent: true
-    FollowRange: 40
+    FollowRange: 100
     MovementSpeed: 0.33
     KnockbackResistance: 0.5
   AITargetSelectors:

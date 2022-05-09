@@ -19,7 +19,7 @@ SlimeSpirit:
   Despawn: false
   PreventItemPickup: true
   MovementSpeed: 0.4
-  FollowRange: 80
+  FollowRange: 100
   Size: 6
   ModifyBoundingBox: true
   Silent: true

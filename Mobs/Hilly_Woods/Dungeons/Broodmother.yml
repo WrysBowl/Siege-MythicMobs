@@ -18,7 +18,7 @@ Broodmother:
     Persistent: true
     Despawn: false
     Silent: true
-    FollowRange: 80
+    FollowRange: 100
     MovementSpeed: 0.35
     KnockbackResistance: 1.0
   AITargetSelectors:
