@@ -58,23 +58,13 @@ Davy_Jones:
 
     ### PHASE 1
   - skill{s=A13_Phase_1} @NearestPlayer{r=50} ~onTimer:20 >70%
-    ### PHASE 2
-  - skill{s=A13_Phase_2} @NearestPlayer{r=50} ~onTimer:40 =35%-70%
-  - potion{type=SPEED;duration=200;level=1;overwrite=true} @Self ~onTimer:10 =35%-70%
-    ### PHASE 3
-  - potion{type=SPEED;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%
-  - skill{s=A13_Phase_3} @NearestPlayer{r=50} ~onTimer:60 <35%
 
   - skill{s=CancelDespawn} @Self ~onTimer:20
     ### PHASE 1
-  - skill{s=LB3Knockback} @NearestPlayer{r=50} ~onTimer:120
-  - skill{s=LB3Drag} @NearestPlayer{r=50} ~onTimer:400
-  - skill{s=LB3_Burst} @NearestPlayer{r=50} ~onTimer:300 >50%
-  - skill{s=LB3_Blast} @PIR{r=50} ~onTimer:100 >50%
-    ### PHASE 2
-  - skill{s=5sInvincible} @Self =50%
-  - skill{s=DamageBuff} @Self =50%
-  - skill{s=SpeedBuff} @Self =50%
+  - skill{s=LB3Knockback} @NearestPlayer{r=50} ~onTimer:200 0.4
+  - skill{s=LB3Drag} @NearestPlayer{r=50} ~onTimer:300 0.4
+  - skill{s=LB3_Burst} @NearestPlayer{r=50} ~onTimer:400 >50%
+  - skill{s=LB3_Blast} @PIR{r=50} ~onTimer:500 >50%
     ### SUMMONS
   - skill{s=LB3_Summon} @self =75%
   - skill{s=LB3_Summon} @self =50%
