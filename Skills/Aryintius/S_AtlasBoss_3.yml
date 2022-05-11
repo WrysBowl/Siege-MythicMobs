@@ -65,8 +65,6 @@ A3_Phase_1: ### Phase 1 Attack
   - skill{s=A3_PoisonBlast}
   - delay 20
   - skill{s=A3_PoisonBlast}
-  - delay 20
-  - skill{s=A3_PoisonBlast}
 A3_Phase_2: ### Phase 2 Attack
   Cooldown: 10
   Conditions:
@@ -84,9 +82,3 @@ A3_Phase_2: ### Phase 2 Attack
   - skill{s=A3_PoisonBlast}
   - delay 15
   - skill{s=A3_Blast}
-  - delay 15
-  - skill{s=A3_PoisonBlast}
-  - delay 15
-  - skill{s=A3_Blast}
-  - delay 15
-  - skill{s=A3_PoisonBlast}

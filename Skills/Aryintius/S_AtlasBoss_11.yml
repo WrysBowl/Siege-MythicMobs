@@ -27,10 +27,6 @@ A11_12345: ### Rapid Bolt Attack (L-R)
   - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=340;v=20;i=1;hR=1;vR=1}
   - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
   - effect:sound{s=entity.generic.burn;v=0.5;p=1}
-  - delay 2
-  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=320;v=20;i=1;hR=1;vR=1}
-  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
-  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
 A11_54321: ### Rapid Bolt Attack (R-L)
   Conditions:
   - targetinlineofsight true
@@ -48,10 +44,6 @@ A11_54321: ### Rapid Bolt Attack (R-L)
   - effect:sound{s=entity.generic.burn;v=0.5;p=1}
   - delay 2
   - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=20;v=20;i=1;hR=1;vR=1}
-  - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
-  - effect:sound{s=entity.generic.burn;v=0.5;p=1}
-  - delay 2
-  - projectile{onTick=A11S-Tick;onHit=A11S-Hit;hO=40;v=20;i=1;hR=1;vR=1}
   - effect:sound{s=entity.ghast.shoot;v=0.5;p=2}
   - effect:sound{s=entity.generic.burn;v=0.5;p=1}
 A11S-Tick:
@@ -112,15 +104,11 @@ A11_Phase_1:
   - delay 20
   - skill{s=A11_Shot}
   - delay 20
-  - skill{s=A11_Shot}
-  - delay 20
   - skill{s=A5_Burst_Left}
   - delay 10
   - skill{s=A5_Burst_Mid}
   - delay 10
   - skill{s=A5_Burst_Right}
-  - delay 10
-  - skill{s=A5_Burst_Fast}
 A11_Phase_2:
   Cooldown: 10
   Conditions:
@@ -137,10 +125,6 @@ A11_Phase_2:
   - delay 15
   - skill{s=A11_54321}
   - delay 15
-  - skill{s=A5_Burst_Fast}
-  - delay 10
-  - skill{s=A5_Burst_Fast}
-  - delay 10
   - skill{s=A5_Burst_Fast}
   - delay 10
   - skill{s=A5_Burst_Fast}

@@ -32,33 +32,12 @@ LB5M_Hit:
   Skills:
   - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
   - effect:sound{s=entity.generic.hurt;v=1;p=1}
-  - skill{s=Bleed_30} @target
+  - damage{a=10;ia=true;pi=true;pk=true}
 ### AREA SKILLS
 LB5_Drag: ### Massive DoT + Slowness
   Skills:
   - effect:sound{s=entity.wither.death;v=0.5;p=1}
   - effect:sound{s=entity.wither.death;v=0.5;p=0}
-  - skill{s=LB5_Drag_P} @self
-  - skill{s=LB5_Drag_D} @PIR{r=10}
-  - delay 10
-  - skill{s=LB5_Drag_P} @self
-  - skill{s=LB5_Drag_D} @PIR{r=10}
-  - delay 10
-  - skill{s=LB5_Drag_P} @self
-  - skill{s=LB5_Drag_D} @PIR{r=10}
-  - delay 10
-  - skill{s=LB5_Drag_P} @self
-  - skill{s=LB5_Drag_D} @PIR{r=10}
-  - delay 10
-  - skill{s=LB5_Drag_P} @self
-  - skill{s=LB5_Drag_D} @PIR{r=10}
-  - delay 10
-  - skill{s=LB5_Drag_P} @self
-  - skill{s=LB5_Drag_D} @PIR{r=10}
-  - delay 10
-  - skill{s=LB5_Drag_P} @self
-  - skill{s=LB5_Drag_D} @PIR{r=10}
-  - delay 10
   - skill{s=LB5_Drag_P} @self
   - skill{s=LB5_Drag_D} @PIR{r=10}
   - delay 10
@@ -94,15 +73,10 @@ LB5_Phase_1:
   - skill{s=LB5_Blast} @NearestPlayer{r=50}
   - delay 5
   - skill{s=LB5_Blast} @NearestPlayer{r=50}
-  - delay 5
-  - skill{s=LB5_Blast} @NearestPlayer{r=50}
   - delay 10
   - skill{s=LB5_Missile} @PIR{r=30}
 LB5_Phase_2:
   Skills:
-  - skill{s=LB5_Blast} @NearestPlayer{r=50}
-  - delay 2
-  - skill{s=LB5_Blast} @NearestPlayer{r=50}
   - delay 2
   - skill{s=LB5_Blast} @NearestPlayer{r=50}
   - delay 10

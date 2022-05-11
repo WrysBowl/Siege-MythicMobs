@@ -133,12 +133,6 @@ A13_Circle: ### 30 degree Circle of basic attacks
   - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=90;v=20;i=1;hR=1;vR=1}
   - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=60;v=20;i=1;hR=1;vR=1}
   - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=30;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=0;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=330;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=300;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=270;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=240;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=210;v=20;i=1;hR=1;vR=1}
   - effect:sound{s=entity.shulker.shoot;v=1;p=2}
   - effect:sound{s=entity.shulker.shoot;v=0.75;p=1}
   - effect:sound{s=entity.shulker.shoot;v=0.5;p=0}
@@ -153,18 +147,6 @@ A13_BigCircle: ### 20 degree Circle of basic attacks
   - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=100;v=20;i=1;hR=1;vR=1}
   - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=80;v=20;i=1;hR=1;vR=1}
   - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=60;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=40;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=20;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=0;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=340;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=320;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=300;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=280;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=260;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=240;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=220;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=200;v=20;i=1;hR=1;vR=1}
-  - projectile{onTick=A13F-Tick;onHit=A13F-Hit;hO=180;v=20;i=1;hR=1;vR=1}
   - effect:sound{s=entity.shulker.shoot;v=1;p=2}
   - effect:sound{s=entity.shulker.shoot;v=0.75;p=1}
   - effect:sound{s=entity.shulker.shoot;v=0.5;p=0}
@@ -279,7 +261,6 @@ A13_Phase_1:
   - delay 30
   - skill{s=A13_Burst_Right}
   - delay 30
-  - skill{s=A13_Teleport} @NearestPlayer{r=30}
   - skill{s=A13_Nova} @Self
   - delay 20
   - skill{s=A13_Circle}
@@ -289,12 +270,6 @@ A13_Phase_1:
   - skill{s=A13_Circle}
   - delay 20
   - skill{s=A13_Heavy}
-  - delay 10
-  - skill{s=A13_Heavy_2}
-  - delay 10
-  - skill{s=A13_Heavy_3}
-  - delay 10
-  - skill{s=A13_Heavy_4}
 A13_Phase_2:
   Cooldown: 10
   Conditions:

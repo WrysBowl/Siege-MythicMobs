@@ -9,13 +9,12 @@ Poison_60:
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
-  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 10
-  - damage{a=30;pi=true;pk=true}
+  - damage{a=5;pi=true;pk=true}
   - delay 10
-  - damage{a=30;pi=true;pk=true}
+  - damage{a=5;pi=true;pk=true}
   - delay 10
-  - damage{a=30;pi=true;pk=true}
+  - damage{a=5;pi=true;pk=true}
 Poison_90:
   Cooldown: 2
   Skills:
@@ -23,7 +22,6 @@ Poison_90:
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
-  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 10
   - damage{a=25;pi=true;pk=true}
   - delay 10
@@ -37,7 +35,6 @@ Poison_120:
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
-  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 10
   - damage{amount=10;pi=true;pk=true}
   - delay 10
@@ -51,7 +48,6 @@ Poison_150:
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
-  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 5
   - damage{a=25;pi=true;pk=true}
   - delay 5
@@ -68,7 +64,6 @@ Poison_150X:
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
-  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 5
   - damage{a=25;pi=true;pk=true}
   - delay 5
@@ -85,7 +80,6 @@ Poison_300X:
   - effect:sound{s=block.fire.extinguish;v=0.2;p=1}
   - effect:sound{s=block.fire.extinguish;v=0.2;p=0}
   - potion{type=CONFUSION;duration=200;lvl=4;overwrite=true}
-  - sendtitle{title="&2&lToxin";subtitle="&fDamage over time/confusion";d=20} @target
   - delay 5
   - damage{amount=15;pi=true;pk=true}
   - delay 5

@@ -101,14 +101,6 @@ A15_DeathNova:
   - effect:particlering{particle=smoke;radius=8;points=81;amount=1;hS=1;vS=0} @self
   - effect:particlering{particle=reddust;radius=8;points=81;amount=1;hS=1;vS=0} @self
   - skill{s=Bleed_30X} @PIR{r=8}
-  - delay 5
-  - effect:sound{s=entity.generic.explode;v=0.5;p=2}
-  - effect:sound{s=entity.generic.explode;v=0.5;p=1}
-  - effect:particlesphere{particle=smoke;amount=400;r=10} @self
-  - effect:particlesphere{particle=reddust;amount=400;r=10} @self
-  - effect:particlering{particle=smoke;radius=10;points=121;amount=1;hS=1;vS=0} @self
-  - effect:particlering{particle=reddust;radius=10;points=121;amount=1;hS=1;vS=0} @self
-  - damage{amount=5;pi=true;pk=true} @PIR{r=10}
 A15_BleedNova:
   Skills:
   - effect:particlering{particle=reddust;radius=8;points=81;amount=1;hS=1;vS=0} @self
@@ -170,28 +162,8 @@ A15_LeftRight:
   - effect:sound{s=entity.wither.death;v=0.5;p=2}
   - effect:sound{s=entity.shulker.shoot;v=1;p=2}
   - effect:sound{s=entity.shulker.shoot;v=1;p=1}
-  - delay 5
-  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=300;v=20;i=1;hR=2.0;vR=2.0}
-  - effect:sound{s=entity.wither.death;v=0.5;p=2}
-  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
-  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
-  - delay 5
-  - projectile{onTick=A15S-Tick;onHit=A15S-Hit;hO=270;v=20;i=1;hR=2.0;vR=2.0}
-  - effect:sound{s=entity.wither.death;v=0.5;p=2}
-  - effect:sound{s=entity.shulker.shoot;v=1;p=2}
-  - effect:sound{s=entity.shulker.shoot;v=1;p=1}
 A15_CircleSpam:
   Skills:
-  - skill{s=A15_DeathCircle}
-  - delay 5
-  - skill{s=A15_DeathCircle}
-  - delay 5
-  - skill{s=A15_DeathCircle}
-  - delay 5
-  - skill{s=A15_DeathCircle}
-  - delay 5
-  - skill{s=A15_DeathCircle}
-  - delay 5
   - skill{s=A15_DeathCircle}
   - delay 5
   - skill{s=A15_DeathCircle}

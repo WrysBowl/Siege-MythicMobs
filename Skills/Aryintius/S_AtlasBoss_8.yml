@@ -23,20 +23,6 @@ A8_1234: ### Rapid-fires 5 bolts from left-right
   - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
   - delay 2
   - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 6
-  - projectile{onTick=A8A-Tick;onHit=A8A-Hit;hO=345;v=20;i=1;hR=1.5;vR=1.5}
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 2
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 2
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 6
-  - projectile{onTick=A8A-Tick;onHit=A8A-Hit;hO=330;v=20;i=1;hR=1.5;vR=1.5}
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 2
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 2
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
 A8_4321: ### Rapid-fires 5 bolts from right-left
   Conditions:
   - targetinlineofsight true
@@ -56,20 +42,6 @@ A8_4321: ### Rapid-fires 5 bolts from right-left
   - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
   - delay 6
   - projectile{onTick=A8A-Tick;onHit=A8A-Hit;hO=0;v=20;i=1;hR=1.5;vR=1.5}
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 2
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 2
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 6
-  - projectile{onTick=A8A-Tick;onHit=A8A-Hit;hO=15;v=20;i=1;hR=1.5;vR=1.5}
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 2
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 2
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
-  - delay 6
-  - projectile{onTick=A8A-Tick;onHit=A8A-Hit;hO=30;v=20;i=1;hR=1.5;vR=1.5}
   - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
   - delay 2
   - effect:sound{s=entity.player.attack.sweep;v=1;p=1}
@@ -136,9 +108,6 @@ A8_Knockback: ### Blade storm attack.
   - effect:sound{s=entity.player.attack.sweep;v=1;p=0} @PIR{r=25}
   - effect:particlesphere{particle=sweepAttack;amount=40;r=4} @self
   - delay 2
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=1} @PIR{r=25}
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=0} @PIR{r=25}
-  - effect:particlesphere{particle=sweepAttack;amount=80;r=5} @self
   - damage{a=5} @PIR{r=8}
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
 A8_Phase_1: ### Phase 1 Attack
@@ -151,8 +120,6 @@ A8_Phase_1: ### Phase 1 Attack
   - delay 60
   - skill{s=A8_4321}
   - delay 60
-  - skill{s=A8_Blast}
-  - delay 10
   - skill{s=A8_Blast}
   - delay 10
   - skill{s=A8_Blast}
@@ -170,10 +137,6 @@ A8_Phase_2: ### Phase 2 Attack
   - delay 20
   - skill{s=A8_Knockback}
   - delay 25
-  - skill{s=A8_Blast}
-  - delay 10
-  - skill{s=A8_Blast}
-  - delay 10
   - skill{s=A8_Blast}
   - delay 10
   - skill{s=A8_Blast}

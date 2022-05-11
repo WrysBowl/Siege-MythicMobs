@@ -58,12 +58,6 @@ A14_Laser:
   - delay 2
   - projectile{onTick=A14L-Tick;onHit=A14L-Hit;hO=0;vO=0;v=15;i=1;hR=1.0;vR=1.0}
   - effect:sound{s=entity.skeleton_horse.death;v=1;p=1}
-  - delay 2
-  - projectile{onTick=A14L-Tick;onHit=A14L-Hit;hO=0;vO=0;v=15;i=1;hR=1.0;vR=1.0}
-  - effect:sound{s=entity.skeleton_horse.death;v=1;p=1}
-  - delay 2
-  - projectile{onTick=A14L-Tick;onHit=A14L-Hit;hO=0;vO=0;v=15;i=1;hR=1.0;vR=1.0}
-  - effect:sound{s=entity.skeleton_horse.death;v=1;p=1}
 A14L-Tick:
   Skills:
   - effect:particles{p=witchMagic;amount=1;speed=0;hS=0.1;vS=0.1} @origin
@@ -138,39 +132,13 @@ A14_BeamLaser:
   - skill{s=A14_Laser}
   - delay 5
   - skill{s=A14_Laser}
-  - delay 5
-  - skill{s=A14_Laser}
-  - delay 5
-  - skill{s=A14_Laser}
-  - delay 5
-  - skill{s=A14_Laser}
-  - delay 5
-  - skill{s=A14_Laser}
-  - delay 5
-  - skill{s=A14_Laser}
 A14_CircleSpam:
   Skills:
   - skill{s=A14_DeathCircle}
   - delay 20
   - skill{s=A14_DeathCircle}
-  - delay 20
-  - skill{s=A14_DeathCircle}
-  - delay 20
-  - skill{s=A14_DeathCircle}
-  - delay 20
-  - skill{s=A14_DeathCircle}
 A14_CircleSpam2:
   Skills:
-  - skill{s=A14_DeathCircle}
-  - delay 10
-  - skill{s=A14_DeathCircle}
-  - delay 10
-  - skill{s=A14_DeathCircle}
-  - delay 10
-  - skill{s=A14_DeathCircle}
-  - delay 10
-  - skill{s=A14_DeathCircle}
-  - delay 10
   - skill{s=A14_DeathCircle}
   - delay 10
   - skill{s=A14_DeathCircle}
@@ -187,23 +155,9 @@ A14_HeavySpam:
   - skill{s=A14_Heavy}
   - delay 10
   - skill{s=A14_Heavy}
-  - delay 10
-  - skill{s=A14_Heavy}
-  - delay 10
-  - skill{s=A14_Heavy}
-  - delay 10
-  - skill{s=A14_Heavy}
-  - delay 10
-  - skill{s=A14_Heavy}
-  - delay 10
-  - skill{s=A14_Heavy}
 A14_HeavySpam2:
   Skills:
   - skill{s=A2_Knockback} @Self
-  - delay 20
-  - skill{s=A14_TripleHeavy}
-  - delay 20
-  - skill{s=A14_TripleHeavy}
   - delay 20
   - skill{s=A14_TripleHeavy}
   - delay 20

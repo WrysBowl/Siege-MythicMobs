@@ -42,9 +42,6 @@ LB3_Burst:
   - skill{s=LB3_Shot} @NearestPlayer{r=50}
   - delay 10
   - skill{s=LB3_Shot} @NearestPlayer{r=50}
-  - delay 10
-  - skill{s=LB3_Shot} @NearestPlayer{r=50}
-  - delay 10
 LB3_Doom:
   Skills:
   - skill{s=LB3_Shot} @NearestPlayer{r=50}
@@ -56,15 +53,6 @@ LB3_Doom:
   - skill{s=LB3_Shot} @NearestPlayer{r=50}
   - delay 5
   - skill{s=LB3_Shot} @NearestPlayer{r=50}
-  - delay 5
-  - skill{s=LB3_Shot} @NearestPlayer{r=50}
-  - delay 20
-  - skill{s=LB3_Shot} @NearestPlayer{r=50}
-  - delay 5
-  - skill{s=LB3_Shot} @NearestPlayer{r=50}
-  - delay 5
-  - skill{s=LB3_Shot} @NearestPlayer{r=50}
-  - delay 20
 ### AREA SKILLS
 LB3Drag:
   Skills:
