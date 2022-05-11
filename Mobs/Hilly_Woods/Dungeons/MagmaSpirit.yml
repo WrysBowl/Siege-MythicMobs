@@ -32,10 +32,10 @@ MagmaSpirit:
   - sound{s=entity.magma_cube.hurt} @Self ~onDamaged
   - sound{s=entity.magma_cube.death} @Self ~onDeath
   - effect:blockmask{m=magma_block;r=2;d=200} @self ~onTimer:5
+
   ### PHASE 1
   - skill{s=A6_Phase_1} @NearestPlayer{r=50} ~onTimer:10 >60%
   ### PHASE 2
-  - potion{type=SPEED;duration=40000;level=3;overwrite=true} @Self =50%
   - skill{s=A6_Phase_2} @NearestPlayer{r=50} ~onTimer:10 <60%
   - skill{s=CancelSlowness} @Self ~onTimer:10 <60%
   ### DEATH STUFF
@@ -51,7 +51,5 @@ MagmaSpirit:
   - skill{s=A12_RandomSkill} @NearestPlayer{r=30} ~onTimer:40 >70%
   ### PHASE 2
   - skill{s=A12_RandomSkill2} @NearestPlayer{r=30} ~onTimer:60 =35%-70%
-  - potion{type=DAMAGE_RESISTANCE;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <70%
   ### PHASE 2
   - skill{s=A12_RandomSkill3} @NearestPlayer{r=30} ~onTimer:80 <35%
-  - potion{type=SPEED;duration=200;level=3;overwrite=true} @Self ~onTimer:10 <35%

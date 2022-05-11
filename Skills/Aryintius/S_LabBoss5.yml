@@ -15,8 +15,6 @@ LB5B_Hit:
   - effect:particles{p=largesmoke;a=10;hS=1;vS=1}
   - effect:sound{s=entity.generic.hurt;v=1;p=1}
   - damage{a=5;ia=true;pi=true;pk=true}
-  - delay 20
-  - damage{a=10;pk=true}
 LB5_Missile: ### Tracking Missile. Always hits for bleed damage.
   Conditions:
   - targetinlineofsight true
@@ -76,19 +74,13 @@ LB5_Drag_P: ### Particle effects for skill
 LB5_Drag_D: ### Damage Values for skill
   Skills:
   - pull{velocity=1} @PIR{r=3}
-  - damage{a=10;pk=true} @PIR{r=3}
+  - damage{a=5;ia=true;pi=true;pk=true} @PIR{r=3}
   - delay 2
   - pull{velocity=1} @PIR{r=3}
   - damage{a=5;ia=true;pi=true;pk=true} @PIR{r=3}
   - delay 2
   - pull{velocity=1} @PIR{r=3}
-  - damage{a=10;pk=true} @PIR{r=3}
-  - delay 2
-  - pull{velocity=1} @PIR{r=3}
   - damage{a=5;ia=true;pi=true;pk=true} @PIR{r=3}
-  - delay 2
-  - pull{velocity=1} @PIR{r=3}
-  - damage{a=10;pk=true} @PIR{r=3}
 LB5_Drag_S: ### Sounds for the skill
   Skills:
   - effect:sound{s=entity.wither.death;v=0.5;p=1}
@@ -104,10 +96,6 @@ LB5_Phase_1:
   - skill{s=LB5_Blast} @NearestPlayer{r=50}
   - delay 5
   - skill{s=LB5_Blast} @NearestPlayer{r=50}
-  - delay 5
-  - skill{s=LB5_Blast} @NearestPlayer{r=50}
-  - delay 5
-  - skill{s=LB5_Blast} @NearestPlayer{r=50}
   - delay 10
   - skill{s=LB5_Missile} @PIR{r=30}
 LB5_Phase_2:
@@ -118,14 +106,6 @@ LB5_Phase_2:
   - delay 2
   - skill{s=LB5_Blast} @NearestPlayer{r=50}
   - delay 10
-  - skill{s=LB5_Blast} @NearestPlayer{r=50}
-  - delay 2
-  - skill{s=LB5_Blast} @NearestPlayer{r=50}
-  - delay 2
-  - skill{s=LB5_Blast} @NearestPlayer{r=50}
-  - delay 10
-  - skill{s=LB5_Blast} @NearestPlayer{r=50}
-  - delay 2
   - skill{s=LB5_Blast} @NearestPlayer{r=50}
   - delay 2
   - skill{s=LB5_Blast} @NearestPlayer{r=50}

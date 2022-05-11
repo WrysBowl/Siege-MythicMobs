@@ -221,17 +221,17 @@ Bleed_30:
   - effect:sound{s=entity.vex.hurt;p=0.2;v=0.25}
   - effect:sound{s=entity.zombie.hurt;p=0.2;v=0.25}
   - delay 5
-  - damage{a=10;ia=true;pi=true;pk=true}
+  - damage{a=3;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=10;ia=true;pi=true;pk=true}
+  - damage{a=3;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=10;ia=true;pi=true;pk=true}
+  - damage{a=3;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=10;ia=true;pi=true;pk=true}
+  - damage{a=3;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=10;ia=true;pi=true;pk=true}
+  - damage{a=3;ia=true;pi=true;pk=true}
   - delay 5
-  - damage{a=10;ia=true;pi=true;pk=true}
+  - damage{a=3;ia=true;pi=true;pk=true}
 Bleed_30X:
   Skills:
   - potion{type=UNLUCK;duration=100;lvl=0;overwrite=true}

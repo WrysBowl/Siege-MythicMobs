@@ -28,12 +28,12 @@ Broodmother:
   Skills:
   - heal{a=2} @self ~onTimer:40
   - skill{s=BroodmotherNest} ~onDamaged 0.2
-  - skill{s=BroodmotherWebBolt} ~onTimer:280
-  - skill{s=BroodmotherWebArea} ~onTimer:200 0.5
-  - skill{s=BroodmotherPoisonGas} ~onTimer:220 0.6
-  - skill{s=BroodmotherPoisonBolt} ~onTimer:140
+  - skill{s=BroodmotherWebBolt} ~onTimer:500 0.5
+  - skill{s=BroodmotherWebArea} ~onTimer:400 0.5
+  - skill{s=BroodmotherPoisonGas} ~onTimer:600 0.6
+  - skill{s=BroodmotherPoisonBolt} ~onTimer:300 0.5
   - skill{s=BroodmotherEncase} ~onAttack 0.1
-  - skill{s=BroodmotherBeam;repeat=2;repeatInterval=10} ~onTimer:400
+  - skill{s=BroodmotherBeam;repeat=2;repeatInterval=10} ~onTimer:250
   - skill{s=BroodmotherExplosionProjectiles} ~onTimer:600 0.5
     ### PHASE 1
   - skill{s=Poison_60} @target ~onAttack 0.15 >60%

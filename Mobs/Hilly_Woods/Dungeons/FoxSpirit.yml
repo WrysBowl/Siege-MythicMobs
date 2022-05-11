@@ -45,6 +45,7 @@ FoxSpirit:
   - skill{s=FoxLightning} @self ~onDamaged 0.1
   - summon{t=FoxSpiritHealingOrb;itt=false;amount=2;cooldown=20;radius=4} ~onDamaged
   - heal{a=<skill.var.damage-amount>/4} @self ~onAttack
+
     ### PHASE 1
   - skill{s=A8_Phase_1} @NearestPlayer{r=50} ~onTimer:20 >55%
     ### PHASE 2

@@ -26,17 +26,12 @@ BullSpirit:
  Skills:
   - heal{a=2} @self ~onTimer:40
   - throw{velocity=10;velocityY=8} @Target ~onAttack
-  - skill{s=BullCharge} @Self ~onTimer:120
-  - skill{s=BullSlam} @Self ~onTimer:200
-  - skill{s=AngerSlam} @Self ~onTimer:300
-  - skill{s=LB1Fire} @NearestPlayer{r=30} ~onTimer:200
+  - skill{s=BullCharge} @Self ~onTimer:150
+  - skill{s=BullSlam} @Self ~onTimer:300
+  - skill{s=AngerSlam} @Self ~onTimer:200
 
   ### PHASE 1
   - skill{s=LB5_Phase_1} @PIR{r=30} ~onTimer:200 >50%
   - skill{s=LB5_Drag} @PIR{r=30} ~onTimer:400 >50%
   ### PHASE 2
   - skill{s=LB5_Phase_2} @PIR{r=30} ~onTimer:200 <50%
-  - skill{s=DamageBuff} @Self =50%
-  - skill{s=SpeedBuff} @Self =50%
-  ### SUMMONS
-  - skill{s=LB5_Summon} @Self ~onTimer:300

@@ -37,24 +37,25 @@ Davy_Jones:
   Skills:
   - heal{a=2} @self ~onTimer:40
   - summon{type=Sea_Warrior;amount=1;radius=4} @self ~onDamaged 0.1
-  - skill{s=WaterBoltAttack} @self ~onTimer:250 0.6
+  - skill{s=WaterBoltAttack} @self ~onTimer:550 0.6
   - skill{s=WaterShellDefense} @self ~onDamaged 1
-  - skill{s=DavyJonesLockerAttack} ~onDamaged 0.3
-  - skill{s=TridentLightningAttack} ~onTimer:400 0.5
+  - skill{s=DavyJonesLockerAttack} ~onDamaged 0.1
+  - skill{s=TridentLightningAttack} ~onTimer:400 0.3
   - skill{s=Davy_Jones_RangedAttack} ~onDamaged 1
   - skill{s=Davy_Jones_MeleeAttack} ~onDamaged 1
-  - skill{s=WaterSpoutAttack} @self ~onTimer:400 0.5
+  - skill{s=WaterSpoutAttack} @self ~onTimer:800 0.5
+
     ### PHASE 1
   - skill{s=A9_Phase_1} @NearestPlayer{r=50} ~onTimer:40 >55%
     ### PHASE 2
   - skill{s=A9_Phase_2} @NearestPlayer{r=50} ~onTimer:60 <55%
+
     ### DEATH STUFF
   - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
   - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
   - effect:particlesphere{particle=cloud;amount=200;radius=2} @self ~onDeath
   - skill{s=CancelSlowness} @Self ~onTimer:5
   - skill{s=CancelDespawn} @Self ~onTimer:20
-  - skill{s=InflictShock} @target ~onAttack 0.2
 
     ### PHASE 1
   - skill{s=A13_Phase_1} @NearestPlayer{r=50} ~onTimer:20 >70%
@@ -65,7 +66,3 @@ Davy_Jones:
   - skill{s=LB3Drag} @NearestPlayer{r=50} ~onTimer:300 0.4
   - skill{s=LB3_Burst} @NearestPlayer{r=50} ~onTimer:400 >50%
   - skill{s=LB3_Blast} @PIR{r=50} ~onTimer:500 >50%
-    ### SUMMONS
-  - skill{s=LB3_Summon} @self =75%
-  - skill{s=LB3_Summon} @self =50%
-  - skill{s=LB3_Summon} @self =25%

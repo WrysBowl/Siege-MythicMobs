@@ -113,7 +113,7 @@ A8B-Tick:
   - effect:particles{p=largeexplode;a=5} @Origin
 A8B-Hit:
   Skills:
-  - damage{a=15;pk=true}
+  - damage{a=5;pk=true}
   - potion{type=SLOW;lvl=4;duration=100;overwrite=true}
   - effect:sound{s=entity.generic.explode;v=1;p=2} @PIR{r=25}
 A8_Knockback: ### Blade storm attack.
@@ -139,7 +139,7 @@ A8_Knockback: ### Blade storm attack.
   - effect:sound{s=entity.player.attack.sweep;v=1;p=1} @PIR{r=25}
   - effect:sound{s=entity.player.attack.sweep;v=1;p=0} @PIR{r=25}
   - effect:particlesphere{particle=sweepAttack;amount=80;r=5} @self
-  - damage{a=15} @PIR{r=8}
+  - damage{a=5} @PIR{r=8}
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
 A8_Phase_1: ### Phase 1 Attack
   Cooldown: 10

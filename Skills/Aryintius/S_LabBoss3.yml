@@ -16,7 +16,7 @@ LB3S-Tick:
   - effect:particles{p=magicCrit;amount=10;speed=0;hS=0.2;vS=0.2} @origin
 LB3S-Hit:
   Skills:
-  - damage{a=20;pk=true}
+  - damage{a=5;pk=true}
 LB3_Blast: ### Heavy Magic Attack
   Conditions:
   - targetinlineofsight true
@@ -31,7 +31,7 @@ LB3B-Tick:
   - effect:particles{p=bubble;amount=20;speed=0;hS=0.2;vS=0.2} @origin
 LB3B-Hit:
   Skills:
-  - damage{a=15;pk=true}
+  - damage{a=5;pk=true}
 ### COMPOSITE SKILLS
 LB3_Burst:
   Skills:
@@ -93,5 +93,5 @@ LB3Knockback:
   - delay 2
   - effect:particlesphere{particle=largesmoke;amount=80;r=5} @self
   - effect:particlesphere{particle=magicCrit;amount=80;r=5} @self
-  - damage{a=15} @PIR{r=5}
+  - damage{a=6} @PIR{r=5}
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}

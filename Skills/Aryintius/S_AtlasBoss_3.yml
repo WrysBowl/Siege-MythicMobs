@@ -26,7 +26,7 @@ A3P-Tick:
   - effect:particles{p=happyVillager;amount=5;speed=0;hS=0.1;vS=0.1} @origin
 A3B-Hit: ### 15.0 hearts + Slowness IV
   Skills:
-  - damage{a=25;pk=true}
+  - damage{a=10;pk=true}
   - potion{type=SLOW;duration=100;lvl=3;overwrite=true}
 A3_Knockback: ### Knockback attack.
   Skills:
@@ -42,7 +42,7 @@ A3_Knockback: ### Knockback attack.
   - effect:particlesphere{particle=explode;amount=80;r=4} @self
   - delay 2
   - effect:particlesphere{particle=explode;amount=100;r=5} @self
-  - damage{a=30} @PIR{r=8}
+  - damage{a=10} @PIR{r=8}
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
 A3_Summon: ### Summons a brood of spiders.
   Cooldown: 20
