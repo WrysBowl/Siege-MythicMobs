@@ -30,4 +30,5 @@ Bandit:
   - skill{s=BanditSwordThrowAttack} ~onDamaged 0.25 @target
   - skill{s=BanditAmbientSound} ~onTimer:80 0.5
   - skill{s=BanditAttackSound} ~onAttack 1
+  - skill{s=LB5_Blast} @NearestPlayer{r=20} ~onDamaged 0.25
   - setname{name='&2Bandit &a<caster.hp>&2/&a<caster.mhp> ❤'} @self

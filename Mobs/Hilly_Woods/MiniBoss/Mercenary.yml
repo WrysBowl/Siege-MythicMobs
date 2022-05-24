@@ -30,3 +30,4 @@ Mercenary:
   - skill{s=BanditAmbientSound} ~onTimer:80 0.5
   - skill{s=BanditAttackSound} ~onAttack 1
   - setname{name='&2Mercenary &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
+  - skill{s=BroodmotherBeam;repeat=2;repeatInterval=4} ~onTimer:200

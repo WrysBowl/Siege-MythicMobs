@@ -30,3 +30,4 @@ Orc:
   - skill{s=OrcAttackSound} ~onAttack 1
   - summon{type=Ogre} @self ~onDeath 0.1
   - setname{name='&2Orc &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
+  - skill{s=A9_Phase_1} @NearestPlayer{r=20} ~onTimer:40 <50%

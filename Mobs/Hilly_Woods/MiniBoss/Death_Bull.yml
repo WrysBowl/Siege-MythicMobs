@@ -25,3 +25,4 @@ DeathBull:
   - skill{s=AngryBullHitSound} ~onDamaged
   - skill{s=AngryBullDeathSound} ~onDeath
   - skill{s=AngryBullAttackSound} ~onAttack
+  - skill{s=LB5_Phase_1} @PIR{r=20} ~onTimer:400 <50%
