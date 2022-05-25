@@ -20,4 +20,5 @@ Molter:
     MovementSpeed: 0.32
   Skills:
   - skill{s=LungeAttack} @self ~onTimer:35
-  - skill{s=A12_RandomSkill} @NearestPlayer{r=30} ~onTimer:40
+  - skill{s=Flamethrower} @Self ~onTimer:200
+  -

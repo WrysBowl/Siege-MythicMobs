@@ -1,7 +1,7 @@
 Mercenary:
   Type: Zombie
   Display: '&2Mercenary'
-  Health: 3000
+  Health: 3500
   Damage: 50
   Faction: Miniboss
   Options:
@@ -31,3 +31,4 @@ Mercenary:
   - skill{s=BanditAttackSound} ~onAttack 1
   - setname{name='&2Mercenary &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
   - skill{s=BroodmotherBeam;repeat=2;repeatInterval=4} ~onTimer:200
+  - skill{s=BroodmotherExplosionProjectiles} ~onTimer:400 0.75

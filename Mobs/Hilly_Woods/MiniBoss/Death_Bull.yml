@@ -1,7 +1,7 @@
 DeathBull:
   Type: Zombie
   Display: '&2Death Bull'
-  Health: 600
+  Health: 700
   Damage: 20
   Faction: Miniboss
   Disguise:
@@ -25,4 +25,5 @@ DeathBull:
   - skill{s=AngryBullHitSound} ~onDamaged
   - skill{s=AngryBullDeathSound} ~onDeath
   - skill{s=AngryBullAttackSound} ~onAttack
-  - skill{s=LB5_Phase_1} @PIR{r=20} ~onTimer:400 <50%
+  - skill{s=BullCharge} @Self ~onTimer:150
+  - skill{s=BullSlam} @Self ~onTimer:300

@@ -1,8 +1,8 @@
 MagmaSpirit:
  Type: MAGMA_CUBE
  Display: '&4Magma Spirit'
- Health: 1800
- Damage: 20
+ Health: 2000
+ Damage: 30
  Faction: Boss
  BossBar:
   Enabled: true
@@ -27,7 +27,7 @@ MagmaSpirit:
   Size: 4
  Skills:
   - skill{s=Flamethrower} @Self ~onTimer:300
-  - skill{s=FireRing} @Self ~onTimer:500
+  - skill{s=FireRing} @Self ~onTimer:400
   - skill{s=LungeAttack} @self ~onTimer:20
   - sound{s=entity.magma_cube.hurt} @Self ~onDamaged
   - sound{s=entity.magma_cube.death} @Self ~onDeath

@@ -1,7 +1,7 @@
 Broodmother:
   Type: Spider
   Display: '&4Broodmother'
-  Health: 10000
+  Health: 15000
   Damage: 60
   Faction: Boss
   BossBar:
@@ -31,16 +31,16 @@ Broodmother:
   - skill{s=BroodmotherWebBolt} ~onTimer:400 0.5
   - skill{s=BroodmotherWebArea} ~onTimer:300 0.5
   - skill{s=BroodmotherPoisonGas} ~onTimer:500 0.6
-  - skill{s=BroodmotherPoisonBolt} ~onTimer:200 0.5
+  - skill{s=BroodmotherPoisonBolt} ~onTimer:200 0.75
   - skill{s=BroodmotherEncase} ~onAttack 0.2
-  - skill{s=BroodmotherBeam;repeat=2;repeatInterval=10} ~onTimer:250
-  - skill{s=BroodmotherExplosionProjectiles} ~onTimer:500 0.65
+  - skill{s=BroodmotherBeam;repeat=2;repeatInterval=10} ~onTimer:150
+  - skill{s=BroodmotherExplosionProjectiles} ~onTimer:400 0.75
     ### PHASE 1
-  - skill{s=Poison_60} @target ~onAttack 0.15 >60%
-  - skill{s=A3_Phase_1} @NearestPlayer{r=50} ~onTimer:20 >60%
+  - skill{s=Poison_60} @target ~onTimer:200 >60%
+  - skill{s=A3_Phase_1} @NearestPlayer{r=50} ~onTimer:200 >60%
     ### PHASE 2
-  - skill{s=Poison_60} @target ~onAttack 0.25 <60%
-  - skill{s=A3_Phase_2} @NearestPlayer{r=50} ~onTimer:20 <60%
+  - skill{s=Poison_60} @target ~onTimer:200 <60%
+  - skill{s=A3_Phase_2} @NearestPlayer{r=50} ~onTimer:200 <60%
     ### DEATH STUFF
   - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
   - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath

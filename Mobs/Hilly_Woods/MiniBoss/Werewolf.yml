@@ -1,7 +1,7 @@
 Werewolf:
   Type: Wolf
   Display: '&4Werewolf'
-  Health: 2000
+  Health: 2500
   Damage: 35
   Faction: Miniboss
   AIGoalSelectors:

@@ -20,3 +20,4 @@ Blubber:
     MovementSpeed: 0.32
   Skills:
   - skill{s=LungeAttack} @self ~onTimer:35
+  - skill{s=SlimeSpiritBullDoze} @self ~onDamaged 0.5

@@ -1,8 +1,8 @@
 FoxSpirit:
   Type: FOX
   Display: '&4Fox Spirit'
-  Health: 6000
-  Damage: 50
+  Health: 10000
+  Damage: 70
   Faction: Boss
   BossBar:
     Enabled: true
@@ -30,7 +30,7 @@ FoxSpirit:
     PreventSunburn: true
     Despawn: false
     FollowRange: 100
-    MovementSpeed: 0.38
+    MovementSpeed: 0.39
     KnockbackResistance: 0.75
   Skills:
   - heal{a=2} @self ~onTimer:40
@@ -40,16 +40,16 @@ FoxSpirit:
   - skill{s=FoxDeathSound} @self ~onDeath
   - skill{s=FoxScreechSound} @self ~onDeath
   - skill{s=FoxHurtSound} @self ~onDamaged
-  - skill{s=FoxSpiritClone} @self ~onTimer:400
+  - skill{s=FoxSpiritClone} @self ~onTimer:300
   - skill{s=FoxTrap} @target ~onTimer:200
-  - skill{s=FoxLightning} @self ~onDamaged 0.1
+  - skill{s=FoxLightning} @self ~onDamaged 0.2
   - summon{t=FoxSpiritHealingOrb;itt=false;amount=2;cooldown=20;radius=4} ~onDamaged
   - heal{a=<skill.var.damage-amount>/4} @self ~onAttack
 
     ### PHASE 1
-  - skill{s=A8_Phase_1} @NearestPlayer{r=50} ~onTimer:20 >55%
+  - skill{s=A8_Phase_1} @NearestPlayer{r=50} ~onTimer:200 >55%
     ### PHASE 2
-  - skill{s=A8_Phase_2} @NearestPlayer{r=50} ~onTimer:40 <55%
+  - skill{s=A8_Phase_2} @NearestPlayer{r=50} ~onTimer:200 <55%
     ### DEATH STUFF
   - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
   - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath

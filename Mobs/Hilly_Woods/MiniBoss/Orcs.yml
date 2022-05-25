@@ -1,7 +1,7 @@
 Orc:
   Type: Zombie
   Display: '&2Orc'
-  Health: 1000
+  Health: 1500
   Damage: 30
   Faction: Miniboss
   Disguise:
@@ -31,3 +31,4 @@ Orc:
   - summon{type=Ogre} @self ~onDeath 0.1
   - setname{name='&2Orc &a<caster.hp>&2/&a<caster.mhp> ❤'} @self
   - skill{s=A9_Phase_1} @NearestPlayer{r=20} ~onTimer:40 <50%
+  - skill{s=LB3Drag} @NearestPlayer{r=50} ~onTimer:300 0.25
