@@ -31,4 +31,3 @@ RockSpirit:
   - skill{s=AnvilLand} ~onDeath
   - skill{s=StoneHit} ~onAttack
   - potion{type=WATER_BREATHING;duration=999999;hasParticles=false} @self ~onSpawn
-  - skill{s=A11_Phase_1} @NearestPlayer{r=15} ~onTimer:20 <40%

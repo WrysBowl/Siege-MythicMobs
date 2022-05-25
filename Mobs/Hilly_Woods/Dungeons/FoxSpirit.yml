@@ -40,8 +40,8 @@ FoxSpirit:
   - skill{s=FoxDeathSound} @self ~onDeath
   - skill{s=FoxScreechSound} @self ~onDeath
   - skill{s=FoxHurtSound} @self ~onDamaged
-  - skill{s=FoxSpiritClone} @self ~onTimer:300
-  - skill{s=FoxTrap} @target ~onTimer:200
+  - skill{s=FoxSpiritClone} @self ~onTimer:200
+  - skill{s=FoxTrap} @target ~onTimer:400
   - skill{s=FoxLightning} @self ~onDamaged 0.2
   - summon{t=FoxSpiritHealingOrb;itt=false;amount=2;cooldown=20;radius=4} ~onDamaged
   - heal{a=<skill.var.damage-amount>/4} @self ~onAttack
@@ -49,7 +49,7 @@ FoxSpirit:
     ### PHASE 1
   - skill{s=A8_Phase_1} @NearestPlayer{r=50} ~onTimer:200 >55%
     ### PHASE 2
-  - skill{s=A8_Phase_2} @NearestPlayer{r=50} ~onTimer:200 <55%
+  - skill{s=A8_Phase_2} @NearestPlayer{r=50} ~onTimer:400 <55%
     ### DEATH STUFF
   - effect:sound{s=entity.wither.death;v=2;p=1} @Self ~onDeath
   - effect:sound{s=block.anvil.land;v=2;p=0} @Self ~onDeath
