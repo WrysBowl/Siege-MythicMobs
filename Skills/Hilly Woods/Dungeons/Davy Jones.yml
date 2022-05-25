@@ -40,7 +40,7 @@ WaterBolt-Hit:
   Skills:
     - damage{a=1}
     - potion{type=SLOW;duration=60;lvl=3}
-    - effect:particles{particle=reddust;amount=20;hS=1;vS=1;speed=1}
+    - effect:particles{particle=reddust;amount=10;hS=1;vS=1;speed=1}
 
 TridentLightningAttack:
   Conditions:
@@ -49,11 +49,11 @@ TridentLightningAttack:
     - runaigoalselector{goal=clear}
     - runaigoalselector{goal=fleeplayers}
     - runaigoalselector{goal=randomstroll}
-    - effect:itemspray{item=lapis_lazuli;amount=10} @origin
+    - effect:itemspray{item=lapis_lazuli;amount=15} @origin
     - delay 20
-    - effect:itemspray{item=lapis_lazuli;amount=10} @origin
+    - effect:itemspray{item=lapis_lazuli;amount=15} @origin
     - delay 20
-    - effect:itemspray{item=lapis_lazuli;amount=10} @origin
+    - effect:itemspray{item=lapis_lazuli;amount=15} @origin
     - delay 20
     - skill{s=TridentLightning} @self
     - delay 60
