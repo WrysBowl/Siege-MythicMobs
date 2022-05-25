@@ -111,11 +111,7 @@ A8_Knockback: ### Blade storm attack.
   - damage{a=5} @PIR{r=8}
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=8}
 A8_Phase_1: ### Phase 1 Attack
-  Cooldown: 10
-  Conditions:
-  - offgcd
   Skills:
-  - gcd{ticks=200}
   - skill{s=A8_1234}
   - delay 60
   - skill{s=A8_4321}
@@ -124,11 +120,7 @@ A8_Phase_1: ### Phase 1 Attack
   - delay 10
   - skill{s=A8_Blast}
 A8_Phase_2: ### Phase 2 Attack
-  Cooldown: 10
-  Conditions:
-  - offgcd
   Skills:
-  - gcd{ticks=200}
   - skill{s=A8_4444}
   - delay 20
   - skill{s=A8_4444}

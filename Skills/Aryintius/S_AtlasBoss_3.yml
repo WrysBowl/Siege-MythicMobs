@@ -50,10 +50,7 @@ A3_Summon: ### Summons a brood of spiders.
   - summon{type=A3_Brood;amount=3;radius=8;yu=true} @Self
 A3_Phase_1: ### Phase 1 Attack
   Cooldown: 10
-  Conditions:
-  - offgcd
   Skills:
-  - gcd{ticks=200}
   - skill{s=A3_Knockback} @Self
   - delay 30
   - skill{s=A3_Blast}
@@ -67,10 +64,7 @@ A3_Phase_1: ### Phase 1 Attack
   - skill{s=A3_PoisonBlast}
 A3_Phase_2: ### Phase 2 Attack
   Cooldown: 10
-  Conditions:
-  - offgcd
   Skills:
-  - gcd{ticks=200}
   - skill{s=A3_Knockback} @Self
   - delay 30
   - skill{s=A3_Blast}

@@ -216,7 +216,7 @@ A13H-Hit: ### Shocks you and deals 250% of your max health as physical damage.
   Skills:
   - skill{s=InflictShock}
   - delay 2
-  - percentDamage{percent=2.5}
+  - damage{amount=7.5}
 A13_Nova: ### Water Nova Slam Attack
   Skills:
   - effect:sound{s=entity.elder_guardian.curse;v=0.5;p=0} @PIR{r=25}
@@ -232,12 +232,6 @@ A13_Nova: ### Water Nova Slam Attack
   - delay 2
   - effect:particlesphere{particle=magicCrit;amount=200;r=4} @self
   - damage{amount=5;pi=true;pk=true} @PIR{r=4}
-  - delay 2
-  - effect:particlesphere{particle=magicCrit;amount=150;r=3} @self
-  - damage{amount=5;pi=true;pk=true} @PIR{r=3}
-  - delay 2
-  - effect:particlesphere{particle=magicCrit;amount=100;r=2} @self
-  - damage{amount=5;pi=true;pk=true} @PIR{r=2}
   - potion{type=BLINDNESS;lvl=0;duration=60;overwrite=true} @PIR{r=10}
   - potion{type=SLOW;lvl=3;duration=60;overwrite=true} @PIR{r=10}
 A13_Teleport:

@@ -93,11 +93,7 @@ A11_RemoveShadow: ### Removes a shadow
   - remove{delay=0} @Self
 ### PHASE SKILLS -----------------------------------------------
 A11_Phase_1:
-  Cooldown: 10
-  Conditions:
-  - offgcd
   Skills:
-  - gcd{ticks=200}
   - skill{s=A11_FrostNova} @Self
   - delay 30
   - skill{s=A11_Shot}
@@ -110,11 +106,7 @@ A11_Phase_1:
   - delay 10
   - skill{s=A5_Burst_Right}
 A11_Phase_2:
-  Cooldown: 10
-  Conditions:
-  - offgcd
   Skills:
-  - gcd{ticks=200}
   - skill{s=A11_FrostNova} @Self
   - delay 30
   - skill{s=A11_12345}
