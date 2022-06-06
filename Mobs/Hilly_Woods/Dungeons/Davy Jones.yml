@@ -19,10 +19,6 @@ Davy_Jones:
     KnockbackResistance: 0.75
     FollowRange: 100
     MovementSpeed: 0.35
-
-  DamageModifiers:
-  - PROJECTILE 0.25
-  - MAGIC 4
   Equipment:
   - Davy_Jones_Head:4
   - Davy_Jones_Chestplate:3

@@ -10,8 +10,6 @@ Broodmother:
     Range: 20
     Color: RED
     Style: SOLID
-  DamageModifiers:
-  - PROJECTILE 0.5
   Modules:
     ThreatTable: true
   Options:

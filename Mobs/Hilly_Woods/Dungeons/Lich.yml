@@ -27,7 +27,6 @@ Lich:
   - FIRE 0.0
   - FALL 0.0
   - WITHER 0.0
-  - PROJECTILE 0.5
  Skills:
   - heal{a=2} @self ~onTimer:60
   - skill{s=SoulEating} @Self ~onDamaged

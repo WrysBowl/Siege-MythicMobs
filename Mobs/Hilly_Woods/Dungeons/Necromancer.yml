@@ -10,8 +10,6 @@ Necromancer:
     Range: 20
     Color: RED
     Style: SOLID
-  DamageModifiers:
-  - MAGIC 0
   Options:
     Despawn: false
     Silent: true
