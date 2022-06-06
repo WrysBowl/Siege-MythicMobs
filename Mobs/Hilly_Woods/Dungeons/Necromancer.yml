@@ -13,7 +13,6 @@ Necromancer:
   DamageModifiers:
   - MAGIC 0
   Options:
-    Persistent: true
     Despawn: false
     Silent: true
     FollowRange: 100

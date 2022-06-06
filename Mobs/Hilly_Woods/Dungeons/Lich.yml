@@ -18,7 +18,6 @@ Lich:
   Type: player
   Skin: 'lich'
  Options:
-  Persistent: true
   Despawn: false
   MovementSpeed: 0.35
   PreventSunburn: true

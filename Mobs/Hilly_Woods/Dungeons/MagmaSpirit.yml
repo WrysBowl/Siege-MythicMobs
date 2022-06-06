@@ -15,7 +15,6 @@ MagmaSpirit:
  - 1 players
  - 2 attacker
  Options:
-  Persistent: true
   Despawn: false
   PreventSunburn: true
   PreventOtherDrops: true

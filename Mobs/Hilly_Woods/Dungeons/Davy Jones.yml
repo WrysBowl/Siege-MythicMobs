@@ -15,7 +15,6 @@ Davy_Jones:
     PreventRandomEquipment: true
     PreventItemPickup: true
     PreventOtherDrops: true
-    Persistent: true
     Despawn: false
     KnockbackResistance: 0.75
     FollowRange: 100
