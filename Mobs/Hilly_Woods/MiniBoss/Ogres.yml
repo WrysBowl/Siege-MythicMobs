@@ -1,7 +1,7 @@
 Ogre:
   Type: Wither_Skeleton
   Display: '&2Ogre'
-  Health: 1750
+  Health: 2000
   Damage: 30
   Faction: Miniboss
   Options:
@@ -14,10 +14,7 @@ Ogre:
     MovementSpeed: 0.2
     Silent: true
   DamageModifiers:
-  - ENTITY_ATTACK 0.5
-  - PROJECTILE 0.75
   - FALL 2
-  - MAGIC 2
   Equipment:
   - Ogre_Head:4
   - Ogre_Chestplate:3

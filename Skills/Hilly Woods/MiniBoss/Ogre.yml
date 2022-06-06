@@ -3,10 +3,11 @@ OgreHeal:
   - effect:particleorbital{p=reddust;color=#a4eb34;a=10;points=64;an=1;hs=0;vs=0;s=0;y=2;ticks=40;in=1;rx=0;ry=0;r=1;yOffset=0.7} @self
   - heal{amount=40} @self
   - sound{s=block.respawn_anchor.set_spawn} @self
+  - damage{amount=1} @self
 OgreAttack:
   Skills:
   - damage{amount=30} @LivingEntitiesInRadius{r=1}
-  - throw{velocity=8;velocityY=6} @LivingEntitiesInRadius{r=1}
+  - throw{velocity=8;velocityY=6} @LivingEntitiesInRadius{r=4}
 OgreLifeStealAttack:
   Skills:
   - stun{d=20;f=true} @LivingEntitiesInRadius{r=10}
@@ -17,7 +18,7 @@ OgreLifeStealAttack:
   - sound{s=block.respawn_anchor.set_spawn} @self
 OgreSuckAttack:
   Skills:
-  - pull{v=8;to=true} @LivingEntitiesInRadius{r=10}
+  - throw{velocity=8;velocityY=6} @LivingEntitiesInRadius{r=4}
   - delay 20
 OgreAmbientSound:
   Skills:
