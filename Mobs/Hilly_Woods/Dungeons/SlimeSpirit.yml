@@ -15,7 +15,6 @@ SlimeSpirit:
  - 1 players
  - 2 attacker
  Options:
-  Persistent: true
   Despawn: false
   PreventItemPickup: true
   MovementSpeed: 0.4
@@ -29,6 +28,7 @@ SlimeSpirit:
   - skill{s=SlimeConsuming} ~onDamaged 0.25
   - skill{s=AcidSpit} @target ~onTimer:200
   - skill{s=LungeAttack} @self ~onTimer:20
+  - summon{type=Blob} @self ~onDamaged 0.5
   - skill{s=SlimeSpiritBullDoze} @self ~onDamaged 0.3
   - sound{s=entity.slime.hurt} @Self ~onDamaged
   - sound{s=entity.slime.death} @Self ~onDeath
