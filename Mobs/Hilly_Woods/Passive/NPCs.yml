@@ -97,3 +97,21 @@ Recruit:
   - sound{s=entity.villager.death} @self ~onDeath
   - sound{s=entity.villager.hurt} @self ~onDamaged
   - sound{s=entity.villager.no} @self ~onAttack
+
+Dummy:
+  Type: Iron_Golem
+  Display: '&6Test Dummy'
+  Health: 10000
+  Damage: 0
+  Faction: Ambient
+  AITargetSelectors:
+    - 0 clear
+  Equipment:
+    - iron_helmet:4
+    - iron_chestplate:3
+    - iron_leggings:2
+    - iron_boots:1
+  Options:
+    MovementSpeed: 0.0
+  Disguise:
+    Type: Armorstand
