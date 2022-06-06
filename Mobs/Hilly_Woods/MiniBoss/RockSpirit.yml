@@ -2,7 +2,7 @@ RockSpirit:
   Type: Zombie
   Display: '&2Rock Spirit'
   Health: 500
-  Damage: 20
+  Damage: 30
   Faction: Miniboss
   Disguise:
     Type: BLOCK
