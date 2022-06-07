@@ -1,7 +1,7 @@
 SlimeSpirit:
  Type: SLIME
  Display: '&4Slime Spirit'
- Health: 2000
+ Health: 1000
  Damage: 25
  Faction: Boss
  BossBar:
@@ -28,7 +28,7 @@ SlimeSpirit:
   - skill{s=SlimeConsuming} ~onDamaged 0.25
   - skill{s=AcidSpit} @target ~onTimer:200
   - skill{s=LungeAttack} @self ~onTimer:20
-  - summon{type=Blob} @self ~onDamaged 0.5
+  - summon{type=Blob} @self ~onDamaged 0.15
   - skill{s=SlimeSpiritBullDoze} @self ~onDamaged 0.3
   - sound{s=entity.slime.hurt} @Self ~onDamaged
   - sound{s=entity.slime.death} @Self ~onDeath
